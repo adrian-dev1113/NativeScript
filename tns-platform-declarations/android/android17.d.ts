@@ -107930,7 +107930,6 @@ declare module javax {
 					glQueryMatrixxOES(mantissa: java.nio.IntBuffer, exponent: java.nio.IntBuffer): number;
 				}
 				interface IGL {
-					__javax_microedition_khronos_opengles_IGL?: any;
 				}
 			}
 			export module egl {
@@ -107939,7 +107938,6 @@ declare module javax {
 					static class: java.lang.Class<javax.microedition.khronos.egl.EGLSurface>;
 				}
 				interface IEGL {
-					__javax_microedition_khronos_egl_IEGL?: any;
 				}
 				export class EGL10 implements javax.microedition.khronos.egl.IEGL, javax.microedition.khronos.egl.IEGL10 {
 					constructor(implementation: javax.microedition.khronos.egl.IEGL10);
