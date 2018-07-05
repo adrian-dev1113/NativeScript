@@ -11,3 +11,5 @@ declare function long(num: number): any;
 interface ArrayConstructor {
     create(type: any, count: number): any;
 }
+
+declare module native {	export class Array<T> {	constructor(); length: number; [index: number]: T; } }
