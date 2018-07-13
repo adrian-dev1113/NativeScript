@@ -2702,11 +2702,12 @@ declare module android {
 				export class OnMagnificationChangedListener extends java.lang.Object {
 					public static class: java.lang.Class<android.accessibilityservice.AccessibilityService.MagnificationController.OnMagnificationChangedListener>;
 					/**
-					 * Constructs a new instance of the android.accessibilityservice.AccessibilityService$MagnificationController$OnMagnificationChangedListener interface with the provided implementation.
+					 * Constructs a new instance of the android.accessibilityservice.AccessibilityService$MagnificationController$OnMagnificationChangedListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 					 */
 					public constructor(implementation: {
 						onMagnificationChanged(param0: android.accessibilityservice.AccessibilityService.MagnificationController, param1: android.graphics.Region, param2: number, param3: number, param4: number): void;
 					});
+					public constructor();
 					public onMagnificationChanged(param0: android.accessibilityservice.AccessibilityService.MagnificationController, param1: android.graphics.Region, param2: number, param3: number, param4: number): void;
 				}
 			}
@@ -2722,11 +2723,12 @@ declare module android {
 				export class OnShowModeChangedListener extends java.lang.Object {
 					public static class: java.lang.Class<android.accessibilityservice.AccessibilityService.SoftKeyboardController.OnShowModeChangedListener>;
 					/**
-					 * Constructs a new instance of the android.accessibilityservice.AccessibilityService$SoftKeyboardController$OnShowModeChangedListener interface with the provided implementation.
+					 * Constructs a new instance of the android.accessibilityservice.AccessibilityService$SoftKeyboardController$OnShowModeChangedListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 					 */
 					public constructor(implementation: {
 						onShowModeChanged(param0: android.accessibilityservice.AccessibilityService.SoftKeyboardController, param1: number): void;
 					});
+					public constructor();
 					public onShowModeChanged(param0: android.accessibilityservice.AccessibilityService.SoftKeyboardController, param1: number): void;
 				}
 			}
@@ -2992,11 +2994,12 @@ declare module android {
 		export class AccountManagerCallback<V>  extends java.lang.Object {
 			public static class: java.lang.Class<android.accounts.AccountManagerCallback<any>>;
 			/**
-			 * Constructs a new instance of the android.accounts.AccountManagerCallback<any> interface with the provided implementation.
+			 * Constructs a new instance of the android.accounts.AccountManagerCallback<any> interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				run(param0: android.accounts.AccountManagerFuture<V>): void;
 			});
+			public constructor();
 			public run(param0: android.accounts.AccountManagerFuture<V>): void;
 		}
 	}
@@ -3007,7 +3010,7 @@ declare module android {
 		export class AccountManagerFuture<V>  extends java.lang.Object {
 			public static class: java.lang.Class<android.accounts.AccountManagerFuture<any>>;
 			/**
-			 * Constructs a new instance of the android.accounts.AccountManagerFuture<any> interface with the provided implementation.
+			 * Constructs a new instance of the android.accounts.AccountManagerFuture<any> interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				cancel(param0: boolean): boolean;
@@ -3016,6 +3019,7 @@ declare module android {
 				getResult(): V;
 				getResult(param0: number, param1: java.util.concurrent.TimeUnit): V;
 			});
+			public constructor();
 			public getResult(param0: number, param1: java.util.concurrent.TimeUnit): V;
 			public cancel(param0: boolean): boolean;
 			public isCancelled(): boolean;
@@ -3093,11 +3097,12 @@ declare module android {
 		export class OnAccountsUpdateListener extends java.lang.Object {
 			public static class: java.lang.Class<android.accounts.OnAccountsUpdateListener>;
 			/**
-			 * Constructs a new instance of the android.accounts.OnAccountsUpdateListener interface with the provided implementation.
+			 * Constructs a new instance of the android.accounts.OnAccountsUpdateListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				onAccountsUpdated(param0: native.Array<android.accounts.Account>): void;
 			});
+			public constructor();
 			public onAccountsUpdated(param0: native.Array<android.accounts.Account>): void;
 		}
 	}
@@ -3153,7 +3158,7 @@ declare module android {
 			export class AnimatorListener extends java.lang.Object {
 				public static class: java.lang.Class<android.animation.Animator.AnimatorListener>;
 				/**
-				 * Constructs a new instance of the android.animation.Animator$AnimatorListener interface with the provided implementation.
+				 * Constructs a new instance of the android.animation.Animator$AnimatorListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onAnimationStart(param0: android.animation.Animator): void;
@@ -3161,6 +3166,7 @@ declare module android {
 					onAnimationCancel(param0: android.animation.Animator): void;
 					onAnimationRepeat(param0: android.animation.Animator): void;
 				});
+				public constructor();
 				public onAnimationEnd(param0: android.animation.Animator): void;
 				public onAnimationStart(param0: android.animation.Animator): void;
 				public onAnimationRepeat(param0: android.animation.Animator): void;
@@ -3169,12 +3175,13 @@ declare module android {
 			export class AnimatorPauseListener extends java.lang.Object {
 				public static class: java.lang.Class<android.animation.Animator.AnimatorPauseListener>;
 				/**
-				 * Constructs a new instance of the android.animation.Animator$AnimatorPauseListener interface with the provided implementation.
+				 * Constructs a new instance of the android.animation.Animator$AnimatorPauseListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onAnimationPause(param0: android.animation.Animator): void;
 					onAnimationResume(param0: android.animation.Animator): void;
 				});
+				public constructor();
 				public onAnimationPause(param0: android.animation.Animator): void;
 				public onAnimationResume(param0: android.animation.Animator): void;
 			}
@@ -3383,12 +3390,13 @@ declare module android {
 			export class TransitionListener extends java.lang.Object {
 				public static class: java.lang.Class<android.animation.LayoutTransition.TransitionListener>;
 				/**
-				 * Constructs a new instance of the android.animation.LayoutTransition$TransitionListener interface with the provided implementation.
+				 * Constructs a new instance of the android.animation.LayoutTransition$TransitionListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					startTransition(param0: android.animation.LayoutTransition, param1: android.view.ViewGroup, param2: android.view.View, param3: number): void;
 					endTransition(param0: android.animation.LayoutTransition, param1: android.view.ViewGroup, param2: android.view.View, param3: number): void;
 				});
+				public constructor();
 				public startTransition(param0: android.animation.LayoutTransition, param1: android.view.ViewGroup, param2: android.view.View, param3: number): void;
 				public endTransition(param0: android.animation.LayoutTransition, param1: android.view.ViewGroup, param2: android.view.View, param3: number): void;
 			}
@@ -3539,11 +3547,12 @@ declare module android {
 			export class TimeListener extends java.lang.Object {
 				public static class: java.lang.Class<android.animation.TimeAnimator.TimeListener>;
 				/**
-				 * Constructs a new instance of the android.animation.TimeAnimator$TimeListener interface with the provided implementation.
+				 * Constructs a new instance of the android.animation.TimeAnimator$TimeListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onTimeUpdate(param0: android.animation.TimeAnimator, param1: number, param2: number): void;
 				});
+				public constructor();
 				public onTimeUpdate(param0: android.animation.TimeAnimator, param1: number, param2: number): void;
 			}
 		}
@@ -3555,11 +3564,12 @@ declare module android {
 		export class TimeInterpolator extends java.lang.Object {
 			public static class: java.lang.Class<android.animation.TimeInterpolator>;
 			/**
-			 * Constructs a new instance of the android.animation.TimeInterpolator interface with the provided implementation.
+			 * Constructs a new instance of the android.animation.TimeInterpolator interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				getInterpolation(param0: number): number;
 			});
+			public constructor();
 			public getInterpolation(param0: number): number;
 		}
 	}
@@ -3580,11 +3590,12 @@ declare module android {
 		export class TypeEvaluator<T>  extends java.lang.Object {
 			public static class: java.lang.Class<android.animation.TypeEvaluator<any>>;
 			/**
-			 * Constructs a new instance of the android.animation.TypeEvaluator<any> interface with the provided implementation.
+			 * Constructs a new instance of the android.animation.TypeEvaluator<any> interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				evaluate(param0: number, param1: T, param2: T): T;
 			});
+			public constructor();
 			public evaluate(param0: number, param1: T, param2: T): T;
 		}
 	}
@@ -3649,11 +3660,12 @@ declare module android {
 			export class AnimatorUpdateListener extends java.lang.Object {
 				public static class: java.lang.Class<android.animation.ValueAnimator.AnimatorUpdateListener>;
 				/**
-				 * Constructs a new instance of the android.animation.ValueAnimator$AnimatorUpdateListener interface with the provided implementation.
+				 * Constructs a new instance of the android.animation.ValueAnimator$AnimatorUpdateListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onAnimationUpdate(param0: android.animation.ValueAnimator): void;
 				});
+				public constructor();
 				public onAnimationUpdate(param0: android.animation.ValueAnimator): void;
 			}
 		}
@@ -3665,7 +3677,7 @@ declare module android {
 		export class SuppressLint extends java.lang.Object implements java.lang.annotation.Annotation {
 			public static class: java.lang.Class<android.annotation.SuppressLint>;
 			/**
-			 * Constructs a new instance of the android.annotation.SuppressLint interface with the provided implementation.
+			 * Constructs a new instance of the android.annotation.SuppressLint interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				value(): native.Array<string>;
@@ -3674,6 +3686,7 @@ declare module android {
 				toString(): string;
 				annotationType(): java.lang.Class<any>;
 			});
+			public constructor();
 			public equals(param0: any): boolean;
 			public toString(): string;
 			public value(): native.Array<string>;
@@ -3688,7 +3701,7 @@ declare module android {
 		export class TargetApi extends java.lang.Object implements java.lang.annotation.Annotation {
 			public static class: java.lang.Class<android.annotation.TargetApi>;
 			/**
-			 * Constructs a new instance of the android.annotation.TargetApi interface with the provided implementation.
+			 * Constructs a new instance of the android.annotation.TargetApi interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				value(): number;
@@ -3697,6 +3710,7 @@ declare module android {
 				toString(): string;
 				annotationType(): java.lang.Class<any>;
 			});
+			public constructor();
 			public equals(param0: any): boolean;
 			public toString(): string;
 			public value(): number;
@@ -3796,21 +3810,23 @@ declare module android {
 			export class OnMenuVisibilityListener extends java.lang.Object {
 				public static class: java.lang.Class<android.app.ActionBar.OnMenuVisibilityListener>;
 				/**
-				 * Constructs a new instance of the android.app.ActionBar$OnMenuVisibilityListener interface with the provided implementation.
+				 * Constructs a new instance of the android.app.ActionBar$OnMenuVisibilityListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onMenuVisibilityChanged(param0: boolean): void;
 				});
+				public constructor();
 				public onMenuVisibilityChanged(param0: boolean): void;
 			}
 			export class OnNavigationListener extends java.lang.Object {
 				public static class: java.lang.Class<android.app.ActionBar.OnNavigationListener>;
 				/**
-				 * Constructs a new instance of the android.app.ActionBar$OnNavigationListener interface with the provided implementation.
+				 * Constructs a new instance of the android.app.ActionBar$OnNavigationListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onNavigationItemSelected(param0: number, param1: number): boolean;
 				});
+				public constructor();
 				public onNavigationItemSelected(param0: number, param1: number): boolean;
 			}
 			export abstract class Tab extends java.lang.Object {
@@ -3838,13 +3854,14 @@ declare module android {
 			export class TabListener extends java.lang.Object {
 				public static class: java.lang.Class<android.app.ActionBar.TabListener>;
 				/**
-				 * Constructs a new instance of the android.app.ActionBar$TabListener interface with the provided implementation.
+				 * Constructs a new instance of the android.app.ActionBar$TabListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onTabSelected(param0: android.app.ActionBar.Tab, param1: android.app.FragmentTransaction): void;
 					onTabUnselected(param0: android.app.ActionBar.Tab, param1: android.app.FragmentTransaction): void;
 					onTabReselected(param0: android.app.ActionBar.Tab, param1: android.app.FragmentTransaction): void;
 				});
+				public constructor();
 				public onTabUnselected(param0: android.app.ActionBar.Tab, param1: android.app.FragmentTransaction): void;
 				public onTabSelected(param0: android.app.ActionBar.Tab, param1: android.app.FragmentTransaction): void;
 				public onTabReselected(param0: android.app.ActionBar.Tab, param1: android.app.FragmentTransaction): void;
@@ -4434,11 +4451,12 @@ declare module android {
 			export class OnAlarmListener extends java.lang.Object {
 				public static class: java.lang.Class<android.app.AlarmManager.OnAlarmListener>;
 				/**
-				 * Constructs a new instance of the android.app.AlarmManager$OnAlarmListener interface with the provided implementation.
+				 * Constructs a new instance of the android.app.AlarmManager$OnAlarmListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onAlarm(): void;
 				});
+				public constructor();
 				public onAlarm(): void;
 			}
 		}
@@ -4658,11 +4676,12 @@ declare module android {
 			export class OnOpChangedListener extends java.lang.Object {
 				public static class: java.lang.Class<android.app.AppOpsManager.OnOpChangedListener>;
 				/**
-				 * Constructs a new instance of the android.app.AppOpsManager$OnOpChangedListener interface with the provided implementation.
+				 * Constructs a new instance of the android.app.AppOpsManager$OnOpChangedListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onOpChanged(param0: string, param1: string): void;
 				});
+				public constructor();
 				public onOpChanged(param0: string, param1: string): void;
 			}
 		}
@@ -4691,7 +4710,7 @@ declare module android {
 			export class ActivityLifecycleCallbacks extends java.lang.Object {
 				public static class: java.lang.Class<android.app.Application.ActivityLifecycleCallbacks>;
 				/**
-				 * Constructs a new instance of the android.app.Application$ActivityLifecycleCallbacks interface with the provided implementation.
+				 * Constructs a new instance of the android.app.Application$ActivityLifecycleCallbacks interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onActivityCreated(param0: android.app.Activity, param1: android.os.Bundle): void;
@@ -4702,6 +4721,7 @@ declare module android {
 					onActivitySaveInstanceState(param0: android.app.Activity, param1: android.os.Bundle): void;
 					onActivityDestroyed(param0: android.app.Activity): void;
 				});
+				public constructor();
 				public onActivityStopped(param0: android.app.Activity): void;
 				public onActivityPaused(param0: android.app.Activity): void;
 				public onActivityStarted(param0: android.app.Activity): void;
@@ -4713,11 +4733,12 @@ declare module android {
 			export class OnProvideAssistDataListener extends java.lang.Object {
 				public static class: java.lang.Class<android.app.Application.OnProvideAssistDataListener>;
 				/**
-				 * Constructs a new instance of the android.app.Application$OnProvideAssistDataListener interface with the provided implementation.
+				 * Constructs a new instance of the android.app.Application$OnProvideAssistDataListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onProvideAssistData(param0: android.app.Activity, param1: android.os.Bundle): void;
 				});
+				public constructor();
 				public onProvideAssistData(param0: android.app.Activity, param1: android.os.Bundle): void;
 			}
 		}
@@ -4879,11 +4900,12 @@ declare module android {
 			export class OnDateSetListener extends java.lang.Object {
 				public static class: java.lang.Class<android.app.DatePickerDialog.OnDateSetListener>;
 				/**
-				 * Constructs a new instance of the android.app.DatePickerDialog$OnDateSetListener interface with the provided implementation.
+				 * Constructs a new instance of the android.app.DatePickerDialog$OnDateSetListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onDateSet(param0: android.widget.DatePicker, param1: number, param2: number, param3: number): void;
 				});
+				public constructor();
 				public onDateSet(param0: android.widget.DatePicker, param1: number, param2: number, param3: number): void;
 			}
 		}
@@ -5383,11 +5405,12 @@ declare module android {
 			export class OnBreadCrumbClickListener extends java.lang.Object {
 				public static class: java.lang.Class<android.app.FragmentBreadCrumbs.OnBreadCrumbClickListener>;
 				/**
-				 * Constructs a new instance of the android.app.FragmentBreadCrumbs$OnBreadCrumbClickListener interface with the provided implementation.
+				 * Constructs a new instance of the android.app.FragmentBreadCrumbs$OnBreadCrumbClickListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onBreadCrumbClick(param0: android.app.FragmentManager.BackStackEntry, param1: number): boolean;
 				});
+				public constructor();
 				public onBreadCrumbClick(param0: android.app.FragmentManager.BackStackEntry, param1: number): boolean;
 			}
 		}
@@ -5507,7 +5530,7 @@ declare module android {
 			export class BackStackEntry extends java.lang.Object {
 				public static class: java.lang.Class<android.app.FragmentManager.BackStackEntry>;
 				/**
-				 * Constructs a new instance of the android.app.FragmentManager$BackStackEntry interface with the provided implementation.
+				 * Constructs a new instance of the android.app.FragmentManager$BackStackEntry interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					getId(): number;
@@ -5517,6 +5540,7 @@ declare module android {
 					getBreadCrumbTitle(): string;
 					getBreadCrumbShortTitle(): string;
 				});
+				public constructor();
 				public getId(): number;
 				public getBreadCrumbShortTitleRes(): number;
 				public getName(): string;
@@ -5527,11 +5551,12 @@ declare module android {
 			export class OnBackStackChangedListener extends java.lang.Object {
 				public static class: java.lang.Class<android.app.FragmentManager.OnBackStackChangedListener>;
 				/**
-				 * Constructs a new instance of the android.app.FragmentManager$OnBackStackChangedListener interface with the provided implementation.
+				 * Constructs a new instance of the android.app.FragmentManager$OnBackStackChangedListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onBackStackChanged(): void;
 				});
+				public constructor();
 				public onBackStackChanged(): void;
 			}
 		}
@@ -5724,11 +5749,12 @@ declare module android {
 			export class OnKeyguardExitResult extends java.lang.Object {
 				public static class: java.lang.Class<android.app.KeyguardManager.OnKeyguardExitResult>;
 				/**
-				 * Constructs a new instance of the android.app.KeyguardManager$OnKeyguardExitResult interface with the provided implementation.
+				 * Constructs a new instance of the android.app.KeyguardManager$OnKeyguardExitResult interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onKeyguardExitResult(param0: boolean): void;
 				});
+				public constructor();
 				public onKeyguardExitResult(param0: boolean): void;
 			}
 		}
@@ -5901,13 +5927,14 @@ declare module android {
 			export class LoaderCallbacks<D>  extends java.lang.Object {
 				public static class: java.lang.Class<android.app.LoaderManager.LoaderCallbacks<any>>;
 				/**
-				 * Constructs a new instance of the android.app.LoaderManager$LoaderCallbacks interface with the provided implementation.
+				 * Constructs a new instance of the android.app.LoaderManager$LoaderCallbacks interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onCreateLoader(param0: number, param1: android.os.Bundle): android.content.Loader<D>;
 					onLoadFinished(param0: android.content.Loader<D>, param1: D): void;
 					onLoaderReset(param0: android.content.Loader<D>): void;
 				});
+				public constructor();
 				public onLoaderReset(param0: android.content.Loader<D>): void;
 				public onLoadFinished(param0: android.content.Loader<D>, param1: D): void;
 				public onCreateLoader(param0: number, param1: android.os.Bundle): android.content.Loader<D>;
@@ -6203,11 +6230,12 @@ declare module android {
 				export class Extender extends java.lang.Object {
 					public static class: java.lang.Class<android.app.Notification.Action.Extender>;
 					/**
-					 * Constructs a new instance of the android.app.Notification$Action$Extender interface with the provided implementation.
+					 * Constructs a new instance of the android.app.Notification$Action$Extender interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 					 */
 					public constructor(implementation: {
 						extend(param0: android.app.Notification.Action.Builder): android.app.Notification.Action.Builder;
 					});
+					public constructor();
 					public extend(param0: android.app.Notification.Action.Builder): android.app.Notification.Action.Builder;
 				}
 				export class WearableExtender extends java.lang.Object implements android.app.Notification.Action.Extender {
@@ -6356,11 +6384,12 @@ declare module android {
 			export class Extender extends java.lang.Object {
 				public static class: java.lang.Class<android.app.Notification.Extender>;
 				/**
-				 * Constructs a new instance of the android.app.Notification$Extender interface with the provided implementation.
+				 * Constructs a new instance of the android.app.Notification$Extender interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					extend(param0: android.app.Notification.Builder): android.app.Notification.Builder;
 				});
+				public constructor();
 				public extend(param0: android.app.Notification.Builder): android.app.Notification.Builder;
 			}
 			export class InboxStyle extends android.app.Notification.Style {
@@ -6598,11 +6627,12 @@ declare module android {
 			export class OnFinished extends java.lang.Object {
 				public static class: java.lang.Class<android.app.PendingIntent.OnFinished>;
 				/**
-				 * Constructs a new instance of the android.app.PendingIntent$OnFinished interface with the provided implementation.
+				 * Constructs a new instance of the android.app.PendingIntent$OnFinished interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onSendFinished(param0: android.app.PendingIntent, param1: android.content.Intent, param2: number, param3: string, param4: android.os.Bundle): void;
 				});
+				public constructor();
 				public onSendFinished(param0: android.app.PendingIntent, param1: android.content.Intent, param2: number, param3: string, param4: android.os.Bundle): void;
 			}
 		}
@@ -6831,21 +6861,23 @@ declare module android {
 			export class OnCancelListener extends java.lang.Object {
 				public static class: java.lang.Class<android.app.SearchManager.OnCancelListener>;
 				/**
-				 * Constructs a new instance of the android.app.SearchManager$OnCancelListener interface with the provided implementation.
+				 * Constructs a new instance of the android.app.SearchManager$OnCancelListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onCancel(): void;
 				});
+				public constructor();
 				public onCancel(): void;
 			}
 			export class OnDismissListener extends java.lang.Object {
 				public static class: java.lang.Class<android.app.SearchManager.OnDismissListener>;
 				/**
-				 * Constructs a new instance of the android.app.SearchManager$OnDismissListener interface with the provided implementation.
+				 * Constructs a new instance of the android.app.SearchManager$OnDismissListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onDismiss(): void;
 				});
+				public constructor();
 				public onDismiss(): void;
 			}
 		}
@@ -6942,11 +6974,12 @@ declare module android {
 			export class OnSharedElementsReadyListener extends java.lang.Object {
 				public static class: java.lang.Class<any>;
 				/**
-				 * Constructs a new instance of the any$OnSharedElementsReadyListener interface with the provided implementation.
+				 * Constructs a new instance of the any$OnSharedElementsReadyListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onSharedElementsReady(): void;
 				});
+				public constructor();
 				public onSharedElementsReady(): void;
 			}
 		}
@@ -7080,11 +7113,12 @@ declare module android {
 			export class OnTimeSetListener extends java.lang.Object {
 				public static class: java.lang.Class<android.app.TimePickerDialog.OnTimeSetListener>;
 				/**
-				 * Constructs a new instance of the android.app.TimePickerDialog$OnTimeSetListener interface with the provided implementation.
+				 * Constructs a new instance of the android.app.TimePickerDialog$OnTimeSetListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onTimeSet(param0: android.widget.TimePicker, param1: number, param2: number): void;
 				});
+				public constructor();
 				public onTimeSet(param0: android.widget.TimePicker, param1: number, param2: number): void;
 			}
 		}
@@ -7125,21 +7159,23 @@ declare module android {
 			export class AccessibilityEventFilter extends java.lang.Object {
 				public static class: java.lang.Class<android.app.UiAutomation.AccessibilityEventFilter>;
 				/**
-				 * Constructs a new instance of the android.app.UiAutomation$AccessibilityEventFilter interface with the provided implementation.
+				 * Constructs a new instance of the android.app.UiAutomation$AccessibilityEventFilter interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					accept(param0: android.view.accessibility.AccessibilityEvent): boolean;
 				});
+				public constructor();
 				public accept(param0: android.view.accessibility.AccessibilityEvent): boolean;
 			}
 			export class OnAccessibilityEventListener extends java.lang.Object {
 				public static class: java.lang.Class<android.app.UiAutomation.OnAccessibilityEventListener>;
 				/**
-				 * Constructs a new instance of the android.app.UiAutomation$OnAccessibilityEventListener interface with the provided implementation.
+				 * Constructs a new instance of the android.app.UiAutomation$OnAccessibilityEventListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onAccessibilityEvent(param0: android.view.accessibility.AccessibilityEvent): void;
 				});
+				public constructor();
 				public onAccessibilityEvent(param0: android.view.accessibility.AccessibilityEvent): void;
 			}
 		}
@@ -7875,13 +7911,14 @@ declare module android {
 			export class BackupHelper extends java.lang.Object {
 				public static class: java.lang.Class<android.app.backup.BackupHelper>;
 				/**
-				 * Constructs a new instance of the android.app.backup.BackupHelper interface with the provided implementation.
+				 * Constructs a new instance of the android.app.backup.BackupHelper interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					performBackup(param0: android.os.ParcelFileDescriptor, param1: android.app.backup.BackupDataOutput, param2: android.os.ParcelFileDescriptor): void;
 					restoreEntity(param0: android.app.backup.BackupDataInputStream): void;
 					writeNewStateDescription(param0: android.os.ParcelFileDescriptor): void;
 				});
+				public constructor();
 				public writeNewStateDescription(param0: android.os.ParcelFileDescriptor): void;
 				public restoreEntity(param0: android.app.backup.BackupDataInputStream): void;
 				public performBackup(param0: android.os.ParcelFileDescriptor, param1: android.app.backup.BackupDataOutput, param2: android.os.ParcelFileDescriptor): void;
@@ -8559,11 +8596,12 @@ declare module android {
 			export class LeScanCallback extends java.lang.Object {
 				public static class: java.lang.Class<android.bluetooth.BluetoothAdapter.LeScanCallback>;
 				/**
-				 * Constructs a new instance of the android.bluetooth.BluetoothAdapter$LeScanCallback interface with the provided implementation.
+				 * Constructs a new instance of the android.bluetooth.BluetoothAdapter$LeScanCallback interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onLeScan(param0: android.bluetooth.BluetoothDevice, param1: number, param2: native.Array<number>): void;
 				});
+				public constructor();
 				public onLeScan(param0: android.bluetooth.BluetoothDevice, param1: number, param2: native.Array<number>): void;
 			}
 		}
@@ -9283,13 +9321,14 @@ declare module android {
 		export class BluetoothProfile extends java.lang.Object {
 			public static class: java.lang.Class<android.bluetooth.BluetoothProfile>;
 			/**
-			 * Constructs a new instance of the android.bluetooth.BluetoothProfile interface with the provided implementation.
+			 * Constructs a new instance of the android.bluetooth.BluetoothProfile interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				getConnectedDevices(): java.util.List<android.bluetooth.BluetoothDevice>;
 				getDevicesMatchingConnectionStates(param0: native.Array<number>): java.util.List<android.bluetooth.BluetoothDevice>;
 				getConnectionState(param0: android.bluetooth.BluetoothDevice): number;
 			});
+			public constructor();
 			public static STATE_DISCONNECTED: number;
 			public static EXTRA_STATE: string;
 			public static GATT: number;
@@ -9310,12 +9349,13 @@ declare module android {
 			export class ServiceListener extends java.lang.Object {
 				public static class: java.lang.Class<android.bluetooth.BluetoothProfile.ServiceListener>;
 				/**
-				 * Constructs a new instance of the android.bluetooth.BluetoothProfile$ServiceListener interface with the provided implementation.
+				 * Constructs a new instance of the android.bluetooth.BluetoothProfile$ServiceListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onServiceConnected(param0: number, param1: android.bluetooth.BluetoothProfile): void;
 					onServiceDisconnected(param0: number): void;
 				});
+				public constructor();
 				public onServiceConnected(param0: number, param1: android.bluetooth.BluetoothProfile): void;
 				public onServiceDisconnected(param0: number): void;
 			}
@@ -9835,11 +9875,12 @@ declare module android {
 			export class OnPrimaryClipChangedListener extends java.lang.Object {
 				public static class: java.lang.Class<android.content.ClipboardManager.OnPrimaryClipChangedListener>;
 				/**
-				 * Constructs a new instance of the android.content.ClipboardManager$OnPrimaryClipChangedListener interface with the provided implementation.
+				 * Constructs a new instance of the android.content.ClipboardManager$OnPrimaryClipChangedListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onPrimaryClipChanged(): void;
 				});
+				public constructor();
 				public onPrimaryClipChanged(): void;
 			}
 		}
@@ -9851,12 +9892,13 @@ declare module android {
 		export class ComponentCallbacks extends java.lang.Object {
 			public static class: java.lang.Class<android.content.ComponentCallbacks>;
 			/**
-			 * Constructs a new instance of the android.content.ComponentCallbacks interface with the provided implementation.
+			 * Constructs a new instance of the android.content.ComponentCallbacks interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				onConfigurationChanged(param0: android.content.res.Configuration): void;
 				onLowMemory(): void;
 			});
+			public constructor();
 			public onConfigurationChanged(param0: android.content.res.Configuration): void;
 			public onLowMemory(): void;
 		}
@@ -9868,13 +9910,14 @@ declare module android {
 		export class ComponentCallbacks2 extends java.lang.Object implements android.content.ComponentCallbacks {
 			public static class: java.lang.Class<android.content.ComponentCallbacks2>;
 			/**
-			 * Constructs a new instance of the android.content.ComponentCallbacks2 interface with the provided implementation.
+			 * Constructs a new instance of the android.content.ComponentCallbacks2 interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				onTrimMemory(param0: number): void;
 				onConfigurationChanged(param0: android.content.res.Configuration): void;
 				onLowMemory(): void;
 			});
+			public constructor();
 			public static TRIM_MEMORY_RUNNING_MODERATE: number;
 			public static TRIM_MEMORY_RUNNING_CRITICAL: number;
 			public static TRIM_MEMORY_UI_HIDDEN: number;
@@ -9967,11 +10010,12 @@ declare module android {
 			export class PipeDataWriter<T>  extends java.lang.Object {
 				public static class: java.lang.Class<android.content.ContentProvider.PipeDataWriter<any>>;
 				/**
-				 * Constructs a new instance of the android.content.ContentProvider$PipeDataWriter interface with the provided implementation.
+				 * Constructs a new instance of the android.content.ContentProvider$PipeDataWriter interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					writeDataToPipe(param0: android.os.ParcelFileDescriptor, param1: android.net.Uri, param2: string, param3: android.os.Bundle, param4: T): void;
 				});
+				public constructor();
 				public writeDataToPipe(param0: android.os.ParcelFileDescriptor, param1: android.net.Uri, param2: string, param3: android.os.Bundle, param4: T): void;
 			}
 		}
@@ -10575,12 +10619,13 @@ declare module android {
 		export class DialogInterface extends java.lang.Object {
 			public static class: java.lang.Class<android.content.DialogInterface>;
 			/**
-			 * Constructs a new instance of the android.content.DialogInterface interface with the provided implementation.
+			 * Constructs a new instance of the android.content.DialogInterface interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				cancel(): void;
 				dismiss(): void;
 			});
+			public constructor();
 			public static BUTTON_POSITIVE: number;
 			public static BUTTON_NEUTRAL: number;
 			public static BUTTON3: number;
@@ -10594,61 +10639,67 @@ declare module android {
 			export class OnCancelListener extends java.lang.Object {
 				public static class: java.lang.Class<android.content.DialogInterface.OnCancelListener>;
 				/**
-				 * Constructs a new instance of the android.content.DialogInterface$OnCancelListener interface with the provided implementation.
+				 * Constructs a new instance of the android.content.DialogInterface$OnCancelListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onCancel(param0: android.content.DialogInterface): void;
 				});
+				public constructor();
 				public onCancel(param0: android.content.DialogInterface): void;
 			}
 			export class OnClickListener extends java.lang.Object {
 				public static class: java.lang.Class<android.content.DialogInterface.OnClickListener>;
 				/**
-				 * Constructs a new instance of the android.content.DialogInterface$OnClickListener interface with the provided implementation.
+				 * Constructs a new instance of the android.content.DialogInterface$OnClickListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onClick(param0: android.content.DialogInterface, param1: number): void;
 				});
+				public constructor();
 				public onClick(param0: android.content.DialogInterface, param1: number): void;
 			}
 			export class OnDismissListener extends java.lang.Object {
 				public static class: java.lang.Class<android.content.DialogInterface.OnDismissListener>;
 				/**
-				 * Constructs a new instance of the android.content.DialogInterface$OnDismissListener interface with the provided implementation.
+				 * Constructs a new instance of the android.content.DialogInterface$OnDismissListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onDismiss(param0: android.content.DialogInterface): void;
 				});
+				public constructor();
 				public onDismiss(param0: android.content.DialogInterface): void;
 			}
 			export class OnKeyListener extends java.lang.Object {
 				public static class: java.lang.Class<android.content.DialogInterface.OnKeyListener>;
 				/**
-				 * Constructs a new instance of the android.content.DialogInterface$OnKeyListener interface with the provided implementation.
+				 * Constructs a new instance of the android.content.DialogInterface$OnKeyListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onKey(param0: android.content.DialogInterface, param1: number, param2: android.view.KeyEvent): boolean;
 				});
+				public constructor();
 				public onKey(param0: android.content.DialogInterface, param1: number, param2: android.view.KeyEvent): boolean;
 			}
 			export class OnMultiChoiceClickListener extends java.lang.Object {
 				public static class: java.lang.Class<android.content.DialogInterface.OnMultiChoiceClickListener>;
 				/**
-				 * Constructs a new instance of the android.content.DialogInterface$OnMultiChoiceClickListener interface with the provided implementation.
+				 * Constructs a new instance of the android.content.DialogInterface$OnMultiChoiceClickListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onClick(param0: android.content.DialogInterface, param1: number, param2: boolean): void;
 				});
+				public constructor();
 				public onClick(param0: android.content.DialogInterface, param1: number, param2: boolean): void;
 			}
 			export class OnShowListener extends java.lang.Object {
 				public static class: java.lang.Class<android.content.DialogInterface.OnShowListener>;
 				/**
-				 * Constructs a new instance of the android.content.DialogInterface$OnShowListener interface with the provided implementation.
+				 * Constructs a new instance of the android.content.DialogInterface$OnShowListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onShow(param0: android.content.DialogInterface): void;
 				});
+				public constructor();
 				public onShow(param0: android.content.DialogInterface): void;
 			}
 		}
@@ -10681,12 +10732,13 @@ declare module android {
 		export class EntityIterator extends java.util.Iterator<android.content.Entity> {
 			public static class: java.lang.Class<android.content.EntityIterator>;
 			/**
-			 * Constructs a new instance of the android.content.EntityIterator interface with the provided implementation.
+			 * Constructs a new instance of the android.content.EntityIterator interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				reset(): void;
 				close(): void;
 			});
+			public constructor();
 			public reset(): void;
 			public close(): void;
 		}
@@ -11225,11 +11277,12 @@ declare module android {
 			export class OnFinished extends java.lang.Object {
 				public static class: java.lang.Class<android.content.IntentSender.OnFinished>;
 				/**
-				 * Constructs a new instance of the android.content.IntentSender$OnFinished interface with the provided implementation.
+				 * Constructs a new instance of the android.content.IntentSender$OnFinished interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onSendFinished(param0: android.content.IntentSender, param1: android.content.Intent, param2: number, param3: string, param4: android.os.Bundle): void;
 				});
+				public constructor();
 				public onSendFinished(param0: android.content.IntentSender, param1: android.content.Intent, param2: number, param3: string, param4: android.os.Bundle): void;
 			}
 			export class SendIntentException extends android.util.AndroidException {
@@ -11293,21 +11346,23 @@ declare module android {
 			export class OnLoadCanceledListener<D>  extends java.lang.Object {
 				public static class: java.lang.Class<android.content.Loader.OnLoadCanceledListener<any>>;
 				/**
-				 * Constructs a new instance of the android.content.Loader$OnLoadCanceledListener interface with the provided implementation.
+				 * Constructs a new instance of the android.content.Loader$OnLoadCanceledListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onLoadCanceled(param0: android.content.Loader<D>): void;
 				});
+				public constructor();
 				public onLoadCanceled(param0: android.content.Loader<D>): void;
 			}
 			export class OnLoadCompleteListener<D>  extends java.lang.Object {
 				public static class: java.lang.Class<android.content.Loader.OnLoadCompleteListener<any>>;
 				/**
-				 * Constructs a new instance of the android.content.Loader$OnLoadCompleteListener interface with the provided implementation.
+				 * Constructs a new instance of the android.content.Loader$OnLoadCompleteListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onLoadComplete(param0: android.content.Loader<D>, param1: D): void;
 				});
+				public constructor();
 				public onLoadComplete(param0: android.content.Loader<D>, param1: D): void;
 			}
 		}
@@ -11496,12 +11551,13 @@ declare module android {
 		export class ServiceConnection extends java.lang.Object {
 			public static class: java.lang.Class<android.content.ServiceConnection>;
 			/**
-			 * Constructs a new instance of the android.content.ServiceConnection interface with the provided implementation.
+			 * Constructs a new instance of the android.content.ServiceConnection interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				onServiceConnected(param0: android.content.ComponentName, param1: android.os.IBinder): void;
 				onServiceDisconnected(param0: android.content.ComponentName): void;
 			});
+			public constructor();
 			public onServiceDisconnected(param0: android.content.ComponentName): void;
 			public onServiceConnected(param0: android.content.ComponentName, param1: android.os.IBinder): void;
 		}
@@ -11513,7 +11569,7 @@ declare module android {
 		export class SharedPreferences extends java.lang.Object {
 			public static class: java.lang.Class<android.content.SharedPreferences>;
 			/**
-			 * Constructs a new instance of the android.content.SharedPreferences interface with the provided implementation.
+			 * Constructs a new instance of the android.content.SharedPreferences interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				getAll(): java.util.Map<string,any>;
@@ -11528,6 +11584,7 @@ declare module android {
 				registerOnSharedPreferenceChangeListener(param0: android.content.SharedPreferences.OnSharedPreferenceChangeListener): void;
 				unregisterOnSharedPreferenceChangeListener(param0: android.content.SharedPreferences.OnSharedPreferenceChangeListener): void;
 			});
+			public constructor();
 			public getInt(param0: string, param1: number): number;
 			public getFloat(param0: string, param1: number): number;
 			public contains(param0: string): boolean;
@@ -11544,7 +11601,7 @@ declare module android {
 			export class Editor extends java.lang.Object {
 				public static class: java.lang.Class<android.content.SharedPreferences.Editor>;
 				/**
-				 * Constructs a new instance of the android.content.SharedPreferences$Editor interface with the provided implementation.
+				 * Constructs a new instance of the android.content.SharedPreferences$Editor interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					putString(param0: string, param1: string): android.content.SharedPreferences.Editor;
@@ -11558,6 +11615,7 @@ declare module android {
 					commit(): boolean;
 					apply(): void;
 				});
+				public constructor();
 				public commit(): boolean;
 				public apply(): void;
 				public putString(param0: string, param1: string): android.content.SharedPreferences.Editor;
@@ -11572,11 +11630,12 @@ declare module android {
 			export class OnSharedPreferenceChangeListener extends java.lang.Object {
 				public static class: java.lang.Class<android.content.SharedPreferences.OnSharedPreferenceChangeListener>;
 				/**
-				 * Constructs a new instance of the android.content.SharedPreferences$OnSharedPreferenceChangeListener interface with the provided implementation.
+				 * Constructs a new instance of the android.content.SharedPreferences$OnSharedPreferenceChangeListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onSharedPreferenceChanged(param0: android.content.SharedPreferences, param1: string): void;
 				});
+				public constructor();
 				public onSharedPreferenceChanged(param0: android.content.SharedPreferences, param1: string): void;
 			}
 		}
@@ -11718,11 +11777,12 @@ declare module android {
 		export class SyncStatusObserver extends java.lang.Object {
 			public static class: java.lang.Class<android.content.SyncStatusObserver>;
 			/**
-			 * Constructs a new instance of the android.content.SyncStatusObserver interface with the provided implementation.
+			 * Constructs a new instance of the android.content.SyncStatusObserver interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				onStatusChanged(param0: number): void;
 			});
+			public constructor();
 			public onStatusChanged(param0: number): void;
 		}
 	}
@@ -13333,7 +13393,7 @@ declare module android {
 			export class XmlResourceParser extends java.lang.Object implements org.xmlpull.v1.XmlPullParser, android.util.AttributeSet, java.lang.AutoCloseable {
 				public static class: java.lang.Class<android.content.res.XmlResourceParser>;
 				/**
-				 * Constructs a new instance of the android.content.res.XmlResourceParser interface with the provided implementation.
+				 * Constructs a new instance of the android.content.res.XmlResourceParser interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					close(): void;
@@ -13399,6 +13459,7 @@ declare module android {
 					getStyleAttribute(): number;
 					close(): void;
 				});
+				public constructor();
 				public static NO_NAMESPACE: string;
 				public static TEXT: number;
 				public static ENTITY_REF: number;
@@ -13622,7 +13683,7 @@ declare module android {
 		export class CrossProcessCursor extends java.lang.Object implements android.database.Cursor {
 			public static class: java.lang.Class<android.database.CrossProcessCursor>;
 			/**
-			 * Constructs a new instance of the android.database.CrossProcessCursor interface with the provided implementation.
+			 * Constructs a new instance of the android.database.CrossProcessCursor interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				getWindow(): android.database.CursorWindow;
@@ -13672,6 +13733,7 @@ declare module android {
 				close(): void;
 				close(): void;
 			});
+			public constructor();
 			public static FIELD_TYPE_INTEGER: number;
 			public static FIELD_TYPE_BLOB: number;
 			public static FIELD_TYPE_NULL: number;
@@ -13783,7 +13845,7 @@ declare module android {
 		export class Cursor extends java.lang.Object implements java.io.Closeable {
 			public static class: java.lang.Class<android.database.Cursor>;
 			/**
-			 * Constructs a new instance of the android.database.Cursor interface with the provided implementation.
+			 * Constructs a new instance of the android.database.Cursor interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				getCount(): number;
@@ -13830,6 +13892,7 @@ declare module android {
 				close(): void;
 				close(): void;
 			});
+			public constructor();
 			public static FIELD_TYPE_INTEGER: number;
 			public static FIELD_TYPE_BLOB: number;
 			public static FIELD_TYPE_NULL: number;
@@ -14044,11 +14107,12 @@ declare module android {
 		export class DatabaseErrorHandler extends java.lang.Object {
 			public static class: java.lang.Class<android.database.DatabaseErrorHandler>;
 			/**
-			 * Constructs a new instance of the android.database.DatabaseErrorHandler interface with the provided implementation.
+			 * Constructs a new instance of the android.database.DatabaseErrorHandler interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				onCorruption(param0: android.database.sqlite.SQLiteDatabase): void;
 			});
+			public constructor();
 			public onCorruption(param0: android.database.sqlite.SQLiteDatabase): void;
 		}
 	}
@@ -14392,7 +14456,7 @@ declare module android {
 			export class SQLiteCursorDriver extends java.lang.Object {
 				public static class: java.lang.Class<android.database.sqlite.SQLiteCursorDriver>;
 				/**
-				 * Constructs a new instance of the android.database.sqlite.SQLiteCursorDriver interface with the provided implementation.
+				 * Constructs a new instance of the android.database.sqlite.SQLiteCursorDriver interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					query(param0: android.database.sqlite.SQLiteDatabase.CursorFactory, param1: native.Array<string>): android.database.Cursor;
@@ -14401,6 +14465,7 @@ declare module android {
 					cursorClosed(): void;
 					setBindArguments(param0: native.Array<string>): void;
 				});
+				public constructor();
 				public cursorRequeried(param0: android.database.Cursor): void;
 				public setBindArguments(param0: native.Array<string>): void;
 				public cursorDeactivated(): void;
@@ -14503,11 +14568,12 @@ declare module android {
 				export class CursorFactory extends java.lang.Object {
 					public static class: java.lang.Class<android.database.sqlite.SQLiteDatabase.CursorFactory>;
 					/**
-					 * Constructs a new instance of the android.database.sqlite.SQLiteDatabase$CursorFactory interface with the provided implementation.
+					 * Constructs a new instance of the android.database.sqlite.SQLiteDatabase$CursorFactory interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 					 */
 					public constructor(implementation: {
 						newCursor(param0: android.database.sqlite.SQLiteDatabase, param1: android.database.sqlite.SQLiteCursorDriver, param2: string, param3: android.database.sqlite.SQLiteQuery): android.database.Cursor;
 					});
+					public constructor();
 					public newCursor(param0: android.database.sqlite.SQLiteDatabase, param1: android.database.sqlite.SQLiteCursorDriver, param2: string, param3: android.database.sqlite.SQLiteQuery): android.database.Cursor;
 				}
 			}
@@ -14787,13 +14853,14 @@ declare module android {
 			export class SQLiteTransactionListener extends java.lang.Object {
 				public static class: java.lang.Class<android.database.sqlite.SQLiteTransactionListener>;
 				/**
-				 * Constructs a new instance of the android.database.sqlite.SQLiteTransactionListener interface with the provided implementation.
+				 * Constructs a new instance of the android.database.sqlite.SQLiteTransactionListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onBegin(): void;
 					onCommit(): void;
 					onRollback(): void;
 				});
+				public constructor();
 				public onCommit(): void;
 				public onBegin(): void;
 				public onRollback(): void;
@@ -14965,31 +15032,34 @@ declare module android {
 			export class OnErrorListener extends java.lang.Object {
 				public static class: java.lang.Class<android.drm.DrmManagerClient.OnErrorListener>;
 				/**
-				 * Constructs a new instance of the android.drm.DrmManagerClient$OnErrorListener interface with the provided implementation.
+				 * Constructs a new instance of the android.drm.DrmManagerClient$OnErrorListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onError(param0: android.drm.DrmManagerClient, param1: android.drm.DrmErrorEvent): void;
 				});
+				public constructor();
 				public onError(param0: android.drm.DrmManagerClient, param1: android.drm.DrmErrorEvent): void;
 			}
 			export class OnEventListener extends java.lang.Object {
 				public static class: java.lang.Class<android.drm.DrmManagerClient.OnEventListener>;
 				/**
-				 * Constructs a new instance of the android.drm.DrmManagerClient$OnEventListener interface with the provided implementation.
+				 * Constructs a new instance of the android.drm.DrmManagerClient$OnEventListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onEvent(param0: android.drm.DrmManagerClient, param1: android.drm.DrmEvent): void;
 				});
+				public constructor();
 				public onEvent(param0: android.drm.DrmManagerClient, param1: android.drm.DrmEvent): void;
 			}
 			export class OnInfoListener extends java.lang.Object {
 				public static class: java.lang.Class<android.drm.DrmManagerClient.OnInfoListener>;
 				/**
-				 * Constructs a new instance of the android.drm.DrmManagerClient$OnInfoListener interface with the provided implementation.
+				 * Constructs a new instance of the android.drm.DrmManagerClient$OnInfoListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onInfo(param0: android.drm.DrmManagerClient, param1: android.drm.DrmInfoEvent): void;
 				});
+				public constructor();
 				public onInfo(param0: android.drm.DrmManagerClient, param1: android.drm.DrmInfoEvent): void;
 			}
 		}
@@ -15035,10 +15105,11 @@ declare module android {
 			export class ConstraintsColumns extends java.lang.Object {
 				public static class: java.lang.Class<android.drm.DrmStore.ConstraintsColumns>;
 				/**
-				 * Constructs a new instance of the android.drm.DrmStore$ConstraintsColumns interface with the provided implementation.
+				 * Constructs a new instance of the android.drm.DrmStore$ConstraintsColumns interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 				});
+				public constructor();
 				public static LICENSE_AVAILABLE_TIME: string;
 				public static EXTENDED_METADATA: string;
 				public static LICENSE_EXPIRY_TIME: string;
@@ -15304,7 +15375,7 @@ declare module android {
 			export class OnGestureListener extends java.lang.Object {
 				public static class: java.lang.Class<android.gesture.GestureOverlayView.OnGestureListener>;
 				/**
-				 * Constructs a new instance of the android.gesture.GestureOverlayView$OnGestureListener interface with the provided implementation.
+				 * Constructs a new instance of the android.gesture.GestureOverlayView$OnGestureListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onGestureStarted(param0: android.gesture.GestureOverlayView, param1: android.view.MotionEvent): void;
@@ -15312,6 +15383,7 @@ declare module android {
 					onGestureEnded(param0: android.gesture.GestureOverlayView, param1: android.view.MotionEvent): void;
 					onGestureCancelled(param0: android.gesture.GestureOverlayView, param1: android.view.MotionEvent): void;
 				});
+				public constructor();
 				public onGestureEnded(param0: android.gesture.GestureOverlayView, param1: android.view.MotionEvent): void;
 				public onGesture(param0: android.gesture.GestureOverlayView, param1: android.view.MotionEvent): void;
 				public onGestureStarted(param0: android.gesture.GestureOverlayView, param1: android.view.MotionEvent): void;
@@ -15320,22 +15392,24 @@ declare module android {
 			export class OnGesturePerformedListener extends java.lang.Object {
 				public static class: java.lang.Class<android.gesture.GestureOverlayView.OnGesturePerformedListener>;
 				/**
-				 * Constructs a new instance of the android.gesture.GestureOverlayView$OnGesturePerformedListener interface with the provided implementation.
+				 * Constructs a new instance of the android.gesture.GestureOverlayView$OnGesturePerformedListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onGesturePerformed(param0: android.gesture.GestureOverlayView, param1: android.gesture.Gesture): void;
 				});
+				public constructor();
 				public onGesturePerformed(param0: android.gesture.GestureOverlayView, param1: android.gesture.Gesture): void;
 			}
 			export class OnGesturingListener extends java.lang.Object {
 				public static class: java.lang.Class<android.gesture.GestureOverlayView.OnGesturingListener>;
 				/**
-				 * Constructs a new instance of the android.gesture.GestureOverlayView$OnGesturingListener interface with the provided implementation.
+				 * Constructs a new instance of the android.gesture.GestureOverlayView$OnGesturingListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onGesturingStarted(param0: android.gesture.GestureOverlayView): void;
 					onGesturingEnded(param0: android.gesture.GestureOverlayView): void;
 				});
+				public constructor();
 				public onGesturingStarted(param0: android.gesture.GestureOverlayView): void;
 				public onGesturingEnded(param0: android.gesture.GestureOverlayView): void;
 			}
@@ -16896,11 +16970,12 @@ declare module android {
 			export class OnFrameAvailableListener extends java.lang.Object {
 				public static class: java.lang.Class<android.graphics.SurfaceTexture.OnFrameAvailableListener>;
 				/**
-				 * Constructs a new instance of the android.graphics.SurfaceTexture$OnFrameAvailableListener interface with the provided implementation.
+				 * Constructs a new instance of the android.graphics.SurfaceTexture$OnFrameAvailableListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onFrameAvailable(param0: android.graphics.SurfaceTexture): void;
 				});
+				public constructor();
 				public onFrameAvailable(param0: android.graphics.SurfaceTexture): void;
 			}
 			export class OutOfResourcesException extends java.lang.Exception {
@@ -16986,13 +17061,14 @@ declare module android {
 			export class Animatable extends java.lang.Object {
 				public static class: java.lang.Class<android.graphics.drawable.Animatable>;
 				/**
-				 * Constructs a new instance of the android.graphics.drawable.Animatable interface with the provided implementation.
+				 * Constructs a new instance of the android.graphics.drawable.Animatable interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					start(): void;
 					stop(): void;
 					isRunning(): boolean;
 				});
+				public constructor();
 				public stop(): void;
 				public start(): void;
 				public isRunning(): boolean;
@@ -17007,7 +17083,7 @@ declare module android {
 			export class Animatable2 extends java.lang.Object implements android.graphics.drawable.Animatable {
 				public static class: java.lang.Class<android.graphics.drawable.Animatable2>;
 				/**
-				 * Constructs a new instance of the android.graphics.drawable.Animatable2 interface with the provided implementation.
+				 * Constructs a new instance of the android.graphics.drawable.Animatable2 interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					registerAnimationCallback(param0: android.graphics.drawable.Animatable2.AnimationCallback): void;
@@ -17017,6 +17093,7 @@ declare module android {
 					stop(): void;
 					isRunning(): boolean;
 				});
+				public constructor();
 				public stop(): void;
 				public unregisterAnimationCallback(param0: android.graphics.drawable.Animatable2.AnimationCallback): boolean;
 				public start(): void;
@@ -17334,13 +17411,14 @@ declare module android {
 				export class Callback extends java.lang.Object {
 					public static class: java.lang.Class<android.graphics.drawable.Drawable.Callback>;
 					/**
-					 * Constructs a new instance of the android.graphics.drawable.Drawable$Callback interface with the provided implementation.
+					 * Constructs a new instance of the android.graphics.drawable.Drawable$Callback interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 					 */
 					public constructor(implementation: {
 						invalidateDrawable(param0: android.graphics.drawable.Drawable): void;
 						scheduleDrawable(param0: android.graphics.drawable.Drawable, param1: java.lang.Runnable, param2: number): void;
 						unscheduleDrawable(param0: android.graphics.drawable.Drawable, param1: java.lang.Runnable): void;
 					});
+					public constructor();
 					public unscheduleDrawable(param0: android.graphics.drawable.Drawable, param1: java.lang.Runnable): void;
 					public scheduleDrawable(param0: android.graphics.drawable.Drawable, param1: java.lang.Runnable, param2: number): void;
 					public invalidateDrawable(param0: android.graphics.drawable.Drawable): void;
@@ -17597,11 +17675,12 @@ declare module android {
 				export class OnDrawableLoadedListener extends java.lang.Object {
 					public static class: java.lang.Class<any>;
 					/**
-					 * Constructs a new instance of the any$OnDrawableLoadedListener interface with the provided implementation.
+					 * Constructs a new instance of the any$OnDrawableLoadedListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 					 */
 					public constructor(implementation: {
 						onDrawableLoaded(param0: android.graphics.drawable.Drawable): void;
 					});
+					public constructor();
 					public onDrawableLoaded(param0: android.graphics.drawable.Drawable): void;
 				}
 			}
@@ -18288,21 +18367,23 @@ declare module android {
 			export class AutoFocusCallback extends java.lang.Object {
 				public static class: java.lang.Class<android.hardware.Camera.AutoFocusCallback>;
 				/**
-				 * Constructs a new instance of the android.hardware.Camera$AutoFocusCallback interface with the provided implementation.
+				 * Constructs a new instance of the android.hardware.Camera$AutoFocusCallback interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onAutoFocus(param0: boolean, param1: android.hardware.Camera): void;
 				});
+				public constructor();
 				public onAutoFocus(param0: boolean, param1: android.hardware.Camera): void;
 			}
 			export class AutoFocusMoveCallback extends java.lang.Object {
 				public static class: java.lang.Class<android.hardware.Camera.AutoFocusMoveCallback>;
 				/**
-				 * Constructs a new instance of the android.hardware.Camera$AutoFocusMoveCallback interface with the provided implementation.
+				 * Constructs a new instance of the android.hardware.Camera$AutoFocusMoveCallback interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onAutoFocusMoving(param0: boolean, param1: android.hardware.Camera): void;
 				});
+				public constructor();
 				public onAutoFocusMoving(param0: boolean, param1: android.hardware.Camera): void;
 			}
 			export class CameraInfo extends java.lang.Object {
@@ -18317,11 +18398,12 @@ declare module android {
 			export class ErrorCallback extends java.lang.Object {
 				public static class: java.lang.Class<android.hardware.Camera.ErrorCallback>;
 				/**
-				 * Constructs a new instance of the android.hardware.Camera$ErrorCallback interface with the provided implementation.
+				 * Constructs a new instance of the android.hardware.Camera$ErrorCallback interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onError(param0: number, param1: android.hardware.Camera): void;
 				});
+				public constructor();
 				public onError(param0: number, param1: android.hardware.Camera): void;
 			}
 			export class Face extends java.lang.Object {
@@ -18337,21 +18419,23 @@ declare module android {
 			export class FaceDetectionListener extends java.lang.Object {
 				public static class: java.lang.Class<android.hardware.Camera.FaceDetectionListener>;
 				/**
-				 * Constructs a new instance of the android.hardware.Camera$FaceDetectionListener interface with the provided implementation.
+				 * Constructs a new instance of the android.hardware.Camera$FaceDetectionListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onFaceDetection(param0: native.Array<android.hardware.Camera.Face>, param1: android.hardware.Camera): void;
 				});
+				public constructor();
 				public onFaceDetection(param0: native.Array<android.hardware.Camera.Face>, param1: android.hardware.Camera): void;
 			}
 			export class OnZoomChangeListener extends java.lang.Object {
 				public static class: java.lang.Class<android.hardware.Camera.OnZoomChangeListener>;
 				/**
-				 * Constructs a new instance of the android.hardware.Camera$OnZoomChangeListener interface with the provided implementation.
+				 * Constructs a new instance of the android.hardware.Camera$OnZoomChangeListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onZoomChange(param0: number, param1: boolean, param2: android.hardware.Camera): void;
 				});
+				public constructor();
 				public onZoomChange(param0: number, param1: boolean, param2: android.hardware.Camera): void;
 			}
 			export class Parameters extends java.lang.Object {
@@ -18507,31 +18591,34 @@ declare module android {
 			export class PictureCallback extends java.lang.Object {
 				public static class: java.lang.Class<android.hardware.Camera.PictureCallback>;
 				/**
-				 * Constructs a new instance of the android.hardware.Camera$PictureCallback interface with the provided implementation.
+				 * Constructs a new instance of the android.hardware.Camera$PictureCallback interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onPictureTaken(param0: native.Array<number>, param1: android.hardware.Camera): void;
 				});
+				public constructor();
 				public onPictureTaken(param0: native.Array<number>, param1: android.hardware.Camera): void;
 			}
 			export class PreviewCallback extends java.lang.Object {
 				public static class: java.lang.Class<android.hardware.Camera.PreviewCallback>;
 				/**
-				 * Constructs a new instance of the android.hardware.Camera$PreviewCallback interface with the provided implementation.
+				 * Constructs a new instance of the android.hardware.Camera$PreviewCallback interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onPreviewFrame(param0: native.Array<number>, param1: android.hardware.Camera): void;
 				});
+				public constructor();
 				public onPreviewFrame(param0: native.Array<number>, param1: android.hardware.Camera): void;
 			}
 			export class ShutterCallback extends java.lang.Object {
 				public static class: java.lang.Class<android.hardware.Camera.ShutterCallback>;
 				/**
-				 * Constructs a new instance of the android.hardware.Camera$ShutterCallback interface with the provided implementation.
+				 * Constructs a new instance of the android.hardware.Camera$ShutterCallback interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onShutter(): void;
 				});
+				public constructor();
 				public onShutter(): void;
 			}
 			export class Size extends java.lang.Object {
@@ -18713,12 +18800,13 @@ declare module android {
 		export class SensorEventListener extends java.lang.Object {
 			public static class: java.lang.Class<android.hardware.SensorEventListener>;
 			/**
-			 * Constructs a new instance of the android.hardware.SensorEventListener interface with the provided implementation.
+			 * Constructs a new instance of the android.hardware.SensorEventListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				onSensorChanged(param0: android.hardware.SensorEvent): void;
 				onAccuracyChanged(param0: android.hardware.Sensor, param1: number): void;
 			});
+			public constructor();
 			public onAccuracyChanged(param0: android.hardware.Sensor, param1: number): void;
 			public onSensorChanged(param0: android.hardware.SensorEvent): void;
 		}
@@ -18730,13 +18818,14 @@ declare module android {
 		export class SensorEventListener2 extends java.lang.Object implements android.hardware.SensorEventListener {
 			public static class: java.lang.Class<android.hardware.SensorEventListener2>;
 			/**
-			 * Constructs a new instance of the android.hardware.SensorEventListener2 interface with the provided implementation.
+			 * Constructs a new instance of the android.hardware.SensorEventListener2 interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				onFlushCompleted(param0: android.hardware.Sensor): void;
 				onSensorChanged(param0: android.hardware.SensorEvent): void;
 				onAccuracyChanged(param0: android.hardware.Sensor, param1: number): void;
 			});
+			public constructor();
 			public onFlushCompleted(param0: android.hardware.Sensor): void;
 			public onAccuracyChanged(param0: android.hardware.Sensor, param1: number): void;
 			public onSensorChanged(param0: android.hardware.SensorEvent): void;
@@ -18749,12 +18838,13 @@ declare module android {
 		export class SensorListener extends java.lang.Object {
 			public static class: java.lang.Class<android.hardware.SensorListener>;
 			/**
-			 * Constructs a new instance of the android.hardware.SensorListener interface with the provided implementation.
+			 * Constructs a new instance of the android.hardware.SensorListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				onSensorChanged(param0: number, param1: native.Array<number>): void;
 				onAccuracyChanged(param0: number, param1: number): void;
 			});
+			public constructor();
 			public onSensorChanged(param0: number, param1: native.Array<number>): void;
 			public onAccuracyChanged(param0: number, param1: number): void;
 		}
@@ -19851,13 +19941,14 @@ declare module android {
 				export class DisplayListener extends java.lang.Object {
 					public static class: java.lang.Class<android.hardware.display.DisplayManager.DisplayListener>;
 					/**
-					 * Constructs a new instance of the android.hardware.display.DisplayManager$DisplayListener interface with the provided implementation.
+					 * Constructs a new instance of the android.hardware.display.DisplayManager$DisplayListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 					 */
 					public constructor(implementation: {
 						onDisplayAdded(param0: number): void;
 						onDisplayRemoved(param0: number): void;
 						onDisplayChanged(param0: number): void;
 					});
+					public constructor();
 					public onDisplayRemoved(param0: number): void;
 					public onDisplayAdded(param0: number): void;
 					public onDisplayChanged(param0: number): void;
@@ -19956,13 +20047,14 @@ declare module android {
 				export class InputDeviceListener extends java.lang.Object {
 					public static class: java.lang.Class<android.hardware.input.InputManager.InputDeviceListener>;
 					/**
-					 * Constructs a new instance of the android.hardware.input.InputManager$InputDeviceListener interface with the provided implementation.
+					 * Constructs a new instance of the android.hardware.input.InputManager$InputDeviceListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 					 */
 					public constructor(implementation: {
 						onInputDeviceAdded(param0: number): void;
 						onInputDeviceRemoved(param0: number): void;
 						onInputDeviceChanged(param0: number): void;
 					});
+					public constructor();
 					public onInputDeviceRemoved(param0: number): void;
 					public onInputDeviceAdded(param0: number): void;
 					public onInputDeviceChanged(param0: number): void;
@@ -20331,10 +20423,11 @@ declare module android {
 				export class BidiPairedBracketType extends java.lang.Object {
 					public static class: java.lang.Class<android.icu.lang.UCharacter.BidiPairedBracketType>;
 					/**
-					 * Constructs a new instance of the android.icu.lang.UCharacter$BidiPairedBracketType interface with the provided implementation.
+					 * Constructs a new instance of the android.icu.lang.UCharacter$BidiPairedBracketType interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 					 */
 					public constructor(implementation: {
 					});
+					public constructor();
 					public static CLOSE: number;
 					public static NONE: number;
 					public static OPEN: number;
@@ -20342,10 +20435,11 @@ declare module android {
 				export class DecompositionType extends java.lang.Object {
 					public static class: java.lang.Class<android.icu.lang.UCharacter.DecompositionType>;
 					/**
-					 * Constructs a new instance of the android.icu.lang.UCharacter$DecompositionType interface with the provided implementation.
+					 * Constructs a new instance of the android.icu.lang.UCharacter$DecompositionType interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 					 */
 					public constructor(implementation: {
 					});
+					public constructor();
 					public static INITIAL: number;
 					public static FINAL: number;
 					public static CIRCLE: number;
@@ -20368,10 +20462,11 @@ declare module android {
 				export class EastAsianWidth extends java.lang.Object {
 					public static class: java.lang.Class<android.icu.lang.UCharacter.EastAsianWidth>;
 					/**
-					 * Constructs a new instance of the android.icu.lang.UCharacter$EastAsianWidth interface with the provided implementation.
+					 * Constructs a new instance of the android.icu.lang.UCharacter$EastAsianWidth interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 					 */
 					public constructor(implementation: {
 					});
+					public constructor();
 					public static WIDE: number;
 					public static NARROW: number;
 					public static NEUTRAL: number;
@@ -20382,10 +20477,11 @@ declare module android {
 				export class GraphemeClusterBreak extends java.lang.Object {
 					public static class: java.lang.Class<android.icu.lang.UCharacter.GraphemeClusterBreak>;
 					/**
-					 * Constructs a new instance of the android.icu.lang.UCharacter$GraphemeClusterBreak interface with the provided implementation.
+					 * Constructs a new instance of the android.icu.lang.UCharacter$GraphemeClusterBreak interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 					 */
 					public constructor(implementation: {
 					});
+					public constructor();
 					public static SPACING_MARK: number;
 					public static LVT: number;
 					public static LV: number;
@@ -20403,10 +20499,11 @@ declare module android {
 				export class HangulSyllableType extends java.lang.Object {
 					public static class: java.lang.Class<android.icu.lang.UCharacter.HangulSyllableType>;
 					/**
-					 * Constructs a new instance of the android.icu.lang.UCharacter$HangulSyllableType interface with the provided implementation.
+					 * Constructs a new instance of the android.icu.lang.UCharacter$HangulSyllableType interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 					 */
 					public constructor(implementation: {
 					});
+					public constructor();
 					public static LVT_SYLLABLE: number;
 					public static VOWEL_JAMO: number;
 					public static NOT_APPLICABLE: number;
@@ -20417,10 +20514,11 @@ declare module android {
 				export class JoiningGroup extends java.lang.Object {
 					public static class: java.lang.Class<android.icu.lang.UCharacter.JoiningGroup>;
 					/**
-					 * Constructs a new instance of the android.icu.lang.UCharacter$JoiningGroup interface with the provided implementation.
+					 * Constructs a new instance of the android.icu.lang.UCharacter$JoiningGroup interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 					 */
 					public constructor(implementation: {
 					});
+					public constructor();
 					public static MANICHAEAN_AYIN: number;
 					public static STRAIGHT_WAW: number;
 					public static MANICHAEAN_ZAYIN: number;
@@ -20512,10 +20610,11 @@ declare module android {
 				export class JoiningType extends java.lang.Object {
 					public static class: java.lang.Class<android.icu.lang.UCharacter.JoiningType>;
 					/**
-					 * Constructs a new instance of the android.icu.lang.UCharacter$JoiningType interface with the provided implementation.
+					 * Constructs a new instance of the android.icu.lang.UCharacter$JoiningType interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 					 */
 					public constructor(implementation: {
 					});
+					public constructor();
 					public static JOIN_CAUSING: number;
 					public static RIGHT_JOINING: number;
 					public static TRANSPARENT: number;
@@ -20526,10 +20625,11 @@ declare module android {
 				export class LineBreak extends java.lang.Object {
 					public static class: java.lang.Class<android.icu.lang.UCharacter.LineBreak>;
 					/**
-					 * Constructs a new instance of the android.icu.lang.UCharacter$LineBreak interface with the provided implementation.
+					 * Constructs a new instance of the android.icu.lang.UCharacter$LineBreak interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 					 */
 					public constructor(implementation: {
 					});
+					public constructor();
 					public static PREFIX_NUMERIC: number;
 					public static INSEPERABLE: number;
 					public static IDEOGRAPHIC: number;
@@ -20575,10 +20675,11 @@ declare module android {
 				export class NumericType extends java.lang.Object {
 					public static class: java.lang.Class<android.icu.lang.UCharacter.NumericType>;
 					/**
-					 * Constructs a new instance of the android.icu.lang.UCharacter$NumericType interface with the provided implementation.
+					 * Constructs a new instance of the android.icu.lang.UCharacter$NumericType interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 					 */
 					public constructor(implementation: {
 					});
+					public constructor();
 					public static DECIMAL: number;
 					public static DIGIT: number;
 					public static NONE: number;
@@ -20587,10 +20688,11 @@ declare module android {
 				export class SentenceBreak extends java.lang.Object {
 					public static class: java.lang.Class<android.icu.lang.UCharacter.SentenceBreak>;
 					/**
-					 * Constructs a new instance of the android.icu.lang.UCharacter$SentenceBreak interface with the provided implementation.
+					 * Constructs a new instance of the android.icu.lang.UCharacter$SentenceBreak interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 					 */
 					public constructor(implementation: {
 					});
+					public constructor();
 					public static CLOSE: number;
 					public static CR: number;
 					public static NUMERIC: number;
@@ -21148,10 +21250,11 @@ declare module android {
 				export class WordBreak extends java.lang.Object {
 					public static class: java.lang.Class<android.icu.lang.UCharacter.WordBreak>;
 					/**
-					 * Constructs a new instance of the android.icu.lang.UCharacter$WordBreak interface with the provided implementation.
+					 * Constructs a new instance of the android.icu.lang.UCharacter$WordBreak interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 					 */
 					public constructor(implementation: {
 					});
+					public constructor();
 					public static CR: number;
 					public static SINGLE_QUOTE: number;
 					public static REGIONAL_INDICATOR: number;
@@ -21209,10 +21312,11 @@ declare module android {
 				export class ECharacterCategory extends java.lang.Object {
 					public static class: java.lang.Class<android.icu.lang.UCharacterEnums.ECharacterCategory>;
 					/**
-					 * Constructs a new instance of the android.icu.lang.UCharacterEnums$ECharacterCategory interface with the provided implementation.
+					 * Constructs a new instance of the android.icu.lang.UCharacterEnums$ECharacterCategory interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 					 */
 					public constructor(implementation: {
 					});
+					public constructor();
 					public static GENERAL_OTHER_TYPES: number;
 					public static CURRENCY_SYMBOL: number;
 					public static LOWERCASE_LETTER: number;
@@ -21250,10 +21354,11 @@ declare module android {
 				export class ECharacterDirection extends java.lang.Object {
 					public static class: java.lang.Class<android.icu.lang.UCharacterEnums.ECharacterDirection>;
 					/**
-					 * Constructs a new instance of the android.icu.lang.UCharacterEnums$ECharacterDirection interface with the provided implementation.
+					 * Constructs a new instance of the android.icu.lang.UCharacterEnums$ECharacterDirection interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 					 */
 					public constructor(implementation: {
 					});
+					public constructor();
 					public static SEGMENT_SEPARATOR: number;
 					public static BLOCK_SEPARATOR: number;
 					public static DIRECTIONALITY_RIGHT_TO_LEFT_EMBEDDING: number;
@@ -21309,10 +21414,11 @@ declare module android {
 			export class UProperty extends java.lang.Object {
 				public static class: java.lang.Class<android.icu.lang.UProperty>;
 				/**
-				 * Constructs a new instance of the android.icu.lang.UProperty interface with the provided implementation.
+				 * Constructs a new instance of the android.icu.lang.UProperty interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 				});
+				public constructor();
 				public static CHANGES_WHEN_TITLECASED: number;
 				public static BINARY_START: number;
 				public static TITLECASE_MAPPING: number;
@@ -21418,10 +21524,11 @@ declare module android {
 				export class NameChoice extends java.lang.Object {
 					public static class: java.lang.Class<android.icu.lang.UProperty.NameChoice>;
 					/**
-					 * Constructs a new instance of the android.icu.lang.UProperty$NameChoice interface with the provided implementation.
+					 * Constructs a new instance of the android.icu.lang.UProperty$NameChoice interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 					 */
 					public constructor(implementation: {
 					});
+					public constructor();
 					public static LONG: number;
 					public static SHORT: number;
 				}
@@ -22015,10 +22122,11 @@ declare module android {
 				export class ReorderCodes extends java.lang.Object {
 					public static class: java.lang.Class<android.icu.text.Collator.ReorderCodes>;
 					/**
-					 * Constructs a new instance of the android.icu.text.Collator$ReorderCodes interface with the provided implementation.
+					 * Constructs a new instance of the android.icu.text.Collator$ReorderCodes interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 					 */
 					public constructor(implementation: {
 					});
+					public constructor();
 					public static DIGIT: number;
 					public static FIRST: number;
 					public static NONE: number;
@@ -23354,7 +23462,7 @@ declare module android {
 			export class Replaceable extends java.lang.Object {
 				public static class: java.lang.Class<android.icu.text.Replaceable>;
 				/**
-				 * Constructs a new instance of the android.icu.text.Replaceable interface with the provided implementation.
+				 * Constructs a new instance of the android.icu.text.Replaceable interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					length(): number;
@@ -23366,6 +23474,7 @@ declare module android {
 					copy(param0: number, param1: number, param2: number): void;
 					hasMetaData(): boolean;
 				});
+				public constructor();
 				public char32At(param0: number): number;
 				public getChars(param0: number, param1: number, param2: native.Array<string>, param3: number): void;
 				public copy(param0: number, param1: number, param2: number): void;
@@ -23646,13 +23755,14 @@ declare module android {
 			export class SymbolTable extends java.lang.Object {
 				public static class: java.lang.Class<android.icu.text.SymbolTable>;
 				/**
-				 * Constructs a new instance of the android.icu.text.SymbolTable interface with the provided implementation.
+				 * Constructs a new instance of the android.icu.text.SymbolTable interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					lookup(param0: string): native.Array<string>;
 					lookupMatcher(param0: number): android.icu.text.UnicodeMatcher;
 					parseReference(param0: string, param1: java.text.ParsePosition, param2: number): string;
 				});
+				public constructor();
 				public static SYMBOL_REF: string;
 				public lookupMatcher(param0: number): android.icu.text.UnicodeMatcher;
 				public lookup(param0: string): native.Array<string>;
@@ -23872,7 +23982,7 @@ declare module android {
 			export class UnicodeMatcher extends java.lang.Object {
 				public static class: java.lang.Class<android.icu.text.UnicodeMatcher>;
 				/**
-				 * Constructs a new instance of the android.icu.text.UnicodeMatcher interface with the provided implementation.
+				 * Constructs a new instance of the android.icu.text.UnicodeMatcher interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					matches(param0: android.icu.text.Replaceable, param1: native.Array<number>, param2: number, param3: boolean): number;
@@ -23880,6 +23990,7 @@ declare module android {
 					matchesIndexValue(param0: number): boolean;
 					addMatchSetTo(param0: android.icu.text.UnicodeSet): void;
 				});
+				public constructor();
 				public static U_PARTIAL_MATCH: number;
 				public static ETHER: string;
 				public static U_MISMATCH: number;
@@ -24516,13 +24627,14 @@ declare module android {
 			export class Freezable<T>  extends java.lang.Cloneable {
 				public static class: java.lang.Class<android.icu.util.Freezable<any>>;
 				/**
-				 * Constructs a new instance of the android.icu.util.Freezable<any> interface with the provided implementation.
+				 * Constructs a new instance of the android.icu.util.Freezable<any> interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					isFrozen(): boolean;
 					freeze(): any;
 					cloneAsThawed(): any;
 				});
+				public constructor();
 				public cloneAsThawed(): any;
 				public isFrozen(): boolean;
 				public freeze(): any;
@@ -24925,12 +25037,13 @@ declare module android {
 			export class RangeValueIterator extends java.lang.Object {
 				public static class: java.lang.Class<android.icu.util.RangeValueIterator>;
 				/**
-				 * Constructs a new instance of the android.icu.util.RangeValueIterator interface with the provided implementation.
+				 * Constructs a new instance of the android.icu.util.RangeValueIterator interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					next(param0: android.icu.util.RangeValueIterator.Element): boolean;
 					reset(): void;
 				});
+				public constructor();
 				public reset(): void;
 				public next(param0: android.icu.util.RangeValueIterator.Element): boolean;
 			}
@@ -25219,13 +25332,14 @@ declare module android {
 			export class ValueIterator extends java.lang.Object {
 				public static class: java.lang.Class<android.icu.util.ValueIterator>;
 				/**
-				 * Constructs a new instance of the android.icu.util.ValueIterator interface with the provided implementation.
+				 * Constructs a new instance of the android.icu.util.ValueIterator interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					next(param0: android.icu.util.ValueIterator.Element): boolean;
 					reset(): void;
 					setRange(param0: number, param1: number): void;
 				});
+				public constructor();
 				public next(param0: android.icu.util.ValueIterator.Element): boolean;
 				public reset(): void;
 				public setRange(param0: number, param1: number): void;
@@ -25661,7 +25775,7 @@ declare module android {
 			export class OnKeyboardActionListener extends java.lang.Object {
 				public static class: java.lang.Class<android.inputmethodservice.KeyboardView.OnKeyboardActionListener>;
 				/**
-				 * Constructs a new instance of the android.inputmethodservice.KeyboardView$OnKeyboardActionListener interface with the provided implementation.
+				 * Constructs a new instance of the android.inputmethodservice.KeyboardView$OnKeyboardActionListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onPress(param0: number): void;
@@ -25673,6 +25787,7 @@ declare module android {
 					swipeDown(): void;
 					swipeUp(): void;
 				});
+				public constructor();
 				public onRelease(param0: number): void;
 				public onPress(param0: number): void;
 				public onText(param0: string): void;
@@ -26013,21 +26128,23 @@ declare module android {
 			export class Listener extends java.lang.Object {
 				public static class: java.lang.Class<android.location.GpsStatus.Listener>;
 				/**
-				 * Constructs a new instance of the android.location.GpsStatus$Listener interface with the provided implementation.
+				 * Constructs a new instance of the android.location.GpsStatus$Listener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onGpsStatusChanged(param0: number): void;
 				});
+				public constructor();
 				public onGpsStatusChanged(param0: number): void;
 			}
 			export class NmeaListener extends java.lang.Object {
 				public static class: java.lang.Class<android.location.GpsStatus.NmeaListener>;
 				/**
-				 * Constructs a new instance of the android.location.GpsStatus$NmeaListener interface with the provided implementation.
+				 * Constructs a new instance of the android.location.GpsStatus$NmeaListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onNmeaReceived(param0: number, param1: string): void;
 				});
+				public constructor();
 				public onNmeaReceived(param0: number, param1: string): void;
 			}
 		}
@@ -26093,7 +26210,7 @@ declare module android {
 		export class LocationListener extends java.lang.Object {
 			public static class: java.lang.Class<android.location.LocationListener>;
 			/**
-			 * Constructs a new instance of the android.location.LocationListener interface with the provided implementation.
+			 * Constructs a new instance of the android.location.LocationListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				onLocationChanged(param0: android.location.Location): void;
@@ -26101,6 +26218,7 @@ declare module android {
 				onProviderEnabled(param0: string): void;
 				onProviderDisabled(param0: string): void;
 			});
+			public constructor();
 			public onProviderDisabled(param0: string): void;
 			public onProviderEnabled(param0: string): void;
 			public onLocationChanged(param0: android.location.Location): void;
@@ -26199,11 +26317,12 @@ declare module android {
 		export class OnNmeaMessageListener extends java.lang.Object {
 			public static class: java.lang.Class<android.location.OnNmeaMessageListener>;
 			/**
-			 * Constructs a new instance of the android.location.OnNmeaMessageListener interface with the provided implementation.
+			 * Constructs a new instance of the android.location.OnNmeaMessageListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				onNmeaMessage(param0: string, param1: number): void;
 			});
+			public constructor();
 			public onNmeaMessage(param0: string, param1: number): void;
 		}
 	}
@@ -26591,11 +26710,12 @@ declare module android {
 			export class OnAudioFocusChangeListener extends java.lang.Object {
 				public static class: java.lang.Class<android.media.AudioManager.OnAudioFocusChangeListener>;
 				/**
-				 * Constructs a new instance of the android.media.AudioManager$OnAudioFocusChangeListener interface with the provided implementation.
+				 * Constructs a new instance of the android.media.AudioManager$OnAudioFocusChangeListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onAudioFocusChange(param0: number): void;
 				});
+				public constructor();
 				public onAudioFocusChange(param0: number): void;
 			}
 		}
@@ -26665,25 +26785,27 @@ declare module android {
 			export class OnRecordPositionUpdateListener extends java.lang.Object {
 				public static class: java.lang.Class<android.media.AudioRecord.OnRecordPositionUpdateListener>;
 				/**
-				 * Constructs a new instance of the android.media.AudioRecord$OnRecordPositionUpdateListener interface with the provided implementation.
+				 * Constructs a new instance of the android.media.AudioRecord$OnRecordPositionUpdateListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onMarkerReached(param0: android.media.AudioRecord): void;
 					onPeriodicNotification(param0: android.media.AudioRecord): void;
 				});
+				public constructor();
 				public onPeriodicNotification(param0: android.media.AudioRecord): void;
 				public onMarkerReached(param0: android.media.AudioRecord): void;
 			}
 			export class OnRoutingChangedListener extends java.lang.Object implements android.media.AudioRouting.OnRoutingChangedListener {
 				public static class: java.lang.Class<android.media.AudioRecord.OnRoutingChangedListener>;
 				/**
-				 * Constructs a new instance of the android.media.AudioRecord$OnRoutingChangedListener interface with the provided implementation.
+				 * Constructs a new instance of the android.media.AudioRecord$OnRoutingChangedListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onRoutingChanged(param0: android.media.AudioRecord): void;
 					onRoutingChanged(param0: android.media.AudioRouting): void;
 					onRoutingChanged(param0: android.media.AudioRouting): void;
 				});
+				public constructor();
 				public onRoutingChanged(param0: android.media.AudioRecord): void;
 				public onRoutingChanged(param0: android.media.AudioRouting): void;
 			}
@@ -26714,7 +26836,7 @@ declare module android {
 		export class AudioRouting extends java.lang.Object {
 			public static class: java.lang.Class<android.media.AudioRouting>;
 			/**
-			 * Constructs a new instance of the android.media.AudioRouting interface with the provided implementation.
+			 * Constructs a new instance of the android.media.AudioRouting interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				setPreferredDevice(param0: android.media.AudioDeviceInfo): boolean;
@@ -26723,6 +26845,7 @@ declare module android {
 				addOnRoutingChangedListener(param0: android.media.AudioRouting.OnRoutingChangedListener, param1: android.os.Handler): void;
 				removeOnRoutingChangedListener(param0: android.media.AudioRouting.OnRoutingChangedListener): void;
 			});
+			public constructor();
 			public getPreferredDevice(): android.media.AudioDeviceInfo;
 			public getRoutedDevice(): android.media.AudioDeviceInfo;
 			public removeOnRoutingChangedListener(param0: android.media.AudioRouting.OnRoutingChangedListener): void;
@@ -26733,11 +26856,12 @@ declare module android {
 			export class OnRoutingChangedListener extends java.lang.Object {
 				public static class: java.lang.Class<android.media.AudioRouting.OnRoutingChangedListener>;
 				/**
-				 * Constructs a new instance of the android.media.AudioRouting$OnRoutingChangedListener interface with the provided implementation.
+				 * Constructs a new instance of the android.media.AudioRouting$OnRoutingChangedListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onRoutingChanged(param0: android.media.AudioRouting): void;
 				});
+				public constructor();
 				public onRoutingChanged(param0: android.media.AudioRouting): void;
 			}
 		}
@@ -26849,25 +26973,27 @@ declare module android {
 			export class OnPlaybackPositionUpdateListener extends java.lang.Object {
 				public static class: java.lang.Class<android.media.AudioTrack.OnPlaybackPositionUpdateListener>;
 				/**
-				 * Constructs a new instance of the android.media.AudioTrack$OnPlaybackPositionUpdateListener interface with the provided implementation.
+				 * Constructs a new instance of the android.media.AudioTrack$OnPlaybackPositionUpdateListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onMarkerReached(param0: android.media.AudioTrack): void;
 					onPeriodicNotification(param0: android.media.AudioTrack): void;
 				});
+				public constructor();
 				public onMarkerReached(param0: android.media.AudioTrack): void;
 				public onPeriodicNotification(param0: android.media.AudioTrack): void;
 			}
 			export class OnRoutingChangedListener extends java.lang.Object implements android.media.AudioRouting.OnRoutingChangedListener {
 				public static class: java.lang.Class<android.media.AudioTrack.OnRoutingChangedListener>;
 				/**
-				 * Constructs a new instance of the android.media.AudioTrack$OnRoutingChangedListener interface with the provided implementation.
+				 * Constructs a new instance of the android.media.AudioTrack$OnRoutingChangedListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onRoutingChanged(param0: android.media.AudioTrack): void;
 					onRoutingChanged(param0: android.media.AudioRouting): void;
 					onRoutingChanged(param0: android.media.AudioRouting): void;
 				});
+				public constructor();
 				public onRoutingChanged(param0: android.media.AudioTrack): void;
 				public onRoutingChanged(param0: android.media.AudioRouting): void;
 			}
@@ -27193,11 +27319,12 @@ declare module android {
 			export class OnImageAvailableListener extends java.lang.Object {
 				public static class: java.lang.Class<android.media.ImageReader.OnImageAvailableListener>;
 				/**
-				 * Constructs a new instance of the android.media.ImageReader$OnImageAvailableListener interface with the provided implementation.
+				 * Constructs a new instance of the android.media.ImageReader$OnImageAvailableListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onImageAvailable(param0: android.media.ImageReader): void;
 				});
+				public constructor();
 				public onImageAvailable(param0: android.media.ImageReader): void;
 			}
 		}
@@ -27221,11 +27348,12 @@ declare module android {
 			export class OnImageReleasedListener extends java.lang.Object {
 				public static class: java.lang.Class<android.media.ImageWriter.OnImageReleasedListener>;
 				/**
-				 * Constructs a new instance of the android.media.ImageWriter$OnImageReleasedListener interface with the provided implementation.
+				 * Constructs a new instance of the android.media.ImageWriter$OnImageReleasedListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onImageReleased(param0: android.media.ImageWriter): void;
 				});
+				public constructor();
 				public onImageReleased(param0: android.media.ImageWriter): void;
 			}
 		}
@@ -27260,7 +27388,7 @@ declare module android {
 			export class OnJetEventListener extends java.lang.Object {
 				public static class: java.lang.Class<android.media.JetPlayer.OnJetEventListener>;
 				/**
-				 * Constructs a new instance of the android.media.JetPlayer$OnJetEventListener interface with the provided implementation.
+				 * Constructs a new instance of the android.media.JetPlayer$OnJetEventListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onJetEvent(param0: android.media.JetPlayer, param1: number, param2: number, param3: number, param4: number, param5: number): void;
@@ -27268,6 +27396,7 @@ declare module android {
 					onJetNumQueuedSegmentUpdate(param0: android.media.JetPlayer, param1: number): void;
 					onJetPauseUpdate(param0: android.media.JetPlayer, param1: number): void;
 				});
+				public constructor();
 				public onJetEvent(param0: android.media.JetPlayer, param1: number, param2: number, param3: number, param4: number, param5: number): void;
 				public onJetPauseUpdate(param0: android.media.JetPlayer, param1: number): void;
 				public onJetUserIdUpdate(param0: android.media.JetPlayer, param1: number, param2: number): void;
@@ -27419,11 +27548,12 @@ declare module android {
 			export class OnFrameRenderedListener extends java.lang.Object {
 				public static class: java.lang.Class<android.media.MediaCodec.OnFrameRenderedListener>;
 				/**
-				 * Constructs a new instance of the android.media.MediaCodec$OnFrameRenderedListener interface with the provided implementation.
+				 * Constructs a new instance of the android.media.MediaCodec$OnFrameRenderedListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onFrameRendered(param0: android.media.MediaCodec, param1: number, param2: number): void;
 				});
+				public constructor();
 				public onFrameRendered(param0: android.media.MediaCodec, param1: number, param2: number): void;
 			}
 		}
@@ -27880,31 +28010,34 @@ declare module android {
 			export class OnEventListener extends java.lang.Object {
 				public static class: java.lang.Class<android.media.MediaDrm.OnEventListener>;
 				/**
-				 * Constructs a new instance of the android.media.MediaDrm$OnEventListener interface with the provided implementation.
+				 * Constructs a new instance of the android.media.MediaDrm$OnEventListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onEvent(param0: android.media.MediaDrm, param1: native.Array<number>, param2: number, param3: number, param4: native.Array<number>): void;
 				});
+				public constructor();
 				public onEvent(param0: android.media.MediaDrm, param1: native.Array<number>, param2: number, param3: number, param4: native.Array<number>): void;
 			}
 			export class OnExpirationUpdateListener extends java.lang.Object {
 				public static class: java.lang.Class<android.media.MediaDrm.OnExpirationUpdateListener>;
 				/**
-				 * Constructs a new instance of the android.media.MediaDrm$OnExpirationUpdateListener interface with the provided implementation.
+				 * Constructs a new instance of the android.media.MediaDrm$OnExpirationUpdateListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onExpirationUpdate(param0: android.media.MediaDrm, param1: native.Array<number>, param2: number): void;
 				});
+				public constructor();
 				public onExpirationUpdate(param0: android.media.MediaDrm, param1: native.Array<number>, param2: number): void;
 			}
 			export class OnKeyStatusChangeListener extends java.lang.Object {
 				public static class: java.lang.Class<android.media.MediaDrm.OnKeyStatusChangeListener>;
 				/**
-				 * Constructs a new instance of the android.media.MediaDrm$OnKeyStatusChangeListener interface with the provided implementation.
+				 * Constructs a new instance of the android.media.MediaDrm$OnKeyStatusChangeListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onKeyStatusChange(param0: android.media.MediaDrm, param1: native.Array<number>, param2: java.util.List<android.media.MediaDrm.KeyStatus>, param3: boolean): void;
 				});
+				public constructor();
 				public onKeyStatusChange(param0: android.media.MediaDrm, param1: native.Array<number>, param2: java.util.List<android.media.MediaDrm.KeyStatus>, param3: boolean): void;
 			}
 			export class ProvisionRequest extends java.lang.Object {
@@ -28341,91 +28474,100 @@ declare module android {
 			export class OnBufferingUpdateListener extends java.lang.Object {
 				public static class: java.lang.Class<android.media.MediaPlayer.OnBufferingUpdateListener>;
 				/**
-				 * Constructs a new instance of the android.media.MediaPlayer$OnBufferingUpdateListener interface with the provided implementation.
+				 * Constructs a new instance of the android.media.MediaPlayer$OnBufferingUpdateListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onBufferingUpdate(param0: android.media.MediaPlayer, param1: number): void;
 				});
+				public constructor();
 				public onBufferingUpdate(param0: android.media.MediaPlayer, param1: number): void;
 			}
 			export class OnCompletionListener extends java.lang.Object {
 				public static class: java.lang.Class<android.media.MediaPlayer.OnCompletionListener>;
 				/**
-				 * Constructs a new instance of the android.media.MediaPlayer$OnCompletionListener interface with the provided implementation.
+				 * Constructs a new instance of the android.media.MediaPlayer$OnCompletionListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onCompletion(param0: android.media.MediaPlayer): void;
 				});
+				public constructor();
 				public onCompletion(param0: android.media.MediaPlayer): void;
 			}
 			export class OnErrorListener extends java.lang.Object {
 				public static class: java.lang.Class<android.media.MediaPlayer.OnErrorListener>;
 				/**
-				 * Constructs a new instance of the android.media.MediaPlayer$OnErrorListener interface with the provided implementation.
+				 * Constructs a new instance of the android.media.MediaPlayer$OnErrorListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onError(param0: android.media.MediaPlayer, param1: number, param2: number): boolean;
 				});
+				public constructor();
 				public onError(param0: android.media.MediaPlayer, param1: number, param2: number): boolean;
 			}
 			export class OnInfoListener extends java.lang.Object {
 				public static class: java.lang.Class<android.media.MediaPlayer.OnInfoListener>;
 				/**
-				 * Constructs a new instance of the android.media.MediaPlayer$OnInfoListener interface with the provided implementation.
+				 * Constructs a new instance of the android.media.MediaPlayer$OnInfoListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onInfo(param0: android.media.MediaPlayer, param1: number, param2: number): boolean;
 				});
+				public constructor();
 				public onInfo(param0: android.media.MediaPlayer, param1: number, param2: number): boolean;
 			}
 			export class OnPreparedListener extends java.lang.Object {
 				public static class: java.lang.Class<android.media.MediaPlayer.OnPreparedListener>;
 				/**
-				 * Constructs a new instance of the android.media.MediaPlayer$OnPreparedListener interface with the provided implementation.
+				 * Constructs a new instance of the android.media.MediaPlayer$OnPreparedListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onPrepared(param0: android.media.MediaPlayer): void;
 				});
+				public constructor();
 				public onPrepared(param0: android.media.MediaPlayer): void;
 			}
 			export class OnSeekCompleteListener extends java.lang.Object {
 				public static class: java.lang.Class<android.media.MediaPlayer.OnSeekCompleteListener>;
 				/**
-				 * Constructs a new instance of the android.media.MediaPlayer$OnSeekCompleteListener interface with the provided implementation.
+				 * Constructs a new instance of the android.media.MediaPlayer$OnSeekCompleteListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onSeekComplete(param0: android.media.MediaPlayer): void;
 				});
+				public constructor();
 				public onSeekComplete(param0: android.media.MediaPlayer): void;
 			}
 			export class OnTimedMetaDataAvailableListener extends java.lang.Object {
 				public static class: java.lang.Class<android.media.MediaPlayer.OnTimedMetaDataAvailableListener>;
 				/**
-				 * Constructs a new instance of the android.media.MediaPlayer$OnTimedMetaDataAvailableListener interface with the provided implementation.
+				 * Constructs a new instance of the android.media.MediaPlayer$OnTimedMetaDataAvailableListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onTimedMetaDataAvailable(param0: android.media.MediaPlayer, param1: android.media.TimedMetaData): void;
 				});
+				public constructor();
 				public onTimedMetaDataAvailable(param0: android.media.MediaPlayer, param1: android.media.TimedMetaData): void;
 			}
 			export class OnTimedTextListener extends java.lang.Object {
 				public static class: java.lang.Class<android.media.MediaPlayer.OnTimedTextListener>;
 				/**
-				 * Constructs a new instance of the android.media.MediaPlayer$OnTimedTextListener interface with the provided implementation.
+				 * Constructs a new instance of the android.media.MediaPlayer$OnTimedTextListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onTimedText(param0: android.media.MediaPlayer, param1: android.media.TimedText): void;
 				});
+				public constructor();
 				public onTimedText(param0: android.media.MediaPlayer, param1: android.media.TimedText): void;
 			}
 			export class OnVideoSizeChangedListener extends java.lang.Object {
 				public static class: java.lang.Class<android.media.MediaPlayer.OnVideoSizeChangedListener>;
 				/**
-				 * Constructs a new instance of the android.media.MediaPlayer$OnVideoSizeChangedListener interface with the provided implementation.
+				 * Constructs a new instance of the android.media.MediaPlayer$OnVideoSizeChangedListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onVideoSizeChanged(param0: android.media.MediaPlayer, param1: number, param2: number): void;
 				});
+				public constructor();
 				public onVideoSizeChanged(param0: android.media.MediaPlayer, param1: number, param2: number): void;
 			}
 			export class TrackInfo extends java.lang.Object implements android.os.Parcelable {
@@ -28520,21 +28662,23 @@ declare module android {
 			export class OnErrorListener extends java.lang.Object {
 				public static class: java.lang.Class<android.media.MediaRecorder.OnErrorListener>;
 				/**
-				 * Constructs a new instance of the android.media.MediaRecorder$OnErrorListener interface with the provided implementation.
+				 * Constructs a new instance of the android.media.MediaRecorder$OnErrorListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onError(param0: android.media.MediaRecorder, param1: number, param2: number): void;
 				});
+				public constructor();
 				public onError(param0: android.media.MediaRecorder, param1: number, param2: number): void;
 			}
 			export class OnInfoListener extends java.lang.Object {
 				public static class: java.lang.Class<android.media.MediaRecorder.OnInfoListener>;
 				/**
-				 * Constructs a new instance of the android.media.MediaRecorder$OnInfoListener interface with the provided implementation.
+				 * Constructs a new instance of the android.media.MediaRecorder$OnInfoListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onInfo(param0: android.media.MediaRecorder, param1: number, param2: number): void;
 				});
+				public constructor();
 				public onInfo(param0: android.media.MediaRecorder, param1: number, param2: number): void;
 			}
 			export class OutputFormat extends java.lang.Object {
@@ -28721,24 +28865,26 @@ declare module android {
 			export class MediaScannerConnectionClient extends java.lang.Object implements android.media.MediaScannerConnection.OnScanCompletedListener {
 				public static class: java.lang.Class<android.media.MediaScannerConnection.MediaScannerConnectionClient>;
 				/**
-				 * Constructs a new instance of the android.media.MediaScannerConnection$MediaScannerConnectionClient interface with the provided implementation.
+				 * Constructs a new instance of the android.media.MediaScannerConnection$MediaScannerConnectionClient interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onMediaScannerConnected(): void;
 					onScanCompleted(param0: string, param1: android.net.Uri): void;
 					onScanCompleted(param0: string, param1: android.net.Uri): void;
 				});
+				public constructor();
 				public onScanCompleted(param0: string, param1: android.net.Uri): void;
 				public onMediaScannerConnected(): void;
 			}
 			export class OnScanCompletedListener extends java.lang.Object {
 				public static class: java.lang.Class<android.media.MediaScannerConnection.OnScanCompletedListener>;
 				/**
-				 * Constructs a new instance of the android.media.MediaScannerConnection$OnScanCompletedListener interface with the provided implementation.
+				 * Constructs a new instance of the android.media.MediaScannerConnection$OnScanCompletedListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onScanCompleted(param0: string, param1: android.net.Uri): void;
 				});
+				public constructor();
 				public onScanCompleted(param0: string, param1: android.net.Uri): void;
 			}
 		}
@@ -28776,11 +28922,12 @@ declare module android {
 			export class OnErrorListener extends java.lang.Object {
 				public static class: java.lang.Class<android.media.MediaSync.OnErrorListener>;
 				/**
-				 * Constructs a new instance of the android.media.MediaSync$OnErrorListener interface with the provided implementation.
+				 * Constructs a new instance of the android.media.MediaSync$OnErrorListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onError(param0: android.media.MediaSync, param1: number, param2: number): void;
 				});
+				public constructor();
 				public onError(param0: android.media.MediaSync, param1: number, param2: number): void;
 			}
 		}
@@ -28929,31 +29076,34 @@ declare module android {
 			export class OnGetPlaybackPositionListener extends java.lang.Object {
 				public static class: java.lang.Class<android.media.RemoteControlClient.OnGetPlaybackPositionListener>;
 				/**
-				 * Constructs a new instance of the android.media.RemoteControlClient$OnGetPlaybackPositionListener interface with the provided implementation.
+				 * Constructs a new instance of the android.media.RemoteControlClient$OnGetPlaybackPositionListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onGetPlaybackPosition(): number;
 				});
+				public constructor();
 				public onGetPlaybackPosition(): number;
 			}
 			export class OnMetadataUpdateListener extends java.lang.Object {
 				public static class: java.lang.Class<android.media.RemoteControlClient.OnMetadataUpdateListener>;
 				/**
-				 * Constructs a new instance of the android.media.RemoteControlClient$OnMetadataUpdateListener interface with the provided implementation.
+				 * Constructs a new instance of the android.media.RemoteControlClient$OnMetadataUpdateListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onMetadataUpdate(param0: number, param1: any): void;
 				});
+				public constructor();
 				public onMetadataUpdate(param0: number, param1: any): void;
 			}
 			export class OnPlaybackPositionUpdateListener extends java.lang.Object {
 				public static class: java.lang.Class<android.media.RemoteControlClient.OnPlaybackPositionUpdateListener>;
 				/**
-				 * Constructs a new instance of the android.media.RemoteControlClient$OnPlaybackPositionUpdateListener interface with the provided implementation.
+				 * Constructs a new instance of the android.media.RemoteControlClient$OnPlaybackPositionUpdateListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onPlaybackPositionUpdate(param0: number): void;
 				});
+				public constructor();
 				public onPlaybackPositionUpdate(param0: number): void;
 			}
 		}
@@ -28984,7 +29134,7 @@ declare module android {
 			export class OnClientUpdateListener extends java.lang.Object {
 				public static class: java.lang.Class<android.media.RemoteController.OnClientUpdateListener>;
 				/**
-				 * Constructs a new instance of the android.media.RemoteController$OnClientUpdateListener interface with the provided implementation.
+				 * Constructs a new instance of the android.media.RemoteController$OnClientUpdateListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onClientChange(param0: boolean): void;
@@ -28993,6 +29143,7 @@ declare module android {
 					onClientTransportControlUpdate(param0: number): void;
 					onClientMetadataUpdate(param0: android.media.RemoteController.MetadataEditor): void;
 				});
+				public constructor();
 				public onClientPlaybackStateUpdate(param0: number): void;
 				public onClientChange(param0: boolean): void;
 				public onClientMetadataUpdate(param0: android.media.RemoteController.MetadataEditor): void;
@@ -29112,11 +29263,12 @@ declare module android {
 			export class OnLoadCompleteListener extends java.lang.Object {
 				public static class: java.lang.Class<android.media.SoundPool.OnLoadCompleteListener>;
 				/**
-				 * Constructs a new instance of the android.media.SoundPool$OnLoadCompleteListener interface with the provided implementation.
+				 * Constructs a new instance of the android.media.SoundPool$OnLoadCompleteListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onLoadComplete(param0: android.media.SoundPool, param1: number, param2: number): void;
 				});
+				public constructor();
 				public onLoadComplete(param0: android.media.SoundPool, param1: number, param2: number): void;
 			}
 		}
@@ -29399,21 +29551,23 @@ declare module android {
 				export class OnControlStatusChangeListener extends java.lang.Object {
 					public static class: java.lang.Class<android.media.audiofx.AudioEffect.OnControlStatusChangeListener>;
 					/**
-					 * Constructs a new instance of the android.media.audiofx.AudioEffect$OnControlStatusChangeListener interface with the provided implementation.
+					 * Constructs a new instance of the android.media.audiofx.AudioEffect$OnControlStatusChangeListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 					 */
 					public constructor(implementation: {
 						onControlStatusChange(param0: android.media.audiofx.AudioEffect, param1: boolean): void;
 					});
+					public constructor();
 					public onControlStatusChange(param0: android.media.audiofx.AudioEffect, param1: boolean): void;
 				}
 				export class OnEnableStatusChangeListener extends java.lang.Object {
 					public static class: java.lang.Class<android.media.audiofx.AudioEffect.OnEnableStatusChangeListener>;
 					/**
-					 * Constructs a new instance of the android.media.audiofx.AudioEffect$OnEnableStatusChangeListener interface with the provided implementation.
+					 * Constructs a new instance of the android.media.audiofx.AudioEffect$OnEnableStatusChangeListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 					 */
 					public constructor(implementation: {
 						onEnableStatusChange(param0: android.media.audiofx.AudioEffect, param1: boolean): void;
 					});
+					public constructor();
 					public onEnableStatusChange(param0: android.media.audiofx.AudioEffect, param1: boolean): void;
 				}
 			}
@@ -29452,11 +29606,12 @@ declare module android {
 				export class OnParameterChangeListener extends java.lang.Object {
 					public static class: java.lang.Class<android.media.audiofx.BassBoost.OnParameterChangeListener>;
 					/**
-					 * Constructs a new instance of the android.media.audiofx.BassBoost$OnParameterChangeListener interface with the provided implementation.
+					 * Constructs a new instance of the android.media.audiofx.BassBoost$OnParameterChangeListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 					 */
 					public constructor(implementation: {
 						onParameterChange(param0: android.media.audiofx.BassBoost, param1: number, param2: number, param3: number): void;
 					});
+					public constructor();
 					public onParameterChange(param0: android.media.audiofx.BassBoost, param1: number, param2: number, param3: number): void;
 				}
 				export class Settings extends java.lang.Object {
@@ -29515,11 +29670,12 @@ declare module android {
 				export class OnParameterChangeListener extends java.lang.Object {
 					public static class: java.lang.Class<android.media.audiofx.EnvironmentalReverb.OnParameterChangeListener>;
 					/**
-					 * Constructs a new instance of the android.media.audiofx.EnvironmentalReverb$OnParameterChangeListener interface with the provided implementation.
+					 * Constructs a new instance of the android.media.audiofx.EnvironmentalReverb$OnParameterChangeListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 					 */
 					public constructor(implementation: {
 						onParameterChange(param0: android.media.audiofx.EnvironmentalReverb, param1: number, param2: number, param3: number): void;
 					});
+					public constructor();
 					public onParameterChange(param0: android.media.audiofx.EnvironmentalReverb, param1: number, param2: number, param3: number): void;
 				}
 				export class Settings extends java.lang.Object {
@@ -29578,11 +29734,12 @@ declare module android {
 				export class OnParameterChangeListener extends java.lang.Object {
 					public static class: java.lang.Class<android.media.audiofx.Equalizer.OnParameterChangeListener>;
 					/**
-					 * Constructs a new instance of the android.media.audiofx.Equalizer$OnParameterChangeListener interface with the provided implementation.
+					 * Constructs a new instance of the android.media.audiofx.Equalizer$OnParameterChangeListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 					 */
 					public constructor(implementation: {
 						onParameterChange(param0: android.media.audiofx.Equalizer, param1: number, param2: number, param3: number, param4: number): void;
 					});
+					public constructor();
 					public onParameterChange(param0: android.media.audiofx.Equalizer, param1: number, param2: number, param3: number, param4: number): void;
 				}
 				export class Settings extends java.lang.Object {
@@ -29649,11 +29806,12 @@ declare module android {
 				export class OnParameterChangeListener extends java.lang.Object {
 					public static class: java.lang.Class<android.media.audiofx.PresetReverb.OnParameterChangeListener>;
 					/**
-					 * Constructs a new instance of the android.media.audiofx.PresetReverb$OnParameterChangeListener interface with the provided implementation.
+					 * Constructs a new instance of the android.media.audiofx.PresetReverb$OnParameterChangeListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 					 */
 					public constructor(implementation: {
 						onParameterChange(param0: android.media.audiofx.PresetReverb, param1: number, param2: number, param3: number): void;
 					});
+					public constructor();
 					public onParameterChange(param0: android.media.audiofx.PresetReverb, param1: number, param2: number, param3: number): void;
 				}
 				export class Settings extends java.lang.Object {
@@ -29695,11 +29853,12 @@ declare module android {
 				export class OnParameterChangeListener extends java.lang.Object {
 					public static class: java.lang.Class<android.media.audiofx.Virtualizer.OnParameterChangeListener>;
 					/**
-					 * Constructs a new instance of the android.media.audiofx.Virtualizer$OnParameterChangeListener interface with the provided implementation.
+					 * Constructs a new instance of the android.media.audiofx.Virtualizer$OnParameterChangeListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 					 */
 					public constructor(implementation: {
 						onParameterChange(param0: android.media.audiofx.Virtualizer, param1: number, param2: number, param3: number): void;
 					});
+					public constructor();
 					public onParameterChange(param0: android.media.audiofx.Virtualizer, param1: number, param2: number, param3: number): void;
 				}
 				export class Settings extends java.lang.Object {
@@ -29763,12 +29922,13 @@ declare module android {
 				export class OnDataCaptureListener extends java.lang.Object {
 					public static class: java.lang.Class<android.media.audiofx.Visualizer.OnDataCaptureListener>;
 					/**
-					 * Constructs a new instance of the android.media.audiofx.Visualizer$OnDataCaptureListener interface with the provided implementation.
+					 * Constructs a new instance of the android.media.audiofx.Visualizer$OnDataCaptureListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 					 */
 					public constructor(implementation: {
 						onWaveFormDataCapture(param0: android.media.audiofx.Visualizer, param1: native.Array<number>, param2: number): void;
 						onFftDataCapture(param0: android.media.audiofx.Visualizer, param1: native.Array<number>, param2: number): void;
 					});
+					public constructor();
 					public onWaveFormDataCapture(param0: android.media.audiofx.Visualizer, param1: native.Array<number>, param2: number): void;
 					public onFftDataCapture(param0: android.media.audiofx.Visualizer, param1: native.Array<number>, param2: number): void;
 				}
@@ -29914,11 +30074,12 @@ declare module android {
 			export class EffectUpdateListener extends java.lang.Object {
 				public static class: java.lang.Class<android.media.effect.EffectUpdateListener>;
 				/**
-				 * Constructs a new instance of the android.media.effect.EffectUpdateListener interface with the provided implementation.
+				 * Constructs a new instance of the android.media.effect.EffectUpdateListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onEffectUpdated(param0: android.media.effect.Effect, param1: any): void;
 				});
+				public constructor();
 				public onEffectUpdated(param0: android.media.effect.Effect, param1: any): void;
 			}
 		}
@@ -30067,11 +30228,12 @@ declare module android {
 				export class OnDeviceOpenedListener extends java.lang.Object {
 					public static class: java.lang.Class<android.media.midi.MidiManager.OnDeviceOpenedListener>;
 					/**
-					 * Constructs a new instance of the android.media.midi.MidiManager$OnDeviceOpenedListener interface with the provided implementation.
+					 * Constructs a new instance of the android.media.midi.MidiManager$OnDeviceOpenedListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 					 */
 					public constructor(implementation: {
 						onDeviceOpened(param0: android.media.midi.MidiDevice): void;
 					});
+					public constructor();
 					public onDeviceOpened(param0: android.media.midi.MidiDevice): void;
 				}
 			}
@@ -30327,11 +30489,12 @@ declare module android {
 				export class OnActiveSessionsChangedListener extends java.lang.Object {
 					public static class: java.lang.Class<any>;
 					/**
-					 * Constructs a new instance of the any$OnActiveSessionsChangedListener interface with the provided implementation.
+					 * Constructs a new instance of the any$OnActiveSessionsChangedListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 					 */
 					public constructor(implementation: {
 						onActiveSessionsChanged(param0: java.util.List<any>): void;
 					});
+					public constructor();
 					public onActiveSessionsChanged(param0: java.util.List<any>): void;
 				}
 			}
@@ -30478,10 +30641,11 @@ declare module android {
 				export class BaseTvColumns extends java.lang.Object implements android.provider.BaseColumns {
 					public static class: java.lang.Class<android.media.tv.TvContract.BaseTvColumns>;
 					/**
-					 * Constructs a new instance of the android.media.tv.TvContract$BaseTvColumns interface with the provided implementation.
+					 * Constructs a new instance of the android.media.tv.TvContract$BaseTvColumns interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 					 */
 					public constructor(implementation: {
 					});
+					public constructor();
 					public static _COUNT: string;
 					public static COLUMN_PACKAGE_NAME: string;
 					public static _ID: string;
@@ -31035,11 +31199,12 @@ declare module android {
 				export class OnUnhandledInputEventListener extends java.lang.Object {
 					public static class: java.lang.Class<android.media.tv.TvView.OnUnhandledInputEventListener>;
 					/**
-					 * Constructs a new instance of the android.media.tv.TvView$OnUnhandledInputEventListener interface with the provided implementation.
+					 * Constructs a new instance of the android.media.tv.TvView$OnUnhandledInputEventListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 					 */
 					public constructor(implementation: {
 						onUnhandledInputEvent(param0: android.view.InputEvent): boolean;
 					});
+					public constructor();
 					public onUnhandledInputEvent(param0: android.view.InputEvent): boolean;
 				}
 				export abstract class TimeShiftPositionCallback extends java.lang.Object {
@@ -31435,11 +31600,12 @@ declare module android {
 			export class OnNetworkActiveListener extends java.lang.Object {
 				public static class: java.lang.Class<android.net.ConnectivityManager.OnNetworkActiveListener>;
 				/**
-				 * Constructs a new instance of the android.net.ConnectivityManager$OnNetworkActiveListener interface with the provided implementation.
+				 * Constructs a new instance of the android.net.ConnectivityManager$OnNetworkActiveListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onNetworkActive(): void;
 				});
+				public constructor();
 				public onNetworkActive(): void;
 			}
 		}
@@ -32083,11 +32249,12 @@ declare module android {
 			export class ValueSanitizer extends java.lang.Object {
 				public static class: java.lang.Class<android.net.UrlQuerySanitizer.ValueSanitizer>;
 				/**
-				 * Constructs a new instance of the android.net.UrlQuerySanitizer$ValueSanitizer interface with the provided implementation.
+				 * Constructs a new instance of the android.net.UrlQuerySanitizer$ValueSanitizer interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					sanitize(param0: string): string;
 				});
+				public constructor();
 				public sanitize(param0: string): string;
 			}
 		}
@@ -32253,7 +32420,7 @@ declare module android {
 				export class DiscoveryListener extends java.lang.Object {
 					public static class: java.lang.Class<android.net.nsd.NsdManager.DiscoveryListener>;
 					/**
-					 * Constructs a new instance of the android.net.nsd.NsdManager$DiscoveryListener interface with the provided implementation.
+					 * Constructs a new instance of the android.net.nsd.NsdManager$DiscoveryListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 					 */
 					public constructor(implementation: {
 						onStartDiscoveryFailed(param0: string, param1: number): void;
@@ -32263,6 +32430,7 @@ declare module android {
 						onServiceFound(param0: android.net.nsd.NsdServiceInfo): void;
 						onServiceLost(param0: android.net.nsd.NsdServiceInfo): void;
 					});
+					public constructor();
 					public onServiceLost(param0: android.net.nsd.NsdServiceInfo): void;
 					public onServiceFound(param0: android.net.nsd.NsdServiceInfo): void;
 					public onStartDiscoveryFailed(param0: string, param1: number): void;
@@ -32273,7 +32441,7 @@ declare module android {
 				export class RegistrationListener extends java.lang.Object {
 					public static class: java.lang.Class<android.net.nsd.NsdManager.RegistrationListener>;
 					/**
-					 * Constructs a new instance of the android.net.nsd.NsdManager$RegistrationListener interface with the provided implementation.
+					 * Constructs a new instance of the android.net.nsd.NsdManager$RegistrationListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 					 */
 					public constructor(implementation: {
 						onRegistrationFailed(param0: android.net.nsd.NsdServiceInfo, param1: number): void;
@@ -32281,6 +32449,7 @@ declare module android {
 						onServiceRegistered(param0: android.net.nsd.NsdServiceInfo): void;
 						onServiceUnregistered(param0: android.net.nsd.NsdServiceInfo): void;
 					});
+					public constructor();
 					public onRegistrationFailed(param0: android.net.nsd.NsdServiceInfo, param1: number): void;
 					public onUnregistrationFailed(param0: android.net.nsd.NsdServiceInfo, param1: number): void;
 					public onServiceRegistered(param0: android.net.nsd.NsdServiceInfo): void;
@@ -32289,12 +32458,13 @@ declare module android {
 				export class ResolveListener extends java.lang.Object {
 					public static class: java.lang.Class<android.net.nsd.NsdManager.ResolveListener>;
 					/**
-					 * Constructs a new instance of the android.net.nsd.NsdManager$ResolveListener interface with the provided implementation.
+					 * Constructs a new instance of the android.net.nsd.NsdManager$ResolveListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 					 */
 					public constructor(implementation: {
 						onResolveFailed(param0: android.net.nsd.NsdServiceInfo, param1: number): void;
 						onServiceResolved(param0: android.net.nsd.NsdServiceInfo): void;
 					});
+					public constructor();
 					public onResolveFailed(param0: android.net.nsd.NsdServiceInfo, param1: number): void;
 					public onServiceResolved(param0: android.net.nsd.NsdServiceInfo): void;
 				}
@@ -32580,13 +32750,14 @@ declare module android {
 			export class SipRegistrationListener extends java.lang.Object {
 				public static class: java.lang.Class<android.net.sip.SipRegistrationListener>;
 				/**
-				 * Constructs a new instance of the android.net.sip.SipRegistrationListener interface with the provided implementation.
+				 * Constructs a new instance of the android.net.sip.SipRegistrationListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onRegistering(param0: string): void;
 					onRegistrationDone(param0: string, param1: number): void;
 					onRegistrationFailed(param0: string, param1: number, param2: string): void;
 				});
+				public constructor();
 				public onRegistering(param0: string): void;
 				public onRegistrationFailed(param0: string, param1: number, param2: string): void;
 				public onRegistrationDone(param0: string, param1: number): void;
@@ -33186,12 +33357,13 @@ declare module android {
 					export class ActionListener extends java.lang.Object {
 						public static class: java.lang.Class<android.net.wifi.p2p.WifiP2pManager.ActionListener>;
 						/**
-						 * Constructs a new instance of the android.net.wifi.p2p.WifiP2pManager$ActionListener interface with the provided implementation.
+						 * Constructs a new instance of the android.net.wifi.p2p.WifiP2pManager$ActionListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 						 */
 						public constructor(implementation: {
 							onSuccess(): void;
 							onFailure(param0: number): void;
 						});
+						public constructor();
 						public onSuccess(): void;
 						public onFailure(param0: number): void;
 					}
@@ -33201,81 +33373,89 @@ declare module android {
 					export class ChannelListener extends java.lang.Object {
 						public static class: java.lang.Class<android.net.wifi.p2p.WifiP2pManager.ChannelListener>;
 						/**
-						 * Constructs a new instance of the android.net.wifi.p2p.WifiP2pManager$ChannelListener interface with the provided implementation.
+						 * Constructs a new instance of the android.net.wifi.p2p.WifiP2pManager$ChannelListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 						 */
 						public constructor(implementation: {
 							onChannelDisconnected(): void;
 						});
+						public constructor();
 						public onChannelDisconnected(): void;
 					}
 					export class ConnectionInfoListener extends java.lang.Object {
 						public static class: java.lang.Class<android.net.wifi.p2p.WifiP2pManager.ConnectionInfoListener>;
 						/**
-						 * Constructs a new instance of the android.net.wifi.p2p.WifiP2pManager$ConnectionInfoListener interface with the provided implementation.
+						 * Constructs a new instance of the android.net.wifi.p2p.WifiP2pManager$ConnectionInfoListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 						 */
 						public constructor(implementation: {
 							onConnectionInfoAvailable(param0: android.net.wifi.p2p.WifiP2pInfo): void;
 						});
+						public constructor();
 						public onConnectionInfoAvailable(param0: android.net.wifi.p2p.WifiP2pInfo): void;
 					}
 					export class DnsSdServiceResponseListener extends java.lang.Object {
 						public static class: java.lang.Class<android.net.wifi.p2p.WifiP2pManager.DnsSdServiceResponseListener>;
 						/**
-						 * Constructs a new instance of the android.net.wifi.p2p.WifiP2pManager$DnsSdServiceResponseListener interface with the provided implementation.
+						 * Constructs a new instance of the android.net.wifi.p2p.WifiP2pManager$DnsSdServiceResponseListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 						 */
 						public constructor(implementation: {
 							onDnsSdServiceAvailable(param0: string, param1: string, param2: android.net.wifi.p2p.WifiP2pDevice): void;
 						});
+						public constructor();
 						public onDnsSdServiceAvailable(param0: string, param1: string, param2: android.net.wifi.p2p.WifiP2pDevice): void;
 					}
 					export class DnsSdTxtRecordListener extends java.lang.Object {
 						public static class: java.lang.Class<android.net.wifi.p2p.WifiP2pManager.DnsSdTxtRecordListener>;
 						/**
-						 * Constructs a new instance of the android.net.wifi.p2p.WifiP2pManager$DnsSdTxtRecordListener interface with the provided implementation.
+						 * Constructs a new instance of the android.net.wifi.p2p.WifiP2pManager$DnsSdTxtRecordListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 						 */
 						public constructor(implementation: {
 							onDnsSdTxtRecordAvailable(param0: string, param1: java.util.Map<string,string>, param2: android.net.wifi.p2p.WifiP2pDevice): void;
 						});
+						public constructor();
 						public onDnsSdTxtRecordAvailable(param0: string, param1: java.util.Map<string,string>, param2: android.net.wifi.p2p.WifiP2pDevice): void;
 					}
 					export class GroupInfoListener extends java.lang.Object {
 						public static class: java.lang.Class<android.net.wifi.p2p.WifiP2pManager.GroupInfoListener>;
 						/**
-						 * Constructs a new instance of the android.net.wifi.p2p.WifiP2pManager$GroupInfoListener interface with the provided implementation.
+						 * Constructs a new instance of the android.net.wifi.p2p.WifiP2pManager$GroupInfoListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 						 */
 						public constructor(implementation: {
 							onGroupInfoAvailable(param0: android.net.wifi.p2p.WifiP2pGroup): void;
 						});
+						public constructor();
 						public onGroupInfoAvailable(param0: android.net.wifi.p2p.WifiP2pGroup): void;
 					}
 					export class PeerListListener extends java.lang.Object {
 						public static class: java.lang.Class<android.net.wifi.p2p.WifiP2pManager.PeerListListener>;
 						/**
-						 * Constructs a new instance of the android.net.wifi.p2p.WifiP2pManager$PeerListListener interface with the provided implementation.
+						 * Constructs a new instance of the android.net.wifi.p2p.WifiP2pManager$PeerListListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 						 */
 						public constructor(implementation: {
 							onPeersAvailable(param0: android.net.wifi.p2p.WifiP2pDeviceList): void;
 						});
+						public constructor();
 						public onPeersAvailable(param0: android.net.wifi.p2p.WifiP2pDeviceList): void;
 					}
 					export class ServiceResponseListener extends java.lang.Object {
 						public static class: java.lang.Class<android.net.wifi.p2p.WifiP2pManager.ServiceResponseListener>;
 						/**
-						 * Constructs a new instance of the android.net.wifi.p2p.WifiP2pManager$ServiceResponseListener interface with the provided implementation.
+						 * Constructs a new instance of the android.net.wifi.p2p.WifiP2pManager$ServiceResponseListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 						 */
 						public constructor(implementation: {
 							onServiceAvailable(param0: number, param1: native.Array<number>, param2: android.net.wifi.p2p.WifiP2pDevice): void;
 						});
+						public constructor();
 						public onServiceAvailable(param0: number, param1: native.Array<number>, param2: android.net.wifi.p2p.WifiP2pDevice): void;
 					}
 					export class UpnpServiceResponseListener extends java.lang.Object {
 						public static class: java.lang.Class<android.net.wifi.p2p.WifiP2pManager.UpnpServiceResponseListener>;
 						/**
-						 * Constructs a new instance of the android.net.wifi.p2p.WifiP2pManager$UpnpServiceResponseListener interface with the provided implementation.
+						 * Constructs a new instance of the android.net.wifi.p2p.WifiP2pManager$UpnpServiceResponseListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 						 */
 						public constructor(implementation: {
 							onUpnpServiceAvailable(param0: java.util.List<string>, param1: android.net.wifi.p2p.WifiP2pDevice): void;
 						});
+						public constructor();
 						public onUpnpServiceAvailable(param0: java.util.List<string>, param1: android.net.wifi.p2p.WifiP2pDevice): void;
 					}
 				}
@@ -33522,51 +33702,56 @@ declare module android {
 			export class CreateBeamUrisCallback extends java.lang.Object {
 				public static class: java.lang.Class<android.nfc.NfcAdapter.CreateBeamUrisCallback>;
 				/**
-				 * Constructs a new instance of the android.nfc.NfcAdapter$CreateBeamUrisCallback interface with the provided implementation.
+				 * Constructs a new instance of the android.nfc.NfcAdapter$CreateBeamUrisCallback interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					createBeamUris(param0: android.nfc.NfcEvent): native.Array<android.net.Uri>;
 				});
+				public constructor();
 				public createBeamUris(param0: android.nfc.NfcEvent): native.Array<android.net.Uri>;
 			}
 			export class CreateNdefMessageCallback extends java.lang.Object {
 				public static class: java.lang.Class<android.nfc.NfcAdapter.CreateNdefMessageCallback>;
 				/**
-				 * Constructs a new instance of the android.nfc.NfcAdapter$CreateNdefMessageCallback interface with the provided implementation.
+				 * Constructs a new instance of the android.nfc.NfcAdapter$CreateNdefMessageCallback interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					createNdefMessage(param0: android.nfc.NfcEvent): android.nfc.NdefMessage;
 				});
+				public constructor();
 				public createNdefMessage(param0: android.nfc.NfcEvent): android.nfc.NdefMessage;
 			}
 			export class OnNdefPushCompleteCallback extends java.lang.Object {
 				public static class: java.lang.Class<android.nfc.NfcAdapter.OnNdefPushCompleteCallback>;
 				/**
-				 * Constructs a new instance of the android.nfc.NfcAdapter$OnNdefPushCompleteCallback interface with the provided implementation.
+				 * Constructs a new instance of the android.nfc.NfcAdapter$OnNdefPushCompleteCallback interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onNdefPushComplete(param0: android.nfc.NfcEvent): void;
 				});
+				public constructor();
 				public onNdefPushComplete(param0: android.nfc.NfcEvent): void;
 			}
 			export class OnTagRemovedListener extends java.lang.Object {
 				public static class: java.lang.Class<android.nfc.NfcAdapter.OnTagRemovedListener>;
 				/**
-				 * Constructs a new instance of the android.nfc.NfcAdapter$OnTagRemovedListener interface with the provided implementation.
+				 * Constructs a new instance of the android.nfc.NfcAdapter$OnTagRemovedListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onTagRemoved(): void;
 				});
+				public constructor();
 				public onTagRemoved(): void;
 			}
 			export class ReaderCallback extends java.lang.Object {
 				public static class: java.lang.Class<android.nfc.NfcAdapter.ReaderCallback>;
 				/**
-				 * Constructs a new instance of the android.nfc.NfcAdapter$ReaderCallback interface with the provided implementation.
+				 * Constructs a new instance of the android.nfc.NfcAdapter$ReaderCallback interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onTagDiscovered(param0: android.nfc.Tag): void;
 				});
+				public constructor();
 				public onTagDiscovered(param0: android.nfc.Tag): void;
 			}
 		}
@@ -33983,7 +34168,7 @@ declare module android {
 			export class TagTechnology extends java.lang.Object implements java.io.Closeable {
 				public static class: java.lang.Class<android.nfc.tech.TagTechnology>;
 				/**
-				 * Constructs a new instance of the android.nfc.tech.TagTechnology interface with the provided implementation.
+				 * Constructs a new instance of the android.nfc.tech.TagTechnology interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					getTag(): android.nfc.Tag;
@@ -33993,6 +34178,7 @@ declare module android {
 					close(): void;
 					close(): void;
 				});
+				public constructor();
 				public close(): void;
 				public isConnected(): boolean;
 				public connect(): void;
@@ -36618,11 +36804,12 @@ declare module android {
 			export class DebugProcKHR extends java.lang.Object {
 				public static class: java.lang.Class<android.opengl.GLES31Ext.DebugProcKHR>;
 				/**
-				 * Constructs a new instance of the android.opengl.GLES31Ext$DebugProcKHR interface with the provided implementation.
+				 * Constructs a new instance of the android.opengl.GLES31Ext$DebugProcKHR interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onMessage(param0: number, param1: number, param2: number, param3: number, param4: string): void;
 				});
+				public constructor();
 				public onMessage(param0: number, param1: number, param2: number, param3: number, param4: string): void;
 			}
 		}
@@ -36904,11 +37091,12 @@ declare module android {
 			export class DebugProc extends java.lang.Object {
 				public static class: java.lang.Class<android.opengl.GLES32.DebugProc>;
 				/**
-				 * Constructs a new instance of the android.opengl.GLES32$DebugProc interface with the provided implementation.
+				 * Constructs a new instance of the android.opengl.GLES32$DebugProc interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onMessage(param0: number, param1: number, param2: number, param3: number, param4: string): void;
 				});
+				public constructor();
 				public onMessage(param0: number, param1: number, param2: number, param3: number, param4: string): void;
 			}
 		}
@@ -36982,57 +37170,62 @@ declare module android {
 			export class EGLConfigChooser extends java.lang.Object {
 				public static class: java.lang.Class<android.opengl.GLSurfaceView.EGLConfigChooser>;
 				/**
-				 * Constructs a new instance of the android.opengl.GLSurfaceView$EGLConfigChooser interface with the provided implementation.
+				 * Constructs a new instance of the android.opengl.GLSurfaceView$EGLConfigChooser interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					chooseConfig(param0: javax.microedition.khronos.egl.EGL10, param1: javax.microedition.khronos.egl.EGLDisplay): javax.microedition.khronos.egl.EGLConfig;
 				});
+				public constructor();
 				public chooseConfig(param0: javax.microedition.khronos.egl.EGL10, param1: javax.microedition.khronos.egl.EGLDisplay): javax.microedition.khronos.egl.EGLConfig;
 			}
 			export class EGLContextFactory extends java.lang.Object {
 				public static class: java.lang.Class<android.opengl.GLSurfaceView.EGLContextFactory>;
 				/**
-				 * Constructs a new instance of the android.opengl.GLSurfaceView$EGLContextFactory interface with the provided implementation.
+				 * Constructs a new instance of the android.opengl.GLSurfaceView$EGLContextFactory interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					createContext(param0: javax.microedition.khronos.egl.EGL10, param1: javax.microedition.khronos.egl.EGLDisplay, param2: javax.microedition.khronos.egl.EGLConfig): javax.microedition.khronos.egl.EGLContext;
 					destroyContext(param0: javax.microedition.khronos.egl.EGL10, param1: javax.microedition.khronos.egl.EGLDisplay, param2: javax.microedition.khronos.egl.EGLContext): void;
 				});
+				public constructor();
 				public destroyContext(param0: javax.microedition.khronos.egl.EGL10, param1: javax.microedition.khronos.egl.EGLDisplay, param2: javax.microedition.khronos.egl.EGLContext): void;
 				public createContext(param0: javax.microedition.khronos.egl.EGL10, param1: javax.microedition.khronos.egl.EGLDisplay, param2: javax.microedition.khronos.egl.EGLConfig): javax.microedition.khronos.egl.EGLContext;
 			}
 			export class EGLWindowSurfaceFactory extends java.lang.Object {
 				public static class: java.lang.Class<android.opengl.GLSurfaceView.EGLWindowSurfaceFactory>;
 				/**
-				 * Constructs a new instance of the android.opengl.GLSurfaceView$EGLWindowSurfaceFactory interface with the provided implementation.
+				 * Constructs a new instance of the android.opengl.GLSurfaceView$EGLWindowSurfaceFactory interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					createWindowSurface(param0: javax.microedition.khronos.egl.EGL10, param1: javax.microedition.khronos.egl.EGLDisplay, param2: javax.microedition.khronos.egl.EGLConfig, param3: any): javax.microedition.khronos.egl.EGLSurface;
 					destroySurface(param0: javax.microedition.khronos.egl.EGL10, param1: javax.microedition.khronos.egl.EGLDisplay, param2: javax.microedition.khronos.egl.EGLSurface): void;
 				});
+				public constructor();
 				public destroySurface(param0: javax.microedition.khronos.egl.EGL10, param1: javax.microedition.khronos.egl.EGLDisplay, param2: javax.microedition.khronos.egl.EGLSurface): void;
 				public createWindowSurface(param0: javax.microedition.khronos.egl.EGL10, param1: javax.microedition.khronos.egl.EGLDisplay, param2: javax.microedition.khronos.egl.EGLConfig, param3: any): javax.microedition.khronos.egl.EGLSurface;
 			}
 			export class GLWrapper extends java.lang.Object {
 				public static class: java.lang.Class<android.opengl.GLSurfaceView.GLWrapper>;
 				/**
-				 * Constructs a new instance of the android.opengl.GLSurfaceView$GLWrapper interface with the provided implementation.
+				 * Constructs a new instance of the android.opengl.GLSurfaceView$GLWrapper interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					wrap(param0: javax.microedition.khronos.opengles.GL): javax.microedition.khronos.opengles.GL;
 				});
+				public constructor();
 				public wrap(param0: javax.microedition.khronos.opengles.GL): javax.microedition.khronos.opengles.GL;
 			}
 			export class Renderer extends java.lang.Object {
 				public static class: java.lang.Class<android.opengl.GLSurfaceView.Renderer>;
 				/**
-				 * Constructs a new instance of the android.opengl.GLSurfaceView$Renderer interface with the provided implementation.
+				 * Constructs a new instance of the android.opengl.GLSurfaceView$Renderer interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onSurfaceCreated(param0: javax.microedition.khronos.opengles.GL10, param1: javax.microedition.khronos.egl.EGLConfig): void;
 					onSurfaceChanged(param0: javax.microedition.khronos.opengles.GL10, param1: number, param2: number): void;
 					onDrawFrame(param0: javax.microedition.khronos.opengles.GL10): void;
 				});
+				public constructor();
 				public onSurfaceChanged(param0: javax.microedition.khronos.opengles.GL10, param1: number, param2: number): void;
 				public onSurfaceCreated(param0: javax.microedition.khronos.opengles.GL10, param1: javax.microedition.khronos.egl.EGLConfig): void;
 				public onDrawFrame(param0: javax.microedition.khronos.opengles.GL10): void;
@@ -37443,11 +37636,12 @@ declare module android {
 			export class OnCancelListener extends java.lang.Object {
 				public static class: java.lang.Class<android.os.CancellationSignal.OnCancelListener>;
 				/**
-				 * Constructs a new instance of the android.os.CancellationSignal$OnCancelListener interface with the provided implementation.
+				 * Constructs a new instance of the android.os.CancellationSignal$OnCancelListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onCancel(): void;
 				});
+				public constructor();
 				public onCancel(): void;
 			}
 		}
@@ -37800,11 +37994,12 @@ declare module android {
 			export class Callback extends java.lang.Object {
 				public static class: java.lang.Class<android.os.Handler.Callback>;
 				/**
-				 * Constructs a new instance of the android.os.Handler$Callback interface with the provided implementation.
+				 * Constructs a new instance of the android.os.Handler$Callback interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					handleMessage(param0: android.os.Message): boolean;
 				});
+				public constructor();
 				public handleMessage(param0: android.os.Message): boolean;
 			}
 		}
@@ -37859,7 +38054,7 @@ declare module android {
 		export class IBinder extends java.lang.Object {
 			public static class: java.lang.Class<android.os.IBinder>;
 			/**
-			 * Constructs a new instance of the android.os.IBinder interface with the provided implementation.
+			 * Constructs a new instance of the android.os.IBinder interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				getInterfaceDescriptor(): string;
@@ -37872,6 +38067,7 @@ declare module android {
 				linkToDeath(param0: android.os.IBinder.DeathRecipient, param1: number): void;
 				unlinkToDeath(param0: android.os.IBinder.DeathRecipient, param1: number): boolean;
 			});
+			public constructor();
 			public static TWEET_TRANSACTION: number;
 			public static FLAG_ONEWAY: number;
 			public static LIKE_TRANSACTION: number;
@@ -37894,11 +38090,12 @@ declare module android {
 			export class DeathRecipient extends java.lang.Object {
 				public static class: java.lang.Class<android.os.IBinder.DeathRecipient>;
 				/**
-				 * Constructs a new instance of the android.os.IBinder$DeathRecipient interface with the provided implementation.
+				 * Constructs a new instance of the android.os.IBinder$DeathRecipient interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					binderDied(): void;
 				});
+				public constructor();
 				public binderDied(): void;
 			}
 		}
@@ -37910,11 +38107,12 @@ declare module android {
 		export class IInterface extends java.lang.Object {
 			public static class: java.lang.Class<android.os.IInterface>;
 			/**
-			 * Constructs a new instance of the android.os.IInterface interface with the provided implementation.
+			 * Constructs a new instance of the android.os.IInterface interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				asBinder(): android.os.IBinder;
 			});
+			public constructor();
 			public asBinder(): android.os.IBinder;
 		}
 	}
@@ -38040,21 +38238,23 @@ declare module android {
 			export class IdleHandler extends java.lang.Object {
 				public static class: java.lang.Class<android.os.MessageQueue.IdleHandler>;
 				/**
-				 * Constructs a new instance of the android.os.MessageQueue$IdleHandler interface with the provided implementation.
+				 * Constructs a new instance of the android.os.MessageQueue$IdleHandler interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					queueIdle(): boolean;
 				});
+				public constructor();
 				public queueIdle(): boolean;
 			}
 			export class OnFileDescriptorEventListener extends java.lang.Object {
 				public static class: java.lang.Class<android.os.MessageQueue.OnFileDescriptorEventListener>;
 				/**
-				 * Constructs a new instance of the android.os.MessageQueue$OnFileDescriptorEventListener interface with the provided implementation.
+				 * Constructs a new instance of the android.os.MessageQueue$OnFileDescriptorEventListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onFileDescriptorEvents(param0: java.io.FileDescriptor, param1: number): number;
 				});
+				public constructor();
 				public static EVENT_ERROR: number;
 				public static EVENT_INPUT: number;
 				public static EVENT_OUTPUT: number;
@@ -38303,11 +38503,12 @@ declare module android {
 			export class OnCloseListener extends java.lang.Object {
 				public static class: java.lang.Class<android.os.ParcelFileDescriptor.OnCloseListener>;
 				/**
-				 * Constructs a new instance of the android.os.ParcelFileDescriptor$OnCloseListener interface with the provided implementation.
+				 * Constructs a new instance of the android.os.ParcelFileDescriptor$OnCloseListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onClose(param0: java.io.IOException): void;
 				});
+				public constructor();
 				public onClose(param0: java.io.IOException): void;
 			}
 		}
@@ -38349,12 +38550,13 @@ declare module android {
 		export class Parcelable extends java.lang.Object {
 			public static class: java.lang.Class<android.os.Parcelable>;
 			/**
-			 * Constructs a new instance of the android.os.Parcelable interface with the provided implementation.
+			 * Constructs a new instance of the android.os.Parcelable interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				describeContents(): number;
 				writeToParcel(param0: android.os.Parcel, param1: number): void;
 			});
+			public constructor();
 			public static PARCELABLE_WRITE_RETURN_VALUE: number;
 			public static CONTENTS_FILE_DESCRIPTOR: number;
 			public describeContents(): number;
@@ -38364,13 +38566,14 @@ declare module android {
 			export class ClassLoaderCreator<T>  extends android.os.Parcelable.Creator<any> {
 				public static class: java.lang.Class<android.os.Parcelable.ClassLoaderCreator<any>>;
 				/**
-				 * Constructs a new instance of the android.os.Parcelable$ClassLoaderCreator interface with the provided implementation.
+				 * Constructs a new instance of the android.os.Parcelable$ClassLoaderCreator interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					createFromParcel(param0: android.os.Parcel, param1: java.lang.ClassLoader): any;
 					createFromParcel(param0: android.os.Parcel): any;
 					newArray(param0: number): native.Array<any>;
 				});
+				public constructor();
 				public newArray(param0: number): native.Array<any>;
 				public createFromParcel(param0: android.os.Parcel, param1: java.lang.ClassLoader): any;
 				public createFromParcel(param0: android.os.Parcel): any;
@@ -38378,12 +38581,13 @@ declare module android {
 			export class Creator<T>  extends java.lang.Object {
 				public static class: java.lang.Class<android.os.Parcelable.Creator<any>>;
 				/**
-				 * Constructs a new instance of the android.os.Parcelable$Creator interface with the provided implementation.
+				 * Constructs a new instance of the android.os.Parcelable$Creator interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					createFromParcel(param0: android.os.Parcel): T;
 					newArray(param0: number): native.Array<T>;
 				});
+				public constructor();
 				public createFromParcel(param0: android.os.Parcel): T;
 				public newArray(param0: number): native.Array<T>;
 			}
@@ -38528,11 +38732,12 @@ declare module android {
 			export class ProgressListener extends java.lang.Object {
 				public static class: java.lang.Class<android.os.RecoverySystem.ProgressListener>;
 				/**
-				 * Constructs a new instance of the android.os.RecoverySystem$ProgressListener interface with the provided implementation.
+				 * Constructs a new instance of the android.os.RecoverySystem$ProgressListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onProgress(param0: number): void;
 				});
+				public constructor();
 				public onProgress(param0: number): void;
 			}
 		}
@@ -39366,21 +39571,23 @@ declare module android {
 			export class OnPreferenceChangeListener extends java.lang.Object {
 				public static class: java.lang.Class<android.preference.Preference.OnPreferenceChangeListener>;
 				/**
-				 * Constructs a new instance of the android.preference.Preference$OnPreferenceChangeListener interface with the provided implementation.
+				 * Constructs a new instance of the android.preference.Preference$OnPreferenceChangeListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onPreferenceChange(param0: android.preference.Preference, param1: any): boolean;
 				});
+				public constructor();
 				public onPreferenceChange(param0: android.preference.Preference, param1: any): boolean;
 			}
 			export class OnPreferenceClickListener extends java.lang.Object {
 				public static class: java.lang.Class<android.preference.Preference.OnPreferenceClickListener>;
 				/**
-				 * Constructs a new instance of the android.preference.Preference$OnPreferenceClickListener interface with the provided implementation.
+				 * Constructs a new instance of the android.preference.Preference$OnPreferenceClickListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onPreferenceClick(param0: android.preference.Preference): boolean;
 				});
+				public constructor();
 				public onPreferenceClick(param0: android.preference.Preference): boolean;
 			}
 		}
@@ -39550,11 +39757,12 @@ declare module android {
 			export class OnPreferenceStartFragmentCallback extends java.lang.Object {
 				public static class: java.lang.Class<android.preference.PreferenceFragment.OnPreferenceStartFragmentCallback>;
 				/**
-				 * Constructs a new instance of the android.preference.PreferenceFragment$OnPreferenceStartFragmentCallback interface with the provided implementation.
+				 * Constructs a new instance of the android.preference.PreferenceFragment$OnPreferenceStartFragmentCallback interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onPreferenceStartFragment(param0: android.preference.PreferenceFragment, param1: android.preference.Preference): boolean;
 				});
+				public constructor();
 				public onPreferenceStartFragment(param0: android.preference.PreferenceFragment, param1: android.preference.Preference): boolean;
 			}
 		}
@@ -39615,31 +39823,34 @@ declare module android {
 			export class OnActivityDestroyListener extends java.lang.Object {
 				public static class: java.lang.Class<android.preference.PreferenceManager.OnActivityDestroyListener>;
 				/**
-				 * Constructs a new instance of the android.preference.PreferenceManager$OnActivityDestroyListener interface with the provided implementation.
+				 * Constructs a new instance of the android.preference.PreferenceManager$OnActivityDestroyListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onActivityDestroy(): void;
 				});
+				public constructor();
 				public onActivityDestroy(): void;
 			}
 			export class OnActivityResultListener extends java.lang.Object {
 				public static class: java.lang.Class<android.preference.PreferenceManager.OnActivityResultListener>;
 				/**
-				 * Constructs a new instance of the android.preference.PreferenceManager$OnActivityResultListener interface with the provided implementation.
+				 * Constructs a new instance of the android.preference.PreferenceManager$OnActivityResultListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onActivityResult(param0: number, param1: number, param2: android.content.Intent): boolean;
 				});
+				public constructor();
 				public onActivityResult(param0: number, param1: number, param2: android.content.Intent): boolean;
 			}
 			export class OnActivityStopListener extends java.lang.Object {
 				public static class: java.lang.Class<android.preference.PreferenceManager.OnActivityStopListener>;
 				/**
-				 * Constructs a new instance of the android.preference.PreferenceManager$OnActivityStopListener interface with the provided implementation.
+				 * Constructs a new instance of the android.preference.PreferenceManager$OnActivityStopListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onActivityStop(): void;
 				});
+				public constructor();
 				public onActivityStop(): void;
 			}
 		}
@@ -40287,10 +40498,11 @@ declare module android {
 		export class BaseColumns extends java.lang.Object {
 			public static class: java.lang.Class<android.provider.BaseColumns>;
 			/**
-			 * Constructs a new instance of the android.provider.BaseColumns interface with the provided implementation.
+			 * Constructs a new instance of the android.provider.BaseColumns interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 			});
+			public constructor();
 			public static _COUNT: string;
 			public static _ID: string;
 		}
@@ -40359,10 +40571,11 @@ declare module android {
 			export class AttendeesColumns extends java.lang.Object {
 				public static class: java.lang.Class<android.provider.CalendarContract.AttendeesColumns>;
 				/**
-				 * Constructs a new instance of the android.provider.CalendarContract$AttendeesColumns interface with the provided implementation.
+				 * Constructs a new instance of the android.provider.CalendarContract$AttendeesColumns interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 				});
+				public constructor();
 				public static RELATIONSHIP_NONE: number;
 				public static TYPE_RESOURCE: number;
 				public static ATTENDEE_STATUS_ACCEPTED: number;
@@ -40394,10 +40607,11 @@ declare module android {
 			export class CalendarAlertsColumns extends java.lang.Object {
 				public static class: java.lang.Class<android.provider.CalendarContract.CalendarAlertsColumns>;
 				/**
-				 * Constructs a new instance of the android.provider.CalendarContract$CalendarAlertsColumns interface with the provided implementation.
+				 * Constructs a new instance of the android.provider.CalendarContract$CalendarAlertsColumns interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 				});
+				public constructor();
 				public static STATE_FIRED: number;
 				public static ALARM_TIME: string;
 				public static STATE_DISMISSED: number;
@@ -40424,20 +40638,22 @@ declare module android {
 			export class CalendarCacheColumns extends java.lang.Object {
 				public static class: java.lang.Class<android.provider.CalendarContract.CalendarCacheColumns>;
 				/**
-				 * Constructs a new instance of the android.provider.CalendarContract$CalendarCacheColumns interface with the provided implementation.
+				 * Constructs a new instance of the android.provider.CalendarContract$CalendarCacheColumns interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 				});
+				public constructor();
 				public static VALUE: string;
 				public static KEY: string;
 			}
 			export class CalendarColumns extends java.lang.Object {
 				public static class: java.lang.Class<android.provider.CalendarContract.CalendarColumns>;
 				/**
-				 * Constructs a new instance of the android.provider.CalendarContract$CalendarColumns interface with the provided implementation.
+				 * Constructs a new instance of the android.provider.CalendarContract$CalendarColumns interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 				});
+				public constructor();
 				public static CALENDAR_TIME_ZONE: string;
 				public static CAL_ACCESS_CONTRIBUTOR: number;
 				public static CAN_MODIFY_TIME_ZONE: string;
@@ -40471,10 +40687,11 @@ declare module android {
 			export class CalendarSyncColumns extends java.lang.Object {
 				public static class: java.lang.Class<android.provider.CalendarContract.CalendarSyncColumns>;
 				/**
-				 * Constructs a new instance of the android.provider.CalendarContract$CalendarSyncColumns interface with the provided implementation.
+				 * Constructs a new instance of the android.provider.CalendarContract$CalendarSyncColumns interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 				});
+				public constructor();
 				public static CAL_SYNC3: string;
 				public static CAL_SYNC2: string;
 				public static CAL_SYNC1: string;
@@ -40500,10 +40717,11 @@ declare module android {
 			export class ColorsColumns extends java.lang.Object implements android.provider.SyncStateContract.Columns {
 				public static class: java.lang.Class<android.provider.CalendarContract.ColorsColumns>;
 				/**
-				 * Constructs a new instance of the android.provider.CalendarContract$ColorsColumns interface with the provided implementation.
+				 * Constructs a new instance of the android.provider.CalendarContract$ColorsColumns interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 				});
+				public constructor();
 				public static ACCOUNT_NAME: string;
 				public static _COUNT: string;
 				public static ACCOUNT_TYPE: string;
@@ -40523,10 +40741,11 @@ declare module android {
 			export class EventDaysColumns extends java.lang.Object {
 				public static class: java.lang.Class<android.provider.CalendarContract.EventDaysColumns>;
 				/**
-				 * Constructs a new instance of the android.provider.CalendarContract$EventDaysColumns interface with the provided implementation.
+				 * Constructs a new instance of the android.provider.CalendarContract$EventDaysColumns interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 				});
+				public constructor();
 				public static ENDDAY: string;
 				public static STARTDAY: string;
 			}
@@ -40538,10 +40757,11 @@ declare module android {
 			export class EventsColumns extends java.lang.Object {
 				public static class: java.lang.Class<android.provider.CalendarContract.EventsColumns>;
 				/**
-				 * Constructs a new instance of the android.provider.CalendarContract$EventsColumns interface with the provided implementation.
+				 * Constructs a new instance of the android.provider.CalendarContract$EventsColumns interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 				});
+				public constructor();
 				public static HAS_EXTENDED_PROPERTIES: string;
 				public static UID_2445: string;
 				public static IS_ORGANIZER: string;
@@ -40615,10 +40835,11 @@ declare module android {
 			export class ExtendedPropertiesColumns extends java.lang.Object {
 				public static class: java.lang.Class<android.provider.CalendarContract.ExtendedPropertiesColumns>;
 				/**
-				 * Constructs a new instance of the android.provider.CalendarContract$ExtendedPropertiesColumns interface with the provided implementation.
+				 * Constructs a new instance of the android.provider.CalendarContract$ExtendedPropertiesColumns interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 				});
+				public constructor();
 				public static VALUE: string;
 				public static EVENT_ID: string;
 				public static NAME: string;
@@ -40647,10 +40868,11 @@ declare module android {
 			export class RemindersColumns extends java.lang.Object {
 				public static class: java.lang.Class<android.provider.CalendarContract.RemindersColumns>;
 				/**
-				 * Constructs a new instance of the android.provider.CalendarContract$RemindersColumns interface with the provided implementation.
+				 * Constructs a new instance of the android.provider.CalendarContract$RemindersColumns interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 				});
+				public constructor();
 				public static MINUTES_DEFAULT: number;
 				public static METHOD_DEFAULT: number;
 				public static METHOD_ALERT: number;
@@ -40664,10 +40886,11 @@ declare module android {
 			export class SyncColumns extends java.lang.Object implements android.provider.CalendarContract.CalendarSyncColumns {
 				public static class: java.lang.Class<android.provider.CalendarContract.SyncColumns>;
 				/**
-				 * Constructs a new instance of the android.provider.CalendarContract$SyncColumns interface with the provided implementation.
+				 * Constructs a new instance of the android.provider.CalendarContract$SyncColumns interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 				});
+				public constructor();
 				public static ACCOUNT_NAME: string;
 				public static DIRTY: string;
 				public static CAN_PARTIALLY_UPDATE: string;
@@ -40805,10 +41028,11 @@ declare module android {
 			export class ContactMethodsColumns extends java.lang.Object {
 				public static class: java.lang.Class<android.provider.Contacts.ContactMethodsColumns>;
 				/**
-				 * Constructs a new instance of the android.provider.Contacts$ContactMethodsColumns interface with the provided implementation.
+				 * Constructs a new instance of the android.provider.Contacts$ContactMethodsColumns interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 				});
+				public constructor();
 				public static DATA: string;
 				public static ISPRIMARY: string;
 				public static KIND: string;
@@ -40831,10 +41055,11 @@ declare module android {
 			export class ExtensionsColumns extends java.lang.Object {
 				public static class: java.lang.Class<android.provider.Contacts.ExtensionsColumns>;
 				/**
-				 * Constructs a new instance of the android.provider.Contacts$ExtensionsColumns interface with the provided implementation.
+				 * Constructs a new instance of the android.provider.Contacts$ExtensionsColumns interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 				});
+				public constructor();
 				public static VALUE: string;
 				public static NAME: string;
 			}
@@ -40865,10 +41090,11 @@ declare module android {
 			export class GroupsColumns extends java.lang.Object {
 				public static class: java.lang.Class<android.provider.Contacts.GroupsColumns>;
 				/**
-				 * Constructs a new instance of the android.provider.Contacts$GroupsColumns interface with the provided implementation.
+				 * Constructs a new instance of the android.provider.Contacts$GroupsColumns interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 				});
+				public constructor();
 				public static NOTES: string;
 				public static SHOULD_SYNC: string;
 				public static NAME: string;
@@ -40936,10 +41162,11 @@ declare module android {
 			export class OrganizationColumns extends java.lang.Object {
 				public static class: java.lang.Class<android.provider.Contacts.OrganizationColumns>;
 				/**
-				 * Constructs a new instance of the android.provider.Contacts$OrganizationColumns interface with the provided implementation.
+				 * Constructs a new instance of the android.provider.Contacts$OrganizationColumns interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 				});
+				public constructor();
 				public static ISPRIMARY: string;
 				public static PERSON_ID: string;
 				public static LABEL: string;
@@ -40999,10 +41226,11 @@ declare module android {
 			export class PeopleColumns extends java.lang.Object {
 				public static class: java.lang.Class<android.provider.Contacts.PeopleColumns>;
 				/**
-				 * Constructs a new instance of the android.provider.Contacts$PeopleColumns interface with the provided implementation.
+				 * Constructs a new instance of the android.provider.Contacts$PeopleColumns interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 				});
+				public constructor();
 				public static NOTES: string;
 				public static PHONETIC_NAME: string;
 				public static TIMES_CONTACTED: string;
@@ -41028,10 +41256,11 @@ declare module android {
 			export class PhonesColumns extends java.lang.Object {
 				public static class: java.lang.Class<android.provider.Contacts.PhonesColumns>;
 				/**
-				 * Constructs a new instance of the android.provider.Contacts$PhonesColumns interface with the provided implementation.
+				 * Constructs a new instance of the android.provider.Contacts$PhonesColumns interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 				});
+				public constructor();
 				public static ISPRIMARY: string;
 				public static NUMBER_KEY: string;
 				public static TYPE_PAGER: number;
@@ -41055,10 +41284,11 @@ declare module android {
 			export class PhotosColumns extends java.lang.Object {
 				public static class: java.lang.Class<android.provider.Contacts.PhotosColumns>;
 				/**
-				 * Constructs a new instance of the android.provider.Contacts$PhotosColumns interface with the provided implementation.
+				 * Constructs a new instance of the android.provider.Contacts$PhotosColumns interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 				});
+				public constructor();
 				public static SYNC_ERROR: string;
 				public static DATA: string;
 				public static EXISTS_ON_SERVER: string;
@@ -41069,10 +41299,11 @@ declare module android {
 			export class PresenceColumns extends java.lang.Object {
 				public static class: java.lang.Class<android.provider.Contacts.PresenceColumns>;
 				/**
-				 * Constructs a new instance of the android.provider.Contacts$PresenceColumns interface with the provided implementation.
+				 * Constructs a new instance of the android.provider.Contacts$PresenceColumns interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 				});
+				public constructor();
 				public static IM_HANDLE: string;
 				public static IM_PROTOCOL: string;
 				public static PRESENCE_STATUS: string;
@@ -41098,10 +41329,11 @@ declare module android {
 			export class SettingsColumns extends java.lang.Object {
 				public static class: java.lang.Class<android.provider.Contacts.SettingsColumns>;
 				/**
-				 * Constructs a new instance of the android.provider.Contacts$SettingsColumns interface with the provided implementation.
+				 * Constructs a new instance of the android.provider.Contacts$SettingsColumns interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 				});
+				public constructor();
 				public static _SYNC_ACCOUNT_TYPE: string;
 				public static VALUE: string;
 				public static _SYNC_ACCOUNT: string;
@@ -41145,10 +41377,11 @@ declare module android {
 			export class BaseSyncColumns extends java.lang.Object {
 				public static class: java.lang.Class<android.provider.ContactsContract.BaseSyncColumns>;
 				/**
-				 * Constructs a new instance of the android.provider.ContactsContract$BaseSyncColumns interface with the provided implementation.
+				 * Constructs a new instance of the android.provider.ContactsContract$BaseSyncColumns interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 				});
+				public constructor();
 				public static SYNC3: string;
 				public static SYNC4: string;
 				public static SYNC1: string;
@@ -41161,10 +41394,11 @@ declare module android {
 				export class BaseTypes extends java.lang.Object {
 					public static class: java.lang.Class<android.provider.ContactsContract.CommonDataKinds.BaseTypes>;
 					/**
-					 * Constructs a new instance of the android.provider.ContactsContract$CommonDataKinds$BaseTypes interface with the provided implementation.
+					 * Constructs a new instance of the android.provider.ContactsContract$CommonDataKinds$BaseTypes interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 					 */
 					public constructor(implementation: {
 					});
+					public constructor();
 					public static TYPE_CUSTOM: number;
 				}
 				export class Callable extends java.lang.Object implements android.provider.ContactsContract.DataColumnsWithJoins, android.provider.ContactsContract.CommonDataKinds.CommonColumns {
@@ -41180,10 +41414,11 @@ declare module android {
 				export class CommonColumns extends java.lang.Object implements android.provider.ContactsContract.CommonDataKinds.BaseTypes {
 					public static class: java.lang.Class<android.provider.ContactsContract.CommonDataKinds.CommonColumns>;
 					/**
-					 * Constructs a new instance of the android.provider.ContactsContract$CommonDataKinds$CommonColumns interface with the provided implementation.
+					 * Constructs a new instance of the android.provider.ContactsContract$CommonDataKinds$CommonColumns interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 					 */
 					public constructor(implementation: {
 					});
+					public constructor();
 					public static DATA: string;
 					public static LABEL: string;
 					public static TYPE: string;
@@ -41460,10 +41695,11 @@ declare module android {
 			export class ContactNameColumns extends java.lang.Object {
 				public static class: java.lang.Class<android.provider.ContactsContract.ContactNameColumns>;
 				/**
-				 * Constructs a new instance of the android.provider.ContactsContract$ContactNameColumns interface with the provided implementation.
+				 * Constructs a new instance of the android.provider.ContactsContract$ContactNameColumns interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 				});
+				public constructor();
 				public static PHONETIC_NAME: string;
 				public static SORT_KEY_PRIMARY: string;
 				public static PHONETIC_NAME_STYLE: string;
@@ -41475,10 +41711,11 @@ declare module android {
 			export class ContactOptionsColumns extends java.lang.Object {
 				public static class: java.lang.Class<android.provider.ContactsContract.ContactOptionsColumns>;
 				/**
-				 * Constructs a new instance of the android.provider.ContactsContract$ContactOptionsColumns interface with the provided implementation.
+				 * Constructs a new instance of the android.provider.ContactsContract$ContactOptionsColumns interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 				});
+				public constructor();
 				public static TIMES_CONTACTED: string;
 				public static PINNED: string;
 				public static SEND_TO_VOICEMAIL: string;
@@ -41489,10 +41726,11 @@ declare module android {
 			export class ContactStatusColumns extends java.lang.Object {
 				public static class: java.lang.Class<android.provider.ContactsContract.ContactStatusColumns>;
 				/**
-				 * Constructs a new instance of the android.provider.ContactsContract$ContactStatusColumns interface with the provided implementation.
+				 * Constructs a new instance of the android.provider.ContactsContract$ContactStatusColumns interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 				});
+				public constructor();
 				public static CONTACT_STATUS_TIMESTAMP: string;
 				public static CONTACT_CHAT_CAPABILITY: string;
 				public static CONTACT_STATUS: string;
@@ -41564,10 +41802,11 @@ declare module android {
 			export class ContactsColumns extends java.lang.Object {
 				public static class: java.lang.Class<android.provider.ContactsContract.ContactsColumns>;
 				/**
-				 * Constructs a new instance of the android.provider.ContactsContract$ContactsColumns interface with the provided implementation.
+				 * Constructs a new instance of the android.provider.ContactsContract$ContactsColumns interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 				});
+				public constructor();
 				public static IS_USER_PROFILE: string;
 				public static LOOKUP_KEY: string;
 				public static IN_VISIBLE_GROUP: string;
@@ -41594,10 +41833,11 @@ declare module android {
 			export class DataColumns extends java.lang.Object {
 				public static class: java.lang.Class<android.provider.ContactsContract.DataColumns>;
 				/**
-				 * Constructs a new instance of the android.provider.ContactsContract$DataColumns interface with the provided implementation.
+				 * Constructs a new instance of the android.provider.ContactsContract$DataColumns interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 				});
+				public constructor();
 				public static IS_PRIMARY: string;
 				public static CARRIER_PRESENCE: string;
 				public static DATA_VERSION: string;
@@ -41630,10 +41870,11 @@ declare module android {
 			export class DataColumnsWithJoins extends java.lang.Object implements android.provider.BaseColumns, android.provider.ContactsContract.DataColumns, android.provider.ContactsContract.StatusColumns, android.provider.ContactsContract.RawContactsColumns, android.provider.ContactsContract.ContactsColumns, android.provider.ContactsContract.ContactNameColumns, android.provider.ContactsContract.ContactOptionsColumns, android.provider.ContactsContract.ContactStatusColumns, android.provider.ContactsContract.DataUsageStatColumns {
 				public static class: java.lang.Class<android.provider.ContactsContract.DataColumnsWithJoins>;
 				/**
-				 * Constructs a new instance of the android.provider.ContactsContract$DataColumnsWithJoins interface with the provided implementation.
+				 * Constructs a new instance of the android.provider.ContactsContract$DataColumnsWithJoins interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 				});
+				public constructor();
 				public static CHAT_CAPABILITY: string;
 				public static STATUS_TIMESTAMP: string;
 				public static PHONETIC_NAME_STYLE: string;
@@ -41739,10 +41980,11 @@ declare module android {
 			export class DataUsageStatColumns extends java.lang.Object {
 				public static class: java.lang.Class<android.provider.ContactsContract.DataUsageStatColumns>;
 				/**
-				 * Constructs a new instance of the android.provider.ContactsContract$DataUsageStatColumns interface with the provided implementation.
+				 * Constructs a new instance of the android.provider.ContactsContract$DataUsageStatColumns interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 				});
+				public constructor();
 				public static LAST_TIME_USED: string;
 				public static TIMES_USED: string;
 			}
@@ -41754,10 +41996,11 @@ declare module android {
 			export class DeletedContactsColumns extends java.lang.Object {
 				public static class: java.lang.Class<android.provider.ContactsContract.DeletedContactsColumns>;
 				/**
-				 * Constructs a new instance of the android.provider.ContactsContract$DeletedContactsColumns interface with the provided implementation.
+				 * Constructs a new instance of the android.provider.ContactsContract$DeletedContactsColumns interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 				});
+				public constructor();
 				public static CONTACT_DELETED_TIMESTAMP: string;
 				public static CONTACT_ID: string;
 			}
@@ -41797,10 +42040,11 @@ declare module android {
 			export class DisplayNameSources extends java.lang.Object {
 				public static class: java.lang.Class<android.provider.ContactsContract.DisplayNameSources>;
 				/**
-				 * Constructs a new instance of the android.provider.ContactsContract$DisplayNameSources interface with the provided implementation.
+				 * Constructs a new instance of the android.provider.ContactsContract$DisplayNameSources interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 				});
+				public constructor();
 				public static STRUCTURED_PHONETIC_NAME: number;
 				public static STRUCTURED_NAME: number;
 				public static EMAIL: number;
@@ -41819,10 +42063,11 @@ declare module android {
 			export class FullNameStyle extends java.lang.Object {
 				public static class: java.lang.Class<android.provider.ContactsContract.FullNameStyle>;
 				/**
-				 * Constructs a new instance of the android.provider.ContactsContract$FullNameStyle interface with the provided implementation.
+				 * Constructs a new instance of the android.provider.ContactsContract$FullNameStyle interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 				});
+				public constructor();
 				public static JAPANESE: number;
 				public static CHINESE: number;
 				public static KOREAN: number;
@@ -41841,10 +42086,11 @@ declare module android {
 			export class GroupsColumns extends java.lang.Object {
 				public static class: java.lang.Class<android.provider.ContactsContract.GroupsColumns>;
 				/**
-				 * Constructs a new instance of the android.provider.ContactsContract$GroupsColumns interface with the provided implementation.
+				 * Constructs a new instance of the android.provider.ContactsContract$GroupsColumns interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 				});
+				public constructor();
 				public static DATA_SET: string;
 				public static GROUP_VISIBLE: string;
 				public static NOTES: string;
@@ -41924,10 +42170,11 @@ declare module android {
 			export class PhoneLookupColumns extends java.lang.Object {
 				public static class: java.lang.Class<android.provider.ContactsContract.PhoneLookupColumns>;
 				/**
-				 * Constructs a new instance of the android.provider.ContactsContract$PhoneLookupColumns interface with the provided implementation.
+				 * Constructs a new instance of the android.provider.ContactsContract$PhoneLookupColumns interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 				});
+				public constructor();
 				public static DATA_ID: string;
 				public static NUMBER: string;
 				public static LABEL: string;
@@ -41938,10 +42185,11 @@ declare module android {
 			export class PhoneticNameStyle extends java.lang.Object {
 				public static class: java.lang.Class<android.provider.ContactsContract.PhoneticNameStyle>;
 				/**
-				 * Constructs a new instance of the android.provider.ContactsContract$PhoneticNameStyle interface with the provided implementation.
+				 * Constructs a new instance of the android.provider.ContactsContract$PhoneticNameStyle interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 				});
+				public constructor();
 				public static JAPANESE: number;
 				public static KOREAN: number;
 				public static PINYIN: number;
@@ -41962,10 +42210,11 @@ declare module android {
 			export class PresenceColumns extends java.lang.Object {
 				public static class: java.lang.Class<android.provider.ContactsContract.PresenceColumns>;
 				/**
-				 * Constructs a new instance of the android.provider.ContactsContract$PresenceColumns interface with the provided implementation.
+				 * Constructs a new instance of the android.provider.ContactsContract$PresenceColumns interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 				});
+				public constructor();
 				public static DATA_ID: string;
 				public static IM_HANDLE: string;
 				public static CUSTOM_PROTOCOL: string;
@@ -42042,10 +42291,11 @@ declare module android {
 			export class RawContactsColumns extends java.lang.Object {
 				public static class: java.lang.Class<android.provider.ContactsContract.RawContactsColumns>;
 				/**
-				 * Constructs a new instance of the android.provider.ContactsContract$RawContactsColumns interface with the provided implementation.
+				 * Constructs a new instance of the android.provider.ContactsContract$RawContactsColumns interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 				});
+				public constructor();
 				public static DATA_SET: string;
 				public static AGGREGATION_MODE: string;
 				public static RAW_CONTACT_IS_READ_ONLY: string;
@@ -42078,10 +42328,11 @@ declare module android {
 			export class SettingsColumns extends java.lang.Object {
 				public static class: java.lang.Class<android.provider.ContactsContract.SettingsColumns>;
 				/**
-				 * Constructs a new instance of the android.provider.ContactsContract$SettingsColumns interface with the provided implementation.
+				 * Constructs a new instance of the android.provider.ContactsContract$SettingsColumns interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 				});
+				public constructor();
 				public static ACCOUNT_NAME: string;
 				public static DATA_SET: string;
 				public static ACCOUNT_TYPE: string;
@@ -42094,10 +42345,11 @@ declare module android {
 			export class StatusColumns extends java.lang.Object {
 				public static class: java.lang.Class<android.provider.ContactsContract.StatusColumns>;
 				/**
-				 * Constructs a new instance of the android.provider.ContactsContract$StatusColumns interface with the provided implementation.
+				 * Constructs a new instance of the android.provider.ContactsContract$StatusColumns interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 				});
+				public constructor();
 				public static CHAT_CAPABILITY: string;
 				public static STATUS: string;
 				public static STATUS_TIMESTAMP: string;
@@ -42129,10 +42381,11 @@ declare module android {
 			export class SyncColumns extends java.lang.Object implements android.provider.ContactsContract.BaseSyncColumns {
 				public static class: java.lang.Class<android.provider.ContactsContract.SyncColumns>;
 				/**
-				 * Constructs a new instance of the android.provider.ContactsContract$SyncColumns interface with the provided implementation.
+				 * Constructs a new instance of the android.provider.ContactsContract$SyncColumns interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 				});
+				public constructor();
 				public static ACCOUNT_NAME: string;
 				public static ACCOUNT_TYPE: string;
 				public static SOURCE_ID: string;
@@ -42349,10 +42602,11 @@ declare module android {
 				export class AlbumColumns extends java.lang.Object {
 					public static class: java.lang.Class<android.provider.MediaStore.Audio.AlbumColumns>;
 					/**
-					 * Constructs a new instance of the android.provider.MediaStore$Audio$AlbumColumns interface with the provided implementation.
+					 * Constructs a new instance of the android.provider.MediaStore$Audio$AlbumColumns interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 					 */
 					public constructor(implementation: {
 					});
+					public constructor();
 					public static ALBUM_ID: string;
 					public static ARTIST: string;
 					public static ALBUM_KEY: string;
@@ -42376,10 +42630,11 @@ declare module android {
 				export class ArtistColumns extends java.lang.Object {
 					public static class: java.lang.Class<android.provider.MediaStore.Audio.ArtistColumns>;
 					/**
-					 * Constructs a new instance of the android.provider.MediaStore$Audio$ArtistColumns interface with the provided implementation.
+					 * Constructs a new instance of the android.provider.MediaStore$Audio$ArtistColumns interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 					 */
 					public constructor(implementation: {
 					});
+					public constructor();
 					public static NUMBER_OF_ALBUMS: string;
 					public static ARTIST: string;
 					public static NUMBER_OF_TRACKS: string;
@@ -42405,10 +42660,11 @@ declare module android {
 				export class AudioColumns extends java.lang.Object implements android.provider.MediaStore.MediaColumns {
 					public static class: java.lang.Class<android.provider.MediaStore.Audio.AudioColumns>;
 					/**
-					 * Constructs a new instance of the android.provider.MediaStore$Audio$AudioColumns interface with the provided implementation.
+					 * Constructs a new instance of the android.provider.MediaStore$Audio$AudioColumns interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 					 */
 					public constructor(implementation: {
 					});
+					public constructor();
 					public static ALBUM_ID: string;
 					public static IS_ALARM: string;
 					public static DATA: string;
@@ -42463,10 +42719,11 @@ declare module android {
 				export class GenresColumns extends java.lang.Object {
 					public static class: java.lang.Class<android.provider.MediaStore.Audio.GenresColumns>;
 					/**
-					 * Constructs a new instance of the android.provider.MediaStore$Audio$GenresColumns interface with the provided implementation.
+					 * Constructs a new instance of the android.provider.MediaStore$Audio$GenresColumns interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 					 */
 					public constructor(implementation: {
 					});
+					public constructor();
 					public static NAME: string;
 				}
 				export class Media extends java.lang.Object implements android.provider.MediaStore.Audio.AudioColumns {
@@ -42509,10 +42766,11 @@ declare module android {
 				export class PlaylistsColumns extends java.lang.Object {
 					public static class: java.lang.Class<android.provider.MediaStore.Audio.PlaylistsColumns>;
 					/**
-					 * Constructs a new instance of the android.provider.MediaStore$Audio$PlaylistsColumns interface with the provided implementation.
+					 * Constructs a new instance of the android.provider.MediaStore$Audio$PlaylistsColumns interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 					 */
 					public constructor(implementation: {
 					});
+					public constructor();
 					public static DATE_MODIFIED: string;
 					public static DATA: string;
 					public static DATE_ADDED: string;
@@ -42533,10 +42791,11 @@ declare module android {
 				export class FileColumns extends java.lang.Object implements android.provider.MediaStore.MediaColumns {
 					public static class: java.lang.Class<android.provider.MediaStore.Files.FileColumns>;
 					/**
-					 * Constructs a new instance of the android.provider.MediaStore$Files$FileColumns interface with the provided implementation.
+					 * Constructs a new instance of the android.provider.MediaStore$Files$FileColumns interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 					 */
 					public constructor(implementation: {
 					});
+					public constructor();
 					public static DATA: string;
 					public static PARENT: string;
 					public static MEDIA_TYPE: string;
@@ -42565,10 +42824,11 @@ declare module android {
 				export class ImageColumns extends java.lang.Object implements android.provider.MediaStore.MediaColumns {
 					public static class: java.lang.Class<android.provider.MediaStore.Images.ImageColumns>;
 					/**
-					 * Constructs a new instance of the android.provider.MediaStore$Images$ImageColumns interface with the provided implementation.
+					 * Constructs a new instance of the android.provider.MediaStore$Images$ImageColumns interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 					 */
 					public constructor(implementation: {
 					});
+					public constructor();
 					public static IS_PRIVATE: string;
 					public static DESCRIPTION: string;
 					public static DATA: string;
@@ -42634,10 +42894,11 @@ declare module android {
 			export class MediaColumns extends java.lang.Object implements android.provider.BaseColumns {
 				public static class: java.lang.Class<android.provider.MediaStore.MediaColumns>;
 				/**
-				 * Constructs a new instance of the android.provider.MediaStore$MediaColumns interface with the provided implementation.
+				 * Constructs a new instance of the android.provider.MediaStore$MediaColumns interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 				});
+				public constructor();
 				public static _COUNT: string;
 				public static DATE_MODIFIED: string;
 				public static DATA: string;
@@ -42689,10 +42950,11 @@ declare module android {
 				export class VideoColumns extends java.lang.Object implements android.provider.MediaStore.MediaColumns {
 					public static class: java.lang.Class<android.provider.MediaStore.Video.VideoColumns>;
 					/**
-					 * Constructs a new instance of the android.provider.MediaStore$Video$VideoColumns interface with the provided implementation.
+					 * Constructs a new instance of the android.provider.MediaStore$Video$VideoColumns interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 					 */
 					public constructor(implementation: {
 					});
+					public constructor();
 					public static IS_PRIVATE: string;
 					public static DATA: string;
 					public static ALBUM: string;
@@ -42731,10 +42993,11 @@ declare module android {
 		export class OpenableColumns extends java.lang.Object {
 			public static class: java.lang.Class<android.provider.OpenableColumns>;
 			/**
-			 * Constructs a new instance of the android.provider.OpenableColumns interface with the provided implementation.
+			 * Constructs a new instance of the android.provider.OpenableColumns interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 			});
+			public constructor();
 			public static SIZE: string;
 			public static DISPLAY_NAME: string;
 		}
@@ -43137,10 +43400,11 @@ declare module android {
 			export class Columns extends java.lang.Object implements android.provider.BaseColumns {
 				public static class: java.lang.Class<android.provider.SyncStateContract.Columns>;
 				/**
-				 * Constructs a new instance of the android.provider.SyncStateContract$Columns interface with the provided implementation.
+				 * Constructs a new instance of the android.provider.SyncStateContract$Columns interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 				});
+				public constructor();
 				public static ACCOUNT_NAME: string;
 				public static _COUNT: string;
 				public static ACCOUNT_TYPE: string;
@@ -43176,10 +43440,11 @@ declare module android {
 			export class BaseMmsColumns extends java.lang.Object implements android.provider.BaseColumns {
 				public static class: java.lang.Class<android.provider.Telephony.BaseMmsColumns>;
 				/**
-				 * Constructs a new instance of the android.provider.Telephony$BaseMmsColumns interface with the provided implementation.
+				 * Constructs a new instance of the android.provider.Telephony$BaseMmsColumns interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 				});
+				public constructor();
 				public static DATE: string;
 				public static READ_REPORT: string;
 				public static READ: string;
@@ -43226,10 +43491,11 @@ declare module android {
 			export class CanonicalAddressesColumns extends java.lang.Object implements android.provider.BaseColumns {
 				public static class: java.lang.Class<android.provider.Telephony.CanonicalAddressesColumns>;
 				/**
-				 * Constructs a new instance of the android.provider.Telephony$CanonicalAddressesColumns interface with the provided implementation.
+				 * Constructs a new instance of the android.provider.Telephony$CanonicalAddressesColumns interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 				});
+				public constructor();
 				public static _COUNT: string;
 				public static ADDRESS: string;
 				public static _ID: string;
@@ -43422,10 +43688,11 @@ declare module android {
 			export class TextBasedSmsColumns extends java.lang.Object {
 				public static class: java.lang.Class<android.provider.Telephony.TextBasedSmsColumns>;
 				/**
-				 * Constructs a new instance of the android.provider.Telephony$TextBasedSmsColumns interface with the provided implementation.
+				 * Constructs a new instance of the android.provider.Telephony$TextBasedSmsColumns interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 				});
+				public constructor();
 				public static DATE: string;
 				public static READ: string;
 				public static ADDRESS: string;
@@ -43468,10 +43735,11 @@ declare module android {
 			export class ThreadsColumns extends java.lang.Object implements android.provider.BaseColumns {
 				public static class: java.lang.Class<android.provider.Telephony.ThreadsColumns>;
 				/**
-				 * Constructs a new instance of the android.provider.Telephony$ThreadsColumns interface with the provided implementation.
+				 * Constructs a new instance of the android.provider.Telephony$ThreadsColumns interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 				});
+				public constructor();
 				public static DATE: string;
 				public static _COUNT: string;
 				public static READ: string;
@@ -43683,11 +43951,12 @@ declare module android {
 			export class OnBufferAvailableListener extends java.lang.Object {
 				public static class: java.lang.Class<android.renderscript.Allocation.OnBufferAvailableListener>;
 				/**
-				 * Constructs a new instance of the android.renderscript.Allocation$OnBufferAvailableListener interface with the provided implementation.
+				 * Constructs a new instance of the android.renderscript.Allocation$OnBufferAvailableListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onBufferAvailable(param0: android.renderscript.Allocation): void;
 				});
+				public constructor();
 				public onBufferAvailable(param0: android.renderscript.Allocation): void;
 			}
 		}
@@ -44986,12 +45255,13 @@ declare module android {
 		export class ElementListener extends java.lang.Object implements android.sax.StartElementListener, android.sax.EndElementListener {
 			public static class: java.lang.Class<android.sax.ElementListener>;
 			/**
-			 * Constructs a new instance of the android.sax.ElementListener interface with the provided implementation.
+			 * Constructs a new instance of the android.sax.ElementListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				start(param0: org.xml.sax.Attributes): void;
 				end(): void;
 			});
+			public constructor();
 			public start(param0: org.xml.sax.Attributes): void;
 			public end(): void;
 		}
@@ -45003,11 +45273,12 @@ declare module android {
 		export class EndElementListener extends java.lang.Object {
 			public static class: java.lang.Class<android.sax.EndElementListener>;
 			/**
-			 * Constructs a new instance of the android.sax.EndElementListener interface with the provided implementation.
+			 * Constructs a new instance of the android.sax.EndElementListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				end(): void;
 			});
+			public constructor();
 			public end(): void;
 		}
 	}
@@ -45018,11 +45289,12 @@ declare module android {
 		export class EndTextElementListener extends java.lang.Object {
 			public static class: java.lang.Class<android.sax.EndTextElementListener>;
 			/**
-			 * Constructs a new instance of the android.sax.EndTextElementListener interface with the provided implementation.
+			 * Constructs a new instance of the android.sax.EndTextElementListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				end(param0: string): void;
 			});
+			public constructor();
 			public end(param0: string): void;
 		}
 	}
@@ -45044,11 +45316,12 @@ declare module android {
 		export class StartElementListener extends java.lang.Object {
 			public static class: java.lang.Class<android.sax.StartElementListener>;
 			/**
-			 * Constructs a new instance of the android.sax.StartElementListener interface with the provided implementation.
+			 * Constructs a new instance of the android.sax.StartElementListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				start(param0: org.xml.sax.Attributes): void;
 			});
+			public constructor();
 			public start(param0: org.xml.sax.Attributes): void;
 		}
 	}
@@ -45059,12 +45332,13 @@ declare module android {
 		export class TextElementListener extends java.lang.Object implements android.sax.StartElementListener, android.sax.EndTextElementListener {
 			public static class: java.lang.Class<android.sax.TextElementListener>;
 			/**
-			 * Constructs a new instance of the android.sax.TextElementListener interface with the provided implementation.
+			 * Constructs a new instance of the android.sax.TextElementListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				start(param0: org.xml.sax.Attributes): void;
 				end(param0: string): void;
 			});
+			public constructor();
 			public start(param0: org.xml.sax.Attributes): void;
 			public end(param0: string): void;
 		}
@@ -45096,11 +45370,12 @@ declare module android {
 		export class KeyChainAliasCallback extends java.lang.Object {
 			public static class: java.lang.Class<android.security.KeyChainAliasCallback>;
 			/**
-			 * Constructs a new instance of the android.security.KeyChainAliasCallback interface with the provided implementation.
+			 * Constructs a new instance of the android.security.KeyChainAliasCallback interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				alias(param0: string): void;
 			});
+			public constructor();
 			public alias(param0: string): void;
 		}
 	}
@@ -45469,11 +45744,12 @@ declare module android {
 				export class ResultCallback<T>  extends java.lang.Object {
 					public static class: java.lang.Class<android.service.carrier.CarrierMessagingService.ResultCallback<any>>;
 					/**
-					 * Constructs a new instance of the android.service.carrier.CarrierMessagingService$ResultCallback interface with the provided implementation.
+					 * Constructs a new instance of the android.service.carrier.CarrierMessagingService$ResultCallback interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 					 */
 					public constructor(implementation: {
 						onReceiveResult(param0: T): void;
 					});
+					public constructor();
 					public onReceiveResult(param0: T): void;
 				}
 				export class SendMmsResult extends java.lang.Object {
@@ -46221,7 +46497,7 @@ declare module android {
 		export class RecognitionListener extends java.lang.Object {
 			public static class: java.lang.Class<android.speech.RecognitionListener>;
 			/**
-			 * Constructs a new instance of the android.speech.RecognitionListener interface with the provided implementation.
+			 * Constructs a new instance of the android.speech.RecognitionListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				onReadyForSpeech(param0: android.os.Bundle): void;
@@ -46234,6 +46510,7 @@ declare module android {
 				onPartialResults(param0: android.os.Bundle): void;
 				onEvent(param0: number, param1: android.os.Bundle): void;
 			});
+			public constructor();
 			public onEndOfSpeech(): void;
 			public onRmsChanged(param0: number): void;
 			public onBufferReceived(param0: native.Array<number>): void;
@@ -46368,7 +46645,7 @@ declare module android {
 			export class SynthesisCallback extends java.lang.Object {
 				public static class: java.lang.Class<android.speech.tts.SynthesisCallback>;
 				/**
-				 * Constructs a new instance of the android.speech.tts.SynthesisCallback interface with the provided implementation.
+				 * Constructs a new instance of the android.speech.tts.SynthesisCallback interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					getMaxBufferSize(): number;
@@ -46380,6 +46657,7 @@ declare module android {
 					hasStarted(): boolean;
 					hasFinished(): boolean;
 				});
+				public constructor();
 				public error(param0: number): void;
 				public audioAvailable(param0: native.Array<number>, param1: number, param2: number): number;
 				public error(): void;
@@ -46523,21 +46801,23 @@ declare module android {
 				export class OnInitListener extends java.lang.Object {
 					public static class: java.lang.Class<android.speech.tts.TextToSpeech.OnInitListener>;
 					/**
-					 * Constructs a new instance of the android.speech.tts.TextToSpeech$OnInitListener interface with the provided implementation.
+					 * Constructs a new instance of the android.speech.tts.TextToSpeech$OnInitListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 					 */
 					public constructor(implementation: {
 						onInit(param0: number): void;
 					});
+					public constructor();
 					public onInit(param0: number): void;
 				}
 				export class OnUtteranceCompletedListener extends java.lang.Object {
 					public static class: java.lang.Class<android.speech.tts.TextToSpeech.OnUtteranceCompletedListener>;
 					/**
-					 * Constructs a new instance of the android.speech.tts.TextToSpeech$OnUtteranceCompletedListener interface with the provided implementation.
+					 * Constructs a new instance of the android.speech.tts.TextToSpeech$OnUtteranceCompletedListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 					 */
 					public constructor(implementation: {
 						onUtteranceCompleted(param0: string): void;
 					});
+					public constructor();
 					public onUtteranceCompleted(param0: string): void;
 				}
 			}
@@ -49401,7 +49681,7 @@ declare module android {
 		export class FlakyTest extends java.lang.Object implements java.lang.annotation.Annotation {
 			public static class: java.lang.Class<android.test.FlakyTest>;
 			/**
-			 * Constructs a new instance of the android.test.FlakyTest interface with the provided implementation.
+			 * Constructs a new instance of the android.test.FlakyTest interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				tolerance(): number;
@@ -49410,6 +49690,7 @@ declare module android {
 				toString(): string;
 				annotationType(): java.lang.Class<any>;
 			});
+			public constructor();
 			public tolerance(): number;
 			public equals(param0: any): boolean;
 			public toString(): string;
@@ -49576,12 +49857,13 @@ declare module android {
 		export class PerformanceTestCase extends java.lang.Object {
 			public static class: java.lang.Class<android.test.PerformanceTestCase>;
 			/**
-			 * Constructs a new instance of the android.test.PerformanceTestCase interface with the provided implementation.
+			 * Constructs a new instance of the android.test.PerformanceTestCase interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				startPerformance(param0: android.test.PerformanceTestCase.Intermediates): number;
 				isPerformanceOnly(): boolean;
 			});
+			public constructor();
 			public startPerformance(param0: android.test.PerformanceTestCase.Intermediates): number;
 			public isPerformanceOnly(): boolean;
 		}
@@ -49589,7 +49871,7 @@ declare module android {
 			export class Intermediates extends java.lang.Object {
 				public static class: java.lang.Class<android.test.PerformanceTestCase.Intermediates>;
 				/**
-				 * Constructs a new instance of the android.test.PerformanceTestCase$Intermediates interface with the provided implementation.
+				 * Constructs a new instance of the android.test.PerformanceTestCase$Intermediates interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					setInternalIterations(param0: number): void;
@@ -49598,6 +49880,7 @@ declare module android {
 					addIntermediate(param0: string, param1: number): void;
 					finishTiming(param0: boolean): void;
 				});
+				public constructor();
 				public setInternalIterations(param0: number): void;
 				public finishTiming(param0: boolean): void;
 				public addIntermediate(param0: string, param1: number): void;
@@ -49739,11 +50022,12 @@ declare module android {
 		export class TestSuiteProvider extends java.lang.Object {
 			public static class: java.lang.Class<android.test.TestSuiteProvider>;
 			/**
-			 * Constructs a new instance of the android.test.TestSuiteProvider interface with the provided implementation.
+			 * Constructs a new instance of the android.test.TestSuiteProvider interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				getTestSuite(): junit.framework.TestSuite;
 			});
+			public constructor();
 			public getTestSuite(): junit.framework.TestSuite;
 		}
 	}
@@ -49794,7 +50078,7 @@ declare module android {
 		export class UiThreadTest extends java.lang.Object implements java.lang.annotation.Annotation {
 			public static class: java.lang.Class<android.test.UiThreadTest>;
 			/**
-			 * Constructs a new instance of the android.test.UiThreadTest interface with the provided implementation.
+			 * Constructs a new instance of the android.test.UiThreadTest interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				equals(param0: any): boolean;
@@ -49802,6 +50086,7 @@ declare module android {
 				toString(): string;
 				annotationType(): java.lang.Class<any>;
 			});
+			public constructor();
 			public equals(param0: any): boolean;
 			public toString(): string;
 			public annotationType(): java.lang.Class<any>;
@@ -50278,7 +50563,7 @@ declare module android {
 				export class LargeTest extends java.lang.Object implements java.lang.annotation.Annotation {
 					public static class: java.lang.Class<android.test.suitebuilder.annotation.LargeTest>;
 					/**
-					 * Constructs a new instance of the android.test.suitebuilder.annotation.LargeTest interface with the provided implementation.
+					 * Constructs a new instance of the android.test.suitebuilder.annotation.LargeTest interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 					 */
 					public constructor(implementation: {
 						equals(param0: any): boolean;
@@ -50286,6 +50571,7 @@ declare module android {
 						toString(): string;
 						annotationType(): java.lang.Class<any>;
 					});
+					public constructor();
 					public equals(param0: any): boolean;
 					public toString(): string;
 					public annotationType(): java.lang.Class<any>;
@@ -50303,7 +50589,7 @@ declare module android {
 				export class MediumTest extends java.lang.Object implements java.lang.annotation.Annotation {
 					public static class: java.lang.Class<android.test.suitebuilder.annotation.MediumTest>;
 					/**
-					 * Constructs a new instance of the android.test.suitebuilder.annotation.MediumTest interface with the provided implementation.
+					 * Constructs a new instance of the android.test.suitebuilder.annotation.MediumTest interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 					 */
 					public constructor(implementation: {
 						equals(param0: any): boolean;
@@ -50311,6 +50597,7 @@ declare module android {
 						toString(): string;
 						annotationType(): java.lang.Class<any>;
 					});
+					public constructor();
 					public equals(param0: any): boolean;
 					public toString(): string;
 					public annotationType(): java.lang.Class<any>;
@@ -50328,7 +50615,7 @@ declare module android {
 				export class SmallTest extends java.lang.Object implements java.lang.annotation.Annotation {
 					public static class: java.lang.Class<android.test.suitebuilder.annotation.SmallTest>;
 					/**
-					 * Constructs a new instance of the android.test.suitebuilder.annotation.SmallTest interface with the provided implementation.
+					 * Constructs a new instance of the android.test.suitebuilder.annotation.SmallTest interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 					 */
 					public constructor(implementation: {
 						equals(param0: any): boolean;
@@ -50336,6 +50623,7 @@ declare module android {
 						toString(): string;
 						annotationType(): java.lang.Class<any>;
 					});
+					public constructor();
 					public equals(param0: any): boolean;
 					public toString(): string;
 					public annotationType(): java.lang.Class<any>;
@@ -50353,7 +50641,7 @@ declare module android {
 				export class Smoke extends java.lang.Object implements java.lang.annotation.Annotation {
 					public static class: java.lang.Class<android.test.suitebuilder.annotation.Smoke>;
 					/**
-					 * Constructs a new instance of the android.test.suitebuilder.annotation.Smoke interface with the provided implementation.
+					 * Constructs a new instance of the android.test.suitebuilder.annotation.Smoke interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 					 */
 					public constructor(implementation: {
 						equals(param0: any): boolean;
@@ -50361,6 +50649,7 @@ declare module android {
 						toString(): string;
 						annotationType(): java.lang.Class<any>;
 					});
+					public constructor();
 					public equals(param0: any): boolean;
 					public toString(): string;
 					public annotationType(): java.lang.Class<any>;
@@ -50378,7 +50667,7 @@ declare module android {
 				export class Suppress extends java.lang.Object implements java.lang.annotation.Annotation {
 					public static class: java.lang.Class<android.test.suitebuilder.annotation.Suppress>;
 					/**
-					 * Constructs a new instance of the android.test.suitebuilder.annotation.Suppress interface with the provided implementation.
+					 * Constructs a new instance of the android.test.suitebuilder.annotation.Suppress interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 					 */
 					public constructor(implementation: {
 						equals(param0: any): boolean;
@@ -50386,6 +50675,7 @@ declare module android {
 						toString(): string;
 						annotationType(): java.lang.Class<any>;
 					});
+					public constructor();
 					public equals(param0: any): boolean;
 					public toString(): string;
 					public annotationType(): java.lang.Class<any>;
@@ -50570,7 +50860,7 @@ declare module android {
 		export class Editable extends java.lang.Object implements java.lang.CharSequence, android.text.GetChars, android.text.Spannable, java.lang.Appendable {
 			public static class: java.lang.Class<android.text.Editable>;
 			/**
-			 * Constructs a new instance of the android.text.Editable interface with the provided implementation.
+			 * Constructs a new instance of the android.text.Editable interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				replace(param0: number, param1: number, param2: string, param3: number, param4: number): android.text.Editable;
@@ -50618,6 +50908,7 @@ declare module android {
 				chars(): java.util.stream.IntStream;
 				codePoints(): java.util.stream.IntStream;
 			});
+			public constructor();
 			public static SPAN_POINT_MARK: number;
 			public static SPAN_USER_SHIFT: number;
 			public static SPAN_INCLUSIVE_EXCLUSIVE: number;
@@ -50678,7 +50969,7 @@ declare module android {
 		export class GetChars extends java.lang.Object implements java.lang.CharSequence {
 			public static class: java.lang.Class<android.text.GetChars>;
 			/**
-			 * Constructs a new instance of the android.text.GetChars interface with the provided implementation.
+			 * Constructs a new instance of the android.text.GetChars interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				getChars(param0: number, param1: number, param2: native.Array<string>, param3: number): void;
@@ -50689,6 +50980,7 @@ declare module android {
 				chars(): java.util.stream.IntStream;
 				codePoints(): java.util.stream.IntStream;
 			});
+			public constructor();
 			public getChars(param0: number, param1: number, param2: native.Array<string>, param3: number): void;
 			public charAt(param0: number): string;
 			public subSequence(param0: number, param1: number): string;
@@ -50727,21 +51019,23 @@ declare module android {
 			export class ImageGetter extends java.lang.Object {
 				public static class: java.lang.Class<android.text.Html.ImageGetter>;
 				/**
-				 * Constructs a new instance of the android.text.Html$ImageGetter interface with the provided implementation.
+				 * Constructs a new instance of the android.text.Html$ImageGetter interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					getDrawable(param0: string): android.graphics.drawable.Drawable;
 				});
+				public constructor();
 				public getDrawable(param0: string): android.graphics.drawable.Drawable;
 			}
 			export class TagHandler extends java.lang.Object {
 				public static class: java.lang.Class<android.text.Html.TagHandler>;
 				/**
-				 * Constructs a new instance of the android.text.Html$TagHandler interface with the provided implementation.
+				 * Constructs a new instance of the android.text.Html$TagHandler interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					handleTag(param0: boolean, param1: string, param2: android.text.Editable, param3: org.xml.sax.XMLReader): void;
 				});
+				public constructor();
 				public handleTag(param0: boolean, param1: string, param2: android.text.Editable, param3: org.xml.sax.XMLReader): void;
 			}
 		}
@@ -50753,11 +51047,12 @@ declare module android {
 		export class InputFilter extends java.lang.Object {
 			public static class: java.lang.Class<android.text.InputFilter>;
 			/**
-			 * Constructs a new instance of the android.text.InputFilter interface with the provided implementation.
+			 * Constructs a new instance of the android.text.InputFilter interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				filter(param0: string, param1: number, param2: number, param3: android.text.Spanned, param4: number, param5: number): string;
 			});
+			public constructor();
 			public filter(param0: string, param1: number, param2: number, param3: android.text.Spanned, param4: number, param5: number): string;
 		}
 		export module InputFilter {
@@ -50781,10 +51076,11 @@ declare module android {
 		export class InputType extends java.lang.Object {
 			public static class: java.lang.Class<android.text.InputType>;
 			/**
-			 * Constructs a new instance of the android.text.InputType interface with the provided implementation.
+			 * Constructs a new instance of the android.text.InputType interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 			});
+			public constructor();
 			public static TYPE_TEXT_VARIATION_FILTER: number;
 			public static TYPE_TEXT_FLAG_AUTO_COMPLETE: number;
 			public static TYPE_NUMBER_VARIATION_NORMAL: number;
@@ -50947,10 +51243,11 @@ declare module android {
 		export class NoCopySpan extends java.lang.Object {
 			public static class: java.lang.Class<android.text.NoCopySpan>;
 			/**
-			 * Constructs a new instance of the android.text.NoCopySpan interface with the provided implementation.
+			 * Constructs a new instance of the android.text.NoCopySpan interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 			});
+			public constructor();
 		}
 		export module NoCopySpan {
 			export class Concrete extends java.lang.Object implements android.text.NoCopySpan {
@@ -50966,13 +51263,14 @@ declare module android {
 		export class ParcelableSpan extends java.lang.Object implements android.os.Parcelable {
 			public static class: java.lang.Class<android.text.ParcelableSpan>;
 			/**
-			 * Constructs a new instance of the android.text.ParcelableSpan interface with the provided implementation.
+			 * Constructs a new instance of the android.text.ParcelableSpan interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				getSpanTypeId(): number;
 				describeContents(): number;
 				writeToParcel(param0: android.os.Parcel, param1: number): void;
 			});
+			public constructor();
 			public static PARCELABLE_WRITE_RETURN_VALUE: number;
 			public static CONTENTS_FILE_DESCRIPTOR: number;
 			public getSpanTypeId(): number;
@@ -51016,13 +51314,14 @@ declare module android {
 		export class SpanWatcher extends java.lang.Object implements android.text.NoCopySpan {
 			public static class: java.lang.Class<android.text.SpanWatcher>;
 			/**
-			 * Constructs a new instance of the android.text.SpanWatcher interface with the provided implementation.
+			 * Constructs a new instance of the android.text.SpanWatcher interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				onSpanAdded(param0: android.text.Spannable, param1: any, param2: number, param3: number): void;
 				onSpanRemoved(param0: android.text.Spannable, param1: any, param2: number, param3: number): void;
 				onSpanChanged(param0: android.text.Spannable, param1: any, param2: number, param3: number, param4: number, param5: number): void;
 			});
+			public constructor();
 			public onSpanAdded(param0: android.text.Spannable, param1: any, param2: number, param3: number): void;
 			public onSpanChanged(param0: android.text.Spannable, param1: any, param2: number, param3: number, param4: number, param5: number): void;
 			public onSpanRemoved(param0: android.text.Spannable, param1: any, param2: number, param3: number): void;
@@ -51035,7 +51334,7 @@ declare module android {
 		export class Spannable extends java.lang.Object implements android.text.Spanned {
 			public static class: java.lang.Class<android.text.Spannable>;
 			/**
-			 * Constructs a new instance of the android.text.Spannable interface with the provided implementation.
+			 * Constructs a new instance of the android.text.Spannable interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				setSpan(param0: any, param1: number, param2: number, param3: number): void;
@@ -51052,6 +51351,7 @@ declare module android {
 				chars(): java.util.stream.IntStream;
 				codePoints(): java.util.stream.IntStream;
 			});
+			public constructor();
 			public static SPAN_POINT_MARK: number;
 			public static SPAN_USER_SHIFT: number;
 			public static SPAN_INCLUSIVE_EXCLUSIVE: number;
@@ -51192,7 +51492,7 @@ declare module android {
 		export class Spanned extends java.lang.Object implements java.lang.CharSequence {
 			public static class: java.lang.Class<android.text.Spanned>;
 			/**
-			 * Constructs a new instance of the android.text.Spanned interface with the provided implementation.
+			 * Constructs a new instance of the android.text.Spanned interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				getSpans(param0: number, param1: number, param2: java.lang.Class<any>): native.Array<any>;
@@ -51207,6 +51507,7 @@ declare module android {
 				chars(): java.util.stream.IntStream;
 				codePoints(): java.util.stream.IntStream;
 			});
+			public constructor();
 			public static SPAN_POINT_MARK: number;
 			public static SPAN_USER_SHIFT: number;
 			public static SPAN_INCLUSIVE_EXCLUSIVE: number;
@@ -51309,12 +51610,13 @@ declare module android {
 		export class TextDirectionHeuristic extends java.lang.Object {
 			public static class: java.lang.Class<android.text.TextDirectionHeuristic>;
 			/**
-			 * Constructs a new instance of the android.text.TextDirectionHeuristic interface with the provided implementation.
+			 * Constructs a new instance of the android.text.TextDirectionHeuristic interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				isRtl(param0: native.Array<string>, param1: number, param2: number): boolean;
 				isRtl(param0: string, param1: number, param2: number): boolean;
 			});
+			public constructor();
 			public isRtl(param0: string, param1: number, param2: number): boolean;
 			public isRtl(param0: native.Array<string>, param1: number, param2: number): boolean;
 		}
@@ -51402,11 +51704,12 @@ declare module android {
 			export class EllipsizeCallback extends java.lang.Object {
 				public static class: java.lang.Class<android.text.TextUtils.EllipsizeCallback>;
 				/**
-				 * Constructs a new instance of the android.text.TextUtils$EllipsizeCallback interface with the provided implementation.
+				 * Constructs a new instance of the android.text.TextUtils$EllipsizeCallback interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					ellipsized(param0: number, param1: number): void;
 				});
+				public constructor();
 				public ellipsized(param0: number, param1: number): void;
 			}
 			export class SimpleStringSplitter extends java.lang.Object {
@@ -51424,7 +51727,7 @@ declare module android {
 			export class StringSplitter extends java.lang.Iterable<string> {
 				public static class: java.lang.Class<android.text.TextUtils.StringSplitter>;
 				/**
-				 * Constructs a new instance of the android.text.TextUtils$StringSplitter interface with the provided implementation.
+				 * Constructs a new instance of the android.text.TextUtils$StringSplitter interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					setString(param0: string): void;
@@ -51432,6 +51735,7 @@ declare module android {
 					forEach(param0: any /* any*/): void;
 					spliterator(): java.util.Spliterator<any>;
 				});
+				public constructor();
 				public spliterator(): java.util.Spliterator<any>;
 				public setString(param0: string): void;
 				public forEach(param0: any /* any*/): void;
@@ -51456,13 +51760,14 @@ declare module android {
 		export class TextWatcher extends java.lang.Object implements android.text.NoCopySpan {
 			public static class: java.lang.Class<android.text.TextWatcher>;
 			/**
-			 * Constructs a new instance of the android.text.TextWatcher interface with the provided implementation.
+			 * Constructs a new instance of the android.text.TextWatcher interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				beforeTextChanged(param0: string, param1: number, param2: number, param3: number): void;
 				onTextChanged(param0: string, param1: number, param2: number, param3: number): void;
 				afterTextChanged(param0: android.text.Editable): void;
 			});
+			public constructor();
 			public afterTextChanged(param0: android.text.Editable): void;
 			public onTextChanged(param0: string, param1: number, param2: number, param3: number): void;
 			public beforeTextChanged(param0: string, param1: number, param2: number, param3: number): void;
@@ -51897,7 +52202,7 @@ declare module android {
 			export class KeyListener extends java.lang.Object {
 				public static class: java.lang.Class<android.text.method.KeyListener>;
 				/**
-				 * Constructs a new instance of the android.text.method.KeyListener interface with the provided implementation.
+				 * Constructs a new instance of the android.text.method.KeyListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					getInputType(): number;
@@ -51906,6 +52211,7 @@ declare module android {
 					onKeyOther(param0: android.view.View, param1: android.text.Editable, param2: android.view.KeyEvent): boolean;
 					clearMetaKeyState(param0: android.view.View, param1: android.text.Editable, param2: number): void;
 				});
+				public constructor();
 				public clearMetaKeyState(param0: android.view.View, param1: android.text.Editable, param2: number): void;
 				public onKeyUp(param0: android.view.View, param1: android.text.Editable, param2: number, param3: android.view.KeyEvent): boolean;
 				public getInputType(): number;
@@ -51985,7 +52291,7 @@ declare module android {
 			export class MovementMethod extends java.lang.Object {
 				public static class: java.lang.Class<android.text.method.MovementMethod>;
 				/**
-				 * Constructs a new instance of the android.text.method.MovementMethod interface with the provided implementation.
+				 * Constructs a new instance of the android.text.method.MovementMethod interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					initialize(param0: android.widget.TextView, param1: android.text.Spannable): void;
@@ -51998,6 +52304,7 @@ declare module android {
 					onGenericMotionEvent(param0: android.widget.TextView, param1: android.text.Spannable, param2: android.view.MotionEvent): boolean;
 					canSelectArbitrarily(): boolean;
 				});
+				public constructor();
 				public initialize(param0: android.widget.TextView, param1: android.text.Spannable): void;
 				public onGenericMotionEvent(param0: android.widget.TextView, param1: android.text.Spannable, param2: android.view.MotionEvent): boolean;
 				public onTrackballEvent(param0: android.widget.TextView, param1: android.text.Spannable, param2: android.view.MotionEvent): boolean;
@@ -52241,12 +52548,13 @@ declare module android {
 			export class TransformationMethod extends java.lang.Object {
 				public static class: java.lang.Class<android.text.method.TransformationMethod>;
 				/**
-				 * Constructs a new instance of the android.text.method.TransformationMethod interface with the provided implementation.
+				 * Constructs a new instance of the android.text.method.TransformationMethod interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					getTransformation(param0: string, param1: android.view.View): string;
 					onFocusChanged(param0: android.view.View, param1: string, param2: boolean, param3: number, param4: android.graphics.Rect): void;
 				});
+				public constructor();
 				public getTransformation(param0: string, param1: android.view.View): string;
 				public onFocusChanged(param0: android.view.View, param1: string, param2: boolean, param3: number, param4: android.graphics.Rect): void;
 			}
@@ -52281,11 +52589,12 @@ declare module android {
 			export class AlignmentSpan extends java.lang.Object implements android.text.style.ParagraphStyle {
 				public static class: java.lang.Class<android.text.style.AlignmentSpan>;
 				/**
-				 * Constructs a new instance of the android.text.style.AlignmentSpan interface with the provided implementation.
+				 * Constructs a new instance of the android.text.style.AlignmentSpan interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					getAlignment(): android.text.Layout.Alignment;
 				});
+				public constructor();
 				public getAlignment(): android.text.Layout.Alignment;
 			}
 			export module AlignmentSpan {
@@ -52486,12 +52795,13 @@ declare module android {
 			export class LeadingMarginSpan extends java.lang.Object implements android.text.style.ParagraphStyle {
 				public static class: java.lang.Class<android.text.style.LeadingMarginSpan>;
 				/**
-				 * Constructs a new instance of the android.text.style.LeadingMarginSpan interface with the provided implementation.
+				 * Constructs a new instance of the android.text.style.LeadingMarginSpan interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					getLeadingMargin(param0: boolean): number;
 					drawLeadingMargin(param0: android.graphics.Canvas, param1: android.graphics.Paint, param2: number, param3: number, param4: number, param5: number, param6: number, param7: string, param8: number, param9: number, param10: boolean, param11: android.text.Layout): void;
 				});
+				public constructor();
 				public drawLeadingMargin(param0: android.graphics.Canvas, param1: android.graphics.Paint, param2: number, param3: number, param4: number, param5: number, param6: number, param7: string, param8: number, param9: number, param10: boolean, param11: android.text.Layout): void;
 				public getLeadingMargin(param0: boolean): number;
 			}
@@ -52499,13 +52809,14 @@ declare module android {
 				export class LeadingMarginSpan2 extends java.lang.Object implements android.text.style.LeadingMarginSpan, android.text.style.WrapTogetherSpan {
 					public static class: java.lang.Class<android.text.style.LeadingMarginSpan.LeadingMarginSpan2>;
 					/**
-					 * Constructs a new instance of the android.text.style.LeadingMarginSpan$LeadingMarginSpan2 interface with the provided implementation.
+					 * Constructs a new instance of the android.text.style.LeadingMarginSpan$LeadingMarginSpan2 interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 					 */
 					public constructor(implementation: {
 						getLeadingMarginLineCount(): number;
 						getLeadingMargin(param0: boolean): number;
 						drawLeadingMargin(param0: android.graphics.Canvas, param1: android.graphics.Paint, param2: number, param3: number, param4: number, param5: number, param6: number, param7: string, param8: number, param9: number, param10: boolean, param11: android.text.Layout): void;
 					});
+					public constructor();
 					public getLeadingMargin(param0: boolean): number;
 					public getLeadingMarginLineCount(): number;
 					public drawLeadingMargin(param0: android.graphics.Canvas, param1: android.graphics.Paint, param2: number, param3: number, param4: number, param5: number, param6: number, param7: string, param8: number, param9: number, param10: boolean, param11: android.text.Layout): void;
@@ -52532,11 +52843,12 @@ declare module android {
 			export class LineBackgroundSpan extends java.lang.Object implements android.text.style.ParagraphStyle {
 				public static class: java.lang.Class<android.text.style.LineBackgroundSpan>;
 				/**
-				 * Constructs a new instance of the android.text.style.LineBackgroundSpan interface with the provided implementation.
+				 * Constructs a new instance of the android.text.style.LineBackgroundSpan interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					drawBackground(param0: android.graphics.Canvas, param1: android.graphics.Paint, param2: number, param3: number, param4: number, param5: number, param6: number, param7: string, param8: number, param9: number, param10: number): void;
 				});
+				public constructor();
 				public drawBackground(param0: android.graphics.Canvas, param1: android.graphics.Paint, param2: number, param3: number, param4: number, param5: number, param6: number, param7: string, param8: number, param9: number, param10: number): void;
 			}
 		}
@@ -52549,23 +52861,25 @@ declare module android {
 			export class LineHeightSpan extends java.lang.Object implements android.text.style.ParagraphStyle, android.text.style.WrapTogetherSpan {
 				public static class: java.lang.Class<android.text.style.LineHeightSpan>;
 				/**
-				 * Constructs a new instance of the android.text.style.LineHeightSpan interface with the provided implementation.
+				 * Constructs a new instance of the android.text.style.LineHeightSpan interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					chooseHeight(param0: string, param1: number, param2: number, param3: number, param4: number, param5: android.graphics.Paint.FontMetricsInt): void;
 				});
+				public constructor();
 				public chooseHeight(param0: string, param1: number, param2: number, param3: number, param4: number, param5: android.graphics.Paint.FontMetricsInt): void;
 			}
 			export module LineHeightSpan {
 				export class WithDensity extends java.lang.Object implements android.text.style.LineHeightSpan {
 					public static class: java.lang.Class<android.text.style.LineHeightSpan.WithDensity>;
 					/**
-					 * Constructs a new instance of the android.text.style.LineHeightSpan$WithDensity interface with the provided implementation.
+					 * Constructs a new instance of the android.text.style.LineHeightSpan$WithDensity interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 					 */
 					public constructor(implementation: {
 						chooseHeight(param0: string, param1: number, param2: number, param3: number, param4: number, param5: android.graphics.Paint.FontMetricsInt, param6: android.text.TextPaint): void;
 						chooseHeight(param0: string, param1: number, param2: number, param3: number, param4: number, param5: android.graphics.Paint.FontMetricsInt): void;
 					});
+					public constructor();
 					public chooseHeight(param0: string, param1: number, param2: number, param3: number, param4: number, param5: android.graphics.Paint.FontMetricsInt): void;
 					public chooseHeight(param0: string, param1: number, param2: number, param3: number, param4: number, param5: android.graphics.Paint.FontMetricsInt, param6: android.text.TextPaint): void;
 				}
@@ -52629,10 +52943,11 @@ declare module android {
 			export class ParagraphStyle extends java.lang.Object {
 				public static class: java.lang.Class<android.text.style.ParagraphStyle>;
 				/**
-				 * Constructs a new instance of the android.text.style.ParagraphStyle interface with the provided implementation.
+				 * Constructs a new instance of the android.text.style.ParagraphStyle interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 				});
+				public constructor();
 			}
 		}
 	}
@@ -52834,11 +53149,12 @@ declare module android {
 			export class TabStopSpan extends java.lang.Object implements android.text.style.ParagraphStyle {
 				public static class: java.lang.Class<android.text.style.TabStopSpan>;
 				/**
-				 * Constructs a new instance of the android.text.style.TabStopSpan interface with the provided implementation.
+				 * Constructs a new instance of the android.text.style.TabStopSpan interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					getTabStop(): number;
 				});
+				public constructor();
 				public getTabStop(): number;
 			}
 			export module TabStopSpan {
@@ -53173,10 +53489,11 @@ declare module android {
 			export class UpdateAppearance extends java.lang.Object {
 				public static class: java.lang.Class<android.text.style.UpdateAppearance>;
 				/**
-				 * Constructs a new instance of the android.text.style.UpdateAppearance interface with the provided implementation.
+				 * Constructs a new instance of the android.text.style.UpdateAppearance interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 				});
+				public constructor();
 			}
 		}
 	}
@@ -53188,10 +53505,11 @@ declare module android {
 			export class UpdateLayout extends java.lang.Object implements android.text.style.UpdateAppearance {
 				public static class: java.lang.Class<android.text.style.UpdateLayout>;
 				/**
-				 * Constructs a new instance of the android.text.style.UpdateLayout interface with the provided implementation.
+				 * Constructs a new instance of the android.text.style.UpdateLayout interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 				});
+				public constructor();
 			}
 		}
 	}
@@ -53203,10 +53521,11 @@ declare module android {
 			export class WrapTogetherSpan extends java.lang.Object implements android.text.style.ParagraphStyle {
 				public static class: java.lang.Class<android.text.style.WrapTogetherSpan>;
 				/**
-				 * Constructs a new instance of the android.text.style.WrapTogetherSpan interface with the provided implementation.
+				 * Constructs a new instance of the android.text.style.WrapTogetherSpan interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 				});
+				public constructor();
 			}
 		}
 	}
@@ -53239,21 +53558,23 @@ declare module android {
 				export class MatchFilter extends java.lang.Object {
 					public static class: java.lang.Class<android.text.util.Linkify.MatchFilter>;
 					/**
-					 * Constructs a new instance of the android.text.util.Linkify$MatchFilter interface with the provided implementation.
+					 * Constructs a new instance of the android.text.util.Linkify$MatchFilter interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 					 */
 					public constructor(implementation: {
 						acceptMatch(param0: string, param1: number, param2: number): boolean;
 					});
+					public constructor();
 					public acceptMatch(param0: string, param1: number, param2: number): boolean;
 				}
 				export class TransformFilter extends java.lang.Object {
 					public static class: java.lang.Class<android.text.util.Linkify.TransformFilter>;
 					/**
-					 * Constructs a new instance of the android.text.util.Linkify$TransformFilter interface with the provided implementation.
+					 * Constructs a new instance of the android.text.util.Linkify$TransformFilter interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 					 */
 					public constructor(implementation: {
 						transformUrl(param0: java.util.regex.Matcher, param1: string): string;
 					});
+					public constructor();
 					public transformUrl(param0: java.util.regex.Matcher, param1: string): string;
 				}
 			}
@@ -53587,7 +53908,7 @@ declare module android {
 			export class TransitionListener extends java.lang.Object {
 				public static class: java.lang.Class<android.transition.Transition.TransitionListener>;
 				/**
-				 * Constructs a new instance of the android.transition.Transition$TransitionListener interface with the provided implementation.
+				 * Constructs a new instance of the android.transition.Transition$TransitionListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onTransitionStart(param0: android.transition.Transition): void;
@@ -53596,6 +53917,7 @@ declare module android {
 					onTransitionPause(param0: android.transition.Transition): void;
 					onTransitionResume(param0: android.transition.Transition): void;
 				});
+				public constructor();
 				public onTransitionStart(param0: android.transition.Transition): void;
 				public onTransitionEnd(param0: android.transition.Transition): void;
 				public onTransitionResume(param0: android.transition.Transition): void;
@@ -53890,7 +54212,7 @@ declare module android {
 		export class AttributeSet extends java.lang.Object {
 			public static class: java.lang.Class<android.util.AttributeSet>;
 			/**
-			 * Constructs a new instance of the android.util.AttributeSet interface with the provided implementation.
+			 * Constructs a new instance of the android.util.AttributeSet interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				getAttributeCount(): number;
@@ -53916,6 +54238,7 @@ declare module android {
 				getIdAttributeResourceValue(param0: number): number;
 				getStyleAttribute(): number;
 			});
+			public constructor();
 			public getAttributeFloatValue(param0: number, param1: number): number;
 			public getAttributeUnsignedIntValue(param0: string, param1: string, param2: number): number;
 			public getAttributeBooleanValue(param0: string, param1: string, param2: boolean): boolean;
@@ -54517,11 +54840,12 @@ declare module android {
 		export class Printer extends java.lang.Object {
 			public static class: java.lang.Class<android.util.Printer>;
 			/**
-			 * Constructs a new instance of the android.util.Printer interface with the provided implementation.
+			 * Constructs a new instance of the android.util.Printer interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				println(param0: string): void;
 			});
+			public constructor();
 			public println(param0: string): void;
 		}
 	}
@@ -54934,7 +55258,7 @@ declare module android {
 			export class Callback extends java.lang.Object {
 				public static class: java.lang.Class<android.view.ActionMode.Callback>;
 				/**
-				 * Constructs a new instance of the android.view.ActionMode$Callback interface with the provided implementation.
+				 * Constructs a new instance of the android.view.ActionMode$Callback interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onCreateActionMode(param0: android.view.ActionMode, param1: android.view.Menu): boolean;
@@ -54942,6 +55266,7 @@ declare module android {
 					onActionItemClicked(param0: android.view.ActionMode, param1: android.view.MenuItem): boolean;
 					onDestroyActionMode(param0: android.view.ActionMode): void;
 				});
+				public constructor();
 				public onPrepareActionMode(param0: android.view.ActionMode, param1: android.view.Menu): boolean;
 				public onActionItemClicked(param0: android.view.ActionMode, param1: android.view.MenuItem): boolean;
 				public onCreateActionMode(param0: android.view.ActionMode, param1: android.view.Menu): boolean;
@@ -54979,11 +55304,12 @@ declare module android {
 			export class VisibilityListener extends java.lang.Object {
 				public static class: java.lang.Class<android.view.ActionProvider.VisibilityListener>;
 				/**
-				 * Constructs a new instance of the android.view.ActionProvider$VisibilityListener interface with the provided implementation.
+				 * Constructs a new instance of the android.view.ActionProvider$VisibilityListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onActionProviderVisibilityChanged(param0: boolean): void;
 				});
+				public constructor();
 				public onActionProviderVisibilityChanged(param0: boolean): void;
 			}
 		}
@@ -55003,11 +55329,12 @@ declare module android {
 			export class FrameCallback extends java.lang.Object {
 				public static class: java.lang.Class<android.view.Choreographer.FrameCallback>;
 				/**
-				 * Constructs a new instance of the android.view.Choreographer$FrameCallback interface with the provided implementation.
+				 * Constructs a new instance of the android.view.Choreographer$FrameCallback interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					doFrame(param0: number): void;
 				});
+				public constructor();
 				public doFrame(param0: number): void;
 			}
 		}
@@ -55019,12 +55346,13 @@ declare module android {
 		export class CollapsibleActionView extends java.lang.Object {
 			public static class: java.lang.Class<android.view.CollapsibleActionView>;
 			/**
-			 * Constructs a new instance of the android.view.CollapsibleActionView interface with the provided implementation.
+			 * Constructs a new instance of the android.view.CollapsibleActionView interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				onActionViewExpanded(): void;
 				onActionViewCollapsed(): void;
 			});
+			public constructor();
 			public onActionViewCollapsed(): void;
 			public onActionViewExpanded(): void;
 		}
@@ -55036,7 +55364,7 @@ declare module android {
 		export class ContextMenu extends java.lang.Object implements android.view.Menu {
 			public static class: java.lang.Class<android.view.ContextMenu>;
 			/**
-			 * Constructs a new instance of the android.view.ContextMenu interface with the provided implementation.
+			 * Constructs a new instance of the android.view.ContextMenu interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				setHeaderTitle(param0: number): android.view.ContextMenu;
@@ -55070,6 +55398,7 @@ declare module android {
 				performIdentifierAction(param0: number, param1: number): boolean;
 				setQwertyMode(param0: boolean): void;
 			});
+			public constructor();
 			public static CATEGORY_SECONDARY: number;
 			public static FLAG_APPEND_TO_GROUP: number;
 			public static FIRST: number;
@@ -55114,10 +55443,11 @@ declare module android {
 			export class ContextMenuInfo extends java.lang.Object {
 				public static class: java.lang.Class<android.view.ContextMenu.ContextMenuInfo>;
 				/**
-				 * Constructs a new instance of the android.view.ContextMenu$ContextMenuInfo interface with the provided implementation.
+				 * Constructs a new instance of the android.view.ContextMenu$ContextMenuInfo interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 				});
+				public constructor();
 			}
 		}
 	}
@@ -55323,23 +55653,25 @@ declare module android {
 			export class OnContextClickListener extends java.lang.Object {
 				public static class: java.lang.Class<android.view.GestureDetector.OnContextClickListener>;
 				/**
-				 * Constructs a new instance of the android.view.GestureDetector$OnContextClickListener interface with the provided implementation.
+				 * Constructs a new instance of the android.view.GestureDetector$OnContextClickListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onContextClick(param0: android.view.MotionEvent): boolean;
 				});
+				public constructor();
 				public onContextClick(param0: android.view.MotionEvent): boolean;
 			}
 			export class OnDoubleTapListener extends java.lang.Object {
 				public static class: java.lang.Class<android.view.GestureDetector.OnDoubleTapListener>;
 				/**
-				 * Constructs a new instance of the android.view.GestureDetector$OnDoubleTapListener interface with the provided implementation.
+				 * Constructs a new instance of the android.view.GestureDetector$OnDoubleTapListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onSingleTapConfirmed(param0: android.view.MotionEvent): boolean;
 					onDoubleTap(param0: android.view.MotionEvent): boolean;
 					onDoubleTapEvent(param0: android.view.MotionEvent): boolean;
 				});
+				public constructor();
 				public onSingleTapConfirmed(param0: android.view.MotionEvent): boolean;
 				public onDoubleTap(param0: android.view.MotionEvent): boolean;
 				public onDoubleTapEvent(param0: android.view.MotionEvent): boolean;
@@ -55347,7 +55679,7 @@ declare module android {
 			export class OnGestureListener extends java.lang.Object {
 				public static class: java.lang.Class<android.view.GestureDetector.OnGestureListener>;
 				/**
-				 * Constructs a new instance of the android.view.GestureDetector$OnGestureListener interface with the provided implementation.
+				 * Constructs a new instance of the android.view.GestureDetector$OnGestureListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onDown(param0: android.view.MotionEvent): boolean;
@@ -55357,6 +55689,7 @@ declare module android {
 					onLongPress(param0: android.view.MotionEvent): void;
 					onFling(param0: android.view.MotionEvent, param1: android.view.MotionEvent, param2: number, param3: number): boolean;
 				});
+				public constructor();
 				public onFling(param0: android.view.MotionEvent, param1: android.view.MotionEvent, param2: number, param3: number): boolean;
 				public onShowPress(param0: android.view.MotionEvent): void;
 				public onScroll(param0: android.view.MotionEvent, param1: android.view.MotionEvent, param2: number, param3: number): boolean;
@@ -55559,12 +55892,13 @@ declare module android {
 			export class Callback extends java.lang.Object {
 				public static class: java.lang.Class<android.view.InputQueue.Callback>;
 				/**
-				 * Constructs a new instance of the android.view.InputQueue$Callback interface with the provided implementation.
+				 * Constructs a new instance of the android.view.InputQueue$Callback interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onInputQueueCreated(param0: android.view.InputQueue): void;
 					onInputQueueDestroyed(param0: android.view.InputQueue): void;
 				});
+				public constructor();
 				public onInputQueueCreated(param0: android.view.InputQueue): void;
 				public onInputQueueDestroyed(param0: android.view.InputQueue): void;
 			}
@@ -56026,7 +56360,7 @@ declare module android {
 			export class Callback extends java.lang.Object {
 				public static class: java.lang.Class<android.view.KeyEvent.Callback>;
 				/**
-				 * Constructs a new instance of the android.view.KeyEvent$Callback interface with the provided implementation.
+				 * Constructs a new instance of the android.view.KeyEvent$Callback interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onKeyDown(param0: number, param1: android.view.KeyEvent): boolean;
@@ -56034,6 +56368,7 @@ declare module android {
 					onKeyUp(param0: number, param1: android.view.KeyEvent): boolean;
 					onKeyMultiple(param0: number, param1: number, param2: android.view.KeyEvent): boolean;
 				});
+				public constructor();
 				public onKeyUp(param0: number, param1: android.view.KeyEvent): boolean;
 				public onKeyDown(param0: number, param1: android.view.KeyEvent): boolean;
 				public onKeyLongPress(param0: number, param1: android.view.KeyEvent): boolean;
@@ -56113,33 +56448,36 @@ declare module android {
 			export class Factory extends java.lang.Object {
 				public static class: java.lang.Class<android.view.LayoutInflater.Factory>;
 				/**
-				 * Constructs a new instance of the android.view.LayoutInflater$Factory interface with the provided implementation.
+				 * Constructs a new instance of the android.view.LayoutInflater$Factory interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onCreateView(param0: string, param1: android.content.Context, param2: android.util.AttributeSet): android.view.View;
 				});
+				public constructor();
 				public onCreateView(param0: string, param1: android.content.Context, param2: android.util.AttributeSet): android.view.View;
 			}
 			export class Factory2 extends java.lang.Object implements android.view.LayoutInflater.Factory {
 				public static class: java.lang.Class<android.view.LayoutInflater.Factory2>;
 				/**
-				 * Constructs a new instance of the android.view.LayoutInflater$Factory2 interface with the provided implementation.
+				 * Constructs a new instance of the android.view.LayoutInflater$Factory2 interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onCreateView(param0: android.view.View, param1: string, param2: android.content.Context, param3: android.util.AttributeSet): android.view.View;
 					onCreateView(param0: string, param1: android.content.Context, param2: android.util.AttributeSet): android.view.View;
 				});
+				public constructor();
 				public onCreateView(param0: android.view.View, param1: string, param2: android.content.Context, param3: android.util.AttributeSet): android.view.View;
 				public onCreateView(param0: string, param1: android.content.Context, param2: android.util.AttributeSet): android.view.View;
 			}
 			export class Filter extends java.lang.Object {
 				public static class: java.lang.Class<android.view.LayoutInflater.Filter>;
 				/**
-				 * Constructs a new instance of the android.view.LayoutInflater$Filter interface with the provided implementation.
+				 * Constructs a new instance of the android.view.LayoutInflater$Filter interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onLoadClass(param0: java.lang.Class<any>): boolean;
 				});
+				public constructor();
 				public onLoadClass(param0: java.lang.Class<any>): boolean;
 			}
 		}
@@ -56151,7 +56489,7 @@ declare module android {
 		export class Menu extends java.lang.Object {
 			public static class: java.lang.Class<android.view.Menu>;
 			/**
-			 * Constructs a new instance of the android.view.Menu interface with the provided implementation.
+			 * Constructs a new instance of the android.view.Menu interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				add(param0: string): android.view.MenuItem;
@@ -56179,6 +56517,7 @@ declare module android {
 				performIdentifierAction(param0: number, param1: number): boolean;
 				setQwertyMode(param0: boolean): void;
 			});
+			public constructor();
 			public static CATEGORY_SECONDARY: number;
 			public static FLAG_APPEND_TO_GROUP: number;
 			public static FIRST: number;
@@ -56231,7 +56570,7 @@ declare module android {
 		export class MenuItem extends java.lang.Object {
 			public static class: java.lang.Class<android.view.MenuItem>;
 			/**
-			 * Constructs a new instance of the android.view.MenuItem interface with the provided implementation.
+			 * Constructs a new instance of the android.view.MenuItem interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				getItemId(): number;
@@ -56276,6 +56615,7 @@ declare module android {
 				isActionViewExpanded(): boolean;
 				setOnActionExpandListener(param0: android.view.MenuItem.OnActionExpandListener): android.view.MenuItem;
 			});
+			public constructor();
 			public static SHOW_AS_ACTION_WITH_TEXT: number;
 			public static SHOW_AS_ACTION_ALWAYS: number;
 			public static SHOW_AS_ACTION_COLLAPSE_ACTION_VIEW: number;
@@ -56327,23 +56667,25 @@ declare module android {
 			export class OnActionExpandListener extends java.lang.Object {
 				public static class: java.lang.Class<android.view.MenuItem.OnActionExpandListener>;
 				/**
-				 * Constructs a new instance of the android.view.MenuItem$OnActionExpandListener interface with the provided implementation.
+				 * Constructs a new instance of the android.view.MenuItem$OnActionExpandListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onMenuItemActionExpand(param0: android.view.MenuItem): boolean;
 					onMenuItemActionCollapse(param0: android.view.MenuItem): boolean;
 				});
+				public constructor();
 				public onMenuItemActionExpand(param0: android.view.MenuItem): boolean;
 				public onMenuItemActionCollapse(param0: android.view.MenuItem): boolean;
 			}
 			export class OnMenuItemClickListener extends java.lang.Object {
 				public static class: java.lang.Class<android.view.MenuItem.OnMenuItemClickListener>;
 				/**
-				 * Constructs a new instance of the android.view.MenuItem$OnMenuItemClickListener interface with the provided implementation.
+				 * Constructs a new instance of the android.view.MenuItem$OnMenuItemClickListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onMenuItemClick(param0: android.view.MenuItem): boolean;
 				});
+				public constructor();
 				public onMenuItemClick(param0: android.view.MenuItem): boolean;
 			}
 		}
@@ -56613,11 +56955,12 @@ declare module android {
 			export class OnPixelCopyFinishedListener extends java.lang.Object {
 				public static class: java.lang.Class<android.view.PixelCopy.OnPixelCopyFinishedListener>;
 				/**
-				 * Constructs a new instance of the android.view.PixelCopy$OnPixelCopyFinishedListener interface with the provided implementation.
+				 * Constructs a new instance of the android.view.PixelCopy$OnPixelCopyFinishedListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onPixelCopyFinished(param0: number): void;
 				});
+				public constructor();
 				public onPixelCopyFinished(param0: number): void;
 			}
 		}
@@ -56690,13 +57033,14 @@ declare module android {
 			export class OnScaleGestureListener extends java.lang.Object {
 				public static class: java.lang.Class<android.view.ScaleGestureDetector.OnScaleGestureListener>;
 				/**
-				 * Constructs a new instance of the android.view.ScaleGestureDetector$OnScaleGestureListener interface with the provided implementation.
+				 * Constructs a new instance of the android.view.ScaleGestureDetector$OnScaleGestureListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onScale(param0: android.view.ScaleGestureDetector): boolean;
 					onScaleBegin(param0: android.view.ScaleGestureDetector): boolean;
 					onScaleEnd(param0: android.view.ScaleGestureDetector): void;
 				});
+				public constructor();
 				public onScale(param0: android.view.ScaleGestureDetector): boolean;
 				public onScaleEnd(param0: android.view.ScaleGestureDetector): void;
 				public onScaleBegin(param0: android.view.ScaleGestureDetector): boolean;
@@ -56741,7 +57085,7 @@ declare module android {
 		export class SubMenu extends java.lang.Object implements android.view.Menu {
 			public static class: java.lang.Class<android.view.SubMenu>;
 			/**
-			 * Constructs a new instance of the android.view.SubMenu interface with the provided implementation.
+			 * Constructs a new instance of the android.view.SubMenu interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				setHeaderTitle(param0: number): android.view.SubMenu;
@@ -56778,6 +57122,7 @@ declare module android {
 				performIdentifierAction(param0: number, param1: number): boolean;
 				setQwertyMode(param0: boolean): void;
 			});
+			public constructor();
 			public static CATEGORY_SECONDARY: number;
 			public static FLAG_APPEND_TO_GROUP: number;
 			public static FIRST: number;
@@ -56864,7 +57209,7 @@ declare module android {
 		export class SurfaceHolder extends java.lang.Object {
 			public static class: java.lang.Class<android.view.SurfaceHolder>;
 			/**
-			 * Constructs a new instance of the android.view.SurfaceHolder interface with the provided implementation.
+			 * Constructs a new instance of the android.view.SurfaceHolder interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				addCallback(param0: android.view.SurfaceHolder.Callback): void;
@@ -56881,6 +57226,7 @@ declare module android {
 				getSurfaceFrame(): android.graphics.Rect;
 				getSurface(): android.view.Surface;
 			});
+			public constructor();
 			public static SURFACE_TYPE_GPU: number;
 			public static SURFACE_TYPE_HARDWARE: number;
 			public static SURFACE_TYPE_PUSH_BUFFERS: number;
@@ -56911,13 +57257,14 @@ declare module android {
 			export class Callback extends java.lang.Object {
 				public static class: java.lang.Class<android.view.SurfaceHolder.Callback>;
 				/**
-				 * Constructs a new instance of the android.view.SurfaceHolder$Callback interface with the provided implementation.
+				 * Constructs a new instance of the android.view.SurfaceHolder$Callback interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					surfaceCreated(param0: android.view.SurfaceHolder): void;
 					surfaceChanged(param0: android.view.SurfaceHolder, param1: number, param2: number, param3: number): void;
 					surfaceDestroyed(param0: android.view.SurfaceHolder): void;
 				});
+				public constructor();
 				public surfaceCreated(param0: android.view.SurfaceHolder): void;
 				public surfaceChanged(param0: android.view.SurfaceHolder, param1: number, param2: number, param3: number): void;
 				public surfaceDestroyed(param0: android.view.SurfaceHolder): void;
@@ -56925,7 +57272,7 @@ declare module android {
 			export class Callback2 extends java.lang.Object implements android.view.SurfaceHolder.Callback {
 				public static class: java.lang.Class<android.view.SurfaceHolder.Callback2>;
 				/**
-				 * Constructs a new instance of the android.view.SurfaceHolder$Callback2 interface with the provided implementation.
+				 * Constructs a new instance of the android.view.SurfaceHolder$Callback2 interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					surfaceRedrawNeeded(param0: android.view.SurfaceHolder): void;
@@ -56933,6 +57280,7 @@ declare module android {
 					surfaceChanged(param0: android.view.SurfaceHolder, param1: number, param2: number, param3: number): void;
 					surfaceDestroyed(param0: android.view.SurfaceHolder): void;
 				});
+				public constructor();
 				public surfaceRedrawNeeded(param0: android.view.SurfaceHolder): void;
 				public surfaceCreated(param0: android.view.SurfaceHolder): void;
 				public surfaceChanged(param0: android.view.SurfaceHolder, param1: number, param2: number, param3: number): void;
@@ -57025,7 +57373,7 @@ declare module android {
 			export class SurfaceTextureListener extends java.lang.Object {
 				public static class: java.lang.Class<android.view.TextureView.SurfaceTextureListener>;
 				/**
-				 * Constructs a new instance of the android.view.TextureView$SurfaceTextureListener interface with the provided implementation.
+				 * Constructs a new instance of the android.view.TextureView$SurfaceTextureListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onSurfaceTextureAvailable(param0: android.graphics.SurfaceTexture, param1: number, param2: number): void;
@@ -57033,6 +57381,7 @@ declare module android {
 					onSurfaceTextureDestroyed(param0: android.graphics.SurfaceTexture): boolean;
 					onSurfaceTextureUpdated(param0: android.graphics.SurfaceTexture): void;
 				});
+				public constructor();
 				public onSurfaceTextureUpdated(param0: android.graphics.SurfaceTexture): void;
 				public onSurfaceTextureAvailable(param0: android.graphics.SurfaceTexture, param1: number, param2: number): void;
 				public onSurfaceTextureSizeChanged(param0: android.graphics.SurfaceTexture, param1: number, param2: number): void;
@@ -57792,153 +58141,168 @@ declare module android {
 			export class OnApplyWindowInsetsListener extends java.lang.Object {
 				public static class: java.lang.Class<android.view.View.OnApplyWindowInsetsListener>;
 				/**
-				 * Constructs a new instance of the android.view.View$OnApplyWindowInsetsListener interface with the provided implementation.
+				 * Constructs a new instance of the android.view.View$OnApplyWindowInsetsListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onApplyWindowInsets(param0: android.view.View, param1: android.view.WindowInsets): android.view.WindowInsets;
 				});
+				public constructor();
 				public onApplyWindowInsets(param0: android.view.View, param1: android.view.WindowInsets): android.view.WindowInsets;
 			}
 			export class OnAttachStateChangeListener extends java.lang.Object {
 				public static class: java.lang.Class<android.view.View.OnAttachStateChangeListener>;
 				/**
-				 * Constructs a new instance of the android.view.View$OnAttachStateChangeListener interface with the provided implementation.
+				 * Constructs a new instance of the android.view.View$OnAttachStateChangeListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onViewAttachedToWindow(param0: android.view.View): void;
 					onViewDetachedFromWindow(param0: android.view.View): void;
 				});
+				public constructor();
 				public onViewDetachedFromWindow(param0: android.view.View): void;
 				public onViewAttachedToWindow(param0: android.view.View): void;
 			}
 			export class OnClickListener extends java.lang.Object {
 				public static class: java.lang.Class<android.view.View.OnClickListener>;
 				/**
-				 * Constructs a new instance of the android.view.View$OnClickListener interface with the provided implementation.
+				 * Constructs a new instance of the android.view.View$OnClickListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onClick(param0: android.view.View): void;
 				});
+				public constructor();
 				public onClick(param0: android.view.View): void;
 			}
 			export class OnContextClickListener extends java.lang.Object {
 				public static class: java.lang.Class<android.view.View.OnContextClickListener>;
 				/**
-				 * Constructs a new instance of the android.view.View$OnContextClickListener interface with the provided implementation.
+				 * Constructs a new instance of the android.view.View$OnContextClickListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onContextClick(param0: android.view.View): boolean;
 				});
+				public constructor();
 				public onContextClick(param0: android.view.View): boolean;
 			}
 			export class OnCreateContextMenuListener extends java.lang.Object {
 				public static class: java.lang.Class<android.view.View.OnCreateContextMenuListener>;
 				/**
-				 * Constructs a new instance of the android.view.View$OnCreateContextMenuListener interface with the provided implementation.
+				 * Constructs a new instance of the android.view.View$OnCreateContextMenuListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onCreateContextMenu(param0: android.view.ContextMenu, param1: android.view.View, param2: android.view.ContextMenu.ContextMenuInfo): void;
 				});
+				public constructor();
 				public onCreateContextMenu(param0: android.view.ContextMenu, param1: android.view.View, param2: android.view.ContextMenu.ContextMenuInfo): void;
 			}
 			export class OnDragListener extends java.lang.Object {
 				public static class: java.lang.Class<android.view.View.OnDragListener>;
 				/**
-				 * Constructs a new instance of the android.view.View$OnDragListener interface with the provided implementation.
+				 * Constructs a new instance of the android.view.View$OnDragListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onDrag(param0: android.view.View, param1: android.view.DragEvent): boolean;
 				});
+				public constructor();
 				public onDrag(param0: android.view.View, param1: android.view.DragEvent): boolean;
 			}
 			export class OnFocusChangeListener extends java.lang.Object {
 				public static class: java.lang.Class<android.view.View.OnFocusChangeListener>;
 				/**
-				 * Constructs a new instance of the android.view.View$OnFocusChangeListener interface with the provided implementation.
+				 * Constructs a new instance of the android.view.View$OnFocusChangeListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onFocusChange(param0: android.view.View, param1: boolean): void;
 				});
+				public constructor();
 				public onFocusChange(param0: android.view.View, param1: boolean): void;
 			}
 			export class OnGenericMotionListener extends java.lang.Object {
 				public static class: java.lang.Class<android.view.View.OnGenericMotionListener>;
 				/**
-				 * Constructs a new instance of the android.view.View$OnGenericMotionListener interface with the provided implementation.
+				 * Constructs a new instance of the android.view.View$OnGenericMotionListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onGenericMotion(param0: android.view.View, param1: android.view.MotionEvent): boolean;
 				});
+				public constructor();
 				public onGenericMotion(param0: android.view.View, param1: android.view.MotionEvent): boolean;
 			}
 			export class OnHoverListener extends java.lang.Object {
 				public static class: java.lang.Class<android.view.View.OnHoverListener>;
 				/**
-				 * Constructs a new instance of the android.view.View$OnHoverListener interface with the provided implementation.
+				 * Constructs a new instance of the android.view.View$OnHoverListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onHover(param0: android.view.View, param1: android.view.MotionEvent): boolean;
 				});
+				public constructor();
 				public onHover(param0: android.view.View, param1: android.view.MotionEvent): boolean;
 			}
 			export class OnKeyListener extends java.lang.Object {
 				public static class: java.lang.Class<android.view.View.OnKeyListener>;
 				/**
-				 * Constructs a new instance of the android.view.View$OnKeyListener interface with the provided implementation.
+				 * Constructs a new instance of the android.view.View$OnKeyListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onKey(param0: android.view.View, param1: number, param2: android.view.KeyEvent): boolean;
 				});
+				public constructor();
 				public onKey(param0: android.view.View, param1: number, param2: android.view.KeyEvent): boolean;
 			}
 			export class OnLayoutChangeListener extends java.lang.Object {
 				public static class: java.lang.Class<android.view.View.OnLayoutChangeListener>;
 				/**
-				 * Constructs a new instance of the android.view.View$OnLayoutChangeListener interface with the provided implementation.
+				 * Constructs a new instance of the android.view.View$OnLayoutChangeListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onLayoutChange(param0: android.view.View, param1: number, param2: number, param3: number, param4: number, param5: number, param6: number, param7: number, param8: number): void;
 				});
+				public constructor();
 				public onLayoutChange(param0: android.view.View, param1: number, param2: number, param3: number, param4: number, param5: number, param6: number, param7: number, param8: number): void;
 			}
 			export class OnLongClickListener extends java.lang.Object {
 				public static class: java.lang.Class<android.view.View.OnLongClickListener>;
 				/**
-				 * Constructs a new instance of the android.view.View$OnLongClickListener interface with the provided implementation.
+				 * Constructs a new instance of the android.view.View$OnLongClickListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onLongClick(param0: android.view.View): boolean;
 				});
+				public constructor();
 				public onLongClick(param0: android.view.View): boolean;
 			}
 			export class OnScrollChangeListener extends java.lang.Object {
 				public static class: java.lang.Class<android.view.View.OnScrollChangeListener>;
 				/**
-				 * Constructs a new instance of the android.view.View$OnScrollChangeListener interface with the provided implementation.
+				 * Constructs a new instance of the android.view.View$OnScrollChangeListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onScrollChange(param0: android.view.View, param1: number, param2: number, param3: number, param4: number): void;
 				});
+				public constructor();
 				public onScrollChange(param0: android.view.View, param1: number, param2: number, param3: number, param4: number): void;
 			}
 			export class OnSystemUiVisibilityChangeListener extends java.lang.Object {
 				public static class: java.lang.Class<android.view.View.OnSystemUiVisibilityChangeListener>;
 				/**
-				 * Constructs a new instance of the android.view.View$OnSystemUiVisibilityChangeListener interface with the provided implementation.
+				 * Constructs a new instance of the android.view.View$OnSystemUiVisibilityChangeListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onSystemUiVisibilityChange(param0: number): void;
 				});
+				public constructor();
 				public onSystemUiVisibilityChange(param0: number): void;
 			}
 			export class OnTouchListener extends java.lang.Object {
 				public static class: java.lang.Class<android.view.View.OnTouchListener>;
 				/**
-				 * Constructs a new instance of the android.view.View$OnTouchListener interface with the provided implementation.
+				 * Constructs a new instance of the android.view.View$OnTouchListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onTouch(param0: android.view.View, param1: android.view.MotionEvent): boolean;
 				});
+				public constructor();
 				public onTouch(param0: android.view.View, param1: android.view.MotionEvent): boolean;
 			}
 		}
@@ -58017,7 +58381,7 @@ declare module android {
 			export class CapturedViewProperty extends java.lang.Object implements java.lang.annotation.Annotation {
 				public static class: java.lang.Class<android.view.ViewDebug.CapturedViewProperty>;
 				/**
-				 * Constructs a new instance of the android.view.ViewDebug$CapturedViewProperty interface with the provided implementation.
+				 * Constructs a new instance of the android.view.ViewDebug$CapturedViewProperty interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					retrieveReturn(): boolean;
@@ -58026,6 +58390,7 @@ declare module android {
 					toString(): string;
 					annotationType(): java.lang.Class<any>;
 				});
+				public constructor();
 				public hashCode(): number;
 				public equals(param0: any): boolean;
 				public annotationType(): java.lang.Class<any>;
@@ -58035,7 +58400,7 @@ declare module android {
 			export class ExportedProperty extends java.lang.Object implements java.lang.annotation.Annotation {
 				public static class: java.lang.Class<android.view.ViewDebug.ExportedProperty>;
 				/**
-				 * Constructs a new instance of the android.view.ViewDebug$ExportedProperty interface with the provided implementation.
+				 * Constructs a new instance of the android.view.ViewDebug$ExportedProperty interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					resolveId(): boolean;
@@ -58052,6 +58417,7 @@ declare module android {
 					toString(): string;
 					annotationType(): java.lang.Class<any>;
 				});
+				public constructor();
 				public hasAdjacentMapping(): boolean;
 				public resolveId(): boolean;
 				public indexMapping(): native.Array<android.view.ViewDebug.IntToString>;
@@ -58069,7 +58435,7 @@ declare module android {
 			export class FlagToString extends java.lang.Object implements java.lang.annotation.Annotation {
 				public static class: java.lang.Class<android.view.ViewDebug.FlagToString>;
 				/**
-				 * Constructs a new instance of the android.view.ViewDebug$FlagToString interface with the provided implementation.
+				 * Constructs a new instance of the android.view.ViewDebug$FlagToString interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					mask(): number;
@@ -58081,6 +58447,7 @@ declare module android {
 					toString(): string;
 					annotationType(): java.lang.Class<any>;
 				});
+				public constructor();
 				public outputIf(): boolean;
 				public name(): string;
 				public equals(): number;
@@ -58107,7 +58474,7 @@ declare module android {
 			export class IntToString extends java.lang.Object implements java.lang.annotation.Annotation {
 				public static class: java.lang.Class<android.view.ViewDebug.IntToString>;
 				/**
-				 * Constructs a new instance of the android.view.ViewDebug$IntToString interface with the provided implementation.
+				 * Constructs a new instance of the android.view.ViewDebug$IntToString interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					from(): number;
@@ -58117,6 +58484,7 @@ declare module android {
 					toString(): string;
 					annotationType(): java.lang.Class<any>;
 				});
+				public constructor();
 				public hashCode(): number;
 				public equals(param0: any): boolean;
 				public to(): string;
@@ -58394,12 +58762,13 @@ declare module android {
 			export class OnHierarchyChangeListener extends java.lang.Object {
 				public static class: java.lang.Class<android.view.ViewGroup.OnHierarchyChangeListener>;
 				/**
-				 * Constructs a new instance of the android.view.ViewGroup$OnHierarchyChangeListener interface with the provided implementation.
+				 * Constructs a new instance of the android.view.ViewGroup$OnHierarchyChangeListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onChildViewAdded(param0: android.view.View, param1: android.view.View): void;
 					onChildViewRemoved(param0: android.view.View, param1: android.view.View): void;
 				});
+				public constructor();
 				public onChildViewRemoved(param0: android.view.View, param1: android.view.View): void;
 				public onChildViewAdded(param0: android.view.View, param1: android.view.View): void;
 			}
@@ -58424,13 +58793,14 @@ declare module android {
 		export class ViewManager extends java.lang.Object {
 			public static class: java.lang.Class<android.view.ViewManager>;
 			/**
-			 * Constructs a new instance of the android.view.ViewManager interface with the provided implementation.
+			 * Constructs a new instance of the android.view.ViewManager interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				addView(param0: android.view.View, param1: android.view.ViewGroup.LayoutParams): void;
 				updateViewLayout(param0: android.view.View, param1: android.view.ViewGroup.LayoutParams): void;
 				removeView(param0: android.view.View): void;
 			});
+			public constructor();
 			public removeView(param0: android.view.View): void;
 			public updateViewLayout(param0: android.view.View, param1: android.view.ViewGroup.LayoutParams): void;
 			public addView(param0: android.view.View, param1: android.view.ViewGroup.LayoutParams): void;
@@ -58467,7 +58837,7 @@ declare module android {
 		export class ViewParent extends java.lang.Object {
 			public static class: java.lang.Class<android.view.ViewParent>;
 			/**
-			 * Constructs a new instance of the android.view.ViewParent interface with the provided implementation.
+			 * Constructs a new instance of the android.view.ViewParent interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				requestLayout(): void;
@@ -58514,6 +58884,7 @@ declare module android {
 				onNestedPreFling(param0: android.view.View, param1: number, param2: number): boolean;
 				onNestedPrePerformAccessibilityAction(param0: android.view.View, param1: number, param2: android.os.Bundle): boolean;
 			});
+			public constructor();
 			public recomputeViewAttributes(param0: android.view.View): void;
 			public isLayoutRequested(): boolean;
 			public isLayoutDirectionResolved(): boolean;
@@ -58688,11 +59059,12 @@ declare module android {
 			export class OnInflateListener extends java.lang.Object {
 				public static class: java.lang.Class<android.view.ViewStub.OnInflateListener>;
 				/**
-				 * Constructs a new instance of the android.view.ViewStub$OnInflateListener interface with the provided implementation.
+				 * Constructs a new instance of the android.view.ViewStub$OnInflateListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onInflate(param0: android.view.ViewStub, param1: android.view.View): void;
 				});
+				public constructor();
 				public onInflate(param0: android.view.ViewStub, param1: android.view.View): void;
 			}
 		}
@@ -58729,83 +59101,91 @@ declare module android {
 			export class OnDrawListener extends java.lang.Object {
 				public static class: java.lang.Class<android.view.ViewTreeObserver.OnDrawListener>;
 				/**
-				 * Constructs a new instance of the android.view.ViewTreeObserver$OnDrawListener interface with the provided implementation.
+				 * Constructs a new instance of the android.view.ViewTreeObserver$OnDrawListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onDraw(): void;
 				});
+				public constructor();
 				public onDraw(): void;
 			}
 			export class OnGlobalFocusChangeListener extends java.lang.Object {
 				public static class: java.lang.Class<android.view.ViewTreeObserver.OnGlobalFocusChangeListener>;
 				/**
-				 * Constructs a new instance of the android.view.ViewTreeObserver$OnGlobalFocusChangeListener interface with the provided implementation.
+				 * Constructs a new instance of the android.view.ViewTreeObserver$OnGlobalFocusChangeListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onGlobalFocusChanged(param0: android.view.View, param1: android.view.View): void;
 				});
+				public constructor();
 				public onGlobalFocusChanged(param0: android.view.View, param1: android.view.View): void;
 			}
 			export class OnGlobalLayoutListener extends java.lang.Object {
 				public static class: java.lang.Class<android.view.ViewTreeObserver.OnGlobalLayoutListener>;
 				/**
-				 * Constructs a new instance of the android.view.ViewTreeObserver$OnGlobalLayoutListener interface with the provided implementation.
+				 * Constructs a new instance of the android.view.ViewTreeObserver$OnGlobalLayoutListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onGlobalLayout(): void;
 				});
+				public constructor();
 				public onGlobalLayout(): void;
 			}
 			export class OnPreDrawListener extends java.lang.Object {
 				public static class: java.lang.Class<android.view.ViewTreeObserver.OnPreDrawListener>;
 				/**
-				 * Constructs a new instance of the android.view.ViewTreeObserver$OnPreDrawListener interface with the provided implementation.
+				 * Constructs a new instance of the android.view.ViewTreeObserver$OnPreDrawListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onPreDraw(): boolean;
 				});
+				public constructor();
 				public onPreDraw(): boolean;
 			}
 			export class OnScrollChangedListener extends java.lang.Object {
 				public static class: java.lang.Class<android.view.ViewTreeObserver.OnScrollChangedListener>;
 				/**
-				 * Constructs a new instance of the android.view.ViewTreeObserver$OnScrollChangedListener interface with the provided implementation.
+				 * Constructs a new instance of the android.view.ViewTreeObserver$OnScrollChangedListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onScrollChanged(): void;
 				});
+				public constructor();
 				public onScrollChanged(): void;
 			}
 			export class OnTouchModeChangeListener extends java.lang.Object {
 				public static class: java.lang.Class<android.view.ViewTreeObserver.OnTouchModeChangeListener>;
 				/**
-				 * Constructs a new instance of the android.view.ViewTreeObserver$OnTouchModeChangeListener interface with the provided implementation.
+				 * Constructs a new instance of the android.view.ViewTreeObserver$OnTouchModeChangeListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onTouchModeChanged(param0: boolean): void;
 				});
+				public constructor();
 				public onTouchModeChanged(param0: boolean): void;
 			}
 			export class OnWindowAttachListener extends java.lang.Object {
 				public static class: java.lang.Class<android.view.ViewTreeObserver.OnWindowAttachListener>;
 				/**
-				 * Constructs a new instance of the android.view.ViewTreeObserver$OnWindowAttachListener interface with the provided implementation.
+				 * Constructs a new instance of the android.view.ViewTreeObserver$OnWindowAttachListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onWindowAttached(): void;
 					onWindowDetached(): void;
 				});
+				public constructor();
 				public onWindowAttached(): void;
 				public onWindowDetached(): void;
 			}
 			export class OnWindowFocusChangeListener extends java.lang.Object {
 				public static class: java.lang.Class<android.view.ViewTreeObserver.OnWindowFocusChangeListener>;
 				/**
-				 * Constructs a new instance of the android.view.ViewTreeObserver$OnWindowFocusChangeListener interface with the provided implementation.
+				 * Constructs a new instance of the android.view.ViewTreeObserver$OnWindowFocusChangeListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onWindowFocusChanged(param0: boolean): void;
 				});
+				public constructor();
 				public onWindowFocusChanged(param0: boolean): void;
 			}
 		}
@@ -58974,7 +59354,7 @@ declare module android {
 			export class Callback extends java.lang.Object {
 				public static class: java.lang.Class<android.view.Window.Callback>;
 				/**
-				 * Constructs a new instance of the android.view.Window$Callback interface with the provided implementation.
+				 * Constructs a new instance of the android.view.Window$Callback interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					dispatchKeyEvent(param0: android.view.KeyEvent): boolean;
@@ -59002,6 +59382,7 @@ declare module android {
 					onActionModeFinished(param0: android.view.ActionMode): void;
 					onProvideKeyboardShortcuts(param0: java.util.List<any>, param1: android.view.Menu, param2: number): void;
 				});
+				public constructor();
 				public dispatchGenericMotionEvent(param0: android.view.MotionEvent): boolean;
 				public onActionModeStarted(param0: android.view.ActionMode): void;
 				public onMenuOpened(param0: number, param1: android.view.Menu): boolean;
@@ -59030,21 +59411,23 @@ declare module android {
 			export class OnFrameMetricsAvailableListener extends java.lang.Object {
 				public static class: java.lang.Class<android.view.Window.OnFrameMetricsAvailableListener>;
 				/**
-				 * Constructs a new instance of the android.view.Window$OnFrameMetricsAvailableListener interface with the provided implementation.
+				 * Constructs a new instance of the android.view.Window$OnFrameMetricsAvailableListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onFrameMetricsAvailable(param0: android.view.Window, param1: android.view.FrameMetrics, param2: number): void;
 				});
+				public constructor();
 				public onFrameMetricsAvailable(param0: android.view.Window, param1: android.view.FrameMetrics, param2: number): void;
 			}
 			export class OnRestrictedCaptionAreaChangedListener extends java.lang.Object {
 				public static class: java.lang.Class<android.view.Window.OnRestrictedCaptionAreaChangedListener>;
 				/**
-				 * Constructs a new instance of the android.view.Window$OnRestrictedCaptionAreaChangedListener interface with the provided implementation.
+				 * Constructs a new instance of the android.view.Window$OnRestrictedCaptionAreaChangedListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onRestrictedCaptionAreaChanged(param0: android.graphics.Rect): void;
 				});
+				public constructor();
 				public onRestrictedCaptionAreaChanged(param0: android.graphics.Rect): void;
 			}
 		}
@@ -59134,7 +59517,7 @@ declare module android {
 		export class WindowManager extends java.lang.Object implements android.view.ViewManager {
 			public static class: java.lang.Class<android.view.WindowManager>;
 			/**
-			 * Constructs a new instance of the android.view.WindowManager interface with the provided implementation.
+			 * Constructs a new instance of the android.view.WindowManager interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				getDefaultDisplay(): android.view.Display;
@@ -59143,6 +59526,7 @@ declare module android {
 				updateViewLayout(param0: android.view.View, param1: android.view.ViewGroup.LayoutParams): void;
 				removeView(param0: android.view.View): void;
 			});
+			public constructor();
 			public removeView(param0: android.view.View): void;
 			public getDefaultDisplay(): android.view.Display;
 			public removeViewImmediate(param0: android.view.View): void;
@@ -59387,12 +59771,13 @@ declare module android {
 			export class AccessibilityEventSource extends java.lang.Object {
 				public static class: java.lang.Class<android.view.accessibility.AccessibilityEventSource>;
 				/**
-				 * Constructs a new instance of the android.view.accessibility.AccessibilityEventSource interface with the provided implementation.
+				 * Constructs a new instance of the android.view.accessibility.AccessibilityEventSource interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					sendAccessibilityEvent(param0: number): void;
 					sendAccessibilityEventUnchecked(param0: android.view.accessibility.AccessibilityEvent): void;
 				});
+				public constructor();
 				public sendAccessibilityEvent(param0: number): void;
 				public sendAccessibilityEventUnchecked(param0: android.view.accessibility.AccessibilityEvent): void;
 			}
@@ -59421,21 +59806,23 @@ declare module android {
 				export class AccessibilityStateChangeListener extends java.lang.Object {
 					public static class: java.lang.Class<android.view.accessibility.AccessibilityManager.AccessibilityStateChangeListener>;
 					/**
-					 * Constructs a new instance of the android.view.accessibility.AccessibilityManager$AccessibilityStateChangeListener interface with the provided implementation.
+					 * Constructs a new instance of the android.view.accessibility.AccessibilityManager$AccessibilityStateChangeListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 					 */
 					public constructor(implementation: {
 						onAccessibilityStateChanged(param0: boolean): void;
 					});
+					public constructor();
 					public onAccessibilityStateChanged(param0: boolean): void;
 				}
 				export class TouchExplorationStateChangeListener extends java.lang.Object {
 					public static class: java.lang.Class<android.view.accessibility.AccessibilityManager.TouchExplorationStateChangeListener>;
 					/**
-					 * Constructs a new instance of the android.view.accessibility.AccessibilityManager$TouchExplorationStateChangeListener interface with the provided implementation.
+					 * Constructs a new instance of the android.view.accessibility.AccessibilityManager$TouchExplorationStateChangeListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 					 */
 					public constructor(implementation: {
 						onTouchExplorationStateChanged(param0: boolean): void;
 					});
+					public constructor();
 					public onTouchExplorationStateChanged(param0: boolean): void;
 				}
 			}
@@ -59958,13 +60345,14 @@ declare module android {
 				export class AnimationListener extends java.lang.Object {
 					public static class: java.lang.Class<android.view.animation.Animation.AnimationListener>;
 					/**
-					 * Constructs a new instance of the android.view.animation.Animation$AnimationListener interface with the provided implementation.
+					 * Constructs a new instance of the android.view.animation.Animation$AnimationListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 					 */
 					public constructor(implementation: {
 						onAnimationStart(param0: android.view.animation.Animation): void;
 						onAnimationEnd(param0: android.view.animation.Animation): void;
 						onAnimationRepeat(param0: android.view.animation.Animation): void;
 					});
+					public constructor();
 					public onAnimationStart(param0: android.view.animation.Animation): void;
 					public onAnimationEnd(param0: android.view.animation.Animation): void;
 					public onAnimationRepeat(param0: android.view.animation.Animation): void;
@@ -60164,11 +60552,12 @@ declare module android {
 			export class Interpolator extends java.lang.Object implements android.animation.TimeInterpolator {
 				public static class: java.lang.Class<android.view.animation.Interpolator>;
 				/**
-				 * Constructs a new instance of the android.view.animation.Interpolator interface with the provided implementation.
+				 * Constructs a new instance of the android.view.animation.Interpolator interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					getInterpolation(param0: number): number;
 				});
+				public constructor();
 				public getInterpolation(param0: number): number;
 			}
 		}
@@ -60580,7 +60969,7 @@ declare module android {
 			export class InputConnection extends java.lang.Object {
 				public static class: java.lang.Class<android.view.inputmethod.InputConnection>;
 				/**
-				 * Constructs a new instance of the android.view.inputmethod.InputConnection interface with the provided implementation.
+				 * Constructs a new instance of the android.view.inputmethod.InputConnection interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					getTextBeforeCursor(param0: number, param1: number): string;
@@ -60610,6 +60999,7 @@ declare module android {
 					closeConnection(): void;
 					commitContent(param0: android.view.inputmethod.InputContentInfo, param1: number, param2: android.os.Bundle): boolean;
 				});
+				public constructor();
 				public static GET_EXTRACTED_TEXT_MONITOR: number;
 				public static INPUT_CONTENT_GRANT_READ_URI_PERMISSION: number;
 				public static CURSOR_UPDATE_IMMEDIATE: number;
@@ -60710,7 +61100,7 @@ declare module android {
 			export class InputMethod extends java.lang.Object {
 				public static class: java.lang.Class<android.view.inputmethod.InputMethod>;
 				/**
-				 * Constructs a new instance of the android.view.inputmethod.InputMethod interface with the provided implementation.
+				 * Constructs a new instance of the android.view.inputmethod.InputMethod interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					attachToken(param0: android.os.IBinder): void;
@@ -60725,6 +61115,7 @@ declare module android {
 					hideSoftInput(param0: number, param1: android.os.ResultReceiver): void;
 					changeInputMethodSubtype(param0: android.view.inputmethod.InputMethodSubtype): void;
 				});
+				public constructor();
 				public static SERVICE_INTERFACE: string;
 				public static SHOW_EXPLICIT: number;
 				public static SHOW_FORCED: number;
@@ -60745,11 +61136,12 @@ declare module android {
 				export class SessionCallback extends java.lang.Object {
 					public static class: java.lang.Class<android.view.inputmethod.InputMethod.SessionCallback>;
 					/**
-					 * Constructs a new instance of the android.view.inputmethod.InputMethod$SessionCallback interface with the provided implementation.
+					 * Constructs a new instance of the android.view.inputmethod.InputMethod$SessionCallback interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 					 */
 					public constructor(implementation: {
 						sessionCreated(param0: android.view.inputmethod.InputMethodSession): void;
 					});
+					public constructor();
 					public sessionCreated(param0: android.view.inputmethod.InputMethodSession): void;
 				}
 			}
@@ -60850,7 +61242,7 @@ declare module android {
 			export class InputMethodSession extends java.lang.Object {
 				public static class: java.lang.Class<android.view.inputmethod.InputMethodSession>;
 				/**
-				 * Constructs a new instance of the android.view.inputmethod.InputMethodSession interface with the provided implementation.
+				 * Constructs a new instance of the android.view.inputmethod.InputMethodSession interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					finishInput(): void;
@@ -60866,6 +61258,7 @@ declare module android {
 					toggleSoftInput(param0: number, param1: number): void;
 					updateCursorAnchorInfo(param0: android.view.inputmethod.CursorAnchorInfo): void;
 				});
+				public constructor();
 				public viewClicked(param0: boolean): void;
 				public finishInput(): void;
 				public updateCursor(param0: android.graphics.Rect): void;
@@ -60883,11 +61276,12 @@ declare module android {
 				export class EventCallback extends java.lang.Object {
 					public static class: java.lang.Class<android.view.inputmethod.InputMethodSession.EventCallback>;
 					/**
-					 * Constructs a new instance of the android.view.inputmethod.InputMethodSession$EventCallback interface with the provided implementation.
+					 * Constructs a new instance of the android.view.inputmethod.InputMethodSession$EventCallback interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 					 */
 					public constructor(implementation: {
 						finishedEvent(param0: number, param1: boolean): void;
 					});
+					public constructor();
 					public finishedEvent(param0: number, param1: boolean): void;
 				}
 			}
@@ -61001,12 +61395,13 @@ declare module android {
 				export class SpellCheckerSessionListener extends java.lang.Object {
 					public static class: java.lang.Class<android.view.textservice.SpellCheckerSession.SpellCheckerSessionListener>;
 					/**
-					 * Constructs a new instance of the android.view.textservice.SpellCheckerSession$SpellCheckerSessionListener interface with the provided implementation.
+					 * Constructs a new instance of the android.view.textservice.SpellCheckerSession$SpellCheckerSessionListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 					 */
 					public constructor(implementation: {
 						onGetSuggestions(param0: native.Array<android.view.textservice.SuggestionsInfo>): void;
 						onGetSentenceSuggestions(param0: native.Array<android.view.textservice.SentenceSuggestionsInfo>): void;
 					});
+					public constructor();
 					public onGetSentenceSuggestions(param0: native.Array<android.view.textservice.SentenceSuggestionsInfo>): void;
 					public onGetSuggestions(param0: native.Array<android.view.textservice.SuggestionsInfo>): void;
 				}
@@ -61201,11 +61596,12 @@ declare module android {
 		export class DownloadListener extends java.lang.Object {
 			public static class: java.lang.Class<android.webkit.DownloadListener>;
 			/**
-			 * Constructs a new instance of the android.webkit.DownloadListener interface with the provided implementation.
+			 * Constructs a new instance of the android.webkit.DownloadListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				onDownloadStart(param0: string, param1: string, param2: string, param3: string, param4: number): void;
 			});
+			public constructor();
 			public onDownloadStart(param0: string, param1: string, param2: string, param3: string, param4: number): void;
 		}
 	}
@@ -61226,11 +61622,12 @@ declare module android {
 			export class Callback extends java.lang.Object {
 				public static class: java.lang.Class<android.webkit.GeolocationPermissions.Callback>;
 				/**
-				 * Constructs a new instance of the android.webkit.GeolocationPermissions$Callback interface with the provided implementation.
+				 * Constructs a new instance of the android.webkit.GeolocationPermissions$Callback interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					invoke(param0: string, param1: boolean, param2: boolean): void;
 				});
+				public constructor();
 				public invoke(param0: string, param1: boolean, param2: boolean): void;
 			}
 		}
@@ -61253,7 +61650,7 @@ declare module android {
 		export class JavascriptInterface extends java.lang.Object implements java.lang.annotation.Annotation {
 			public static class: java.lang.Class<android.webkit.JavascriptInterface>;
 			/**
-			 * Constructs a new instance of the android.webkit.JavascriptInterface interface with the provided implementation.
+			 * Constructs a new instance of the android.webkit.JavascriptInterface interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				equals(param0: any): boolean;
@@ -61261,6 +61658,7 @@ declare module android {
 				toString(): string;
 				annotationType(): java.lang.Class<any>;
 			});
+			public constructor();
 			public equals(param0: any): boolean;
 			public toString(): string;
 			public annotationType(): java.lang.Class<any>;
@@ -61325,12 +61723,13 @@ declare module android {
 		export class PluginStub extends java.lang.Object {
 			public static class: java.lang.Class<android.webkit.PluginStub>;
 			/**
-			 * Constructs a new instance of the android.webkit.PluginStub interface with the provided implementation.
+			 * Constructs a new instance of the android.webkit.PluginStub interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				getEmbeddedView(param0: number, param1: android.content.Context): android.view.View;
 				getFullScreenView(param0: number, param1: android.content.Context): android.view.View;
 			});
+			public constructor();
 			public getEmbeddedView(param0: number, param1: android.content.Context): android.view.View;
 			public getFullScreenView(param0: number, param1: android.content.Context): android.view.View;
 		}
@@ -61416,11 +61815,12 @@ declare module android {
 		export class ValueCallback<T>  extends java.lang.Object {
 			public static class: java.lang.Class<android.webkit.ValueCallback<any>>;
 			/**
-			 * Constructs a new instance of the android.webkit.ValueCallback<any> interface with the provided implementation.
+			 * Constructs a new instance of the android.webkit.ValueCallback<any> interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				onReceiveValue(param0: T): void;
 			});
+			public constructor();
 			public onReceiveValue(param0: T): void;
 		}
 	}
@@ -61478,11 +61878,12 @@ declare module android {
 			export class CustomViewCallback extends java.lang.Object {
 				public static class: java.lang.Class<android.webkit.WebChromeClient.CustomViewCallback>;
 				/**
-				 * Constructs a new instance of the android.webkit.WebChromeClient$CustomViewCallback interface with the provided implementation.
+				 * Constructs a new instance of the android.webkit.WebChromeClient$CustomViewCallback interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onCustomViewHidden(): void;
 				});
+				public constructor();
 				public onCustomViewHidden(): void;
 			}
 			export abstract class FileChooserParams extends java.lang.Object {
@@ -61535,11 +61936,12 @@ declare module android {
 			export class IconListener extends java.lang.Object {
 				public static class: java.lang.Class<android.webkit.WebIconDatabase.IconListener>;
 				/**
-				 * Constructs a new instance of the android.webkit.WebIconDatabase$IconListener interface with the provided implementation.
+				 * Constructs a new instance of the android.webkit.WebIconDatabase$IconListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onReceivedIcon(param0: string, param1: android.graphics.Bitmap): void;
 				});
+				public constructor();
 				public onReceivedIcon(param0: string, param1: android.graphics.Bitmap): void;
 			}
 		}
@@ -61592,7 +61994,7 @@ declare module android {
 		export class WebResourceRequest extends java.lang.Object {
 			public static class: java.lang.Class<android.webkit.WebResourceRequest>;
 			/**
-			 * Constructs a new instance of the android.webkit.WebResourceRequest interface with the provided implementation.
+			 * Constructs a new instance of the android.webkit.WebResourceRequest interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				getUrl(): android.net.Uri;
@@ -61602,6 +62004,7 @@ declare module android {
 				getMethod(): string;
 				getRequestHeaders(): java.util.Map<string,string>;
 			});
+			public constructor();
 			public isForMainFrame(): boolean;
 			public isRedirect(): boolean;
 			public getUrl(): android.net.Uri;
@@ -61822,11 +62225,12 @@ declare module android {
 			export class QuotaUpdater extends java.lang.Object {
 				public static class: java.lang.Class<android.webkit.WebStorage.QuotaUpdater>;
 				/**
-				 * Constructs a new instance of the android.webkit.WebStorage$QuotaUpdater interface with the provided implementation.
+				 * Constructs a new instance of the android.webkit.WebStorage$QuotaUpdater interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					updateQuota(param0: number): void;
 				});
+				public constructor();
 				public updateQuota(param0: number): void;
 			}
 		}
@@ -62062,11 +62466,12 @@ declare module android {
 			export class FindListener extends java.lang.Object {
 				public static class: java.lang.Class<android.webkit.WebView.FindListener>;
 				/**
-				 * Constructs a new instance of the android.webkit.WebView$FindListener interface with the provided implementation.
+				 * Constructs a new instance of the android.webkit.WebView$FindListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onFindResultReceived(param0: number, param1: number, param2: boolean): void;
 				});
+				public constructor();
 				public onFindResultReceived(param0: number, param1: number, param2: boolean): void;
 			}
 			export class HitTestResult extends java.lang.Object {
@@ -62087,11 +62492,12 @@ declare module android {
 			export class PictureListener extends java.lang.Object {
 				public static class: java.lang.Class<android.webkit.WebView.PictureListener>;
 				/**
-				 * Constructs a new instance of the android.webkit.WebView$PictureListener interface with the provided implementation.
+				 * Constructs a new instance of the android.webkit.WebView$PictureListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onNewPicture(param0: android.webkit.WebView, param1: android.graphics.Picture): void;
 				});
+				public constructor();
 				public onNewPicture(param0: android.webkit.WebView, param1: android.graphics.Picture): void;
 			}
 			export abstract class VisualStateCallback extends java.lang.Object {
@@ -62404,7 +62810,7 @@ declare module android {
 			export class MultiChoiceModeListener extends java.lang.Object implements android.view.ActionMode.Callback {
 				public static class: java.lang.Class<android.widget.AbsListView.MultiChoiceModeListener>;
 				/**
-				 * Constructs a new instance of the android.widget.AbsListView$MultiChoiceModeListener interface with the provided implementation.
+				 * Constructs a new instance of the android.widget.AbsListView$MultiChoiceModeListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onItemCheckedStateChanged(param0: android.view.ActionMode, param1: number, param2: number, param3: boolean): void;
@@ -62413,6 +62819,7 @@ declare module android {
 					onActionItemClicked(param0: android.view.ActionMode, param1: android.view.MenuItem): boolean;
 					onDestroyActionMode(param0: android.view.ActionMode): void;
 				});
+				public constructor();
 				public onPrepareActionMode(param0: android.view.ActionMode, param1: android.view.Menu): boolean;
 				public onActionItemClicked(param0: android.view.ActionMode, param1: android.view.MenuItem): boolean;
 				public onCreateActionMode(param0: android.view.ActionMode, param1: android.view.Menu): boolean;
@@ -62422,12 +62829,13 @@ declare module android {
 			export class OnScrollListener extends java.lang.Object {
 				public static class: java.lang.Class<android.widget.AbsListView.OnScrollListener>;
 				/**
-				 * Constructs a new instance of the android.widget.AbsListView$OnScrollListener interface with the provided implementation.
+				 * Constructs a new instance of the android.widget.AbsListView$OnScrollListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onScrollStateChanged(param0: android.widget.AbsListView, param1: number): void;
 					onScroll(param0: android.widget.AbsListView, param1: number, param2: number, param3: number): void;
 				});
+				public constructor();
 				public static SCROLL_STATE_FLING: number;
 				public static SCROLL_STATE_TOUCH_SCROLL: number;
 				public static SCROLL_STATE_IDLE: number;
@@ -62437,21 +62845,23 @@ declare module android {
 			export class RecyclerListener extends java.lang.Object {
 				public static class: java.lang.Class<android.widget.AbsListView.RecyclerListener>;
 				/**
-				 * Constructs a new instance of the android.widget.AbsListView$RecyclerListener interface with the provided implementation.
+				 * Constructs a new instance of the android.widget.AbsListView$RecyclerListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onMovedToScrapHeap(param0: android.view.View): void;
 				});
+				public constructor();
 				public onMovedToScrapHeap(param0: android.view.View): void;
 			}
 			export class SelectionBoundsAdjuster extends java.lang.Object {
 				public static class: java.lang.Class<android.widget.AbsListView.SelectionBoundsAdjuster>;
 				/**
-				 * Constructs a new instance of the android.widget.AbsListView$SelectionBoundsAdjuster interface with the provided implementation.
+				 * Constructs a new instance of the android.widget.AbsListView$SelectionBoundsAdjuster interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					adjustListItemSelectionBounds(param0: android.graphics.Rect): void;
 				});
+				public constructor();
 				public adjustListItemSelectionBounds(param0: android.graphics.Rect): void;
 			}
 		}
@@ -62797,11 +63207,12 @@ declare module android {
 			export class OnMenuItemClickListener extends java.lang.Object {
 				public static class: java.lang.Class<android.widget.ActionMenuView.OnMenuItemClickListener>;
 				/**
-				 * Constructs a new instance of the android.widget.ActionMenuView$OnMenuItemClickListener interface with the provided implementation.
+				 * Constructs a new instance of the android.widget.ActionMenuView$OnMenuItemClickListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onMenuItemClick(param0: android.view.MenuItem): boolean;
 				});
+				public constructor();
 				public onMenuItemClick(param0: android.view.MenuItem): boolean;
 			}
 		}
@@ -62813,7 +63224,7 @@ declare module android {
 		export class Adapter extends java.lang.Object {
 			public static class: java.lang.Class<android.widget.Adapter>;
 			/**
-			 * Constructs a new instance of the android.widget.Adapter interface with the provided implementation.
+			 * Constructs a new instance of the android.widget.Adapter interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				registerDataSetObserver(param0: android.database.DataSetObserver): void;
@@ -62827,6 +63238,7 @@ declare module android {
 				getViewTypeCount(): number;
 				isEmpty(): boolean;
 			});
+			public constructor();
 			public static NO_SELECTION: number;
 			public static IGNORE_ITEM_VIEW_TYPE: number;
 			public unregisterDataSetObserver(param0: android.database.DataSetObserver): void;
@@ -62961,32 +63373,35 @@ declare module android {
 			export class OnItemClickListener extends java.lang.Object {
 				public static class: java.lang.Class<android.widget.AdapterView.OnItemClickListener>;
 				/**
-				 * Constructs a new instance of the android.widget.AdapterView$OnItemClickListener interface with the provided implementation.
+				 * Constructs a new instance of the android.widget.AdapterView$OnItemClickListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onItemClick(param0: android.widget.AdapterView<any>, param1: android.view.View, param2: number, param3: number): void;
 				});
+				public constructor();
 				public onItemClick(param0: android.widget.AdapterView<any>, param1: android.view.View, param2: number, param3: number): void;
 			}
 			export class OnItemLongClickListener extends java.lang.Object {
 				public static class: java.lang.Class<android.widget.AdapterView.OnItemLongClickListener>;
 				/**
-				 * Constructs a new instance of the android.widget.AdapterView$OnItemLongClickListener interface with the provided implementation.
+				 * Constructs a new instance of the android.widget.AdapterView$OnItemLongClickListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onItemLongClick(param0: android.widget.AdapterView<any>, param1: android.view.View, param2: number, param3: number): boolean;
 				});
+				public constructor();
 				public onItemLongClick(param0: android.widget.AdapterView<any>, param1: android.view.View, param2: number, param3: number): boolean;
 			}
 			export class OnItemSelectedListener extends java.lang.Object {
 				public static class: java.lang.Class<android.widget.AdapterView.OnItemSelectedListener>;
 				/**
-				 * Constructs a new instance of the android.widget.AdapterView$OnItemSelectedListener interface with the provided implementation.
+				 * Constructs a new instance of the android.widget.AdapterView$OnItemSelectedListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onItemSelected(param0: android.widget.AdapterView<any>, param1: android.view.View, param2: number, param3: number): void;
 					onNothingSelected(param0: android.widget.AdapterView<any>): void;
 				});
+				public constructor();
 				public onItemSelected(param0: android.widget.AdapterView<any>, param1: android.view.View, param2: number, param3: number): void;
 				public onNothingSelected(param0: android.widget.AdapterView<any>): void;
 			}
@@ -63192,12 +63607,13 @@ declare module android {
 		export class Advanceable extends java.lang.Object {
 			public static class: java.lang.Class<android.widget.Advanceable>;
 			/**
-			 * Constructs a new instance of the android.widget.Advanceable interface with the provided implementation.
+			 * Constructs a new instance of the android.widget.Advanceable interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				advance(): void;
 				fyiWillBeAdvancedByHostKThx(): void;
 			});
+			public constructor();
 			public advance(): void;
 			public fyiWillBeAdvancedByHostKThx(): void;
 		}
@@ -63378,22 +63794,24 @@ declare module android {
 			export class OnDismissListener extends java.lang.Object {
 				public static class: java.lang.Class<android.widget.AutoCompleteTextView.OnDismissListener>;
 				/**
-				 * Constructs a new instance of the android.widget.AutoCompleteTextView$OnDismissListener interface with the provided implementation.
+				 * Constructs a new instance of the android.widget.AutoCompleteTextView$OnDismissListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onDismiss(): void;
 				});
+				public constructor();
 				public onDismiss(): void;
 			}
 			export class Validator extends java.lang.Object {
 				public static class: java.lang.Class<android.widget.AutoCompleteTextView.Validator>;
 				/**
-				 * Constructs a new instance of the android.widget.AutoCompleteTextView$Validator interface with the provided implementation.
+				 * Constructs a new instance of the android.widget.AutoCompleteTextView$Validator interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					isValid(param0: string): boolean;
 					fixText(param0: string): string;
 				});
+				public constructor();
 				public isValid(param0: string): boolean;
 				public fixText(param0: string): string;
 			}
@@ -63589,11 +64007,12 @@ declare module android {
 			export class OnDateChangeListener extends java.lang.Object {
 				public static class: java.lang.Class<android.widget.CalendarView.OnDateChangeListener>;
 				/**
-				 * Constructs a new instance of the android.widget.CalendarView$OnDateChangeListener interface with the provided implementation.
+				 * Constructs a new instance of the android.widget.CalendarView$OnDateChangeListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onSelectedDayChange(param0: android.widget.CalendarView, param1: number, param2: number, param3: number): void;
 				});
+				public constructor();
 				public onSelectedDayChange(param0: android.widget.CalendarView, param1: number, param2: number, param3: number): void;
 			}
 		}
@@ -63632,13 +64051,14 @@ declare module android {
 		export class Checkable extends java.lang.Object {
 			public static class: java.lang.Class<android.widget.Checkable>;
 			/**
-			 * Constructs a new instance of the android.widget.Checkable interface with the provided implementation.
+			 * Constructs a new instance of the android.widget.Checkable interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				setChecked(param0: boolean): void;
 				isChecked(): boolean;
 				toggle(): void;
 			});
+			public constructor();
 			public setChecked(param0: boolean): void;
 			public isChecked(): boolean;
 			public toggle(): void;
@@ -63728,11 +64148,12 @@ declare module android {
 			export class OnChronometerTickListener extends java.lang.Object {
 				public static class: java.lang.Class<android.widget.Chronometer.OnChronometerTickListener>;
 				/**
-				 * Constructs a new instance of the android.widget.Chronometer$OnChronometerTickListener interface with the provided implementation.
+				 * Constructs a new instance of the android.widget.Chronometer$OnChronometerTickListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onChronometerTick(param0: android.widget.Chronometer): void;
 				});
+				public constructor();
 				public onChronometerTick(param0: android.widget.Chronometer): void;
 			}
 		}
@@ -63786,11 +64207,12 @@ declare module android {
 			export class OnCheckedChangeListener extends java.lang.Object {
 				public static class: java.lang.Class<android.widget.CompoundButton.OnCheckedChangeListener>;
 				/**
-				 * Constructs a new instance of the android.widget.CompoundButton$OnCheckedChangeListener interface with the provided implementation.
+				 * Constructs a new instance of the android.widget.CompoundButton$OnCheckedChangeListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onCheckedChanged(param0: android.widget.CompoundButton, param1: boolean): void;
 				});
+				public constructor();
 				public onCheckedChanged(param0: android.widget.CompoundButton, param1: boolean): void;
 			}
 		}
@@ -63988,11 +64410,12 @@ declare module android {
 			export class OnDateChangedListener extends java.lang.Object {
 				public static class: java.lang.Class<android.widget.DatePicker.OnDateChangedListener>;
 				/**
-				 * Constructs a new instance of the android.widget.DatePicker$OnDateChangedListener interface with the provided implementation.
+				 * Constructs a new instance of the android.widget.DatePicker$OnDateChangedListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onDateChanged(param0: android.widget.DatePicker, param1: number, param2: number, param3: number): void;
 				});
+				public constructor();
 				public onDateChanged(param0: android.widget.DatePicker, param1: number, param2: number, param3: number): void;
 			}
 		}
@@ -64182,7 +64605,7 @@ declare module android {
 		export class ExpandableListAdapter extends java.lang.Object {
 			public static class: java.lang.Class<android.widget.ExpandableListAdapter>;
 			/**
-			 * Constructs a new instance of the android.widget.ExpandableListAdapter interface with the provided implementation.
+			 * Constructs a new instance of the android.widget.ExpandableListAdapter interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				registerDataSetObserver(param0: android.database.DataSetObserver): void;
@@ -64204,6 +64627,7 @@ declare module android {
 				getCombinedChildId(param0: number, param1: number): number;
 				getCombinedGroupId(param0: number): number;
 			});
+			public constructor();
 			public registerDataSetObserver(param0: android.database.DataSetObserver): void;
 			public isEmpty(): boolean;
 			public getChildrenCount(param0: number): number;
@@ -64357,41 +64781,45 @@ declare module android {
 			export class OnChildClickListener extends java.lang.Object {
 				public static class: java.lang.Class<android.widget.ExpandableListView.OnChildClickListener>;
 				/**
-				 * Constructs a new instance of the android.widget.ExpandableListView$OnChildClickListener interface with the provided implementation.
+				 * Constructs a new instance of the android.widget.ExpandableListView$OnChildClickListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onChildClick(param0: android.widget.ExpandableListView, param1: android.view.View, param2: number, param3: number, param4: number): boolean;
 				});
+				public constructor();
 				public onChildClick(param0: android.widget.ExpandableListView, param1: android.view.View, param2: number, param3: number, param4: number): boolean;
 			}
 			export class OnGroupClickListener extends java.lang.Object {
 				public static class: java.lang.Class<android.widget.ExpandableListView.OnGroupClickListener>;
 				/**
-				 * Constructs a new instance of the android.widget.ExpandableListView$OnGroupClickListener interface with the provided implementation.
+				 * Constructs a new instance of the android.widget.ExpandableListView$OnGroupClickListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onGroupClick(param0: android.widget.ExpandableListView, param1: android.view.View, param2: number, param3: number): boolean;
 				});
+				public constructor();
 				public onGroupClick(param0: android.widget.ExpandableListView, param1: android.view.View, param2: number, param3: number): boolean;
 			}
 			export class OnGroupCollapseListener extends java.lang.Object {
 				public static class: java.lang.Class<android.widget.ExpandableListView.OnGroupCollapseListener>;
 				/**
-				 * Constructs a new instance of the android.widget.ExpandableListView$OnGroupCollapseListener interface with the provided implementation.
+				 * Constructs a new instance of the android.widget.ExpandableListView$OnGroupCollapseListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onGroupCollapse(param0: number): void;
 				});
+				public constructor();
 				public onGroupCollapse(param0: number): void;
 			}
 			export class OnGroupExpandListener extends java.lang.Object {
 				public static class: java.lang.Class<android.widget.ExpandableListView.OnGroupExpandListener>;
 				/**
-				 * Constructs a new instance of the android.widget.ExpandableListView$OnGroupExpandListener interface with the provided implementation.
+				 * Constructs a new instance of the android.widget.ExpandableListView$OnGroupExpandListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onGroupExpand(param0: number): void;
 				});
+				public constructor();
 				public onGroupExpand(param0: number): void;
 			}
 		}
@@ -64413,11 +64841,12 @@ declare module android {
 			export class FilterListener extends java.lang.Object {
 				public static class: java.lang.Class<android.widget.Filter.FilterListener>;
 				/**
-				 * Constructs a new instance of the android.widget.Filter$FilterListener interface with the provided implementation.
+				 * Constructs a new instance of the android.widget.Filter$FilterListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onFilterComplete(param0: number): void;
 				});
+				public constructor();
 				public onFilterComplete(param0: number): void;
 			}
 			export class FilterResults extends java.lang.Object {
@@ -64435,11 +64864,12 @@ declare module android {
 		export class FilterQueryProvider extends java.lang.Object {
 			public static class: java.lang.Class<android.widget.FilterQueryProvider>;
 			/**
-			 * Constructs a new instance of the android.widget.FilterQueryProvider interface with the provided implementation.
+			 * Constructs a new instance of the android.widget.FilterQueryProvider interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				runQuery(param0: string): android.database.Cursor;
 			});
+			public constructor();
 			public runQuery(param0: string): android.database.Cursor;
 		}
 	}
@@ -64450,11 +64880,12 @@ declare module android {
 		export class Filterable extends java.lang.Object {
 			public static class: java.lang.Class<android.widget.Filterable>;
 			/**
-			 * Constructs a new instance of the android.widget.Filterable interface with the provided implementation.
+			 * Constructs a new instance of the android.widget.Filterable interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				getFilter(): android.widget.Filter;
 			});
+			public constructor();
 			public getFilter(): android.widget.Filter;
 		}
 	}
@@ -64966,7 +65397,7 @@ declare module android {
 		export class HeterogeneousExpandableList extends java.lang.Object {
 			public static class: java.lang.Class<android.widget.HeterogeneousExpandableList>;
 			/**
-			 * Constructs a new instance of the android.widget.HeterogeneousExpandableList interface with the provided implementation.
+			 * Constructs a new instance of the android.widget.HeterogeneousExpandableList interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				getGroupType(param0: number): number;
@@ -64974,6 +65405,7 @@ declare module android {
 				getGroupTypeCount(): number;
 				getChildTypeCount(): number;
 			});
+			public constructor();
 			public getGroupType(param0: number): number;
 			public getGroupTypeCount(): number;
 			public getChildType(param0: number, param1: number): number;
@@ -65415,7 +65847,7 @@ declare module android {
 		export class ListAdapter extends java.lang.Object implements android.widget.Adapter {
 			public static class: java.lang.Class<android.widget.ListAdapter>;
 			/**
-			 * Constructs a new instance of the android.widget.ListAdapter interface with the provided implementation.
+			 * Constructs a new instance of the android.widget.ListAdapter interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				areAllItemsEnabled(): boolean;
@@ -65431,6 +65863,7 @@ declare module android {
 				getViewTypeCount(): number;
 				isEmpty(): boolean;
 			});
+			public constructor();
 			public static NO_SELECTION: number;
 			public static IGNORE_ITEM_VIEW_TYPE: number;
 			public unregisterDataSetObserver(param0: android.database.DataSetObserver): void;
@@ -65742,7 +66175,7 @@ declare module android {
 			export class MediaPlayerControl extends java.lang.Object {
 				public static class: java.lang.Class<android.widget.MediaController.MediaPlayerControl>;
 				/**
-				 * Constructs a new instance of the android.widget.MediaController$MediaPlayerControl interface with the provided implementation.
+				 * Constructs a new instance of the android.widget.MediaController$MediaPlayerControl interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					start(): void;
@@ -65757,6 +66190,7 @@ declare module android {
 					canSeekForward(): boolean;
 					getAudioSessionId(): number;
 				});
+				public constructor();
 				public canPause(): boolean;
 				public getAudioSessionId(): number;
 				public canSeekForward(): boolean;
@@ -65813,13 +66247,14 @@ declare module android {
 			export class Tokenizer extends java.lang.Object {
 				public static class: java.lang.Class<android.widget.MultiAutoCompleteTextView.Tokenizer>;
 				/**
-				 * Constructs a new instance of the android.widget.MultiAutoCompleteTextView$Tokenizer interface with the provided implementation.
+				 * Constructs a new instance of the android.widget.MultiAutoCompleteTextView$Tokenizer interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					findTokenStart(param0: string, param1: number): number;
 					findTokenEnd(param0: string, param1: number): number;
 					terminateToken(param0: string): string;
 				});
+				public constructor();
 				public findTokenStart(param0: string, param1: number): number;
 				public terminateToken(param0: string): string;
 				public findTokenEnd(param0: string, param1: number): number;
@@ -65941,21 +66376,23 @@ declare module android {
 			export class Formatter extends java.lang.Object {
 				public static class: java.lang.Class<android.widget.NumberPicker.Formatter>;
 				/**
-				 * Constructs a new instance of the android.widget.NumberPicker$Formatter interface with the provided implementation.
+				 * Constructs a new instance of the android.widget.NumberPicker$Formatter interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					format(param0: number): string;
 				});
+				public constructor();
 				public format(param0: number): string;
 			}
 			export class OnScrollListener extends java.lang.Object {
 				public static class: java.lang.Class<android.widget.NumberPicker.OnScrollListener>;
 				/**
-				 * Constructs a new instance of the android.widget.NumberPicker$OnScrollListener interface with the provided implementation.
+				 * Constructs a new instance of the android.widget.NumberPicker$OnScrollListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onScrollStateChange(param0: android.widget.NumberPicker, param1: number): void;
 				});
+				public constructor();
 				public static SCROLL_STATE_FLING: number;
 				public static SCROLL_STATE_TOUCH_SCROLL: number;
 				public static SCROLL_STATE_IDLE: number;
@@ -65964,11 +66401,12 @@ declare module android {
 			export class OnValueChangeListener extends java.lang.Object {
 				public static class: java.lang.Class<android.widget.NumberPicker.OnValueChangeListener>;
 				/**
-				 * Constructs a new instance of the android.widget.NumberPicker$OnValueChangeListener interface with the provided implementation.
+				 * Constructs a new instance of the android.widget.NumberPicker$OnValueChangeListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onValueChange(param0: android.widget.NumberPicker, param1: number, param2: number): void;
 				});
+				public constructor();
 				public onValueChange(param0: android.widget.NumberPicker, param1: number, param2: number): void;
 			}
 		}
@@ -66029,21 +66467,23 @@ declare module android {
 			export class OnDismissListener extends java.lang.Object {
 				public static class: java.lang.Class<android.widget.PopupMenu.OnDismissListener>;
 				/**
-				 * Constructs a new instance of the android.widget.PopupMenu$OnDismissListener interface with the provided implementation.
+				 * Constructs a new instance of the android.widget.PopupMenu$OnDismissListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onDismiss(param0: android.widget.PopupMenu): void;
 				});
+				public constructor();
 				public onDismiss(param0: android.widget.PopupMenu): void;
 			}
 			export class OnMenuItemClickListener extends java.lang.Object {
 				public static class: java.lang.Class<android.widget.PopupMenu.OnMenuItemClickListener>;
 				/**
-				 * Constructs a new instance of the android.widget.PopupMenu$OnMenuItemClickListener interface with the provided implementation.
+				 * Constructs a new instance of the android.widget.PopupMenu$OnMenuItemClickListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onMenuItemClick(param0: android.view.MenuItem): boolean;
 				});
+				public constructor();
 				public onMenuItemClick(param0: android.view.MenuItem): boolean;
 			}
 		}
@@ -66127,11 +66567,12 @@ declare module android {
 			export class OnDismissListener extends java.lang.Object {
 				public static class: java.lang.Class<android.widget.PopupWindow.OnDismissListener>;
 				/**
-				 * Constructs a new instance of the android.widget.PopupWindow$OnDismissListener interface with the provided implementation.
+				 * Constructs a new instance of the android.widget.PopupWindow$OnDismissListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onDismiss(): void;
 				});
+				public constructor();
 				public onDismiss(): void;
 			}
 		}
@@ -66376,11 +66817,12 @@ declare module android {
 			export class OnCheckedChangeListener extends java.lang.Object {
 				public static class: java.lang.Class<android.widget.RadioGroup.OnCheckedChangeListener>;
 				/**
-				 * Constructs a new instance of the android.widget.RadioGroup$OnCheckedChangeListener interface with the provided implementation.
+				 * Constructs a new instance of the android.widget.RadioGroup$OnCheckedChangeListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onCheckedChanged(param0: android.widget.RadioGroup, param1: number): void;
 				});
+				public constructor();
 				public onCheckedChanged(param0: android.widget.RadioGroup, param1: number): void;
 			}
 		}
@@ -66423,11 +66865,12 @@ declare module android {
 			export class OnRatingBarChangeListener extends java.lang.Object {
 				public static class: java.lang.Class<android.widget.RatingBar.OnRatingBarChangeListener>;
 				/**
-				 * Constructs a new instance of the android.widget.RatingBar$OnRatingBarChangeListener interface with the provided implementation.
+				 * Constructs a new instance of the android.widget.RatingBar$OnRatingBarChangeListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onRatingChanged(param0: android.widget.RatingBar, param1: number, param2: boolean): void;
 				});
+				public constructor();
 				public onRatingChanged(param0: android.widget.RatingBar, param1: number, param2: boolean): void;
 			}
 		}
@@ -66640,7 +67083,7 @@ declare module android {
 			export class RemoteView extends java.lang.Object implements java.lang.annotation.Annotation {
 				public static class: java.lang.Class<android.widget.RemoteViews.RemoteView>;
 				/**
-				 * Constructs a new instance of the android.widget.RemoteViews$RemoteView interface with the provided implementation.
+				 * Constructs a new instance of the android.widget.RemoteViews$RemoteView interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					equals(param0: any): boolean;
@@ -66648,6 +67091,7 @@ declare module android {
 					toString(): string;
 					annotationType(): java.lang.Class<any>;
 				});
+				public constructor();
 				public hashCode(): number;
 				public equals(param0: any): boolean;
 				public annotationType(): java.lang.Class<any>;
@@ -66671,7 +67115,7 @@ declare module android {
 			export class RemoteViewsFactory extends java.lang.Object {
 				public static class: java.lang.Class<android.widget.RemoteViewsService.RemoteViewsFactory>;
 				/**
-				 * Constructs a new instance of the android.widget.RemoteViewsService$RemoteViewsFactory interface with the provided implementation.
+				 * Constructs a new instance of the android.widget.RemoteViewsService$RemoteViewsFactory interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onCreate(): void;
@@ -66684,6 +67128,7 @@ declare module android {
 					getItemId(param0: number): number;
 					hasStableIds(): boolean;
 				});
+				public constructor();
 				public getViewTypeCount(): number;
 				public hasStableIds(): boolean;
 				public getViewAt(param0: number): android.widget.RemoteViews;
@@ -67014,34 +67459,37 @@ declare module android {
 			export class OnCloseListener extends java.lang.Object {
 				public static class: java.lang.Class<android.widget.SearchView.OnCloseListener>;
 				/**
-				 * Constructs a new instance of the android.widget.SearchView$OnCloseListener interface with the provided implementation.
+				 * Constructs a new instance of the android.widget.SearchView$OnCloseListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onClose(): boolean;
 				});
+				public constructor();
 				public onClose(): boolean;
 			}
 			export class OnQueryTextListener extends java.lang.Object {
 				public static class: java.lang.Class<android.widget.SearchView.OnQueryTextListener>;
 				/**
-				 * Constructs a new instance of the android.widget.SearchView$OnQueryTextListener interface with the provided implementation.
+				 * Constructs a new instance of the android.widget.SearchView$OnQueryTextListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onQueryTextSubmit(param0: string): boolean;
 					onQueryTextChange(param0: string): boolean;
 				});
+				public constructor();
 				public onQueryTextChange(param0: string): boolean;
 				public onQueryTextSubmit(param0: string): boolean;
 			}
 			export class OnSuggestionListener extends java.lang.Object {
 				public static class: java.lang.Class<android.widget.SearchView.OnSuggestionListener>;
 				/**
-				 * Constructs a new instance of the android.widget.SearchView$OnSuggestionListener interface with the provided implementation.
+				 * Constructs a new instance of the android.widget.SearchView$OnSuggestionListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onSuggestionSelect(param0: number): boolean;
 					onSuggestionClick(param0: number): boolean;
 				});
+				public constructor();
 				public onSuggestionSelect(param0: number): boolean;
 				public onSuggestionClick(param0: number): boolean;
 			}
@@ -67054,13 +67502,14 @@ declare module android {
 		export class SectionIndexer extends java.lang.Object {
 			public static class: java.lang.Class<android.widget.SectionIndexer>;
 			/**
-			 * Constructs a new instance of the android.widget.SectionIndexer interface with the provided implementation.
+			 * Constructs a new instance of the android.widget.SectionIndexer interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				getSections(): native.Array<any>;
 				getPositionForSection(param0: number): number;
 				getSectionForPosition(param0: number): number;
 			});
+			public constructor();
 			public getSections(): native.Array<any>;
 			public getPositionForSection(param0: number): number;
 			public getSectionForPosition(param0: number): number;
@@ -67093,13 +67542,14 @@ declare module android {
 			export class OnSeekBarChangeListener extends java.lang.Object {
 				public static class: java.lang.Class<android.widget.SeekBar.OnSeekBarChangeListener>;
 				/**
-				 * Constructs a new instance of the android.widget.SeekBar$OnSeekBarChangeListener interface with the provided implementation.
+				 * Constructs a new instance of the android.widget.SeekBar$OnSeekBarChangeListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onProgressChanged(param0: android.widget.SeekBar, param1: number, param2: boolean): void;
 					onStartTrackingTouch(param0: android.widget.SeekBar): void;
 					onStopTrackingTouch(param0: android.widget.SeekBar): void;
 				});
+				public constructor();
 				public onStopTrackingTouch(param0: android.widget.SeekBar): void;
 				public onProgressChanged(param0: android.widget.SeekBar, param1: number, param2: boolean): void;
 				public onStartTrackingTouch(param0: android.widget.SeekBar): void;
@@ -67126,11 +67576,12 @@ declare module android {
 			export class OnShareTargetSelectedListener extends java.lang.Object {
 				public static class: java.lang.Class<android.widget.ShareActionProvider.OnShareTargetSelectedListener>;
 				/**
-				 * Constructs a new instance of the android.widget.ShareActionProvider$OnShareTargetSelectedListener interface with the provided implementation.
+				 * Constructs a new instance of the android.widget.ShareActionProvider$OnShareTargetSelectedListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onShareTargetSelected(param0: android.widget.ShareActionProvider, param1: android.content.Intent): boolean;
 				});
+				public constructor();
 				public onShareTargetSelected(param0: android.widget.ShareActionProvider, param1: android.content.Intent): boolean;
 			}
 		}
@@ -67170,11 +67621,12 @@ declare module android {
 			export class ViewBinder extends java.lang.Object {
 				public static class: java.lang.Class<android.widget.SimpleAdapter.ViewBinder>;
 				/**
-				 * Constructs a new instance of the android.widget.SimpleAdapter$ViewBinder interface with the provided implementation.
+				 * Constructs a new instance of the android.widget.SimpleAdapter$ViewBinder interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					setViewValue(param0: android.view.View, param1: any, param2: string): boolean;
 				});
+				public constructor();
 				public setViewValue(param0: android.view.View, param1: any, param2: string): boolean;
 			}
 		}
@@ -67217,21 +67669,23 @@ declare module android {
 			export class CursorToStringConverter extends java.lang.Object {
 				public static class: java.lang.Class<android.widget.SimpleCursorAdapter.CursorToStringConverter>;
 				/**
-				 * Constructs a new instance of the android.widget.SimpleCursorAdapter$CursorToStringConverter interface with the provided implementation.
+				 * Constructs a new instance of the android.widget.SimpleCursorAdapter$CursorToStringConverter interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					convertToString(param0: android.database.Cursor): string;
 				});
+				public constructor();
 				public convertToString(param0: android.database.Cursor): string;
 			}
 			export class ViewBinder extends java.lang.Object {
 				public static class: java.lang.Class<android.widget.SimpleCursorAdapter.ViewBinder>;
 				/**
-				 * Constructs a new instance of the android.widget.SimpleCursorAdapter$ViewBinder interface with the provided implementation.
+				 * Constructs a new instance of the android.widget.SimpleCursorAdapter$ViewBinder interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					setViewValue(param0: android.view.View, param1: android.database.Cursor, param2: number): boolean;
 				});
+				public constructor();
 				public setViewValue(param0: android.view.View, param1: android.database.Cursor, param2: number): boolean;
 			}
 		}
@@ -67287,11 +67741,12 @@ declare module android {
 			export class ViewBinder extends java.lang.Object {
 				public static class: java.lang.Class<android.widget.SimpleCursorTreeAdapter.ViewBinder>;
 				/**
-				 * Constructs a new instance of the android.widget.SimpleCursorTreeAdapter$ViewBinder interface with the provided implementation.
+				 * Constructs a new instance of the android.widget.SimpleCursorTreeAdapter$ViewBinder interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					setViewValue(param0: android.view.View, param1: android.database.Cursor, param2: number): boolean;
 				});
+				public constructor();
 				public setViewValue(param0: android.view.View, param1: android.database.Cursor, param2: number): boolean;
 			}
 		}
@@ -67432,32 +67887,35 @@ declare module android {
 			export class OnDrawerCloseListener extends java.lang.Object {
 				public static class: java.lang.Class<android.widget.SlidingDrawer.OnDrawerCloseListener>;
 				/**
-				 * Constructs a new instance of the android.widget.SlidingDrawer$OnDrawerCloseListener interface with the provided implementation.
+				 * Constructs a new instance of the android.widget.SlidingDrawer$OnDrawerCloseListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onDrawerClosed(): void;
 				});
+				public constructor();
 				public onDrawerClosed(): void;
 			}
 			export class OnDrawerOpenListener extends java.lang.Object {
 				public static class: java.lang.Class<android.widget.SlidingDrawer.OnDrawerOpenListener>;
 				/**
-				 * Constructs a new instance of the android.widget.SlidingDrawer$OnDrawerOpenListener interface with the provided implementation.
+				 * Constructs a new instance of the android.widget.SlidingDrawer$OnDrawerOpenListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onDrawerOpened(): void;
 				});
+				public constructor();
 				public onDrawerOpened(): void;
 			}
 			export class OnDrawerScrollListener extends java.lang.Object {
 				public static class: java.lang.Class<android.widget.SlidingDrawer.OnDrawerScrollListener>;
 				/**
-				 * Constructs a new instance of the android.widget.SlidingDrawer$OnDrawerScrollListener interface with the provided implementation.
+				 * Constructs a new instance of the android.widget.SlidingDrawer$OnDrawerScrollListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onScrollStarted(): void;
 					onScrollEnded(): void;
 				});
+				public constructor();
 				public onScrollStarted(): void;
 				public onScrollEnded(): void;
 			}
@@ -67601,7 +68059,7 @@ declare module android {
 		export class SpinnerAdapter extends java.lang.Object implements android.widget.Adapter {
 			public static class: java.lang.Class<android.widget.SpinnerAdapter>;
 			/**
-			 * Constructs a new instance of the android.widget.SpinnerAdapter interface with the provided implementation.
+			 * Constructs a new instance of the android.widget.SpinnerAdapter interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				getDropDownView(param0: number, param1: android.view.View, param2: android.view.ViewGroup): android.view.View;
@@ -67616,6 +68074,7 @@ declare module android {
 				getViewTypeCount(): number;
 				isEmpty(): boolean;
 			});
+			public constructor();
 			public static NO_SELECTION: number;
 			public static IGNORE_ITEM_VIEW_TYPE: number;
 			public unregisterDataSetObserver(param0: android.database.DataSetObserver): void;
@@ -67880,21 +68339,23 @@ declare module android {
 			export class OnTabChangeListener extends java.lang.Object {
 				public static class: java.lang.Class<android.widget.TabHost.OnTabChangeListener>;
 				/**
-				 * Constructs a new instance of the android.widget.TabHost$OnTabChangeListener interface with the provided implementation.
+				 * Constructs a new instance of the android.widget.TabHost$OnTabChangeListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onTabChanged(param0: string): void;
 				});
+				public constructor();
 				public onTabChanged(param0: string): void;
 			}
 			export class TabContentFactory extends java.lang.Object {
 				public static class: java.lang.Class<android.widget.TabHost.TabContentFactory>;
 				/**
-				 * Constructs a new instance of the android.widget.TabHost$TabContentFactory interface with the provided implementation.
+				 * Constructs a new instance of the android.widget.TabHost$TabContentFactory interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					createTabContent(param0: string): android.view.View;
 				});
+				public constructor();
 				public createTabContent(param0: string): android.view.View;
 			}
 			export class TabSpec extends java.lang.Object {
@@ -68615,11 +69076,12 @@ declare module android {
 			export class OnEditorActionListener extends java.lang.Object {
 				public static class: java.lang.Class<android.widget.TextView.OnEditorActionListener>;
 				/**
-				 * Constructs a new instance of the android.widget.TextView$OnEditorActionListener interface with the provided implementation.
+				 * Constructs a new instance of the android.widget.TextView$OnEditorActionListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onEditorAction(param0: android.widget.TextView, param1: number, param2: android.view.KeyEvent): boolean;
 				});
+				public constructor();
 				public onEditorAction(param0: android.widget.TextView, param1: number, param2: android.view.KeyEvent): boolean;
 			}
 			export class SavedState extends android.view.View.BaseSavedState {
@@ -68638,7 +69100,7 @@ declare module android {
 		export class ThemedSpinnerAdapter extends java.lang.Object implements android.widget.SpinnerAdapter {
 			public static class: java.lang.Class<android.widget.ThemedSpinnerAdapter>;
 			/**
-			 * Constructs a new instance of the android.widget.ThemedSpinnerAdapter interface with the provided implementation.
+			 * Constructs a new instance of the android.widget.ThemedSpinnerAdapter interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				setDropDownViewTheme(param0: android.content.res.Resources.Theme): void;
@@ -68655,6 +69117,7 @@ declare module android {
 				getViewTypeCount(): number;
 				isEmpty(): boolean;
 			});
+			public constructor();
 			public static NO_SELECTION: number;
 			public static IGNORE_ITEM_VIEW_TYPE: number;
 			public getItem(param0: number): any;
@@ -68765,11 +69228,12 @@ declare module android {
 			export class OnTimeChangedListener extends java.lang.Object {
 				public static class: java.lang.Class<android.widget.TimePicker.OnTimeChangedListener>;
 				/**
-				 * Constructs a new instance of the android.widget.TimePicker$OnTimeChangedListener interface with the provided implementation.
+				 * Constructs a new instance of the android.widget.TimePicker$OnTimeChangedListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onTimeChanged(param0: android.widget.TimePicker, param1: number, param2: number): void;
 				});
+				public constructor();
 				public onTimeChanged(param0: android.widget.TimePicker, param1: number, param2: number): void;
 			}
 		}
@@ -68996,11 +69460,12 @@ declare module android {
 			export class OnMenuItemClickListener extends java.lang.Object {
 				public static class: java.lang.Class<android.widget.Toolbar.OnMenuItemClickListener>;
 				/**
-				 * Constructs a new instance of the android.widget.Toolbar$OnMenuItemClickListener interface with the provided implementation.
+				 * Constructs a new instance of the android.widget.Toolbar$OnMenuItemClickListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onMenuItemClick(param0: android.view.MenuItem): boolean;
 				});
+				public constructor();
 				public onMenuItemClick(param0: android.view.MenuItem): boolean;
 			}
 		}
@@ -69392,11 +69857,12 @@ declare module android {
 			export class ViewFactory extends java.lang.Object {
 				public static class: java.lang.Class<android.widget.ViewSwitcher.ViewFactory>;
 				/**
-				 * Constructs a new instance of the android.widget.ViewSwitcher$ViewFactory interface with the provided implementation.
+				 * Constructs a new instance of the android.widget.ViewSwitcher$ViewFactory interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					makeView(): android.view.View;
 				});
+				public constructor();
 				public makeView(): android.view.View;
 			}
 		}
@@ -69408,7 +69874,7 @@ declare module android {
 		export class WrapperListAdapter extends java.lang.Object implements android.widget.ListAdapter {
 			public static class: java.lang.Class<android.widget.WrapperListAdapter>;
 			/**
-			 * Constructs a new instance of the android.widget.WrapperListAdapter interface with the provided implementation.
+			 * Constructs a new instance of the android.widget.WrapperListAdapter interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				getWrappedAdapter(): android.widget.ListAdapter;
@@ -69425,6 +69891,7 @@ declare module android {
 				getViewTypeCount(): number;
 				isEmpty(): boolean;
 			});
+			public constructor();
 			public static NO_SELECTION: number;
 			public static IGNORE_ITEM_VIEW_TYPE: number;
 			public getItem(param0: number): any;
@@ -69494,12 +69961,13 @@ declare module android {
 			export class OnZoomListener extends java.lang.Object {
 				public static class: java.lang.Class<android.widget.ZoomButtonsController.OnZoomListener>;
 				/**
-				 * Constructs a new instance of the android.widget.ZoomButtonsController$OnZoomListener interface with the provided implementation.
+				 * Constructs a new instance of the android.widget.ZoomButtonsController$OnZoomListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					onVisibilityChanged(param0: boolean): void;
 					onZoom(param0: boolean): void;
 				});
+				public constructor();
 				public onVisibilityChanged(param0: boolean): void;
 				public onZoom(param0: boolean): void;
 			}
@@ -69597,11 +70065,12 @@ declare module com {
 				export class Predicate<T>  extends java.lang.Object {
 					public static class: java.lang.Class<com.android.internal.util.Predicate<any>>;
 					/**
-					 * Constructs a new instance of the com.android.internal.util.Predicate<any> interface with the provided implementation.
+					 * Constructs a new instance of the com.android.internal.util.Predicate<any> interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 					 */
 					public constructor(implementation: {
 						apply(param0: T): boolean;
 					});
+					public constructor();
 					public apply(param0: T): boolean;
 				}
 			}
@@ -69614,7 +70083,7 @@ declare module dalvik {
 		export class TestTarget extends java.lang.Object implements java.lang.annotation.Annotation {
 			public static class: java.lang.Class<dalvik.annotation.TestTarget>;
 			/**
-			 * Constructs a new instance of the dalvik.annotation.TestTarget interface with the provided implementation.
+			 * Constructs a new instance of the dalvik.annotation.TestTarget interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				methodName(): string;
@@ -69625,6 +70094,7 @@ declare module dalvik {
 				toString(): string;
 				annotationType(): java.lang.Class<any>;
 			});
+			public constructor();
 			public equals(param0: any): boolean;
 			public toString(): string;
 			public methodName(): string;
@@ -69641,7 +70111,7 @@ declare module dalvik {
 		export class TestTargetClass extends java.lang.Object implements java.lang.annotation.Annotation {
 			public static class: java.lang.Class<dalvik.annotation.TestTargetClass>;
 			/**
-			 * Constructs a new instance of the dalvik.annotation.TestTargetClass interface with the provided implementation.
+			 * Constructs a new instance of the dalvik.annotation.TestTargetClass interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				value(): java.lang.Class<any>;
@@ -69650,6 +70120,7 @@ declare module dalvik {
 				toString(): string;
 				annotationType(): java.lang.Class<any>;
 			});
+			public constructor();
 			public equals(param0: any): boolean;
 			public toString(): string;
 			public value(): java.lang.Class<any>;
@@ -69674,10 +70145,11 @@ declare module dalvik {
 		export class Opcodes extends java.lang.Object {
 			public static class: java.lang.Class<dalvik.bytecode.Opcodes>;
 			/**
-			 * Constructs a new instance of the dalvik.bytecode.Opcodes interface with the provided implementation.
+			 * Constructs a new instance of the dalvik.bytecode.Opcodes interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 			});
+			public constructor();
 			public static OP_IF_LTZ: number;
 			public static OP_IPUT_WIDE_JUMBO: number;
 			public static OP_DOUBLE_TO_LONG: number;
@@ -70210,11 +70682,12 @@ declare module java {
 		export class PropertyChangeListener extends java.lang.Object implements java.util.EventListener {
 			public static class: java.lang.Class<java.beans.PropertyChangeListener>;
 			/**
-			 * Constructs a new instance of the java.beans.PropertyChangeListener interface with the provided implementation.
+			 * Constructs a new instance of the java.beans.PropertyChangeListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				propertyChange(param0: java.beans.PropertyChangeEvent): void;
 			});
+			public constructor();
 			public propertyChange(param0: java.beans.PropertyChangeEvent): void;
 		}
 	}
@@ -70468,12 +70941,13 @@ declare module java {
 		export class Closeable extends java.lang.Object implements java.lang.AutoCloseable {
 			public static class: java.lang.Class<java.io.Closeable>;
 			/**
-			 * Constructs a new instance of the java.io.Closeable interface with the provided implementation.
+			 * Constructs a new instance of the java.io.Closeable interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				close(): void;
 				close(): void;
 			});
+			public constructor();
 			public close(): void;
 		}
 	}
@@ -70501,7 +70975,7 @@ declare module java {
 		export class DataInput extends java.lang.Object {
 			public static class: java.lang.Class<java.io.DataInput>;
 			/**
-			 * Constructs a new instance of the java.io.DataInput interface with the provided implementation.
+			 * Constructs a new instance of the java.io.DataInput interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				readFully(param0: native.Array<number>): void;
@@ -70520,6 +70994,7 @@ declare module java {
 				readLine(): string;
 				readUTF(): string;
 			});
+			public constructor();
 			public readLine(): string;
 			public readUnsignedShort(): number;
 			public readLong(): number;
@@ -70574,7 +71049,7 @@ declare module java {
 		export class DataOutput extends java.lang.Object {
 			public static class: java.lang.Class<java.io.DataOutput>;
 			/**
-			 * Constructs a new instance of the java.io.DataOutput interface with the provided implementation.
+			 * Constructs a new instance of the java.io.DataOutput interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				write(param0: number): void;
@@ -70592,6 +71067,7 @@ declare module java {
 				writeChars(param0: string): void;
 				writeUTF(param0: string): void;
 			});
+			public constructor();
 			public writeInt(param0: number): void;
 			public writeLong(param0: number): void;
 			public writeUTF(param0: string): void;
@@ -70656,12 +71132,13 @@ declare module java {
 		export class Externalizable extends java.lang.Object implements java.io.Serializable {
 			public static class: java.lang.Class<java.io.Externalizable>;
 			/**
-			 * Constructs a new instance of the java.io.Externalizable interface with the provided implementation.
+			 * Constructs a new instance of the java.io.Externalizable interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				writeExternal(param0: java.io.ObjectOutput): void;
 				readExternal(param0: java.io.ObjectInput): void;
 			});
+			public constructor();
 			public readExternal(param0: java.io.ObjectInput): void;
 			public writeExternal(param0: java.io.ObjectOutput): void;
 		}
@@ -70752,11 +71229,12 @@ declare module java {
 		export class FileFilter extends java.lang.Object {
 			public static class: java.lang.Class<java.io.FileFilter>;
 			/**
-			 * Constructs a new instance of the java.io.FileFilter interface with the provided implementation.
+			 * Constructs a new instance of the java.io.FileFilter interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				accept(param0: java.io.File): boolean;
 			});
+			public constructor();
 			public accept(param0: java.io.File): boolean;
 		}
 	}
@@ -70883,11 +71361,12 @@ declare module java {
 		export class FilenameFilter extends java.lang.Object {
 			public static class: java.lang.Class<java.io.FilenameFilter>;
 			/**
-			 * Constructs a new instance of the java.io.FilenameFilter interface with the provided implementation.
+			 * Constructs a new instance of the java.io.FilenameFilter interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				accept(param0: java.io.File, param1: string): boolean;
 			});
+			public constructor();
 			public accept(param0: java.io.File, param1: string): boolean;
 		}
 	}
@@ -70979,11 +71458,12 @@ declare module java {
 		export class Flushable extends java.lang.Object {
 			public static class: java.lang.Class<java.io.Flushable>;
 			/**
-			 * Constructs a new instance of the java.io.Flushable interface with the provided implementation.
+			 * Constructs a new instance of the java.io.Flushable interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				flush(): void;
 			});
+			public constructor();
 			public flush(): void;
 		}
 	}
@@ -71171,7 +71651,7 @@ declare module java {
 		export class ObjectInput extends java.lang.Object implements java.io.DataInput, java.lang.AutoCloseable {
 			public static class: java.lang.Class<java.io.ObjectInput>;
 			/**
-			 * Constructs a new instance of the java.io.ObjectInput interface with the provided implementation.
+			 * Constructs a new instance of the java.io.ObjectInput interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				readObject(): any;
@@ -71198,6 +71678,7 @@ declare module java {
 				readUTF(): string;
 				close(): void;
 			});
+			public constructor();
 			public readLine(): string;
 			public readUnsignedShort(): number;
 			public readLong(): number;
@@ -71284,11 +71765,12 @@ declare module java {
 		export class ObjectInputValidation extends java.lang.Object {
 			public static class: java.lang.Class<java.io.ObjectInputValidation>;
 			/**
-			 * Constructs a new instance of the java.io.ObjectInputValidation interface with the provided implementation.
+			 * Constructs a new instance of the java.io.ObjectInputValidation interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				validateObject(): void;
 			});
+			public constructor();
 			public validateObject(): void;
 		}
 	}
@@ -71299,7 +71781,7 @@ declare module java {
 		export class ObjectOutput extends java.lang.Object implements java.io.DataOutput, java.lang.AutoCloseable {
 			public static class: java.lang.Class<java.io.ObjectOutput>;
 			/**
-			 * Constructs a new instance of the java.io.ObjectOutput interface with the provided implementation.
+			 * Constructs a new instance of the java.io.ObjectOutput interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				writeObject(param0: any): void;
@@ -71324,6 +71806,7 @@ declare module java {
 				writeUTF(param0: string): void;
 				close(): void;
 			});
+			public constructor();
 			public flush(): void;
 			public writeInt(param0: number): void;
 			public writeLong(param0: number): void;
@@ -71419,11 +71902,12 @@ declare module java {
 		export class ObjectStreamConstants extends java.lang.Object {
 			public static class: java.lang.Class<java.io.ObjectStreamConstants>;
 			/**
-			 * Constructs a new instance of the java.io.ObjectStreamConstants interface with the provided implementation.
+			 * Constructs a new instance of the java.io.ObjectStreamConstants interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				<clinit>(): void;
 			});
+			public constructor();
 			public static TC_BLOCKDATA: number;
 			public static TC_REFERENCE: number;
 			public static TC_MAX: number;
@@ -71857,10 +72341,11 @@ declare module java {
 		export class Serializable extends java.lang.Object {
 			public static class: java.lang.Class<java.io.Serializable>;
 			/**
-			 * Constructs a new instance of the java.io.Serializable interface with the provided implementation.
+			 * Constructs a new instance of the java.io.Serializable interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 			});
+			public constructor();
 		}
 	}
 }
@@ -72132,13 +72617,14 @@ declare module java {
 		export class Appendable extends java.lang.Object {
 			public static class: java.lang.Class<java.lang.Appendable>;
 			/**
-			 * Constructs a new instance of the java.lang.Appendable interface with the provided implementation.
+			 * Constructs a new instance of the java.lang.Appendable interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				append(param0: string): java.lang.Appendable;
 				append(param0: string, param1: number, param2: number): java.lang.Appendable;
 				append(param0: string): java.lang.Appendable;
 			});
+			public constructor();
 			public append(param0: string, param1: number, param2: number): java.lang.Appendable;
 			public append(param0: string): java.lang.Appendable;
 		}
@@ -72206,11 +72692,12 @@ declare module java {
 		export class AutoCloseable extends java.lang.Object {
 			public static class: java.lang.Class<java.lang.AutoCloseable>;
 			/**
-			 * Constructs a new instance of the java.lang.AutoCloseable interface with the provided implementation.
+			 * Constructs a new instance of the java.lang.AutoCloseable interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				close(): void;
 			});
+			public constructor();
 			public close(): void;
 		}
 	}
@@ -72284,7 +72771,7 @@ declare module java {
 		export class CharSequence extends java.lang.Object {
 			public static class: java.lang.Class<java.lang.CharSequence>;
 			/**
-			 * Constructs a new instance of the java.lang.CharSequence interface with the provided implementation.
+			 * Constructs a new instance of the java.lang.CharSequence interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				length(): number;
@@ -72294,6 +72781,7 @@ declare module java {
 				chars(): java.util.stream.IntStream;
 				codePoints(): java.util.stream.IntStream;
 			});
+			public constructor();
 			public charAt(param0: number): string;
 			public subSequence(param0: number, param1: number): string;
 			public toString(): string;
@@ -72975,10 +73463,11 @@ declare module java {
 		export class Cloneable extends java.lang.Object {
 			public static class: java.lang.Class<java.lang.Cloneable>;
 			/**
-			 * Constructs a new instance of the java.lang.Cloneable interface with the provided implementation.
+			 * Constructs a new instance of the java.lang.Cloneable interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 			});
+			public constructor();
 		}
 	}
 }
@@ -72988,11 +73477,12 @@ declare module java {
 		export class Comparable<T>  extends java.lang.Object {
 			public static class: java.lang.Class<java.lang.Comparable<any>>;
 			/**
-			 * Constructs a new instance of the java.lang.Comparable<any> interface with the provided implementation.
+			 * Constructs a new instance of the java.lang.Comparable<any> interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				compareTo(param0: T): number;
 			});
+			public constructor();
 			public compareTo(param0: T): number;
 		}
 	}
@@ -73016,7 +73506,7 @@ declare module java {
 		export class Deprecated extends java.lang.Object implements java.lang.annotation.Annotation {
 			public static class: java.lang.Class<java.lang.Deprecated>;
 			/**
-			 * Constructs a new instance of the java.lang.Deprecated interface with the provided implementation.
+			 * Constructs a new instance of the java.lang.Deprecated interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				equals(param0: any): boolean;
@@ -73024,6 +73514,7 @@ declare module java {
 				toString(): string;
 				annotationType(): java.lang.Class<any>;
 			});
+			public constructor();
 			public equals(param0: any): boolean;
 			public toString(): string;
 			public annotationType(): java.lang.Class<any>;
@@ -73213,7 +73704,7 @@ declare module java {
 		export class FunctionalInterface extends java.lang.Object implements java.lang.annotation.Annotation {
 			public static class: java.lang.Class<java.lang.FunctionalInterface>;
 			/**
-			 * Constructs a new instance of the java.lang.FunctionalInterface interface with the provided implementation.
+			 * Constructs a new instance of the java.lang.FunctionalInterface interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				equals(param0: any): boolean;
@@ -73221,6 +73712,7 @@ declare module java {
 				toString(): string;
 				annotationType(): java.lang.Class<any>;
 			});
+			public constructor();
 			public equals(param0: any): boolean;
 			public toString(): string;
 			public annotationType(): java.lang.Class<any>;
@@ -73455,13 +73947,14 @@ declare module java {
 		export class Iterable<T>  extends java.lang.Object {
 			public static class: java.lang.Class<java.lang.Iterable<any>>;
 			/**
-			 * Constructs a new instance of the java.lang.Iterable<any> interface with the provided implementation.
+			 * Constructs a new instance of the java.lang.Iterable<any> interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				iterator(): java.util.Iterator<T>;
 				forEach(param0: any /* any*/): void;
 				spliterator(): java.util.Spliterator<T>;
 			});
+			public constructor();
 			public iterator(): java.util.Iterator<T>;
 			public spliterator(): java.util.Spliterator<T>;
 			public forEach(param0: any /* any*/): void;
@@ -73751,7 +74244,7 @@ declare module java {
 		export class Override extends java.lang.Object implements java.lang.annotation.Annotation {
 			public static class: java.lang.Class<java.lang.Override>;
 			/**
-			 * Constructs a new instance of the java.lang.Override interface with the provided implementation.
+			 * Constructs a new instance of the java.lang.Override interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				equals(param0: any): boolean;
@@ -73759,6 +74252,7 @@ declare module java {
 				toString(): string;
 				annotationType(): java.lang.Class<any>;
 			});
+			public constructor();
 			public equals(param0: any): boolean;
 			public toString(): string;
 			public annotationType(): java.lang.Class<any>;
@@ -73835,11 +74329,12 @@ declare module java {
 		export class Readable extends java.lang.Object {
 			public static class: java.lang.Class<java.lang.Readable>;
 			/**
-			 * Constructs a new instance of the java.lang.Readable interface with the provided implementation.
+			 * Constructs a new instance of the java.lang.Readable interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				read(param0: java.nio.CharBuffer): number;
 			});
+			public constructor();
 			public read(param0: java.nio.CharBuffer): number;
 		}
 	}
@@ -73863,11 +74358,12 @@ declare module java {
 		export class Runnable extends java.lang.Object {
 			public static class: java.lang.Class<java.lang.Runnable>;
 			/**
-			 * Constructs a new instance of the java.lang.Runnable interface with the provided implementation.
+			 * Constructs a new instance of the java.lang.Runnable interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				run(): void;
 			});
+			public constructor();
 			public run(): void;
 		}
 	}
@@ -73934,7 +74430,7 @@ declare module java {
 		export class SafeVarargs extends java.lang.Object implements java.lang.annotation.Annotation {
 			public static class: java.lang.Class<java.lang.SafeVarargs>;
 			/**
-			 * Constructs a new instance of the java.lang.SafeVarargs interface with the provided implementation.
+			 * Constructs a new instance of the java.lang.SafeVarargs interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				equals(param0: any): boolean;
@@ -73942,6 +74438,7 @@ declare module java {
 				toString(): string;
 				annotationType(): java.lang.Class<any>;
 			});
+			public constructor();
 			public equals(param0: any): boolean;
 			public toString(): string;
 			public annotationType(): java.lang.Class<any>;
@@ -74337,7 +74834,7 @@ declare module java {
 		export class SuppressWarnings extends java.lang.Object implements java.lang.annotation.Annotation {
 			public static class: java.lang.Class<java.lang.SuppressWarnings>;
 			/**
-			 * Constructs a new instance of the java.lang.SuppressWarnings interface with the provided implementation.
+			 * Constructs a new instance of the java.lang.SuppressWarnings interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				value(): native.Array<string>;
@@ -74346,6 +74843,7 @@ declare module java {
 				toString(): string;
 				annotationType(): java.lang.Class<any>;
 			});
+			public constructor();
 			public equals(param0: any): boolean;
 			public toString(): string;
 			public value(): native.Array<string>;
@@ -74468,11 +74966,12 @@ declare module java {
 			export class UncaughtExceptionHandler extends java.lang.Object {
 				public static class: java.lang.Class<java.lang.Thread.UncaughtExceptionHandler>;
 				/**
-				 * Constructs a new instance of the java.lang.Thread$UncaughtExceptionHandler interface with the provided implementation.
+				 * Constructs a new instance of the java.lang.Thread$UncaughtExceptionHandler interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					uncaughtException(param0: java.lang.Thread, param1: java.lang.Throwable): void;
 				});
+				public constructor();
 				public uncaughtException(param0: java.lang.Thread, param1: java.lang.Throwable): void;
 			}
 		}
@@ -74672,7 +75171,7 @@ declare module java {
 			export class Annotation extends java.lang.Object {
 				public static class: java.lang.Class<java.lang.annotation.Annotation>;
 				/**
-				 * Constructs a new instance of the java.lang.annotation.Annotation interface with the provided implementation.
+				 * Constructs a new instance of the java.lang.annotation.Annotation interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					equals(param0: any): boolean;
@@ -74680,6 +75179,7 @@ declare module java {
 					toString(): string;
 					annotationType(): java.lang.Class<any>;
 				});
+				public constructor();
 				public hashCode(): number;
 				public equals(param0: any): boolean;
 				public annotationType(): java.lang.Class<any>;
@@ -74728,7 +75228,7 @@ declare module java {
 			export class Documented extends java.lang.Object implements java.lang.annotation.Annotation {
 				public static class: java.lang.Class<java.lang.annotation.Documented>;
 				/**
-				 * Constructs a new instance of the java.lang.annotation.Documented interface with the provided implementation.
+				 * Constructs a new instance of the java.lang.annotation.Documented interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					equals(param0: any): boolean;
@@ -74736,6 +75236,7 @@ declare module java {
 					toString(): string;
 					annotationType(): java.lang.Class<any>;
 				});
+				public constructor();
 				public hashCode(): number;
 				public equals(param0: any): boolean;
 				public annotationType(): java.lang.Class<any>;
@@ -74790,7 +75291,7 @@ declare module java {
 			export class Inherited extends java.lang.Object implements java.lang.annotation.Annotation {
 				public static class: java.lang.Class<java.lang.annotation.Inherited>;
 				/**
-				 * Constructs a new instance of the java.lang.annotation.Inherited interface with the provided implementation.
+				 * Constructs a new instance of the java.lang.annotation.Inherited interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					equals(param0: any): boolean;
@@ -74798,6 +75299,7 @@ declare module java {
 					toString(): string;
 					annotationType(): java.lang.Class<any>;
 				});
+				public constructor();
 				public hashCode(): number;
 				public equals(param0: any): boolean;
 				public annotationType(): java.lang.Class<any>;
@@ -74813,7 +75315,7 @@ declare module java {
 			export class Repeatable extends java.lang.Object implements java.lang.annotation.Annotation {
 				public static class: java.lang.Class<java.lang.annotation.Repeatable>;
 				/**
-				 * Constructs a new instance of the java.lang.annotation.Repeatable interface with the provided implementation.
+				 * Constructs a new instance of the java.lang.annotation.Repeatable interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					value(): java.lang.Class<any>;
@@ -74822,6 +75324,7 @@ declare module java {
 					toString(): string;
 					annotationType(): java.lang.Class<any>;
 				});
+				public constructor();
 				public value(): java.lang.Class<any>;
 				public hashCode(): number;
 				public equals(param0: any): boolean;
@@ -74838,7 +75341,7 @@ declare module java {
 			export class Retention extends java.lang.Object implements java.lang.annotation.Annotation {
 				public static class: java.lang.Class<java.lang.annotation.Retention>;
 				/**
-				 * Constructs a new instance of the java.lang.annotation.Retention interface with the provided implementation.
+				 * Constructs a new instance of the java.lang.annotation.Retention interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					value(): java.lang.annotation.RetentionPolicy;
@@ -74847,6 +75350,7 @@ declare module java {
 					toString(): string;
 					annotationType(): java.lang.Class<any>;
 				});
+				public constructor();
 				public hashCode(): number;
 				public value(): java.lang.annotation.RetentionPolicy;
 				public equals(param0: any): boolean;
@@ -74879,7 +75383,7 @@ declare module java {
 			export class Target extends java.lang.Object implements java.lang.annotation.Annotation {
 				public static class: java.lang.Class<java.lang.annotation.Target>;
 				/**
-				 * Constructs a new instance of the java.lang.annotation.Target interface with the provided implementation.
+				 * Constructs a new instance of the java.lang.annotation.Target interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					value(): native.Array<java.lang.annotation.ElementType>;
@@ -74888,6 +75392,7 @@ declare module java {
 					toString(): string;
 					annotationType(): java.lang.Class<any>;
 				});
+				public constructor();
 				public hashCode(): number;
 				public equals(param0: any): boolean;
 				public annotationType(): java.lang.Class<any>;
@@ -74990,7 +75495,7 @@ declare module java {
 			export class AnnotatedElement extends java.lang.Object {
 				public static class: java.lang.Class<java.lang.reflect.AnnotatedElement>;
 				/**
-				 * Constructs a new instance of the java.lang.reflect.AnnotatedElement interface with the provided implementation.
+				 * Constructs a new instance of the java.lang.reflect.AnnotatedElement interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					isAnnotationPresent(param0: java.lang.Class<any>): boolean;
@@ -75001,6 +75506,7 @@ declare module java {
 					getDeclaredAnnotationsByType(param0: java.lang.Class<any>): native.Array<java.lang.annotation.Annotation>;
 					getAnnotationsByType(param0: java.lang.Class<any>): native.Array<java.lang.annotation.Annotation>;
 				});
+				public constructor();
 				public getAnnotation(param0: java.lang.Class<any>): java.lang.annotation.Annotation;
 				public getDeclaredAnnotations(): native.Array<java.lang.annotation.Annotation>;
 				public getDeclaredAnnotationsByType(param0: java.lang.Class<any>): native.Array<java.lang.annotation.Annotation>;
@@ -75130,11 +75636,12 @@ declare module java {
 			export class GenericArrayType extends java.lang.Object implements java.lang.reflect.Type {
 				public static class: java.lang.Class<java.lang.reflect.GenericArrayType>;
 				/**
-				 * Constructs a new instance of the java.lang.reflect.GenericArrayType interface with the provided implementation.
+				 * Constructs a new instance of the java.lang.reflect.GenericArrayType interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					getGenericComponentType(): java.lang.reflect.Type;
 				});
+				public constructor();
 				public getGenericComponentType(): java.lang.reflect.Type;
 			}
 		}
@@ -75147,11 +75654,12 @@ declare module java {
 			export class GenericDeclaration extends java.lang.Object {
 				public static class: java.lang.Class<java.lang.reflect.GenericDeclaration>;
 				/**
-				 * Constructs a new instance of the java.lang.reflect.GenericDeclaration interface with the provided implementation.
+				 * Constructs a new instance of the java.lang.reflect.GenericDeclaration interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					getTypeParameters(): native.Array<java.lang.reflect.TypeVariable<any>>;
 				});
+				public constructor();
 				public getTypeParameters(): native.Array<java.lang.reflect.TypeVariable<any>>;
 			}
 		}
@@ -75179,11 +75687,12 @@ declare module java {
 			export class InvocationHandler extends java.lang.Object {
 				public static class: java.lang.Class<java.lang.reflect.InvocationHandler>;
 				/**
-				 * Constructs a new instance of the java.lang.reflect.InvocationHandler interface with the provided implementation.
+				 * Constructs a new instance of the java.lang.reflect.InvocationHandler interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					invoke(param0: any, param1: java.lang.reflect.Method, param2: native.Array<any>): any;
 				});
+				public constructor();
 				public invoke(param0: any, param1: java.lang.reflect.Method, param2: native.Array<any>): any;
 			}
 		}
@@ -75229,7 +75738,7 @@ declare module java {
 			export class Member extends java.lang.Object {
 				public static class: java.lang.Class<java.lang.reflect.Member>;
 				/**
-				 * Constructs a new instance of the java.lang.reflect.Member interface with the provided implementation.
+				 * Constructs a new instance of the java.lang.reflect.Member interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					getDeclaringClass(): java.lang.Class<any>;
@@ -75237,6 +75746,7 @@ declare module java {
 					getModifiers(): number;
 					isSynthetic(): boolean;
 				});
+				public constructor();
 				public static PUBLIC: number;
 				public static DECLARED: number;
 				public getModifiers(): number;
@@ -75335,13 +75845,14 @@ declare module java {
 			export class ParameterizedType extends java.lang.Object implements java.lang.reflect.Type {
 				public static class: java.lang.Class<java.lang.reflect.ParameterizedType>;
 				/**
-				 * Constructs a new instance of the java.lang.reflect.ParameterizedType interface with the provided implementation.
+				 * Constructs a new instance of the java.lang.reflect.ParameterizedType interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					getActualTypeArguments(): native.Array<java.lang.reflect.Type>;
 					getRawType(): java.lang.reflect.Type;
 					getOwnerType(): java.lang.reflect.Type;
 				});
+				public constructor();
 				public getOwnerType(): java.lang.reflect.Type;
 				public getRawType(): java.lang.reflect.Type;
 				public getActualTypeArguments(): native.Array<java.lang.reflect.Type>;
@@ -75385,10 +75896,11 @@ declare module java {
 			export class Type extends java.lang.Object {
 				public static class: java.lang.Class<java.lang.reflect.Type>;
 				/**
-				 * Constructs a new instance of the java.lang.reflect.Type interface with the provided implementation.
+				 * Constructs a new instance of the java.lang.reflect.Type interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 				});
+				public constructor();
 			}
 		}
 	}
@@ -75400,13 +75912,14 @@ declare module java {
 			export class TypeVariable<D>  extends java.lang.reflect.Type {
 				public static class: java.lang.Class<java.lang.reflect.TypeVariable<any>>;
 				/**
-				 * Constructs a new instance of the java.lang.reflect.TypeVariable<any> interface with the provided implementation.
+				 * Constructs a new instance of the java.lang.reflect.TypeVariable<any> interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					getBounds(): native.Array<java.lang.reflect.Type>;
 					getGenericDeclaration(): any;
 					getName(): string;
 				});
+				public constructor();
 				public getBounds(): native.Array<java.lang.reflect.Type>;
 				public getGenericDeclaration(): any;
 				public getName(): string;
@@ -75439,12 +75952,13 @@ declare module java {
 			export class WildcardType extends java.lang.Object implements java.lang.reflect.Type {
 				public static class: java.lang.Class<java.lang.reflect.WildcardType>;
 				/**
-				 * Constructs a new instance of the java.lang.reflect.WildcardType interface with the provided implementation.
+				 * Constructs a new instance of the java.lang.reflect.WildcardType interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					getUpperBounds(): native.Array<java.lang.reflect.Type>;
 					getLowerBounds(): native.Array<java.lang.reflect.Type>;
 				});
+				public constructor();
 				public getLowerBounds(): native.Array<java.lang.reflect.Type>;
 				public getUpperBounds(): native.Array<java.lang.reflect.Type>;
 			}
@@ -75741,11 +76255,12 @@ declare module java {
 		export class ContentHandlerFactory extends java.lang.Object {
 			public static class: java.lang.Class<java.net.ContentHandlerFactory>;
 			/**
-			 * Constructs a new instance of the java.net.ContentHandlerFactory interface with the provided implementation.
+			 * Constructs a new instance of the java.net.ContentHandlerFactory interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				createContentHandler(param0: string): java.net.ContentHandler;
 			});
+			public constructor();
 			public createContentHandler(param0: string): java.net.ContentHandler;
 		}
 	}
@@ -75783,12 +76298,13 @@ declare module java {
 		export class CookiePolicy extends java.lang.Object {
 			public static class: java.lang.Class<java.net.CookiePolicy>;
 			/**
-			 * Constructs a new instance of the java.net.CookiePolicy interface with the provided implementation.
+			 * Constructs a new instance of the java.net.CookiePolicy interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				shouldAccept(param0: java.net.URI, param1: java.net.HttpCookie): boolean;
 				<clinit>(): void;
 			});
+			public constructor();
 			public static ACCEPT_NONE: java.net.CookiePolicy;
 			public static ACCEPT_ALL: java.net.CookiePolicy;
 			public static ACCEPT_ORIGINAL_SERVER: java.net.CookiePolicy;
@@ -75802,7 +76318,7 @@ declare module java {
 		export class CookieStore extends java.lang.Object {
 			public static class: java.lang.Class<java.net.CookieStore>;
 			/**
-			 * Constructs a new instance of the java.net.CookieStore interface with the provided implementation.
+			 * Constructs a new instance of the java.net.CookieStore interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				add(param0: java.net.URI, param1: java.net.HttpCookie): void;
@@ -75812,6 +76328,7 @@ declare module java {
 				remove(param0: java.net.URI, param1: java.net.HttpCookie): boolean;
 				removeAll(): boolean;
 			});
+			public constructor();
 			public removeAll(): boolean;
 			public remove(param0: java.net.URI, param1: java.net.HttpCookie): boolean;
 			public add(param0: java.net.URI, param1: java.net.HttpCookie): void;
@@ -75928,11 +76445,12 @@ declare module java {
 		export class DatagramSocketImplFactory extends java.lang.Object {
 			public static class: java.lang.Class<java.net.DatagramSocketImplFactory>;
 			/**
-			 * Constructs a new instance of the java.net.DatagramSocketImplFactory interface with the provided implementation.
+			 * Constructs a new instance of the java.net.DatagramSocketImplFactory interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				createDatagramSocketImpl(): java.net.DatagramSocketImpl;
 			});
+			public constructor();
 			public createDatagramSocketImpl(): java.net.DatagramSocketImpl;
 		}
 	}
@@ -75943,11 +76461,12 @@ declare module java {
 		export class FileNameMap extends java.lang.Object {
 			public static class: java.lang.Class<java.net.FileNameMap>;
 			/**
-			 * Constructs a new instance of the java.net.FileNameMap interface with the provided implementation.
+			 * Constructs a new instance of the java.net.FileNameMap interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				getContentTypeFor(param0: string): string;
 			});
+			public constructor();
 			public getContentTypeFor(param0: string): string;
 		}
 	}
@@ -76369,11 +76888,12 @@ declare module java {
 		export class ProtocolFamily extends java.lang.Object {
 			public static class: java.lang.Class<java.net.ProtocolFamily>;
 			/**
-			 * Constructs a new instance of the java.net.ProtocolFamily interface with the provided implementation.
+			 * Constructs a new instance of the java.net.ProtocolFamily interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				name(): string;
 			});
+			public constructor();
 			public name(): string;
 		}
 	}
@@ -76599,11 +77119,12 @@ declare module java {
 		export class SocketImplFactory extends java.lang.Object {
 			public static class: java.lang.Class<java.net.SocketImplFactory>;
 			/**
-			 * Constructs a new instance of the java.net.SocketImplFactory interface with the provided implementation.
+			 * Constructs a new instance of the java.net.SocketImplFactory interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				createSocketImpl(): java.net.SocketImpl;
 			});
+			public constructor();
 			public createSocketImpl(): java.net.SocketImpl;
 		}
 	}
@@ -76614,12 +77135,13 @@ declare module java {
 		export class SocketOption<T>  extends java.lang.Object {
 			public static class: java.lang.Class<java.net.SocketOption<any>>;
 			/**
-			 * Constructs a new instance of the java.net.SocketOption<any> interface with the provided implementation.
+			 * Constructs a new instance of the java.net.SocketOption<any> interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				name(): string;
 				type(): java.lang.Class<T>;
 			});
+			public constructor();
 			public type(): java.lang.Class<T>;
 			public name(): string;
 		}
@@ -76631,12 +77153,13 @@ declare module java {
 		export class SocketOptions extends java.lang.Object {
 			public static class: java.lang.Class<java.net.SocketOptions>;
 			/**
-			 * Constructs a new instance of the java.net.SocketOptions interface with the provided implementation.
+			 * Constructs a new instance of the java.net.SocketOptions interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				setOption(param0: number, param1: any): void;
 				getOption(param0: number): any;
 			});
+			public constructor();
 			public static SO_REUSEADDR: number;
 			public static TCP_NODELAY: number;
 			public static IP_TOS: number;
@@ -76956,11 +77479,12 @@ declare module java {
 		export class URLStreamHandlerFactory extends java.lang.Object {
 			public static class: java.lang.Class<java.net.URLStreamHandlerFactory>;
 			/**
-			 * Constructs a new instance of the java.net.URLStreamHandlerFactory interface with the provided implementation.
+			 * Constructs a new instance of the java.net.URLStreamHandlerFactory interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				createURLStreamHandler(param0: string): java.net.URLStreamHandler;
 			});
+			public constructor();
 			public createURLStreamHandler(param0: string): java.net.URLStreamHandler;
 		}
 	}
@@ -77427,7 +77951,7 @@ declare module java {
 			export class ByteChannel extends java.lang.Object implements java.nio.channels.ReadableByteChannel, java.nio.channels.WritableByteChannel {
 				public static class: java.lang.Class<java.nio.channels.ByteChannel>;
 				/**
-				 * Constructs a new instance of the java.nio.channels.ByteChannel interface with the provided implementation.
+				 * Constructs a new instance of the java.nio.channels.ByteChannel interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					read(param0: java.nio.ByteBuffer): number;
@@ -77441,6 +77965,7 @@ declare module java {
 					close(): void;
 					close(): void;
 				});
+				public constructor();
 				public close(): void;
 				public write(param0: java.nio.ByteBuffer): number;
 				public read(param0: java.nio.ByteBuffer): number;
@@ -77471,7 +77996,7 @@ declare module java {
 			export class Channel extends java.lang.Object implements java.io.Closeable {
 				public static class: java.lang.Class<java.nio.channels.Channel>;
 				/**
-				 * Constructs a new instance of the java.nio.channels.Channel interface with the provided implementation.
+				 * Constructs a new instance of the java.nio.channels.Channel interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					isOpen(): boolean;
@@ -77479,6 +78004,7 @@ declare module java {
 					close(): void;
 					close(): void;
 				});
+				public constructor();
 				public close(): void;
 				public isOpen(): boolean;
 			}
@@ -77687,7 +78213,7 @@ declare module java {
 			export class GatheringByteChannel extends java.lang.Object implements java.nio.channels.WritableByteChannel {
 				public static class: java.lang.Class<java.nio.channels.GatheringByteChannel>;
 				/**
-				 * Constructs a new instance of the java.nio.channels.GatheringByteChannel interface with the provided implementation.
+				 * Constructs a new instance of the java.nio.channels.GatheringByteChannel interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					write(param0: native.Array<java.nio.ByteBuffer>, param1: number, param2: number): number;
@@ -77698,6 +78224,7 @@ declare module java {
 					close(): void;
 					close(): void;
 				});
+				public constructor();
 				public close(): void;
 				public write(param0: java.nio.ByteBuffer): number;
 				public write(param0: native.Array<java.nio.ByteBuffer>): number;
@@ -77744,7 +78271,7 @@ declare module java {
 			export class InterruptibleChannel extends java.lang.Object implements java.nio.channels.Channel {
 				public static class: java.lang.Class<java.nio.channels.InterruptibleChannel>;
 				/**
-				 * Constructs a new instance of the java.nio.channels.InterruptibleChannel interface with the provided implementation.
+				 * Constructs a new instance of the java.nio.channels.InterruptibleChannel interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					close(): void;
@@ -77753,6 +78280,7 @@ declare module java {
 					close(): void;
 					close(): void;
 				});
+				public constructor();
 				public close(): void;
 				public isOpen(): boolean;
 			}
@@ -77766,7 +78294,7 @@ declare module java {
 			export class NetworkChannel extends java.lang.Object implements java.nio.channels.Channel {
 				public static class: java.lang.Class<java.nio.channels.NetworkChannel>;
 				/**
-				 * Constructs a new instance of the java.nio.channels.NetworkChannel interface with the provided implementation.
+				 * Constructs a new instance of the java.nio.channels.NetworkChannel interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					bind(param0: java.net.SocketAddress): java.nio.channels.NetworkChannel;
@@ -77779,6 +78307,7 @@ declare module java {
 					close(): void;
 					close(): void;
 				});
+				public constructor();
 				public getLocalAddress(): java.net.SocketAddress;
 				public bind(param0: java.net.SocketAddress): java.nio.channels.NetworkChannel;
 				public close(): void;
@@ -77925,7 +78454,7 @@ declare module java {
 			export class ReadableByteChannel extends java.lang.Object implements java.nio.channels.Channel {
 				public static class: java.lang.Class<java.nio.channels.ReadableByteChannel>;
 				/**
-				 * Constructs a new instance of the java.nio.channels.ReadableByteChannel interface with the provided implementation.
+				 * Constructs a new instance of the java.nio.channels.ReadableByteChannel interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					read(param0: java.nio.ByteBuffer): number;
@@ -77934,6 +78463,7 @@ declare module java {
 					close(): void;
 					close(): void;
 				});
+				public constructor();
 				public close(): void;
 				public read(param0: java.nio.ByteBuffer): number;
 				public isOpen(): boolean;
@@ -77948,7 +78478,7 @@ declare module java {
 			export class ScatteringByteChannel extends java.lang.Object implements java.nio.channels.ReadableByteChannel {
 				public static class: java.lang.Class<java.nio.channels.ScatteringByteChannel>;
 				/**
-				 * Constructs a new instance of the java.nio.channels.ScatteringByteChannel interface with the provided implementation.
+				 * Constructs a new instance of the java.nio.channels.ScatteringByteChannel interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					read(param0: native.Array<java.nio.ByteBuffer>, param1: number, param2: number): number;
@@ -77959,6 +78489,7 @@ declare module java {
 					close(): void;
 					close(): void;
 				});
+				public constructor();
 				public read(param0: native.Array<java.nio.ByteBuffer>): number;
 				public close(): void;
 				public read(param0: native.Array<java.nio.ByteBuffer>, param1: number, param2: number): number;
@@ -77975,7 +78506,7 @@ declare module java {
 			export class SeekableByteChannel extends java.lang.Object implements java.nio.channels.ByteChannel {
 				public static class: java.lang.Class<java.nio.channels.SeekableByteChannel>;
 				/**
-				 * Constructs a new instance of the java.nio.channels.SeekableByteChannel interface with the provided implementation.
+				 * Constructs a new instance of the java.nio.channels.SeekableByteChannel interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					read(param0: java.nio.ByteBuffer): number;
@@ -77995,6 +78526,7 @@ declare module java {
 					close(): void;
 					close(): void;
 				});
+				public constructor();
 				public position(): number;
 				public close(): void;
 				public write(param0: java.nio.ByteBuffer): number;
@@ -78179,7 +78711,7 @@ declare module java {
 			export class WritableByteChannel extends java.lang.Object implements java.nio.channels.Channel {
 				public static class: java.lang.Class<java.nio.channels.WritableByteChannel>;
 				/**
-				 * Constructs a new instance of the java.nio.channels.WritableByteChannel interface with the provided implementation.
+				 * Constructs a new instance of the java.nio.channels.WritableByteChannel interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					write(param0: java.nio.ByteBuffer): number;
@@ -78188,6 +78720,7 @@ declare module java {
 					close(): void;
 					close(): void;
 				});
+				public constructor();
 				public close(): void;
 				public write(param0: java.nio.ByteBuffer): number;
 				public isOpen(): boolean;
@@ -78611,13 +79144,14 @@ declare module java {
 		export class AlgorithmConstraints extends java.lang.Object {
 			public static class: java.lang.Class<java.security.AlgorithmConstraints>;
 			/**
-			 * Constructs a new instance of the java.security.AlgorithmConstraints interface with the provided implementation.
+			 * Constructs a new instance of the java.security.AlgorithmConstraints interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				permits(param0: java.util.Set<java.security.CryptoPrimitive>, param1: string, param2: java.security.AlgorithmParameters): boolean;
 				permits(param0: java.util.Set<java.security.CryptoPrimitive>, param1: java.security.Key): boolean;
 				permits(param0: java.util.Set<java.security.CryptoPrimitive>, param1: string, param2: java.security.Key, param3: java.security.AlgorithmParameters): boolean;
 			});
+			public constructor();
 			public permits(param0: java.util.Set<java.security.CryptoPrimitive>, param1: string, param2: java.security.AlgorithmParameters): boolean;
 			public permits(param0: java.util.Set<java.security.CryptoPrimitive>, param1: java.security.Key): boolean;
 			public permits(param0: java.util.Set<java.security.CryptoPrimitive>, param1: string, param2: java.security.Key, param3: java.security.AlgorithmParameters): boolean;
@@ -78767,7 +79301,7 @@ declare module java {
 		export class Certificate extends java.lang.Object {
 			public static class: java.lang.Class<java.security.Certificate>;
 			/**
-			 * Constructs a new instance of the java.security.Certificate interface with the provided implementation.
+			 * Constructs a new instance of the java.security.Certificate interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				getGuarantor(): java.security.Principal;
@@ -78778,6 +79312,7 @@ declare module java {
 				getFormat(): string;
 				toString(param0: boolean): string;
 			});
+			public constructor();
 			public decode(param0: java.io.InputStream): void;
 			public toString(param0: boolean): string;
 			public getPublicKey(): java.security.PublicKey;
@@ -78898,11 +79433,12 @@ declare module java {
 		export class DomainCombiner extends java.lang.Object {
 			public static class: java.lang.Class<java.security.DomainCombiner>;
 			/**
-			 * Constructs a new instance of the java.security.DomainCombiner interface with the provided implementation.
+			 * Constructs a new instance of the java.security.DomainCombiner interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				combine(param0: native.Array<java.security.ProtectionDomain>, param1: native.Array<java.security.ProtectionDomain>): native.Array<java.security.ProtectionDomain>;
 			});
+			public constructor();
 			public combine(param0: native.Array<java.security.ProtectionDomain>, param1: native.Array<java.security.ProtectionDomain>): native.Array<java.security.ProtectionDomain>;
 		}
 	}
@@ -78926,11 +79462,12 @@ declare module java {
 		export class Guard extends java.lang.Object {
 			public static class: java.lang.Class<java.security.Guard>;
 			/**
-			 * Constructs a new instance of the java.security.Guard interface with the provided implementation.
+			 * Constructs a new instance of the java.security.Guard interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				checkGuard(param0: any): void;
 			});
+			public constructor();
 			public checkGuard(param0: any): void;
 		}
 	}
@@ -79040,13 +79577,14 @@ declare module java {
 		export class Key extends java.lang.Object implements java.io.Serializable {
 			public static class: java.lang.Class<java.security.Key>;
 			/**
-			 * Constructs a new instance of the java.security.Key interface with the provided implementation.
+			 * Constructs a new instance of the java.security.Key interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				getAlgorithm(): string;
 				getFormat(): string;
 				getEncoded(): native.Array<number>;
 			});
+			public constructor();
 			public static serialVersionUID: number;
 			public getAlgorithm(): string;
 			public getFormat(): string;
@@ -79228,19 +79766,21 @@ declare module java {
 			export class Entry extends java.lang.Object {
 				public static class: java.lang.Class<java.security.KeyStore.Entry>;
 				/**
-				 * Constructs a new instance of the java.security.KeyStore$Entry interface with the provided implementation.
+				 * Constructs a new instance of the java.security.KeyStore$Entry interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 				});
+				public constructor();
 			}
 			export class LoadStoreParameter extends java.lang.Object {
 				public static class: java.lang.Class<java.security.KeyStore.LoadStoreParameter>;
 				/**
-				 * Constructs a new instance of the java.security.KeyStore$LoadStoreParameter interface with the provided implementation.
+				 * Constructs a new instance of the java.security.KeyStore$LoadStoreParameter interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					getProtectionParameter(): java.security.KeyStore.ProtectionParameter;
 				});
+				public constructor();
 				public getProtectionParameter(): java.security.KeyStore.ProtectionParameter;
 			}
 			export class PasswordProtection extends java.lang.Object implements java.security.KeyStore.ProtectionParameter, javax.security.auth.Destroyable {
@@ -79261,10 +79801,11 @@ declare module java {
 			export class ProtectionParameter extends java.lang.Object {
 				public static class: java.lang.Class<java.security.KeyStore.ProtectionParameter>;
 				/**
-				 * Constructs a new instance of the java.security.KeyStore$ProtectionParameter interface with the provided implementation.
+				 * Constructs a new instance of the java.security.KeyStore$ProtectionParameter interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 				});
+				public constructor();
 			}
 			export class SecretKeyEntry extends java.lang.Object implements java.security.KeyStore.Entry {
 				public static class: java.lang.Class<java.security.KeyStore.SecretKeyEntry>;
@@ -79458,10 +79999,11 @@ declare module java {
 			export class Parameters extends java.lang.Object {
 				public static class: java.lang.Class<java.security.Policy.Parameters>;
 				/**
-				 * Constructs a new instance of the java.security.Policy$Parameters interface with the provided implementation.
+				 * Constructs a new instance of the java.security.Policy$Parameters interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 				});
+				public constructor();
 			}
 		}
 	}
@@ -79485,7 +80027,7 @@ declare module java {
 		export class Principal extends java.lang.Object {
 			public static class: java.lang.Class<java.security.Principal>;
 			/**
-			 * Constructs a new instance of the java.security.Principal interface with the provided implementation.
+			 * Constructs a new instance of the java.security.Principal interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				equals(param0: any): boolean;
@@ -79493,6 +80035,7 @@ declare module java {
 				hashCode(): number;
 				getName(): string;
 			});
+			public constructor();
 			public equals(param0: any): boolean;
 			public toString(): string;
 			public getName(): string;
@@ -79506,13 +80049,14 @@ declare module java {
 		export class PrivateKey extends java.lang.Object implements java.security.Key {
 			public static class: java.lang.Class<java.security.PrivateKey>;
 			/**
-			 * Constructs a new instance of the java.security.PrivateKey interface with the provided implementation.
+			 * Constructs a new instance of the java.security.PrivateKey interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				getAlgorithm(): string;
 				getFormat(): string;
 				getEncoded(): native.Array<number>;
 			});
+			public constructor();
 			public static serialVersionUID: number;
 			public getAlgorithm(): string;
 			public getFormat(): string;
@@ -79526,11 +80070,12 @@ declare module java {
 		export class PrivilegedAction<T>  extends java.lang.Object {
 			public static class: java.lang.Class<java.security.PrivilegedAction<any>>;
 			/**
-			 * Constructs a new instance of the java.security.PrivilegedAction<any> interface with the provided implementation.
+			 * Constructs a new instance of the java.security.PrivilegedAction<any> interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				run(): T;
 			});
+			public constructor();
 			public run(): T;
 		}
 	}
@@ -79558,11 +80103,12 @@ declare module java {
 		export class PrivilegedExceptionAction<T>  extends java.lang.Object {
 			public static class: java.lang.Class<java.security.PrivilegedExceptionAction<any>>;
 			/**
-			 * Constructs a new instance of the java.security.PrivilegedExceptionAction<any> interface with the provided implementation.
+			 * Constructs a new instance of the java.security.PrivilegedExceptionAction<any> interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				run(): T;
 			});
+			public constructor();
 			public run(): T;
 		}
 	}
@@ -79668,13 +80214,14 @@ declare module java {
 		export class PublicKey extends java.lang.Object implements java.security.Key {
 			public static class: java.lang.Class<java.security.PublicKey>;
 			/**
-			 * Constructs a new instance of the java.security.PublicKey interface with the provided implementation.
+			 * Constructs a new instance of the java.security.PublicKey interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				getAlgorithm(): string;
 				getFormat(): string;
 				getEncoded(): native.Array<number>;
 			});
+			public constructor();
 			public static serialVersionUID: number;
 			public getAlgorithm(): string;
 			public getFormat(): string;
@@ -79934,7 +80481,7 @@ declare module java {
 			export class Acl extends java.lang.Object implements java.security.acl.Owner {
 				public static class: java.lang.Class<java.security.acl.Acl>;
 				/**
-				 * Constructs a new instance of the java.security.acl.Acl interface with the provided implementation.
+				 * Constructs a new instance of the java.security.acl.Acl interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					setName(param0: java.security.Principal, param1: string): void;
@@ -79949,6 +80496,7 @@ declare module java {
 					deleteOwner(param0: java.security.Principal, param1: java.security.Principal): boolean;
 					isOwner(param0: java.security.Principal): boolean;
 				});
+				public constructor();
 				public deleteOwner(param0: java.security.Principal, param1: java.security.Principal): boolean;
 				public isOwner(param0: java.security.Principal): boolean;
 				public addOwner(param0: java.security.Principal, param1: java.security.Principal): boolean;
@@ -79971,7 +80519,7 @@ declare module java {
 			export class AclEntry extends java.lang.Object implements java.lang.Cloneable {
 				public static class: java.lang.Class<java.security.acl.AclEntry>;
 				/**
-				 * Constructs a new instance of the java.security.acl.AclEntry interface with the provided implementation.
+				 * Constructs a new instance of the java.security.acl.AclEntry interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					setPrincipal(param0: java.security.Principal): boolean;
@@ -79985,6 +80533,7 @@ declare module java {
 					toString(): string;
 					clone(): any;
 				});
+				public constructor();
 				public addPermission(param0: java.security.acl.Permission): boolean;
 				public permissions(): java.util.Enumeration<java.security.acl.Permission>;
 				public checkPermission(param0: java.security.acl.Permission): boolean;
@@ -80021,7 +80570,7 @@ declare module java {
 			export class Group extends java.lang.Object implements java.security.Principal {
 				public static class: java.lang.Class<java.security.acl.Group>;
 				/**
-				 * Constructs a new instance of the java.security.acl.Group interface with the provided implementation.
+				 * Constructs a new instance of the java.security.acl.Group interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					addMember(param0: java.security.Principal): boolean;
@@ -80033,6 +80582,7 @@ declare module java {
 					hashCode(): number;
 					getName(): string;
 				});
+				public constructor();
 				public addMember(param0: java.security.Principal): boolean;
 				public removeMember(param0: java.security.Principal): boolean;
 				public hashCode(): number;
@@ -80082,13 +80632,14 @@ declare module java {
 			export class Owner extends java.lang.Object {
 				public static class: java.lang.Class<java.security.acl.Owner>;
 				/**
-				 * Constructs a new instance of the java.security.acl.Owner interface with the provided implementation.
+				 * Constructs a new instance of the java.security.acl.Owner interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					addOwner(param0: java.security.Principal, param1: java.security.Principal): boolean;
 					deleteOwner(param0: java.security.Principal, param1: java.security.Principal): boolean;
 					isOwner(param0: java.security.Principal): boolean;
 				});
+				public constructor();
 				public deleteOwner(param0: java.security.Principal, param1: java.security.Principal): boolean;
 				public isOwner(param0: java.security.Principal): boolean;
 				public addOwner(param0: java.security.Principal, param1: java.security.Principal): boolean;
@@ -80103,10 +80654,11 @@ declare module java {
 			export class Permission extends java.lang.Object {
 				public static class: java.lang.Class<java.security.acl.Permission>;
 				/**
-				 * Constructs a new instance of the java.security.acl.Permission interface with the provided implementation.
+				 * Constructs a new instance of the java.security.acl.Permission interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 				});
+				public constructor();
 			}
 		}
 	}
@@ -80171,12 +80723,13 @@ declare module java {
 			export class CRLSelector extends java.lang.Object implements java.lang.Cloneable {
 				public static class: java.lang.Class<java.security.cert.CRLSelector>;
 				/**
-				 * Constructs a new instance of the java.security.cert.CRLSelector interface with the provided implementation.
+				 * Constructs a new instance of the java.security.cert.CRLSelector interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					match(param0: java.security.cert.CRL): boolean;
 					clone(): any;
 				});
+				public constructor();
 				public match(param0: java.security.cert.CRL): boolean;
 				public clone(): any;
 			}
@@ -80251,12 +80804,13 @@ declare module java {
 			export class CertPathBuilderResult extends java.lang.Object implements java.lang.Cloneable {
 				public static class: java.lang.Class<java.security.cert.CertPathBuilderResult>;
 				/**
-				 * Constructs a new instance of the java.security.cert.CertPathBuilderResult interface with the provided implementation.
+				 * Constructs a new instance of the java.security.cert.CertPathBuilderResult interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					getCertPath(): java.security.cert.CertPath;
 					clone(): any;
 				});
+				public constructor();
 				public getCertPath(): java.security.cert.CertPath;
 				public clone(): any;
 			}
@@ -80283,13 +80837,14 @@ declare module java {
 			export class CertPathChecker extends java.lang.Object {
 				public static class: java.lang.Class<java.security.cert.CertPathChecker>;
 				/**
-				 * Constructs a new instance of the java.security.cert.CertPathChecker interface with the provided implementation.
+				 * Constructs a new instance of the java.security.cert.CertPathChecker interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					init(param0: boolean): void;
 					isForwardCheckingSupported(): boolean;
 					check(param0: java.security.cert.Certificate): void;
 				});
+				public constructor();
 				public init(param0: boolean): void;
 				public isForwardCheckingSupported(): boolean;
 				public check(param0: java.security.cert.Certificate): void;
@@ -80304,11 +80859,12 @@ declare module java {
 			export class CertPathParameters extends java.lang.Object implements java.lang.Cloneable {
 				public static class: java.lang.Class<java.security.cert.CertPathParameters>;
 				/**
-				 * Constructs a new instance of the java.security.cert.CertPathParameters interface with the provided implementation.
+				 * Constructs a new instance of the java.security.cert.CertPathParameters interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					clone(): any;
 				});
+				public constructor();
 				public clone(): any;
 			}
 		}
@@ -80367,10 +80923,11 @@ declare module java {
 				export class Reason extends java.lang.Object implements java.io.Serializable {
 					public static class: java.lang.Class<java.security.cert.CertPathValidatorException.Reason>;
 					/**
-					 * Constructs a new instance of the java.security.cert.CertPathValidatorException$Reason interface with the provided implementation.
+					 * Constructs a new instance of the java.security.cert.CertPathValidatorException$Reason interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 					 */
 					public constructor(implementation: {
 					});
+					public constructor();
 				}
 			}
 		}
@@ -80383,11 +80940,12 @@ declare module java {
 			export class CertPathValidatorResult extends java.lang.Object implements java.lang.Cloneable {
 				public static class: java.lang.Class<java.security.cert.CertPathValidatorResult>;
 				/**
-				 * Constructs a new instance of the java.security.cert.CertPathValidatorResult interface with the provided implementation.
+				 * Constructs a new instance of the java.security.cert.CertPathValidatorResult interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					clone(): any;
 				});
+				public constructor();
 				public clone(): any;
 			}
 		}
@@ -80413,12 +80971,13 @@ declare module java {
 			export class CertSelector extends java.lang.Object implements java.lang.Cloneable {
 				public static class: java.lang.Class<java.security.cert.CertSelector>;
 				/**
-				 * Constructs a new instance of the java.security.cert.CertSelector interface with the provided implementation.
+				 * Constructs a new instance of the java.security.cert.CertSelector interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					match(param0: java.security.cert.Certificate): boolean;
 					clone(): any;
 				});
+				public constructor();
 				public clone(): any;
 				public match(param0: java.security.cert.Certificate): boolean;
 			}
@@ -80467,11 +81026,12 @@ declare module java {
 			export class CertStoreParameters extends java.lang.Object implements java.lang.Cloneable {
 				public static class: java.lang.Class<java.security.cert.CertStoreParameters>;
 				/**
-				 * Constructs a new instance of the java.security.cert.CertStoreParameters interface with the provided implementation.
+				 * Constructs a new instance of the java.security.cert.CertStoreParameters interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					clone(): any;
 				});
+				public constructor();
 				public clone(): any;
 			}
 		}
@@ -80679,7 +81239,7 @@ declare module java {
 			export class Extension extends java.lang.Object {
 				public static class: java.lang.Class<java.security.cert.Extension>;
 				/**
-				 * Constructs a new instance of the java.security.cert.Extension interface with the provided implementation.
+				 * Constructs a new instance of the java.security.cert.Extension interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					getId(): string;
@@ -80687,6 +81247,7 @@ declare module java {
 					getValue(): native.Array<number>;
 					encode(param0: java.io.OutputStream): void;
 				});
+				public constructor();
 				public getValue(): native.Array<number>;
 				public encode(param0: java.io.OutputStream): void;
 				public getId(): string;
@@ -80886,7 +81447,7 @@ declare module java {
 			export class PolicyNode extends java.lang.Object {
 				public static class: java.lang.Class<java.security.cert.PolicyNode>;
 				/**
-				 * Constructs a new instance of the java.security.cert.PolicyNode interface with the provided implementation.
+				 * Constructs a new instance of the java.security.cert.PolicyNode interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					getParent(): java.security.cert.PolicyNode;
@@ -80897,6 +81458,7 @@ declare module java {
 					getExpectedPolicies(): java.util.Set<string>;
 					isCritical(): boolean;
 				});
+				public constructor();
 				public getParent(): java.security.cert.PolicyNode;
 				public getValidPolicy(): string;
 				public getPolicyQualifiers(): java.util.Set<any>;
@@ -81140,7 +81702,7 @@ declare module java {
 			export class X509Extension extends java.lang.Object {
 				public static class: java.lang.Class<java.security.cert.X509Extension>;
 				/**
-				 * Constructs a new instance of the java.security.cert.X509Extension interface with the provided implementation.
+				 * Constructs a new instance of the java.security.cert.X509Extension interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					hasUnsupportedCriticalExtension(): boolean;
@@ -81148,6 +81710,7 @@ declare module java {
 					getNonCriticalExtensionOIDs(): java.util.Set<string>;
 					getExtensionValue(param0: string): native.Array<number>;
 				});
+				public constructor();
 				public getCriticalExtensionOIDs(): java.util.Set<string>;
 				public hasUnsupportedCriticalExtension(): boolean;
 				public getExtensionValue(param0: string): native.Array<number>;
@@ -81163,11 +81726,12 @@ declare module java {
 			export class DSAKey extends java.lang.Object {
 				public static class: java.lang.Class<java.security.interfaces.DSAKey>;
 				/**
-				 * Constructs a new instance of the java.security.interfaces.DSAKey interface with the provided implementation.
+				 * Constructs a new instance of the java.security.interfaces.DSAKey interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					getParams(): java.security.interfaces.DSAParams;
 				});
+				public constructor();
 				public getParams(): java.security.interfaces.DSAParams;
 			}
 		}
@@ -81180,12 +81744,13 @@ declare module java {
 			export class DSAKeyPairGenerator extends java.lang.Object {
 				public static class: java.lang.Class<java.security.interfaces.DSAKeyPairGenerator>;
 				/**
-				 * Constructs a new instance of the java.security.interfaces.DSAKeyPairGenerator interface with the provided implementation.
+				 * Constructs a new instance of the java.security.interfaces.DSAKeyPairGenerator interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					initialize(param0: java.security.interfaces.DSAParams, param1: java.security.SecureRandom): void;
 					initialize(param0: number, param1: boolean, param2: java.security.SecureRandom): void;
 				});
+				public constructor();
 				public initialize(param0: java.security.interfaces.DSAParams, param1: java.security.SecureRandom): void;
 				public initialize(param0: number, param1: boolean, param2: java.security.SecureRandom): void;
 			}
@@ -81199,13 +81764,14 @@ declare module java {
 			export class DSAParams extends java.lang.Object {
 				public static class: java.lang.Class<java.security.interfaces.DSAParams>;
 				/**
-				 * Constructs a new instance of the java.security.interfaces.DSAParams interface with the provided implementation.
+				 * Constructs a new instance of the java.security.interfaces.DSAParams interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					getP(): java.math.BigInteger;
 					getQ(): java.math.BigInteger;
 					getG(): java.math.BigInteger;
 				});
+				public constructor();
 				public getQ(): java.math.BigInteger;
 				public getG(): java.math.BigInteger;
 				public getP(): java.math.BigInteger;
@@ -81220,7 +81786,7 @@ declare module java {
 			export class DSAPrivateKey extends java.lang.Object implements java.security.interfaces.DSAKey, java.security.PrivateKey {
 				public static class: java.lang.Class<java.security.interfaces.DSAPrivateKey>;
 				/**
-				 * Constructs a new instance of the java.security.interfaces.DSAPrivateKey interface with the provided implementation.
+				 * Constructs a new instance of the java.security.interfaces.DSAPrivateKey interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					getX(): java.math.BigInteger;
@@ -81229,6 +81795,7 @@ declare module java {
 					getFormat(): string;
 					getEncoded(): native.Array<number>;
 				});
+				public constructor();
 				public static serialVersionUID: number;
 				public getAlgorithm(): string;
 				public getFormat(): string;
@@ -81246,7 +81813,7 @@ declare module java {
 			export class DSAPublicKey extends java.lang.Object implements java.security.interfaces.DSAKey, java.security.PublicKey {
 				public static class: java.lang.Class<java.security.interfaces.DSAPublicKey>;
 				/**
-				 * Constructs a new instance of the java.security.interfaces.DSAPublicKey interface with the provided implementation.
+				 * Constructs a new instance of the java.security.interfaces.DSAPublicKey interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					getY(): java.math.BigInteger;
@@ -81255,6 +81822,7 @@ declare module java {
 					getFormat(): string;
 					getEncoded(): native.Array<number>;
 				});
+				public constructor();
 				public static serialVersionUID: number;
 				public getAlgorithm(): string;
 				public getFormat(): string;
@@ -81272,11 +81840,12 @@ declare module java {
 			export class ECKey extends java.lang.Object {
 				public static class: java.lang.Class<java.security.interfaces.ECKey>;
 				/**
-				 * Constructs a new instance of the java.security.interfaces.ECKey interface with the provided implementation.
+				 * Constructs a new instance of the java.security.interfaces.ECKey interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					getParams(): java.security.spec.ECParameterSpec;
 				});
+				public constructor();
 				public getParams(): java.security.spec.ECParameterSpec;
 			}
 		}
@@ -81289,7 +81858,7 @@ declare module java {
 			export class ECPrivateKey extends java.lang.Object implements java.security.PrivateKey, java.security.interfaces.ECKey {
 				public static class: java.lang.Class<java.security.interfaces.ECPrivateKey>;
 				/**
-				 * Constructs a new instance of the java.security.interfaces.ECPrivateKey interface with the provided implementation.
+				 * Constructs a new instance of the java.security.interfaces.ECPrivateKey interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					getS(): java.math.BigInteger;
@@ -81298,6 +81867,7 @@ declare module java {
 					getFormat(): string;
 					getEncoded(): native.Array<number>;
 				});
+				public constructor();
 				public static serialVersionUID: number;
 				public getAlgorithm(): string;
 				public getFormat(): string;
@@ -81315,7 +81885,7 @@ declare module java {
 			export class ECPublicKey extends java.lang.Object implements java.security.PublicKey, java.security.interfaces.ECKey {
 				public static class: java.lang.Class<java.security.interfaces.ECPublicKey>;
 				/**
-				 * Constructs a new instance of the java.security.interfaces.ECPublicKey interface with the provided implementation.
+				 * Constructs a new instance of the java.security.interfaces.ECPublicKey interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					getW(): java.security.spec.ECPoint;
@@ -81324,6 +81894,7 @@ declare module java {
 					getFormat(): string;
 					getEncoded(): native.Array<number>;
 				});
+				public constructor();
 				public static serialVersionUID: number;
 				public getAlgorithm(): string;
 				public getFormat(): string;
@@ -81341,11 +81912,12 @@ declare module java {
 			export class RSAKey extends java.lang.Object {
 				public static class: java.lang.Class<java.security.interfaces.RSAKey>;
 				/**
-				 * Constructs a new instance of the java.security.interfaces.RSAKey interface with the provided implementation.
+				 * Constructs a new instance of the java.security.interfaces.RSAKey interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					getModulus(): java.math.BigInteger;
 				});
+				public constructor();
 				public getModulus(): java.math.BigInteger;
 			}
 		}
@@ -81358,7 +81930,7 @@ declare module java {
 			export class RSAMultiPrimePrivateCrtKey extends java.lang.Object implements java.security.interfaces.RSAPrivateKey {
 				public static class: java.lang.Class<java.security.interfaces.RSAMultiPrimePrivateCrtKey>;
 				/**
-				 * Constructs a new instance of the java.security.interfaces.RSAMultiPrimePrivateCrtKey interface with the provided implementation.
+				 * Constructs a new instance of the java.security.interfaces.RSAMultiPrimePrivateCrtKey interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					getPublicExponent(): java.math.BigInteger;
@@ -81374,6 +81946,7 @@ declare module java {
 					getFormat(): string;
 					getEncoded(): native.Array<number>;
 				});
+				public constructor();
 				public static serialVersionUID: number;
 				public getPrimeQ(): java.math.BigInteger;
 				public getAlgorithm(): string;
@@ -81398,7 +81971,7 @@ declare module java {
 			export class RSAPrivateCrtKey extends java.lang.Object implements java.security.interfaces.RSAPrivateKey {
 				public static class: java.lang.Class<java.security.interfaces.RSAPrivateCrtKey>;
 				/**
-				 * Constructs a new instance of the java.security.interfaces.RSAPrivateCrtKey interface with the provided implementation.
+				 * Constructs a new instance of the java.security.interfaces.RSAPrivateCrtKey interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					getPublicExponent(): java.math.BigInteger;
@@ -81413,6 +81986,7 @@ declare module java {
 					getFormat(): string;
 					getEncoded(): native.Array<number>;
 				});
+				public constructor();
 				public static serialVersionUID: number;
 				public getPrimeQ(): java.math.BigInteger;
 				public getAlgorithm(): string;
@@ -81436,7 +82010,7 @@ declare module java {
 			export class RSAPrivateKey extends java.lang.Object implements java.security.PrivateKey, java.security.interfaces.RSAKey {
 				public static class: java.lang.Class<java.security.interfaces.RSAPrivateKey>;
 				/**
-				 * Constructs a new instance of the java.security.interfaces.RSAPrivateKey interface with the provided implementation.
+				 * Constructs a new instance of the java.security.interfaces.RSAPrivateKey interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					getPrivateExponent(): java.math.BigInteger;
@@ -81445,6 +82019,7 @@ declare module java {
 					getFormat(): string;
 					getEncoded(): native.Array<number>;
 				});
+				public constructor();
 				public static serialVersionUID: number;
 				public getAlgorithm(): string;
 				public getPrivateExponent(): java.math.BigInteger;
@@ -81462,7 +82037,7 @@ declare module java {
 			export class RSAPublicKey extends java.lang.Object implements java.security.PublicKey, java.security.interfaces.RSAKey {
 				public static class: java.lang.Class<java.security.interfaces.RSAPublicKey>;
 				/**
-				 * Constructs a new instance of the java.security.interfaces.RSAPublicKey interface with the provided implementation.
+				 * Constructs a new instance of the java.security.interfaces.RSAPublicKey interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					getPublicExponent(): java.math.BigInteger;
@@ -81471,6 +82046,7 @@ declare module java {
 					getFormat(): string;
 					getEncoded(): native.Array<number>;
 				});
+				public constructor();
 				public static serialVersionUID: number;
 				public getAlgorithm(): string;
 				public getFormat(): string;
@@ -81488,10 +82064,11 @@ declare module java {
 			export class AlgorithmParameterSpec extends java.lang.Object {
 				public static class: java.lang.Class<java.security.spec.AlgorithmParameterSpec>;
 				/**
-				 * Constructs a new instance of the java.security.spec.AlgorithmParameterSpec interface with the provided implementation.
+				 * Constructs a new instance of the java.security.spec.AlgorithmParameterSpec interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 				});
+				public constructor();
 			}
 		}
 	}
@@ -81547,11 +82124,12 @@ declare module java {
 			export class ECField extends java.lang.Object {
 				public static class: java.lang.Class<java.security.spec.ECField>;
 				/**
-				 * Constructs a new instance of the java.security.spec.ECField interface with the provided implementation.
+				 * Constructs a new instance of the java.security.spec.ECField interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					getFieldSize(): number;
 				});
+				public constructor();
 				public getFieldSize(): number;
 			}
 		}
@@ -81728,10 +82306,11 @@ declare module java {
 			export class KeySpec extends java.lang.Object {
 				public static class: java.lang.Class<java.security.spec.KeySpec>;
 				/**
-				 * Constructs a new instance of the java.security.spec.KeySpec interface with the provided implementation.
+				 * Constructs a new instance of the java.security.spec.KeySpec interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 				});
+				public constructor();
 			}
 		}
 	}
@@ -81894,7 +82473,7 @@ declare module java {
 		export class Array extends java.lang.Object {
 			public static class: java.lang.Class<java.sql.Array>;
 			/**
-			 * Constructs a new instance of the java.sql.Array interface with the provided implementation.
+			 * Constructs a new instance of the java.sql.Array interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				getBaseTypeName(): string;
@@ -81909,6 +82488,7 @@ declare module java {
 				getResultSet(param0: number, param1: number, param2: java.util.Map<string,java.lang.Class<any>>): java.sql.ResultSet;
 				free(): void;
 			});
+			public constructor();
 			public getArray(param0: number, param1: number): any;
 			public free(): void;
 			public getResultSet(): java.sql.ResultSet;
@@ -81959,7 +82539,7 @@ declare module java {
 		export class Blob extends java.lang.Object {
 			public static class: java.lang.Class<java.sql.Blob>;
 			/**
-			 * Constructs a new instance of the java.sql.Blob interface with the provided implementation.
+			 * Constructs a new instance of the java.sql.Blob interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				length(): number;
@@ -81974,6 +82554,7 @@ declare module java {
 				free(): void;
 				getBinaryStream(param0: number, param1: number): java.io.InputStream;
 			});
+			public constructor();
 			public getBinaryStream(): java.io.InputStream;
 			public free(): void;
 			public getBinaryStream(param0: number, param1: number): java.io.InputStream;
@@ -81994,7 +82575,7 @@ declare module java {
 		export class CallableStatement extends java.lang.Object implements java.sql.PreparedStatement {
 			public static class: java.lang.Class<java.sql.CallableStatement>;
 			/**
-			 * Constructs a new instance of the java.sql.CallableStatement interface with the provided implementation.
+			 * Constructs a new instance of the java.sql.CallableStatement interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				registerOutParameter(param0: number, param1: number): void;
@@ -82207,6 +82788,7 @@ declare module java {
 				isWrapperFor(param0: java.lang.Class<any>): boolean;
 				close(): void;
 			});
+			public constructor();
 			public static CLOSE_CURRENT_RESULT: number;
 			public static EXECUTE_FAILED: number;
 			public static KEEP_CURRENT_RESULT: number;
@@ -82440,7 +83022,7 @@ declare module java {
 		export class Clob extends java.lang.Object {
 			public static class: java.lang.Class<java.sql.Clob>;
 			/**
-			 * Constructs a new instance of the java.sql.Clob interface with the provided implementation.
+			 * Constructs a new instance of the java.sql.Clob interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				length(): number;
@@ -82457,6 +83039,7 @@ declare module java {
 				free(): void;
 				getCharacterStream(param0: number, param1: number): java.io.Reader;
 			});
+			public constructor();
 			public getSubString(param0: number, param1: number): string;
 			public setCharacterStream(param0: number): java.io.Writer;
 			public free(): void;
@@ -82479,7 +83062,7 @@ declare module java {
 		export class Connection extends java.lang.Object implements java.sql.Wrapper, java.lang.AutoCloseable {
 			public static class: java.lang.Class<java.sql.Connection>;
 			/**
-			 * Constructs a new instance of the java.sql.Connection interface with the provided implementation.
+			 * Constructs a new instance of the java.sql.Connection interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				createStatement(): java.sql.Statement;
@@ -82533,6 +83116,7 @@ declare module java {
 				isWrapperFor(param0: java.lang.Class<any>): boolean;
 				close(): void;
 			});
+			public constructor();
 			public static TRANSACTION_READ_COMMITTED: number;
 			public static TRANSACTION_NONE: number;
 			public static TRANSACTION_READ_UNCOMMITTED: number;
@@ -82624,7 +83208,7 @@ declare module java {
 		export class DatabaseMetaData extends java.lang.Object implements java.sql.Wrapper {
 			public static class: java.lang.Class<java.sql.DatabaseMetaData>;
 			/**
-			 * Constructs a new instance of the java.sql.DatabaseMetaData interface with the provided implementation.
+			 * Constructs a new instance of the java.sql.DatabaseMetaData interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				allProceduresAreCallable(): boolean;
@@ -82802,6 +83386,7 @@ declare module java {
 				unwrap(param0: java.lang.Class<any>): any;
 				isWrapperFor(param0: java.lang.Class<any>): boolean;
 			});
+			public constructor();
 			public static bestRowNotPseudo: number;
 			public static procedureColumnOut: number;
 			public static attributeNullableUnknown: number;
@@ -83069,7 +83654,7 @@ declare module java {
 		export class Driver extends java.lang.Object {
 			public static class: java.lang.Class<java.sql.Driver>;
 			/**
-			 * Constructs a new instance of the java.sql.Driver interface with the provided implementation.
+			 * Constructs a new instance of the java.sql.Driver interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				connect(param0: string, param1: java.util.Properties): java.sql.Connection;
@@ -83079,6 +83664,7 @@ declare module java {
 				getMinorVersion(): number;
 				jdbcCompliant(): boolean;
 			});
+			public constructor();
 			public connect(param0: string, param1: java.util.Properties): java.sql.Connection;
 			public getMinorVersion(): number;
 			public getMajorVersion(): number;
@@ -83130,7 +83716,7 @@ declare module java {
 		export class NClob extends java.lang.Object implements java.sql.Clob {
 			public static class: java.lang.Class<java.sql.NClob>;
 			/**
-			 * Constructs a new instance of the java.sql.NClob interface with the provided implementation.
+			 * Constructs a new instance of the java.sql.NClob interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				length(): number;
@@ -83147,6 +83733,7 @@ declare module java {
 				free(): void;
 				getCharacterStream(param0: number, param1: number): java.io.Reader;
 			});
+			public constructor();
 			public getSubString(param0: number, param1: number): string;
 			public setCharacterStream(param0: number): java.io.Writer;
 			public free(): void;
@@ -83169,7 +83756,7 @@ declare module java {
 		export class ParameterMetaData extends java.lang.Object implements java.sql.Wrapper {
 			public static class: java.lang.Class<java.sql.ParameterMetaData>;
 			/**
-			 * Constructs a new instance of the java.sql.ParameterMetaData interface with the provided implementation.
+			 * Constructs a new instance of the java.sql.ParameterMetaData interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				getParameterCount(): number;
@@ -83184,6 +83771,7 @@ declare module java {
 				unwrap(param0: java.lang.Class<any>): any;
 				isWrapperFor(param0: java.lang.Class<any>): boolean;
 			});
+			public constructor();
 			public static parameterNullableUnknown: number;
 			public static parameterModeIn: number;
 			public static parameterNoNulls: number;
@@ -83211,7 +83799,7 @@ declare module java {
 		export class PreparedStatement extends java.lang.Object implements java.sql.Statement {
 			public static class: java.lang.Class<java.sql.PreparedStatement>;
 			/**
-			 * Constructs a new instance of the java.sql.PreparedStatement interface with the provided implementation.
+			 * Constructs a new instance of the java.sql.PreparedStatement interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				executeQuery(): java.sql.ResultSet;
@@ -83313,6 +83901,7 @@ declare module java {
 				isWrapperFor(param0: java.lang.Class<any>): boolean;
 				close(): void;
 			});
+			public constructor();
 			public static CLOSE_CURRENT_RESULT: number;
 			public static EXECUTE_FAILED: number;
 			public static KEEP_CURRENT_RESULT: number;
@@ -83423,7 +84012,7 @@ declare module java {
 		export class Ref extends java.lang.Object {
 			public static class: java.lang.Class<java.sql.Ref>;
 			/**
-			 * Constructs a new instance of the java.sql.Ref interface with the provided implementation.
+			 * Constructs a new instance of the java.sql.Ref interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				getBaseTypeName(): string;
@@ -83431,6 +84020,7 @@ declare module java {
 				getObject(): any;
 				setObject(param0: any): void;
 			});
+			public constructor();
 			public setObject(param0: any): void;
 			public getObject(): any;
 			public getObject(param0: java.util.Map<string,java.lang.Class<any>>): any;
@@ -83444,7 +84034,7 @@ declare module java {
 		export class ResultSet extends java.lang.Object implements java.sql.Wrapper, java.lang.AutoCloseable {
 			public static class: java.lang.Class<java.sql.ResultSet>;
 			/**
-			 * Constructs a new instance of the java.sql.ResultSet interface with the provided implementation.
+			 * Constructs a new instance of the java.sql.ResultSet interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				next(): boolean;
@@ -83638,6 +84228,7 @@ declare module java {
 				isWrapperFor(param0: java.lang.Class<any>): boolean;
 				close(): void;
 			});
+			public constructor();
 			public static HOLD_CURSORS_OVER_COMMIT: number;
 			public static CLOSE_CURSORS_AT_COMMIT: number;
 			public static FETCH_UNKNOWN: number;
@@ -83840,7 +84431,7 @@ declare module java {
 		export class ResultSetMetaData extends java.lang.Object implements java.sql.Wrapper {
 			public static class: java.lang.Class<java.sql.ResultSetMetaData>;
 			/**
-			 * Constructs a new instance of the java.sql.ResultSetMetaData interface with the provided implementation.
+			 * Constructs a new instance of the java.sql.ResultSetMetaData interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				getColumnCount(): number;
@@ -83867,6 +84458,7 @@ declare module java {
 				unwrap(param0: java.lang.Class<any>): any;
 				isWrapperFor(param0: java.lang.Class<any>): boolean;
 			});
+			public constructor();
 			public static columnNullableUnknown: number;
 			public static columnNullable: number;
 			public static columnNoNulls: number;
@@ -83902,7 +84494,7 @@ declare module java {
 		export class RowId extends java.lang.Object {
 			public static class: java.lang.Class<java.sql.RowId>;
 			/**
-			 * Constructs a new instance of the java.sql.RowId interface with the provided implementation.
+			 * Constructs a new instance of the java.sql.RowId interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				equals(param0: any): boolean;
@@ -83910,6 +84502,7 @@ declare module java {
 				toString(): string;
 				hashCode(): number;
 			});
+			public constructor();
 			public equals(param0: any): boolean;
 			public toString(): string;
 			public getBytes(): native.Array<number>;
@@ -83969,13 +84562,14 @@ declare module java {
 		export class SQLData extends java.lang.Object {
 			public static class: java.lang.Class<java.sql.SQLData>;
 			/**
-			 * Constructs a new instance of the java.sql.SQLData interface with the provided implementation.
+			 * Constructs a new instance of the java.sql.SQLData interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				getSQLTypeName(): string;
 				readSQL(param0: java.sql.SQLInput, param1: string): void;
 				writeSQL(param0: java.sql.SQLOutput): void;
 			});
+			public constructor();
 			public getSQLTypeName(): string;
 			public writeSQL(param0: java.sql.SQLOutput): void;
 			public readSQL(param0: java.sql.SQLInput, param1: string): void;
@@ -84055,7 +84649,7 @@ declare module java {
 		export class SQLInput extends java.lang.Object {
 			public static class: java.lang.Class<java.sql.SQLInput>;
 			/**
-			 * Constructs a new instance of the java.sql.SQLInput interface with the provided implementation.
+			 * Constructs a new instance of the java.sql.SQLInput interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				readString(): string;
@@ -84086,6 +84680,7 @@ declare module java {
 				readSQLXML(): java.sql.SQLXML;
 				readRowId(): java.sql.RowId;
 			});
+			public constructor();
 			public readSQLXML(): java.sql.SQLXML;
 			public readBinaryStream(): java.io.InputStream;
 			public readString(): string;
@@ -84206,7 +84801,7 @@ declare module java {
 		export class SQLOutput extends java.lang.Object {
 			public static class: java.lang.Class<java.sql.SQLOutput>;
 			/**
-			 * Constructs a new instance of the java.sql.SQLOutput interface with the provided implementation.
+			 * Constructs a new instance of the java.sql.SQLOutput interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				writeString(param0: string): void;
@@ -84237,6 +84832,7 @@ declare module java {
 				writeRowId(param0: java.sql.RowId): void;
 				writeSQLXML(param0: java.sql.SQLXML): void;
 			});
+			public constructor();
 			public writeNString(param0: string): void;
 			public writeTime(param0: java.sql.Time): void;
 			public writeFloat(param0: number): void;
@@ -84433,7 +85029,7 @@ declare module java {
 		export class SQLXML extends java.lang.Object {
 			public static class: java.lang.Class<java.sql.SQLXML>;
 			/**
-			 * Constructs a new instance of the java.sql.SQLXML interface with the provided implementation.
+			 * Constructs a new instance of the java.sql.SQLXML interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				free(): void;
@@ -84446,6 +85042,7 @@ declare module java {
 				getSource(param0: java.lang.Class<any>): javax.xml.transform.Source;
 				setResult(param0: java.lang.Class<any>): javax.xml.transform.Result;
 			});
+			public constructor();
 			public setResult(param0: java.lang.Class<any>): javax.xml.transform.Result;
 			public getBinaryStream(): java.io.InputStream;
 			public free(): void;
@@ -84464,12 +85061,13 @@ declare module java {
 		export class Savepoint extends java.lang.Object {
 			public static class: java.lang.Class<java.sql.Savepoint>;
 			/**
-			 * Constructs a new instance of the java.sql.Savepoint interface with the provided implementation.
+			 * Constructs a new instance of the java.sql.Savepoint interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				getSavepointId(): number;
 				getSavepointName(): string;
 			});
+			public constructor();
 			public getSavepointId(): number;
 			public getSavepointName(): string;
 		}
@@ -84481,7 +85079,7 @@ declare module java {
 		export class Statement extends java.lang.Object implements java.sql.Wrapper, java.lang.AutoCloseable {
 			public static class: java.lang.Class<java.sql.Statement>;
 			/**
-			 * Constructs a new instance of the java.sql.Statement interface with the provided implementation.
+			 * Constructs a new instance of the java.sql.Statement interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				executeQuery(param0: string): java.sql.ResultSet;
@@ -84528,6 +85126,7 @@ declare module java {
 				isWrapperFor(param0: java.lang.Class<any>): boolean;
 				close(): void;
 			});
+			public constructor();
 			public static CLOSE_CURRENT_RESULT: number;
 			public static EXECUTE_FAILED: number;
 			public static KEEP_CURRENT_RESULT: number;
@@ -84586,13 +85185,14 @@ declare module java {
 		export class Struct extends java.lang.Object {
 			public static class: java.lang.Class<java.sql.Struct>;
 			/**
-			 * Constructs a new instance of the java.sql.Struct interface with the provided implementation.
+			 * Constructs a new instance of the java.sql.Struct interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				getSQLTypeName(): string;
 				getAttributes(): native.Array<any>;
 				getAttributes(param0: java.util.Map<string,java.lang.Class<any>>): native.Array<any>;
 			});
+			public constructor();
 			public getAttributes(param0: java.util.Map<string,java.lang.Class<any>>): native.Array<any>;
 			public getSQLTypeName(): string;
 			public getAttributes(): native.Array<any>;
@@ -84703,12 +85303,13 @@ declare module java {
 		export class Wrapper extends java.lang.Object {
 			public static class: java.lang.Class<java.sql.Wrapper>;
 			/**
-			 * Constructs a new instance of the java.sql.Wrapper interface with the provided implementation.
+			 * Constructs a new instance of the java.sql.Wrapper interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				unwrap(param0: java.lang.Class<any>): any;
 				isWrapperFor(param0: java.lang.Class<any>): boolean;
 			});
+			public constructor();
 			public isWrapperFor(param0: java.lang.Class<any>): boolean;
 			public unwrap(param0: java.lang.Class<any>): any;
 		}
@@ -84731,7 +85332,7 @@ declare module java {
 		export class AttributedCharacterIterator extends java.lang.Object implements java.text.CharacterIterator {
 			public static class: java.lang.Class<java.text.AttributedCharacterIterator>;
 			/**
-			 * Constructs a new instance of the java.text.AttributedCharacterIterator interface with the provided implementation.
+			 * Constructs a new instance of the java.text.AttributedCharacterIterator interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				getRunStart(): number;
@@ -84754,6 +85355,7 @@ declare module java {
 				getIndex(): number;
 				clone(): any;
 			});
+			public constructor();
 			public static DONE: string;
 			public getIndex(): number;
 			public getRunStart(param0: java.text.AttributedCharacterIterator.Attribute): number;
@@ -84878,7 +85480,7 @@ declare module java {
 		export class CharacterIterator extends java.lang.Object implements java.lang.Cloneable {
 			public static class: java.lang.Class<java.text.CharacterIterator>;
 			/**
-			 * Constructs a new instance of the java.text.CharacterIterator interface with the provided implementation.
+			 * Constructs a new instance of the java.text.CharacterIterator interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				first(): string;
@@ -84892,6 +85494,7 @@ declare module java {
 				getIndex(): number;
 				clone(): any;
 			});
+			public constructor();
 			public static DONE: string;
 			public getIndex(): number;
 			public clone(): any;
@@ -86139,7 +86742,7 @@ declare module java {
 		export class Collection<E>  extends java.lang.Iterable<any> {
 			public static class: java.lang.Class<java.util.Collection<any>>;
 			/**
-			 * Constructs a new instance of the java.util.Collection<any> interface with the provided implementation.
+			 * Constructs a new instance of the java.util.Collection<any> interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				size(): number;
@@ -86165,6 +86768,7 @@ declare module java {
 				forEach(param0: any /* any*/): void;
 				spliterator(): java.util.Spliterator<any>;
 			});
+			public constructor();
 			public clear(): void;
 			public equals(param0: any): boolean;
 			public toArray(): native.Array<any>;
@@ -86260,7 +86864,7 @@ declare module java {
 		export class Comparator<T>  extends java.lang.Object {
 			public static class: java.lang.Class<java.util.Comparator<any>>;
 			/**
-			 * Constructs a new instance of the java.util.Comparator<any> interface with the provided implementation.
+			 * Constructs a new instance of the java.util.Comparator<any> interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				compare(param0: T, param1: T): number;
@@ -86282,6 +86886,7 @@ declare module java {
 				comparingLong(param0: any /* any*/): java.util.Comparator<any>;
 				comparingDouble(param0: any /* any*/): java.util.Comparator<any>;
 			});
+			public constructor();
 			public equals(param0: any): boolean;
 			public thenComparingDouble(param0: any /* any*/): java.util.Comparator<T>;
 			public compare(param0: T, param1: T): number;
@@ -86382,7 +86987,7 @@ declare module java {
 		export class Deque<E>  extends java.util.Queue<any> {
 			public static class: java.lang.Class<java.util.Deque<any>>;
 			/**
-			 * Constructs a new instance of the java.util.Deque<any> interface with the provided implementation.
+			 * Constructs a new instance of the java.util.Deque<any> interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				addFirst(param0: any): void;
@@ -86441,6 +87046,7 @@ declare module java {
 				forEach(param0: any /* any*/): void;
 				spliterator(): java.util.Spliterator<any>;
 			});
+			public constructor();
 			public equals(param0: any): boolean;
 			public pollLast(): any;
 			public toArray(): native.Array<any>;
@@ -86633,12 +87239,13 @@ declare module java {
 		export class Enumeration<E>  extends java.lang.Object {
 			public static class: java.lang.Class<java.util.Enumeration<any>>;
 			/**
-			 * Constructs a new instance of the java.util.Enumeration<any> interface with the provided implementation.
+			 * Constructs a new instance of the java.util.Enumeration<any> interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				hasMoreElements(): boolean;
 				nextElement(): E;
 			});
+			public constructor();
 			public hasMoreElements(): boolean;
 			public nextElement(): E;
 		}
@@ -86650,10 +87257,11 @@ declare module java {
 		export class EventListener extends java.lang.Object {
 			public static class: java.lang.Class<java.util.EventListener>;
 			/**
-			 * Constructs a new instance of the java.util.EventListener interface with the provided implementation.
+			 * Constructs a new instance of the java.util.EventListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 			});
+			public constructor();
 		}
 	}
 }
@@ -86702,11 +87310,12 @@ declare module java {
 		export class Formattable extends java.lang.Object {
 			public static class: java.lang.Class<java.util.Formattable>;
 			/**
-			 * Constructs a new instance of the java.util.Formattable interface with the provided implementation.
+			 * Constructs a new instance of the java.util.Formattable interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				formatTo(param0: java.util.Formatter, param1: number, param2: number, param3: number): void;
 			});
+			public constructor();
 			public formatTo(param0: java.util.Formatter, param1: number, param2: number, param3: number): void;
 		}
 	}
@@ -87118,7 +87727,7 @@ declare module java {
 		export class Iterator<E>  extends java.lang.Object {
 			public static class: java.lang.Class<java.util.Iterator<any>>;
 			/**
-			 * Constructs a new instance of the java.util.Iterator<any> interface with the provided implementation.
+			 * Constructs a new instance of the java.util.Iterator<any> interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				hasNext(): boolean;
@@ -87126,6 +87735,7 @@ declare module java {
 				remove(): void;
 				forEachRemaining(param0: any /* any*/): void;
 			});
+			public constructor();
 			public next(): E;
 			public hasNext(): boolean;
 			public remove(): void;
@@ -87275,7 +87885,7 @@ declare module java {
 		export class List<E>  extends java.util.Collection<any> {
 			public static class: java.lang.Class<java.util.List<any>>;
 			/**
-			 * Constructs a new instance of the java.util.List<any> interface with the provided implementation.
+			 * Constructs a new instance of the java.util.List<any> interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				size(): number;
@@ -87329,6 +87939,7 @@ declare module java {
 				forEach(param0: any /* any*/): void;
 				spliterator(): java.util.Spliterator<any>;
 			});
+			public constructor();
 			public addAll(param0: number, param1: java.util.Collection<any>): boolean;
 			public equals(param0: any): boolean;
 			public toArray(): native.Array<any>;
@@ -87370,7 +87981,7 @@ declare module java {
 		export class ListIterator<E>  extends java.util.Iterator<any> {
 			public static class: java.lang.Class<java.util.ListIterator<any>>;
 			/**
-			 * Constructs a new instance of the java.util.ListIterator<any> interface with the provided implementation.
+			 * Constructs a new instance of the java.util.ListIterator<any> interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				hasNext(): boolean;
@@ -87383,6 +87994,7 @@ declare module java {
 				set(param0: any): void;
 				add(param0: any): void;
 			});
+			public constructor();
 			public next(): any;
 			public previous(): any;
 			public hasPrevious(): boolean;
@@ -87527,7 +88139,7 @@ declare module java {
 		export class Map<K, V>  extends java.lang.Object {
 			public static class: java.lang.Class<java.util.Map<any,any>>;
 			/**
-			 * Constructs a new instance of the java.util.Map<any,any> interface with the provided implementation.
+			 * Constructs a new instance of the java.util.Map<any,any> interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				size(): number;
@@ -87556,6 +88168,7 @@ declare module java {
 				compute(param0: K, param1: any /* any<any,any,any>*/): V;
 				merge(param0: K, param1: V, param2: any /* any<any,any,any>*/): V;
 			});
+			public constructor();
 			public replaceAll(param0: any /* any<any,any,any>*/): void;
 			public equals(param0: any): boolean;
 			public put(param0: K, param1: V): V;
@@ -87586,7 +88199,7 @@ declare module java {
 			export class Entry<K, V>  extends java.lang.Object {
 				public static class: java.lang.Class<java.util.Map.Entry<any,any>>;
 				/**
-				 * Constructs a new instance of the java.util.Map$Entry interface with the provided implementation.
+				 * Constructs a new instance of the java.util.Map$Entry interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					getKey(): K;
@@ -87599,6 +88212,7 @@ declare module java {
 					comparingByKey(param0: java.util.Comparator<any>): java.util.Comparator<any>;
 					comparingByValue(param0: java.util.Comparator<any>): java.util.Comparator<any>;
 				});
+				public constructor();
 				public static comparingByKey(): java.util.Comparator<any>;
 				public getValue(): V;
 				public setValue(param0: V): V;
@@ -87664,7 +88278,7 @@ declare module java {
 		export class NavigableMap<K, V>  extends java.util.SortedMap<any,any> {
 			public static class: java.lang.Class<java.util.NavigableMap<any,any>>;
 			/**
-			 * Constructs a new instance of the java.util.NavigableMap<any,any> interface with the provided implementation.
+			 * Constructs a new instance of the java.util.NavigableMap<any,any> interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				lowerEntry(param0: any): java.util.Map.Entry<any,any>;
@@ -87723,6 +88337,7 @@ declare module java {
 				compute(param0: any, param1: any /* any<any,any,any>*/): any;
 				merge(param0: any, param1: any, param2: any /* any<any,any,any>*/): any;
 			});
+			public constructor();
 			public compute(param0: any, param1: any /* any<any,any,any>*/): any;
 			public containsValue(param0: any): boolean;
 			public firstKey(): any;
@@ -87781,7 +88396,7 @@ declare module java {
 		export class NavigableSet<E>  extends java.util.SortedSet<any> {
 			public static class: java.lang.Class<java.util.NavigableSet<any>>;
 			/**
-			 * Constructs a new instance of the java.util.NavigableSet<any> interface with the provided implementation.
+			 * Constructs a new instance of the java.util.NavigableSet<any> interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				lower(param0: any): any;
@@ -87845,6 +88460,7 @@ declare module java {
 				forEach(param0: any /* any*/): void;
 				spliterator(): java.util.Spliterator<any>;
 			});
+			public constructor();
 			public equals(param0: any): boolean;
 			public pollLast(): any;
 			public toArray(): native.Array<any>;
@@ -87945,11 +88561,12 @@ declare module java {
 		export class Observer extends java.lang.Object {
 			public static class: java.lang.Class<java.util.Observer>;
 			/**
-			 * Constructs a new instance of the java.util.Observer interface with the provided implementation.
+			 * Constructs a new instance of the java.util.Observer interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				update(param0: java.util.Observable, param1: any): void;
 			});
+			public constructor();
 			public update(param0: java.util.Observable, param1: any): void;
 		}
 	}
@@ -88040,18 +88657,19 @@ declare module java {
 		export class PrimitiveIterator<T, T_CONS>  extends java.util.Iterator<any> {
 			public static class: java.lang.Class<java.util.PrimitiveIterator<any,any>>;
 			/**
-			 * Constructs a new instance of the java.util.PrimitiveIterator<any,any> interface with the provided implementation.
+			 * Constructs a new instance of the java.util.PrimitiveIterator<any,any> interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				forEachRemaining(param0: any): void;
 			});
+			public constructor();
 			public forEachRemaining(param0: any): void;
 		}
 		export module PrimitiveIterator {
 			export class OfDouble extends java.util.PrimitiveIterator<java.lang.Double,any> {
 				public static class: java.lang.Class<java.util.PrimitiveIterator.OfDouble>;
 				/**
-				 * Constructs a new instance of the java.util.PrimitiveIterator$OfDouble interface with the provided implementation.
+				 * Constructs a new instance of the java.util.PrimitiveIterator$OfDouble interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					nextDouble(): number;
@@ -88062,6 +88680,7 @@ declare module java {
 					next(): any;
 					forEachRemaining(param0: any): void;
 				});
+				public constructor();
 				public forEachRemaining(param0: any): void;
 				public next(): java.lang.Double;
 				public forEachRemaining(param0: any /* any*/): void;
@@ -88071,7 +88690,7 @@ declare module java {
 			export class OfInt extends java.util.PrimitiveIterator<java.lang.Integer,any> {
 				public static class: java.lang.Class<java.util.PrimitiveIterator.OfInt>;
 				/**
-				 * Constructs a new instance of the java.util.PrimitiveIterator$OfInt interface with the provided implementation.
+				 * Constructs a new instance of the java.util.PrimitiveIterator$OfInt interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					nextInt(): number;
@@ -88082,6 +88701,7 @@ declare module java {
 					next(): any;
 					forEachRemaining(param0: any): void;
 				});
+				public constructor();
 				public nextInt(): number;
 				public forEachRemaining(param0: any): void;
 				public forEachRemaining(param0: any /* any*/): void;
@@ -88091,7 +88711,7 @@ declare module java {
 			export class OfLong extends java.util.PrimitiveIterator<java.lang.Long,any> {
 				public static class: java.lang.Class<java.util.PrimitiveIterator.OfLong>;
 				/**
-				 * Constructs a new instance of the java.util.PrimitiveIterator$OfLong interface with the provided implementation.
+				 * Constructs a new instance of the java.util.PrimitiveIterator$OfLong interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					nextLong(): number;
@@ -88102,6 +88722,7 @@ declare module java {
 					next(): any;
 					forEachRemaining(param0: any): void;
 				});
+				public constructor();
 				public nextLong(): number;
 				public forEachRemaining(param0: any): void;
 				public forEachRemaining(param0: any /* any*/): void;
@@ -88236,7 +88857,7 @@ declare module java {
 		export class Queue<E>  extends java.util.Collection<any> {
 			public static class: java.lang.Class<java.util.Queue<any>>;
 			/**
-			 * Constructs a new instance of the java.util.Queue<any> interface with the provided implementation.
+			 * Constructs a new instance of the java.util.Queue<any> interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				add(param0: any): boolean;
@@ -88268,6 +88889,7 @@ declare module java {
 				forEach(param0: any /* any*/): void;
 				spliterator(): java.util.Spliterator<any>;
 			});
+			public constructor();
 			public equals(param0: any): boolean;
 			public toArray(): native.Array<any>;
 			public stream(): java.util.stream.Stream<any>;
@@ -88334,10 +88956,11 @@ declare module java {
 		export class RandomAccess extends java.lang.Object {
 			public static class: java.lang.Class<java.util.RandomAccess>;
 			/**
-			 * Constructs a new instance of the java.util.RandomAccess interface with the provided implementation.
+			 * Constructs a new instance of the java.util.RandomAccess interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 			});
+			public constructor();
 		}
 	}
 }
@@ -88496,7 +89119,7 @@ declare module java {
 		export class Set<E>  extends java.util.Collection<any> {
 			public static class: java.lang.Class<java.util.Set<any>>;
 			/**
-			 * Constructs a new instance of the java.util.Set<any> interface with the provided implementation.
+			 * Constructs a new instance of the java.util.Set<any> interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				size(): number;
@@ -88538,6 +89161,7 @@ declare module java {
 				forEach(param0: any /* any*/): void;
 				spliterator(): java.util.Spliterator<any>;
 			});
+			public constructor();
 			public clear(): void;
 			public equals(param0: any): boolean;
 			public toArray(): native.Array<any>;
@@ -88604,7 +89228,7 @@ declare module java {
 		export class SortedMap<K, V>  extends java.util.Map<any,any> {
 			public static class: java.lang.Class<java.util.SortedMap<any,any>>;
 			/**
-			 * Constructs a new instance of the java.util.SortedMap<any,any> interface with the provided implementation.
+			 * Constructs a new instance of the java.util.SortedMap<any,any> interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				comparator(): java.util.Comparator<any>;
@@ -88642,6 +89266,7 @@ declare module java {
 				compute(param0: any, param1: any /* any<any,any,any>*/): any;
 				merge(param0: any, param1: any, param2: any /* any<any,any,any>*/): any;
 			});
+			public constructor();
 			public replaceAll(param0: any /* any<any,any,any>*/): void;
 			public equals(param0: any): boolean;
 			public replace(param0: any, param1: any): any;
@@ -88682,7 +89307,7 @@ declare module java {
 		export class SortedSet<E>  extends java.util.Set<any> {
 			public static class: java.lang.Class<java.util.SortedSet<any>>;
 			/**
-			 * Constructs a new instance of the java.util.SortedSet<any> interface with the provided implementation.
+			 * Constructs a new instance of the java.util.SortedSet<any> interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				comparator(): java.util.Comparator<any>;
@@ -88731,6 +89356,7 @@ declare module java {
 				forEach(param0: any /* any*/): void;
 				spliterator(): java.util.Spliterator<any>;
 			});
+			public constructor();
 			public equals(param0: any): boolean;
 			public toArray(): native.Array<any>;
 			public stream(): java.util.stream.Stream<any>;
@@ -88766,7 +89392,7 @@ declare module java {
 		export class Spliterator<T>  extends java.lang.Object {
 			public static class: java.lang.Class<java.util.Spliterator<any>>;
 			/**
-			 * Constructs a new instance of the java.util.Spliterator<any> interface with the provided implementation.
+			 * Constructs a new instance of the java.util.Spliterator<any> interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				tryAdvance(param0: any /* any*/): boolean;
@@ -88778,6 +89404,7 @@ declare module java {
 				hasCharacteristics(param0: number): boolean;
 				getComparator(): java.util.Comparator<any>;
 			});
+			public constructor();
 			public static IMMUTABLE: number;
 			public static SORTED: number;
 			public static CONCURRENT: number;
@@ -88799,7 +89426,7 @@ declare module java {
 			export class OfDouble extends java.util.Spliterator.OfPrimitive<java.lang.Double,any,java.util.Spliterator.OfDouble> {
 				public static class: java.lang.Class<java.util.Spliterator.OfDouble>;
 				/**
-				 * Constructs a new instance of the java.util.Spliterator$OfDouble interface with the provided implementation.
+				 * Constructs a new instance of the java.util.Spliterator$OfDouble interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					trySplit(): java.util.Spliterator.OfDouble;
@@ -88824,6 +89451,7 @@ declare module java {
 					hasCharacteristics(param0: number): boolean;
 					getComparator(): java.util.Comparator<any>;
 				});
+				public constructor();
 				public static IMMUTABLE: number;
 				public static SORTED: number;
 				public static CONCURRENT: number;
@@ -88850,7 +89478,7 @@ declare module java {
 			export class OfInt extends java.util.Spliterator.OfPrimitive<java.lang.Integer,any,java.util.Spliterator.OfInt> {
 				public static class: java.lang.Class<java.util.Spliterator.OfInt>;
 				/**
-				 * Constructs a new instance of the java.util.Spliterator$OfInt interface with the provided implementation.
+				 * Constructs a new instance of the java.util.Spliterator$OfInt interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					trySplit(): java.util.Spliterator.OfInt;
@@ -88875,6 +89503,7 @@ declare module java {
 					hasCharacteristics(param0: number): boolean;
 					getComparator(): java.util.Comparator<any>;
 				});
+				public constructor();
 				public static IMMUTABLE: number;
 				public static SORTED: number;
 				public static CONCURRENT: number;
@@ -88901,7 +89530,7 @@ declare module java {
 			export class OfLong extends java.util.Spliterator.OfPrimitive<java.lang.Long,any,java.util.Spliterator.OfLong> {
 				public static class: java.lang.Class<java.util.Spliterator.OfLong>;
 				/**
-				 * Constructs a new instance of the java.util.Spliterator$OfLong interface with the provided implementation.
+				 * Constructs a new instance of the java.util.Spliterator$OfLong interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					trySplit(): java.util.Spliterator.OfLong;
@@ -88926,6 +89555,7 @@ declare module java {
 					hasCharacteristics(param0: number): boolean;
 					getComparator(): java.util.Comparator<any>;
 				});
+				public constructor();
 				public static IMMUTABLE: number;
 				public static SORTED: number;
 				public static CONCURRENT: number;
@@ -88952,7 +89582,7 @@ declare module java {
 			export class OfPrimitive<T, T_CONS, T_SPLITR>  extends java.util.Spliterator<any> {
 				public static class: java.lang.Class<java.util.Spliterator.OfPrimitive<any,any,any>>;
 				/**
-				 * Constructs a new instance of the java.util.Spliterator$OfPrimitive interface with the provided implementation.
+				 * Constructs a new instance of the java.util.Spliterator$OfPrimitive interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					trySplit(): any;
@@ -88968,6 +89598,7 @@ declare module java {
 					hasCharacteristics(param0: number): boolean;
 					getComparator(): java.util.Comparator<any>;
 				});
+				public constructor();
 				public static IMMUTABLE: number;
 				public static SORTED: number;
 				public static CONCURRENT: number;
@@ -89633,7 +90264,7 @@ declare module java {
 			export class BlockingDeque<E>  extends java.lang.Object {
 				public static class: java.lang.Class<java.util.concurrent.BlockingDeque<any>>;
 				/**
-				 * Constructs a new instance of the java.util.concurrent.BlockingDeque<any> interface with the provided implementation.
+				 * Constructs a new instance of the java.util.concurrent.BlockingDeque<any> interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					addFirst(param0: E): void;
@@ -89760,6 +90391,7 @@ declare module java {
 					forEach(param0: any /* any*/): void;
 					spliterator(): java.util.Spliterator<any>;
 				});
+				public constructor();
 				public offerFirst(param0: E, param1: number, param2: java.util.concurrent.TimeUnit): boolean;
 				public put(param0: E): void;
 				public addAll(param0: java.util.Collection<any>): boolean;
@@ -89830,7 +90462,7 @@ declare module java {
 			export class BlockingQueue<E>  extends java.util.Queue<any> {
 				public static class: java.lang.Class<java.util.concurrent.BlockingQueue<any>>;
 				/**
-				 * Constructs a new instance of the java.util.concurrent.BlockingQueue<any> interface with the provided implementation.
+				 * Constructs a new instance of the java.util.concurrent.BlockingQueue<any> interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					add(param0: any): boolean;
@@ -89873,6 +90505,7 @@ declare module java {
 					forEach(param0: any /* any*/): void;
 					spliterator(): java.util.Spliterator<any>;
 				});
+				public constructor();
 				public parallelStream(): java.util.stream.Stream<any>;
 				public peek(): any;
 				public addAll(param0: java.util.Collection<any>): boolean;
@@ -89931,11 +90564,12 @@ declare module java {
 			export class Callable<V>  extends java.lang.Object {
 				public static class: java.lang.Class<java.util.concurrent.Callable<any>>;
 				/**
-				 * Constructs a new instance of the java.util.concurrent.Callable<any> interface with the provided implementation.
+				 * Constructs a new instance of the java.util.concurrent.Callable<any> interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					call(): V;
 				});
+				public constructor();
 				public call(): V;
 			}
 		}
@@ -90066,10 +90700,11 @@ declare module java {
 				export class AsynchronousCompletionTask extends java.lang.Object {
 					public static class: java.lang.Class<java.util.concurrent.CompletableFuture.AsynchronousCompletionTask>;
 					/**
-					 * Constructs a new instance of the java.util.concurrent.CompletableFuture$AsynchronousCompletionTask interface with the provided implementation.
+					 * Constructs a new instance of the java.util.concurrent.CompletableFuture$AsynchronousCompletionTask interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 					 */
 					public constructor(implementation: {
 					});
+					public constructor();
 				}
 			}
 		}
@@ -90097,7 +90732,7 @@ declare module java {
 			export class CompletionService<V>  extends java.lang.Object {
 				public static class: java.lang.Class<java.util.concurrent.CompletionService<any>>;
 				/**
-				 * Constructs a new instance of the java.util.concurrent.CompletionService<any> interface with the provided implementation.
+				 * Constructs a new instance of the java.util.concurrent.CompletionService<any> interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					submit(param0: java.util.concurrent.Callable<V>): java.util.concurrent.Future<V>;
@@ -90106,6 +90741,7 @@ declare module java {
 					poll(): java.util.concurrent.Future<V>;
 					poll(param0: number, param1: java.util.concurrent.TimeUnit): java.util.concurrent.Future<V>;
 				});
+				public constructor();
 				public take(): java.util.concurrent.Future<V>;
 				public submit(param0: java.lang.Runnable, param1: V): java.util.concurrent.Future<V>;
 				public submit(param0: java.util.concurrent.Callable<V>): java.util.concurrent.Future<V>;
@@ -90122,7 +90758,7 @@ declare module java {
 			export class CompletionStage<T>  extends java.lang.Object {
 				public static class: java.lang.Class<java.util.concurrent.CompletionStage<any>>;
 				/**
-				 * Constructs a new instance of the java.util.concurrent.CompletionStage<any> interface with the provided implementation.
+				 * Constructs a new instance of the java.util.concurrent.CompletionStage<any> interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					thenApply(param0: any /* any*/): java.util.concurrent.CompletionStage<any>;
@@ -90164,6 +90800,7 @@ declare module java {
 					exceptionally(param0: any /* any<java.lang.Throwable,any>*/): java.util.concurrent.CompletionStage<T>;
 					toCompletableFuture(): java.util.concurrent.CompletableFuture<T>;
 				});
+				public constructor();
 				public exceptionally(param0: any /* any<java.lang.Throwable,any>*/): java.util.concurrent.CompletionStage<T>;
 				public thenCombine(param0: java.util.concurrent.CompletionStage<any>, param1: any /* any*/): java.util.concurrent.CompletionStage<any>;
 				public whenCompleteAsync(param0: any /* any<any,any>*/): java.util.concurrent.CompletionStage<T>;
@@ -90438,7 +91075,7 @@ declare module java {
 			export class ConcurrentMap<K, V>  extends java.util.Map<any,any> {
 				public static class: java.lang.Class<java.util.concurrent.ConcurrentMap<any,any>>;
 				/**
-				 * Constructs a new instance of the java.util.concurrent.ConcurrentMap<any,any> interface with the provided implementation.
+				 * Constructs a new instance of the java.util.concurrent.ConcurrentMap<any,any> interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					getOrDefault(param0: any, param1: any): any;
@@ -90478,6 +91115,7 @@ declare module java {
 					compute(param0: any, param1: any /* any<any,any,any>*/): any;
 					merge(param0: any, param1: any, param2: any /* any<any,any,any>*/): any;
 				});
+				public constructor();
 				public get(param0: any): any;
 				public putAll(param0: java.util.Map<any,any>): void;
 				public merge(param0: any, param1: any, param2: any /* any<any,any,any>*/): any;
@@ -90514,7 +91152,7 @@ declare module java {
 			export class ConcurrentNavigableMap<K, V>  extends java.lang.Object {
 				public static class: java.lang.Class<java.util.concurrent.ConcurrentNavigableMap<any,any>>;
 				/**
-				 * Constructs a new instance of the java.util.concurrent.ConcurrentNavigableMap<any,any> interface with the provided implementation.
+				 * Constructs a new instance of the java.util.concurrent.ConcurrentNavigableMap<any,any> interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					subMap(param0: K, param1: boolean, param2: K, param3: boolean): java.util.concurrent.ConcurrentNavigableMap<K,V>;
@@ -90627,6 +91265,7 @@ declare module java {
 					compute(param0: K, param1: any /* any<any,any,any>*/): V;
 					merge(param0: K, param1: V, param2: any /* any<any,any,any>*/): V;
 				});
+				public constructor();
 				public computeIfPresent(param0: K, param1: any /* any<any,any,any>*/): V;
 				public floorEntry(param0: K): java.util.Map.Entry<K,V>;
 				public entrySet(): java.util.Set<java.util.Map.Entry<K,V>>;
@@ -91025,11 +91664,12 @@ declare module java {
 			export class Delayed extends java.lang.Comparable<java.util.concurrent.Delayed> {
 				public static class: java.lang.Class<java.util.concurrent.Delayed>;
 				/**
-				 * Constructs a new instance of the java.util.concurrent.Delayed interface with the provided implementation.
+				 * Constructs a new instance of the java.util.concurrent.Delayed interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					getDelay(param0: java.util.concurrent.TimeUnit): number;
 				});
+				public constructor();
 				public getDelay(param0: java.util.concurrent.TimeUnit): number;
 			}
 		}
@@ -91070,11 +91710,12 @@ declare module java {
 			export class Executor extends java.lang.Object {
 				public static class: java.lang.Class<java.util.concurrent.Executor>;
 				/**
-				 * Constructs a new instance of the java.util.concurrent.Executor interface with the provided implementation.
+				 * Constructs a new instance of the java.util.concurrent.Executor interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					execute(param0: java.lang.Runnable): void;
 				});
+				public constructor();
 				public execute(param0: java.lang.Runnable): void;
 			}
 		}
@@ -91104,7 +91745,7 @@ declare module java {
 			export class ExecutorService extends java.lang.Object implements java.util.concurrent.Executor {
 				public static class: java.lang.Class<java.util.concurrent.ExecutorService>;
 				/**
-				 * Constructs a new instance of the java.util.concurrent.ExecutorService interface with the provided implementation.
+				 * Constructs a new instance of the java.util.concurrent.ExecutorService interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					shutdown(): void;
@@ -91121,6 +91762,7 @@ declare module java {
 					invokeAny(param0: java.util.Collection<any>, param1: number, param2: java.util.concurrent.TimeUnit): any;
 					execute(param0: java.lang.Runnable): void;
 				});
+				public constructor();
 				public invokeAll(param0: java.util.Collection<any>, param1: number, param2: java.util.concurrent.TimeUnit): java.util.List<any>;
 				public isTerminated(): boolean;
 				public submit(param0: java.lang.Runnable): java.util.concurrent.Future<any>;
@@ -91226,22 +91868,24 @@ declare module java {
 				export class ForkJoinWorkerThreadFactory extends java.lang.Object {
 					public static class: java.lang.Class<java.util.concurrent.ForkJoinPool.ForkJoinWorkerThreadFactory>;
 					/**
-					 * Constructs a new instance of the java.util.concurrent.ForkJoinPool$ForkJoinWorkerThreadFactory interface with the provided implementation.
+					 * Constructs a new instance of the java.util.concurrent.ForkJoinPool$ForkJoinWorkerThreadFactory interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 					 */
 					public constructor(implementation: {
 						newThread(param0: java.util.concurrent.ForkJoinPool): java.util.concurrent.ForkJoinWorkerThread;
 					});
+					public constructor();
 					public newThread(param0: java.util.concurrent.ForkJoinPool): java.util.concurrent.ForkJoinWorkerThread;
 				}
 				export class ManagedBlocker extends java.lang.Object {
 					public static class: java.lang.Class<java.util.concurrent.ForkJoinPool.ManagedBlocker>;
 					/**
-					 * Constructs a new instance of the java.util.concurrent.ForkJoinPool$ManagedBlocker interface with the provided implementation.
+					 * Constructs a new instance of the java.util.concurrent.ForkJoinPool$ManagedBlocker interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 					 */
 					public constructor(implementation: {
 						block(): boolean;
 						isReleasable(): boolean;
 					});
+					public constructor();
 					public block(): boolean;
 					public isReleasable(): boolean;
 				}
@@ -91329,7 +91973,7 @@ declare module java {
 			export class Future<V>  extends java.lang.Object {
 				public static class: java.lang.Class<java.util.concurrent.Future<any>>;
 				/**
-				 * Constructs a new instance of the java.util.concurrent.Future<any> interface with the provided implementation.
+				 * Constructs a new instance of the java.util.concurrent.Future<any> interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					cancel(param0: boolean): boolean;
@@ -91338,6 +91982,7 @@ declare module java {
 					get(): V;
 					get(param0: number, param1: java.util.concurrent.TimeUnit): V;
 				});
+				public constructor();
 				public get(): V;
 				public isDone(): boolean;
 				public get(param0: number, param1: java.util.concurrent.TimeUnit): V;
@@ -91680,11 +92325,12 @@ declare module java {
 			export class RejectedExecutionHandler extends java.lang.Object {
 				public static class: java.lang.Class<java.util.concurrent.RejectedExecutionHandler>;
 				/**
-				 * Constructs a new instance of the java.util.concurrent.RejectedExecutionHandler interface with the provided implementation.
+				 * Constructs a new instance of the java.util.concurrent.RejectedExecutionHandler interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					rejectedExecution(param0: java.lang.Runnable, param1: java.util.concurrent.ThreadPoolExecutor): void;
 				});
+				public constructor();
 				public rejectedExecution(param0: java.lang.Runnable, param1: java.util.concurrent.ThreadPoolExecutor): void;
 			}
 		}
@@ -91697,7 +92343,7 @@ declare module java {
 			export class RunnableFuture<V>  extends java.lang.Object {
 				public static class: java.lang.Class<java.util.concurrent.RunnableFuture<any>>;
 				/**
-				 * Constructs a new instance of the java.util.concurrent.RunnableFuture<any> interface with the provided implementation.
+				 * Constructs a new instance of the java.util.concurrent.RunnableFuture<any> interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					run(): void;
@@ -91708,6 +92354,7 @@ declare module java {
 					get(): V;
 					get(param0: number, param1: java.util.concurrent.TimeUnit): V;
 				});
+				public constructor();
 				public get(): V;
 				public isDone(): boolean;
 				public get(param0: number, param1: java.util.concurrent.TimeUnit): V;
@@ -91725,7 +92372,7 @@ declare module java {
 			export class RunnableScheduledFuture<V>  extends java.lang.Object {
 				public static class: java.lang.Class<java.util.concurrent.RunnableScheduledFuture<any>>;
 				/**
-				 * Constructs a new instance of the java.util.concurrent.RunnableScheduledFuture<any> interface with the provided implementation.
+				 * Constructs a new instance of the java.util.concurrent.RunnableScheduledFuture<any> interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					isPeriodic(): boolean;
@@ -91743,6 +92390,7 @@ declare module java {
 					get(): V;
 					get(param0: number, param1: java.util.concurrent.TimeUnit): V;
 				});
+				public constructor();
 				public get(): V;
 				public getDelay(param0: java.util.concurrent.TimeUnit): number;
 				public isPeriodic(): boolean;
@@ -91762,7 +92410,7 @@ declare module java {
 			export class ScheduledExecutorService extends java.lang.Object implements java.util.concurrent.ExecutorService {
 				public static class: java.lang.Class<java.util.concurrent.ScheduledExecutorService>;
 				/**
-				 * Constructs a new instance of the java.util.concurrent.ScheduledExecutorService interface with the provided implementation.
+				 * Constructs a new instance of the java.util.concurrent.ScheduledExecutorService interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					schedule(param0: java.lang.Runnable, param1: number, param2: java.util.concurrent.TimeUnit): java.util.concurrent.ScheduledFuture<any>;
@@ -91783,6 +92431,7 @@ declare module java {
 					invokeAny(param0: java.util.Collection<any>, param1: number, param2: java.util.concurrent.TimeUnit): any;
 					execute(param0: java.lang.Runnable): void;
 				});
+				public constructor();
 				public invokeAll(param0: java.util.Collection<any>, param1: number, param2: java.util.concurrent.TimeUnit): java.util.List<any>;
 				public schedule(param0: java.util.concurrent.Callable<any>, param1: number, param2: java.util.concurrent.TimeUnit): java.util.concurrent.ScheduledFuture<any>;
 				public schedule(param0: java.lang.Runnable, param1: number, param2: java.util.concurrent.TimeUnit): java.util.concurrent.ScheduledFuture<any>;
@@ -91811,7 +92460,7 @@ declare module java {
 			export class ScheduledFuture<V>  extends java.lang.Object {
 				public static class: java.lang.Class<java.util.concurrent.ScheduledFuture<any>>;
 				/**
-				 * Constructs a new instance of the java.util.concurrent.ScheduledFuture<any> interface with the provided implementation.
+				 * Constructs a new instance of the java.util.concurrent.ScheduledFuture<any> interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					getDelay(param0: java.util.concurrent.TimeUnit): number;
@@ -91821,6 +92470,7 @@ declare module java {
 					get(): V;
 					get(param0: number, param1: java.util.concurrent.TimeUnit): V;
 				});
+				public constructor();
 				public get(): V;
 				public getDelay(param0: java.util.concurrent.TimeUnit): number;
 				public isDone(): boolean;
@@ -91958,11 +92608,12 @@ declare module java {
 			export class ThreadFactory extends java.lang.Object {
 				public static class: java.lang.Class<java.util.concurrent.ThreadFactory>;
 				/**
-				 * Constructs a new instance of the java.util.concurrent.ThreadFactory interface with the provided implementation.
+				 * Constructs a new instance of the java.util.concurrent.ThreadFactory interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					newThread(param0: java.lang.Runnable): java.lang.Thread;
 				});
+				public constructor();
 				public newThread(param0: java.lang.Runnable): java.lang.Thread;
 			}
 		}
@@ -92136,7 +92787,7 @@ declare module java {
 			export class TransferQueue<E>  extends java.util.concurrent.BlockingQueue<any> {
 				public static class: java.lang.Class<java.util.concurrent.TransferQueue<any>>;
 				/**
-				 * Constructs a new instance of the java.util.concurrent.TransferQueue<any> interface with the provided implementation.
+				 * Constructs a new instance of the java.util.concurrent.TransferQueue<any> interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					tryTransfer(param0: any): boolean;
@@ -92184,6 +92835,7 @@ declare module java {
 					forEach(param0: any /* any*/): void;
 					spliterator(): java.util.Spliterator<any>;
 				});
+				public constructor();
 				public parallelStream(): java.util.stream.Stream<any>;
 				public peek(): any;
 				public addAll(param0: java.util.Collection<any>): boolean;
@@ -92800,7 +93452,7 @@ declare module java {
 				export class Condition extends java.lang.Object {
 					public static class: java.lang.Class<java.util.concurrent.locks.Condition>;
 					/**
-					 * Constructs a new instance of the java.util.concurrent.locks.Condition interface with the provided implementation.
+					 * Constructs a new instance of the java.util.concurrent.locks.Condition interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 					 */
 					public constructor(implementation: {
 						await(): void;
@@ -92811,6 +93463,7 @@ declare module java {
 						signal(): void;
 						signalAll(): void;
 					});
+					public constructor();
 					public await(param0: number, param1: java.util.concurrent.TimeUnit): boolean;
 					public signal(): void;
 					public await(): void;
@@ -92831,7 +93484,7 @@ declare module java {
 				export class Lock extends java.lang.Object {
 					public static class: java.lang.Class<java.util.concurrent.locks.Lock>;
 					/**
-					 * Constructs a new instance of the java.util.concurrent.locks.Lock interface with the provided implementation.
+					 * Constructs a new instance of the java.util.concurrent.locks.Lock interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 					 */
 					public constructor(implementation: {
 						lock(): void;
@@ -92841,6 +93494,7 @@ declare module java {
 						unlock(): void;
 						newCondition(): java.util.concurrent.locks.Condition;
 					});
+					public constructor();
 					public lockInterruptibly(): void;
 					public unlock(): void;
 					public newCondition(): java.util.concurrent.locks.Condition;
@@ -92880,12 +93534,13 @@ declare module java {
 				export class ReadWriteLock extends java.lang.Object {
 					public static class: java.lang.Class<java.util.concurrent.locks.ReadWriteLock>;
 					/**
-					 * Constructs a new instance of the java.util.concurrent.locks.ReadWriteLock interface with the provided implementation.
+					 * Constructs a new instance of the java.util.concurrent.locks.ReadWriteLock interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 					 */
 					public constructor(implementation: {
 						readLock(): java.util.concurrent.locks.Lock;
 						writeLock(): java.util.concurrent.locks.Lock;
 					});
+					public constructor();
 					public readLock(): java.util.concurrent.locks.Lock;
 					public writeLock(): java.util.concurrent.locks.Lock;
 				}
@@ -93276,7 +93931,7 @@ declare module java {
 				export class Packer extends java.lang.Object {
 					public static class: java.lang.Class<java.util.jar.Pack200.Packer>;
 					/**
-					 * Constructs a new instance of the java.util.jar.Pack200$Packer interface with the provided implementation.
+					 * Constructs a new instance of the java.util.jar.Pack200$Packer interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 					 */
 					public constructor(implementation: {
 						properties(): java.util.SortedMap<string,string>;
@@ -93285,6 +93940,7 @@ declare module java {
 						addPropertyChangeListener(param0: java.beans.PropertyChangeListener): void;
 						removePropertyChangeListener(param0: java.beans.PropertyChangeListener): void;
 					});
+					public constructor();
 					public static CODE_ATTRIBUTE_PFX: string;
 					public static EFFORT: string;
 					public static FIELD_ATTRIBUTE_PFX: string;
@@ -93313,7 +93969,7 @@ declare module java {
 				export class Unpacker extends java.lang.Object {
 					public static class: java.lang.Class<java.util.jar.Pack200.Unpacker>;
 					/**
-					 * Constructs a new instance of the java.util.jar.Pack200$Unpacker interface with the provided implementation.
+					 * Constructs a new instance of the java.util.jar.Pack200$Unpacker interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 					 */
 					public constructor(implementation: {
 						properties(): java.util.SortedMap<string,string>;
@@ -93322,6 +93978,7 @@ declare module java {
 						addPropertyChangeListener(param0: java.beans.PropertyChangeListener): void;
 						removePropertyChangeListener(param0: java.beans.PropertyChangeListener): void;
 					});
+					public constructor();
 					public static DEFLATE_HINT: string;
 					public static PROGRESS: string;
 					public static KEEP: string;
@@ -93394,11 +94051,12 @@ declare module java {
 			export class Filter extends java.lang.Object {
 				public static class: java.lang.Class<java.util.logging.Filter>;
 				/**
-				 * Constructs a new instance of the java.util.logging.Filter interface with the provided implementation.
+				 * Constructs a new instance of the java.util.logging.Filter interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					isLoggable(param0: java.util.logging.LogRecord): boolean;
 				});
+				public constructor();
 				public isLoggable(param0: java.util.logging.LogRecord): boolean;
 			}
 		}
@@ -93599,7 +94257,7 @@ declare module java {
 			export class LoggingMXBean extends java.lang.Object {
 				public static class: java.lang.Class<java.util.logging.LoggingMXBean>;
 				/**
-				 * Constructs a new instance of the java.util.logging.LoggingMXBean interface with the provided implementation.
+				 * Constructs a new instance of the java.util.logging.LoggingMXBean interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					getLoggerNames(): java.util.List<string>;
@@ -93607,6 +94265,7 @@ declare module java {
 					setLoggerLevel(param0: string, param1: string): void;
 					getParentLoggerName(param0: string): string;
 				});
+				public constructor();
 				public getParentLoggerName(param0: string): string;
 				public setLoggerLevel(param0: string, param1: string): void;
 				public getLoggerLevel(param0: string): string;
@@ -93817,12 +94476,13 @@ declare module java {
 			export class NodeChangeListener extends java.lang.Object implements java.util.EventListener {
 				public static class: java.lang.Class<java.util.prefs.NodeChangeListener>;
 				/**
-				 * Constructs a new instance of the java.util.prefs.NodeChangeListener interface with the provided implementation.
+				 * Constructs a new instance of the java.util.prefs.NodeChangeListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					childAdded(param0: java.util.prefs.NodeChangeEvent): void;
 					childRemoved(param0: java.util.prefs.NodeChangeEvent): void;
 				});
+				public constructor();
 				public childAdded(param0: java.util.prefs.NodeChangeEvent): void;
 				public childRemoved(param0: java.util.prefs.NodeChangeEvent): void;
 			}
@@ -93851,11 +94511,12 @@ declare module java {
 			export class PreferenceChangeListener extends java.lang.Object implements java.util.EventListener {
 				public static class: java.lang.Class<java.util.prefs.PreferenceChangeListener>;
 				/**
-				 * Constructs a new instance of the java.util.prefs.PreferenceChangeListener interface with the provided implementation.
+				 * Constructs a new instance of the java.util.prefs.PreferenceChangeListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					preferenceChange(param0: java.util.prefs.PreferenceChangeEvent): void;
 				});
+				public constructor();
 				public preferenceChange(param0: java.util.prefs.PreferenceChangeEvent): void;
 			}
 		}
@@ -93921,12 +94582,13 @@ declare module java {
 			export class PreferencesFactory extends java.lang.Object {
 				public static class: java.lang.Class<java.util.prefs.PreferencesFactory>;
 				/**
-				 * Constructs a new instance of the java.util.prefs.PreferencesFactory interface with the provided implementation.
+				 * Constructs a new instance of the java.util.prefs.PreferencesFactory interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					systemRoot(): java.util.prefs.Preferences;
 					userRoot(): java.util.prefs.Preferences;
 				});
+				public constructor();
 				public systemRoot(): java.util.prefs.Preferences;
 				public userRoot(): java.util.prefs.Preferences;
 			}
@@ -93940,7 +94602,7 @@ declare module java {
 			export class MatchResult extends java.lang.Object {
 				public static class: java.lang.Class<java.util.regex.MatchResult>;
 				/**
-				 * Constructs a new instance of the java.util.regex.MatchResult interface with the provided implementation.
+				 * Constructs a new instance of the java.util.regex.MatchResult interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					start(): number;
@@ -93951,6 +94613,7 @@ declare module java {
 					group(param0: number): string;
 					groupCount(): number;
 				});
+				public constructor();
 				public end(param0: number): number;
 				public end(): number;
 				public start(): number;
@@ -94061,7 +94724,7 @@ declare module java {
 			export class BaseStream<T, S>  extends java.lang.AutoCloseable {
 				public static class: java.lang.Class<java.util.stream.BaseStream<any,any>>;
 				/**
-				 * Constructs a new instance of the java.util.stream.BaseStream<any,any> interface with the provided implementation.
+				 * Constructs a new instance of the java.util.stream.BaseStream<any,any> interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					iterator(): java.util.Iterator<any>;
@@ -94074,6 +94737,7 @@ declare module java {
 					close(): void;
 					close(): void;
 				});
+				public constructor();
 				public close(): void;
 				public parallel(): any;
 				public spliterator(): java.util.Spliterator<any>;
@@ -94093,7 +94757,7 @@ declare module java {
 			export class Collector<T, A, R>  extends java.lang.Object {
 				public static class: java.lang.Class<java.util.stream.Collector<any,any,any>>;
 				/**
-				 * Constructs a new instance of the java.util.stream.Collector<any,any,any> interface with the provided implementation.
+				 * Constructs a new instance of the java.util.stream.Collector<any,any,any> interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					supplier(): any /* any*/;
@@ -94104,6 +94768,7 @@ declare module java {
 					of(param0: any /* any*/, param1: any /* any*/, param2: any /* any*/, param3: native.Array<java.util.stream.Collector.Characteristics>): java.util.stream.Collector<any,any,any>;
 					of(param0: any /* any*/, param1: any /* any*/, param2: any /* any*/, param3: any /* any*/, param4: native.Array<java.util.stream.Collector.Characteristics>): java.util.stream.Collector<any,any,any>;
 				});
+				public constructor();
 				public supplier(): any /* any*/;
 				public accumulator(): any /* any<A,T>*/;
 				public static of(param0: any /* any*/, param1: any /* any*/, param2: any /* any*/, param3: native.Array<java.util.stream.Collector.Characteristics>): java.util.stream.Collector<any,any,any>;
@@ -94180,7 +94845,7 @@ declare module java {
 			export class DoubleStream extends java.util.stream.BaseStream<java.lang.Double,java.util.stream.DoubleStream> {
 				public static class: java.lang.Class<java.util.stream.DoubleStream>;
 				/**
-				 * Constructs a new instance of the java.util.stream.DoubleStream interface with the provided implementation.
+				 * Constructs a new instance of the java.util.stream.DoubleStream interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					filter(param0: any /* any*/): java.util.stream.DoubleStream;
@@ -94237,6 +94902,7 @@ declare module java {
 					close(): void;
 					close(): void;
 				});
+				public constructor();
 				public distinct(): java.util.stream.DoubleStream;
 				public min(): java.util.OptionalDouble;
 				public static concat(param0: java.util.stream.DoubleStream, param1: java.util.stream.DoubleStream): java.util.stream.DoubleStream;
@@ -94290,13 +94956,14 @@ declare module java {
 				export class Builder extends java.lang.Object {
 					public static class: java.lang.Class<java.util.stream.DoubleStream.Builder>;
 					/**
-					 * Constructs a new instance of the java.util.stream.DoubleStream$Builder interface with the provided implementation.
+					 * Constructs a new instance of the java.util.stream.DoubleStream$Builder interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 					 */
 					public constructor(implementation: {
 						accept(param0: number): void;
 						add(param0: number): java.util.stream.DoubleStream.Builder;
 						build(): java.util.stream.DoubleStream;
 					});
+					public constructor();
 					public accept(param0: number): void;
 					public add(param0: number): java.util.stream.DoubleStream.Builder;
 					public build(): java.util.stream.DoubleStream;
@@ -94312,7 +94979,7 @@ declare module java {
 			export class IntStream extends java.util.stream.BaseStream<java.lang.Integer,java.util.stream.IntStream> {
 				public static class: java.lang.Class<java.util.stream.IntStream>;
 				/**
-				 * Constructs a new instance of the java.util.stream.IntStream interface with the provided implementation.
+				 * Constructs a new instance of the java.util.stream.IntStream interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					filter(param0: any /* any*/): java.util.stream.IntStream;
@@ -94373,6 +95040,7 @@ declare module java {
 					close(): void;
 					close(): void;
 				});
+				public constructor();
 				public skip(param0: number): java.util.stream.IntStream;
 				public asLongStream(): java.util.stream.LongStream;
 				public static empty(): java.util.stream.IntStream;
@@ -94430,13 +95098,14 @@ declare module java {
 				export class Builder extends java.lang.Object {
 					public static class: java.lang.Class<java.util.stream.IntStream.Builder>;
 					/**
-					 * Constructs a new instance of the java.util.stream.IntStream$Builder interface with the provided implementation.
+					 * Constructs a new instance of the java.util.stream.IntStream$Builder interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 					 */
 					public constructor(implementation: {
 						accept(param0: number): void;
 						add(param0: number): java.util.stream.IntStream.Builder;
 						build(): java.util.stream.IntStream;
 					});
+					public constructor();
 					public accept(param0: number): void;
 					public build(): java.util.stream.IntStream;
 					public add(param0: number): java.util.stream.IntStream.Builder;
@@ -94452,7 +95121,7 @@ declare module java {
 			export class LongStream extends java.util.stream.BaseStream<java.lang.Long,java.util.stream.LongStream> {
 				public static class: java.lang.Class<java.util.stream.LongStream>;
 				/**
-				 * Constructs a new instance of the java.util.stream.LongStream interface with the provided implementation.
+				 * Constructs a new instance of the java.util.stream.LongStream interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					filter(param0: any /* any*/): java.util.stream.LongStream;
@@ -94512,6 +95181,7 @@ declare module java {
 					close(): void;
 					close(): void;
 				});
+				public constructor();
 				public boxed(): java.util.stream.Stream<java.lang.Long>;
 				public spliterator(): java.util.Spliterator.OfLong;
 				public summaryStatistics(): java.util.LongSummaryStatistics;
@@ -94568,13 +95238,14 @@ declare module java {
 				export class Builder extends java.lang.Object {
 					public static class: java.lang.Class<java.util.stream.LongStream.Builder>;
 					/**
-					 * Constructs a new instance of the java.util.stream.LongStream$Builder interface with the provided implementation.
+					 * Constructs a new instance of the java.util.stream.LongStream$Builder interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 					 */
 					public constructor(implementation: {
 						accept(param0: number): void;
 						add(param0: number): java.util.stream.LongStream.Builder;
 						build(): java.util.stream.LongStream;
 					});
+					public constructor();
 					public build(): java.util.stream.LongStream;
 					public accept(param0: number): void;
 					public add(param0: number): java.util.stream.LongStream.Builder;
@@ -94590,7 +95261,7 @@ declare module java {
 			export class Stream<T>  extends java.util.stream.BaseStream<any,java.util.stream.Stream<any>> {
 				public static class: java.lang.Class<java.util.stream.Stream<any>>;
 				/**
-				 * Constructs a new instance of the java.util.stream.Stream<any> interface with the provided implementation.
+				 * Constructs a new instance of the java.util.stream.Stream<any> interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					filter(param0: any /* any*/): java.util.stream.Stream<any>;
@@ -94642,6 +95313,7 @@ declare module java {
 					close(): void;
 					close(): void;
 				});
+				public constructor();
 				public collect(param0: java.util.stream.Collector<any,any,any>): any;
 				public peek(param0: any /* any*/): java.util.stream.Stream<any>;
 				public mapToDouble(param0: any /* any*/): java.util.stream.DoubleStream;
@@ -94694,13 +95366,14 @@ declare module java {
 				export class Builder<T>  extends java.lang.Object /* any*/ {
 					public static class: java.lang.Class<java.util.stream.Stream.Builder<any>>;
 					/**
-					 * Constructs a new instance of the java.util.stream.Stream$Builder interface with the provided implementation.
+					 * Constructs a new instance of the java.util.stream.Stream$Builder interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 					 */
 					public constructor(implementation: {
 						accept(param0: any): void;
 						add(param0: any): java.util.stream.Stream.Builder<any>;
 						build(): java.util.stream.Stream<any>;
 					});
+					public constructor();
 					public accept(param0: any): void;
 					public build(): java.util.stream.Stream<any>;
 					public add(param0: any): java.util.stream.Stream.Builder<any>;
@@ -94804,7 +95477,7 @@ declare module java {
 			export class Checksum extends java.lang.Object {
 				public static class: java.lang.Class<java.util.zip.Checksum>;
 				/**
-				 * Constructs a new instance of the java.util.zip.Checksum interface with the provided implementation.
+				 * Constructs a new instance of the java.util.zip.Checksum interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					update(param0: number): void;
@@ -94812,6 +95485,7 @@ declare module java {
 					getValue(): number;
 					reset(): void;
 				});
+				public constructor();
 				public reset(): void;
 				public update(param0: native.Array<number>, param1: number, param2: number): void;
 				public update(param0: number): void;
@@ -95744,13 +96418,14 @@ declare module javax {
 		export class SecretKey extends java.lang.Object implements java.security.Key {
 			public static class: java.lang.Class<javax.crypto.SecretKey>;
 			/**
-			 * Constructs a new instance of the javax.crypto.SecretKey interface with the provided implementation.
+			 * Constructs a new instance of the javax.crypto.SecretKey interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				getAlgorithm(): string;
 				getFormat(): string;
 				getEncoded(): native.Array<number>;
 			});
+			public constructor();
 			public static serialVersionUID: number;
 			public getAlgorithm(): string;
 			public getFormat(): string;
@@ -95807,11 +96482,12 @@ declare module javax {
 			export class DHKey extends java.lang.Object {
 				public static class: java.lang.Class<javax.crypto.interfaces.DHKey>;
 				/**
-				 * Constructs a new instance of the javax.crypto.interfaces.DHKey interface with the provided implementation.
+				 * Constructs a new instance of the javax.crypto.interfaces.DHKey interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					getParams(): javax.crypto.spec.DHParameterSpec;
 				});
+				public constructor();
 				public getParams(): javax.crypto.spec.DHParameterSpec;
 			}
 		}
@@ -95824,7 +96500,7 @@ declare module javax {
 			export class DHPrivateKey extends java.lang.Object implements javax.crypto.interfaces.DHKey, java.security.PrivateKey {
 				public static class: java.lang.Class<javax.crypto.interfaces.DHPrivateKey>;
 				/**
-				 * Constructs a new instance of the javax.crypto.interfaces.DHPrivateKey interface with the provided implementation.
+				 * Constructs a new instance of the javax.crypto.interfaces.DHPrivateKey interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					getX(): java.math.BigInteger;
@@ -95833,6 +96509,7 @@ declare module javax {
 					getFormat(): string;
 					getEncoded(): native.Array<number>;
 				});
+				public constructor();
 				public static serialVersionUID: number;
 				public getAlgorithm(): string;
 				public getFormat(): string;
@@ -95850,7 +96527,7 @@ declare module javax {
 			export class DHPublicKey extends java.lang.Object implements javax.crypto.interfaces.DHKey, java.security.PublicKey {
 				public static class: java.lang.Class<javax.crypto.interfaces.DHPublicKey>;
 				/**
-				 * Constructs a new instance of the javax.crypto.interfaces.DHPublicKey interface with the provided implementation.
+				 * Constructs a new instance of the javax.crypto.interfaces.DHPublicKey interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					getY(): java.math.BigInteger;
@@ -95859,6 +96536,7 @@ declare module javax {
 					getFormat(): string;
 					getEncoded(): native.Array<number>;
 				});
+				public constructor();
 				public static serialVersionUID: number;
 				public getAlgorithm(): string;
 				public getFormat(): string;
@@ -95876,7 +96554,7 @@ declare module javax {
 			export class PBEKey extends java.lang.Object implements javax.crypto.SecretKey {
 				public static class: java.lang.Class<javax.crypto.interfaces.PBEKey>;
 				/**
-				 * Constructs a new instance of the javax.crypto.interfaces.PBEKey interface with the provided implementation.
+				 * Constructs a new instance of the javax.crypto.interfaces.PBEKey interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					getPassword(): native.Array<string>;
@@ -95886,6 +96564,7 @@ declare module javax {
 					getFormat(): string;
 					getEncoded(): native.Array<number>;
 				});
+				public constructor();
 				public static serialVersionUID: number;
 				public getIterationCount(): number;
 				public getAlgorithm(): string;
@@ -96140,10 +96819,11 @@ declare module javax {
 				export class EGL extends java.lang.Object {
 					public static class: java.lang.Class<javax.microedition.khronos.egl.EGL>;
 					/**
-					 * Constructs a new instance of the javax.microedition.khronos.egl.EGL interface with the provided implementation.
+					 * Constructs a new instance of the javax.microedition.khronos.egl.EGL interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 					 */
 					public constructor(implementation: {
 					});
+					public constructor();
 				}
 			}
 		}
@@ -96157,7 +96837,7 @@ declare module javax {
 				export class EGL10 extends java.lang.Object implements javax.microedition.khronos.egl.EGL {
 					public static class: java.lang.Class<javax.microedition.khronos.egl.EGL10>;
 					/**
-					 * Constructs a new instance of the javax.microedition.khronos.egl.EGL10 interface with the provided implementation.
+					 * Constructs a new instance of the javax.microedition.khronos.egl.EGL10 interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 					 */
 					public constructor(implementation: {
 						eglChooseConfig(param0: javax.microedition.khronos.egl.EGLDisplay, param1: native.Array<number>, param2: native.Array<javax.microedition.khronos.egl.EGLConfig>, param3: number, param4: native.Array<number>): boolean;
@@ -96186,6 +96866,7 @@ declare module javax {
 						eglWaitNative(param0: number, param1: any): boolean;
 						<clinit>(): void;
 					});
+					public constructor();
 					public static EGL_MAX_PBUFFER_HEIGHT: number;
 					public static EGL_BAD_CONFIG: number;
 					public static EGL_TRANSPARENT_RED_VALUE: number;
@@ -96294,7 +96975,7 @@ declare module javax {
 				export class EGL11 extends java.lang.Object implements javax.microedition.khronos.egl.EGL10 {
 					public static class: java.lang.Class<javax.microedition.khronos.egl.EGL11>;
 					/**
-					 * Constructs a new instance of the javax.microedition.khronos.egl.EGL11 interface with the provided implementation.
+					 * Constructs a new instance of the javax.microedition.khronos.egl.EGL11 interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 					 */
 					public constructor(implementation: {
 						eglChooseConfig(param0: javax.microedition.khronos.egl.EGLDisplay, param1: native.Array<number>, param2: native.Array<javax.microedition.khronos.egl.EGLConfig>, param3: number, param4: native.Array<number>): boolean;
@@ -96323,6 +97004,7 @@ declare module javax {
 						eglWaitNative(param0: number, param1: any): boolean;
 						<clinit>(): void;
 					});
+					public constructor();
 					public static EGL_MAX_PBUFFER_HEIGHT: number;
 					public static EGL_BAD_CONFIG: number;
 					public static EGL_TRANSPARENT_RED_VALUE: number;
@@ -96486,10 +97168,11 @@ declare module javax {
 				export class GL extends java.lang.Object {
 					public static class: java.lang.Class<javax.microedition.khronos.opengles.GL>;
 					/**
-					 * Constructs a new instance of the javax.microedition.khronos.opengles.GL interface with the provided implementation.
+					 * Constructs a new instance of the javax.microedition.khronos.opengles.GL interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 					 */
 					public constructor(implementation: {
 					});
+					public constructor();
 				}
 			}
 		}
@@ -96503,7 +97186,7 @@ declare module javax {
 				export class GL10 extends java.lang.Object implements javax.microedition.khronos.opengles.GL {
 					public static class: java.lang.Class<javax.microedition.khronos.opengles.GL10>;
 					/**
-					 * Constructs a new instance of the javax.microedition.khronos.opengles.GL10 interface with the provided implementation.
+					 * Constructs a new instance of the javax.microedition.khronos.opengles.GL10 interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 					 */
 					public constructor(implementation: {
 						glActiveTexture(param0: number): void;
@@ -96630,6 +97313,7 @@ declare module javax {
 						glVertexPointer(param0: number, param1: number, param2: number, param3: java.nio.Buffer): void;
 						glViewport(param0: number, param1: number, param2: number, param3: number): void;
 					});
+					public constructor();
 					public static GL_CULL_FACE: number;
 					public static GL_TEXTURE_ENV_COLOR: number;
 					public static GL_MAX_PROJECTION_STACK_DEPTH: number;
@@ -97003,12 +97687,13 @@ declare module javax {
 				export class GL10Ext extends java.lang.Object implements javax.microedition.khronos.opengles.GL {
 					public static class: java.lang.Class<javax.microedition.khronos.opengles.GL10Ext>;
 					/**
-					 * Constructs a new instance of the javax.microedition.khronos.opengles.GL10Ext interface with the provided implementation.
+					 * Constructs a new instance of the javax.microedition.khronos.opengles.GL10Ext interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 					 */
 					public constructor(implementation: {
 						glQueryMatrixxOES(param0: native.Array<number>, param1: number, param2: native.Array<number>, param3: number): number;
 						glQueryMatrixxOES(param0: java.nio.IntBuffer, param1: java.nio.IntBuffer): number;
 					});
+					public constructor();
 					public glQueryMatrixxOES(param0: native.Array<number>, param1: number, param2: native.Array<number>, param3: number): number;
 					public glQueryMatrixxOES(param0: java.nio.IntBuffer, param1: java.nio.IntBuffer): number;
 				}
@@ -97024,7 +97709,7 @@ declare module javax {
 				export class GL11 extends java.lang.Object implements javax.microedition.khronos.opengles.GL10 {
 					public static class: java.lang.Class<javax.microedition.khronos.opengles.GL11>;
 					/**
-					 * Constructs a new instance of the javax.microedition.khronos.opengles.GL11 interface with the provided implementation.
+					 * Constructs a new instance of the javax.microedition.khronos.opengles.GL11 interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 					 */
 					public constructor(implementation: {
 						glGetPointerv(param0: number, param1: native.Array<java.nio.Buffer>): void;
@@ -97219,6 +97904,7 @@ declare module javax {
 						glVertexPointer(param0: number, param1: number, param2: number, param3: java.nio.Buffer): void;
 						glViewport(param0: number, param1: number, param2: number, param3: number): void;
 					});
+					public constructor();
 					public static GL_COLOR_ARRAY_POINTER: number;
 					public static GL_PREVIOUS: number;
 					public static GL_CULL_FACE: number;
@@ -97780,7 +98466,7 @@ declare module javax {
 				export class GL11Ext extends java.lang.Object implements javax.microedition.khronos.opengles.GL {
 					public static class: java.lang.Class<javax.microedition.khronos.opengles.GL11Ext>;
 					/**
-					 * Constructs a new instance of the javax.microedition.khronos.opengles.GL11Ext interface with the provided implementation.
+					 * Constructs a new instance of the javax.microedition.khronos.opengles.GL11Ext interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 					 */
 					public constructor(implementation: {
 						glTexParameterfv(param0: number, param1: number, param2: native.Array<number>, param3: number): void;
@@ -97805,6 +98491,7 @@ declare module javax {
 						glWeightPointerOES(param0: number, param1: number, param2: number, param3: java.nio.Buffer): void;
 						glWeightPointerOES(param0: number, param1: number, param2: number, param3: number): void;
 					});
+					public constructor();
 					public static GL_MATRIX_INDEX_ARRAY_OES: number;
 					public static GL_WEIGHT_ARRAY_BUFFER_BINDING_OES: number;
 					public static GL_WEIGHT_ARRAY_OES: number;
@@ -97855,7 +98542,7 @@ declare module javax {
 				export class GL11ExtensionPack extends java.lang.Object implements javax.microedition.khronos.opengles.GL {
 					public static class: java.lang.Class<javax.microedition.khronos.opengles.GL11ExtensionPack>;
 					/**
-					 * Constructs a new instance of the javax.microedition.khronos.opengles.GL11ExtensionPack interface with the provided implementation.
+					 * Constructs a new instance of the javax.microedition.khronos.opengles.GL11ExtensionPack interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 					 */
 					public constructor(implementation: {
 						glBindFramebufferOES(param0: number, param1: number): void;
@@ -97912,6 +98599,7 @@ declare module javax {
 						glTexGenxv(param0: number, param1: number, param2: java.nio.IntBuffer): void;
 						glTexParameterf(param0: number, param1: number, param2: number): void;
 					});
+					public constructor();
 					public static GL_MIRRORED_REPEAT: number;
 					public static GL_COLOR_ATTACHMENT10_OES: number;
 					public static GL_RGB5_A1: number;
@@ -98159,11 +98847,12 @@ declare module javax {
 			export class HandshakeCompletedListener extends java.lang.Object implements java.util.EventListener {
 				public static class: java.lang.Class<javax.net.ssl.HandshakeCompletedListener>;
 				/**
-				 * Constructs a new instance of the javax.net.ssl.HandshakeCompletedListener interface with the provided implementation.
+				 * Constructs a new instance of the javax.net.ssl.HandshakeCompletedListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					handshakeCompleted(param0: javax.net.ssl.HandshakeCompletedEvent): void;
 				});
+				public constructor();
 				public handshakeCompleted(param0: javax.net.ssl.HandshakeCompletedEvent): void;
 			}
 		}
@@ -98176,11 +98865,12 @@ declare module javax {
 			export class HostnameVerifier extends java.lang.Object {
 				public static class: java.lang.Class<javax.net.ssl.HostnameVerifier>;
 				/**
-				 * Constructs a new instance of the javax.net.ssl.HostnameVerifier interface with the provided implementation.
+				 * Constructs a new instance of the javax.net.ssl.HostnameVerifier interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					verify(param0: string, param1: javax.net.ssl.SSLSession): boolean;
 				});
+				public constructor();
 				public verify(param0: string, param1: javax.net.ssl.SSLSession): boolean;
 			}
 		}
@@ -98218,10 +98908,11 @@ declare module javax {
 			export class KeyManager extends java.lang.Object {
 				public static class: java.lang.Class<javax.net.ssl.KeyManager>;
 				/**
-				 * Constructs a new instance of the javax.net.ssl.KeyManager interface with the provided implementation.
+				 * Constructs a new instance of the javax.net.ssl.KeyManager interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 				});
+				public constructor();
 			}
 		}
 	}
@@ -98280,10 +98971,11 @@ declare module javax {
 			export class ManagerFactoryParameters extends java.lang.Object {
 				public static class: java.lang.Class<javax.net.ssl.ManagerFactoryParameters>;
 				/**
-				 * Constructs a new instance of the javax.net.ssl.ManagerFactoryParameters interface with the provided implementation.
+				 * Constructs a new instance of the javax.net.ssl.ManagerFactoryParameters interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 				});
+				public constructor();
 			}
 		}
 	}
@@ -98637,7 +99329,7 @@ declare module javax {
 			export class SSLSession extends java.lang.Object {
 				public static class: java.lang.Class<javax.net.ssl.SSLSession>;
 				/**
-				 * Constructs a new instance of the javax.net.ssl.SSLSession interface with the provided implementation.
+				 * Constructs a new instance of the javax.net.ssl.SSLSession interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					getId(): native.Array<number>;
@@ -98662,6 +99354,7 @@ declare module javax {
 					getPacketBufferSize(): number;
 					getApplicationBufferSize(): number;
 				});
+				public constructor();
 				public getId(): native.Array<number>;
 				public getCreationTime(): number;
 				public removeValue(param0: string): void;
@@ -98708,12 +99401,13 @@ declare module javax {
 			export class SSLSessionBindingListener extends java.lang.Object implements java.util.EventListener {
 				public static class: java.lang.Class<javax.net.ssl.SSLSessionBindingListener>;
 				/**
-				 * Constructs a new instance of the javax.net.ssl.SSLSessionBindingListener interface with the provided implementation.
+				 * Constructs a new instance of the javax.net.ssl.SSLSessionBindingListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					valueBound(param0: javax.net.ssl.SSLSessionBindingEvent): void;
 					valueUnbound(param0: javax.net.ssl.SSLSessionBindingEvent): void;
 				});
+				public constructor();
 				public valueBound(param0: javax.net.ssl.SSLSessionBindingEvent): void;
 				public valueUnbound(param0: javax.net.ssl.SSLSessionBindingEvent): void;
 			}
@@ -98727,7 +99421,7 @@ declare module javax {
 			export class SSLSessionContext extends java.lang.Object {
 				public static class: java.lang.Class<javax.net.ssl.SSLSessionContext>;
 				/**
-				 * Constructs a new instance of the javax.net.ssl.SSLSessionContext interface with the provided implementation.
+				 * Constructs a new instance of the javax.net.ssl.SSLSessionContext interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					getSession(param0: native.Array<number>): javax.net.ssl.SSLSession;
@@ -98737,6 +99431,7 @@ declare module javax {
 					setSessionCacheSize(param0: number): void;
 					getSessionCacheSize(): number;
 				});
+				public constructor();
 				public getSessionCacheSize(): number;
 				public getIds(): java.util.Enumeration<native.Array<number>>;
 				public setSessionTimeout(param0: number): void;
@@ -98826,10 +99521,11 @@ declare module javax {
 			export class TrustManager extends java.lang.Object {
 				public static class: java.lang.Class<javax.net.ssl.TrustManager>;
 				/**
-				 * Constructs a new instance of the javax.net.ssl.TrustManager interface with the provided implementation.
+				 * Constructs a new instance of the javax.net.ssl.TrustManager interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 				});
+				public constructor();
 			}
 		}
 	}
@@ -98912,7 +99608,7 @@ declare module javax {
 			export class X509KeyManager extends java.lang.Object implements javax.net.ssl.KeyManager {
 				public static class: java.lang.Class<javax.net.ssl.X509KeyManager>;
 				/**
-				 * Constructs a new instance of the javax.net.ssl.X509KeyManager interface with the provided implementation.
+				 * Constructs a new instance of the javax.net.ssl.X509KeyManager interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					getClientAliases(param0: string, param1: native.Array<java.security.Principal>): native.Array<string>;
@@ -98922,6 +99618,7 @@ declare module javax {
 					getCertificateChain(param0: string): native.Array<java.security.cert.X509Certificate>;
 					getPrivateKey(param0: string): java.security.PrivateKey;
 				});
+				public constructor();
 				public getServerAliases(param0: string, param1: native.Array<java.security.Principal>): native.Array<string>;
 				public chooseServerAlias(param0: string, param1: native.Array<java.security.Principal>, param2: java.net.Socket): string;
 				public getPrivateKey(param0: string): java.security.PrivateKey;
@@ -98939,13 +99636,14 @@ declare module javax {
 			export class X509TrustManager extends java.lang.Object implements javax.net.ssl.TrustManager {
 				public static class: java.lang.Class<javax.net.ssl.X509TrustManager>;
 				/**
-				 * Constructs a new instance of the javax.net.ssl.X509TrustManager interface with the provided implementation.
+				 * Constructs a new instance of the javax.net.ssl.X509TrustManager interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					checkClientTrusted(param0: native.Array<java.security.cert.X509Certificate>, param1: string): void;
 					checkServerTrusted(param0: native.Array<java.security.cert.X509Certificate>, param1: string): void;
 					getAcceptedIssuers(): native.Array<java.security.cert.X509Certificate>;
 				});
+				public constructor();
 				public checkClientTrusted(param0: native.Array<java.security.cert.X509Certificate>, param1: string): void;
 				public checkServerTrusted(param0: native.Array<java.security.cert.X509Certificate>, param1: string): void;
 				public getAcceptedIssuers(): native.Array<java.security.cert.X509Certificate>;
@@ -98988,12 +99686,13 @@ declare module javax {
 			export class Destroyable extends java.lang.Object {
 				public static class: java.lang.Class<javax.security.auth.Destroyable>;
 				/**
-				 * Constructs a new instance of the javax.security.auth.Destroyable interface with the provided implementation.
+				 * Constructs a new instance of the javax.security.auth.Destroyable interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					destroy(): void;
 					isDestroyed(): boolean;
 				});
+				public constructor();
 				public destroy(): void;
 				public isDestroyed(): boolean;
 			}
@@ -99066,10 +99765,11 @@ declare module javax {
 				export class Callback extends java.lang.Object {
 					public static class: java.lang.Class<javax.security.auth.callback.Callback>;
 					/**
-					 * Constructs a new instance of the javax.security.auth.callback.Callback interface with the provided implementation.
+					 * Constructs a new instance of the javax.security.auth.callback.Callback interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 					 */
 					public constructor(implementation: {
 					});
+					public constructor();
 				}
 			}
 		}
@@ -99083,11 +99783,12 @@ declare module javax {
 				export class CallbackHandler extends java.lang.Object {
 					public static class: java.lang.Class<javax.security.auth.callback.CallbackHandler>;
 					/**
-					 * Constructs a new instance of the javax.security.auth.callback.CallbackHandler interface with the provided implementation.
+					 * Constructs a new instance of the javax.security.auth.callback.CallbackHandler interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 					 */
 					public constructor(implementation: {
 						handle(param0: native.Array<javax.security.auth.callback.Callback>): void;
 					});
+					public constructor();
 					public handle(param0: native.Array<javax.security.auth.callback.Callback>): void;
 				}
 			}
@@ -99298,7 +99999,7 @@ declare module javax {
 		export class CommonDataSource extends java.lang.Object {
 			public static class: java.lang.Class<javax.sql.CommonDataSource>;
 			/**
-			 * Constructs a new instance of the javax.sql.CommonDataSource interface with the provided implementation.
+			 * Constructs a new instance of the javax.sql.CommonDataSource interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				getLogWriter(): java.io.PrintWriter;
@@ -99307,6 +100008,7 @@ declare module javax {
 				getLoginTimeout(): number;
 				getParentLogger(): java.util.logging.Logger;
 			});
+			public constructor();
 			public getLoginTimeout(): number;
 			public setLoginTimeout(param0: number): void;
 			public getLogWriter(): java.io.PrintWriter;
@@ -99333,12 +100035,13 @@ declare module javax {
 		export class ConnectionEventListener extends java.lang.Object implements java.util.EventListener {
 			public static class: java.lang.Class<javax.sql.ConnectionEventListener>;
 			/**
-			 * Constructs a new instance of the javax.sql.ConnectionEventListener interface with the provided implementation.
+			 * Constructs a new instance of the javax.sql.ConnectionEventListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				connectionClosed(param0: javax.sql.ConnectionEvent): void;
 				connectionErrorOccurred(param0: javax.sql.ConnectionEvent): void;
 			});
+			public constructor();
 			public connectionClosed(param0: javax.sql.ConnectionEvent): void;
 			public connectionErrorOccurred(param0: javax.sql.ConnectionEvent): void;
 		}
@@ -99350,7 +100053,7 @@ declare module javax {
 		export class ConnectionPoolDataSource extends java.lang.Object implements javax.sql.CommonDataSource {
 			public static class: java.lang.Class<javax.sql.ConnectionPoolDataSource>;
 			/**
-			 * Constructs a new instance of the javax.sql.ConnectionPoolDataSource interface with the provided implementation.
+			 * Constructs a new instance of the javax.sql.ConnectionPoolDataSource interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				getPooledConnection(): javax.sql.PooledConnection;
@@ -99361,6 +100064,7 @@ declare module javax {
 				getLoginTimeout(): number;
 				getParentLogger(): java.util.logging.Logger;
 			});
+			public constructor();
 			public getLoginTimeout(): number;
 			public getPooledConnection(param0: string, param1: string): javax.sql.PooledConnection;
 			public setLoginTimeout(param0: number): void;
@@ -99377,7 +100081,7 @@ declare module javax {
 		export class DataSource extends java.lang.Object implements javax.sql.CommonDataSource, java.sql.Wrapper {
 			public static class: java.lang.Class<javax.sql.DataSource>;
 			/**
-			 * Constructs a new instance of the javax.sql.DataSource interface with the provided implementation.
+			 * Constructs a new instance of the javax.sql.DataSource interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				getConnection(): java.sql.Connection;
@@ -99390,6 +100094,7 @@ declare module javax {
 				unwrap(param0: java.lang.Class<any>): any;
 				isWrapperFor(param0: java.lang.Class<any>): boolean;
 			});
+			public constructor();
 			public getLoginTimeout(): number;
 			public setLoginTimeout(param0: number): void;
 			public getConnection(param0: string, param1: string): java.sql.Connection;
@@ -99408,7 +100113,7 @@ declare module javax {
 		export class PooledConnection extends java.lang.Object {
 			public static class: java.lang.Class<javax.sql.PooledConnection>;
 			/**
-			 * Constructs a new instance of the javax.sql.PooledConnection interface with the provided implementation.
+			 * Constructs a new instance of the javax.sql.PooledConnection interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				getConnection(): java.sql.Connection;
@@ -99418,6 +100123,7 @@ declare module javax {
 				addStatementEventListener(param0: javax.sql.StatementEventListener): void;
 				removeStatementEventListener(param0: javax.sql.StatementEventListener): void;
 			});
+			public constructor();
 			public addConnectionEventListener(param0: javax.sql.ConnectionEventListener): void;
 			public removeStatementEventListener(param0: javax.sql.StatementEventListener): void;
 			public addStatementEventListener(param0: javax.sql.StatementEventListener): void;
@@ -99433,7 +100139,7 @@ declare module javax {
 		export class RowSet extends java.lang.Object implements java.sql.ResultSet {
 			public static class: java.lang.Class<javax.sql.RowSet>;
 			/**
-			 * Constructs a new instance of the javax.sql.RowSet interface with the provided implementation.
+			 * Constructs a new instance of the javax.sql.RowSet interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				getUrl(): string;
@@ -99742,6 +100448,7 @@ declare module javax {
 				isWrapperFor(param0: java.lang.Class<any>): boolean;
 				close(): void;
 			});
+			public constructor();
 			public static HOLD_CURSORS_OVER_COMMIT: number;
 			public static CLOSE_CURSORS_AT_COMMIT: number;
 			public static FETCH_UNKNOWN: number;
@@ -100069,7 +100776,7 @@ declare module javax {
 		export class RowSetInternal extends java.lang.Object {
 			public static class: java.lang.Class<javax.sql.RowSetInternal>;
 			/**
-			 * Constructs a new instance of the javax.sql.RowSetInternal interface with the provided implementation.
+			 * Constructs a new instance of the javax.sql.RowSetInternal interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				getParams(): native.Array<any>;
@@ -100078,6 +100785,7 @@ declare module javax {
 				getOriginal(): java.sql.ResultSet;
 				getOriginalRow(): java.sql.ResultSet;
 			});
+			public constructor();
 			public getParams(): native.Array<any>;
 			public setMetaData(param0: javax.sql.RowSetMetaData): void;
 			public getOriginalRow(): java.sql.ResultSet;
@@ -100092,13 +100800,14 @@ declare module javax {
 		export class RowSetListener extends java.lang.Object implements java.util.EventListener {
 			public static class: java.lang.Class<javax.sql.RowSetListener>;
 			/**
-			 * Constructs a new instance of the javax.sql.RowSetListener interface with the provided implementation.
+			 * Constructs a new instance of the javax.sql.RowSetListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				rowSetChanged(param0: javax.sql.RowSetEvent): void;
 				rowChanged(param0: javax.sql.RowSetEvent): void;
 				cursorMoved(param0: javax.sql.RowSetEvent): void;
 			});
+			public constructor();
 			public rowSetChanged(param0: javax.sql.RowSetEvent): void;
 			public rowChanged(param0: javax.sql.RowSetEvent): void;
 			public cursorMoved(param0: javax.sql.RowSetEvent): void;
@@ -100111,7 +100820,7 @@ declare module javax {
 		export class RowSetMetaData extends java.lang.Object implements java.sql.ResultSetMetaData {
 			public static class: java.lang.Class<javax.sql.RowSetMetaData>;
 			/**
-			 * Constructs a new instance of the javax.sql.RowSetMetaData interface with the provided implementation.
+			 * Constructs a new instance of the javax.sql.RowSetMetaData interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				setColumnCount(param0: number): void;
@@ -100155,6 +100864,7 @@ declare module javax {
 				unwrap(param0: java.lang.Class<any>): any;
 				isWrapperFor(param0: java.lang.Class<any>): boolean;
 			});
+			public constructor();
 			public static columnNullableUnknown: number;
 			public static columnNullable: number;
 			public static columnNoNulls: number;
@@ -100207,11 +100917,12 @@ declare module javax {
 		export class RowSetReader extends java.lang.Object {
 			public static class: java.lang.Class<javax.sql.RowSetReader>;
 			/**
-			 * Constructs a new instance of the javax.sql.RowSetReader interface with the provided implementation.
+			 * Constructs a new instance of the javax.sql.RowSetReader interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				readData(param0: javax.sql.RowSetInternal): void;
 			});
+			public constructor();
 			public readData(param0: javax.sql.RowSetInternal): void;
 		}
 	}
@@ -100222,11 +100933,12 @@ declare module javax {
 		export class RowSetWriter extends java.lang.Object {
 			public static class: java.lang.Class<javax.sql.RowSetWriter>;
 			/**
-			 * Constructs a new instance of the javax.sql.RowSetWriter interface with the provided implementation.
+			 * Constructs a new instance of the javax.sql.RowSetWriter interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				writeData(param0: javax.sql.RowSetInternal): boolean;
 			});
+			public constructor();
 			public writeData(param0: javax.sql.RowSetInternal): boolean;
 		}
 	}
@@ -100250,12 +100962,13 @@ declare module javax {
 		export class StatementEventListener extends java.lang.Object implements java.util.EventListener {
 			public static class: java.lang.Class<javax.sql.StatementEventListener>;
 			/**
-			 * Constructs a new instance of the javax.sql.StatementEventListener interface with the provided implementation.
+			 * Constructs a new instance of the javax.sql.StatementEventListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				statementClosed(param0: javax.sql.StatementEvent): void;
 				statementErrorOccurred(param0: javax.sql.StatementEvent): void;
 			});
+			public constructor();
 			public statementErrorOccurred(param0: javax.sql.StatementEvent): void;
 			public statementClosed(param0: javax.sql.StatementEvent): void;
 		}
@@ -100482,13 +101195,14 @@ declare module javax {
 			export class NamespaceContext extends java.lang.Object {
 				public static class: java.lang.Class<javax.xml.namespace.NamespaceContext>;
 				/**
-				 * Constructs a new instance of the javax.xml.namespace.NamespaceContext interface with the provided implementation.
+				 * Constructs a new instance of the javax.xml.namespace.NamespaceContext interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					getNamespaceURI(param0: string): string;
 					getPrefix(param0: string): string;
 					getPrefixes(param0: string): java.util.Iterator<any>;
 				});
+				public constructor();
 				public getPrefixes(param0: string): java.util.Iterator<any>;
 				public getPrefix(param0: string): string;
 				public getNamespaceURI(param0: string): string;
@@ -100670,13 +101384,14 @@ declare module javax {
 			export class ErrorListener extends java.lang.Object {
 				public static class: java.lang.Class<javax.xml.transform.ErrorListener>;
 				/**
-				 * Constructs a new instance of the javax.xml.transform.ErrorListener interface with the provided implementation.
+				 * Constructs a new instance of the javax.xml.transform.ErrorListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					warning(param0: javax.xml.transform.TransformerException): void;
 					error(param0: javax.xml.transform.TransformerException): void;
 					fatalError(param0: javax.xml.transform.TransformerException): void;
 				});
+				public constructor();
 				public error(param0: javax.xml.transform.TransformerException): void;
 				public warning(param0: javax.xml.transform.TransformerException): void;
 				public fatalError(param0: javax.xml.transform.TransformerException): void;
@@ -100711,12 +101426,13 @@ declare module javax {
 			export class Result extends java.lang.Object {
 				public static class: java.lang.Class<javax.xml.transform.Result>;
 				/**
-				 * Constructs a new instance of the javax.xml.transform.Result interface with the provided implementation.
+				 * Constructs a new instance of the javax.xml.transform.Result interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					setSystemId(param0: string): void;
 					getSystemId(): string;
 				});
+				public constructor();
 				public static PI_ENABLE_OUTPUT_ESCAPING: string;
 				public static PI_DISABLE_OUTPUT_ESCAPING: string;
 				public setSystemId(param0: string): void;
@@ -100732,12 +101448,13 @@ declare module javax {
 			export class Source extends java.lang.Object {
 				public static class: java.lang.Class<javax.xml.transform.Source>;
 				/**
-				 * Constructs a new instance of the javax.xml.transform.Source interface with the provided implementation.
+				 * Constructs a new instance of the javax.xml.transform.Source interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					setSystemId(param0: string): void;
 					getSystemId(): string;
 				});
+				public constructor();
 				public setSystemId(param0: string): void;
 				public getSystemId(): string;
 			}
@@ -100751,7 +101468,7 @@ declare module javax {
 			export class SourceLocator extends java.lang.Object {
 				public static class: java.lang.Class<javax.xml.transform.SourceLocator>;
 				/**
-				 * Constructs a new instance of the javax.xml.transform.SourceLocator interface with the provided implementation.
+				 * Constructs a new instance of the javax.xml.transform.SourceLocator interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					getPublicId(): string;
@@ -100759,6 +101476,7 @@ declare module javax {
 					getLineNumber(): number;
 					getColumnNumber(): number;
 				});
+				public constructor();
 				public getPublicId(): string;
 				public getLineNumber(): number;
 				public getSystemId(): string;
@@ -100774,12 +101492,13 @@ declare module javax {
 			export class Templates extends java.lang.Object {
 				public static class: java.lang.Class<javax.xml.transform.Templates>;
 				/**
-				 * Constructs a new instance of the javax.xml.transform.Templates interface with the provided implementation.
+				 * Constructs a new instance of the javax.xml.transform.Templates interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					newTransformer(): javax.xml.transform.Transformer;
 					getOutputProperties(): java.util.Properties;
 				});
+				public constructor();
 				public getOutputProperties(): java.util.Properties;
 				public newTransformer(): javax.xml.transform.Transformer;
 			}
@@ -100905,11 +101624,12 @@ declare module javax {
 			export class URIResolver extends java.lang.Object {
 				public static class: java.lang.Class<javax.xml.transform.URIResolver>;
 				/**
-				 * Constructs a new instance of the javax.xml.transform.URIResolver interface with the provided implementation.
+				 * Constructs a new instance of the javax.xml.transform.URIResolver interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					resolve(param0: string, param1: string): javax.xml.transform.Source;
 				});
+				public constructor();
 				public resolve(param0: string, param1: string): javax.xml.transform.Source;
 			}
 		}
@@ -100923,7 +101643,7 @@ declare module javax {
 				export class DOMLocator extends java.lang.Object implements javax.xml.transform.SourceLocator {
 					public static class: java.lang.Class<javax.xml.transform.dom.DOMLocator>;
 					/**
-					 * Constructs a new instance of the javax.xml.transform.dom.DOMLocator interface with the provided implementation.
+					 * Constructs a new instance of the javax.xml.transform.dom.DOMLocator interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 					 */
 					public constructor(implementation: {
 						getOriginatingNode(): org.w3c.dom.Node;
@@ -100932,6 +101652,7 @@ declare module javax {
 						getLineNumber(): number;
 						getColumnNumber(): number;
 					});
+					public constructor();
 					public getLineNumber(): number;
 					public getOriginatingNode(): org.w3c.dom.Node;
 					public getPublicId(): string;
@@ -101059,7 +101780,7 @@ declare module javax {
 				export class TemplatesHandler extends java.lang.Object implements org.xml.sax.ContentHandler {
 					public static class: java.lang.Class<javax.xml.transform.sax.TemplatesHandler>;
 					/**
-					 * Constructs a new instance of the javax.xml.transform.sax.TemplatesHandler interface with the provided implementation.
+					 * Constructs a new instance of the javax.xml.transform.sax.TemplatesHandler interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 					 */
 					public constructor(implementation: {
 						getTemplates(): javax.xml.transform.Templates;
@@ -101077,6 +101798,7 @@ declare module javax {
 						processingInstruction(param0: string, param1: string): void;
 						skippedEntity(param0: string): void;
 					});
+					public constructor();
 					public startPrefixMapping(param0: string, param1: string): void;
 					public skippedEntity(param0: string): void;
 					public endDocument(): void;
@@ -101104,7 +101826,7 @@ declare module javax {
 				export class TransformerHandler extends java.lang.Object implements org.xml.sax.ContentHandler, org.xml.sax.ext.LexicalHandler, org.xml.sax.DTDHandler {
 					public static class: java.lang.Class<javax.xml.transform.sax.TransformerHandler>;
 					/**
-					 * Constructs a new instance of the javax.xml.transform.sax.TransformerHandler interface with the provided implementation.
+					 * Constructs a new instance of the javax.xml.transform.sax.TransformerHandler interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 					 */
 					public constructor(implementation: {
 						setResult(param0: javax.xml.transform.Result): void;
@@ -101132,6 +101854,7 @@ declare module javax {
 						notationDecl(param0: string, param1: string, param2: string): void;
 						unparsedEntityDecl(param0: string, param1: string, param2: string, param3: string): void;
 					});
+					public constructor();
 					public comment(param0: native.Array<string>, param1: number, param2: number): void;
 					public startPrefixMapping(param0: string, param1: string): void;
 					public skippedEntity(param0: string): void;
@@ -101344,7 +102067,7 @@ declare module javax {
 			export class XPath extends java.lang.Object {
 				public static class: java.lang.Class<javax.xml.xpath.XPath>;
 				/**
-				 * Constructs a new instance of the javax.xml.xpath.XPath interface with the provided implementation.
+				 * Constructs a new instance of the javax.xml.xpath.XPath interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					reset(): void;
@@ -101360,6 +102083,7 @@ declare module javax {
 					evaluate(param0: string, param1: org.xml.sax.InputSource, param2: javax.xml.namespace.QName): any;
 					evaluate(param0: string, param1: org.xml.sax.InputSource): string;
 				});
+				public constructor();
 				public setNamespaceContext(param0: javax.xml.namespace.NamespaceContext): void;
 				public getNamespaceContext(): javax.xml.namespace.NamespaceContext;
 				public reset(): void;
@@ -101418,7 +102142,7 @@ declare module javax {
 			export class XPathExpression extends java.lang.Object {
 				public static class: java.lang.Class<javax.xml.xpath.XPathExpression>;
 				/**
-				 * Constructs a new instance of the javax.xml.xpath.XPathExpression interface with the provided implementation.
+				 * Constructs a new instance of the javax.xml.xpath.XPathExpression interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					evaluate(param0: any, param1: javax.xml.namespace.QName): any;
@@ -101426,6 +102150,7 @@ declare module javax {
 					evaluate(param0: org.xml.sax.InputSource, param1: javax.xml.namespace.QName): any;
 					evaluate(param0: org.xml.sax.InputSource): string;
 				});
+				public constructor();
 				public evaluate(param0: org.xml.sax.InputSource): string;
 				public evaluate(param0: any): string;
 				public evaluate(param0: any, param1: javax.xml.namespace.QName): any;
@@ -101493,11 +102218,12 @@ declare module javax {
 			export class XPathFunction extends java.lang.Object {
 				public static class: java.lang.Class<javax.xml.xpath.XPathFunction>;
 				/**
-				 * Constructs a new instance of the javax.xml.xpath.XPathFunction interface with the provided implementation.
+				 * Constructs a new instance of the javax.xml.xpath.XPathFunction interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					evaluate(param0: java.util.List<any>): any;
 				});
+				public constructor();
 				public evaluate(param0: java.util.List<any>): any;
 			}
 		}
@@ -101525,11 +102251,12 @@ declare module javax {
 			export class XPathFunctionResolver extends java.lang.Object {
 				public static class: java.lang.Class<javax.xml.xpath.XPathFunctionResolver>;
 				/**
-				 * Constructs a new instance of the javax.xml.xpath.XPathFunctionResolver interface with the provided implementation.
+				 * Constructs a new instance of the javax.xml.xpath.XPathFunctionResolver interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					resolveFunction(param0: javax.xml.namespace.QName, param1: number): javax.xml.xpath.XPathFunction;
 				});
+				public constructor();
 				public resolveFunction(param0: javax.xml.namespace.QName, param1: number): javax.xml.xpath.XPathFunction;
 			}
 		}
@@ -101542,11 +102269,12 @@ declare module javax {
 			export class XPathVariableResolver extends java.lang.Object {
 				public static class: java.lang.Class<javax.xml.xpath.XPathVariableResolver>;
 				/**
-				 * Constructs a new instance of the javax.xml.xpath.XPathVariableResolver interface with the provided implementation.
+				 * Constructs a new instance of the javax.xml.xpath.XPathVariableResolver interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					resolveVariable(param0: javax.xml.namespace.QName): any;
 				});
+				public constructor();
 				public resolveVariable(param0: javax.xml.namespace.QName): any;
 			}
 		}
@@ -101631,11 +102359,12 @@ declare module junit {
 		export class Protectable extends java.lang.Object {
 			public static class: java.lang.Class<junit.framework.Protectable>;
 			/**
-			 * Constructs a new instance of the junit.framework.Protectable interface with the provided implementation.
+			 * Constructs a new instance of the junit.framework.Protectable interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				protect(): void;
 			});
+			public constructor();
 			public protect(): void;
 		}
 	}
@@ -101646,12 +102375,13 @@ declare module junit {
 		export class Test extends java.lang.Object {
 			public static class: java.lang.Class<junit.framework.Test>;
 			/**
-			 * Constructs a new instance of the junit.framework.Test interface with the provided implementation.
+			 * Constructs a new instance of the junit.framework.Test interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				countTestCases(): number;
 				run(param0: junit.framework.TestResult): void;
 			});
+			public constructor();
 			public countTestCases(): number;
 			public run(param0: junit.framework.TestResult): void;
 		}
@@ -101701,7 +102431,7 @@ declare module junit {
 		export class TestListener extends java.lang.Object {
 			public static class: java.lang.Class<junit.framework.TestListener>;
 			/**
-			 * Constructs a new instance of the junit.framework.TestListener interface with the provided implementation.
+			 * Constructs a new instance of the junit.framework.TestListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				addError(param0: junit.framework.Test, param1: java.lang.Throwable): void;
@@ -101709,6 +102439,7 @@ declare module junit {
 				endTest(param0: junit.framework.Test): void;
 				startTest(param0: junit.framework.Test): void;
 			});
+			public constructor();
 			public endTest(param0: junit.framework.Test): void;
 			public addError(param0: junit.framework.Test, param1: java.lang.Throwable): void;
 			public startTest(param0: junit.framework.Test): void;
@@ -101817,12 +102548,13 @@ declare module junit {
 		export class TestSuiteLoader extends java.lang.Object {
 			public static class: java.lang.Class<junit.runner.TestSuiteLoader>;
 			/**
-			 * Constructs a new instance of the junit.runner.TestSuiteLoader interface with the provided implementation.
+			 * Constructs a new instance of the junit.runner.TestSuiteLoader interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 			 */
 			public constructor(implementation: {
 				load(param0: string): java.lang.Class<any>;
 				reload(param0: java.lang.Class<any>): java.lang.Class<any>;
 			});
+			public constructor();
 			public reload(param0: java.lang.Class<any>): java.lang.Class<any>;
 			public load(param0: string): java.lang.Class<any>;
 		}
@@ -101863,11 +102595,12 @@ declare module org {
 					export class HostNameResolver extends java.lang.Object {
 						public static class: java.lang.Class<org.apache.http.conn.scheme.HostNameResolver>;
 						/**
-						 * Constructs a new instance of the org.apache.http.conn.scheme.HostNameResolver interface with the provided implementation.
+						 * Constructs a new instance of the org.apache.http.conn.scheme.HostNameResolver interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 						 */
 						public constructor(implementation: {
 							resolve(param0: string): java.net.InetAddress;
 						});
+						public constructor();
 						public resolve(param0: string): java.net.InetAddress;
 					}
 				}
@@ -101884,7 +102617,7 @@ declare module org {
 					export class LayeredSocketFactory extends java.lang.Object implements org.apache.http.conn.scheme.SocketFactory {
 						public static class: java.lang.Class<org.apache.http.conn.scheme.LayeredSocketFactory>;
 						/**
-						 * Constructs a new instance of the org.apache.http.conn.scheme.LayeredSocketFactory interface with the provided implementation.
+						 * Constructs a new instance of the org.apache.http.conn.scheme.LayeredSocketFactory interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 						 */
 						public constructor(implementation: {
 							createSocket(param0: java.net.Socket, param1: string, param2: number, param3: boolean): java.net.Socket;
@@ -101892,6 +102625,7 @@ declare module org {
 							connectSocket(param0: java.net.Socket, param1: string, param2: number, param3: java.net.InetAddress, param4: number, param5: org.apache.http.params.HttpParams): java.net.Socket;
 							isSecure(param0: java.net.Socket): boolean;
 						});
+						public constructor();
 						public connectSocket(param0: java.net.Socket, param1: string, param2: number, param3: java.net.InetAddress, param4: number, param5: org.apache.http.params.HttpParams): java.net.Socket;
 						public createSocket(param0: java.net.Socket, param1: string, param2: number, param3: boolean): java.net.Socket;
 						public isSecure(param0: java.net.Socket): boolean;
@@ -101911,13 +102645,14 @@ declare module org {
 					export class SocketFactory extends java.lang.Object {
 						public static class: java.lang.Class<org.apache.http.conn.scheme.SocketFactory>;
 						/**
-						 * Constructs a new instance of the org.apache.http.conn.scheme.SocketFactory interface with the provided implementation.
+						 * Constructs a new instance of the org.apache.http.conn.scheme.SocketFactory interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 						 */
 						public constructor(implementation: {
 							createSocket(): java.net.Socket;
 							connectSocket(param0: java.net.Socket, param1: string, param2: number, param3: java.net.InetAddress, param4: number, param5: org.apache.http.params.HttpParams): java.net.Socket;
 							isSecure(param0: java.net.Socket): boolean;
 						});
+						public constructor();
 						public connectSocket(param0: java.net.Socket, param1: string, param2: number, param3: java.net.InetAddress, param4: number, param5: org.apache.http.params.HttpParams): java.net.Socket;
 						public isSecure(param0: java.net.Socket): boolean;
 						public createSocket(): java.net.Socket;
@@ -102054,7 +102789,7 @@ declare module org {
 					export class X509HostnameVerifier extends java.lang.Object implements javax.net.ssl.HostnameVerifier {
 						public static class: java.lang.Class<org.apache.http.conn.ssl.X509HostnameVerifier>;
 						/**
-						 * Constructs a new instance of the org.apache.http.conn.ssl.X509HostnameVerifier interface with the provided implementation.
+						 * Constructs a new instance of the org.apache.http.conn.ssl.X509HostnameVerifier interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 						 */
 						public constructor(implementation: {
 							verify(param0: string, param1: javax.net.ssl.SSLSession): boolean;
@@ -102063,6 +102798,7 @@ declare module org {
 							verify(param0: string, param1: native.Array<string>, param2: native.Array<string>): void;
 							verify(param0: string, param1: javax.net.ssl.SSLSession): boolean;
 						});
+						public constructor();
 						public verify(param0: string, param1: native.Array<string>, param2: native.Array<string>): void;
 						public verify(param0: string, param1: javax.net.ssl.SSLSession): boolean;
 						public verify(param0: string, param1: javax.net.ssl.SSLSocket): void;
@@ -102081,10 +102817,11 @@ declare module org {
 				export class CoreConnectionPNames extends java.lang.Object {
 					public static class: java.lang.Class<org.apache.http.params.CoreConnectionPNames>;
 					/**
-					 * Constructs a new instance of the org.apache.http.params.CoreConnectionPNames interface with the provided implementation.
+					 * Constructs a new instance of the org.apache.http.params.CoreConnectionPNames interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 					 */
 					public constructor(implementation: {
 					});
+					public constructor();
 					public static SO_LINGER: string;
 					public static CONNECTION_TIMEOUT: string;
 					public static SO_TIMEOUT: string;
@@ -102130,7 +102867,7 @@ declare module org {
 				export class HttpParams extends java.lang.Object {
 					public static class: java.lang.Class<org.apache.http.params.HttpParams>;
 					/**
-					 * Constructs a new instance of the org.apache.http.params.HttpParams interface with the provided implementation.
+					 * Constructs a new instance of the org.apache.http.params.HttpParams interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 					 */
 					public constructor(implementation: {
 						getParameter(param0: string): any;
@@ -102148,6 +102885,7 @@ declare module org {
 						isParameterTrue(param0: string): boolean;
 						isParameterFalse(param0: string): boolean;
 					});
+					public constructor();
 					public isParameterFalse(param0: string): boolean;
 					public setDoubleParameter(param0: string, param1: number): org.apache.http.params.HttpParams;
 					public getIntParameter(param0: string, param1: number): number;
@@ -102329,7 +103067,7 @@ declare module org {
 			export class Attr extends java.lang.Object implements org.w3c.dom.Node {
 				public static class: java.lang.Class<org.w3c.dom.Attr>;
 				/**
-				 * Constructs a new instance of the org.w3c.dom.Attr interface with the provided implementation.
+				 * Constructs a new instance of the org.w3c.dom.Attr interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					getName(): string;
@@ -102377,6 +103115,7 @@ declare module org {
 					setUserData(param0: string, param1: any, param2: org.w3c.dom.UserDataHandler): any;
 					getUserData(param0: string): any;
 				});
+				public constructor();
 				public static DOCUMENT_FRAGMENT_NODE: number;
 				public static DOCUMENT_TYPE_NODE: number;
 				public static ELEMENT_NODE: number;
@@ -102450,7 +103189,7 @@ declare module org {
 			export class CDATASection extends java.lang.Object implements org.w3c.dom.Text {
 				public static class: java.lang.Class<org.w3c.dom.CDATASection>;
 				/**
-				 * Constructs a new instance of the org.w3c.dom.CDATASection interface with the provided implementation.
+				 * Constructs a new instance of the org.w3c.dom.CDATASection interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					splitText(param0: number): org.w3c.dom.Text;
@@ -102503,6 +103242,7 @@ declare module org {
 					setUserData(param0: string, param1: any, param2: org.w3c.dom.UserDataHandler): any;
 					getUserData(param0: string): any;
 				});
+				public constructor();
 				public static DOCUMENT_FRAGMENT_NODE: number;
 				public static DOCUMENT_TYPE_NODE: number;
 				public static ELEMENT_NODE: number;
@@ -102581,7 +103321,7 @@ declare module org {
 			export class CharacterData extends java.lang.Object implements org.w3c.dom.Node {
 				public static class: java.lang.Class<org.w3c.dom.CharacterData>;
 				/**
-				 * Constructs a new instance of the org.w3c.dom.CharacterData interface with the provided implementation.
+				 * Constructs a new instance of the org.w3c.dom.CharacterData interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					getData(): string;
@@ -102630,6 +103370,7 @@ declare module org {
 					setUserData(param0: string, param1: any, param2: org.w3c.dom.UserDataHandler): any;
 					getUserData(param0: string): any;
 				});
+				public constructor();
 				public static DOCUMENT_FRAGMENT_NODE: number;
 				public static DOCUMENT_TYPE_NODE: number;
 				public static ELEMENT_NODE: number;
@@ -102704,7 +103445,7 @@ declare module org {
 			export class Comment extends java.lang.Object implements org.w3c.dom.CharacterData {
 				public static class: java.lang.Class<org.w3c.dom.Comment>;
 				/**
-				 * Constructs a new instance of the org.w3c.dom.Comment interface with the provided implementation.
+				 * Constructs a new instance of the org.w3c.dom.Comment interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					getData(): string;
@@ -102753,6 +103494,7 @@ declare module org {
 					setUserData(param0: string, param1: any, param2: org.w3c.dom.UserDataHandler): any;
 					getUserData(param0: string): any;
 				});
+				public constructor();
 				public static DOCUMENT_FRAGMENT_NODE: number;
 				public static DOCUMENT_TYPE_NODE: number;
 				public static ELEMENT_NODE: number;
@@ -102827,7 +103569,7 @@ declare module org {
 			export class DOMConfiguration extends java.lang.Object {
 				public static class: java.lang.Class<org.w3c.dom.DOMConfiguration>;
 				/**
-				 * Constructs a new instance of the org.w3c.dom.DOMConfiguration interface with the provided implementation.
+				 * Constructs a new instance of the org.w3c.dom.DOMConfiguration interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					setParameter(param0: string, param1: any): void;
@@ -102835,6 +103577,7 @@ declare module org {
 					canSetParameter(param0: string, param1: any): boolean;
 					getParameterNames(): org.w3c.dom.DOMStringList;
 				});
+				public constructor();
 				public getParameter(param0: string): any;
 				public getParameterNames(): org.w3c.dom.DOMStringList;
 				public setParameter(param0: string, param1: any): void;
@@ -102850,7 +103593,7 @@ declare module org {
 			export class DOMError extends java.lang.Object {
 				public static class: java.lang.Class<org.w3c.dom.DOMError>;
 				/**
-				 * Constructs a new instance of the org.w3c.dom.DOMError interface with the provided implementation.
+				 * Constructs a new instance of the org.w3c.dom.DOMError interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					getSeverity(): number;
@@ -102860,6 +103603,7 @@ declare module org {
 					getRelatedData(): any;
 					getLocation(): org.w3c.dom.DOMLocator;
 				});
+				public constructor();
 				public static SEVERITY_ERROR: number;
 				public static SEVERITY_FATAL_ERROR: number;
 				public static SEVERITY_WARNING: number;
@@ -102880,11 +103624,12 @@ declare module org {
 			export class DOMErrorHandler extends java.lang.Object {
 				public static class: java.lang.Class<org.w3c.dom.DOMErrorHandler>;
 				/**
-				 * Constructs a new instance of the org.w3c.dom.DOMErrorHandler interface with the provided implementation.
+				 * Constructs a new instance of the org.w3c.dom.DOMErrorHandler interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					handleError(param0: org.w3c.dom.DOMError): boolean;
 				});
+				public constructor();
 				public handleError(param0: org.w3c.dom.DOMError): boolean;
 			}
 		}
@@ -102931,7 +103676,7 @@ declare module org {
 			export class DOMImplementation extends java.lang.Object {
 				public static class: java.lang.Class<org.w3c.dom.DOMImplementation>;
 				/**
-				 * Constructs a new instance of the org.w3c.dom.DOMImplementation interface with the provided implementation.
+				 * Constructs a new instance of the org.w3c.dom.DOMImplementation interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					hasFeature(param0: string, param1: string): boolean;
@@ -102939,6 +103684,7 @@ declare module org {
 					createDocument(param0: string, param1: string, param2: org.w3c.dom.DocumentType): org.w3c.dom.Document;
 					getFeature(param0: string, param1: string): any;
 				});
+				public constructor();
 				public createDocument(param0: string, param1: string, param2: org.w3c.dom.DocumentType): org.w3c.dom.Document;
 				public hasFeature(param0: string, param1: string): boolean;
 				public createDocumentType(param0: string, param1: string, param2: string): org.w3c.dom.DocumentType;
@@ -102954,12 +103700,13 @@ declare module org {
 			export class DOMImplementationList extends java.lang.Object {
 				public static class: java.lang.Class<org.w3c.dom.DOMImplementationList>;
 				/**
-				 * Constructs a new instance of the org.w3c.dom.DOMImplementationList interface with the provided implementation.
+				 * Constructs a new instance of the org.w3c.dom.DOMImplementationList interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					item(param0: number): org.w3c.dom.DOMImplementation;
 					getLength(): number;
 				});
+				public constructor();
 				public item(param0: number): org.w3c.dom.DOMImplementation;
 				public getLength(): number;
 			}
@@ -102973,12 +103720,13 @@ declare module org {
 			export class DOMImplementationSource extends java.lang.Object {
 				public static class: java.lang.Class<org.w3c.dom.DOMImplementationSource>;
 				/**
-				 * Constructs a new instance of the org.w3c.dom.DOMImplementationSource interface with the provided implementation.
+				 * Constructs a new instance of the org.w3c.dom.DOMImplementationSource interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					getDOMImplementation(param0: string): org.w3c.dom.DOMImplementation;
 					getDOMImplementationList(param0: string): org.w3c.dom.DOMImplementationList;
 				});
+				public constructor();
 				public getDOMImplementation(param0: string): org.w3c.dom.DOMImplementation;
 				public getDOMImplementationList(param0: string): org.w3c.dom.DOMImplementationList;
 			}
@@ -102992,7 +103740,7 @@ declare module org {
 			export class DOMLocator extends java.lang.Object {
 				public static class: java.lang.Class<org.w3c.dom.DOMLocator>;
 				/**
-				 * Constructs a new instance of the org.w3c.dom.DOMLocator interface with the provided implementation.
+				 * Constructs a new instance of the org.w3c.dom.DOMLocator interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					getLineNumber(): number;
@@ -103002,6 +103750,7 @@ declare module org {
 					getRelatedNode(): org.w3c.dom.Node;
 					getUri(): string;
 				});
+				public constructor();
 				public getLineNumber(): number;
 				public getUri(): string;
 				public getRelatedNode(): org.w3c.dom.Node;
@@ -103019,13 +103768,14 @@ declare module org {
 			export class DOMStringList extends java.lang.Object {
 				public static class: java.lang.Class<org.w3c.dom.DOMStringList>;
 				/**
-				 * Constructs a new instance of the org.w3c.dom.DOMStringList interface with the provided implementation.
+				 * Constructs a new instance of the org.w3c.dom.DOMStringList interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					item(param0: number): string;
 					getLength(): number;
 					contains(param0: string): boolean;
 				});
+				public constructor();
 				public contains(param0: string): boolean;
 				public item(param0: number): string;
 				public getLength(): number;
@@ -103040,7 +103790,7 @@ declare module org {
 			export class Document extends java.lang.Object implements org.w3c.dom.Node {
 				public static class: java.lang.Class<org.w3c.dom.Document>;
 				/**
-				 * Constructs a new instance of the org.w3c.dom.Document interface with the provided implementation.
+				 * Constructs a new instance of the org.w3c.dom.Document interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					getDoctype(): org.w3c.dom.DocumentType;
@@ -103112,6 +103862,7 @@ declare module org {
 					setUserData(param0: string, param1: any, param2: org.w3c.dom.UserDataHandler): any;
 					getUserData(param0: string): any;
 				});
+				public constructor();
 				public static DOCUMENT_FRAGMENT_NODE: number;
 				public static DOCUMENT_TYPE_NODE: number;
 				public static ELEMENT_NODE: number;
@@ -103209,7 +103960,7 @@ declare module org {
 			export class DocumentFragment extends java.lang.Object implements org.w3c.dom.Node {
 				public static class: java.lang.Class<org.w3c.dom.DocumentFragment>;
 				/**
-				 * Constructs a new instance of the org.w3c.dom.DocumentFragment interface with the provided implementation.
+				 * Constructs a new instance of the org.w3c.dom.DocumentFragment interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					getNodeName(): string;
@@ -103250,6 +104001,7 @@ declare module org {
 					setUserData(param0: string, param1: any, param2: org.w3c.dom.UserDataHandler): any;
 					getUserData(param0: string): any;
 				});
+				public constructor();
 				public static DOCUMENT_FRAGMENT_NODE: number;
 				public static DOCUMENT_TYPE_NODE: number;
 				public static ELEMENT_NODE: number;
@@ -103316,7 +104068,7 @@ declare module org {
 			export class DocumentType extends java.lang.Object implements org.w3c.dom.Node {
 				public static class: java.lang.Class<org.w3c.dom.DocumentType>;
 				/**
-				 * Constructs a new instance of the org.w3c.dom.DocumentType interface with the provided implementation.
+				 * Constructs a new instance of the org.w3c.dom.DocumentType interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					getName(): string;
@@ -103363,6 +104115,7 @@ declare module org {
 					setUserData(param0: string, param1: any, param2: org.w3c.dom.UserDataHandler): any;
 					getUserData(param0: string): any;
 				});
+				public constructor();
 				public static DOCUMENT_FRAGMENT_NODE: number;
 				public static DOCUMENT_TYPE_NODE: number;
 				public static ELEMENT_NODE: number;
@@ -103435,7 +104188,7 @@ declare module org {
 			export class Element extends java.lang.Object implements org.w3c.dom.Node {
 				public static class: java.lang.Class<org.w3c.dom.Element>;
 				/**
-				 * Constructs a new instance of the org.w3c.dom.Element interface with the provided implementation.
+				 * Constructs a new instance of the org.w3c.dom.Element interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					getTagName(): string;
@@ -103496,6 +104249,7 @@ declare module org {
 					setUserData(param0: string, param1: any, param2: org.w3c.dom.UserDataHandler): any;
 					getUserData(param0: string): any;
 				});
+				public constructor();
 				public static DOCUMENT_FRAGMENT_NODE: number;
 				public static DOCUMENT_TYPE_NODE: number;
 				public static ELEMENT_NODE: number;
@@ -103582,7 +104336,7 @@ declare module org {
 			export class Entity extends java.lang.Object implements org.w3c.dom.Node {
 				public static class: java.lang.Class<org.w3c.dom.Entity>;
 				/**
-				 * Constructs a new instance of the org.w3c.dom.Entity interface with the provided implementation.
+				 * Constructs a new instance of the org.w3c.dom.Entity interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					getPublicId(): string;
@@ -103629,6 +104383,7 @@ declare module org {
 					setUserData(param0: string, param1: any, param2: org.w3c.dom.UserDataHandler): any;
 					getUserData(param0: string): any;
 				});
+				public constructor();
 				public static DOCUMENT_FRAGMENT_NODE: number;
 				public static DOCUMENT_TYPE_NODE: number;
 				public static ELEMENT_NODE: number;
@@ -103701,7 +104456,7 @@ declare module org {
 			export class EntityReference extends java.lang.Object implements org.w3c.dom.Node {
 				public static class: java.lang.Class<org.w3c.dom.EntityReference>;
 				/**
-				 * Constructs a new instance of the org.w3c.dom.EntityReference interface with the provided implementation.
+				 * Constructs a new instance of the org.w3c.dom.EntityReference interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					getNodeName(): string;
@@ -103742,6 +104497,7 @@ declare module org {
 					setUserData(param0: string, param1: any, param2: org.w3c.dom.UserDataHandler): any;
 					getUserData(param0: string): any;
 				});
+				public constructor();
 				public static DOCUMENT_FRAGMENT_NODE: number;
 				public static DOCUMENT_TYPE_NODE: number;
 				public static ELEMENT_NODE: number;
@@ -103808,7 +104564,7 @@ declare module org {
 			export class NameList extends java.lang.Object {
 				public static class: java.lang.Class<org.w3c.dom.NameList>;
 				/**
-				 * Constructs a new instance of the org.w3c.dom.NameList interface with the provided implementation.
+				 * Constructs a new instance of the org.w3c.dom.NameList interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					getName(param0: number): string;
@@ -103817,6 +104573,7 @@ declare module org {
 					contains(param0: string): boolean;
 					containsNS(param0: string, param1: string): boolean;
 				});
+				public constructor();
 				public getName(param0: number): string;
 				public contains(param0: string): boolean;
 				public getNamespaceURI(param0: number): string;
@@ -103833,7 +104590,7 @@ declare module org {
 			export class NamedNodeMap extends java.lang.Object {
 				public static class: java.lang.Class<org.w3c.dom.NamedNodeMap>;
 				/**
-				 * Constructs a new instance of the org.w3c.dom.NamedNodeMap interface with the provided implementation.
+				 * Constructs a new instance of the org.w3c.dom.NamedNodeMap interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					getNamedItem(param0: string): org.w3c.dom.Node;
@@ -103845,6 +104602,7 @@ declare module org {
 					setNamedItemNS(param0: org.w3c.dom.Node): org.w3c.dom.Node;
 					removeNamedItemNS(param0: string, param1: string): org.w3c.dom.Node;
 				});
+				public constructor();
 				public item(param0: number): org.w3c.dom.Node;
 				public setNamedItem(param0: org.w3c.dom.Node): org.w3c.dom.Node;
 				public setNamedItemNS(param0: org.w3c.dom.Node): org.w3c.dom.Node;
@@ -103864,7 +104622,7 @@ declare module org {
 			export class Node extends java.lang.Object {
 				public static class: java.lang.Class<org.w3c.dom.Node>;
 				/**
-				 * Constructs a new instance of the org.w3c.dom.Node interface with the provided implementation.
+				 * Constructs a new instance of the org.w3c.dom.Node interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					getNodeName(): string;
@@ -103905,6 +104663,7 @@ declare module org {
 					setUserData(param0: string, param1: any, param2: org.w3c.dom.UserDataHandler): any;
 					getUserData(param0: string): any;
 				});
+				public constructor();
 				public static DOCUMENT_FRAGMENT_NODE: number;
 				public static DOCUMENT_TYPE_NODE: number;
 				public static ELEMENT_NODE: number;
@@ -103971,12 +104730,13 @@ declare module org {
 			export class NodeList extends java.lang.Object {
 				public static class: java.lang.Class<org.w3c.dom.NodeList>;
 				/**
-				 * Constructs a new instance of the org.w3c.dom.NodeList interface with the provided implementation.
+				 * Constructs a new instance of the org.w3c.dom.NodeList interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					item(param0: number): org.w3c.dom.Node;
 					getLength(): number;
 				});
+				public constructor();
 				public item(param0: number): org.w3c.dom.Node;
 				public getLength(): number;
 			}
@@ -103990,7 +104750,7 @@ declare module org {
 			export class Notation extends java.lang.Object implements org.w3c.dom.Node {
 				public static class: java.lang.Class<org.w3c.dom.Notation>;
 				/**
-				 * Constructs a new instance of the org.w3c.dom.Notation interface with the provided implementation.
+				 * Constructs a new instance of the org.w3c.dom.Notation interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					getPublicId(): string;
@@ -104033,6 +104793,7 @@ declare module org {
 					setUserData(param0: string, param1: any, param2: org.w3c.dom.UserDataHandler): any;
 					getUserData(param0: string): any;
 				});
+				public constructor();
 				public static DOCUMENT_FRAGMENT_NODE: number;
 				public static DOCUMENT_TYPE_NODE: number;
 				public static ELEMENT_NODE: number;
@@ -104101,7 +104862,7 @@ declare module org {
 			export class ProcessingInstruction extends java.lang.Object implements org.w3c.dom.Node {
 				public static class: java.lang.Class<org.w3c.dom.ProcessingInstruction>;
 				/**
-				 * Constructs a new instance of the org.w3c.dom.ProcessingInstruction interface with the provided implementation.
+				 * Constructs a new instance of the org.w3c.dom.ProcessingInstruction interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					getTarget(): string;
@@ -104145,6 +104906,7 @@ declare module org {
 					setUserData(param0: string, param1: any, param2: org.w3c.dom.UserDataHandler): any;
 					getUserData(param0: string): any;
 				});
+				public constructor();
 				public static DOCUMENT_FRAGMENT_NODE: number;
 				public static DOCUMENT_TYPE_NODE: number;
 				public static ELEMENT_NODE: number;
@@ -104214,7 +104976,7 @@ declare module org {
 			export class Text extends java.lang.Object implements org.w3c.dom.CharacterData {
 				public static class: java.lang.Class<org.w3c.dom.Text>;
 				/**
-				 * Constructs a new instance of the org.w3c.dom.Text interface with the provided implementation.
+				 * Constructs a new instance of the org.w3c.dom.Text interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					splitText(param0: number): org.w3c.dom.Text;
@@ -104267,6 +105029,7 @@ declare module org {
 					setUserData(param0: string, param1: any, param2: org.w3c.dom.UserDataHandler): any;
 					getUserData(param0: string): any;
 				});
+				public constructor();
 				public static DOCUMENT_FRAGMENT_NODE: number;
 				public static DOCUMENT_TYPE_NODE: number;
 				public static ELEMENT_NODE: number;
@@ -104345,13 +105108,14 @@ declare module org {
 			export class TypeInfo extends java.lang.Object {
 				public static class: java.lang.Class<org.w3c.dom.TypeInfo>;
 				/**
-				 * Constructs a new instance of the org.w3c.dom.TypeInfo interface with the provided implementation.
+				 * Constructs a new instance of the org.w3c.dom.TypeInfo interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					getTypeName(): string;
 					getTypeNamespace(): string;
 					isDerivedFrom(param0: string, param1: string, param2: number): boolean;
 				});
+				public constructor();
 				public static DERIVATION_RESTRICTION: number;
 				public static DERIVATION_LIST: number;
 				public static DERIVATION_UNION: number;
@@ -104370,11 +105134,12 @@ declare module org {
 			export class UserDataHandler extends java.lang.Object {
 				public static class: java.lang.Class<org.w3c.dom.UserDataHandler>;
 				/**
-				 * Constructs a new instance of the org.w3c.dom.UserDataHandler interface with the provided implementation.
+				 * Constructs a new instance of the org.w3c.dom.UserDataHandler interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					handle(param0: number, param1: string, param2: any, param3: org.w3c.dom.Node, param4: org.w3c.dom.Node): void;
 				});
+				public constructor();
 				public static NODE_DELETED: number;
 				public static NODE_RENAMED: number;
 				public static NODE_ADOPTED: number;
@@ -104393,7 +105158,7 @@ declare module org {
 				export class DOMImplementationLS extends java.lang.Object {
 					public static class: java.lang.Class<org.w3c.dom.ls.DOMImplementationLS>;
 					/**
-					 * Constructs a new instance of the org.w3c.dom.ls.DOMImplementationLS interface with the provided implementation.
+					 * Constructs a new instance of the org.w3c.dom.ls.DOMImplementationLS interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 					 */
 					public constructor(implementation: {
 						createLSParser(param0: number, param1: string): org.w3c.dom.ls.LSParser;
@@ -104401,6 +105166,7 @@ declare module org {
 						createLSInput(): org.w3c.dom.ls.LSInput;
 						createLSOutput(): org.w3c.dom.ls.LSOutput;
 					});
+					public constructor();
 					public static MODE_SYNCHRONOUS: number;
 					public static MODE_ASYNCHRONOUS: number;
 					public createLSInput(): org.w3c.dom.ls.LSInput;
@@ -104441,7 +105207,7 @@ declare module org {
 				export class LSInput extends java.lang.Object {
 					public static class: java.lang.Class<org.w3c.dom.ls.LSInput>;
 					/**
-					 * Constructs a new instance of the org.w3c.dom.ls.LSInput interface with the provided implementation.
+					 * Constructs a new instance of the org.w3c.dom.ls.LSInput interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 					 */
 					public constructor(implementation: {
 						getCharacterStream(): java.io.Reader;
@@ -104461,6 +105227,7 @@ declare module org {
 						getCertifiedText(): boolean;
 						setCertifiedText(param0: boolean): void;
 					});
+					public constructor();
 					public getCharacterStream(): java.io.Reader;
 					public setEncoding(param0: string): void;
 					public setStringData(param0: string): void;
@@ -104490,7 +105257,7 @@ declare module org {
 				export class LSOutput extends java.lang.Object {
 					public static class: java.lang.Class<org.w3c.dom.ls.LSOutput>;
 					/**
-					 * Constructs a new instance of the org.w3c.dom.ls.LSOutput interface with the provided implementation.
+					 * Constructs a new instance of the org.w3c.dom.ls.LSOutput interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 					 */
 					public constructor(implementation: {
 						getCharacterStream(): java.io.Writer;
@@ -104502,6 +105269,7 @@ declare module org {
 						getEncoding(): string;
 						setEncoding(param0: string): void;
 					});
+					public constructor();
 					public setByteStream(param0: java.io.OutputStream): void;
 					public setEncoding(param0: string): void;
 					public getEncoding(): string;
@@ -104523,7 +105291,7 @@ declare module org {
 				export class LSParser extends java.lang.Object {
 					public static class: java.lang.Class<org.w3c.dom.ls.LSParser>;
 					/**
-					 * Constructs a new instance of the org.w3c.dom.ls.LSParser interface with the provided implementation.
+					 * Constructs a new instance of the org.w3c.dom.ls.LSParser interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 					 */
 					public constructor(implementation: {
 						getDomConfig(): org.w3c.dom.DOMConfiguration;
@@ -104536,6 +105304,7 @@ declare module org {
 						parseWithContext(param0: org.w3c.dom.ls.LSInput, param1: org.w3c.dom.Node, param2: number): org.w3c.dom.Node;
 						abort(): void;
 					});
+					public constructor();
 					public static ACTION_REPLACE_CHILDREN: number;
 					public static ACTION_INSERT_AFTER: number;
 					public static ACTION_INSERT_BEFORE: number;
@@ -104563,13 +105332,14 @@ declare module org {
 				export class LSParserFilter extends java.lang.Object {
 					public static class: java.lang.Class<org.w3c.dom.ls.LSParserFilter>;
 					/**
-					 * Constructs a new instance of the org.w3c.dom.ls.LSParserFilter interface with the provided implementation.
+					 * Constructs a new instance of the org.w3c.dom.ls.LSParserFilter interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 					 */
 					public constructor(implementation: {
 						startElement(param0: org.w3c.dom.Element): number;
 						acceptNode(param0: org.w3c.dom.Node): number;
 						getWhatToShow(): number;
 					});
+					public constructor();
 					public static FILTER_ACCEPT: number;
 					public static FILTER_REJECT: number;
 					public static FILTER_INTERRUPT: number;
@@ -104590,11 +105360,12 @@ declare module org {
 				export class LSResourceResolver extends java.lang.Object {
 					public static class: java.lang.Class<org.w3c.dom.ls.LSResourceResolver>;
 					/**
-					 * Constructs a new instance of the org.w3c.dom.ls.LSResourceResolver interface with the provided implementation.
+					 * Constructs a new instance of the org.w3c.dom.ls.LSResourceResolver interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 					 */
 					public constructor(implementation: {
 						resolveResource(param0: string, param1: string, param2: string, param3: string, param4: string): org.w3c.dom.ls.LSInput;
 					});
+					public constructor();
 					public resolveResource(param0: string, param1: string, param2: string, param3: string, param4: string): org.w3c.dom.ls.LSInput;
 				}
 			}
@@ -104609,7 +105380,7 @@ declare module org {
 				export class LSSerializer extends java.lang.Object {
 					public static class: java.lang.Class<org.w3c.dom.ls.LSSerializer>;
 					/**
-					 * Constructs a new instance of the org.w3c.dom.ls.LSSerializer interface with the provided implementation.
+					 * Constructs a new instance of the org.w3c.dom.ls.LSSerializer interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 					 */
 					public constructor(implementation: {
 						getDomConfig(): org.w3c.dom.DOMConfiguration;
@@ -104619,6 +105390,7 @@ declare module org {
 						writeToURI(param0: org.w3c.dom.Node, param1: string): boolean;
 						writeToString(param0: org.w3c.dom.Node): string;
 					});
+					public constructor();
 					public writeToURI(param0: org.w3c.dom.Node, param1: string): boolean;
 					public setNewLine(param0: string): void;
 					public writeToString(param0: org.w3c.dom.Node): string;
@@ -104637,7 +105409,7 @@ declare module org {
 			export class AttributeList extends java.lang.Object {
 				public static class: java.lang.Class<org.xml.sax.AttributeList>;
 				/**
-				 * Constructs a new instance of the org.xml.sax.AttributeList interface with the provided implementation.
+				 * Constructs a new instance of the org.xml.sax.AttributeList interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					getLength(): number;
@@ -104647,6 +105419,7 @@ declare module org {
 					getType(param0: string): string;
 					getValue(param0: string): string;
 				});
+				public constructor();
 				public getName(param0: number): string;
 				public getValue(param0: number): string;
 				public getType(param0: number): string;
@@ -104664,7 +105437,7 @@ declare module org {
 			export class Attributes extends java.lang.Object {
 				public static class: java.lang.Class<org.xml.sax.Attributes>;
 				/**
-				 * Constructs a new instance of the org.xml.sax.Attributes interface with the provided implementation.
+				 * Constructs a new instance of the org.xml.sax.Attributes interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					getLength(): number;
@@ -104680,6 +105453,7 @@ declare module org {
 					getValue(param0: string, param1: string): string;
 					getValue(param0: string): string;
 				});
+				public constructor();
 				public getURI(param0: number): string;
 				public getType(param0: string, param1: string): string;
 				public getValue(param0: number): string;
@@ -104703,7 +105477,7 @@ declare module org {
 			export class ContentHandler extends java.lang.Object {
 				public static class: java.lang.Class<org.xml.sax.ContentHandler>;
 				/**
-				 * Constructs a new instance of the org.xml.sax.ContentHandler interface with the provided implementation.
+				 * Constructs a new instance of the org.xml.sax.ContentHandler interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					setDocumentLocator(param0: org.xml.sax.Locator): void;
@@ -104718,6 +105492,7 @@ declare module org {
 					processingInstruction(param0: string, param1: string): void;
 					skippedEntity(param0: string): void;
 				});
+				public constructor();
 				public ignorableWhitespace(param0: native.Array<string>, param1: number, param2: number): void;
 				public startElement(param0: string, param1: string, param2: string, param3: org.xml.sax.Attributes): void;
 				public endElement(param0: string, param1: string, param2: string): void;
@@ -104740,12 +105515,13 @@ declare module org {
 			export class DTDHandler extends java.lang.Object {
 				public static class: java.lang.Class<org.xml.sax.DTDHandler>;
 				/**
-				 * Constructs a new instance of the org.xml.sax.DTDHandler interface with the provided implementation.
+				 * Constructs a new instance of the org.xml.sax.DTDHandler interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					notationDecl(param0: string, param1: string, param2: string): void;
 					unparsedEntityDecl(param0: string, param1: string, param2: string, param3: string): void;
 				});
+				public constructor();
 				public notationDecl(param0: string, param1: string, param2: string): void;
 				public unparsedEntityDecl(param0: string, param1: string, param2: string, param3: string): void;
 			}
@@ -104759,7 +105535,7 @@ declare module org {
 			export class DocumentHandler extends java.lang.Object {
 				public static class: java.lang.Class<org.xml.sax.DocumentHandler>;
 				/**
-				 * Constructs a new instance of the org.xml.sax.DocumentHandler interface with the provided implementation.
+				 * Constructs a new instance of the org.xml.sax.DocumentHandler interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					setDocumentLocator(param0: org.xml.sax.Locator): void;
@@ -104771,6 +105547,7 @@ declare module org {
 					ignorableWhitespace(param0: native.Array<string>, param1: number, param2: number): void;
 					processingInstruction(param0: string, param1: string): void;
 				});
+				public constructor();
 				public endElement(param0: string): void;
 				public ignorableWhitespace(param0: native.Array<string>, param1: number, param2: number): void;
 				public startElement(param0: string, param1: org.xml.sax.AttributeList): void;
@@ -104790,11 +105567,12 @@ declare module org {
 			export class EntityResolver extends java.lang.Object {
 				public static class: java.lang.Class<org.xml.sax.EntityResolver>;
 				/**
-				 * Constructs a new instance of the org.xml.sax.EntityResolver interface with the provided implementation.
+				 * Constructs a new instance of the org.xml.sax.EntityResolver interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					resolveEntity(param0: string, param1: string): org.xml.sax.InputSource;
 				});
+				public constructor();
 				public resolveEntity(param0: string, param1: string): org.xml.sax.InputSource;
 			}
 		}
@@ -104807,13 +105585,14 @@ declare module org {
 			export class ErrorHandler extends java.lang.Object {
 				public static class: java.lang.Class<org.xml.sax.ErrorHandler>;
 				/**
-				 * Constructs a new instance of the org.xml.sax.ErrorHandler interface with the provided implementation.
+				 * Constructs a new instance of the org.xml.sax.ErrorHandler interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					warning(param0: org.xml.sax.SAXParseException): void;
 					error(param0: org.xml.sax.SAXParseException): void;
 					fatalError(param0: org.xml.sax.SAXParseException): void;
 				});
+				public constructor();
 				public warning(param0: org.xml.sax.SAXParseException): void;
 				public fatalError(param0: org.xml.sax.SAXParseException): void;
 				public error(param0: org.xml.sax.SAXParseException): void;
@@ -104877,7 +105656,7 @@ declare module org {
 			export class Locator extends java.lang.Object {
 				public static class: java.lang.Class<org.xml.sax.Locator>;
 				/**
-				 * Constructs a new instance of the org.xml.sax.Locator interface with the provided implementation.
+				 * Constructs a new instance of the org.xml.sax.Locator interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					getPublicId(): string;
@@ -104885,6 +105664,7 @@ declare module org {
 					getLineNumber(): number;
 					getColumnNumber(): number;
 				});
+				public constructor();
 				public getPublicId(): string;
 				public getLineNumber(): number;
 				public getSystemId(): string;
@@ -104900,7 +105680,7 @@ declare module org {
 			export class Parser extends java.lang.Object {
 				public static class: java.lang.Class<org.xml.sax.Parser>;
 				/**
-				 * Constructs a new instance of the org.xml.sax.Parser interface with the provided implementation.
+				 * Constructs a new instance of the org.xml.sax.Parser interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					setLocale(param0: java.util.Locale): void;
@@ -104911,6 +105691,7 @@ declare module org {
 					parse(param0: org.xml.sax.InputSource): void;
 					parse(param0: string): void;
 				});
+				public constructor();
 				public setErrorHandler(param0: org.xml.sax.ErrorHandler): void;
 				public parse(param0: org.xml.sax.InputSource): void;
 				public parse(param0: string): void;
@@ -105008,7 +105789,7 @@ declare module org {
 			export class XMLFilter extends java.lang.Object implements org.xml.sax.XMLReader {
 				public static class: java.lang.Class<org.xml.sax.XMLFilter>;
 				/**
-				 * Constructs a new instance of the org.xml.sax.XMLFilter interface with the provided implementation.
+				 * Constructs a new instance of the org.xml.sax.XMLFilter interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					setParent(param0: org.xml.sax.XMLReader): void;
@@ -105028,6 +105809,7 @@ declare module org {
 					parse(param0: org.xml.sax.InputSource): void;
 					parse(param0: string): void;
 				});
+				public constructor();
 				public setContentHandler(param0: org.xml.sax.ContentHandler): void;
 				public setParent(param0: org.xml.sax.XMLReader): void;
 				public getProperty(param0: string): any;
@@ -105055,7 +105837,7 @@ declare module org {
 			export class XMLReader extends java.lang.Object {
 				public static class: java.lang.Class<org.xml.sax.XMLReader>;
 				/**
-				 * Constructs a new instance of the org.xml.sax.XMLReader interface with the provided implementation.
+				 * Constructs a new instance of the org.xml.sax.XMLReader interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					getFeature(param0: string): boolean;
@@ -105073,6 +105855,7 @@ declare module org {
 					parse(param0: org.xml.sax.InputSource): void;
 					parse(param0: string): void;
 				});
+				public constructor();
 				public setContentHandler(param0: org.xml.sax.ContentHandler): void;
 				public getProperty(param0: string): any;
 				public getEntityResolver(): org.xml.sax.EntityResolver;
@@ -105099,7 +105882,7 @@ declare module org {
 				export class Attributes2 extends java.lang.Object implements org.xml.sax.Attributes {
 					public static class: java.lang.Class<org.xml.sax.ext.Attributes2>;
 					/**
-					 * Constructs a new instance of the org.xml.sax.ext.Attributes2 interface with the provided implementation.
+					 * Constructs a new instance of the org.xml.sax.ext.Attributes2 interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 					 */
 					public constructor(implementation: {
 						isDeclared(param0: number): boolean;
@@ -105121,6 +105904,7 @@ declare module org {
 						getValue(param0: string, param1: string): string;
 						getValue(param0: string): string;
 					});
+					public constructor();
 					public isDeclared(param0: string): boolean;
 					public getType(param0: string, param1: string): string;
 					public isSpecified(param0: number): boolean;
@@ -105189,7 +105973,7 @@ declare module org {
 				export class DeclHandler extends java.lang.Object {
 					public static class: java.lang.Class<org.xml.sax.ext.DeclHandler>;
 					/**
-					 * Constructs a new instance of the org.xml.sax.ext.DeclHandler interface with the provided implementation.
+					 * Constructs a new instance of the org.xml.sax.ext.DeclHandler interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 					 */
 					public constructor(implementation: {
 						elementDecl(param0: string, param1: string): void;
@@ -105197,6 +105981,7 @@ declare module org {
 						internalEntityDecl(param0: string, param1: string): void;
 						externalEntityDecl(param0: string, param1: string, param2: string): void;
 					});
+					public constructor();
 					public attributeDecl(param0: string, param1: string, param2: string, param3: string, param4: string): void;
 					public internalEntityDecl(param0: string, param1: string): void;
 					public elementDecl(param0: string, param1: string): void;
@@ -105257,13 +106042,14 @@ declare module org {
 				export class EntityResolver2 extends java.lang.Object implements org.xml.sax.EntityResolver {
 					public static class: java.lang.Class<org.xml.sax.ext.EntityResolver2>;
 					/**
-					 * Constructs a new instance of the org.xml.sax.ext.EntityResolver2 interface with the provided implementation.
+					 * Constructs a new instance of the org.xml.sax.ext.EntityResolver2 interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 					 */
 					public constructor(implementation: {
 						getExternalSubset(param0: string, param1: string): org.xml.sax.InputSource;
 						resolveEntity(param0: string, param1: string, param2: string, param3: string): org.xml.sax.InputSource;
 						resolveEntity(param0: string, param1: string): org.xml.sax.InputSource;
 					});
+					public constructor();
 					public resolveEntity(param0: string, param1: string): org.xml.sax.InputSource;
 					public getExternalSubset(param0: string, param1: string): org.xml.sax.InputSource;
 					public resolveEntity(param0: string, param1: string, param2: string, param3: string): org.xml.sax.InputSource;
@@ -105280,7 +106066,7 @@ declare module org {
 				export class LexicalHandler extends java.lang.Object {
 					public static class: java.lang.Class<org.xml.sax.ext.LexicalHandler>;
 					/**
-					 * Constructs a new instance of the org.xml.sax.ext.LexicalHandler interface with the provided implementation.
+					 * Constructs a new instance of the org.xml.sax.ext.LexicalHandler interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 					 */
 					public constructor(implementation: {
 						startDTD(param0: string, param1: string, param2: string): void;
@@ -105291,6 +106077,7 @@ declare module org {
 						endCDATA(): void;
 						comment(param0: native.Array<string>, param1: number, param2: number): void;
 					});
+					public constructor();
 					public endCDATA(): void;
 					public comment(param0: native.Array<string>, param1: number, param2: number): void;
 					public endDTD(): void;
@@ -105311,7 +106098,7 @@ declare module org {
 				export class Locator2 extends java.lang.Object implements org.xml.sax.Locator {
 					public static class: java.lang.Class<org.xml.sax.ext.Locator2>;
 					/**
-					 * Constructs a new instance of the org.xml.sax.ext.Locator2 interface with the provided implementation.
+					 * Constructs a new instance of the org.xml.sax.ext.Locator2 interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 					 */
 					public constructor(implementation: {
 						getXMLVersion(): string;
@@ -105321,6 +106108,7 @@ declare module org {
 						getLineNumber(): number;
 						getColumnNumber(): number;
 					});
+					public constructor();
 					public getLineNumber(): number;
 					public getXMLVersion(): string;
 					public getEncoding(): string;
@@ -105643,7 +106431,7 @@ declare module org {
 			export class XmlPullParser extends java.lang.Object {
 				public static class: java.lang.Class<org.xmlpull.v1.XmlPullParser>;
 				/**
-				 * Constructs a new instance of the org.xmlpull.v1.XmlPullParser interface with the provided implementation.
+				 * Constructs a new instance of the org.xmlpull.v1.XmlPullParser interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					setFeature(param0: string, param1: boolean): void;
@@ -105685,6 +106473,7 @@ declare module org {
 					nextTag(): number;
 					<clinit>(): void;
 				});
+				public constructor();
 				public static NO_NAMESPACE: string;
 				public static TEXT: number;
 				public static ENTITY_REF: number;
@@ -105801,7 +106590,7 @@ declare module org {
 			export class XmlSerializer extends java.lang.Object {
 				public static class: java.lang.Class<org.xmlpull.v1.XmlSerializer>;
 				/**
-				 * Constructs a new instance of the org.xmlpull.v1.XmlSerializer interface with the provided implementation.
+				 * Constructs a new instance of the org.xmlpull.v1.XmlSerializer interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
 					setFeature(param0: string, param1: boolean): void;
@@ -105830,6 +106619,7 @@ declare module org {
 					ignorableWhitespace(param0: string): void;
 					flush(): void;
 				});
+				public constructor();
 				public setOutput(param0: java.io.Writer): void;
 				public docdecl(param0: string): void;
 				public getProperty(param0: string): any;
