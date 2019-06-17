@@ -2775,10 +2775,12 @@ declare module android {
 			public getId(): string;
 			public static feedbackTypeToString(param0: number): string;
 			public toString(): string;
+			/** @deprecated */
+			public getDescription(): string;
 			public loadDescription(param0: android.content.pm.PackageManager): string;
 			public describeContents(): number;
 			public writeToParcel(param0: android.os.Parcel, param1: number): void;
-			public getDescription(): string;
+			/** @deprecated */
 			public getCanRetrieveWindowContent(): boolean;
 			public hashCode(): number;
 			public static capabilityToString(param0: number): string;
@@ -2876,6 +2878,7 @@ declare module android {
 			public onCreateView(param0: android.view.View, param1: string, param2: android.content.Context, param3: android.util.AttributeSet): android.view.View;
 			public dispatchKeyShortcutEvent(param0: android.view.KeyEvent): boolean;
 			public onMenuItemSelected(param0: number, param1: android.view.MenuItem): boolean;
+			public onCreate(param0: android.os.Bundle, param1: any): void;
 			public onMenuOpened(param0: number, param1: android.view.Menu): boolean;
 			public onSearchRequested(param0: any): boolean;
 			public constructor();
@@ -2884,7 +2887,6 @@ declare module android {
 			public constructor(param0: android.content.Context, param1: number);
 			public onKeyUp(param0: number, param1: android.view.KeyEvent): boolean;
 			public onCreateContextMenu(param0: android.view.ContextMenu, param1: android.view.View, param2: android.view.ContextMenu.ContextMenuInfo): void;
-			public onCreate(param0: android.os.Bundle, param1: android.os.PersistableBundle): void;
 			public dispatchTouchEvent(param0: android.view.MotionEvent): boolean;
 			public dispatchTrackballEvent(param0: android.view.MotionEvent): boolean;
 			public constructor(param0: android.content.Context);
@@ -2953,6 +2955,8 @@ declare module android {
 			public getAuthenticatorTypes(): native.Array<android.accounts.AuthenticatorDescription>;
 			public removeOnAccountsUpdatedListener(param0: android.accounts.OnAccountsUpdateListener): void;
 			public addOnAccountsUpdatedListener(param0: android.accounts.OnAccountsUpdateListener, param1: android.os.Handler, param2: boolean): void;
+			/** @deprecated */
+			public getAuthToken(param0: android.accounts.Account, param1: string, param2: boolean, param3: android.accounts.AccountManagerCallback<android.os.Bundle>, param4: android.os.Handler): android.accounts.AccountManagerFuture<android.os.Bundle>;
 			public getAuthToken(param0: android.accounts.Account, param1: string, param2: android.os.Bundle, param3: android.app.Activity, param4: android.accounts.AccountManagerCallback<android.os.Bundle>, param5: android.os.Handler): android.accounts.AccountManagerFuture<android.os.Bundle>;
 			public updateCredentials(param0: android.accounts.Account, param1: string, param2: android.os.Bundle, param3: android.app.Activity, param4: android.accounts.AccountManagerCallback<android.os.Bundle>, param5: android.os.Handler): android.accounts.AccountManagerFuture<android.os.Bundle>;
 			public clearPassword(param0: android.accounts.Account): void;
@@ -2960,7 +2964,6 @@ declare module android {
 			public addAccount(param0: string, param1: string, param2: native.Array<string>, param3: android.os.Bundle, param4: android.app.Activity, param5: android.accounts.AccountManagerCallback<android.os.Bundle>, param6: android.os.Handler): android.accounts.AccountManagerFuture<android.os.Bundle>;
 			public blockingGetAuthToken(param0: android.accounts.Account, param1: string, param2: boolean): string;
 			public getAccountsByTypeForPackage(param0: string, param1: string): native.Array<android.accounts.Account>;
-			public getAuthToken(param0: android.accounts.Account, param1: string, param2: boolean, param3: android.accounts.AccountManagerCallback<android.os.Bundle>, param4: android.os.Handler): android.accounts.AccountManagerFuture<android.os.Bundle>;
 			public hasFeatures(param0: android.accounts.Account, param1: native.Array<string>, param2: android.accounts.AccountManagerCallback<java.lang.Boolean>, param3: android.os.Handler): android.accounts.AccountManagerFuture<java.lang.Boolean>;
 			public confirmCredentials(param0: android.accounts.Account, param1: android.os.Bundle, param2: android.app.Activity, param3: android.accounts.AccountManagerCallback<android.os.Bundle>, param4: android.os.Handler): android.accounts.AccountManagerFuture<android.os.Bundle>;
 			public addAccountExplicitly(param0: android.accounts.Account, param1: string, param2: android.os.Bundle): boolean;
@@ -2979,7 +2982,9 @@ declare module android {
 			public getAccountsByTypeAndFeatures(param0: string, param1: native.Array<string>, param2: android.accounts.AccountManagerCallback<native.Array<android.accounts.Account>>, param3: android.os.Handler): android.accounts.AccountManagerFuture<native.Array<android.accounts.Account>>;
 			public static get(param0: android.content.Context): android.accounts.AccountManager;
 			public getPreviousName(param0: android.accounts.Account): string;
+			/** @deprecated */
 			public static newChooseAccountIntent(param0: android.accounts.Account, param1: java.util.ArrayList<android.accounts.Account>, param2: native.Array<string>, param3: boolean, param4: string, param5: string, param6: native.Array<string>, param7: android.os.Bundle): android.content.Intent;
+			/** @deprecated */
 			public removeAccount(param0: android.accounts.Account, param1: android.accounts.AccountManagerCallback<java.lang.Boolean>, param2: android.os.Handler): android.accounts.AccountManagerFuture<java.lang.Boolean>;
 			public editProperties(param0: string, param1: android.app.Activity, param2: android.accounts.AccountManagerCallback<android.os.Bundle>, param3: android.os.Handler): android.accounts.AccountManagerFuture<android.os.Bundle>;
 			public getAuthTokenByFeatures(param0: string, param1: string, param2: native.Array<string>, param3: android.app.Activity, param4: android.os.Bundle, param5: android.os.Bundle, param6: android.accounts.AccountManagerCallback<android.os.Bundle>, param7: android.os.Handler): android.accounts.AccountManagerFuture<android.os.Bundle>;
@@ -3360,6 +3365,8 @@ declare module android {
 			public static DISAPPEARING: number;
 			public getStartDelay(param0: number): number;
 			public addChild(param0: android.view.ViewGroup, param1: android.view.View): void;
+			/** @deprecated */
+			public hideChild(param0: android.view.ViewGroup, param1: android.view.View): void;
 			public setStagger(param0: number, param1: number): void;
 			public setStartDelay(param0: number, param1: number): void;
 			public setAnimateParentHierarchy(param0: boolean): void;
@@ -3374,8 +3381,9 @@ declare module android {
 			public getDuration(param0: number): number;
 			public setDuration(param0: number): void;
 			public showChild(param0: android.view.ViewGroup, param1: android.view.View, param2: number): void;
+			/** @deprecated */
+			public showChild(param0: android.view.ViewGroup, param1: android.view.View): void;
 			public removeChild(param0: android.view.ViewGroup, param1: android.view.View): void;
-			public hideChild(param0: android.view.ViewGroup, param1: android.view.View): void;
 			public isChangingLayout(): boolean;
 			public constructor();
 			public setAnimator(param0: number, param1: android.animation.Animator): void;
@@ -3384,7 +3392,6 @@ declare module android {
 			public setDuration(param0: number, param1: number): void;
 			public getInterpolator(param0: number): android.animation.TimeInterpolator;
 			public removeTransitionListener(param0: android.animation.LayoutTransition.TransitionListener): void;
-			public showChild(param0: android.view.ViewGroup, param1: android.view.View): void;
 		}
 		export module LayoutTransition {
 			export class TransitionListener extends java.lang.Object {
@@ -3734,66 +3741,84 @@ declare module android {
 			public static NAVIGATION_MODE_TABS: number;
 			public addOnMenuVisibilityListener(param0: android.app.ActionBar.OnMenuVisibilityListener): void;
 			public setTitle(param0: string): void;
-			public setNavigationMode(param0: number): void;
+			/** @deprecated */
+			public setListNavigationCallbacks(param0: android.widget.SpinnerAdapter, param1: android.app.ActionBar.OnNavigationListener): void;
+			/** @deprecated */
+			public removeTabAt(param0: number): void;
 			public setSubtitle(param0: number): void;
 			public setSplitBackgroundDrawable(param0: android.graphics.drawable.Drawable): void;
-			public addTab(param0: android.app.ActionBar.Tab): void;
-			public setHomeActionContentDescription(param0: string): void;
-			public getSelectedNavigationIndex(): number;
+			/** @deprecated */
 			public getSelectedTab(): android.app.ActionBar.Tab;
+			public setHomeActionContentDescription(param0: string): void;
 			public removeOnMenuVisibilityListener(param0: android.app.ActionBar.OnMenuVisibilityListener): void;
+			/** @deprecated */
+			public getNavigationItemCount(): number;
 			public setLogo(param0: number): void;
+			/** @deprecated */
+			public addTab(param0: android.app.ActionBar.Tab, param1: boolean): void;
 			public getCustomView(): android.view.View;
+			/** @deprecated */
+			public addTab(param0: android.app.ActionBar.Tab, param1: number, param2: boolean): void;
 			public setHomeActionContentDescription(param0: number): void;
 			public setDisplayHomeAsUpEnabled(param0: boolean): void;
 			public hide(): void;
 			public isShowing(): boolean;
-			public getNavigationMode(): number;
+			/** @deprecated */
+			public getTabAt(param0: number): android.app.ActionBar.Tab;
 			public setCustomView(param0: android.view.View, param1: android.app.ActionBar.LayoutParams): void;
 			public getTitle(): string;
 			public getSubtitle(): string;
 			public getHeight(): number;
 			public setElevation(param0: number): void;
 			public setHideOnContentScrollEnabled(param0: boolean): void;
-			public addTab(param0: android.app.ActionBar.Tab, param1: boolean): void;
 			public constructor();
 			public setHideOffset(param0: number): void;
 			public setHomeAsUpIndicator(param0: number): void;
-			public addTab(param0: android.app.ActionBar.Tab, param1: number): void;
+			/** @deprecated */
+			public setNavigationMode(param0: number): void;
 			public setCustomView(param0: number): void;
-			public addTab(param0: android.app.ActionBar.Tab, param1: number, param2: boolean): void;
-			public setSelectedNavigationItem(param0: number): void;
-			public getNavigationItemCount(): number;
 			public getDisplayOptions(): number;
 			public show(): void;
-			public newTab(): android.app.ActionBar.Tab;
-			public removeAllTabs(): void;
-			public setListNavigationCallbacks(param0: android.widget.SpinnerAdapter, param1: android.app.ActionBar.OnNavigationListener): void;
 			public setDisplayOptions(param0: number): void;
+			/** @deprecated */
+			public addTab(param0: android.app.ActionBar.Tab, param1: number): void;
 			public setDisplayShowTitleEnabled(param0: boolean): void;
+			/** @deprecated */
+			public removeTab(param0: android.app.ActionBar.Tab): void;
 			public setLogo(param0: android.graphics.drawable.Drawable): void;
 			public setBackgroundDrawable(param0: android.graphics.drawable.Drawable): void;
 			public setDisplayShowCustomEnabled(param0: boolean): void;
+			/** @deprecated */
+			public selectTab(param0: android.app.ActionBar.Tab): void;
+			/** @deprecated */
+			public getSelectedNavigationIndex(): number;
 			public setDisplayUseLogoEnabled(param0: boolean): void;
-			public removeTab(param0: android.app.ActionBar.Tab): void;
+			/** @deprecated */
+			public getNavigationMode(): number;
 			public setCustomView(param0: android.view.View): void;
 			public getThemedContext(): android.content.Context;
 			public getElevation(): number;
+			/** @deprecated */
+			public getTabCount(): number;
 			public setIcon(param0: number): void;
 			public setDisplayOptions(param0: number, param1: number): void;
+			/** @deprecated */
+			public addTab(param0: android.app.ActionBar.Tab): void;
 			public setHomeAsUpIndicator(param0: android.graphics.drawable.Drawable): void;
 			public setTitle(param0: number): void;
 			public setDisplayShowHomeEnabled(param0: boolean): void;
-			public removeTabAt(param0: number): void;
-			public selectTab(param0: android.app.ActionBar.Tab): void;
+			/** @deprecated */
+			public setSelectedNavigationItem(param0: number): void;
+			/** @deprecated */
+			public removeAllTabs(): void;
 			public getHideOffset(): number;
 			public setSubtitle(param0: string): void;
 			public isHideOnContentScrollEnabled(): boolean;
-			public getTabAt(param0: number): android.app.ActionBar.Tab;
+			/** @deprecated */
+			public newTab(): android.app.ActionBar.Tab;
 			public setHomeButtonEnabled(param0: boolean): void;
 			public setIcon(param0: android.graphics.drawable.Drawable): void;
 			public setStackedBackgroundDrawable(param0: android.graphics.drawable.Drawable): void;
-			public getTabCount(): number;
 		}
 		export module ActionBar {
 			export class LayoutParams extends android.view.ViewGroup.MarginLayoutParams {
@@ -3887,23 +3912,30 @@ declare module android {
 			public isTaskRoot(): boolean;
 			public onChildTitleChanged(param0: android.app.Activity, param1: string): void;
 			public getLayoutInflater(): android.view.LayoutInflater;
+			/** @deprecated */
+			public managedQuery(param0: android.net.Uri, param1: native.Array<string>, param2: string, param3: native.Array<string>, param4: string): android.database.Cursor;
 			public getApplication(): android.app.Application;
-			public onSaveInstanceState(param0: android.os.Bundle, param1: android.os.PersistableBundle): void;
+			/** @deprecated */
+			public dismissDialog(param0: number): void;
 			public getCallingPackage(): string;
+			/** @deprecated */
+			public startManagingCursor(param0: android.database.Cursor): void;
 			public isChangingConfigurations(): boolean;
 			public startNextMatchingActivity(param0: android.content.Intent, param1: android.os.Bundle): boolean;
-			public setProgressBarVisibility(param0: boolean): void;
 			public onKeyLongPress(param0: number, param1: android.view.KeyEvent): boolean;
 			public dispatchGenericMotionEvent(param0: android.view.MotionEvent): boolean;
 			public requestVisibleBehind(param0: boolean): boolean;
 			public setExitSharedElementCallback(param0: any): void;
+			public onCreate(param0: android.os.Bundle, param1: any): void;
 			public getPreferences(param0: number): android.content.SharedPreferences;
+			/** @deprecated */
+			public setSecondaryProgress(param0: number): void;
 			public onRestoreInstanceState(param0: android.os.Bundle): void;
+			/** @deprecated */
+			public setTitleColor(param0: number): void;
 			public onPostResume(): void;
 			public startActivityFromFragment(param0: android.app.Fragment, param1: android.content.Intent, param2: number, param3: android.os.Bundle): void;
 			public isInPictureInPictureMode(): boolean;
-			public onRestoreInstanceState(param0: android.os.Bundle, param1: android.os.PersistableBundle): void;
-			public onPostCreate(param0: android.os.Bundle, param1: android.os.PersistableBundle): void;
 			public finishAffinity(): void;
 			public onPreparePanel(param0: number, param1: android.view.View, param2: android.view.Menu): boolean;
 			public getLocalClassName(): string;
@@ -3928,16 +3960,16 @@ declare module android {
 			public onConfigurationChanged(param0: android.content.res.Configuration): void;
 			public dispatchKeyShortcutEvent(param0: android.view.KeyEvent): boolean;
 			public setResult(param0: number): void;
-			public stopManagingCursor(param0: android.database.Cursor): void;
 			public runOnUiThread(param0: java.lang.Runnable): void;
 			public startIntentSender(param0: android.content.IntentSender, param1: android.content.Intent, param2: number, param3: number, param4: number): void;
 			public setVisible(param0: boolean): void;
 			public getSystemService(param0: java.lang.Class<any>): any;
-			public dismissDialog(param0: number): void;
 			public onNavigateUpFromChild(param0: android.app.Activity): boolean;
 			public onKeyUp(param0: number, param1: android.view.KeyEvent): boolean;
 			public getMediaController(): any;
 			public setContentView(param0: android.view.View, param1: android.view.ViewGroup.LayoutParams): void;
+			/** @deprecated */
+			public onCreateDialog(param0: number, param1: android.os.Bundle): android.app.Dialog;
 			public setFinishOnTouchOutside(param0: boolean): void;
 			public getReferrer(): android.net.Uri;
 			public isFinishing(): boolean;
@@ -3947,7 +3979,6 @@ declare module android {
 			public shouldUpRecreateTask(param0: android.content.Intent): boolean;
 			public setImmersive(param0: boolean): void;
 			public getCallingActivity(): android.content.ComponentName;
-			public onCreateDialog(param0: number, param1: android.os.Bundle): android.app.Dialog;
 			public findViewById(param0: number): android.view.View;
 			public requestPermissions(param0: native.Array<string>, param1: number): void;
 			public isChild(): boolean;
@@ -3956,6 +3987,8 @@ declare module android {
 			public onMultiWindowModeChanged(param0: boolean): void;
 			public startSearch(param0: string, param1: boolean, param2: android.os.Bundle, param3: boolean): void;
 			public onActivityResult(param0: number, param1: number, param2: android.content.Intent): void;
+			/** @deprecated */
+			public onPrepareDialog(param0: number, param1: android.app.Dialog): void;
 			public onActivityReenter(param0: number, param1: android.content.Intent): void;
 			public onCreatePanelView(param0: number): android.view.View;
 			public setDefaultKeyMode(param0: number): void;
@@ -3969,23 +4002,28 @@ declare module android {
 			public onRequestPermissionsResult(param0: number, param1: native.Array<string>, param2: native.Array<number>): void;
 			public onTrackballEvent(param0: android.view.MotionEvent): boolean;
 			public onNewIntent(param0: android.content.Intent): void;
+			/** @deprecated */
+			public showDialog(param0: number, param1: android.os.Bundle): boolean;
 			public getCurrentFocus(): android.view.View;
 			public onWindowFocusChanged(param0: boolean): void;
 			public finishFromChild(param0: android.app.Activity): void;
+			/** @deprecated */
+			public stopManagingCursor(param0: android.database.Cursor): void;
 			public startActivityIfNeeded(param0: android.content.Intent, param1: number, param2: android.os.Bundle): boolean;
 			public onUserInteraction(): void;
-			public onPrepareDialog(param0: number, param1: android.app.Dialog): void;
-			public removeDialog(param0: number): void;
 			public getIntent(): android.content.Intent;
 			public postponeEnterTransition(): void;
 			public closeContextMenu(): void;
 			public onWindowStartingActionMode(param0: android.view.ActionMode.Callback, param1: number): android.view.ActionMode;
+			/** @deprecated */
+			public setProgressBarVisibility(param0: boolean): void;
 			public setVolumeControlStream(param0: number): void;
 			public getLoaderManager(): android.app.LoaderManager;
 			public onPanelClosed(param0: number, param1: android.view.Menu): void;
 			public navigateUpTo(param0: android.content.Intent): boolean;
-			public managedQuery(param0: android.net.Uri, param1: native.Array<string>, param2: string, param3: native.Array<string>, param4: string): android.database.Cursor;
 			public finishAndRemoveTask(): void;
+			/** @deprecated */
+			public removeDialog(param0: number): void;
 			public getWindowManager(): android.view.WindowManager;
 			public onPause(): void;
 			public onStop(): void;
@@ -4006,14 +4044,16 @@ declare module android {
 			public dispatchKeyEvent(param0: android.view.KeyEvent): boolean;
 			public dispatchPopulateAccessibilityEvent(param0: android.view.accessibility.AccessibilityEvent): boolean;
 			public requestShowKeyboardShortcuts(): void;
+			/** @deprecated */
+			public showDialog(param0: number): void;
 			public releaseInstance(): boolean;
 			public startLockTask(): void;
 			public isLocalVoiceInteractionSupported(): boolean;
 			public onApplyThemeResource(param0: android.content.res.Resources.Theme, param1: number, param2: boolean): void;
 			public finishActivityFromChild(param0: android.app.Activity, param1: number): void;
 			public onStart(): void;
+			public onPostCreate(param0: android.os.Bundle, param1: any): void;
 			public setContentView(param0: android.view.View): void;
-			public showDialog(param0: number): void;
 			public finishActivity(param0: number): void;
 			public startIntentSenderFromChild(param0: android.app.Activity, param1: android.content.IntentSender, param2: number, param3: android.content.Intent, param4: number, param5: number, param6: number, param7: android.os.Bundle): void;
 			public createPendingResult(param0: number, param1: android.content.Intent, param2: number): android.app.PendingIntent;
@@ -4024,15 +4064,15 @@ declare module android {
 			public startIntentSenderForResult(param0: android.content.IntentSender, param1: number, param2: android.content.Intent, param3: number, param4: number, param5: number): void;
 			public setContentView(param0: number): void;
 			public onDetachedFromWindow(): void;
+			/** @deprecated */
+			public onCreateDialog(param0: number): android.app.Dialog;
+			public onSaveInstanceState(param0: android.os.Bundle, param1: any): void;
 			public setEnterSharedElementCallback(param0: any): void;
-			public showDialog(param0: number, param1: android.os.Bundle): boolean;
 			public constructor();
 			public onCreateNavigateUpTaskStack(param0: android.app.TaskStackBuilder): void;
 			public startActivityFromChild(param0: android.app.Activity, param1: android.content.Intent, param2: number): void;
-			public setProgressBarIndeterminate(param0: boolean): void;
 			public requestWindowFeature(param0: number): boolean;
 			public onNavigateUp(): boolean;
-			public setProgressBarIndeterminateVisibility(param0: boolean): void;
 			public closeOptionsMenu(): void;
 			public startActivityForResult(param0: android.content.Intent, param1: number, param2: android.os.Bundle): void;
 			public getRequestedOrientation(): number;
@@ -4059,11 +4099,10 @@ declare module android {
 			public onMenuOpened(param0: number, param1: android.view.Menu): boolean;
 			public onProvideReferrer(): android.net.Uri;
 			public getChangingConfigurations(): number;
-			public startManagingCursor(param0: android.database.Cursor): void;
 			public onSearchRequested(param0: any): boolean;
 			public onTitleChanged(param0: string, param1: number): void;
 			public onLocalVoiceInteractionStopped(): void;
-			public onPrepareDialog(param0: number, param1: android.app.Dialog, param2: android.os.Bundle): void;
+			public onRestoreInstanceState(param0: android.os.Bundle, param1: any): void;
 			public onEnterAnimationComplete(): void;
 			public setFeatureDrawableAlpha(param0: number, param1: number): void;
 			public setTheme(param0: number): void;
@@ -4073,11 +4112,12 @@ declare module android {
 			public dismissKeyboardShortcutsHelper(): void;
 			public onPrepareOptionsMenu(param0: android.view.Menu): boolean;
 			public setTitle(param0: string): void;
+			/** @deprecated */
+			public setProgressBarIndeterminateVisibility(param0: boolean): void;
 			public onCreatePanelMenu(param0: number, param1: android.view.Menu): boolean;
 			public setFeatureDrawableResource(param0: number, param1: number): void;
 			public getTitleColor(): number;
 			public onVisibleBehindCanceled(): void;
-			public setProgress(param0: number): void;
 			public onPostCreate(param0: android.os.Bundle): void;
 			public setContentTransitionManager(param0: android.transition.TransitionManager): void;
 			public isImmersive(): boolean;
@@ -4086,13 +4126,15 @@ declare module android {
 			public getWindow(): android.view.Window;
 			public stopLocalVoiceInteraction(): void;
 			public moveTaskToBack(param0: boolean): boolean;
+			/** @deprecated */
+			public setProgress(param0: number): void;
 			public onResume(): void;
 			public onCreateView(param0: string, param1: android.content.Context, param2: android.util.AttributeSet): android.view.View;
 			public isVoiceInteraction(): boolean;
 			public constructor(param0: android.content.Context, param1: number);
-			public onCreateDialog(param0: number): android.app.Dialog;
 			public onCreateContextMenu(param0: android.view.ContextMenu, param1: android.view.View, param2: android.view.ContextMenu.ContextMenuInfo): void;
-			public onCreate(param0: android.os.Bundle, param1: android.os.PersistableBundle): void;
+			/** @deprecated */
+			public setProgressBarIndeterminate(param0: boolean): void;
 			public hasWindowFocus(): boolean;
 			public dispatchTouchEvent(param0: android.view.MotionEvent): boolean;
 			public isInMultiWindowMode(): boolean;
@@ -4102,7 +4144,6 @@ declare module android {
 			public invalidateOptionsMenu(): void;
 			public onKeyMultiple(param0: number, param1: number, param2: android.view.KeyEvent): boolean;
 			public startLocalVoiceInteraction(param0: android.os.Bundle): void;
-			public setTitleColor(param0: number): void;
 			public startNextMatchingActivity(param0: android.content.Intent): boolean;
 			public onGenericMotionEvent(param0: android.view.MotionEvent): boolean;
 			public onProvideKeyboardShortcuts(param0: java.util.List<any>, param1: android.view.Menu, param2: number): void;
@@ -4115,7 +4156,6 @@ declare module android {
 			public openContextMenu(param0: android.view.View): void;
 			public showAssist(param0: android.os.Bundle): boolean;
 			public startActivities(param0: native.Array<android.content.Intent>, param1: android.os.Bundle): void;
-			public setSecondaryProgress(param0: number): void;
 			public recreate(): void;
 			public setVrModeEnabled(param0: boolean, param1: android.content.ComponentName): void;
 			public setTitle(param0: number): void;
@@ -4129,6 +4169,8 @@ declare module android {
 			public triggerSearch(param0: string, param1: android.os.Bundle): void;
 			public onWindowAttributesChanged(param0: android.view.WindowManager.LayoutParams): void;
 			public onCreateThumbnail(param0: android.graphics.Bitmap, param1: android.graphics.Canvas): boolean;
+			/** @deprecated */
+			public onPrepareDialog(param0: number, param1: android.app.Dialog, param2: android.os.Bundle): void;
 		}
 	}
 }
@@ -4145,7 +4187,6 @@ declare module android {
 			public onDestroy(): void;
 			public onProvideKeyboardShortcuts(param0: java.util.List<any>, param1: android.view.Menu, param2: number): void;
 			public onPanelClosed(param0: number, param1: android.view.Menu): void;
-			public onSaveInstanceState(param0: android.os.Bundle, param1: android.os.PersistableBundle): void;
 			public onSearchRequested(): boolean;
 			public onTrimMemory(param0: number): void;
 			public onKeyDown(param0: number, param1: android.view.KeyEvent): boolean;
@@ -4161,7 +4202,9 @@ declare module android {
 			public onCreateView(param0: android.view.View, param1: string, param2: android.content.Context, param3: android.util.AttributeSet): android.view.View;
 			public dispatchKeyShortcutEvent(param0: android.view.KeyEvent): boolean;
 			public onMenuItemSelected(param0: number, param1: android.view.MenuItem): boolean;
+			public onCreate(param0: android.os.Bundle, param1: any): void;
 			public onMenuOpened(param0: number, param1: android.view.Menu): boolean;
+			public onSaveInstanceState(param0: android.os.Bundle, param1: any): void;
 			public onResume(): void;
 			public onSearchRequested(param0: any): boolean;
 			public constructor();
@@ -4171,7 +4214,6 @@ declare module android {
 			public getLocalActivityManager(): android.app.LocalActivityManager;
 			public onKeyUp(param0: number, param1: android.view.KeyEvent): boolean;
 			public onCreateContextMenu(param0: android.view.ContextMenu, param1: android.view.View, param2: android.view.ContextMenu.ContextMenuInfo): void;
-			public onCreate(param0: android.os.Bundle, param1: android.os.PersistableBundle): void;
 			public dispatchTouchEvent(param0: android.view.MotionEvent): boolean;
 			public dispatchTrackballEvent(param0: android.view.MotionEvent): boolean;
 			public onSaveInstanceState(param0: android.os.Bundle): void;
@@ -4202,20 +4244,22 @@ declare module android {
 			public static RECENT_IGNORE_UNAVAILABLE: number;
 			public static RECENT_WITH_EXCLUDED: number;
 			public clearApplicationUserData(): boolean;
-			public getRunningTasks(param0: number): java.util.List<android.app.ActivityManager.RunningTaskInfo>;
 			public getMemoryClass(): number;
 			public moveTaskToFront(param0: number, param1: number): void;
+			/** @deprecated */
+			public getRecentTasks(param0: number, param1: number): java.util.List<android.app.ActivityManager.RecentTaskInfo>;
 			public setWatchHeapLimit(param0: number): void;
+			public getAppTaskThumbnailSize(): any;
 			public clearWatchHeapLimit(): void;
 			public getAppTasks(): java.util.List<android.app.ActivityManager.AppTask>;
-			public isInLockTaskMode(): boolean;
 			public getProcessMemoryInfo(param0: native.Array<number>): native.Array<android.os.Debug.MemoryInfo>;
 			public getLargeMemoryClass(): number;
 			public getRunningAppProcesses(): java.util.List<android.app.ActivityManager.RunningAppProcessInfo>;
 			public getLauncherLargeIconDensity(): number;
 			public dumpPackageState(param0: java.io.FileDescriptor, param1: string): void;
+			/** @deprecated */
+			public isInLockTaskMode(): boolean;
 			public static getMyMemoryState(param0: android.app.ActivityManager.RunningAppProcessInfo): void;
-			public restartPackage(param0: string): void;
 			public addAppTask(param0: android.app.Activity, param1: android.content.Intent, param2: android.app.ActivityManager.TaskDescription, param3: android.graphics.Bitmap): number;
 			public getProcessesInErrorState(): java.util.List<android.app.ActivityManager.ProcessErrorStateInfo>;
 			public killBackgroundProcesses(param0: string): void;
@@ -4223,11 +4267,13 @@ declare module android {
 			public getRunningServiceControlPanel(param0: android.content.ComponentName): android.app.PendingIntent;
 			public static isRunningInTestHarness(): boolean;
 			public getLockTaskModeState(): number;
-			public getAppTaskThumbnailSize(): android.util.Size;
+			/** @deprecated */
+			public restartPackage(param0: string): void;
 			public isLowRamDevice(): boolean;
+			/** @deprecated */
+			public getRunningTasks(param0: number): java.util.List<android.app.ActivityManager.RunningTaskInfo>;
 			public getLauncherLargeIconSize(): number;
 			public static setVrThread(param0: number): void;
-			public getRecentTasks(param0: number, param1: number): java.util.List<android.app.ActivityManager.RecentTaskInfo>;
 			public getDeviceConfigurationInfo(): android.content.pm.ConfigurationInfo;
 			public getMemoryInfo(param0: android.app.ActivityManager.MemoryInfo): void;
 			public moveTaskToFront(param0: number, param1: number, param2: android.os.Bundle): void;
@@ -4475,22 +4521,26 @@ declare module android {
 			public getButton(param0: number): android.widget.Button;
 			public setTitle(param0: string): void;
 			public onCreatePanelMenu(param0: number, param1: android.view.Menu): boolean;
-			public setButton(param0: string, param1: android.os.Message): void;
 			public cancel(): void;
 			public onSearchRequested(): boolean;
-			public setButton(param0: string, param1: android.content.DialogInterface.OnClickListener): void;
-			public setButton2(param0: string, param1: android.os.Message): void;
-			public setButton3(param0: string, param1: android.os.Message): void;
 			public onKeyDown(param0: number, param1: android.view.KeyEvent): boolean;
 			public onCreatePanelView(param0: number): android.view.View;
 			public onKeyLongPress(param0: number, param1: android.view.KeyEvent): boolean;
 			public dispatchGenericMotionEvent(param0: android.view.MotionEvent): boolean;
 			public onDetachedFromWindow(): void;
+			/** @deprecated */
+			public setButton3(param0: string, param1: android.content.DialogInterface.OnClickListener): void;
+			/** @deprecated */
+			public setButton2(param0: string, param1: android.os.Message): void;
 			public constructor(param0: android.content.Context, param1: number);
+			/** @deprecated */
+			public setButton(param0: string, param1: android.os.Message): void;
 			public setMessage(param0: string): void;
 			public onCreateContextMenu(param0: android.view.ContextMenu, param1: android.view.View, param2: android.view.ContextMenu.ContextMenuInfo): void;
 			public dispatchTouchEvent(param0: android.view.MotionEvent): boolean;
 			public onPreparePanel(param0: number, param1: android.view.View, param2: android.view.Menu): boolean;
+			/** @deprecated */
+			public setButton2(param0: string, param1: android.content.DialogInterface.OnClickListener): void;
 			public onWindowFocusChanged(param0: boolean): void;
 			public onCreate(param0: android.os.Bundle): void;
 			public setIconAttribute(param0: number): void;
@@ -4509,13 +4559,16 @@ declare module android {
 			public onActionModeStarted(param0: android.view.ActionMode): void;
 			public dispatchKeyShortcutEvent(param0: android.view.KeyEvent): boolean;
 			public onMenuItemSelected(param0: number, param1: android.view.MenuItem): boolean;
-			public setButton2(param0: string, param1: android.content.DialogInterface.OnClickListener): void;
 			public dismiss(): void;
 			public onMenuOpened(param0: number, param1: android.view.Menu): boolean;
 			public setIcon(param0: number): void;
 			public onSearchRequested(param0: any): boolean;
 			public setTitle(param0: number): void;
+			/** @deprecated */
+			public setButton3(param0: string, param1: android.os.Message): void;
 			public onKeyUp(param0: number, param1: android.view.KeyEvent): boolean;
+			/** @deprecated */
+			public setButton(param0: string, param1: android.content.DialogInterface.OnClickListener): void;
 			public dispatchTrackballEvent(param0: android.view.MotionEvent): boolean;
 			public setView(param0: android.view.View, param1: number, param2: number, param3: number, param4: number): void;
 			public constructor(param0: android.content.Context);
@@ -4524,7 +4577,6 @@ declare module android {
 			public getListView(): android.widget.ListView;
 			public dispatchPopulateAccessibilityEvent(param0: android.view.accessibility.AccessibilityEvent): boolean;
 			public onAttachedToWindow(): void;
-			public setButton3(param0: string, param1: android.content.DialogInterface.OnClickListener): void;
 			public setIcon(param0: android.graphics.drawable.Drawable): void;
 			public onWindowAttributesChanged(param0: android.view.WindowManager.LayoutParams): void;
 		}
@@ -4534,10 +4586,11 @@ declare module android {
 				public setTitle(param0: number): android.app.AlertDialog.Builder;
 				public setMessage(param0: number): android.app.AlertDialog.Builder;
 				public setTitle(param0: string): android.app.AlertDialog.Builder;
+				/** @deprecated */
+				public setInverseBackgroundForced(param0: boolean): android.app.AlertDialog.Builder;
 				public setNeutralButton(param0: number, param1: android.content.DialogInterface.OnClickListener): android.app.AlertDialog.Builder;
 				public setAdapter(param0: android.widget.ListAdapter, param1: android.content.DialogInterface.OnClickListener): android.app.AlertDialog.Builder;
 				public setSingleChoiceItems(param0: number, param1: number, param2: android.content.DialogInterface.OnClickListener): android.app.AlertDialog.Builder;
-				public setInverseBackgroundForced(param0: boolean): android.app.AlertDialog.Builder;
 				public setMultiChoiceItems(param0: native.Array<string>, param1: native.Array<boolean>, param2: android.content.DialogInterface.OnMultiChoiceClickListener): android.app.AlertDialog.Builder;
 				public setOnCancelListener(param0: android.content.DialogInterface.OnCancelListener): android.app.AlertDialog.Builder;
 				public setIconAttribute(param0: number): android.app.AlertDialog.Builder;
@@ -4597,6 +4650,7 @@ declare module android {
 			public onCreateView(param0: android.view.View, param1: string, param2: android.content.Context, param3: android.util.AttributeSet): android.view.View;
 			public dispatchKeyShortcutEvent(param0: android.view.KeyEvent): boolean;
 			public onMenuItemSelected(param0: number, param1: android.view.MenuItem): boolean;
+			public onCreate(param0: android.os.Bundle, param1: any): void;
 			public onMenuOpened(param0: number, param1: android.view.Menu): boolean;
 			public onSearchRequested(param0: any): boolean;
 			public constructor();
@@ -4604,7 +4658,6 @@ declare module android {
 			public constructor(param0: android.content.Context, param1: number);
 			public onKeyUp(param0: number, param1: android.view.KeyEvent): boolean;
 			public onCreateContextMenu(param0: android.view.ContextMenu, param1: android.view.View, param2: android.view.ContextMenu.ContextMenuInfo): void;
-			public onCreate(param0: android.os.Bundle, param1: android.os.PersistableBundle): void;
 			public dispatchTouchEvent(param0: android.view.MotionEvent): boolean;
 			public dispatchTrackballEvent(param0: android.view.MotionEvent): boolean;
 			public constructor(param0: android.content.Context);
@@ -5038,12 +5091,13 @@ declare module android {
 			public setShowsDialog(param0: boolean): void;
 			public constructor();
 			public dump(param0: string, param1: java.io.FileDescriptor, param2: java.io.PrintWriter, param3: native.Array<string>): void;
+			/** @deprecated */
+			public onAttach(param0: android.app.Activity): void;
 			public onCreateContextMenu(param0: android.view.ContextMenu, param1: android.view.View, param2: android.view.ContextMenu.ContextMenuInfo): void;
 			public setCancelable(param0: boolean): void;
 			public onSaveInstanceState(param0: android.os.Bundle): void;
 			public dismissAllowingStateLoss(): void;
 			public onAttach(param0: android.content.Context): void;
-			public onAttach(param0: android.app.Activity): void;
 			public show(param0: android.app.FragmentManager, param1: string): void;
 			public onCreate(param0: android.os.Bundle): void;
 		}
@@ -5126,7 +5180,6 @@ declare module android {
 				public setTitle(param0: string): android.app.DownloadManager.Request;
 				public setDestinationInExternalPublicDir(param0: string, param1: string): android.app.DownloadManager.Request;
 				public setMimeType(param0: string): android.app.DownloadManager.Request;
-				public setShowRunningNotification(param0: boolean): android.app.DownloadManager.Request;
 				public setDestinationInExternalFilesDir(param0: android.content.Context, param1: string, param2: string): android.app.DownloadManager.Request;
 				public setAllowedOverMetered(param0: boolean): android.app.DownloadManager.Request;
 				public setRequiresCharging(param0: boolean): android.app.DownloadManager.Request;
@@ -5134,6 +5187,8 @@ declare module android {
 				public setAllowedNetworkTypes(param0: number): android.app.DownloadManager.Request;
 				public setAllowedOverRoaming(param0: boolean): android.app.DownloadManager.Request;
 				public addRequestHeader(param0: string, param1: string): android.app.DownloadManager.Request;
+				/** @deprecated */
+				public setShowRunningNotification(param0: boolean): android.app.DownloadManager.Request;
 			}
 		}
 	}
@@ -5177,8 +5232,8 @@ declare module android {
 			public getSelectedPosition(): number;
 			public onGroupExpand(param0: number): void;
 			public onKeyUp(param0: number, param1: android.view.KeyEvent): boolean;
+			public onRestoreInstanceState(param0: android.os.Bundle, param1: any): void;
 			public onCreateContextMenu(param0: android.view.ContextMenu, param1: android.view.View, param2: android.view.ContextMenu.ContextMenuInfo): void;
-			public onRestoreInstanceState(param0: android.os.Bundle, param1: android.os.PersistableBundle): void;
 			public getExpandableListAdapter(): android.widget.ExpandableListAdapter;
 			public setSelectedGroup(param0: number): void;
 			public dispatchTouchEvent(param0: android.view.MotionEvent): boolean;
@@ -5201,6 +5256,8 @@ declare module android {
 			public static class: java.lang.Class<android.app.Fragment>;
 			public onStart(): void;
 			public getHost(): any;
+			/** @deprecated */
+			public onInflate(param0: android.app.Activity, param1: android.util.AttributeSet, param2: android.os.Bundle): void;
 			public onViewCreated(param0: android.view.View, param1: android.os.Bundle): void;
 			public setRetainInstance(param0: boolean): void;
 			public setArguments(param0: android.os.Bundle): void;
@@ -5210,11 +5267,14 @@ declare module android {
 			public getContext(): android.content.Context;
 			public onDestroyView(): void;
 			public setExitSharedElementCallback(param0: any): void;
-			public onInflate(param0: android.app.Activity, param1: android.util.AttributeSet, param2: android.os.Bundle): void;
+			/** @deprecated */
+			public onInflate(param0: android.util.AttributeSet, param1: android.os.Bundle): void;
 			public getEnterTransition(): android.transition.Transition;
 			public setEnterSharedElementCallback(param0: any): void;
 			public constructor();
 			public setAllowReturnTransitionOverlap(param0: boolean): void;
+			/** @deprecated */
+			public onAttach(param0: android.app.Activity): void;
 			public static instantiate(param0: android.content.Context, param1: string, param2: android.os.Bundle): android.app.Fragment;
 			public getArguments(): android.os.Bundle;
 			public setAllowEnterTransitionOverlap(param0: boolean): void;
@@ -5225,7 +5285,6 @@ declare module android {
 			public getAllowEnterTransitionOverlap(): boolean;
 			public getResources(): android.content.res.Resources;
 			public shouldShowRequestPermissionRationale(param0: string): boolean;
-			public onInflate(param0: android.util.AttributeSet, param1: android.os.Bundle): void;
 			public setSharedElementReturnTransition(param0: android.transition.Transition): void;
 			public getUserVisibleHint(): boolean;
 			public onDestroyOptionsMenu(): void;
@@ -5253,7 +5312,6 @@ declare module android {
 			public onPrepareOptionsMenu(param0: android.view.Menu): void;
 			public getChildFragmentManager(): android.app.FragmentManager;
 			public onAttach(param0: android.content.Context): void;
-			public onAttach(param0: android.app.Activity): void;
 			public setUserVisibleHint(param0: boolean): void;
 			public startActivityForResult(param0: android.content.Intent, param1: number): void;
 			public hashCode(): number;
@@ -5387,6 +5445,8 @@ declare module android {
 			public canResolveTextDirection(): boolean;
 			public getTextDirection(): number;
 			public updateViewLayout(param0: android.view.View, param1: android.view.ViewGroup.LayoutParams): void;
+			/** @deprecated */
+			public requestFitSystemWindows(): void;
 			public requestDisallowInterceptTouchEvent(param0: boolean): void;
 			public getChildVisibleRect(param0: android.view.View, param1: android.graphics.Rect, param2: android.graphics.Point): boolean;
 			public isTextDirectionResolved(): boolean;
@@ -5433,10 +5493,11 @@ declare module android {
 		export class FragmentController extends java.lang.Object {
 			public static class: java.lang.Class<android.app.FragmentController>;
 			public retainLoaderNonConfig(): android.util.ArrayMap<string,android.app.LoaderManager>;
+			/** @deprecated */
+			public restoreAllState(param0: android.os.Parcelable, param1: java.util.List<android.app.Fragment>): void;
 			public dispatchPause(): void;
 			public getLoaderManager(): android.app.LoaderManager;
 			public attachHost(param0: android.app.Fragment): void;
-			public retainNonConfig(): java.util.List<android.app.Fragment>;
 			public noteStateNotSaved(): void;
 			public dispatchPictureInPictureModeChanged(param0: boolean): void;
 			public getFragmentManager(): android.app.FragmentManager;
@@ -5447,6 +5508,8 @@ declare module android {
 			public dispatchStart(): void;
 			public restoreAllState(param0: android.os.Parcelable, param1: android.app.FragmentManagerNonConfig): void;
 			public dispatchDestroyView(): void;
+			/** @deprecated */
+			public retainNonConfig(): java.util.List<android.app.Fragment>;
 			public onCreateView(param0: android.view.View, param1: string, param2: android.content.Context, param3: android.util.AttributeSet): android.view.View;
 			public dispatchCreateOptionsMenu(param0: android.view.Menu, param1: android.view.MenuInflater): boolean;
 			public retainNestedNonConfig(): android.app.FragmentManagerNonConfig;
@@ -5466,7 +5529,6 @@ declare module android {
 			public saveAllState(): android.os.Parcelable;
 			public findFragmentByWho(param0: string): android.app.Fragment;
 			public dispatchTrimMemory(param0: number): void;
-			public restoreAllState(param0: android.os.Parcelable, param1: java.util.List<android.app.Fragment>): void;
 			public dumpLoaders(param0: string, param1: java.io.FileDescriptor, param2: java.io.PrintWriter, param3: native.Array<string>): void;
 			public doLoaderStart(): void;
 			public dispatchPrepareOptionsMenu(param0: android.view.Menu): boolean;
@@ -5624,7 +5686,9 @@ declare module android {
 			public onStart(): void;
 			public finish(param0: number, param1: android.os.Bundle): void;
 			public callActivityOnResume(param0: android.app.Activity): void;
+			public callActivityOnCreate(param0: android.app.Activity, param1: android.os.Bundle, param2: any): void;
 			public callActivityOnStart(param0: android.app.Activity): void;
+			public callActivityOnSaveInstanceState(param0: android.app.Activity, param1: android.os.Bundle, param2: any): void;
 			public callActivityOnPause(param0: android.app.Activity): void;
 			public getUiAutomation(): android.app.UiAutomation;
 			public newActivity(param0: java.lang.ClassLoader, param1: string, param2: android.content.Intent): android.app.Activity;
@@ -5638,6 +5702,8 @@ declare module android {
 			public start(): void;
 			public static newApplication(param0: java.lang.Class<any>, param1: android.content.Context): android.app.Application;
 			public callActivityOnRestart(param0: android.app.Activity): void;
+			/** @deprecated */
+			public startAllocCounting(): void;
 			public getBinderCounts(): android.os.Bundle;
 			public callActivityOnRestoreInstanceState(param0: android.app.Activity, param1: android.os.Bundle): void;
 			public getAllocCounts(): android.os.Bundle;
@@ -5654,23 +5720,22 @@ declare module android {
 			public onCreate(param0: android.os.Bundle): void;
 			public sendKeySync(param0: android.view.KeyEvent): void;
 			public invokeContextMenuAction(param0: android.app.Activity, param1: number, param2: number): boolean;
+			public callActivityOnRestoreInstanceState(param0: android.app.Activity, param1: android.os.Bundle, param2: any): void;
 			public stopProfiling(): void;
 			public onException(param0: any, param1: java.lang.Throwable): boolean;
-			public callActivityOnCreate(param0: android.app.Activity, param1: android.os.Bundle, param2: android.os.PersistableBundle): void;
 			public waitForIdle(param0: java.lang.Runnable): void;
 			public setAutomaticPerformanceSnapshots(): void;
-			public callActivityOnRestoreInstanceState(param0: android.app.Activity, param1: android.os.Bundle, param2: android.os.PersistableBundle): void;
 			public startProfiling(): void;
+			/** @deprecated */
+			public stopAllocCounting(): void;
 			public onDestroy(): void;
 			public callActivityOnUserLeaving(param0: android.app.Activity): void;
 			public waitForIdleSync(): void;
 			public callActivityOnPostCreate(param0: android.app.Activity, param1: android.os.Bundle): void;
 			public startPerformanceSnapshot(): void;
 			public callActivityOnSaveInstanceState(param0: android.app.Activity, param1: android.os.Bundle): void;
-			public stopAllocCounting(): void;
 			public addMonitor(param0: string, param1: android.app.Instrumentation.ActivityResult, param2: boolean): android.app.Instrumentation.ActivityMonitor;
 			public sendKeyDownUpSync(param0: number): void;
-			public callActivityOnPostCreate(param0: android.app.Activity, param1: android.os.Bundle, param2: android.os.PersistableBundle): void;
 			public getUiAutomation(param0: number): android.app.UiAutomation;
 			public sendCharacterSync(param0: number): void;
 			public removeMonitor(param0: android.app.Instrumentation.ActivityMonitor): void;
@@ -5678,8 +5743,7 @@ declare module android {
 			public callActivityOnCreate(param0: android.app.Activity, param1: android.os.Bundle): void;
 			public isProfiling(): boolean;
 			public startActivitySync(param0: android.content.Intent): android.app.Activity;
-			public startAllocCounting(): void;
-			public callActivityOnSaveInstanceState(param0: android.app.Activity, param1: android.os.Bundle, param2: android.os.PersistableBundle): void;
+			public callActivityOnPostCreate(param0: android.app.Activity, param1: android.os.Bundle, param2: any): void;
 			public sendTrackballEventSync(param0: android.view.MotionEvent): void;
 			public endPerformanceSnapshot(): void;
 			public newActivity(param0: java.lang.Class<any>, param1: android.content.Context, param2: android.os.IBinder, param3: android.app.Application, param4: android.content.Intent, param5: android.content.pm.ActivityInfo, param6: string, param7: android.app.Activity, param8: string, param9: any): android.app.Activity;
@@ -5723,6 +5787,8 @@ declare module android {
 			public onStartCommand(param0: android.content.Intent, param1: number, param2: number): number;
 			public onStart(param0: android.content.Intent, param1: number): void;
 			public constructor(param0: string);
+			/** @deprecated */
+			public onStart(param0: android.content.Intent, param1: number): void;
 		}
 	}
 }
@@ -5731,14 +5797,16 @@ declare module android {
 	export module app {
 		export class KeyguardManager extends java.lang.Object {
 			public static class: java.lang.Class<android.app.KeyguardManager>;
+			/** @deprecated */
+			public newKeyguardLock(param0: string): android.app.KeyguardManager.KeyguardLock;
 			public isKeyguardSecure(): boolean;
 			public isDeviceLocked(): boolean;
 			public inKeyguardRestrictedInputMode(): boolean;
+			/** @deprecated */
 			public exitKeyguardSecurely(param0: android.app.KeyguardManager.OnKeyguardExitResult): void;
 			public createConfirmDeviceCredentialIntent(param0: string, param1: string): android.content.Intent;
 			public isKeyguardLocked(): boolean;
 			public isDeviceSecure(): boolean;
-			public newKeyguardLock(param0: string): android.app.KeyguardManager.KeyguardLock;
 		}
 		export module KeyguardManager {
 			export class KeyguardLock extends java.lang.Object {
@@ -5787,6 +5855,7 @@ declare module android {
 			public onCreateView(param0: android.view.View, param1: string, param2: android.content.Context, param3: android.util.AttributeSet): android.view.View;
 			public dispatchKeyShortcutEvent(param0: android.view.KeyEvent): boolean;
 			public onMenuItemSelected(param0: number, param1: android.view.MenuItem): boolean;
+			public onCreate(param0: android.os.Bundle, param1: any): void;
 			public getTargetIntent(): android.content.Intent;
 			public onMenuOpened(param0: number, param1: android.view.Menu): boolean;
 			public onListItemClick(param0: android.widget.ListView, param1: android.view.View, param2: number, param3: number): void;
@@ -5800,7 +5869,6 @@ declare module android {
 			public constructor(param0: android.content.Context, param1: number);
 			public onKeyUp(param0: number, param1: android.view.KeyEvent): boolean;
 			public onCreateContextMenu(param0: android.view.ContextMenu, param1: android.view.View, param2: android.view.ContextMenu.ContextMenuInfo): void;
-			public onCreate(param0: android.os.Bundle, param1: android.os.PersistableBundle): void;
 			public dispatchTouchEvent(param0: android.view.MotionEvent): boolean;
 			public dispatchTrackballEvent(param0: android.view.MotionEvent): boolean;
 			public constructor(param0: android.content.Context);
@@ -5870,7 +5938,7 @@ declare module android {
 			public constructor(param0: android.content.Context, param1: number);
 			public getSelectedItemPosition(): number;
 			public onKeyUp(param0: number, param1: android.view.KeyEvent): boolean;
-			public onRestoreInstanceState(param0: android.os.Bundle, param1: android.os.PersistableBundle): void;
+			public onRestoreInstanceState(param0: android.os.Bundle, param1: any): void;
 			public onCreateContextMenu(param0: android.view.ContextMenu, param1: android.view.View, param2: android.view.ContextMenu.ContextMenuInfo): void;
 			public dispatchTouchEvent(param0: android.view.MotionEvent): boolean;
 			public dispatchTrackballEvent(param0: android.view.MotionEvent): boolean;
@@ -5969,6 +6037,8 @@ declare module android {
 		export class MediaRouteActionProvider extends android.view.ActionProvider {
 			public static class: java.lang.Class<android.app.MediaRouteActionProvider>;
 			public setExtendedSettingsClickListener(param0: android.view.View.OnClickListener): void;
+			/** @deprecated */
+			public onCreateActionView(): android.view.View;
 			public onCreateActionView(): android.view.View;
 			public onPerformDefaultAction(): boolean;
 			public constructor(param0: android.content.Context);
@@ -6027,7 +6097,6 @@ declare module android {
 			public onStart(): void;
 			public onCreatePanelMenu(param0: number, param1: android.view.Menu): boolean;
 			public surfaceDestroyed(param0: android.view.SurfaceHolder): void;
-			public onSaveInstanceState(param0: android.os.Bundle, param1: android.os.PersistableBundle): void;
 			public onSearchRequested(): boolean;
 			public onKeyDown(param0: number, param1: android.view.KeyEvent): boolean;
 			public onCreatePanelView(param0: number): android.view.View;
@@ -6035,12 +6104,13 @@ declare module android {
 			public dispatchGenericMotionEvent(param0: android.view.MotionEvent): boolean;
 			public onDetachedFromWindow(): void;
 			public onCreateView(param0: android.view.View, param1: string, param2: android.content.Context, param3: android.util.AttributeSet): android.view.View;
+			public onCreate(param0: android.os.Bundle, param1: any): void;
+			public onSaveInstanceState(param0: android.os.Bundle, param1: any): void;
 			public onResume(): void;
 			public constructor();
 			public onCreateView(param0: string, param1: android.content.Context, param2: android.util.AttributeSet): android.view.View;
 			public constructor(param0: android.content.Context, param1: number);
 			public onCreateContextMenu(param0: android.view.ContextMenu, param1: android.view.View, param2: android.view.ContextMenu.ContextMenuInfo): void;
-			public onCreate(param0: android.os.Bundle, param1: android.os.PersistableBundle): void;
 			public surfaceChanged(param0: android.view.SurfaceHolder, param1: number, param2: number, param3: number): void;
 			public dispatchTouchEvent(param0: android.view.MotionEvent): boolean;
 			public surfaceRedrawNeeded(param0: android.view.SurfaceHolder): void;
@@ -6186,13 +6256,14 @@ declare module android {
 			public when: number;
 			public getLargeIcon(): any;
 			public clone(): android.app.Notification;
+			/** @deprecated */
+			public constructor(param0: number, param1: string, param2: number);
 			public clone(): any;
 			public toString(): string;
 			public getSmallIcon(): any;
 			public getGroup(): string;
 			public constructor(param0: android.os.Parcel);
 			public describeContents(): number;
-			public constructor(param0: number, param1: string, param2: number);
 			public writeToParcel(param0: android.os.Parcel, param1: number): void;
 			public constructor();
 			public getSortKey(): string;
@@ -6205,6 +6276,8 @@ declare module android {
 				public icon: number;
 				public title: string;
 				public clone(): android.app.Notification.Action;
+				/** @deprecated */
+				public constructor(param0: number, param1: string, param2: android.app.PendingIntent);
 				public getIcon(): any;
 				public writeToParcel(param0: android.os.Parcel, param1: number): void;
 				public getRemoteInputs(): native.Array<android.app.RemoteInput>;
@@ -6212,15 +6285,15 @@ declare module android {
 				public describeContents(): number;
 				public getAllowGeneratedReplies(): boolean;
 				public getExtras(): android.os.Bundle;
-				public constructor(param0: number, param1: string, param2: android.app.PendingIntent);
 			}
 			export module Action {
 				export class Builder extends java.lang.Object {
 					public static class: java.lang.Class<android.app.Notification.Action.Builder>;
-					public constructor(param0: number, param1: string, param2: android.app.PendingIntent);
 					public constructor(param0: android.app.Notification.Action);
 					public build(): android.app.Notification.Action;
 					public addRemoteInput(param0: android.app.RemoteInput): android.app.Notification.Action.Builder;
+					/** @deprecated */
+					public constructor(param0: number, param1: string, param2: android.app.PendingIntent);
 					public addExtras(param0: android.os.Bundle): android.app.Notification.Action.Builder;
 					public getExtras(): android.os.Bundle;
 					public constructor(param0: any, param1: string, param2: android.app.PendingIntent);
@@ -6261,20 +6334,22 @@ declare module android {
 			}
 			export class BigPictureStyle extends android.app.Notification.Style {
 				public static class: java.lang.Class<android.app.Notification.BigPictureStyle>;
-				public constructor(param0: android.app.Notification.Builder);
 				public bigLargeIcon(param0: any): android.app.Notification.BigPictureStyle;
 				public setBigContentTitle(param0: string): android.app.Notification.BigPictureStyle;
 				public setSummaryText(param0: string): android.app.Notification.BigPictureStyle;
 				public bigLargeIcon(param0: android.graphics.Bitmap): android.app.Notification.BigPictureStyle;
 				public bigPicture(param0: android.graphics.Bitmap): android.app.Notification.BigPictureStyle;
+				/** @deprecated */
+				public constructor(param0: android.app.Notification.Builder);
 				public constructor();
 			}
 			export class BigTextStyle extends android.app.Notification.Style {
 				public static class: java.lang.Class<android.app.Notification.BigTextStyle>;
-				public constructor(param0: android.app.Notification.Builder);
 				public setSummaryText(param0: string): android.app.Notification.BigTextStyle;
 				public setBigContentTitle(param0: string): android.app.Notification.BigTextStyle;
 				public bigText(param0: string): android.app.Notification.BigTextStyle;
+				/** @deprecated */
+				public constructor(param0: android.app.Notification.Builder);
 				public constructor();
 			}
 			export class Builder extends java.lang.Object {
@@ -6288,26 +6363,33 @@ declare module android {
 				public createBigContentView(): android.widget.RemoteViews;
 				public setLargeIcon(param0: any): android.app.Notification.Builder;
 				public addExtras(param0: android.os.Bundle): android.app.Notification.Builder;
-				public addAction(param0: number, param1: string, param2: android.app.PendingIntent): android.app.Notification.Builder;
+				/** @deprecated */
+				public setContentInfo(param0: string): android.app.Notification.Builder;
 				public getExtras(): android.os.Bundle;
 				public createHeadsUpContentView(): android.widget.RemoteViews;
 				public setShowWhen(param0: boolean): android.app.Notification.Builder;
 				public setSound(param0: android.net.Uri): android.app.Notification.Builder;
 				public setSubText(param0: string): android.app.Notification.Builder;
-				public setContentInfo(param0: string): android.app.Notification.Builder;
 				public setGroupSummary(param0: boolean): android.app.Notification.Builder;
 				public setTicker(param0: string): android.app.Notification.Builder;
+				/** @deprecated */
+				public setContent(param0: android.widget.RemoteViews): android.app.Notification.Builder;
 				public setCategory(param0: string): android.app.Notification.Builder;
 				public setFullScreenIntent(param0: android.app.PendingIntent, param1: boolean): android.app.Notification.Builder;
+				/** @deprecated */
+				public getNotification(): android.app.Notification;
+				/** @deprecated */
+				public setSound(param0: android.net.Uri, param1: number): android.app.Notification.Builder;
 				public setRemoteInputHistory(param0: native.Array<string>): android.app.Notification.Builder;
 				public constructor(param0: android.content.Context);
 				public setUsesChronometer(param0: boolean): android.app.Notification.Builder;
-				public getNotification(): android.app.Notification;
 				public addAction(param0: android.app.Notification.Action): android.app.Notification.Builder;
 				public setVisibility(param0: number): android.app.Notification.Builder;
 				public setColor(param0: number): android.app.Notification.Builder;
 				public setContentIntent(param0: android.app.PendingIntent): android.app.Notification.Builder;
 				public setSound(param0: android.net.Uri, param1: any): android.app.Notification.Builder;
+				/** @deprecated */
+				public setNumber(param0: number): android.app.Notification.Builder;
 				public setAutoCancel(param0: boolean): android.app.Notification.Builder;
 				public setSortKey(param0: string): android.app.Notification.Builder;
 				public setCustomBigContentView(param0: android.widget.RemoteViews): android.app.Notification.Builder;
@@ -6320,18 +6402,18 @@ declare module android {
 				public setVibrate(param0: native.Array<number>): android.app.Notification.Builder;
 				public setLocalOnly(param0: boolean): android.app.Notification.Builder;
 				public createContentView(): android.widget.RemoteViews;
+				/** @deprecated */
+				public addAction(param0: number, param1: string, param2: android.app.PendingIntent): android.app.Notification.Builder;
 				public setContentText(param0: string): android.app.Notification.Builder;
 				public setExtras(param0: android.os.Bundle): android.app.Notification.Builder;
-				public setNumber(param0: number): android.app.Notification.Builder;
 				public build(): android.app.Notification;
-				public setContent(param0: android.widget.RemoteViews): android.app.Notification.Builder;
 				public setWhen(param0: number): android.app.Notification.Builder;
 				public setLights(param0: number, param1: number, param2: number): android.app.Notification.Builder;
 				public setSmallIcon(param0: number, param1: number): android.app.Notification.Builder;
-				public setSmallIcon(param0: any): android.app.Notification.Builder;
-				public setSound(param0: android.net.Uri, param1: number): android.app.Notification.Builder;
-				public setActions(param0: native.Array<android.app.Notification.Action>): android.app.Notification.Builder;
+				/** @deprecated */
 				public setTicker(param0: string, param1: android.widget.RemoteViews): android.app.Notification.Builder;
+				public setSmallIcon(param0: any): android.app.Notification.Builder;
+				public setActions(param0: native.Array<android.app.Notification.Action>): android.app.Notification.Builder;
 				public setDeleteIntent(param0: android.app.PendingIntent): android.app.Notification.Builder;
 				public addPerson(param0: string): android.app.Notification.Builder;
 				public setPriority(param0: number): android.app.Notification.Builder;
@@ -6378,6 +6460,7 @@ declare module android {
 			}
 			export class DecoratedMediaCustomViewStyle extends android.app.Notification.MediaStyle {
 				public static class: java.lang.Class<android.app.Notification.DecoratedMediaCustomViewStyle>;
+				/** @deprecated */
 				public constructor(param0: android.app.Notification.Builder);
 				public constructor();
 			}
@@ -6394,16 +6477,18 @@ declare module android {
 			}
 			export class InboxStyle extends android.app.Notification.Style {
 				public static class: java.lang.Class<android.app.Notification.InboxStyle>;
-				public constructor(param0: android.app.Notification.Builder);
 				public addLine(param0: string): android.app.Notification.InboxStyle;
 				public setBigContentTitle(param0: string): android.app.Notification.InboxStyle;
 				public setSummaryText(param0: string): android.app.Notification.InboxStyle;
+				/** @deprecated */
+				public constructor(param0: android.app.Notification.Builder);
 				public constructor();
 			}
 			export class MediaStyle extends android.app.Notification.Style {
 				public static class: java.lang.Class<android.app.Notification.MediaStyle>;
-				public constructor(param0: android.app.Notification.Builder);
 				public setMediaSession(param0: any): android.app.Notification.MediaStyle;
+				/** @deprecated */
+				public constructor(param0: android.app.Notification.Builder);
 				public setShowActionsInCompactView(param0: native.Array<number>): android.app.Notification.MediaStyle;
 				public constructor();
 			}
@@ -6591,7 +6676,6 @@ declare module android {
 			public send(): void;
 			public send(param0: android.content.Context, param1: number, param2: android.content.Intent): void;
 			public cancel(): void;
-			public getTargetPackage(): string;
 			public static readPendingIntentOrNullFromParcel(param0: android.os.Parcel): android.app.PendingIntent;
 			public getCreatorPackage(): string;
 			public static getBroadcast(param0: android.content.Context, param1: number, param2: android.content.Intent, param3: number): android.app.PendingIntent;
@@ -6603,6 +6687,8 @@ declare module android {
 			public getCreatorUid(): number;
 			public static getActivities(param0: android.content.Context, param1: number, param2: native.Array<android.content.Intent>, param3: number): android.app.PendingIntent;
 			public send(param0: android.content.Context, param1: number, param2: android.content.Intent, param3: android.app.PendingIntent.OnFinished, param4: android.os.Handler, param5: string, param6: android.os.Bundle): void;
+			/** @deprecated */
+			public getTargetPackage(): string;
 			public static writePendingIntentOrNullToParcel(param0: android.app.PendingIntent, param1: android.os.Parcel): void;
 			public static getService(param0: android.content.Context, param1: number, param2: android.content.Intent, param3: number): android.app.PendingIntent;
 			public send(param0: android.content.Context, param1: number, param2: android.content.Intent, param3: android.app.PendingIntent.OnFinished, param4: android.os.Handler, param5: string): void;
@@ -6849,12 +6935,16 @@ declare module android {
 			public getSearchablesInGlobalSearch(): java.util.List<android.app.SearchableInfo>;
 			public getGlobalSearchActivity(): android.content.ComponentName;
 			public stopSearch(): void;
-			public setOnCancelListener(param0: android.app.SearchManager.OnCancelListener): void;
-			public onCancel(param0: android.content.DialogInterface): void;
+			/** @deprecated */
 			public onDismiss(param0: android.content.DialogInterface): void;
+			public setOnCancelListener(param0: android.app.SearchManager.OnCancelListener): void;
+			public onDismiss(param0: android.content.DialogInterface): void;
+			public onCancel(param0: android.content.DialogInterface): void;
 			public getSearchableInfo(param0: android.content.ComponentName): android.app.SearchableInfo;
 			public triggerSearch(param0: string, param1: android.content.ComponentName, param2: android.os.Bundle): void;
 			public setOnDismissListener(param0: android.app.SearchManager.OnDismissListener): void;
+			/** @deprecated */
+			public onCancel(param0: android.content.DialogInterface): void;
 			public startSearch(param0: string, param1: boolean, param2: android.content.ComponentName, param3: android.os.Bundle, param4: boolean): void;
 		}
 		export module SearchManager {
@@ -6945,13 +7035,14 @@ declare module android {
 			public onDestroy(): void;
 			public stopForeground(param0: number): void;
 			public onStartCommand(param0: android.content.Intent, param1: number, param2: number): number;
-			public onStart(param0: android.content.Intent, param1: number): void;
 			public onLowMemory(): void;
 			public onTrimMemory(param0: number): void;
 			public onRebind(param0: android.content.Intent): void;
 			public constructor(param0: android.content.Context);
 			public onTaskRemoved(param0: android.content.Intent): void;
 			public stopSelf(): void;
+			/** @deprecated */
+			public onStart(param0: android.content.Intent, param1: number): void;
 			public stopSelfResult(param0: number): boolean;
 		}
 	}
@@ -6995,12 +7086,12 @@ declare module android {
 			public constructor(param0: boolean);
 			public onCreatePanelMenu(param0: number, param1: android.view.Menu): boolean;
 			public setDefaultTab(param0: string): void;
+			public onPostCreate(param0: android.os.Bundle, param1: any): void;
 			public getTabWidget(): android.widget.TabWidget;
 			public onWindowStartingActionMode(param0: android.view.ActionMode.Callback, param1: number): android.view.ActionMode;
 			public onChildTitleChanged(param0: android.app.Activity, param1: string): void;
 			public onProvideKeyboardShortcuts(param0: java.util.List<any>, param1: android.view.Menu, param2: number): void;
 			public onPanelClosed(param0: number, param1: android.view.Menu): void;
-			public onSaveInstanceState(param0: android.os.Bundle, param1: android.os.PersistableBundle): void;
 			public onSearchRequested(): boolean;
 			public onTrimMemory(param0: number): void;
 			public onKeyDown(param0: number, param1: android.view.KeyEvent): boolean;
@@ -7017,6 +7108,7 @@ declare module android {
 			public dispatchKeyShortcutEvent(param0: android.view.KeyEvent): boolean;
 			public onMenuItemSelected(param0: number, param1: android.view.MenuItem): boolean;
 			public onMenuOpened(param0: number, param1: android.view.Menu): boolean;
+			public onSaveInstanceState(param0: android.os.Bundle, param1: any): void;
 			public onSearchRequested(param0: any): boolean;
 			public constructor();
 			public onRestoreInstanceState(param0: android.os.Bundle): void;
@@ -7024,9 +7116,8 @@ declare module android {
 			public setDefaultTab(param0: number): void;
 			public constructor(param0: android.content.Context, param1: number);
 			public onKeyUp(param0: number, param1: android.view.KeyEvent): boolean;
-			public onRestoreInstanceState(param0: android.os.Bundle, param1: android.os.PersistableBundle): void;
+			public onRestoreInstanceState(param0: android.os.Bundle, param1: any): void;
 			public onCreateContextMenu(param0: android.view.ContextMenu, param1: android.view.View, param2: android.view.ContextMenu.ContextMenuInfo): void;
-			public onPostCreate(param0: android.os.Bundle, param1: android.os.PersistableBundle): void;
 			public dispatchTouchEvent(param0: android.view.MotionEvent): boolean;
 			public dispatchTrackballEvent(param0: android.view.MotionEvent): boolean;
 			public onSaveInstanceState(param0: android.os.Bundle): void;
@@ -7422,7 +7513,6 @@ declare module android {
 				public onDisabled(param0: android.content.Context, param1: android.content.Intent): void;
 				public getManager(param0: android.content.Context): android.app.admin.DevicePolicyManager;
 				public onPasswordSucceeded(param0: android.content.Context, param1: android.content.Intent): void;
-				public onReadyForUserInitialization(param0: android.content.Context, param1: android.content.Intent): void;
 				public onDisableRequested(param0: android.content.Context, param1: android.content.Intent): string;
 				public onPasswordExpiring(param0: android.content.Context, param1: android.content.Intent): void;
 				public constructor();
@@ -7430,6 +7520,8 @@ declare module android {
 				public onProfileProvisioningComplete(param0: android.content.Context, param1: android.content.Intent): void;
 				public onSystemUpdatePending(param0: android.content.Context, param1: android.content.Intent, param2: number): void;
 				public getWho(param0: android.content.Context): android.content.ComponentName;
+				/** @deprecated */
+				public onReadyForUserInitialization(param0: android.content.Context, param1: android.content.Intent): void;
 				public onSecurityLogsAvailable(param0: android.content.Context, param1: android.content.Intent): void;
 				public onBugreportFailed(param0: android.content.Context, param1: android.content.Intent, param2: number): void;
 				public onChoosePrivateKeyAlias(param0: android.content.Context, param1: android.content.Intent, param2: number, param3: android.net.Uri, param4: string): string;
@@ -7539,6 +7631,7 @@ declare module android {
 				public isCallerApplicationRestrictionsManagingPackage(): boolean;
 				public getParentProfileInstance(param0: android.content.ComponentName): android.app.admin.DevicePolicyManager;
 				public setMasterVolumeMuted(param0: android.content.ComponentName, param1: boolean): void;
+				public setTrustAgentConfiguration(param0: android.content.ComponentName, param1: android.content.ComponentName, param2: any): void;
 				public getShortSupportMessage(param0: android.content.ComponentName): string;
 				public clearProfileOwner(param0: android.content.ComponentName): void;
 				public getOrganizationColor(param0: android.content.ComponentName): number;
@@ -7552,7 +7645,6 @@ declare module android {
 				public setBluetoothContactSharingDisabled(param0: android.content.ComponentName, param1: boolean): void;
 				public getPasswordMinimumUpperCase(param0: android.content.ComponentName): number;
 				public installKeyPair(param0: android.content.ComponentName, param1: java.security.PrivateKey, param2: native.Array<java.security.cert.Certificate>, param3: string, param4: boolean): boolean;
-				public setTrustAgentConfiguration(param0: android.content.ComponentName, param1: android.content.ComponentName, param2: android.os.PersistableBundle): void;
 				public getAccountTypesWithManagementDisabled(): native.Array<string>;
 				public setPasswordMinimumUpperCase(param0: android.content.ComponentName, param1: number): void;
 				public setPackagesSuspended(param0: android.content.ComponentName, param1: native.Array<string>, param2: boolean): native.Array<string>;
@@ -7565,6 +7657,7 @@ declare module android {
 				public getLongSupportMessage(param0: android.content.ComponentName): string;
 				public setApplicationHidden(param0: android.content.ComponentName, param1: string, param2: boolean): boolean;
 				public setLongSupportMessage(param0: android.content.ComponentName, param1: string): void;
+				public getTrustAgentConfiguration(param0: android.content.ComponentName, param1: android.content.ComponentName): java.util.List<any>;
 				public isManagedProfile(param0: android.content.ComponentName): boolean;
 				public retrieveSecurityLogs(param0: android.content.ComponentName): java.util.List<android.app.admin.SecurityLog.SecurityEvent>;
 				public setPasswordMinimumLetters(param0: android.content.ComponentName, param1: number): void;
@@ -7576,7 +7669,6 @@ declare module android {
 				public clearPackagePersistentPreferredActivities(param0: android.content.ComponentName, param1: string): void;
 				public setPasswordMinimumNumeric(param0: android.content.ComponentName, param1: number): void;
 				public getMaximumFailedPasswordsForWipe(param0: android.content.ComponentName): number;
-				public createAndManageUser(param0: android.content.ComponentName, param1: string, param2: android.content.ComponentName, param3: android.os.PersistableBundle, param4: number): android.os.UserHandle;
 				public setAccountManagementDisabled(param0: android.content.ComponentName, param1: string, param2: boolean): void;
 				public getScreenCaptureDisabled(param0: android.content.ComponentName): boolean;
 				public getCertInstallerPackage(param0: android.content.ComponentName): string;
@@ -7597,7 +7689,6 @@ declare module android {
 				public getCrossProfileCallerIdDisabled(param0: android.content.ComponentName): boolean;
 				public getSystemUpdatePolicy(): android.app.admin.SystemUpdatePolicy;
 				public getPasswordQuality(param0: android.content.ComponentName): number;
-				public getTrustAgentConfiguration(param0: android.content.ComponentName, param1: android.content.ComponentName): java.util.List<android.os.PersistableBundle>;
 				public enableSystemApp(param0: android.content.ComponentName, param1: string): void;
 				public setCrossProfileCallerIdDisabled(param0: android.content.ComponentName, param1: boolean): void;
 				public getPasswordExpiration(param0: android.content.ComponentName): number;
@@ -7662,6 +7753,7 @@ declare module android {
 				public setApplicationRestrictions(param0: android.content.ComponentName, param1: string, param2: android.os.Bundle): void;
 				public isAdminActive(param0: android.content.ComponentName): boolean;
 				public isMasterVolumeMuted(param0: android.content.ComponentName): boolean;
+				public createAndManageUser(param0: android.content.ComponentName, param1: string, param2: android.content.ComponentName, param3: any, param4: number): android.os.UserHandle;
 				public addCrossProfileIntentFilter(param0: android.content.ComponentName, param1: android.content.IntentFilter, param2: number): void;
 			}
 		}
@@ -8005,132 +8097,9 @@ declare module android {
 	}
 }
 
-declare module android {
-	export module app {
-		export module job {
-			export class JobInfo extends java.lang.Object implements android.os.Parcelable {
-				public static class: java.lang.Class<any>;
-				public static BACKOFF_POLICY_EXPONENTIAL: number;
-				public static BACKOFF_POLICY_LINEAR: number;
-				public static CREATOR: android.os.Parcelable.Creator<any>;
-				public static DEFAULT_INITIAL_BACKOFF_MILLIS: number;
-				public static MAX_BACKOFF_DELAY_MILLIS: number;
-				public static NETWORK_TYPE_ANY: number;
-				public static NETWORK_TYPE_NONE: number;
-				public static NETWORK_TYPE_NOT_ROAMING: number;
-				public static NETWORK_TYPE_UNMETERED: number;
-				public getNetworkType(): number;
-				public isPeriodic(): boolean;
-				public isRequireCharging(): boolean;
-				public getMinLatencyMillis(): number;
-				public getIntervalMillis(): number;
-				public getService(): android.content.ComponentName;
-				public writeToParcel(param0: android.os.Parcel, param1: number): void;
-				public getId(): number;
-				public isPersisted(): boolean;
-				public getBackoffPolicy(): number;
-				public getTriggerContentUpdateDelay(): number;
-				public toString(): string;
-				public isRequireDeviceIdle(): boolean;
-				public getTriggerContentUris(): native.Array<any>;
-				public getMaxExecutionDelayMillis(): number;
-				public getFlexMillis(): number;
-				public getTriggerContentMaxDelay(): number;
-				public static getMinPeriodMillis(): number;
-				public getExtras(): android.os.PersistableBundle;
-				public describeContents(): number;
-				public getInitialBackoffMillis(): number;
-				public static getMinFlexMillis(): number;
-			}
-			export module JobInfo {
-				export class Builder extends java.lang.Object {
-					public static class: java.lang.Class<any>;
-					public setOverrideDeadline(param0: number): any;
-					public setTriggerContentMaxDelay(param0: number): any;
-					public setRequiredNetworkType(param0: number): any;
-					public setPeriodic(param0: number, param1: number): any;
-					public setTriggerContentUpdateDelay(param0: number): any;
-					public setPersisted(param0: boolean): any;
-					public setExtras(param0: android.os.PersistableBundle): any;
-					public addTriggerContentUri(param0: any): any;
-					public setMinimumLatency(param0: number): any;
-					public constructor(param0: number, param1: android.content.ComponentName);
-					public setPeriodic(param0: number): any;
-					public build(): any;
-					public setBackoffCriteria(param0: number, param1: number): any;
-					public setRequiresDeviceIdle(param0: boolean): any;
-					public setRequiresCharging(param0: boolean): any;
-				}
-				export class TriggerContentUri extends java.lang.Object implements android.os.Parcelable {
-					public static class: java.lang.Class<any>;
-					public static CREATOR: android.os.Parcelable.Creator<any>;
-					public static FLAG_NOTIFY_FOR_DESCENDANTS: number;
-					public equals(param0: any): boolean;
-					public getUri(): android.net.Uri;
-					public getFlags(): number;
-					public describeContents(): number;
-					public hashCode(): number;
-					public constructor(param0: android.net.Uri, param1: number);
-					public writeToParcel(param0: android.os.Parcel, param1: number): void;
-				}
-			}
-		}
-	}
-}
 
-declare module android {
-	export module app {
-		export module job {
-			export class JobParameters extends java.lang.Object implements android.os.Parcelable {
-				public static class: java.lang.Class<any>;
-				public static CREATOR: android.os.Parcelable.Creator<any>;
-				public getTriggeredContentAuthorities(): native.Array<string>;
-				public getExtras(): android.os.PersistableBundle;
-				public writeToParcel(param0: android.os.Parcel, param1: number): void;
-				public describeContents(): number;
-				public isOverrideDeadlineExpired(): boolean;
-				public getTriggeredContentUris(): native.Array<android.net.Uri>;
-				public getJobId(): number;
-			}
-		}
-	}
-}
 
-declare module android {
-	export module app {
-		export module job {
-			export abstract class JobScheduler extends java.lang.Object {
-				public static class: java.lang.Class<any>;
-				public static RESULT_FAILURE: number;
-				public static RESULT_SUCCESS: number;
-				public getPendingJob(param0: number): any;
-				public cancelAll(): void;
-				public getAllPendingJobs(): java.util.List<any>;
-				public schedule(param0: any): number;
-				public constructor();
-				public cancel(param0: number): void;
-			}
-		}
-	}
-}
 
-declare module android {
-	export module app {
-		export module job {
-			export abstract class JobService extends android.app.Service {
-				public static class: java.lang.Class<any>;
-				public static PERMISSION_BIND: string;
-				public onStartJob(param0: any): boolean;
-				public onBind(param0: android.content.Intent): android.os.IBinder;
-				public onStopJob(param0: any): boolean;
-				public constructor(param0: android.content.Context);
-				public jobFinished(param0: any, param1: boolean): void;
-				public onTrimMemory(param0: number): void;
-				public constructor();
-			}
-		}
-	}
-}
 
 declare module android {
 	export module app {
@@ -8383,6 +8352,8 @@ declare module android {
 			public canResolveTextDirection(): boolean;
 			public getTextDirection(): number;
 			public updateViewLayout(param0: android.view.View, param1: android.view.ViewGroup.LayoutParams): void;
+			/** @deprecated */
+			public requestFitSystemWindows(): void;
 			public requestDisallowInterceptTouchEvent(param0: boolean): void;
 			public updateAppWidgetSize(param0: android.os.Bundle, param1: number, param2: number, param3: number, param4: number): void;
 			public getChildVisibleRect(param0: android.view.View, param1: android.graphics.Rect, param2: android.graphics.Point): boolean;
@@ -8564,7 +8535,6 @@ declare module android {
 			public getRemoteDevice(param0: native.Array<number>): android.bluetooth.BluetoothDevice;
 			public isOffloadedScanBatchingSupported(): boolean;
 			public getProfileProxy(param0: android.content.Context, param1: android.bluetooth.BluetoothProfile.ServiceListener, param2: number): boolean;
-			public startLeScan(param0: native.Array<java.util.UUID>, param1: android.bluetooth.BluetoothAdapter.LeScanCallback): boolean;
 			public listenUsingRfcommWithServiceRecord(param0: string, param1: java.util.UUID): android.bluetooth.BluetoothServerSocket;
 			public static getDefaultAdapter(): android.bluetooth.BluetoothAdapter;
 			public getAddress(): string;
@@ -8577,8 +8547,9 @@ declare module android {
 			public startDiscovery(): boolean;
 			public closeProfileProxy(param0: number, param1: android.bluetooth.BluetoothProfile): void;
 			public getRemoteDevice(param0: string): android.bluetooth.BluetoothDevice;
-			public startLeScan(param0: android.bluetooth.BluetoothAdapter.LeScanCallback): boolean;
 			public isOffloadedFilteringSupported(): boolean;
+			/** @deprecated */
+			public stopLeScan(param0: android.bluetooth.BluetoothAdapter.LeScanCallback): void;
 			public disable(): boolean;
 			public getState(): number;
 			public finalize(): void;
@@ -8587,9 +8558,12 @@ declare module android {
 			public getScanMode(): number;
 			public getBluetoothLeAdvertiser(): android.bluetooth.le.BluetoothLeAdvertiser;
 			public isEnabled(): boolean;
-			public stopLeScan(param0: android.bluetooth.BluetoothAdapter.LeScanCallback): void;
 			public getProfileConnectionState(param0: number): number;
 			public getName(): string;
+			/** @deprecated */
+			public startLeScan(param0: native.Array<java.util.UUID>, param1: android.bluetooth.BluetoothAdapter.LeScanCallback): boolean;
+			/** @deprecated */
+			public startLeScan(param0: android.bluetooth.BluetoothAdapter.LeScanCallback): boolean;
 			public listenUsingInsecureRfcommWithServiceRecord(param0: string, param1: java.util.UUID): android.bluetooth.BluetoothServerSocket;
 		}
 		export module BluetoothAdapter {
@@ -9027,6 +9001,8 @@ declare module android {
 			public getServices(): java.util.List<android.bluetooth.BluetoothGattService>;
 			public getDevicesMatchingConnectionStates(param0: native.Array<number>): java.util.List<android.bluetooth.BluetoothDevice>;
 			public executeReliableWrite(): boolean;
+			/** @deprecated */
+			public abortReliableWrite(param0: android.bluetooth.BluetoothDevice): void;
 			public setCharacteristicNotification(param0: android.bluetooth.BluetoothGattCharacteristic, param1: boolean): boolean;
 			public readRemoteRssi(): boolean;
 			public beginReliableWrite(): boolean;
@@ -9038,7 +9014,6 @@ declare module android {
 			public readDescriptor(param0: android.bluetooth.BluetoothGattDescriptor): boolean;
 			public close(): void;
 			public abortReliableWrite(): void;
-			public abortReliableWrite(param0: android.bluetooth.BluetoothDevice): void;
 			public getService(param0: java.util.UUID): android.bluetooth.BluetoothGattService;
 			public writeCharacteristic(param0: android.bluetooth.BluetoothGattCharacteristic): boolean;
 			public disconnect(): void;
@@ -9843,13 +9818,13 @@ declare module android {
 			public getLabel(): string;
 			public filterMimeTypes(param0: string): native.Array<string>;
 			public static compareMimeTypes(param0: string, param1: string): boolean;
+			public getExtras(): any;
 			public getMimeTypeCount(): number;
 			public constructor(param0: string, param1: native.Array<string>);
-			public setExtras(param0: android.os.PersistableBundle): void;
 			public getMimeType(param0: number): string;
-			public getExtras(): android.os.PersistableBundle;
 			public hasMimeType(param0: string): boolean;
 			public toString(): string;
+			public setExtras(param0: any): void;
 			public describeContents(): number;
 			public writeToParcel(param0: android.os.Parcel, param1: number): void;
 			public constructor(param0: android.content.ClipDescription);
@@ -9862,14 +9837,20 @@ declare module android {
 		export class ClipboardManager extends android.text.ClipboardManager {
 			public static class: java.lang.Class<android.content.ClipboardManager>;
 			public hasPrimaryClip(): boolean;
+			/** @deprecated */
+			public getText(): string;
 			public setText(param0: string): void;
 			public hasText(): boolean;
 			public removePrimaryClipChangedListener(param0: android.content.ClipboardManager.OnPrimaryClipChangedListener): void;
 			public getPrimaryClipDescription(): android.content.ClipDescription;
 			public setPrimaryClip(param0: android.content.ClipData): void;
 			public getText(): string;
+			/** @deprecated */
+			public hasText(): boolean;
 			public getPrimaryClip(): android.content.ClipData;
 			public addPrimaryClipChangedListener(param0: android.content.ClipboardManager.OnPrimaryClipChangedListener): void;
+			/** @deprecated */
+			public setText(param0: string): void;
 		}
 		export module ClipboardManager {
 			export class OnPrimaryClipChangedListener extends java.lang.Object {
@@ -10042,10 +10023,11 @@ declare module android {
 			public openFile(param0: android.net.Uri, param1: string): android.os.ParcelFileDescriptor;
 			public applyBatch(param0: java.util.ArrayList<android.content.ContentProviderOperation>): native.Array<android.content.ContentProviderResult>;
 			public call(param0: string, param1: string, param2: android.os.Bundle): android.os.Bundle;
-			public release(): boolean;
 			public openTypedAssetFileDescriptor(param0: android.net.Uri, param1: string, param2: android.os.Bundle, param3: android.os.CancellationSignal): android.content.res.AssetFileDescriptor;
 			public canonicalize(param0: android.net.Uri): android.net.Uri;
 			public close(): void;
+			/** @deprecated */
+			public release(): boolean;
 			public bulkInsert(param0: android.net.Uri, param1: native.Array<android.content.ContentValues>): number;
 			public finalize(): void;
 		}
@@ -10164,12 +10146,13 @@ declare module android {
 			public getType(param0: android.net.Uri): string;
 			public static requestSync(param0: android.content.SyncRequest): void;
 			public static removeStatusChangeListener(param0: any): void;
+			/** @deprecated */
+			public startSync(param0: android.net.Uri, param1: android.os.Bundle): void;
 			public static addStatusChangeListener(param0: number, param1: android.content.SyncStatusObserver): any;
 			public acquireUnstableContentProviderClient(param0: string): android.content.ContentProviderClient;
 			public acquireContentProviderClient(param0: android.net.Uri): android.content.ContentProviderClient;
 			public notifyChange(param0: android.net.Uri, param1: android.database.ContentObserver): void;
 			public acquireContentProviderClient(param0: string): android.content.ContentProviderClient;
-			public cancelSync(param0: android.net.Uri): void;
 			public static removePeriodicSync(param0: android.accounts.Account, param1: string, param2: android.os.Bundle): void;
 			public update(param0: android.net.Uri, param1: android.content.ContentValues, param2: string, param3: native.Array<string>): number;
 			public static cancelSync(param0: android.accounts.Account, param1: string): void;
@@ -10188,7 +10171,6 @@ declare module android {
 			public bulkInsert(param0: android.net.Uri, param1: native.Array<android.content.ContentValues>): number;
 			public static isSyncActive(param0: android.accounts.Account, param1: string): boolean;
 			public query(param0: android.net.Uri, param1: native.Array<string>, param2: string, param3: native.Array<string>, param4: string, param5: android.os.CancellationSignal): android.database.Cursor;
-			public startSync(param0: android.net.Uri, param1: android.os.Bundle): void;
 			public static addPeriodicSync(param0: android.accounts.Account, param1: string, param2: android.os.Bundle, param3: number): void;
 			public notifyChange(param0: android.net.Uri, param1: android.database.ContentObserver, param2: number): void;
 			public call(param0: android.net.Uri, param1: string, param2: string, param3: android.os.Bundle): android.os.Bundle;
@@ -10210,8 +10192,11 @@ declare module android {
 			public registerContentObserver(param0: android.net.Uri, param1: boolean, param2: android.database.ContentObserver): void;
 			public static requestSync(param0: android.accounts.Account, param1: string, param2: android.os.Bundle): void;
 			public constructor(param0: android.content.Context);
+			/** @deprecated */
 			public static getCurrentSync(): android.content.SyncInfo;
 			public releasePersistableUriPermission(param0: android.net.Uri, param1: number): void;
+			/** @deprecated */
+			public cancelSync(param0: android.net.Uri): void;
 		}
 	}
 }
@@ -10354,29 +10339,31 @@ declare module android {
 			public static WIFI_P2P_SERVICE: string;
 			public static WIFI_SERVICE: string;
 			public static WINDOW_SERVICE: string;
-			public clearWallpaper(): void;
 			public getFilesDir(): java.io.File;
 			public fileList(): native.Array<string>;
-			public peekWallpaper(): android.graphics.drawable.Drawable;
 			public checkCallingPermission(param0: string): number;
 			public getPackageName(): string;
 			public sendBroadcastAsUser(param0: android.content.Intent, param1: android.os.UserHandle, param2: string): void;
 			public openFileInput(param0: string): java.io.FileInputStream;
 			public moveSharedPreferencesFrom(param0: android.content.Context, param1: string): boolean;
-			public sendStickyBroadcast(param0: android.content.Intent): void;
 			public getDatabasePath(param0: string): java.io.File;
+			/** @deprecated */
+			public getWallpaper(): android.graphics.drawable.Drawable;
 			public unregisterReceiver(param0: android.content.BroadcastReceiver): void;
 			public bindService(param0: android.content.Intent, param1: android.content.ServiceConnection, param2: number): boolean;
 			public createConfigurationContext(param0: android.content.res.Configuration): android.content.Context;
 			public checkCallingOrSelfPermission(param0: string): number;
 			public getColor(param0: number): number;
 			public getDataDir(): java.io.File;
-			public getWallpaperDesiredMinimumWidth(): number;
 			public createDeviceProtectedStorageContext(): android.content.Context;
 			public constructor();
+			/** @deprecated */
+			public sendStickyBroadcast(param0: android.content.Intent): void;
 			public revokeUriPermission(param0: android.net.Uri, param1: number): void;
 			public obtainStyledAttributes(param0: android.util.AttributeSet, param1: native.Array<number>, param2: number, param3: number): android.content.res.TypedArray;
 			public getExternalFilesDir(param0: string): java.io.File;
+			/** @deprecated */
+			public sendStickyOrderedBroadcastAsUser(param0: android.content.Intent, param1: android.os.UserHandle, param2: android.content.BroadcastReceiver, param3: android.os.Handler, param4: number, param5: string, param6: android.os.Bundle): void;
 			public getDrawable(param0: number): android.graphics.drawable.Drawable;
 			public checkSelfPermission(param0: string): number;
 			public obtainStyledAttributes(param0: android.util.AttributeSet, param1: native.Array<number>): android.content.res.TypedArray;
@@ -10396,6 +10383,8 @@ declare module android {
 			public getExternalFilesDirs(param0: string): native.Array<java.io.File>;
 			public startActivity(param0: android.content.Intent, param1: android.os.Bundle): void;
 			public startInstrumentation(param0: android.content.ComponentName, param1: string, param2: android.os.Bundle): boolean;
+			/** @deprecated */
+			public getWallpaperDesiredMinimumHeight(): number;
 			public obtainStyledAttributes(param0: number, param1: native.Array<number>): android.content.res.TypedArray;
 			public checkPermission(param0: string, param1: number, param2: number): number;
 			public enforceUriPermission(param0: android.net.Uri, param1: number, param2: number, param3: number, param4: string): void;
@@ -10404,14 +10393,11 @@ declare module android {
 			public moveDatabaseFrom(param0: android.content.Context, param1: string): boolean;
 			public startIntentSender(param0: android.content.IntentSender, param1: android.content.Intent, param2: number, param3: number, param4: number): void;
 			public getSystemService(param0: java.lang.Class<any>): any;
-			public removeStickyBroadcast(param0: android.content.Intent): void;
 			public enforceUriPermission(param0: android.net.Uri, param1: string, param2: string, param3: number, param4: number, param5: number, param6: string): void;
-			public sendStickyOrderedBroadcast(param0: android.content.Intent, param1: android.content.BroadcastReceiver, param2: android.os.Handler, param3: number, param4: string, param5: android.os.Bundle): void;
 			public setTheme(param0: number): void;
 			public deleteFile(param0: string): boolean;
 			public getCodeCacheDir(): java.io.File;
 			public getMainLooper(): android.os.Looper;
-			public removeStickyBroadcastAsUser(param0: android.content.Intent, param1: android.os.UserHandle): void;
 			public enforceCallingOrSelfUriPermission(param0: android.net.Uri, param1: number, param2: string): void;
 			public startIntentSender(param0: android.content.IntentSender, param1: android.content.Intent, param2: number, param3: number, param4: number, param5: android.os.Bundle): void;
 			public getPackageResourcePath(): string;
@@ -10420,7 +10406,8 @@ declare module android {
 			public getClassLoader(): java.lang.ClassLoader;
 			public getExternalCacheDirs(): native.Array<java.io.File>;
 			public databaseList(): native.Array<string>;
-			public getWallpaper(): android.graphics.drawable.Drawable;
+			/** @deprecated */
+			public removeStickyBroadcastAsUser(param0: android.content.Intent, param1: android.os.UserHandle): void;
 			public registerReceiver(param0: android.content.BroadcastReceiver, param1: android.content.IntentFilter, param2: string, param3: android.os.Handler): android.content.Intent;
 			public sendOrderedBroadcast(param0: android.content.Intent, param1: string): void;
 			public getSystemServiceName(param0: java.lang.Class<any>): string;
@@ -10430,21 +10417,24 @@ declare module android {
 			public isDeviceProtectedStorage(): boolean;
 			public getAssets(): android.content.res.AssetManager;
 			public startActivities(param0: native.Array<android.content.Intent>): void;
+			/** @deprecated */
+			public removeStickyBroadcast(param0: android.content.Intent): void;
 			public getPackageCodePath(): string;
 			public getString(param0: number): string;
 			public obtainStyledAttributes(param0: native.Array<number>): android.content.res.TypedArray;
 			public getPackageManager(): android.content.pm.PackageManager;
+			/** @deprecated */
+			public sendStickyOrderedBroadcast(param0: android.content.Intent, param1: android.content.BroadcastReceiver, param2: android.os.Handler, param3: number, param4: string, param5: android.os.Bundle): void;
 			public getColorStateList(param0: number): android.content.res.ColorStateList;
 			public registerComponentCallbacks(param0: android.content.ComponentCallbacks): void;
-			public getWallpaperDesiredMinimumHeight(): number;
 			public sendBroadcast(param0: android.content.Intent, param1: string): void;
 			public enforceCallingUriPermission(param0: android.net.Uri, param1: number, param2: string): void;
 			public getExternalCacheDir(): java.io.File;
 			public stopService(param0: android.content.Intent): boolean;
-			public sendStickyOrderedBroadcastAsUser(param0: android.content.Intent, param1: android.os.UserHandle, param2: android.content.BroadcastReceiver, param3: android.os.Handler, param4: number, param5: string, param6: android.os.Bundle): void;
 			public getApplicationInfo(): android.content.pm.ApplicationInfo;
+			/** @deprecated */
+			public setWallpaper(param0: android.graphics.Bitmap): void;
 			public registerReceiver(param0: android.content.BroadcastReceiver, param1: android.content.IntentFilter): android.content.Intent;
-			public sendStickyBroadcastAsUser(param0: android.content.Intent, param1: android.os.UserHandle): void;
 			public sendOrderedBroadcastAsUser(param0: android.content.Intent, param1: android.os.UserHandle, param2: string, param3: android.content.BroadcastReceiver, param4: android.os.Handler, param5: number, param6: string, param7: android.os.Bundle): void;
 			public startService(param0: android.content.Intent): android.content.ComponentName;
 			public checkUriPermission(param0: android.net.Uri, param1: number, param2: number, param3: number): number;
@@ -10453,19 +10443,27 @@ declare module android {
 			public checkCallingOrSelfUriPermission(param0: android.net.Uri, param1: number): number;
 			public getNoBackupFilesDir(): java.io.File;
 			public getCacheDir(): java.io.File;
-			public setWallpaper(param0: java.io.InputStream): void;
+			/** @deprecated */
+			public getWallpaperDesiredMinimumWidth(): number;
 			public getSharedPreferences(param0: string, param1: number): android.content.SharedPreferences;
 			public enforceCallingPermission(param0: string, param1: string): void;
 			public grantUriPermission(param0: string, param1: android.net.Uri, param2: number): void;
 			public startActivities(param0: native.Array<android.content.Intent>, param1: android.os.Bundle): void;
-			public setWallpaper(param0: android.graphics.Bitmap): void;
 			public createPackageContext(param0: string, param1: number): android.content.Context;
 			public isRestricted(): boolean;
+			/** @deprecated */
+			public sendStickyBroadcastAsUser(param0: android.content.Intent, param1: android.os.UserHandle): void;
 			public checkUriPermission(param0: android.net.Uri, param1: string, param2: string, param3: number, param4: number, param5: number): number;
+			/** @deprecated */
+			public setWallpaper(param0: java.io.InputStream): void;
 			public getContentResolver(): android.content.ContentResolver;
 			public enforceCallingOrSelfPermission(param0: string, param1: string): void;
 			public startActivity(param0: android.content.Intent): void;
 			public enforcePermission(param0: string, param1: number, param2: number, param3: string): void;
+			/** @deprecated */
+			public peekWallpaper(): android.graphics.drawable.Drawable;
+			/** @deprecated */
+			public clearWallpaper(): void;
 			public sendBroadcast(param0: android.content.Intent): void;
 		}
 	}
@@ -10475,27 +10473,29 @@ declare module android {
 	export module content {
 		export class ContextWrapper extends android.content.Context {
 			public static class: java.lang.Class<android.content.ContextWrapper>;
-			public clearWallpaper(): void;
 			public getFilesDir(): java.io.File;
 			public fileList(): native.Array<string>;
-			public peekWallpaper(): android.graphics.drawable.Drawable;
 			public checkCallingPermission(param0: string): number;
 			public getPackageName(): string;
 			public sendBroadcastAsUser(param0: android.content.Intent, param1: android.os.UserHandle, param2: string): void;
 			public openFileInput(param0: string): java.io.FileInputStream;
 			public moveSharedPreferencesFrom(param0: android.content.Context, param1: string): boolean;
-			public sendStickyBroadcast(param0: android.content.Intent): void;
 			public getDatabasePath(param0: string): java.io.File;
+			/** @deprecated */
+			public getWallpaper(): android.graphics.drawable.Drawable;
 			public unregisterReceiver(param0: android.content.BroadcastReceiver): void;
 			public bindService(param0: android.content.Intent, param1: android.content.ServiceConnection, param2: number): boolean;
 			public createConfigurationContext(param0: android.content.res.Configuration): android.content.Context;
 			public checkCallingOrSelfPermission(param0: string): number;
 			public getDataDir(): java.io.File;
-			public getWallpaperDesiredMinimumWidth(): number;
 			public createDeviceProtectedStorageContext(): android.content.Context;
 			public constructor();
+			/** @deprecated */
+			public sendStickyBroadcast(param0: android.content.Intent): void;
 			public revokeUriPermission(param0: android.net.Uri, param1: number): void;
 			public getExternalFilesDir(param0: string): java.io.File;
+			/** @deprecated */
+			public sendStickyOrderedBroadcastAsUser(param0: android.content.Intent, param1: android.os.UserHandle, param2: android.content.BroadcastReceiver, param3: android.os.Handler, param4: number, param5: string, param6: android.os.Bundle): void;
 			public checkSelfPermission(param0: string): number;
 			public getTheme(): android.content.res.Resources.Theme;
 			public createDisplayContext(param0: android.view.Display): android.content.Context;
@@ -10511,6 +10511,8 @@ declare module android {
 			public getExternalFilesDirs(param0: string): native.Array<java.io.File>;
 			public startActivity(param0: android.content.Intent, param1: android.os.Bundle): void;
 			public startInstrumentation(param0: android.content.ComponentName, param1: string, param2: android.os.Bundle): boolean;
+			/** @deprecated */
+			public getWallpaperDesiredMinimumHeight(): number;
 			public checkPermission(param0: string, param1: number, param2: number): number;
 			public enforceUriPermission(param0: android.net.Uri, param1: number, param2: number, param3: number, param4: string): void;
 			public openOrCreateDatabase(param0: string, param1: number, param2: android.database.sqlite.SQLiteDatabase.CursorFactory, param3: android.database.DatabaseErrorHandler): android.database.sqlite.SQLiteDatabase;
@@ -10518,15 +10520,12 @@ declare module android {
 			public moveDatabaseFrom(param0: android.content.Context, param1: string): boolean;
 			public startIntentSender(param0: android.content.IntentSender, param1: android.content.Intent, param2: number, param3: number, param4: number): void;
 			public getSystemService(param0: java.lang.Class<any>): any;
-			public removeStickyBroadcast(param0: android.content.Intent): void;
 			public enforceUriPermission(param0: android.net.Uri, param1: string, param2: string, param3: number, param4: number, param5: number, param6: string): void;
-			public sendStickyOrderedBroadcast(param0: android.content.Intent, param1: android.content.BroadcastReceiver, param2: android.os.Handler, param3: number, param4: string, param5: android.os.Bundle): void;
 			public setTheme(param0: number): void;
 			public constructor(param0: android.content.Context);
 			public deleteFile(param0: string): boolean;
 			public getCodeCacheDir(): java.io.File;
 			public getMainLooper(): android.os.Looper;
-			public removeStickyBroadcastAsUser(param0: android.content.Intent, param1: android.os.UserHandle): void;
 			public enforceCallingOrSelfUriPermission(param0: android.net.Uri, param1: number, param2: string): void;
 			public startIntentSender(param0: android.content.IntentSender, param1: android.content.Intent, param2: number, param3: number, param4: number, param5: android.os.Bundle): void;
 			public getPackageResourcePath(): string;
@@ -10535,7 +10534,8 @@ declare module android {
 			public getClassLoader(): java.lang.ClassLoader;
 			public getExternalCacheDirs(): native.Array<java.io.File>;
 			public databaseList(): native.Array<string>;
-			public getWallpaper(): android.graphics.drawable.Drawable;
+			/** @deprecated */
+			public removeStickyBroadcastAsUser(param0: android.content.Intent, param1: android.os.UserHandle): void;
 			public registerReceiver(param0: android.content.BroadcastReceiver, param1: android.content.IntentFilter, param2: string, param3: android.os.Handler): android.content.Intent;
 			public sendOrderedBroadcast(param0: android.content.Intent, param1: string): void;
 			public getSystemServiceName(param0: java.lang.Class<any>): string;
@@ -10545,18 +10545,21 @@ declare module android {
 			public isDeviceProtectedStorage(): boolean;
 			public getAssets(): android.content.res.AssetManager;
 			public startActivities(param0: native.Array<android.content.Intent>): void;
+			/** @deprecated */
+			public removeStickyBroadcast(param0: android.content.Intent): void;
 			public getPackageCodePath(): string;
 			public getPackageManager(): android.content.pm.PackageManager;
-			public getWallpaperDesiredMinimumHeight(): number;
+			/** @deprecated */
+			public sendStickyOrderedBroadcast(param0: android.content.Intent, param1: android.content.BroadcastReceiver, param2: android.os.Handler, param3: number, param4: string, param5: android.os.Bundle): void;
 			public sendBroadcast(param0: android.content.Intent, param1: string): void;
 			public enforceCallingUriPermission(param0: android.net.Uri, param1: number, param2: string): void;
 			public getExternalCacheDir(): java.io.File;
 			public stopService(param0: android.content.Intent): boolean;
-			public sendStickyOrderedBroadcastAsUser(param0: android.content.Intent, param1: android.os.UserHandle, param2: android.content.BroadcastReceiver, param3: android.os.Handler, param4: number, param5: string, param6: android.os.Bundle): void;
 			public getApplicationInfo(): android.content.pm.ApplicationInfo;
+			/** @deprecated */
+			public setWallpaper(param0: android.graphics.Bitmap): void;
 			public registerReceiver(param0: android.content.BroadcastReceiver, param1: android.content.IntentFilter): android.content.Intent;
 			public getBaseContext(): android.content.Context;
-			public sendStickyBroadcastAsUser(param0: android.content.Intent, param1: android.os.UserHandle): void;
 			public sendOrderedBroadcastAsUser(param0: android.content.Intent, param1: android.os.UserHandle, param2: string, param3: android.content.BroadcastReceiver, param4: android.os.Handler, param5: number, param6: string, param7: android.os.Bundle): void;
 			public startService(param0: android.content.Intent): android.content.ComponentName;
 			public checkUriPermission(param0: android.net.Uri, param1: number, param2: number, param3: number): number;
@@ -10565,19 +10568,27 @@ declare module android {
 			public checkCallingOrSelfUriPermission(param0: android.net.Uri, param1: number): number;
 			public getNoBackupFilesDir(): java.io.File;
 			public getCacheDir(): java.io.File;
-			public setWallpaper(param0: java.io.InputStream): void;
+			/** @deprecated */
+			public getWallpaperDesiredMinimumWidth(): number;
 			public getSharedPreferences(param0: string, param1: number): android.content.SharedPreferences;
 			public enforceCallingPermission(param0: string, param1: string): void;
 			public grantUriPermission(param0: string, param1: android.net.Uri, param2: number): void;
 			public startActivities(param0: native.Array<android.content.Intent>, param1: android.os.Bundle): void;
-			public setWallpaper(param0: android.graphics.Bitmap): void;
 			public createPackageContext(param0: string, param1: number): android.content.Context;
 			public isRestricted(): boolean;
+			/** @deprecated */
+			public sendStickyBroadcastAsUser(param0: android.content.Intent, param1: android.os.UserHandle): void;
 			public checkUriPermission(param0: android.net.Uri, param1: string, param2: string, param3: number, param4: number, param5: number): number;
+			/** @deprecated */
+			public setWallpaper(param0: java.io.InputStream): void;
 			public getContentResolver(): android.content.ContentResolver;
 			public enforceCallingOrSelfPermission(param0: string, param1: string): void;
 			public startActivity(param0: android.content.Intent): void;
 			public enforcePermission(param0: string, param1: number, param2: number, param3: string): void;
+			/** @deprecated */
+			public peekWallpaper(): android.graphics.drawable.Drawable;
+			/** @deprecated */
+			public clearWallpaper(): void;
 			public sendBroadcast(param0: android.content.Intent): void;
 		}
 	}
@@ -11092,7 +11103,6 @@ declare module android {
 			public getType(): string;
 			public putExtra(param0: string, param1: native.Array<string>): android.content.Intent;
 			public constructor(param0: string);
-			public static getIntent(param0: string): android.content.Intent;
 			public hasExtra(param0: string): boolean;
 			public getFlags(): number;
 			public setSelector(param0: android.content.Intent): void;
@@ -11109,13 +11119,16 @@ declare module android {
 			public putExtra(param0: string, param1: boolean): android.content.Intent;
 			public getLongExtra(param0: string, param1: number): number;
 			public getByteExtra(param0: string, param1: number): number;
+			/** @deprecated */
+			public static getIntent(param0: string): android.content.Intent;
 			public getCharSequenceExtra(param0: string): string;
-			public toURI(): string;
 			public replaceExtras(param0: android.os.Bundle): android.content.Intent;
 			public setSourceBounds(param0: android.graphics.Rect): void;
 			public getShortArrayExtra(param0: string): native.Array<number>;
 			public hasFileDescriptors(): boolean;
 			public putExtra(param0: string, param1: android.os.Bundle): android.content.Intent;
+			/** @deprecated */
+			public toURI(): string;
 			public static normalizeMimeType(param0: string): string;
 			public hasCategory(param0: string): boolean;
 			public getStringArrayListExtra(param0: string): java.util.ArrayList<string>;
@@ -11262,8 +11275,9 @@ declare module android {
 			public equals(param0: any): boolean;
 			public static readIntentSenderOrNullFromParcel(param0: android.os.Parcel): android.content.IntentSender;
 			public sendIntent(param0: android.content.Context, param1: number, param2: android.content.Intent, param3: android.content.IntentSender.OnFinished, param4: android.os.Handler, param5: string): void;
-			public sendIntent(param0: android.content.Context, param1: number, param2: android.content.Intent, param3: android.content.IntentSender.OnFinished, param4: android.os.Handler): void;
+			/** @deprecated */
 			public getTargetPackage(): string;
+			public sendIntent(param0: android.content.Context, param1: number, param2: android.content.Intent, param3: android.content.IntentSender.OnFinished, param4: android.os.Handler): void;
 			public getCreatorPackage(): string;
 			public toString(): string;
 			public static writeIntentSenderOrNullToParcel(param0: android.content.IntentSender, param1: android.os.Parcel): void;
@@ -11515,13 +11529,13 @@ declare module android {
 			public static RESULT_ERROR_NETWORK: number;
 			public static RESULT_NO_RESPONSE: number;
 			public static RESULT_UNKNOWN_REQUEST: number;
-			public requestPermission(param0: string, param1: string, param2: android.os.PersistableBundle): void;
+			public notifyPermissionResponse(param0: string, param1: any): void;
 			public hasRestrictionsProvider(): boolean;
 			public getManifestRestrictions(param0: string): java.util.List<android.content.RestrictionEntry>;
-			public notifyPermissionResponse(param0: string, param1: android.os.PersistableBundle): void;
 			public getApplicationRestrictions(): android.os.Bundle;
 			public createLocalApprovalIntent(): android.content.Intent;
 			public static convertRestrictionsToBundle(param0: java.util.List<android.content.RestrictionEntry>): android.os.Bundle;
+			public requestPermission(param0: string, param1: string, param2: any): void;
 		}
 	}
 }
@@ -12591,6 +12605,8 @@ declare module android {
 				public getPreferredActivities(param0: java.util.List<android.content.IntentFilter>, param1: java.util.List<android.content.ComponentName>, param2: string): number;
 				public queryBroadcastReceivers(param0: android.content.Intent, param1: number): java.util.List<android.content.pm.ResolveInfo>;
 				public getText(param0: string, param1: number, param2: android.content.pm.ApplicationInfo): string;
+				/** @deprecated */
+				public addPreferredActivity(param0: android.content.IntentFilter, param1: number, param2: native.Array<android.content.ComponentName>, param3: android.content.ComponentName): void;
 				public getComponentEnabledSetting(param0: android.content.ComponentName): number;
 				public getActivityBanner(param0: android.content.Intent): android.graphics.drawable.Drawable;
 				public getResourcesForActivity(param0: android.content.ComponentName): android.content.res.Resources;
@@ -12609,20 +12625,20 @@ declare module android {
 				public getApplicationBanner(param0: string): android.graphics.drawable.Drawable;
 				public getResourcesForApplication(param0: string): android.content.res.Resources;
 				public getUserBadgedDrawableForDensity(param0: android.graphics.drawable.Drawable, param1: android.os.UserHandle, param2: android.graphics.Rect, param3: number): android.graphics.drawable.Drawable;
-				public addPreferredActivity(param0: android.content.IntentFilter, param1: number, param2: native.Array<android.content.ComponentName>, param3: android.content.ComponentName): void;
 				public getPackageUid(param0: string, param1: number): number;
 				public queryIntentActivities(param0: android.content.Intent, param1: number): java.util.List<android.content.pm.ResolveInfo>;
 				public resolveContentProvider(param0: string, param1: number): android.content.pm.ProviderInfo;
 				public getInstalledPackages(param0: number): java.util.List<android.content.pm.PackageInfo>;
 				public removePermission(param0: string): void;
 				public hasSystemFeature(param0: string, param1: number): boolean;
-				public removePackageFromPreferred(param0: string): void;
 				public getActivityBanner(param0: android.content.ComponentName): android.graphics.drawable.Drawable;
 				public canonicalToCurrentPackageNames(param0: native.Array<string>): native.Array<string>;
 				public getActivityLogo(param0: android.content.Intent): android.graphics.drawable.Drawable;
 				public getPermissionInfo(param0: string, param1: number): android.content.pm.PermissionInfo;
 				public getLaunchIntentForPackage(param0: string): android.content.Intent;
 				public getResourcesForApplication(param0: android.content.pm.ApplicationInfo): android.content.res.Resources;
+				/** @deprecated */
+				public removePackageFromPreferred(param0: string): void;
 				public getApplicationBanner(param0: android.content.pm.ApplicationInfo): android.graphics.drawable.Drawable;
 				public getLeanbackLaunchIntentForPackage(param0: string): android.content.Intent;
 				public queryPermissionsByGroup(param0: string, param1: number): java.util.List<android.content.pm.PermissionInfo>;
@@ -12642,7 +12658,6 @@ declare module android {
 				public getProviderInfo(param0: android.content.ComponentName, param1: number): android.content.pm.ProviderInfo;
 				public getApplicationEnabledSetting(param0: string): number;
 				public getReceiverInfo(param0: android.content.ComponentName, param1: number): android.content.pm.ActivityInfo;
-				public addPackageToPreferred(param0: string): void;
 				public hasSystemFeature(param0: string): boolean;
 				public getXml(param0: string, param1: number, param2: android.content.pm.ApplicationInfo): android.content.res.XmlResourceParser;
 				public getNameForUid(param0: number): string;
@@ -12652,6 +12667,8 @@ declare module android {
 				public queryContentProviders(param0: string, param1: number, param2: number): java.util.List<android.content.pm.ProviderInfo>;
 				public isSafeMode(): boolean;
 				public currentToCanonicalPackageNames(param0: native.Array<string>): native.Array<string>;
+				/** @deprecated */
+				public addPackageToPreferred(param0: string): void;
 				public getApplicationLogo(param0: android.content.pm.ApplicationInfo): android.graphics.drawable.Drawable;
 			}
 			export module PackageManager {
@@ -12915,7 +12932,7 @@ declare module android {
 				public isPinned(): boolean;
 				public getUserHandle(): android.os.UserHandle;
 				public isImmutable(): boolean;
-				public getExtras(): android.os.PersistableBundle;
+				public getExtras(): any;
 				public describeContents(): number;
 				public getRank(): number;
 				public isEnabled(): boolean;
@@ -12931,8 +12948,8 @@ declare module android {
 					public setIcon(param0: any): any;
 					public setCategories(param0: java.util.Set<string>): any;
 					public setIntent(param0: android.content.Intent): any;
+					public setExtras(param0: any): any;
 					public setIntents(param0: native.Array<android.content.Intent>): any;
-					public setExtras(param0: android.os.PersistableBundle): any;
 					public setActivity(param0: android.content.ComponentName): any;
 					public setRank(param0: number): any;
 					public build(): any;
@@ -13099,7 +13116,6 @@ declare module android {
 			export class ColorStateList extends java.lang.Object implements android.os.Parcelable {
 				public static class: java.lang.Class<android.content.res.ColorStateList>;
 				public static CREATOR: android.os.Parcelable.Creator<android.content.res.ColorStateList>;
-				public static createFromXml(param0: android.content.res.Resources, param1: org.xmlpull.v1.XmlPullParser): android.content.res.ColorStateList;
 				public writeToParcel(param0: android.os.Parcel, param1: number): void;
 				public isOpaque(): boolean;
 				public getColorForState(param0: native.Array<number>, param1: number): number;
@@ -13111,6 +13127,8 @@ declare module android {
 				public static createFromXml(param0: android.content.res.Resources, param1: org.xmlpull.v1.XmlPullParser, param2: android.content.res.Resources.Theme): android.content.res.ColorStateList;
 				public static valueOf(param0: number): android.content.res.ColorStateList;
 				public describeContents(): number;
+				/** @deprecated */
+				public static createFromXml(param0: android.content.res.Resources, param1: org.xmlpull.v1.XmlPullParser): android.content.res.ColorStateList;
 				public isStateful(): boolean;
 			}
 		}
@@ -13203,7 +13221,6 @@ declare module android {
 				public smallestScreenWidthDp: number;
 				public touchscreen: number;
 				public uiMode: number;
-				public getLocales(): android.os.LocaleList;
 				public getLayoutDirection(): number;
 				public setTo(param0: android.content.res.Configuration): void;
 				public writeToParcel(param0: android.os.Parcel, param1: number): void;
@@ -13214,9 +13231,10 @@ declare module android {
 				public isLayoutSizeAtLeast(param0: number): boolean;
 				public constructor();
 				public compareTo(param0: android.content.res.Configuration): number;
+				public setLocales(param0: any): void;
 				public setLayoutDirection(param0: java.util.Locale): void;
-				public setLocales(param0: android.os.LocaleList): void;
 				public hashCode(): number;
+				public getLocales(): any;
 				public setToDefaults(): void;
 				public describeContents(): number;
 				public equals(param0: any): boolean;
@@ -13265,6 +13283,10 @@ declare module android {
 		export module res {
 			export class Resources extends java.lang.Object {
 				public static class: java.lang.Class<android.content.res.Resources>;
+				/** @deprecated */
+				public getDrawable(param0: number): android.graphics.drawable.Drawable;
+				/** @deprecated */
+				public getColor(param0: number): number;
 				public getColorStateList(param0: number, param1: android.content.res.Resources.Theme): android.content.res.ColorStateList;
 				public getValue(param0: number, param1: android.util.TypedValue, param2: boolean): void;
 				public getMovie(param0: number): android.graphics.Movie;
@@ -13275,14 +13297,10 @@ declare module android {
 				public getDimension(param0: number): number;
 				public getQuantityText(param0: number, param1: number): string;
 				public getValueForDensity(param0: number, param1: number, param2: android.util.TypedValue, param3: boolean): void;
-				public updateConfiguration(param0: android.content.res.Configuration, param1: android.util.DisplayMetrics): void;
 				public getDrawableForDensity(param0: number, param1: number, param2: android.content.res.Resources.Theme): android.graphics.drawable.Drawable;
-				public getDrawable(param0: number): android.graphics.drawable.Drawable;
 				public getIntArray(param0: number): native.Array<number>;
-				public getDrawableForDensity(param0: number, param1: number): android.graphics.drawable.Drawable;
 				public finishPreloading(): void;
 				public getAnimation(param0: number): android.content.res.XmlResourceParser;
-				public getColor(param0: number): number;
 				public getQuantityString(param0: number, param1: number, param2: native.Array<any>): string;
 				public getText(param0: number, param1: string): string;
 				public obtainAttributes(param0: android.util.AttributeSet, param1: native.Array<number>): android.content.res.TypedArray;
@@ -13290,6 +13308,10 @@ declare module android {
 				public getResourceName(param0: number): string;
 				public parseBundleExtra(param0: string, param1: android.util.AttributeSet, param2: android.os.Bundle): void;
 				public flushLayoutCache(): void;
+				/** @deprecated */
+				public getDrawableForDensity(param0: number, param1: number): android.graphics.drawable.Drawable;
+				/** @deprecated */
+				public getColorStateList(param0: number): android.content.res.ColorStateList;
 				public getDimensionPixelSize(param0: number): number;
 				public getXml(param0: number): android.content.res.XmlResourceParser;
 				public getDisplayMetrics(): android.util.DisplayMetrics;
@@ -13306,17 +13328,19 @@ declare module android {
 				public getText(param0: number): string;
 				public getStringArray(param0: number): native.Array<string>;
 				public getFraction(param0: number, param1: number, param2: number): number;
+				/** @deprecated */
+				public updateConfiguration(param0: android.content.res.Configuration, param1: android.util.DisplayMetrics): void;
 				public getDimensionPixelOffset(param0: number): number;
 				public getResourcePackageName(param0: number): string;
 				public obtainTypedArray(param0: number): android.content.res.TypedArray;
 				public getIdentifier(param0: string, param1: string, param2: string): number;
 				public getAssets(): android.content.res.AssetManager;
-				public constructor(param0: android.content.res.AssetManager, param1: android.util.DisplayMetrics, param2: android.content.res.Configuration);
 				public getLayout(param0: number): android.content.res.XmlResourceParser;
 				public getQuantityString(param0: number, param1: number): string;
 				public getValue(param0: string, param1: android.util.TypedValue, param2: boolean): void;
+				/** @deprecated */
+				public constructor(param0: android.content.res.AssetManager, param1: android.util.DisplayMetrics, param2: android.content.res.Configuration);
 				public static getSystem(): android.content.res.Resources;
-				public getColorStateList(param0: number): android.content.res.ColorStateList;
 			}
 			export module Resources {
 				export class NotFoundException extends java.lang.RuntimeException {
@@ -13544,13 +13568,19 @@ declare module android {
 			public mClosed: boolean;
 			public mContentResolver: android.content.ContentResolver;
 			public mPos: number;
+			/** @deprecated */
+			public requery(): boolean;
 			public getFloat(param0: number): number;
 			public requery(): boolean;
+			/** @deprecated */
+			public getUpdatedField(param0: number): any;
 			public isAfterLast(): boolean;
 			public unregisterDataSetObserver(param0: android.database.DataSetObserver): void;
 			public getColumnIndexOrThrow(param0: string): number;
 			public setExtras(param0: android.os.Bundle): void;
 			public onMove(param0: number, param1: number): boolean;
+			/** @deprecated */
+			public deactivate(): void;
 			public getCount(): number;
 			public getShort(param0: number): number;
 			public getType(param0: number): number;
@@ -13567,12 +13597,13 @@ declare module android {
 			public moveToPrevious(): boolean;
 			public fillWindow(param0: number, param1: android.database.CursorWindow): void;
 			public getExtras(): android.os.Bundle;
+			/** @deprecated */
+			public isFieldUpdated(param0: number): boolean;
 			public getInt(param0: number): number;
 			public getWantsAllOnMoveCalls(): boolean;
 			public isClosed(): boolean;
 			public registerDataSetObserver(param0: android.database.DataSetObserver): void;
 			public onChange(param0: boolean): void;
-			public getUpdatedField(param0: number): any;
 			public getPosition(): number;
 			public getWindow(): android.database.CursorWindow;
 			public getColumnNames(): native.Array<string>;
@@ -13580,7 +13611,6 @@ declare module android {
 			public moveToFirst(): boolean;
 			public getNotificationUri(): android.net.Uri;
 			public respond(param0: android.os.Bundle): android.os.Bundle;
-			public isFieldUpdated(param0: number): boolean;
 			public isLast(): boolean;
 			public getBlob(param0: number): native.Array<number>;
 			public close(): void;
@@ -13613,22 +13643,26 @@ declare module android {
 		export abstract class AbstractWindowedCursor extends android.database.AbstractCursor {
 			public static class: java.lang.Class<android.database.AbstractWindowedCursor>;
 			public mWindow: android.database.CursorWindow;
+			/** @deprecated */
+			public isBlob(param0: number): boolean;
 			public isNull(param0: number): boolean;
 			public checkPosition(): void;
 			public getDouble(param0: number): number;
 			public getString(param0: number): string;
-			public isLong(param0: number): boolean;
 			public getFloat(param0: number): number;
 			public copyStringToBuffer(param0: number, param1: android.database.CharArrayBuffer): void;
 			public constructor();
-			public isString(param0: number): boolean;
 			public setWindow(param0: android.database.CursorWindow): void;
+			/** @deprecated */
+			public isString(param0: number): boolean;
+			/** @deprecated */
+			public isFloat(param0: number): boolean;
 			public getWindow(): android.database.CursorWindow;
 			public hasWindow(): boolean;
 			public getLong(param0: number): number;
-			public isBlob(param0: number): boolean;
 			public onMove(param0: number, param1: number): boolean;
-			public isFloat(param0: number): boolean;
+			/** @deprecated */
+			public isLong(param0: number): boolean;
 			public getBlob(param0: number): native.Array<number>;
 			public getShort(param0: number): number;
 			public getType(param0: number): number;
@@ -13654,12 +13688,14 @@ declare module android {
 	export module database {
 		export class ContentObservable extends android.database.Observable<android.database.ContentObserver> {
 			public static class: java.lang.Class<android.database.ContentObservable>;
-			public notifyChange(param0: boolean): void;
 			public registerObserver(param0: android.database.ContentObserver): void;
 			public registerObserver(param0: any): void;
 			public dispatchChange(param0: boolean, param1: android.net.Uri): void;
+			/** @deprecated */
 			public dispatchChange(param0: boolean): void;
 			public constructor();
+			/** @deprecated */
+			public notifyChange(param0: boolean): void;
 		}
 	}
 }
@@ -13673,6 +13709,7 @@ declare module android {
 			public onChange(param0: boolean, param1: android.net.Uri): void;
 			public constructor(param0: android.os.Handler);
 			public dispatchChange(param0: boolean, param1: android.net.Uri): void;
+			/** @deprecated */
 			public dispatchChange(param0: boolean): void;
 		}
 	}
@@ -13741,8 +13778,9 @@ declare module android {
 			public static FIELD_TYPE_FLOAT: number;
 			public isClosed(): boolean;
 			public registerDataSetObserver(param0: android.database.DataSetObserver): void;
-			public getFloat(param0: number): number;
+			/** @deprecated */
 			public requery(): boolean;
+			public getFloat(param0: number): number;
 			public getPosition(): number;
 			public getWindow(): android.database.CursorWindow;
 			public isBeforeFirst(): boolean;
@@ -13755,6 +13793,8 @@ declare module android {
 			public getColumnIndexOrThrow(param0: string): number;
 			public setExtras(param0: android.os.Bundle): void;
 			public onMove(param0: number, param1: number): boolean;
+			/** @deprecated */
+			public deactivate(): void;
 			public isLast(): boolean;
 			public getCount(): number;
 			public getBlob(param0: number): native.Array<number>;
@@ -13771,7 +13811,6 @@ declare module android {
 			public unregisterContentObserver(param0: android.database.ContentObserver): void;
 			public isFirst(): boolean;
 			public getString(param0: number): string;
-			public deactivate(): void;
 			public copyStringToBuffer(param0: number, param1: android.database.CharArrayBuffer): void;
 			public move(param0: number): boolean;
 			public moveToPosition(param0: number): boolean;
@@ -13793,8 +13832,9 @@ declare module android {
 			public static class: java.lang.Class<android.database.CrossProcessCursorWrapper>;
 			public isClosed(): boolean;
 			public registerDataSetObserver(param0: android.database.DataSetObserver): void;
-			public getFloat(param0: number): number;
+			/** @deprecated */
 			public requery(): boolean;
+			public getFloat(param0: number): number;
 			public getPosition(): number;
 			public getWindow(): android.database.CursorWindow;
 			public isBeforeFirst(): boolean;
@@ -13807,6 +13847,8 @@ declare module android {
 			public getColumnIndexOrThrow(param0: string): number;
 			public setExtras(param0: android.os.Bundle): void;
 			public onMove(param0: number, param1: number): boolean;
+			/** @deprecated */
+			public deactivate(): void;
 			public isLast(): boolean;
 			public getCount(): number;
 			public getBlob(param0: number): native.Array<number>;
@@ -13823,7 +13865,6 @@ declare module android {
 			public unregisterContentObserver(param0: android.database.ContentObserver): void;
 			public isFirst(): boolean;
 			public getString(param0: number): string;
-			public deactivate(): void;
 			public copyStringToBuffer(param0: number, param1: android.database.CharArrayBuffer): void;
 			public move(param0: number): boolean;
 			public moveToPosition(param0: number): boolean;
@@ -13900,8 +13941,9 @@ declare module android {
 			public static FIELD_TYPE_FLOAT: number;
 			public isClosed(): boolean;
 			public registerDataSetObserver(param0: android.database.DataSetObserver): void;
-			public getFloat(param0: number): number;
+			/** @deprecated */
 			public requery(): boolean;
+			public getFloat(param0: number): number;
 			public getPosition(): number;
 			public isBeforeFirst(): boolean;
 			public isAfterLast(): boolean;
@@ -13912,6 +13954,8 @@ declare module android {
 			public respond(param0: android.os.Bundle): android.os.Bundle;
 			public getColumnIndexOrThrow(param0: string): number;
 			public setExtras(param0: android.os.Bundle): void;
+			/** @deprecated */
+			public deactivate(): void;
 			public isLast(): boolean;
 			public getCount(): number;
 			public getBlob(param0: number): native.Array<number>;
@@ -13928,7 +13972,6 @@ declare module android {
 			public unregisterContentObserver(param0: android.database.ContentObserver): void;
 			public isFirst(): boolean;
 			public getString(param0: number): string;
-			public deactivate(): void;
 			public copyStringToBuffer(param0: number, param1: android.database.CharArrayBuffer): void;
 			public move(param0: number): boolean;
 			public moveToPosition(param0: number): boolean;
@@ -13989,29 +14032,32 @@ declare module android {
 		export class CursorWindow extends android.database.sqlite.SQLiteClosable implements android.os.Parcelable {
 			public static class: java.lang.Class<android.database.CursorWindow>;
 			public static CREATOR: android.os.Parcelable.Creator<android.database.CursorWindow>;
-			public isLong(param0: number, param1: number): boolean;
 			public getShort(param0: number, param1: number): number;
-			public constructor(param0: boolean);
 			public getType(param0: number, param1: number): number;
 			public getStartPosition(): number;
 			public copyStringToBuffer(param0: number, param1: number, param2: android.database.CharArrayBuffer): void;
 			public onAllReferencesReleased(): void;
+			/** @deprecated */
+			public isFloat(param0: number, param1: number): boolean;
 			public allocRow(): boolean;
 			public getBlob(param0: number, param1: number): native.Array<number>;
 			public putNull(param0: number, param1: number): boolean;
 			public getLong(param0: number, param1: number): number;
+			/** @deprecated */
+			public isBlob(param0: number, param1: number): boolean;
 			public getNumRows(): number;
 			public getInt(param0: number, param1: number): number;
 			public setStartPosition(param0: number): void;
-			public isNull(param0: number, param1: number): boolean;
 			public putBlob(param0: native.Array<number>, param1: number, param2: number): boolean;
 			public writeToParcel(param0: android.os.Parcel, param1: number): void;
 			public getFloat(param0: number, param1: number): number;
+			/** @deprecated */
+			public isNull(param0: number, param1: number): boolean;
 			public close(): void;
-			public isBlob(param0: number, param1: number): boolean;
 			public constructor(param0: string);
 			public finalize(): void;
 			public setNumColumns(param0: number): boolean;
+			/** @deprecated */
 			public isString(param0: number, param1: number): boolean;
 			public putString(param0: string, param1: number, param2: number): boolean;
 			public putDouble(param0: number, param1: number, param2: number): boolean;
@@ -14020,10 +14066,13 @@ declare module android {
 			public getDouble(param0: number, param1: number): number;
 			public static newFromParcel(param0: android.os.Parcel): android.database.CursorWindow;
 			public constructor();
+			/** @deprecated */
+			public isLong(param0: number, param1: number): boolean;
 			public freeLastRow(): void;
 			public toString(): string;
 			public describeContents(): number;
-			public isFloat(param0: number, param1: number): boolean;
+			/** @deprecated */
+			public constructor(param0: boolean);
 			public putLong(param0: number, param1: number, param2: number): boolean;
 		}
 	}
@@ -14035,8 +14084,9 @@ declare module android {
 			public static class: java.lang.Class<android.database.CursorWrapper>;
 			public isClosed(): boolean;
 			public registerDataSetObserver(param0: android.database.DataSetObserver): void;
-			public getFloat(param0: number): number;
+			/** @deprecated */
 			public requery(): boolean;
+			public getFloat(param0: number): number;
 			public getPosition(): number;
 			public getWrappedCursor(): android.database.Cursor;
 			public getColumnNames(): native.Array<string>;
@@ -14048,6 +14098,8 @@ declare module android {
 			public respond(param0: android.os.Bundle): android.os.Bundle;
 			public getColumnIndexOrThrow(param0: string): number;
 			public setExtras(param0: android.os.Bundle): void;
+			/** @deprecated */
+			public deactivate(): void;
 			public isLast(): boolean;
 			public getCount(): number;
 			public getBlob(param0: number): native.Array<number>;
@@ -14063,7 +14115,6 @@ declare module android {
 			public getDouble(param0: number): number;
 			public unregisterContentObserver(param0: android.database.ContentObserver): void;
 			public isFirst(): boolean;
-			public deactivate(): void;
 			public getString(param0: number): string;
 			public copyStringToBuffer(param0: number, param1: android.database.CharArrayBuffer): void;
 			public move(param0: number): boolean;
@@ -14400,8 +14451,10 @@ declare module android {
 				public releaseReference(): void;
 				public acquireReference(): void;
 				public close(): void;
-				public releaseReferenceFromContainer(): void;
+				/** @deprecated */
 				public onAllReferencesReleasedFromContainer(): void;
+				/** @deprecated */
+				public releaseReferenceFromContainer(): void;
 				public constructor();
 				public onAllReferencesReleased(): void;
 			}
@@ -14438,12 +14491,13 @@ declare module android {
 				public onMove(param0: number, param1: number): boolean;
 				public fillWindow(param0: number, param1: android.database.CursorWindow): void;
 				public finalize(): void;
-				public constructor(param0: android.database.sqlite.SQLiteDatabase, param1: android.database.sqlite.SQLiteCursorDriver, param2: string, param3: android.database.sqlite.SQLiteQuery);
 				public getCount(): number;
 				public getColumnIndex(param0: string): number;
 				public constructor();
 				public setWindow(param0: android.database.CursorWindow): void;
 				public getWindow(): android.database.CursorWindow;
+				/** @deprecated */
+				public constructor(param0: android.database.sqlite.SQLiteDatabase, param1: android.database.sqlite.SQLiteCursorDriver, param2: string, param3: android.database.sqlite.SQLiteQuery);
 				public deactivate(): void;
 			}
 		}
@@ -14509,10 +14563,15 @@ declare module android {
 				public isDbLockedByCurrentThread(): boolean;
 				public isWriteAheadLoggingEnabled(): boolean;
 				public static releaseMemory(): number;
+				/** @deprecated */
+				public markTableSyncable(param0: string, param1: string): void;
 				public queryWithFactory(param0: android.database.sqlite.SQLiteDatabase.CursorFactory, param1: boolean, param2: string, param3: native.Array<string>, param4: string, param5: native.Array<string>, param6: string, param7: string, param8: string, param9: string, param10: android.os.CancellationSignal): android.database.Cursor;
+				/** @deprecated */
+				public yieldIfContended(): boolean;
 				public inTransaction(): boolean;
 				public enableWriteAheadLogging(): boolean;
-				public isDbLockedByOtherThreads(): boolean;
+				/** @deprecated */
+				public setLockingEnabled(param0: boolean): void;
 				public close(): void;
 				public rawQueryWithFactory(param0: android.database.sqlite.SQLiteDatabase.CursorFactory, param1: string, param2: native.Array<string>, param3: string, param4: android.os.CancellationSignal): android.database.Cursor;
 				public execSQL(param0: string): void;
@@ -14534,9 +14593,10 @@ declare module android {
 				public query(param0: boolean, param1: string, param2: native.Array<string>, param3: string, param4: native.Array<string>, param5: string, param6: string, param7: string, param8: string, param9: android.os.CancellationSignal): android.database.Cursor;
 				public finalize(): void;
 				public validateSql(param0: string, param1: android.os.CancellationSignal): void;
-				public getSyncedTables(): java.util.Map<string,string>;
 				public beginTransactionNonExclusive(): void;
 				public setMaximumSize(param0: number): number;
+				/** @deprecated */
+				public getSyncedTables(): java.util.Map<string,string>;
 				public static create(param0: android.database.sqlite.SQLiteDatabase.CursorFactory): android.database.sqlite.SQLiteDatabase;
 				public setPageSize(param0: number): void;
 				public static findEditTable(param0: string): string;
@@ -14546,10 +14606,9 @@ declare module android {
 				public execSQL(param0: string, param1: native.Array<any>): void;
 				public onAllReferencesReleased(): void;
 				public replaceOrThrow(param0: string, param1: string, param2: android.content.ContentValues): number;
-				public yieldIfContended(): boolean;
-				public setLockingEnabled(param0: boolean): void;
+				/** @deprecated */
+				public isDbLockedByOtherThreads(): boolean;
 				public disableWriteAheadLogging(): void;
-				public markTableSyncable(param0: string, param1: string): void;
 				public updateWithOnConflict(param0: string, param1: android.content.ContentValues, param2: string, param3: native.Array<string>, param4: number): number;
 				public insert(param0: string, param1: string, param2: android.content.ContentValues): number;
 				public getPageSize(): number;
@@ -14558,10 +14617,11 @@ declare module android {
 				public insertWithOnConflict(param0: string, param1: string, param2: android.content.ContentValues, param3: number): number;
 				public isOpen(): boolean;
 				public endTransaction(): void;
+				/** @deprecated */
+				public markTableSyncable(param0: string, param1: string, param2: string): void;
 				public rawQuery(param0: string, param1: native.Array<string>): android.database.Cursor;
 				public setLocale(param0: java.util.Locale): void;
 				public rawQueryWithFactory(param0: android.database.sqlite.SQLiteDatabase.CursorFactory, param1: string, param2: native.Array<string>, param3: string): android.database.Cursor;
-				public markTableSyncable(param0: string, param1: string, param2: string): void;
 				public queryWithFactory(param0: android.database.sqlite.SQLiteDatabase.CursorFactory, param1: boolean, param2: string, param3: native.Array<string>, param4: string, param5: native.Array<string>, param6: string, param7: string, param8: string, param9: string): android.database.Cursor;
 			}
 			export module SQLiteDatabase {
@@ -14749,8 +14809,9 @@ declare module android {
 				public bindString(param0: number, param1: string): void;
 				public bindDouble(param0: number, param1: number): void;
 				public bindBlob(param0: number, param1: native.Array<number>): void;
-				public getUniqueId(): number;
 				public bindLong(param0: number, param1: number): void;
+				/** @deprecated */
+				public getUniqueId(): number;
 				public bindNull(param0: number): void;
 				public onAllReferencesReleased(): void;
 			}
@@ -14775,7 +14836,6 @@ declare module android {
 		export module sqlite {
 			export class SQLiteQueryBuilder extends java.lang.Object {
 				public static class: java.lang.Class<android.database.sqlite.SQLiteQueryBuilder>;
-				public buildQuery(param0: native.Array<string>, param1: string, param2: native.Array<string>, param3: string, param4: string, param5: string, param6: string): string;
 				public static appendColumns(param0: java.lang.StringBuilder, param1: native.Array<string>): void;
 				public buildQuery(param0: native.Array<string>, param1: string, param2: string, param3: string, param4: string, param5: string): string;
 				public query(param0: android.database.sqlite.SQLiteDatabase, param1: native.Array<string>, param2: string, param3: native.Array<string>, param4: string, param5: string, param6: string): android.database.Cursor;
@@ -14787,10 +14847,13 @@ declare module android {
 				public setCursorFactory(param0: android.database.sqlite.SQLiteDatabase.CursorFactory): void;
 				public setTables(param0: string): void;
 				public buildUnionSubQuery(param0: string, param1: native.Array<string>, param2: java.util.Set<string>, param3: number, param4: string, param5: string, param6: string, param7: string): string;
+				/** @deprecated */
 				public buildUnionSubQuery(param0: string, param1: native.Array<string>, param2: java.util.Set<string>, param3: number, param4: string, param5: string, param6: native.Array<string>, param7: string, param8: string): string;
 				public getTables(): string;
 				public setDistinct(param0: boolean): void;
 				public appendWhere(param0: string): void;
+				/** @deprecated */
+				public buildQuery(param0: native.Array<string>, param1: string, param2: native.Array<string>, param3: string, param4: string, param5: string, param6: string): string;
 				public static buildQueryString(param0: boolean, param1: string, param2: native.Array<string>, param3: string, param4: string, param5: string, param6: string, param7: string): string;
 				public appendWhereEscapeString(param0: string): void;
 				public query(param0: android.database.sqlite.SQLiteDatabase, param1: native.Array<string>, param2: string, param3: native.Array<string>, param4: string, param5: string, param6: string, param7: string, param8: android.os.CancellationSignal): android.database.Cursor;
@@ -15008,7 +15071,6 @@ declare module android {
 			public getMetadata(param0: string): android.content.ContentValues;
 			public close(): void;
 			public finalize(): void;
-			public release(): void;
 			public saveRights(param0: android.drm.DrmRights, param1: string, param2: string): number;
 			public convertData(param0: number, param1: native.Array<number>): android.drm.DrmConvertedStatus;
 			public openConvertSession(param0: string): number;
@@ -15018,6 +15080,8 @@ declare module android {
 			public getConstraints(param0: string, param1: number): android.content.ContentValues;
 			public getOriginalMimeType(param0: android.net.Uri): string;
 			public checkRightsStatus(param0: android.net.Uri): number;
+			/** @deprecated */
+			public release(): void;
 			public removeRights(param0: string): number;
 			public removeAllRights(): number;
 			public getMetadata(param0: android.net.Uri): android.content.ContentValues;
@@ -15087,6 +15151,7 @@ declare module android {
 	export module drm {
 		export class DrmStore extends java.lang.Object {
 			public static class: java.lang.Class<android.drm.DrmStore>;
+			/** @deprecated */
 			public constructor();
 		}
 		export module DrmStore {
@@ -15100,6 +15165,7 @@ declare module android {
 				public static PREVIEW: number;
 				public static RINGTONE: number;
 				public static TRANSFER: number;
+				/** @deprecated */
 				public constructor();
 			}
 			export class ConstraintsColumns extends java.lang.Object {
@@ -15123,6 +15189,7 @@ declare module android {
 				public static RIGHTS_OBJECT: number;
 				public static TRIGGER_OBJECT: number;
 				public static UNKNOWN: number;
+				/** @deprecated */
 				public constructor();
 			}
 			export class Playback extends java.lang.Object {
@@ -15131,6 +15198,7 @@ declare module android {
 				public static RESUME: number;
 				public static START: number;
 				public static STOP: number;
+				/** @deprecated */
 				public constructor();
 			}
 			export class RightsStatus extends java.lang.Object {
@@ -15139,6 +15207,7 @@ declare module android {
 				public static RIGHTS_INVALID: number;
 				public static RIGHTS_NOT_ACQUIRED: number;
 				public static RIGHTS_VALID: number;
+				/** @deprecated */
 				public constructor();
 			}
 		}
@@ -15151,11 +15220,12 @@ declare module android {
 			public static class: java.lang.Class<android.drm.DrmSupportInfo>;
 			public equals(param0: any): boolean;
 			public getFileSuffixIterator(): java.util.Iterator<string>;
-			public getDescriprition(): string;
 			public addMimeType(param0: string): void;
 			public addFileSuffix(param0: string): void;
 			public getMimeTypeIterator(): java.util.Iterator<string>;
 			public setDescription(param0: string): void;
+			/** @deprecated */
+			public getDescriprition(): string;
 			public constructor();
 			public getDescription(): string;
 			public hashCode(): number;
@@ -15304,6 +15374,8 @@ declare module android {
 			public canResolveTextDirection(): boolean;
 			public isFadeEnabled(): boolean;
 			public removeAllOnGestureListeners(): void;
+			/** @deprecated */
+			public requestFitSystemWindows(): void;
 			public getChildVisibleRect(param0: android.view.View, param1: android.graphics.Rect, param2: android.graphics.Point): boolean;
 			public clear(param0: boolean): void;
 			public onKeyUp(param0: number, param1: android.view.KeyEvent): boolean;
@@ -15637,6 +15709,7 @@ declare module android {
 				public outHeight: number;
 				public outMimeType: string;
 				public outWidth: number;
+				/** @deprecated */
 				public requestCancelDecode(): void;
 				public constructor();
 			}
@@ -15736,22 +15809,27 @@ declare module android {
 			public drawARGB(param0: number, param1: number, param2: number, param3: number): void;
 			public getWidth(): number;
 			public restore(): void;
-			public clipRegion(param0: android.graphics.Region, param1: android.graphics.Region.Op): boolean;
+			/** @deprecated */
+			public drawPosText(param0: native.Array<string>, param1: number, param2: number, param3: native.Array<number>, param4: android.graphics.Paint): void;
 			public drawColor(param0: number, param1: android.graphics.PorterDuff.Mode): void;
 			public drawBitmap(param0: android.graphics.Bitmap, param1: android.graphics.Matrix, param2: android.graphics.Paint): void;
 			public drawBitmapMesh(param0: android.graphics.Bitmap, param1: number, param2: number, param3: native.Array<number>, param4: number, param5: native.Array<number>, param6: number, param7: android.graphics.Paint): void;
 			public drawPoint(param0: number, param1: number, param2: android.graphics.Paint): void;
-			public drawPosText(param0: native.Array<string>, param1: number, param2: number, param3: native.Array<number>, param4: android.graphics.Paint): void;
 			public drawText(param0: string, param1: number, param2: number, param3: number, param4: number, param5: android.graphics.Paint): void;
 			public saveLayer(param0: number, param1: number, param2: number, param3: number, param4: android.graphics.Paint, param5: number): number;
 			public drawPoints(param0: native.Array<number>, param1: android.graphics.Paint): void;
 			public clipPath(param0: android.graphics.Path): boolean;
 			public getSaveCount(): number;
 			public setMatrix(param0: android.graphics.Matrix): void;
+			/** @deprecated */
+			public clipRegion(param0: android.graphics.Region, param1: android.graphics.Region.Op): boolean;
 			public getClipBounds(param0: android.graphics.Rect): boolean;
-			public clipRegion(param0: android.graphics.Region): boolean;
+			/** @deprecated */
+			public drawPosText(param0: string, param1: native.Array<number>, param2: android.graphics.Paint): void;
 			public saveLayerAlpha(param0: number, param1: number, param2: number, param3: number, param4: number): number;
 			public drawColor(param0: number): void;
+			/** @deprecated */
+			public getMatrix(param0: android.graphics.Matrix): void;
 			public saveLayerAlpha(param0: android.graphics.RectF, param1: number, param2: number): number;
 			public drawOval(param0: android.graphics.RectF, param1: android.graphics.Paint): void;
 			public drawPaint(param0: android.graphics.Paint): void;
@@ -15776,12 +15854,13 @@ declare module android {
 			public clipRect(param0: android.graphics.Rect): boolean;
 			public quickReject(param0: number, param1: number, param2: number, param3: number, param4: android.graphics.Canvas.EdgeType): boolean;
 			public restoreToCount(param0: number): void;
-			public getMatrix(): android.graphics.Matrix;
 			public quickReject(param0: android.graphics.RectF, param1: android.graphics.Canvas.EdgeType): boolean;
 			public saveLayer(param0: android.graphics.RectF, param1: android.graphics.Paint, param2: number): number;
 			public scale(param0: number, param1: number, param2: number, param3: number): void;
 			public saveLayerAlpha(param0: android.graphics.RectF, param1: number): number;
 			public setDensity(param0: number): void;
+			/** @deprecated */
+			public clipRegion(param0: android.graphics.Region): boolean;
 			public rotate(param0: number, param1: number, param2: number): void;
 			public clipRect(param0: android.graphics.Rect, param1: android.graphics.Region.Op): boolean;
 			public drawLine(param0: number, param1: number, param2: number, param3: number, param4: android.graphics.Paint): void;
@@ -15791,22 +15870,23 @@ declare module android {
 			public saveLayer(param0: android.graphics.RectF, param1: android.graphics.Paint): number;
 			public drawPicture(param0: android.graphics.Picture, param1: android.graphics.RectF): void;
 			public translate(param0: number, param1: number): void;
-			public getMatrix(param0: android.graphics.Matrix): void;
 			public drawCircle(param0: number, param1: number, param2: number, param3: android.graphics.Paint): void;
 			public getMaximumBitmapHeight(): number;
 			public save(): number;
 			public getDrawFilter(): android.graphics.DrawFilter;
 			public isOpaque(): boolean;
 			public drawLines(param0: native.Array<number>, param1: android.graphics.Paint): void;
-			public drawPosText(param0: string, param1: native.Array<number>, param2: android.graphics.Paint): void;
 			public drawBitmap(param0: android.graphics.Bitmap, param1: android.graphics.Rect, param2: android.graphics.Rect, param3: android.graphics.Paint): void;
 			public concat(param0: android.graphics.Matrix): void;
+			/** @deprecated */
+			public getMatrix(): android.graphics.Matrix;
 			public clipRect(param0: android.graphics.RectF, param1: android.graphics.Region.Op): boolean;
 			public getClipBounds(): android.graphics.Rect;
 			public drawRect(param0: android.graphics.Rect, param1: android.graphics.Paint): void;
 			public saveLayer(param0: number, param1: number, param2: number, param3: number, param4: android.graphics.Paint): number;
 			public drawArc(param0: number, param1: number, param2: number, param3: number, param4: number, param5: number, param6: boolean, param7: android.graphics.Paint): void;
 			public drawBitmap(param0: android.graphics.Bitmap, param1: number, param2: number, param3: android.graphics.Paint): void;
+			/** @deprecated */
 			public drawBitmap(param0: native.Array<number>, param1: number, param2: number, param3: number, param4: number, param5: number, param6: number, param7: boolean, param8: android.graphics.Paint): void;
 			public drawPicture(param0: android.graphics.Picture, param1: android.graphics.Rect): void;
 			public saveLayerAlpha(param0: number, param1: number, param2: number, param3: number, param4: number, param5: number): number;
@@ -16263,12 +16343,10 @@ declare module android {
 			public getAlpha(): number;
 			public getOffsetForAdvance(param0: string, param1: number, param2: number, param3: number, param4: number, param5: boolean, param6: number): number;
 			public getStyle(): android.graphics.Paint.Style;
-			public getTextLocales(): android.os.LocaleList;
 			public setTextScaleX(param0: number): void;
 			public getOffsetForAdvance(param0: native.Array<string>, param1: number, param2: number, param3: number, param4: number, param5: boolean, param6: number): number;
 			public setStrokeMiter(param0: number): void;
 			public isElegantTextHeight(): boolean;
-			public getRasterizer(): android.graphics.Rasterizer;
 			public setSubpixelText(param0: boolean): void;
 			public isFakeBoldText(): boolean;
 			public setARGB(param0: number, param1: number, param2: number, param3: number): void;
@@ -16303,7 +16381,7 @@ declare module android {
 			public isDither(): boolean;
 			public getTypeface(): android.graphics.Typeface;
 			public getTextWidths(param0: string, param1: number, param2: number, param3: native.Array<number>): number;
-			public setTextLocales(param0: android.os.LocaleList): void;
+			public getTextLocales(): any;
 			public measureText(param0: native.Array<string>, param1: number, param2: number): number;
 			public setAlpha(param0: number): void;
 			public setTextAlign(param0: android.graphics.Paint.Align): void;
@@ -16316,10 +16394,10 @@ declare module android {
 			public setUnderlineText(param0: boolean): void;
 			public setStyle(param0: android.graphics.Paint.Style): void;
 			public getStrokeMiter(): number;
-			public setRasterizer(param0: android.graphics.Rasterizer): android.graphics.Rasterizer;
 			public getMaskFilter(): android.graphics.MaskFilter;
 			public setDither(param0: boolean): void;
 			public set(param0: android.graphics.Paint): void;
+			public setTextLocales(param0: any): void;
 			public setTextSkewX(param0: number): void;
 			public getColorFilter(): android.graphics.ColorFilter;
 			public getTextAlign(): android.graphics.Paint.Align;
@@ -16333,6 +16411,8 @@ declare module android {
 			public constructor(param0: android.graphics.Paint);
 			public getStrokeWidth(): number;
 			public getFlags(): number;
+			/** @deprecated */
+			public setRasterizer(param0: android.graphics.Rasterizer): android.graphics.Rasterizer;
 			public isUnderlineText(): boolean;
 			public isFilterBitmap(): boolean;
 			public getRunAdvance(param0: native.Array<string>, param1: number, param2: number, param3: number, param4: number, param5: boolean, param6: number): number;
@@ -16357,6 +16437,8 @@ declare module android {
 			public getTextSkewX(): number;
 			public getPathEffect(): android.graphics.PathEffect;
 			public getHinting(): number;
+			/** @deprecated */
+			public getRasterizer(): android.graphics.Rasterizer;
 			public setElegantTextHeight(param0: boolean): void;
 			public getXfermode(): android.graphics.Xfermode;
 		}
@@ -16572,11 +16654,13 @@ declare module android {
 	export module graphics {
 		export class Picture extends java.lang.Object {
 			public static class: java.lang.Class<android.graphics.Picture>;
-			public writeToStream(param0: java.io.OutputStream): void;
+			/** @deprecated */
+			public static createFromStream(param0: java.io.InputStream): android.graphics.Picture;
 			public beginRecording(param0: number, param1: number): android.graphics.Canvas;
 			public getHeight(): number;
+			/** @deprecated */
+			public writeToStream(param0: java.io.OutputStream): void;
 			public constructor(param0: android.graphics.Picture);
-			public static createFromStream(param0: java.io.InputStream): android.graphics.Picture;
 			public getWidth(): number;
 			public constructor();
 			public endRecording(): void;
@@ -17229,13 +17313,16 @@ declare module android {
 				public onStateChange(param0: native.Array<number>): boolean;
 				public constructor(param0: android.content.res.Resources, param1: java.io.InputStream);
 				public setTileModeY(param0: android.graphics.Shader.TileMode): void;
+				/** @deprecated */
+				public setDither(param0: boolean): void;
 				public constructor(param0: android.content.res.Resources, param1: string);
 				public setTileModeXY(param0: android.graphics.Shader.TileMode, param1: android.graphics.Shader.TileMode): void;
 				public setDither(param0: boolean): void;
 				public getChangingConfigurations(): number;
 				public canApplyTheme(): boolean;
 				public getConstantState(): android.graphics.drawable.Drawable.ConstantState;
-				public constructor(param0: java.io.InputStream);
+				/** @deprecated */
+				public constructor();
 				public getIntrinsicHeight(): number;
 				public isFilterBitmap(): boolean;
 				public applyTheme(param0: android.content.res.Resources.Theme): void;
@@ -17243,26 +17330,31 @@ declare module android {
 				public setTargetDensity(param0: android.util.DisplayMetrics): void;
 				public getColorFilter(): android.graphics.ColorFilter;
 				public isAutoMirrored(): boolean;
+				/** @deprecated */
+				public constructor(param0: string);
 				public setTintList(param0: android.content.res.ColorStateList): void;
 				public setTintMode(param0: android.graphics.PorterDuff.Mode): void;
-				public constructor(param0: string);
 				public onBoundsChange(param0: android.graphics.Rect): void;
 				public getIntrinsicWidth(): number;
 				public getTileModeY(): android.graphics.Shader.TileMode;
 				public setTargetDensity(param0: number): void;
 				public getGravity(): number;
+				/** @deprecated */
+				public constructor(param0: android.content.res.Resources);
 				public hasMipMap(): boolean;
 				public setGravity(param0: number): void;
 				public setColorFilter(param0: android.graphics.ColorFilter): void;
 				public hasAntiAlias(): boolean;
-				public constructor(param0: android.graphics.Bitmap);
 				public draw(param0: android.graphics.Canvas): void;
 				public setColorFilter(param0: number, param1: android.graphics.PorterDuff.Mode): void;
 				public setMipMap(param0: boolean): void;
+				/** @deprecated */
+				public constructor(param0: android.graphics.Bitmap);
 				public constructor(param0: android.content.res.Resources, param1: android.graphics.Bitmap);
 				public getOutline(param0: any): void;
 				public setAlpha(param0: number): void;
-				public constructor(param0: android.content.res.Resources);
+				/** @deprecated */
+				public constructor(param0: java.io.InputStream);
 				public setTargetDensity(param0: android.graphics.Canvas): void;
 				public setAutoMirrored(param0: boolean): void;
 				public inflate(param0: android.content.res.Resources, param1: org.xmlpull.v1.XmlPullParser, param2: android.util.AttributeSet, param3: android.content.res.Resources.Theme): void;
@@ -17347,6 +17439,8 @@ declare module android {
 				public static resolveOpacity(param0: number, param1: number): number;
 				public copyBounds(param0: android.graphics.Rect): void;
 				public static createFromResourceStream(param0: android.content.res.Resources, param1: android.util.TypedValue, param2: java.io.InputStream, param3: string, param4: android.graphics.BitmapFactory.Options): android.graphics.drawable.Drawable;
+				/** @deprecated */
+				public setDither(param0: boolean): void;
 				public onLayoutDirectionChanged(param0: number): boolean;
 				public getCallback(): android.graphics.drawable.Drawable.Callback;
 				public setTint(param0: number): void;
@@ -17354,7 +17448,6 @@ declare module android {
 				public onLevelChange(param0: number): boolean;
 				public jumpToCurrentState(): void;
 				public setBounds(param0: number, param1: number, param2: number, param3: number): void;
-				public setDither(param0: boolean): void;
 				public getChangingConfigurations(): number;
 				public canApplyTheme(): boolean;
 				public getConstantState(): android.graphics.drawable.Drawable.ConstantState;
@@ -17459,6 +17552,8 @@ declare module android {
 				public setColorFilter(param0: android.graphics.ColorFilter): void;
 				public setEnterFadeDuration(param0: number): void;
 				public getHotspotBounds(param0: android.graphics.Rect): void;
+				/** @deprecated */
+				public setDither(param0: boolean): void;
 				public draw(param0: android.graphics.Canvas): void;
 				public invalidateDrawable(param0: android.graphics.drawable.Drawable): void;
 				public onLayoutDirectionChanged(param0: number): boolean;
@@ -17581,6 +17676,8 @@ declare module android {
 				public setStroke(param0: number, param1: number): void;
 				public onStateChange(param0: native.Array<number>): boolean;
 				public getGradientRadius(): number;
+				/** @deprecated */
+				public setDither(param0: boolean): void;
 				public getCornerRadii(): native.Array<number>;
 				public setColors(param0: native.Array<number>): void;
 				public onLevelChange(param0: number): boolean;
@@ -17735,6 +17832,8 @@ declare module android {
 				public scheduleDrawable(param0: android.graphics.drawable.Drawable, param1: java.lang.Runnable, param2: number): void;
 				public getHotspotBounds(param0: android.graphics.Rect): void;
 				public getDrawable(param0: number): android.graphics.drawable.Drawable;
+				/** @deprecated */
+				public setDither(param0: boolean): void;
 				public findIndexByLayerId(param0: number): number;
 				public getBottomPadding(): number;
 				public getLayerInsetTop(param0: number): number;
@@ -17835,6 +17934,8 @@ declare module android {
 				public isAutoMirrored(): boolean;
 				public setTintList(param0: android.content.res.ColorStateList): void;
 				public setTintMode(param0: android.graphics.PorterDuff.Mode): void;
+				/** @deprecated */
+				public constructor(param0: android.graphics.NinePatch);
 				public getPaint(): android.graphics.Paint;
 				public constructor();
 				public constructor(param0: android.content.res.Resources, param1: android.graphics.NinePatch);
@@ -17842,7 +17943,11 @@ declare module android {
 				public getIntrinsicWidth(): number;
 				public setTargetDensity(param0: number): void;
 				public onStateChange(param0: native.Array<number>): boolean;
+				/** @deprecated */
+				public constructor(param0: android.graphics.Bitmap, param1: native.Array<number>, param2: android.graphics.Rect, param3: string);
 				public setColorFilter(param0: android.graphics.ColorFilter): void;
+				/** @deprecated */
+				public setDither(param0: boolean): void;
 				public draw(param0: android.graphics.Canvas): void;
 				public setColorFilter(param0: number, param1: android.graphics.PorterDuff.Mode): void;
 				public constructor(param0: android.content.res.Resources, param1: android.graphics.Bitmap, param2: native.Array<number>, param3: android.graphics.Rect, param4: string);
@@ -17855,11 +17960,9 @@ declare module android {
 				public setTargetDensity(param0: android.graphics.Canvas): void;
 				public setAutoMirrored(param0: boolean): void;
 				public inflate(param0: android.content.res.Resources, param1: org.xmlpull.v1.XmlPullParser, param2: android.util.AttributeSet, param3: android.content.res.Resources.Theme): void;
-				public constructor(param0: android.graphics.NinePatch);
 				public getIntrinsicHeight(): number;
 				public inflate(param0: android.content.res.Resources, param1: org.xmlpull.v1.XmlPullParser, param2: android.util.AttributeSet): void;
 				public mutate(): android.graphics.drawable.Drawable;
-				public constructor(param0: android.graphics.Bitmap, param1: native.Array<number>, param2: android.graphics.Rect, param3: string);
 				public isFilterBitmap(): boolean;
 				public setFilterBitmap(param0: boolean): void;
 				public getTransparentRegion(): android.graphics.Region;
@@ -18026,6 +18129,8 @@ declare module android {
 				public constructor(param0: android.graphics.drawable.shapes.Shape);
 				public setShape(param0: android.graphics.drawable.shapes.Shape): void;
 				public setColorFilter(param0: android.graphics.ColorFilter): void;
+				/** @deprecated */
+				public setDither(param0: boolean): void;
 				public draw(param0: android.graphics.Canvas): void;
 				public setColorFilter(param0: number, param1: android.graphics.PorterDuff.Mode): void;
 				public setIntrinsicWidth(param0: number): void;
@@ -18510,15 +18615,20 @@ declare module android {
 				public getMaxNumFocusAreas(): number;
 				public getFocusAreas(): java.util.List<android.hardware.Camera.Area>;
 				public getJpegThumbnailQuality(): number;
+				/** @deprecated */
+				public setPreviewFrameRate(param0: number): void;
 				public isSmoothZoomSupported(): boolean;
 				public getVideoStabilization(): boolean;
 				public getMaxExposureCompensation(): number;
+				/** @deprecated */
 				public getPreviewFrameRate(): number;
 				public getSupportedJpegThumbnailSizes(): java.util.List<android.hardware.Camera.Size>;
 				public getMaxNumMeteringAreas(): number;
 				public setJpegThumbnailQuality(param0: number): void;
 				public setColorEffect(param0: string): void;
 				public setVideoStabilization(param0: boolean): void;
+				/** @deprecated */
+				public getSupportedPreviewFrameRates(): java.util.List<java.lang.Integer>;
 				public getPictureFormat(): number;
 				public get(param0: string): string;
 				public setFlashMode(param0: string): void;
@@ -18556,7 +18666,6 @@ declare module android {
 				public flatten(): string;
 				public setExposureCompensation(param0: number): void;
 				public getSupportedWhiteBalance(): java.util.List<string>;
-				public getSupportedPreviewFrameRates(): java.util.List<java.lang.Integer>;
 				public getSupportedSceneModes(): java.util.List<string>;
 				public getJpegQuality(): number;
 				public setPreviewFormat(param0: number): void;
@@ -18571,7 +18680,6 @@ declare module android {
 				public getColorEffect(): string;
 				public getSupportedColorEffects(): java.util.List<string>;
 				public getPreviewSize(): android.hardware.Camera.Size;
-				public setPreviewFrameRate(param0: number): void;
 				public getAutoExposureLock(): boolean;
 				public getSupportedPreviewFpsRange(): java.util.List<native.Array<number>>;
 				public getSupportedFocusModes(): java.util.List<string>;
@@ -18913,23 +19021,28 @@ declare module android {
 			public static SENSOR_TEMPERATURE: number;
 			public static SENSOR_TRICORDER: number;
 			public static STANDARD_GRAVITY: number;
+			/** @deprecated */
+			public unregisterListener(param0: android.hardware.SensorListener, param1: number): void;
 			public static remapCoordinateSystem(param0: native.Array<number>, param1: number, param2: number, param3: native.Array<number>): boolean;
-			public registerListener(param0: android.hardware.SensorListener, param1: number, param2: number): boolean;
 			public getDefaultSensor(param0: number): android.hardware.Sensor;
 			public registerListener(param0: android.hardware.SensorEventListener, param1: android.hardware.Sensor, param2: number, param3: number): boolean;
-			public getSensors(): number;
-			public registerListener(param0: android.hardware.SensorListener, param1: number): boolean;
+			/** @deprecated */
+			public unregisterListener(param0: android.hardware.SensorListener): void;
 			public registerListener(param0: android.hardware.SensorEventListener, param1: android.hardware.Sensor, param2: number): boolean;
+			/** @deprecated */
+			public getSensors(): number;
+			/** @deprecated */
+			public registerListener(param0: android.hardware.SensorListener, param1: number): boolean;
 			public registerDynamicSensorCallback(param0: android.hardware.SensorManager.DynamicSensorCallback): void;
-			public unregisterListener(param0: android.hardware.SensorListener, param1: number): void;
 			public static getAngleChange(param0: native.Array<number>, param1: native.Array<number>, param2: native.Array<number>): void;
 			public unregisterListener(param0: android.hardware.SensorEventListener, param1: android.hardware.Sensor): void;
+			/** @deprecated */
+			public registerListener(param0: android.hardware.SensorListener, param1: number, param2: number): boolean;
 			public cancelTriggerSensor(param0: android.hardware.TriggerEventListener, param1: android.hardware.Sensor): boolean;
 			public static getQuaternionFromVector(param0: native.Array<number>, param1: native.Array<number>): void;
 			public getDynamicSensorList(param0: number): java.util.List<android.hardware.Sensor>;
 			public registerListener(param0: android.hardware.SensorEventListener, param1: android.hardware.Sensor, param2: number, param3: android.os.Handler): boolean;
 			public isDynamicSensorDiscoverySupported(): boolean;
-			public unregisterListener(param0: android.hardware.SensorListener): void;
 			public static getInclination(param0: native.Array<number>): number;
 			public static getAltitude(param0: number, param1: number): number;
 			public registerDynamicSensorCallback(param0: android.hardware.SensorManager.DynamicSensorCallback, param1: android.os.Handler): void;
@@ -19075,7 +19188,7 @@ declare module android {
 				public static FLASH_INFO_AVAILABLE: android.hardware.camera2.CameraCharacteristics.Key<java.lang.Boolean>;
 				public static HOT_PIXEL_AVAILABLE_HOT_PIXEL_MODES: android.hardware.camera2.CameraCharacteristics.Key<native.Array<number>>;
 				public static INFO_SUPPORTED_HARDWARE_LEVEL: android.hardware.camera2.CameraCharacteristics.Key<java.lang.Integer>;
-				public static JPEG_AVAILABLE_THUMBNAIL_SIZES: android.hardware.camera2.CameraCharacteristics.Key<native.Array<android.util.Size>>;
+				public static JPEG_AVAILABLE_THUMBNAIL_SIZES: android.hardware.camera2.CameraCharacteristics.Key<native.Array<any>>;
 				public static LENS_FACING: android.hardware.camera2.CameraCharacteristics.Key<java.lang.Integer>;
 				public static LENS_INFO_AVAILABLE_APERTURES: android.hardware.camera2.CameraCharacteristics.Key<native.Array<number>>;
 				public static LENS_INFO_AVAILABLE_FILTER_DENSITIES: android.hardware.camera2.CameraCharacteristics.Key<native.Array<number>>;
@@ -19113,8 +19226,8 @@ declare module android {
 				public static SENSOR_INFO_EXPOSURE_TIME_RANGE: android.hardware.camera2.CameraCharacteristics.Key<android.util.Range<java.lang.Long>>;
 				public static SENSOR_INFO_LENS_SHADING_APPLIED: android.hardware.camera2.CameraCharacteristics.Key<java.lang.Boolean>;
 				public static SENSOR_INFO_MAX_FRAME_DURATION: android.hardware.camera2.CameraCharacteristics.Key<java.lang.Long>;
-				public static SENSOR_INFO_PHYSICAL_SIZE: android.hardware.camera2.CameraCharacteristics.Key<android.util.SizeF>;
-				public static SENSOR_INFO_PIXEL_ARRAY_SIZE: android.hardware.camera2.CameraCharacteristics.Key<android.util.Size>;
+				public static SENSOR_INFO_PHYSICAL_SIZE: android.hardware.camera2.CameraCharacteristics.Key<any>;
+				public static SENSOR_INFO_PIXEL_ARRAY_SIZE: android.hardware.camera2.CameraCharacteristics.Key<any>;
 				public static SENSOR_INFO_PRE_CORRECTION_ACTIVE_ARRAY_SIZE: android.hardware.camera2.CameraCharacteristics.Key<android.graphics.Rect>;
 				public static SENSOR_INFO_SENSITIVITY_RANGE: android.hardware.camera2.CameraCharacteristics.Key<android.util.Range<java.lang.Integer>>;
 				public static SENSOR_INFO_TIMESTAMP_SOURCE: android.hardware.camera2.CameraCharacteristics.Key<java.lang.Integer>;
@@ -19493,7 +19606,7 @@ declare module android {
 				public static JPEG_ORIENTATION: android.hardware.camera2.CaptureRequest.Key<java.lang.Integer>;
 				public static JPEG_QUALITY: android.hardware.camera2.CaptureRequest.Key<java.lang.Byte>;
 				public static JPEG_THUMBNAIL_QUALITY: android.hardware.camera2.CaptureRequest.Key<java.lang.Byte>;
-				public static JPEG_THUMBNAIL_SIZE: android.hardware.camera2.CaptureRequest.Key<android.util.Size>;
+				public static JPEG_THUMBNAIL_SIZE: android.hardware.camera2.CaptureRequest.Key<any>;
 				public static LENS_APERTURE: android.hardware.camera2.CaptureRequest.Key<java.lang.Float>;
 				public static LENS_FILTER_DENSITY: android.hardware.camera2.CaptureRequest.Key<java.lang.Float>;
 				public static LENS_FOCAL_LENGTH: android.hardware.camera2.CaptureRequest.Key<java.lang.Float>;
@@ -19587,7 +19700,7 @@ declare module android {
 				public static JPEG_ORIENTATION: android.hardware.camera2.CaptureResult.Key<java.lang.Integer>;
 				public static JPEG_QUALITY: android.hardware.camera2.CaptureResult.Key<java.lang.Byte>;
 				public static JPEG_THUMBNAIL_QUALITY: android.hardware.camera2.CaptureResult.Key<java.lang.Byte>;
-				public static JPEG_THUMBNAIL_SIZE: android.hardware.camera2.CaptureResult.Key<android.util.Size>;
+				public static JPEG_THUMBNAIL_SIZE: android.hardware.camera2.CaptureResult.Key<any>;
 				public static LENS_APERTURE: android.hardware.camera2.CaptureResult.Key<java.lang.Float>;
 				public static LENS_FILTER_DENSITY: android.hardware.camera2.CaptureResult.Key<java.lang.Float>;
 				public static LENS_FOCAL_LENGTH: android.hardware.camera2.CaptureResult.Key<java.lang.Float>;
@@ -19656,14 +19769,14 @@ declare module android {
 				public setLocation(param0: android.location.Location): android.hardware.camera2.DngCreator;
 				public close(): void;
 				public writeImage(param0: java.io.OutputStream, param1: android.media.Image): void;
+				public writeByteBuffer(param0: java.io.OutputStream, param1: any, param2: java.nio.ByteBuffer, param3: number): void;
 				public constructor(param0: android.hardware.camera2.CameraCharacteristics, param1: android.hardware.camera2.CaptureResult);
-				public writeByteBuffer(param0: java.io.OutputStream, param1: android.util.Size, param2: java.nio.ByteBuffer, param3: number): void;
 				public setDescription(param0: string): android.hardware.camera2.DngCreator;
-				public writeInputStream(param0: java.io.OutputStream, param1: android.util.Size, param2: java.io.InputStream, param3: number): void;
 				public finalize(): void;
 				public setThumbnail(param0: android.media.Image): android.hardware.camera2.DngCreator;
 				public setOrientation(param0: number): android.hardware.camera2.DngCreator;
 				public setThumbnail(param0: android.graphics.Bitmap): android.hardware.camera2.DngCreator;
+				public writeInputStream(param0: java.io.OutputStream, param1: any, param2: java.io.InputStream, param3: number): void;
 			}
 		}
 	}
@@ -19790,21 +19903,21 @@ declare module android {
 					public static METERING_WEIGHT_DONT_CARE: number;
 					public static METERING_WEIGHT_MAX: number;
 					public static METERING_WEIGHT_MIN: number;
+					public constructor(param0: android.graphics.Point, param1: any, param2: number);
 					public equals(param0: android.hardware.camera2.params.MeteringRectangle): boolean;
 					public getX(): number;
 					public getHeight(): number;
 					public getUpperLeftPoint(): android.graphics.Point;
 					public getWidth(): number;
 					public constructor(param0: android.graphics.Rect, param1: number);
-					public constructor(param0: android.graphics.Point, param1: android.util.Size, param2: number);
 					public getY(): number;
 					public getMeteringWeight(): number;
 					public constructor(param0: number, param1: number, param2: number, param3: number, param4: number);
 					public equals(param0: any): boolean;
 					public getRect(): android.graphics.Rect;
 					public toString(): string;
+					public getSize(): any;
 					public hashCode(): number;
-					public getSize(): android.util.Size;
 				}
 			}
 		}
@@ -19867,26 +19980,26 @@ declare module android {
 				export class StreamConfigurationMap extends java.lang.Object {
 					public static class: java.lang.Class<android.hardware.camera2.params.StreamConfigurationMap>;
 					public getValidOutputFormatsForInput(param0: number): native.Array<number>;
-					public getOutputSizes(param0: number): native.Array<android.util.Size>;
-					public getOutputSizes(param0: java.lang.Class<any>): native.Array<android.util.Size>;
-					public getHighSpeedVideoSizes(): native.Array<android.util.Size>;
+					public getOutputSizes(param0: number): native.Array<any>;
+					public getInputSizes(param0: number): native.Array<any>;
 					public getOutputFormats(): native.Array<number>;
 					public isOutputSupportedFor(param0: number): boolean;
+					public getHighSpeedVideoSizesFor(param0: android.util.Range<java.lang.Integer>): native.Array<any>;
 					public getHighSpeedVideoFpsRanges(): native.Array<android.util.Range<java.lang.Integer>>;
 					public getInputFormats(): native.Array<number>;
 					public static isOutputSupportedFor(param0: java.lang.Class<any>): boolean;
-					public getOutputMinFrameDuration(param0: java.lang.Class<any>, param1: android.util.Size): number;
-					public getHighSpeedVideoFpsRangesFor(param0: android.util.Size): native.Array<android.util.Range<java.lang.Integer>>;
 					public equals(param0: any): boolean;
+					public getOutputMinFrameDuration(param0: number, param1: any): number;
+					public getOutputMinFrameDuration(param0: java.lang.Class<any>, param1: any): number;
 					public toString(): string;
-					public getOutputStallDuration(param0: number, param1: android.util.Size): number;
-					public getInputSizes(param0: number): native.Array<android.util.Size>;
-					public getHighResolutionOutputSizes(param0: number): native.Array<android.util.Size>;
-					public getOutputStallDuration(param0: java.lang.Class<any>, param1: android.util.Size): number;
+					public getHighSpeedVideoSizes(): native.Array<any>;
+					public getOutputStallDuration(param0: number, param1: any): number;
+					public getOutputSizes(param0: java.lang.Class<any>): native.Array<any>;
+					public getHighResolutionOutputSizes(param0: number): native.Array<any>;
 					public hashCode(): number;
-					public getHighSpeedVideoSizesFor(param0: android.util.Range<java.lang.Integer>): native.Array<android.util.Size>;
 					public isOutputSupportedFor(param0: android.view.Surface): boolean;
-					public getOutputMinFrameDuration(param0: number, param1: android.util.Size): number;
+					public getHighSpeedVideoFpsRangesFor(param0: any): native.Array<android.util.Range<java.lang.Integer>>;
+					public getOutputStallDuration(param0: java.lang.Class<any>, param1: any): number;
 				}
 			}
 		}
@@ -22484,6 +22597,8 @@ declare module android {
 				public getDateIntervalInfo(): android.icu.text.DateIntervalInfo;
 				public static getInstance(param0: string, param1: android.icu.util.ULocale): android.icu.text.DateIntervalFormat;
 				public format(param0: any): string;
+				/** @deprecated */
+				public parseObject(param0: string, param1: java.text.ParsePosition): any;
 				public format(param0: android.icu.util.Calendar, param1: android.icu.util.Calendar, param2: java.lang.StringBuffer, param3: java.text.FieldPosition): java.lang.StringBuffer;
 				public static getInstance(param0: string, param1: java.util.Locale): android.icu.text.DateIntervalFormat;
 				public format(param0: android.icu.util.DateInterval, param1: java.lang.StringBuffer, param2: java.text.FieldPosition): java.lang.StringBuffer;
@@ -24530,6 +24645,8 @@ declare module android {
 				public constructor(param0: number, param1: number, param2: number);
 				public getType(): string;
 				public handleGetExtendedYear(): number;
+				/** @deprecated */
+				public handleGetExtendedYear(): number;
 				public constructor(param0: java.util.Locale);
 				public constructor(param0: android.icu.util.ULocale);
 				public constructor(param0: java.util.Date);
@@ -25532,7 +25649,8 @@ declare module android {
 			public onEvaluateFullscreenMode(): boolean;
 			public onConfigureWindow(param0: android.view.Window, param1: boolean, param2: boolean): void;
 			public onCurrentInputMethodSubtypeChanged(param0: android.view.inputmethod.InputMethodSubtype): void;
-			public onUpdateCursor(param0: android.graphics.Rect): void;
+			/** @deprecated */
+			public enableHardwareAcceleration(): boolean;
 			public onCreate(): void;
 			public constructor();
 			public onFinishCandidatesView(param0: boolean): void;
@@ -25546,6 +25664,8 @@ declare module android {
 			public onShowInputRequested(param0: number, param1: boolean): boolean;
 			public onExtractedSelectionChanged(param0: number, param1: number): void;
 			public onFinishInput(): void;
+			/** @deprecated */
+			public onUpdateCursor(param0: android.graphics.Rect): void;
 			public onKeyMultiple(param0: number, param1: number, param2: android.view.KeyEvent): boolean;
 			public updateInputViewShown(): void;
 			public onUpdateCursorAnchorInfo(param0: android.view.inputmethod.CursorAnchorInfo): void;
@@ -25584,7 +25704,6 @@ declare module android {
 			public getCurrentInputStarted(): boolean;
 			public showStatusIcon(param0: number): void;
 			public constructor(param0: android.content.Context);
-			public enableHardwareAcceleration(): boolean;
 			public onEvaluateInputViewShown(): boolean;
 			public onDisplayCompletions(param0: native.Array<android.view.inputmethod.CompletionInfo>): void;
 			public isInputViewShown(): boolean;
@@ -26250,14 +26369,22 @@ declare module android {
 			public requestLocationUpdates(param0: string, param1: number, param2: number, param3: android.location.LocationListener): void;
 			public requestLocationUpdates(param0: string, param1: number, param2: number, param3: android.app.PendingIntent): void;
 			public addTestProvider(param0: string, param1: boolean, param2: boolean, param3: boolean, param4: boolean, param5: boolean, param6: boolean, param7: boolean, param8: number, param9: number): void;
+			/** @deprecated */
+			public getGpsStatus(param0: android.location.GpsStatus): android.location.GpsStatus;
+			/** @deprecated */
+			public removeGpsStatusListener(param0: android.location.GpsStatus.Listener): void;
 			public getBestProvider(param0: android.location.Criteria, param1: boolean): string;
 			public isProviderEnabled(param0: string): boolean;
+			/** @deprecated */
+			public addGpsStatusListener(param0: android.location.GpsStatus.Listener): boolean;
 			public setTestProviderStatus(param0: string, param1: number, param2: android.os.Bundle, param3: number): void;
 			public requestLocationUpdates(param0: number, param1: number, param2: android.location.Criteria, param3: android.app.PendingIntent): void;
 			public registerGnssNavigationMessageCallback(param0: android.location.GnssNavigationMessage.Callback, param1: android.os.Handler): boolean;
 			public getProvider(param0: string): android.location.LocationProvider;
 			public unregisterGnssMeasurementsCallback(param0: android.location.GnssMeasurementsEvent.Callback): void;
 			public addNmeaListener(param0: android.location.OnNmeaMessageListener, param1: android.os.Handler): boolean;
+			/** @deprecated */
+			public addNmeaListener(param0: android.location.GpsStatus.NmeaListener): boolean;
 			public getProviders(param0: boolean): java.util.List<string>;
 			public setTestProviderLocation(param0: string, param1: android.location.Location): void;
 			public requestSingleUpdate(param0: android.location.Criteria, param1: android.location.LocationListener, param2: android.os.Looper): void;
@@ -26266,26 +26393,23 @@ declare module android {
 			public removeNmeaListener(param0: android.location.OnNmeaMessageListener): void;
 			public requestSingleUpdate(param0: string, param1: android.location.LocationListener, param2: android.os.Looper): void;
 			public registerGnssMeasurementsCallback(param0: android.location.GnssMeasurementsEvent.Callback, param1: android.os.Handler): boolean;
-			public getGpsStatus(param0: android.location.GpsStatus): android.location.GpsStatus;
-			public addNmeaListener(param0: android.location.GpsStatus.NmeaListener): boolean;
 			public addProximityAlert(param0: number, param1: number, param2: number, param3: number, param4: android.app.PendingIntent): void;
 			public sendExtraCommand(param0: string, param1: string, param2: android.os.Bundle): boolean;
 			public removeProximityAlert(param0: android.app.PendingIntent): void;
 			public requestSingleUpdate(param0: string, param1: android.app.PendingIntent): void;
 			public clearTestProviderLocation(param0: string): void;
-			public removeGpsStatusListener(param0: android.location.GpsStatus.Listener): void;
 			public getAllProviders(): java.util.List<string>;
 			public getProviders(param0: android.location.Criteria, param1: boolean): java.util.List<string>;
 			public removeUpdates(param0: android.location.LocationListener): void;
+			/** @deprecated */
+			public removeNmeaListener(param0: android.location.GpsStatus.NmeaListener): void;
 			public requestLocationUpdates(param0: string, param1: number, param2: number, param3: android.location.LocationListener, param4: android.os.Looper): void;
-			public addGpsStatusListener(param0: android.location.GpsStatus.Listener): boolean;
 			public registerGnssStatusCallback(param0: android.location.GnssStatus.Callback): boolean;
 			public unregisterGnssStatusCallback(param0: android.location.GnssStatus.Callback): void;
 			public clearTestProviderEnabled(param0: string): void;
 			public removeUpdates(param0: android.app.PendingIntent): void;
 			public removeTestProvider(param0: string): void;
 			public registerGnssMeasurementsCallback(param0: android.location.GnssMeasurementsEvent.Callback): boolean;
-			public removeNmeaListener(param0: android.location.GpsStatus.NmeaListener): void;
 		}
 	}
 }
@@ -26339,12 +26463,15 @@ declare module android {
 			public onTrimMemory(param0: number): void;
 			public onBind(param0: android.content.Intent): android.os.IBinder;
 			public constructor(param0: android.content.Context);
+			/** @deprecated */
 			public onGetSummary(): string;
 			public onGetEnabled(): boolean;
 			public constructor();
 			public onStartCommand(param0: android.content.Intent, param1: number, param2: number): number;
 			public onStart(param0: android.content.Intent, param1: number): void;
 			public constructor(param0: string);
+			/** @deprecated */
+			public onStart(param0: android.content.Intent, param1: number): void;
 		}
 	}
 }
@@ -26354,8 +26481,9 @@ declare module android {
 		export class AsyncPlayer extends java.lang.Object {
 			public static class: java.lang.Class<android.media.AsyncPlayer>;
 			public play(param0: android.content.Context, param1: android.net.Uri, param2: boolean, param3: any): void;
-			public stop(): void;
+			/** @deprecated */
 			public play(param0: android.content.Context, param1: android.net.Uri, param2: boolean, param3: number): void;
+			public stop(): void;
 			public constructor(param0: string);
 		}
 	}
@@ -26642,64 +26770,82 @@ declare module android {
 			public static VIBRATE_SETTING_ONLY_SILENT: number;
 			public static VIBRATE_TYPE_NOTIFICATION: number;
 			public static VIBRATE_TYPE_RINGER: number;
-			public registerRemoteControlClient(param0: android.media.RemoteControlClient): void;
+			/** @deprecated */
+			public getVibrateSetting(param0: number): number;
+			/** @deprecated */
+			public unregisterMediaButtonEventReceiver(param0: android.app.PendingIntent): void;
+			/** @deprecated */
+			public shouldVibrate(param0: number): boolean;
+			/** @deprecated */
+			public unregisterRemoteController(param0: android.media.RemoteController): void;
+			/** @deprecated */
+			public registerMediaButtonEventReceiver(param0: android.content.ComponentName): void;
 			public startBluetoothSco(): void;
+			/** @deprecated */
+			public unregisterMediaButtonEventReceiver(param0: android.content.ComponentName): void;
 			public setStreamVolume(param0: number, param1: number, param2: number): void;
 			public unloadSoundEffects(): void;
+			/** @deprecated */
+			public unregisterRemoteControlClient(param0: android.media.RemoteControlClient): void;
+			/** @deprecated */
+			public setStreamSolo(param0: number, param1: boolean): void;
 			public isBluetoothScoOn(): boolean;
 			public playSoundEffect(param0: number, param1: number): void;
 			public getDevices(param0: number): native.Array<android.media.AudioDeviceInfo>;
 			public setParameters(param0: string): void;
 			public isBluetoothScoAvailableOffCall(): boolean;
-			public isWiredHeadsetOn(): boolean;
-			public stopBluetoothSco(): void;
-			public registerMediaButtonEventReceiver(param0: android.content.ComponentName): void;
+			/** @deprecated */
 			public registerRemoteController(param0: android.media.RemoteController): boolean;
+			public stopBluetoothSco(): void;
 			public isMusicActive(): boolean;
-			public setVibrateSetting(param0: number, param1: number): void;
+			/** @deprecated */
+			public setStreamMute(param0: number, param1: boolean): void;
 			public setMode(param0: number): void;
 			public generateAudioSessionId(): number;
 			public getStreamMaxVolume(param0: number): number;
-			public getVibrateSetting(param0: number): number;
 			public adjustSuggestedStreamVolume(param0: number, param1: number, param2: number): void;
 			public getProperty(param0: string): string;
+			/** @deprecated */
 			public registerMediaButtonEventReceiver(param0: android.app.PendingIntent): void;
 			public getMode(): number;
 			public requestAudioFocus(param0: android.media.AudioManager.OnAudioFocusChangeListener, param1: number, param2: number): number;
 			public isSpeakerphoneOn(): boolean;
-			public unregisterRemoteController(param0: android.media.RemoteController): void;
+			/** @deprecated */
+			public registerRemoteControlClient(param0: android.media.RemoteControlClient): void;
+			/** @deprecated */
+			public setBluetoothA2dpOn(param0: boolean): void;
 			public isMicrophoneMute(): boolean;
 			public isStreamMute(param0: number): boolean;
 			public loadSoundEffects(): void;
-			public setStreamSolo(param0: number, param1: boolean): void;
 			public adjustStreamVolume(param0: number, param1: number, param2: number): void;
 			public unregisterAudioDeviceCallback(param0: android.media.AudioDeviceCallback): void;
 			public getActiveRecordingConfigurations(): java.util.List<android.media.AudioRecordingConfiguration>;
 			public isVolumeFixed(): boolean;
-			public shouldVibrate(param0: number): boolean;
 			public registerAudioRecordingCallback(param0: android.media.AudioManager.AudioRecordingCallback, param1: android.os.Handler): void;
 			public registerAudioDeviceCallback(param0: android.media.AudioDeviceCallback, param1: android.os.Handler): void;
 			public playSoundEffect(param0: number): void;
-			public setWiredHeadsetOn(param0: boolean): void;
+			/** @deprecated */
+			public setVibrateSetting(param0: number, param1: number): void;
 			public setBluetoothScoOn(param0: boolean): void;
-			public unregisterRemoteControlClient(param0: android.media.RemoteControlClient): void;
 			public isBluetoothA2dpOn(): boolean;
+			/** @deprecated */
+			public setWiredHeadsetOn(param0: boolean): void;
 			public getParameters(param0: string): string;
 			public getRingerMode(): number;
 			public adjustVolume(param0: number, param1: number): void;
-			public setBluetoothA2dpOn(param0: boolean): void;
-			public setRouting(param0: number, param1: number, param2: number): void;
+			/** @deprecated */
+			public isWiredHeadsetOn(): boolean;
 			public unregisterAudioRecordingCallback(param0: android.media.AudioManager.AudioRecordingCallback): void;
+			/** @deprecated */
+			public setRouting(param0: number, param1: number, param2: number): void;
 			public setRingerMode(param0: number): void;
-			public unregisterMediaButtonEventReceiver(param0: android.content.ComponentName): void;
-			public setStreamMute(param0: number, param1: boolean): void;
 			public setSpeakerphoneOn(param0: boolean): void;
 			public dispatchMediaKeyEvent(param0: android.view.KeyEvent): void;
-			public unregisterMediaButtonEventReceiver(param0: android.app.PendingIntent): void;
 			public setMicrophoneMute(param0: boolean): void;
 			public abandonAudioFocus(param0: android.media.AudioManager.OnAudioFocusChangeListener): number;
-			public getStreamVolume(param0: number): number;
+			/** @deprecated */
 			public getRouting(param0: number): number;
+			public getStreamVolume(param0: number): number;
 		}
 		export module AudioManager {
 			export abstract class AudioRecordingCallback extends java.lang.Object {
@@ -26738,16 +26884,18 @@ declare module android {
 			public static STATE_UNINITIALIZED: number;
 			public static SUCCESS: number;
 			public getSampleRate(): number;
+			/** @deprecated */
+			public addOnRoutingChangedListener(param0: android.media.AudioRecord.OnRoutingChangedListener, param1: android.os.Handler): void;
 			public startRecording(param0: android.media.MediaSyncEvent): void;
 			public read(param0: java.nio.ByteBuffer, param1: number): number;
 			public getRoutedDevice(): android.media.AudioDeviceInfo;
-			public addOnRoutingChangedListener(param0: android.media.AudioRecord.OnRoutingChangedListener, param1: android.os.Handler): void;
+			/** @deprecated */
+			public removeOnRoutingChangedListener(param0: android.media.AudioRecord.OnRoutingChangedListener): void;
 			public setPreferredDevice(param0: android.media.AudioDeviceInfo): boolean;
 			public read(param0: java.nio.ByteBuffer, param1: number, param2: number): number;
 			public setRecordPositionUpdateListener(param0: android.media.AudioRecord.OnRecordPositionUpdateListener): void;
 			public static getMinBufferSize(param0: number, param1: number, param2: number): number;
 			public read(param0: native.Array<number>, param1: number, param2: number, param3: number): number;
-			public removeOnRoutingChangedListener(param0: android.media.AudioRecord.OnRoutingChangedListener): void;
 			public constructor(param0: number, param1: number, param2: number, param3: number, param4: number);
 			public stop(): void;
 			public getAudioFormat(): number;
@@ -26901,15 +27049,17 @@ declare module android {
 			public static WRITE_BLOCKING: number;
 			public static WRITE_NON_BLOCKING: number;
 			public setBufferSizeInFrames(param0: number): number;
-			public setState(param0: number): void;
 			public getTimestamp(param0: android.media.AudioTimestamp): boolean;
 			public setVolume(param0: number): number;
-			public addOnRoutingChangedListener(param0: android.media.AudioTrack.OnRoutingChangedListener, param1: android.os.Handler): void;
 			public setAuxEffectSendLevel(param0: number): number;
 			public static getMinBufferSize(param0: number, param1: number, param2: number): number;
 			public getPlaybackRate(): number;
 			public stop(): void;
+			/** @deprecated */
+			public setState(param0: number): void;
 			public play(): void;
+			/** @deprecated */
+			public removeOnRoutingChangedListener(param0: android.media.AudioTrack.OnRoutingChangedListener): void;
 			public write(param0: java.nio.ByteBuffer, param1: number, param2: number): number;
 			public getPlaybackParams(): android.media.PlaybackParams;
 			public getState(): number;
@@ -26919,7 +27069,11 @@ declare module android {
 			public getBufferSizeInFrames(): number;
 			public setPlaybackPositionUpdateListener(param0: android.media.AudioTrack.OnPlaybackPositionUpdateListener): void;
 			public addOnRoutingChangedListener(param0: android.media.AudioRouting.OnRoutingChangedListener, param1: android.os.Handler): void;
+			/** @deprecated */
+			public addOnRoutingChangedListener(param0: android.media.AudioTrack.OnRoutingChangedListener, param1: android.os.Handler): void;
 			public static getNativeOutputSampleRate(param0: number): number;
+			/** @deprecated */
+			public setStereoVolume(param0: number, param1: number): number;
 			public reloadStaticData(): number;
 			public static getMaxVolume(): number;
 			public setPlaybackParams(param0: android.media.PlaybackParams): void;
@@ -26929,20 +27083,19 @@ declare module android {
 			public static getMinVolume(): number;
 			public getPlayState(): number;
 			public getSampleRate(): number;
+			/** @deprecated */
+			public getNativeFrameCount(): number;
 			public attachAuxEffect(param0: number): number;
 			public setPlaybackPositionUpdateListener(param0: android.media.AudioTrack.OnPlaybackPositionUpdateListener, param1: android.os.Handler): void;
 			public setPlaybackHeadPosition(param0: number): number;
 			public getRoutedDevice(): android.media.AudioDeviceInfo;
 			public setPreferredDevice(param0: android.media.AudioDeviceInfo): boolean;
 			public getStreamType(): number;
-			public removeOnRoutingChangedListener(param0: android.media.AudioTrack.OnRoutingChangedListener): void;
 			public pause(): void;
-			public setStereoVolume(param0: number, param1: number): number;
 			public getAudioFormat(): number;
 			public release(): void;
 			public finalize(): void;
 			public setNotificationMarkerPosition(param0: number): number;
-			public getNativeFrameCount(): number;
 			public getBufferCapacityInFrames(): number;
 			public setLoopPoints(param0: number, param1: number, param2: number): number;
 			public getPlaybackHeadPosition(): number;
@@ -27454,8 +27607,12 @@ declare module android {
 			public getInputBuffer(param0: number): java.nio.ByteBuffer;
 			public getInputFormat(): android.media.MediaFormat;
 			public getOutputFormat(param0: number): android.media.MediaFormat;
+			/** @deprecated */
+			public getInputBuffers(): native.Array<java.nio.ByteBuffer>;
 			public setCallback(param0: android.media.MediaCodec.Callback, param1: android.os.Handler): void;
 			public stop(): void;
+			/** @deprecated */
+			public getOutputBuffers(): native.Array<java.nio.ByteBuffer>;
 			public static createDecoderByType(param0: string): android.media.MediaCodec;
 			public reset(): void;
 			public setOnFrameRenderedListener(param0: android.media.MediaCodec.OnFrameRenderedListener, param1: android.os.Handler): void;
@@ -27468,10 +27625,8 @@ declare module android {
 			public flush(): void;
 			public setParameters(param0: android.os.Bundle): void;
 			public queueSecureInputBuffer(param0: number, param1: number, param2: android.media.MediaCodec.CryptoInfo, param3: number, param4: number): void;
-			public getInputBuffers(): native.Array<java.nio.ByteBuffer>;
 			public setVideoScalingMode(param0: number): void;
 			public dequeueInputBuffer(param0: number): number;
-			public getOutputBuffers(): native.Array<java.nio.ByteBuffer>;
 			public getName(): string;
 			public static createEncoderByType(param0: string): android.media.MediaCodec;
 			public getCodecInfo(): android.media.MediaCodecInfo;
@@ -27848,12 +28003,14 @@ declare module android {
 			public static class: java.lang.Class<android.media.MediaCodecList>;
 			public static ALL_CODECS: number;
 			public static REGULAR_CODECS: number;
-			public static getCodecCount(): number;
 			public getCodecInfos(): native.Array<android.media.MediaCodecInfo>;
-			public static getCodecInfoAt(param0: number): android.media.MediaCodecInfo;
 			public findDecoderForFormat(param0: android.media.MediaFormat): string;
 			public findEncoderForFormat(param0: android.media.MediaFormat): string;
 			public constructor(param0: number);
+			/** @deprecated */
+			public static getCodecInfoAt(param0: number): android.media.MediaCodecInfo;
+			/** @deprecated */
+			public static getCodecCount(): number;
 		}
 	}
 }
@@ -28623,10 +28780,11 @@ declare module android {
 			public setAudioSource(param0: number): void;
 			public setAudioSamplingRate(param0: number): void;
 			public setProfile(param0: android.media.CamcorderProfile): void;
+			/** @deprecated */
+			public setCamera(param0: android.hardware.Camera): void;
 			public setOrientationHint(param0: number): void;
 			public setOnErrorListener(param0: android.media.MediaRecorder.OnErrorListener): void;
 			public constructor();
-			public setCamera(param0: android.hardware.Camera): void;
 			public getSurface(): android.view.Surface;
 			public setLocation(param0: number, param1: number): void;
 			public static getAudioSourceMax(): number;
@@ -29171,11 +29329,13 @@ declare module android {
 	export module media {
 		export class Ringtone extends java.lang.Object {
 			public static class: java.lang.Class<android.media.Ringtone>;
+			/** @deprecated */
+			public getStreamType(): number;
+			/** @deprecated */
+			public setStreamType(param0: number): void;
 			public getTitle(param0: android.content.Context): string;
 			public stop(): void;
 			public setAudioAttributes(param0: any): void;
-			public setStreamType(param0: number): void;
-			public getStreamType(): number;
 			public play(): void;
 			public getAudioAttributes(): any;
 			public isPlaying(): boolean;
@@ -29208,10 +29368,13 @@ declare module android {
 			public inferStreamType(): number;
 			public static isDefault(param0: android.net.Uri): boolean;
 			public getRingtoneUri(param0: number): android.net.Uri;
-			public setIncludeDrm(param0: boolean): void;
 			public setType(param0: number): void;
+			/** @deprecated */
+			public getIncludeDrm(): boolean;
 			public static getRingtone(param0: android.content.Context, param1: android.net.Uri): android.media.Ringtone;
 			public constructor(param0: android.app.Activity);
+			/** @deprecated */
+			public setIncludeDrm(param0: boolean): void;
 			public getRingtone(param0: number): android.media.Ringtone;
 			public stopPreviousRingtone(): void;
 			public getCursor(): android.database.Cursor;
@@ -29221,7 +29384,6 @@ declare module android {
 			public static getDefaultType(param0: android.net.Uri): number;
 			public static getDefaultUri(param0: number): android.net.Uri;
 			public static setActualDefaultRingtoneUri(param0: android.content.Context, param1: number, param2: android.net.Uri): void;
-			public getIncludeDrm(): boolean;
 			public static getActualDefaultRingtoneUri(param0: android.content.Context, param1: number): android.net.Uri;
 			public static getValidRingtoneUri(param0: android.content.Context): android.net.Uri;
 		}
@@ -29232,7 +29394,6 @@ declare module android {
 	export module media {
 		export class SoundPool extends java.lang.Object {
 			public static class: java.lang.Class<android.media.SoundPool>;
-			public constructor(param0: number, param1: number, param2: number);
 			public play(param0: number, param1: number, param2: number, param3: number, param4: number, param5: number): number;
 			public setVolume(param0: number, param1: number, param2: number): void;
 			public setRate(param0: number, param1: number): void;
@@ -29242,6 +29403,8 @@ declare module android {
 			public setPriority(param0: number, param1: number): void;
 			public load(param0: string, param1: number): number;
 			public autoPause(): void;
+			/** @deprecated */
+			public constructor(param0: number, param1: number, param2: number);
 			public load(param0: java.io.FileDescriptor, param1: number, param2: number, param3: number): number;
 			public resume(param0: number): void;
 			public pause(param0: number): void;
@@ -29937,68 +30100,6 @@ declare module android {
 	}
 }
 
-declare module android {
-	export module media {
-		export module browse {
-			export class MediaBrowser extends java.lang.Object {
-				public static class: java.lang.Class<any>;
-				public static EXTRA_PAGE: string;
-				public static EXTRA_PAGE_SIZE: string;
-				public unsubscribe(param0: string, param1: any): void;
-				public subscribe(param0: string, param1: android.os.Bundle, param2: any): void;
-				public getItem(param0: string, param1: any): void;
-				public unsubscribe(param0: string): void;
-				public subscribe(param0: string, param1: any): void;
-				public isConnected(): boolean;
-				public getRoot(): string;
-				public connect(): void;
-				public getServiceComponent(): android.content.ComponentName;
-				public disconnect(): void;
-				public getExtras(): android.os.Bundle;
-				public constructor(param0: android.content.Context, param1: android.content.ComponentName, param2: any, param3: android.os.Bundle);
-				public getSessionToken(): any;
-			}
-			export module MediaBrowser {
-				export class ConnectionCallback extends java.lang.Object {
-					public static class: java.lang.Class<any>;
-					public onConnected(): void;
-					public onConnectionFailed(): void;
-					public constructor();
-					public onConnectionSuspended(): void;
-				}
-				export abstract class ItemCallback extends java.lang.Object {
-					public static class: java.lang.Class<any>;
-					public onItemLoaded(param0: any): void;
-					public constructor();
-					public onError(param0: string): void;
-				}
-				export class MediaItem extends java.lang.Object implements android.os.Parcelable {
-					public static class: java.lang.Class<any>;
-					public static CREATOR: android.os.Parcelable.Creator<any>;
-					public static FLAG_BROWSABLE: number;
-					public static FLAG_PLAYABLE: number;
-					public toString(): string;
-					public isBrowsable(): boolean;
-					public getFlags(): number;
-					public getDescription(): android.media.MediaDescription;
-					public describeContents(): number;
-					public isPlayable(): boolean;
-					public constructor(param0: android.media.MediaDescription, param1: number);
-					public getMediaId(): string;
-					public writeToParcel(param0: android.os.Parcel, param1: number): void;
-				}
-				export abstract class SubscriptionCallback extends java.lang.Object {
-					public static class: java.lang.Class<any>;
-					public onError(param0: string, param1: android.os.Bundle): void;
-					public onChildrenLoaded(param0: string, param1: java.util.List<any>): void;
-					public constructor();
-					public onError(param0: string): void;
-					public onChildrenLoaded(param0: string, param1: java.util.List<any>, param2: android.os.Bundle): void;
-				}
-			}
-		}
-	}
-}
 
 declare module android {
 	export module media {
@@ -30322,276 +30423,9 @@ declare module android {
 	}
 }
 
-declare module android {
-	export module media {
-		export module session {
-			export class MediaController extends java.lang.Object {
-				public static class: java.lang.Class<any>;
-				public getPlaybackInfo(): any;
-				public getRatingType(): number;
-				public getPackageName(): string;
-				public registerCallback(param0: any): void;
-				public getMetadata(): any;
-				public adjustVolume(param0: number, param1: number): void;
-				public sendCommand(param0: string, param1: android.os.Bundle, param2: android.os.ResultReceiver): void;
-				public getTransportControls(): any;
-				public registerCallback(param0: any, param1: android.os.Handler): void;
-				public unregisterCallback(param0: any): void;
-				public dispatchMediaButtonEvent(param0: android.view.KeyEvent): boolean;
-				public getQueue(): java.util.List<any>;
-				public getPlaybackState(): any;
-				public getQueueTitle(): string;
-				public getFlags(): number;
-				public setVolumeTo(param0: number, param1: number): void;
-				public getExtras(): android.os.Bundle;
-				public constructor(param0: android.content.Context, param1: any);
-				public getSessionToken(): any;
-				public getSessionActivity(): android.app.PendingIntent;
-			}
-			export module MediaController {
-				export abstract class Callback extends java.lang.Object {
-					public static class: java.lang.Class<any>;
-					public onSessionDestroyed(): void;
-					public onQueueTitleChanged(param0: string): void;
-					public onMetadataChanged(param0: any): void;
-					public constructor();
-					public onPlaybackStateChanged(param0: any): void;
-					public onSessionEvent(param0: string, param1: android.os.Bundle): void;
-					public onQueueChanged(param0: java.util.List<any>): void;
-					public onAudioInfoChanged(param0: any): void;
-					public onExtrasChanged(param0: android.os.Bundle): void;
-				}
-				export class PlaybackInfo extends java.lang.Object {
-					public static class: java.lang.Class<any>;
-					public static PLAYBACK_TYPE_LOCAL: number;
-					public static PLAYBACK_TYPE_REMOTE: number;
-					public getAudioAttributes(): any;
-					public getMaxVolume(): number;
-					public getVolumeControl(): number;
-					public getPlaybackType(): number;
-					public getCurrentVolume(): number;
-				}
-				export class TransportControls extends java.lang.Object {
-					public static class: java.lang.Class<any>;
-					public playFromUri(param0: android.net.Uri, param1: android.os.Bundle): void;
-					public playFromMediaId(param0: string, param1: android.os.Bundle): void;
-					public fastForward(): void;
-					public setRating(param0: any): void;
-					public skipToQueueItem(param0: number): void;
-					public skipToNext(): void;
-					public prepareFromUri(param0: android.net.Uri, param1: android.os.Bundle): void;
-					public rewind(): void;
-					public seekTo(param0: number): void;
-					public skipToPrevious(): void;
-					public pause(): void;
-					public prepareFromSearch(param0: string, param1: android.os.Bundle): void;
-					public stop(): void;
-					public sendCustomAction(param0: any, param1: android.os.Bundle): void;
-					public prepareFromMediaId(param0: string, param1: android.os.Bundle): void;
-					public play(): void;
-					public sendCustomAction(param0: string, param1: android.os.Bundle): void;
-					public playFromSearch(param0: string, param1: android.os.Bundle): void;
-					public prepare(): void;
-				}
-			}
-		}
-	}
-}
 
-declare module android {
-	export module media {
-		export module session {
-			export class MediaSession extends java.lang.Object {
-				public static class: java.lang.Class<any>;
-				public static FLAG_HANDLES_MEDIA_BUTTONS: number;
-				public static FLAG_HANDLES_TRANSPORT_CONTROLS: number;
-				public setMetadata(param0: any): void;
-				public getController(): any;
-				public release(): void;
-				public setPlaybackState(param0: any): void;
-				public setPlaybackToLocal(param0: any): void;
-				public setCallback(param0: any, param1: android.os.Handler): void;
-				public setRatingType(param0: number): void;
-				public setMediaButtonReceiver(param0: android.app.PendingIntent): void;
-				public setActive(param0: boolean): void;
-				public setFlags(param0: number): void;
-				public setQueue(param0: java.util.List<any>): void;
-				public setSessionActivity(param0: android.app.PendingIntent): void;
-				public setCallback(param0: any): void;
-				public setExtras(param0: android.os.Bundle): void;
-				public sendSessionEvent(param0: string, param1: android.os.Bundle): void;
-				public setQueueTitle(param0: string): void;
-				public setPlaybackToRemote(param0: android.media.VolumeProvider): void;
-				public isActive(): boolean;
-				public getSessionToken(): any;
-				public constructor(param0: android.content.Context, param1: string);
-			}
-			export module MediaSession {
-				export abstract class Callback extends java.lang.Object {
-					public static class: java.lang.Class<any>;
-					public onSkipToPrevious(): void;
-					public onCustomAction(param0: string, param1: android.os.Bundle): void;
-					public onPlayFromSearch(param0: string, param1: android.os.Bundle): void;
-					public onRewind(): void;
-					public onSkipToNext(): void;
-					public onPrepareFromSearch(param0: string, param1: android.os.Bundle): void;
-					public onSetRating(param0: any): void;
-					public onPrepare(): void;
-					public onPlayFromMediaId(param0: string, param1: android.os.Bundle): void;
-					public onPrepareFromUri(param0: android.net.Uri, param1: android.os.Bundle): void;
-					public onPrepareFromMediaId(param0: string, param1: android.os.Bundle): void;
-					public constructor();
-					public onCommand(param0: string, param1: android.os.Bundle, param2: android.os.ResultReceiver): void;
-					public onPlay(): void;
-					public onPause(): void;
-					public onSeekTo(param0: number): void;
-					public onMediaButtonEvent(param0: android.content.Intent): boolean;
-					public onPlayFromUri(param0: android.net.Uri, param1: android.os.Bundle): void;
-					public onStop(): void;
-					public onFastForward(): void;
-					public onSkipToQueueItem(param0: number): void;
-				}
-				export class QueueItem extends java.lang.Object implements android.os.Parcelable {
-					public static class: java.lang.Class<any>;
-					public static CREATOR: android.os.Parcelable.Creator<any>;
-					public static UNKNOWN_ID: number;
-					public getQueueId(): number;
-					public toString(): string;
-					public getDescription(): android.media.MediaDescription;
-					public describeContents(): number;
-					public constructor(param0: android.media.MediaDescription, param1: number);
-					public writeToParcel(param0: android.os.Parcel, param1: number): void;
-				}
-				export class Token extends java.lang.Object implements android.os.Parcelable {
-					public static class: java.lang.Class<any>;
-					public static CREATOR: android.os.Parcelable.Creator<any>;
-					public equals(param0: any): boolean;
-					public describeContents(): number;
-					public hashCode(): number;
-					public writeToParcel(param0: android.os.Parcel, param1: number): void;
-				}
-			}
-		}
-	}
-}
 
-declare module android {
-	export module media {
-		export module session {
-			export class MediaSessionManager extends java.lang.Object {
-				public static class: java.lang.Class<any>;
-				public getActiveSessions(param0: android.content.ComponentName): java.util.List<any>;
-				public removeOnActiveSessionsChangedListener(param0: any): void;
-				public addOnActiveSessionsChangedListener(param0: any, param1: android.content.ComponentName, param2: android.os.Handler): void;
-				public addOnActiveSessionsChangedListener(param0: any, param1: android.content.ComponentName): void;
-			}
-			export module MediaSessionManager {
-				export class OnActiveSessionsChangedListener extends java.lang.Object {
-					public static class: java.lang.Class<any>;
-					/**
-					 * Constructs a new instance of the any$OnActiveSessionsChangedListener interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
-					 */
-					public constructor(implementation: {
-						onActiveSessionsChanged(param0: java.util.List<any>): void;
-					});
-					public constructor();
-					public onActiveSessionsChanged(param0: java.util.List<any>): void;
-				}
-			}
-		}
-	}
-}
 
-declare module android {
-	export module media {
-		export module session {
-			export class PlaybackState extends java.lang.Object implements android.os.Parcelable {
-				public static class: java.lang.Class<any>;
-				public static ACTION_FAST_FORWARD: number;
-				public static ACTION_PAUSE: number;
-				public static ACTION_PLAY: number;
-				public static ACTION_PLAY_FROM_MEDIA_ID: number;
-				public static ACTION_PLAY_FROM_SEARCH: number;
-				public static ACTION_PLAY_FROM_URI: number;
-				public static ACTION_PLAY_PAUSE: number;
-				public static ACTION_PREPARE: number;
-				public static ACTION_PREPARE_FROM_MEDIA_ID: number;
-				public static ACTION_PREPARE_FROM_SEARCH: number;
-				public static ACTION_PREPARE_FROM_URI: number;
-				public static ACTION_REWIND: number;
-				public static ACTION_SEEK_TO: number;
-				public static ACTION_SET_RATING: number;
-				public static ACTION_SKIP_TO_NEXT: number;
-				public static ACTION_SKIP_TO_PREVIOUS: number;
-				public static ACTION_SKIP_TO_QUEUE_ITEM: number;
-				public static ACTION_STOP: number;
-				public static CREATOR: android.os.Parcelable.Creator<any>;
-				public static PLAYBACK_POSITION_UNKNOWN: number;
-				public static STATE_BUFFERING: number;
-				public static STATE_CONNECTING: number;
-				public static STATE_ERROR: number;
-				public static STATE_FAST_FORWARDING: number;
-				public static STATE_NONE: number;
-				public static STATE_PAUSED: number;
-				public static STATE_PLAYING: number;
-				public static STATE_REWINDING: number;
-				public static STATE_SKIPPING_TO_NEXT: number;
-				public static STATE_SKIPPING_TO_PREVIOUS: number;
-				public static STATE_SKIPPING_TO_QUEUE_ITEM: number;
-				public static STATE_STOPPED: number;
-				public getPlaybackSpeed(): number;
-				public getCustomActions(): java.util.List<any>;
-				public writeToParcel(param0: android.os.Parcel, param1: number): void;
-				public getPosition(): number;
-				public toString(): string;
-				public getErrorMessage(): string;
-				public getState(): number;
-				public describeContents(): number;
-				public getActions(): number;
-				public getBufferedPosition(): number;
-				public getLastPositionUpdateTime(): number;
-				public getExtras(): android.os.Bundle;
-				public getActiveQueueItemId(): number;
-			}
-			export module PlaybackState {
-				export class Builder extends java.lang.Object {
-					public static class: java.lang.Class<any>;
-					public addCustomAction(param0: string, param1: string, param2: number): any;
-					public setExtras(param0: android.os.Bundle): any;
-					public constructor(param0: any);
-					public constructor();
-					public setActiveQueueItemId(param0: number): any;
-					public addCustomAction(param0: any): any;
-					public setErrorMessage(param0: string): any;
-					public build(): any;
-					public setState(param0: number, param1: number, param2: number): any;
-					public setActions(param0: number): any;
-					public setState(param0: number, param1: number, param2: number, param3: number): any;
-					public setBufferedPosition(param0: number): any;
-				}
-				export class CustomAction extends java.lang.Object implements android.os.Parcelable {
-					public static class: java.lang.Class<any>;
-					public static CREATOR: android.os.Parcelable.Creator<any>;
-					public getIcon(): number;
-					public toString(): string;
-					public getName(): string;
-					public describeContents(): number;
-					public getExtras(): android.os.Bundle;
-					public getAction(): string;
-					public writeToParcel(param0: android.os.Parcel, param1: number): void;
-				}
-				export module CustomAction {
-					export class Builder extends java.lang.Object {
-						public static class: java.lang.Class<any>;
-						public setExtras(param0: android.os.Bundle): any;
-						public constructor(param0: string, param1: string, param2: number);
-						public build(): any;
-					}
-				}
-			}
-		}
-	}
-}
 
 declare module android {
 	export module media {
@@ -31126,6 +30960,8 @@ declare module android {
 				public onNestedScrollAccepted(param0: android.view.View, param1: android.view.View, param2: number): void;
 				public notifySubtreeAccessibilityStateChanged(param0: android.view.View, param1: android.view.View, param2: number): void;
 				public selectTrack(param0: number, param1: string): void;
+				/** @deprecated */
+				public requestFitSystemWindows(): void;
 				public getParentForAccessibility(): android.view.ViewParent;
 				public draw(param0: android.graphics.Canvas): void;
 				public bringChildToFront(param0: android.view.View): void;
@@ -31551,40 +31387,52 @@ declare module android {
 			public static TYPE_WIFI: number;
 			public static TYPE_WIMAX: number;
 			public getRestrictBackgroundStatus(): number;
-			public getNetworkInfo(param0: number): android.net.NetworkInfo;
-			public static isNetworkTypeValid(param0: number): boolean;
-			public getDefaultProxy(): android.net.ProxyInfo;
-			public getAllNetworks(): native.Array<android.net.Network>;
-			public static setProcessDefaultNetwork(param0: android.net.Network): boolean;
-			public requestNetwork(param0: android.net.NetworkRequest, param1: android.net.ConnectivityManager.NetworkCallback): void;
-			public getNetworkPreference(): number;
-			public stopUsingNetworkFeature(param0: number, param1: string): number;
-			public requestRouteToHost(param0: number, param1: number): boolean;
-			public getActiveNetworkInfo(): android.net.NetworkInfo;
-			public registerDefaultNetworkCallback(param0: android.net.ConnectivityManager.NetworkCallback): void;
-			public reportBadNetwork(param0: android.net.Network): void;
-			public releaseNetworkRequest(param0: android.app.PendingIntent): void;
-			public getBackgroundDataSetting(): boolean;
+			/** @deprecated */
 			public startUsingNetworkFeature(param0: number, param1: string): number;
+			/** @deprecated */
+			public static setProcessDefaultNetwork(param0: android.net.Network): boolean;
+			public getDefaultProxy(): android.net.ProxyInfo;
+			/** @deprecated */
+			public getNetworkPreference(): number;
+			public getAllNetworks(): native.Array<android.net.Network>;
+			public requestNetwork(param0: android.net.NetworkRequest, param1: android.net.ConnectivityManager.NetworkCallback): void;
+			/** @deprecated */
+			public static isNetworkTypeValid(param0: number): boolean;
+			public getActiveNetworkInfo(): android.net.NetworkInfo;
+			/** @deprecated */
+			public stopUsingNetworkFeature(param0: number, param1: string): number;
+			/** @deprecated */
+			public getNetworkInfo(param0: number): android.net.NetworkInfo;
+			public registerDefaultNetworkCallback(param0: android.net.ConnectivityManager.NetworkCallback): void;
+			public releaseNetworkRequest(param0: android.app.PendingIntent): void;
 			public getLinkProperties(param0: android.net.Network): android.net.LinkProperties;
 			public getNetworkCapabilities(param0: android.net.Network): android.net.NetworkCapabilities;
+			/** @deprecated */
+			public setNetworkPreference(param0: number): void;
 			public bindProcessToNetwork(param0: android.net.Network): boolean;
+			/** @deprecated */
+			public getAllNetworkInfo(): native.Array<android.net.NetworkInfo>;
 			public requestBandwidthUpdate(param0: android.net.Network): boolean;
 			public removeDefaultNetworkActiveListener(param0: android.net.ConnectivityManager.OnNetworkActiveListener): void;
 			public getNetworkInfo(param0: android.net.Network): android.net.NetworkInfo;
 			public isActiveNetworkMetered(): boolean;
-			public static getProcessDefaultNetwork(): android.net.Network;
 			public requestNetwork(param0: android.net.NetworkRequest, param1: android.app.PendingIntent): void;
 			public getActiveNetwork(): android.net.Network;
+			/** @deprecated */
+			public reportBadNetwork(param0: android.net.Network): void;
 			public getBoundNetworkForProcess(): android.net.Network;
+			/** @deprecated */
+			public static getProcessDefaultNetwork(): android.net.Network;
 			public addDefaultNetworkActiveListener(param0: android.net.ConnectivityManager.OnNetworkActiveListener): void;
 			public unregisterNetworkCallback(param0: android.net.ConnectivityManager.NetworkCallback): void;
+			/** @deprecated */
+			public requestRouteToHost(param0: number, param1: number): boolean;
 			public registerNetworkCallback(param0: android.net.NetworkRequest, param1: android.net.ConnectivityManager.NetworkCallback): void;
 			public reportNetworkConnectivity(param0: android.net.Network, param1: boolean): void;
 			public registerNetworkCallback(param0: android.net.NetworkRequest, param1: android.app.PendingIntent): void;
-			public setNetworkPreference(param0: number): void;
+			/** @deprecated */
+			public getBackgroundDataSetting(): boolean;
 			public isDefaultNetworkActive(): boolean;
-			public getAllNetworkInfo(): native.Array<android.net.NetworkInfo>;
 			public unregisterNetworkCallback(param0: android.app.PendingIntent): void;
 		}
 		export module ConnectivityManager {
@@ -31956,11 +31804,15 @@ declare module android {
 			public static class: java.lang.Class<android.net.Proxy>;
 			public static EXTRA_PROXY_INFO: string;
 			public static PROXY_CHANGE_ACTION: string;
+			/** @deprecated */
 			public static getPort(param0: android.content.Context): number;
-			public static getDefaultPort(): number;
-			public static getHost(param0: android.content.Context): string;
+			/** @deprecated */
 			public static getDefaultHost(): string;
+			/** @deprecated */
+			public static getDefaultPort(): number;
 			public constructor();
+			/** @deprecated */
+			public static getHost(param0: android.content.Context): string;
 		}
 	}
 }
@@ -32034,11 +31886,12 @@ declare module android {
 			public setTrustManagers(param0: native.Array<javax.net.ssl.TrustManager>): void;
 			public getSupportedCipherSuites(): native.Array<string>;
 			public getNpnSelectedProtocol(param0: java.net.Socket): native.Array<number>;
-			public constructor(param0: number);
 			public getDefaultCipherSuites(): native.Array<string>;
 			public static getDefault(param0: number, param1: android.net.SSLSessionCache): javax.net.ssl.SSLSocketFactory;
 			public constructor();
 			public setHostname(param0: java.net.Socket, param1: string): void;
+			/** @deprecated */
+			public constructor(param0: number);
 			public createSocket(param0: java.net.Socket, param1: string, param2: number, param3: boolean): java.net.Socket;
 			public static getDefault(): javax.net.SocketFactory;
 			public static getDefault(param0: number): javax.net.SocketFactory;
@@ -32066,23 +31919,29 @@ declare module android {
 		export class TrafficStats extends java.lang.Object {
 			public static class: java.lang.Class<android.net.TrafficStats>;
 			public static UNSUPPORTED: number;
-			public static getUidUdpTxBytes(param0: number): number;
+			/** @deprecated */
+			public static getUidUdpRxPackets(param0: number): number;
 			public static incrementOperationCount(param0: number, param1: number): void;
-			public static getUidTcpTxSegments(param0: number): number;
 			public static tagSocket(param0: java.net.Socket): void;
+			/** @deprecated */
+			public static getUidTcpRxSegments(param0: number): number;
 			public static getUidTxBytes(param0: number): number;
 			public static setThreadStatsTag(param0: number): void;
-			public static getUidUdpRxPackets(param0: number): number;
+			/** @deprecated */
 			public static getUidUdpTxPackets(param0: number): number;
 			public static getThreadStatsTag(): number;
 			public static getTotalRxBytes(): number;
-			public static clearThreadStatsTag(): void;
+			/** @deprecated */
 			public static getUidTcpTxBytes(param0: number): number;
+			public static clearThreadStatsTag(): void;
 			public static untagDatagramSocket(param0: java.net.DatagramSocket): void;
 			public static untagSocket(param0: java.net.Socket): void;
 			public static tagDatagramSocket(param0: java.net.DatagramSocket): void;
-			public static getMobileTxPackets(): number;
+			/** @deprecated */
 			public static getUidUdpRxBytes(param0: number): number;
+			/** @deprecated */
+			public static getUidTcpTxSegments(param0: number): number;
+			public static getMobileTxPackets(): number;
 			public static getUidRxPackets(param0: number): number;
 			public static getMobileRxBytes(): number;
 			public static getTotalTxBytes(): number;
@@ -32091,11 +31950,13 @@ declare module android {
 			public constructor();
 			public static incrementOperationCount(param0: number): void;
 			public static getMobileRxPackets(): number;
-			public static getUidTcpRxSegments(param0: number): number;
-			public static getMobileTxBytes(): number;
+			/** @deprecated */
 			public static getUidTcpRxBytes(param0: number): number;
+			public static getMobileTxBytes(): number;
 			public static getTotalRxPackets(): number;
 			public static getTotalTxPackets(): number;
+			/** @deprecated */
+			public static getUidUdpTxBytes(param0: number): number;
 		}
 	}
 }
@@ -32331,16 +32192,20 @@ declare module android {
 			export class SslCertificate extends java.lang.Object {
 				public static class: java.lang.Class<android.net.http.SslCertificate>;
 				public getValidNotBeforeDate(): java.util.Date;
-				public constructor(param0: string, param1: string, param2: java.util.Date, param3: java.util.Date);
+				/** @deprecated */
+				public constructor(param0: string, param1: string, param2: string, param3: string);
 				public constructor(param0: java.security.cert.X509Certificate);
 				public getIssuedTo(): android.net.http.SslCertificate.DName;
+				/** @deprecated */
+				public getValidNotAfter(): string;
 				public getIssuedBy(): android.net.http.SslCertificate.DName;
-				public constructor(param0: string, param1: string, param2: string, param3: string);
 				public getValidNotAfterDate(): java.util.Date;
 				public static restoreState(param0: android.os.Bundle): android.net.http.SslCertificate;
-				public getValidNotAfter(): string;
+				/** @deprecated */
+				public constructor(param0: string, param1: string, param2: java.util.Date, param3: java.util.Date);
 				public toString(): string;
 				public static saveState(param0: android.net.http.SslCertificate): android.os.Bundle;
+				/** @deprecated */
 				public getValidNotBefore(): string;
 			}
 			export module SslCertificate {
@@ -32373,12 +32238,14 @@ declare module android {
 				public addError(param0: number): boolean;
 				public getCertificate(): android.net.http.SslCertificate;
 				public getPrimaryError(): number;
-				public constructor(param0: number, param1: android.net.http.SslCertificate);
 				public constructor(param0: number, param1: android.net.http.SslCertificate, param2: string);
 				public getUrl(): string;
+				/** @deprecated */
+				public constructor(param0: number, param1: java.security.cert.X509Certificate);
 				public constructor(param0: number, param1: java.security.cert.X509Certificate, param2: string);
 				public toString(): string;
-				public constructor(param0: number, param1: java.security.cert.X509Certificate);
+				/** @deprecated */
+				public constructor(param0: number, param1: android.net.http.SslCertificate);
 			}
 		}
 	}
@@ -32972,13 +32839,16 @@ declare module android {
 			export class WifiEnterpriseConfig extends java.lang.Object implements android.os.Parcelable {
 				public static class: java.lang.Class<android.net.wifi.WifiEnterpriseConfig>;
 				public static CREATOR: android.os.Parcelable.Creator<android.net.wifi.WifiEnterpriseConfig>;
+				/** @deprecated */
+				public getSubjectMatch(): string;
+				/** @deprecated */
+				public setSubjectMatch(param0: string): void;
 				public getCaCertificates(): native.Array<java.security.cert.X509Certificate>;
 				public setPhase2Method(param0: number): void;
 				public constructor(param0: android.net.wifi.WifiEnterpriseConfig);
 				public setPassword(param0: string): void;
 				public constructor();
 				public setIdentity(param0: string): void;
-				public setSubjectMatch(param0: string): void;
 				public getRealm(): string;
 				public getAnonymousIdentity(): string;
 				public setPlmn(param0: string): void;
@@ -32988,7 +32858,6 @@ declare module android {
 				public setClientKeyEntry(param0: java.security.PrivateKey, param1: java.security.cert.X509Certificate): void;
 				public getDomainSuffixMatch(): string;
 				public toString(): string;
-				public getSubjectMatch(): string;
 				public setCaCertificate(param0: java.security.cert.X509Certificate): void;
 				public setCaCertificates(param0: native.Array<java.security.cert.X509Certificate>): void;
 				public setEapMethod(param0: number): void;
@@ -33634,13 +33503,11 @@ declare module android {
 			public static TNF_UNKNOWN: number;
 			public static TNF_WELL_KNOWN: number;
 			public equals(param0: any): boolean;
-			public toByteArray(): native.Array<number>;
 			public static createMime(param0: string, param1: native.Array<number>): android.nfc.NdefRecord;
 			public static createExternal(param0: string, param1: string, param2: native.Array<number>): android.nfc.NdefRecord;
 			public getPayload(): native.Array<number>;
 			public constructor(param0: number, param1: native.Array<number>, param2: native.Array<number>, param3: native.Array<number>);
 			public getId(): native.Array<number>;
-			public constructor(param0: native.Array<number>);
 			public static createApplicationRecord(param0: string): android.nfc.NdefRecord;
 			public static createUri(param0: string): android.nfc.NdefRecord;
 			public getTnf(): number;
@@ -33648,10 +33515,14 @@ declare module android {
 			public static createUri(param0: android.net.Uri): android.nfc.NdefRecord;
 			public static createTextRecord(param0: string, param1: string): android.nfc.NdefRecord;
 			public toUri(): android.net.Uri;
+			/** @deprecated */
+			public toByteArray(): native.Array<number>;
 			public describeContents(): number;
 			public toMimeType(): string;
 			public writeToParcel(param0: android.os.Parcel, param1: number): void;
 			public getType(): native.Array<number>;
+			/** @deprecated */
+			public constructor(param0: native.Array<number>);
 			public hashCode(): number;
 		}
 	}
@@ -33683,20 +33554,22 @@ declare module android {
 			public static STATE_TURNING_ON: number;
 			public enableForegroundDispatch(param0: android.app.Activity, param1: android.app.PendingIntent, param2: native.Array<android.content.IntentFilter>, param3: native.Array<native.Array<string>>): void;
 			public setNdefPushMessage(param0: android.nfc.NdefMessage, param1: android.app.Activity, param2: native.Array<android.app.Activity>): void;
+			/** @deprecated */
+			public enableForegroundNdefPush(param0: android.app.Activity, param1: android.nfc.NdefMessage): void;
 			public isNdefPushEnabled(): boolean;
+			/** @deprecated */
+			public disableForegroundNdefPush(param0: android.app.Activity): void;
 			public setBeamPushUrisCallback(param0: android.nfc.NfcAdapter.CreateBeamUrisCallback, param1: android.app.Activity): void;
 			public enableReaderMode(param0: android.app.Activity, param1: android.nfc.NfcAdapter.ReaderCallback, param2: number, param3: android.os.Bundle): void;
 			public disableForegroundDispatch(param0: android.app.Activity): void;
 			public static getDefaultAdapter(param0: android.content.Context): android.nfc.NfcAdapter;
 			public isEnabled(): boolean;
 			public setNdefPushMessageCallback(param0: android.nfc.NfcAdapter.CreateNdefMessageCallback, param1: android.app.Activity, param2: native.Array<android.app.Activity>): void;
-			public enableForegroundNdefPush(param0: android.app.Activity, param1: android.nfc.NdefMessage): void;
 			public setBeamPushUris(param0: native.Array<android.net.Uri>, param1: android.app.Activity): void;
 			public disableReaderMode(param0: android.app.Activity): void;
 			public invokeBeam(param0: android.app.Activity): boolean;
 			public ignore(param0: android.nfc.Tag, param1: number, param2: android.nfc.NfcAdapter.OnTagRemovedListener, param3: android.os.Handler): boolean;
 			public setOnNdefPushCompleteCallback(param0: android.nfc.NfcAdapter.OnNdefPushCompleteCallback, param1: android.app.Activity, param2: native.Array<android.app.Activity>): void;
-			public disableForegroundNdefPush(param0: android.app.Activity): void;
 		}
 		export module NfcAdapter {
 			export class CreateBeamUrisCallback extends java.lang.Object {
@@ -34390,7 +34263,10 @@ declare module android {
 		export abstract class EGLObjectHandle extends java.lang.Object {
 			public static class: java.lang.Class<android.opengl.EGLObjectHandle>;
 			public getNativeHandle(): number;
+			/** @deprecated */
 			public constructor(param0: number);
+			public constructor(param0: number);
+			/** @deprecated */
 			public getHandle(): number;
 			public hashCode(): number;
 		}
@@ -36230,6 +36106,8 @@ declare module android {
 			public static glGetUniformuiv(param0: number, param1: number, param2: native.Array<number>, param3: number): void;
 			public static glCopyTexSubImage3D(param0: number, param1: number, param2: number, param3: number, param4: number, param5: number, param6: number, param7: number, param8: number): void;
 			public static glDeleteTransformFeedbacks(param0: number, param1: native.Array<number>, param2: number): void;
+			/** @deprecated */
+			public static glGetTransformFeedbackVarying(param0: number, param1: number, param2: number, param3: java.nio.IntBuffer, param4: java.nio.IntBuffer, param5: java.nio.IntBuffer, param6: number): void;
 			public static glBindTransformFeedback(param0: number, param1: number): void;
 			public static glDrawRangeElements(param0: number, param1: number, param2: number, param3: number, param4: number, param5: number): void;
 			public static glResumeTransformFeedback(): void;
@@ -36245,7 +36123,6 @@ declare module android {
 			public static glGetUniformIndices(param0: number, param1: native.Array<string>, param2: java.nio.IntBuffer): void;
 			public static glGenSamplers(param0: number, param1: java.nio.IntBuffer): void;
 			public static glBlitFramebuffer(param0: number, param1: number, param2: number, param3: number, param4: number, param5: number, param6: number, param7: number, param8: number, param9: number): void;
-			public static glGetTransformFeedbackVarying(param0: number, param1: number, param2: number, param3: java.nio.IntBuffer, param4: java.nio.IntBuffer, param5: java.nio.IntBuffer, param6: number): void;
 			public static glGetInteger64v(param0: number, param1: java.nio.LongBuffer): void;
 			public static glGetBufferParameteri64v(param0: number, param1: number, param2: java.nio.LongBuffer): void;
 			public static glUnmapBuffer(param0: number): boolean;
@@ -37276,7 +37153,6 @@ declare module android {
 			public static perspectiveM(param0: native.Array<number>, param1: number, param2: number, param3: number, param4: number, param5: number): void;
 			public static rotateM(param0: native.Array<number>, param1: number, param2: number, param3: number, param4: number, param5: number): void;
 			public static length(param0: number, param1: number, param2: number): number;
-			public constructor();
 			public static multiplyMV(param0: native.Array<number>, param1: number, param2: native.Array<number>, param3: number, param4: native.Array<number>, param5: number): void;
 			public static rotateM(param0: native.Array<number>, param1: number, param2: native.Array<number>, param3: number, param4: number, param5: number, param6: number, param7: number): void;
 			public static scaleM(param0: native.Array<number>, param1: number, param2: native.Array<number>, param3: number, param4: number, param5: number, param6: number): void;
@@ -37284,6 +37160,8 @@ declare module android {
 			public static frustumM(param0: native.Array<number>, param1: number, param2: number, param3: number, param4: number, param5: number, param6: number, param7: number): void;
 			public static setLookAtM(param0: native.Array<number>, param1: number, param2: number, param3: number, param4: number, param5: number, param6: number, param7: number, param8: number, param9: number, param10: number): void;
 			public static orthoM(param0: native.Array<number>, param1: number, param2: number, param3: number, param4: number, param5: number, param6: number, param7: number): void;
+			/** @deprecated */
+			public constructor();
 			public static translateM(param0: native.Array<number>, param1: number, param2: native.Array<number>, param3: number, param4: number, param5: number, param6: number): void;
 			public static transposeM(param0: native.Array<number>, param1: number, param2: native.Array<number>, param3: number): void;
 			public static translateM(param0: native.Array<number>, param1: number, param2: number, param3: number, param4: number): void;
@@ -37365,7 +37243,6 @@ declare module android {
 			public getBoolean(param0: string): boolean;
 			public getLongArray(param0: string): native.Array<number>;
 			public getLong(param0: string, param1: number): number;
-			public putAll(param0: android.os.PersistableBundle): void;
 			public putBoolean(param0: string, param1: boolean): void;
 			public putLong(param0: string, param1: number): void;
 			public putDouble(param0: string, param1: number): void;
@@ -37387,6 +37264,7 @@ declare module android {
 			public putBooleanArray(param0: string, param1: native.Array<boolean>): void;
 			public putInt(param0: string, param1: number): void;
 			public getIntArray(param0: string): native.Array<number>;
+			public putAll(param0: any): void;
 			public getDouble(param0: string, param1: number): number;
 			public getDouble(param0: string): number;
 			public getBoolean(param0: string, param1: boolean): boolean;
@@ -37560,23 +37438,23 @@ declare module android {
 			public constructor(param0: java.lang.ClassLoader);
 			public getStringArrayList(param0: string): java.util.ArrayList<string>;
 			public getIntegerArrayList(param0: string): java.util.ArrayList<java.lang.Integer>;
+			public constructor(param0: any);
 			public putParcelableArrayList(param0: string, param1: java.util.ArrayList<any>): void;
 			public readFromParcel(param0: android.os.Parcel): void;
 			public remove(param0: string): void;
 			public putFloat(param0: string, param1: number): void;
 			public getByte(param0: string, param1: number): java.lang.Byte;
 			public getShortArray(param0: string): native.Array<number>;
-			public putSizeF(param0: string, param1: android.util.SizeF): void;
 			public writeToParcel(param0: android.os.Parcel, param1: number): void;
 			public putCharSequenceArray(param0: string, param1: native.Array<string>): void;
 			public getParcelableArrayList(param0: string): java.util.ArrayList<any>;
 			public getParcelableArray(param0: string): native.Array<android.os.Parcelable>;
 			public clear(): void;
-			public getSize(param0: string): android.util.Size;
 			public constructor(param0: number);
 			public getByte(param0: string): number;
+			public getSize(param0: string): any;
 			public constructor();
-			public getSizeF(param0: string): android.util.SizeF;
+			public putAll(param0: any): void;
 			public putSparseParcelableArray(param0: string, param1: android.util.SparseArray<any>): void;
 			public getFloat(param0: string): number;
 			public clone(): any;
@@ -37587,10 +37465,9 @@ declare module android {
 			public getParcelable(param0: string): android.os.Parcelable;
 			public putSerializable(param0: string, param1: java.io.Serializable): void;
 			public getChar(param0: string, param1: string): string;
+			public putSizeF(param0: string, param1: any): void;
+			public putSize(param0: string, param1: any): void;
 			public getCharSequence(param0: string, param1: string): string;
-			public putSize(param0: string, param1: android.util.Size): void;
-			public putAll(param0: android.os.PersistableBundle): void;
-			public constructor(param0: android.os.PersistableBundle);
 			public putParcelableArray(param0: string, param1: native.Array<android.os.Parcelable>): void;
 			public putShort(param0: string, param1: number): void;
 			public putCharSequenceArrayList(param0: string, param1: java.util.ArrayList<string>): void;
@@ -37617,6 +37494,7 @@ declare module android {
 			public putCharArray(param0: string, param1: native.Array<string>): void;
 			public getChar(param0: string): string;
 			public getShort(param0: string): number;
+			public getSizeF(param0: string): any;
 			public getCharSequenceArrayList(param0: string): java.util.ArrayList<string>;
 		}
 	}
@@ -37726,71 +37604,109 @@ declare module android {
 			public static TRACE_COUNT_ALLOCS: number;
 			public static getBinderDeathObjectCount(): number;
 			public static getBinderSentTransactions(): number;
+			/** @deprecated */
 			public static resetThreadGcInvocationCount(): void;
+			/** @deprecated */
+			public static resetGlobalExternalFreedCount(): void;
+			/** @deprecated */
+			public static resetAllCounts(): void;
+			/** @deprecated */
 			public static getGlobalExternalFreedSize(): number;
+			/** @deprecated */
+			public static getThreadExternalAllocCount(): number;
+			/** @deprecated */
+			public static getGlobalFreedCount(): number;
+			/** @deprecated */
 			public static getGlobalGcInvocationCount(): number;
+			/** @deprecated */
+			public static resetThreadAllocSize(): void;
+			/** @deprecated */
 			public static resetGlobalExternalAllocSize(): void;
-			public static resetGlobalAllocCount(): void;
-			public static resetGlobalExternalAllocCount(): void;
-			public static getGlobalExternalAllocCount(): number;
-			public static resetGlobalExternalFreedSize(): void;
-			public static getGlobalAllocSize(): number;
+			/** @deprecated */
+			public static resetGlobalFreedCount(): void;
+			/** @deprecated */
+			public static getThreadExternalAllocSize(): number;
 			public static startNativeTracing(): void;
 			public static getNativeHeapSize(): number;
-			public static getThreadExternalAllocSize(): number;
 			public static getPss(): number;
 			public static dumpService(param0: string, param1: java.io.FileDescriptor, param2: native.Array<string>): boolean;
 			public static startMethodTracing(param0: string, param1: number): void;
-			public static resetGlobalClassInitCount(): void;
-			public static resetGlobalClassInitTime(): void;
-			public static getGlobalFreedCount(): number;
+			/** @deprecated */
+			public static resetThreadAllocCount(): void;
+			/** @deprecated */
+			public static getThreadAllocCount(): number;
+			/** @deprecated */
+			public static changeDebugPort(param0: number): void;
+			/** @deprecated */
 			public static getThreadGcInvocationCount(): number;
 			public static startMethodTracing(param0: string): void;
-			public static resetGlobalFreedSize(): void;
 			public static getNativeHeapFreeSize(): number;
 			public static getBinderLocalObjectCount(): number;
-			public static setGlobalAllocationLimit(param0: number): number;
+			/** @deprecated */
+			public static resetGlobalExternalFreedSize(): void;
 			public static waitingForDebugger(): boolean;
-			public static getNativeHeapAllocatedSize(): number;
+			/** @deprecated */
 			public static resetGlobalGcInvocationCount(): void;
+			public static getNativeHeapAllocatedSize(): number;
+			/** @deprecated */
+			public static getGlobalExternalAllocSize(): number;
+			/** @deprecated */
+			public static startAllocCounting(): void;
+			/** @deprecated */
+			public static resetGlobalFreedSize(): void;
 			public static getRuntimeStats(): java.util.Map<string,string>;
 			public static enableEmulatorTraceOutput(): void;
-			public static getGlobalExternalAllocSize(): number;
+			/** @deprecated */
+			public static resetThreadExternalAllocCount(): void;
 			public static waitForDebugger(): void;
 			public static startMethodTracing(param0: string, param1: number, param2: number): void;
 			public static stopNativeTracing(): void;
-			public static resetGlobalFreedCount(): void;
+			/** @deprecated */
 			public static setAllocationLimit(param0: number): number;
-			public static getGlobalExternalFreedCount(): number;
-			public static getThreadAllocSize(): number;
+			/** @deprecated */
+			public static resetGlobalClassInitTime(): void;
+			/** @deprecated */
+			public static resetGlobalClassInitCount(): void;
+			/** @deprecated */
+			public static getGlobalExternalAllocCount(): number;
+			/** @deprecated */
+			public static getGlobalClassInitTime(): number;
+			/** @deprecated */
+			public static getGlobalAllocCount(): number;
 			public static dumpHprofData(param0: string): void;
 			public static stopMethodTracing(): void;
-			public static resetThreadAllocCount(): void;
+			/** @deprecated */
+			public static resetGlobalAllocSize(): void;
+			/** @deprecated */
+			public static stopAllocCounting(): void;
 			public static printLoadedClasses(param0: number): void;
 			public static startMethodTracing(): void;
-			public static getGlobalClassInitTime(): number;
-			public static getThreadAllocCount(): number;
+			/** @deprecated */
+			public static setGlobalAllocationLimit(param0: number): number;
+			/** @deprecated */
+			public static resetGlobalAllocCount(): void;
 			public static getBinderProxyObjectCount(): number;
-			public static resetGlobalExternalFreedCount(): void;
-			public static startAllocCounting(): void;
-			public static getGlobalFreedSize(): number;
+			/** @deprecated */
+			public static resetGlobalExternalAllocCount(): void;
 			public static getMemoryInfo(param0: android.os.Debug.MemoryInfo): void;
 			public static startMethodTracingSampling(param0: string, param1: number, param2: number): void;
+			/** @deprecated */
 			public static resetThreadExternalAllocSize(): void;
-			public static resetGlobalAllocSize(): void;
-			public static resetAllCounts(): void;
-			public static resetThreadExternalAllocCount(): void;
-			public static getGlobalClassInitCount(): number;
 			public static getRuntimeStat(param0: string): string;
-			public static resetThreadAllocSize(): void;
-			public static changeDebugPort(param0: number): void;
+			/** @deprecated */
+			public static getGlobalFreedSize(): number;
+			/** @deprecated */
+			public static getGlobalAllocSize(): number;
 			public static getBinderReceivedTransactions(): number;
 			public static isDebuggerConnected(): boolean;
 			public static threadCpuTimeNanos(): number;
-			public static getGlobalAllocCount(): number;
-			public static getThreadExternalAllocCount(): number;
+			/** @deprecated */
+			public static getThreadAllocSize(): number;
+			/** @deprecated */
+			public static getGlobalClassInitCount(): number;
+			/** @deprecated */
+			public static getGlobalExternalFreedCount(): number;
 			public static getLoadedClassCount(): number;
-			public static stopAllocCounting(): void;
 		}
 		export module Debug {
 			export class InstructionCount extends java.lang.Object {
@@ -37894,13 +37810,14 @@ declare module android {
 			public static MEDIA_UNKNOWN: string;
 			public static MEDIA_UNMOUNTABLE: string;
 			public static MEDIA_UNMOUNTED: string;
+			/** @deprecated */
+			public static getStorageState(param0: java.io.File): string;
 			public static getExternalStorageState(): string;
 			public static getExternalStorageState(param0: java.io.File): string;
 			public static getExternalStorageDirectory(): java.io.File;
 			public constructor();
 			public static isExternalStorageEmulated(): boolean;
 			public static isExternalStorageRemovable(): boolean;
-			public static getStorageState(param0: java.io.File): string;
 			public static getDataDirectory(): java.io.File;
 			public static getRootDirectory(): java.io.File;
 			public static getExternalStoragePublicDirectory(param0: string): java.io.File;
@@ -38122,24 +38039,24 @@ declare module android {
 	export module os {
 		export class LocaleList extends java.lang.Object implements android.os.Parcelable {
 			public static class: java.lang.Class<android.os.LocaleList>;
-			public static CREATOR: android.os.Parcelable.Creator<android.os.LocaleList>;
+			public static CREATOR: android.os.Parcelable.Creator<any>;
 			public equals(param0: any): boolean;
 			public get(param0: number): java.util.Locale;
 			public getFirstMatch(param0: native.Array<string>): java.util.Locale;
 			public isEmpty(): boolean;
 			public size(): number;
-			public static setDefault(param0: android.os.LocaleList): void;
-			public static getDefault(): android.os.LocaleList;
-			public static getEmptyLocaleList(): android.os.LocaleList;
+			public static getDefault(): any;
+			public static setDefault(param0: any): void;
 			public toString(): string;
-			public static getAdjustedDefault(): android.os.LocaleList;
+			public static getAdjustedDefault(): any;
 			public toLanguageTags(): string;
 			public describeContents(): number;
 			public writeToParcel(param0: android.os.Parcel, param1: number): void;
 			public indexOf(param0: java.util.Locale): number;
 			public constructor(param0: native.Array<java.util.Locale>);
+			public static getEmptyLocaleList(): any;
+			public static forLanguageTags(param0: string): any;
 			public hashCode(): number;
-			public static forLanguageTags(param0: string): android.os.LocaleList;
 		}
 	}
 }
@@ -38316,20 +38233,18 @@ declare module android {
 			public static STRING_CREATOR: android.os.Parcelable.Creator<string>;
 			public readFloatArray(param0: native.Array<number>): void;
 			public readTypedArray(param0: native.Array<any>, param1: android.os.Parcelable.Creator<any>): void;
-			public writeSize(param0: android.util.Size): void;
 			public readBinderList(param0: java.util.List<android.os.IBinder>): void;
 			public readString(): string;
 			public readByteArray(param0: native.Array<number>): void;
-			public readPersistableBundle(param0: java.lang.ClassLoader): android.os.PersistableBundle;
 			public writeTypedList(param0: java.util.List<any>): void;
 			public readList(param0: java.util.List<any>, param1: java.lang.ClassLoader): void;
 			public static obtain(): android.os.Parcel;
 			public readTypedList(param0: java.util.List<any>, param1: android.os.Parcelable.Creator<any>): void;
 			public createTypedArray(param0: android.os.Parcelable.Creator<any>): native.Array<any>;
 			public writeFloat(param0: number): void;
-			public readSizeF(): android.util.SizeF;
 			public setDataPosition(param0: number): void;
 			public writeTypedArray(param0: native.Array<android.os.Parcelable>, param1: number): void;
+			public readSize(): any;
 			public recycle(): void;
 			public createBinderArrayList(): java.util.ArrayList<android.os.IBinder>;
 			public readInt(): number;
@@ -38341,6 +38256,7 @@ declare module android {
 			public setDataSize(param0: number): void;
 			public writeCharArray(param0: native.Array<string>): void;
 			public writeStrongInterface(param0: android.os.IInterface): void;
+			public readSizeF(): any;
 			public readLongArray(param0: native.Array<number>): void;
 			public readBundle(param0: java.lang.ClassLoader): android.os.Bundle;
 			public createCharArray(): native.Array<string>;
@@ -38365,11 +38281,14 @@ declare module android {
 			public readStrongBinder(): android.os.IBinder;
 			public createStringArrayList(): java.util.ArrayList<string>;
 			public dataPosition(): number;
+			public writeSize(param0: any): void;
+			public readPersistableBundle(param0: java.lang.ClassLoader): any;
 			public readStringArray(param0: native.Array<string>): void;
+			public writePersistableBundle(param0: any): void;
 			public createIntArray(): native.Array<number>;
 			public writeBundle(param0: android.os.Bundle): void;
-			public writePersistableBundle(param0: android.os.PersistableBundle): void;
 			public enforceInterface(param0: string): void;
+			public writeSizeF(param0: any): void;
 			public readBundle(): android.os.Bundle;
 			public writeIntArray(param0: native.Array<number>): void;
 			public writeLongArray(param0: native.Array<number>): void;
@@ -38400,15 +38319,13 @@ declare module android {
 			public marshall(): native.Array<number>;
 			public createFloatArray(): native.Array<number>;
 			public writeString(param0: string): void;
-			public writeSizeF(param0: android.util.SizeF): void;
 			public readDouble(): number;
-			public readSize(): android.util.Size;
 			public hasFileDescriptors(): boolean;
 			public readValue(param0: java.lang.ClassLoader): any;
 			public writeNoException(): void;
 			public finalize(): void;
 			public readStringList(param0: java.util.List<string>): void;
-			public readPersistableBundle(): android.os.PersistableBundle;
+			public readPersistableBundle(): any;
 			public writeInt(param0: number): void;
 			public readLong(): number;
 			public writeByte(param0: number): void;
@@ -38619,17 +38536,17 @@ declare module android {
 	export module os {
 		export class PersistableBundle extends android.os.BaseBundle implements java.lang.Cloneable, android.os.Parcelable {
 			public static class: java.lang.Class<android.os.PersistableBundle>;
-			public static CREATOR: android.os.Parcelable.Creator<android.os.PersistableBundle>;
-			public static EMPTY: android.os.PersistableBundle;
-			public getPersistableBundle(param0: string): android.os.PersistableBundle;
+			public static CREATOR: android.os.Parcelable.Creator<any>;
+			public static EMPTY: any;
+			public putPersistableBundle(param0: string, param1: any): void;
 			public clone(): any;
 			public toString(): string;
-			public constructor(param0: android.os.PersistableBundle);
+			public getPersistableBundle(param0: string): any;
 			public describeContents(): number;
 			public constructor(param0: number);
 			public writeToParcel(param0: android.os.Parcel, param1: number): void;
 			public constructor();
-			public putPersistableBundle(param0: string, param1: android.os.PersistableBundle): void;
+			public constructor(param0: any);
 		}
 	}
 }
@@ -38654,9 +38571,10 @@ declare module android {
 			public isWakeLockLevelSupported(param0: number): boolean;
 			public isIgnoringBatteryOptimizations(param0: string): boolean;
 			public newWakeLock(param0: number, param1: string): android.os.PowerManager.WakeLock;
+			/** @deprecated */
+			public isScreenOn(): boolean;
 			public isPowerSaveMode(): boolean;
 			public isSustainedPerformanceModeSupported(): boolean;
-			public isScreenOn(): boolean;
 		}
 		export module PowerManager {
 			export class WakeLock extends java.lang.Object {
@@ -38696,6 +38614,7 @@ declare module android {
 			public static THREAD_PRIORITY_MORE_FAVORABLE: number;
 			public static THREAD_PRIORITY_URGENT_AUDIO: number;
 			public static THREAD_PRIORITY_URGENT_DISPLAY: number;
+			/** @deprecated */
 			public static supportsProcesses(): boolean;
 			public static getStartUptimeMillis(): number;
 			public static isApplicationUid(param0: number): boolean;
@@ -38796,17 +38715,21 @@ declare module android {
 	export module os {
 		export class StatFs extends java.lang.Object {
 			public static class: java.lang.Class<android.os.StatFs>;
+			/** @deprecated */
+			public getBlockCount(): number;
 			public getFreeBytes(): number;
 			public getBlockSizeLong(): number;
 			public restat(param0: string): void;
-			public getBlockCount(): number;
 			public getAvailableBlocksLong(): number;
 			public getFreeBlocksLong(): number;
-			public getBlockSize(): number;
+			/** @deprecated */
 			public getAvailableBlocks(): number;
-			public getAvailableBytes(): number;
+			/** @deprecated */
 			public getFreeBlocks(): number;
+			public getAvailableBytes(): number;
 			public constructor(param0: string);
+			/** @deprecated */
+			public getBlockSize(): number;
 			public getBlockCountLong(): number;
 			public getTotalBytes(): number;
 		}
@@ -39003,25 +38926,29 @@ declare module android {
 			public static USER_CREATION_FAILED_NOT_PERMITTED: number;
 			public static USER_CREATION_FAILED_NO_MORE_USERS: number;
 			public getApplicationRestrictions(param0: string): android.os.Bundle;
+			/** @deprecated */
+			public setUserRestrictions(param0: android.os.Bundle, param1: android.os.UserHandle): void;
 			public isUserRunning(param0: android.os.UserHandle): boolean;
-			public static createUserCreationIntent(param0: string, param1: string, param2: string, param3: android.os.PersistableBundle): android.content.Intent;
 			public isUserRunningOrStopping(param0: android.os.UserHandle): boolean;
 			public static supportsMultipleUsers(): boolean;
-			public setUserRestrictions(param0: android.os.Bundle, param1: android.os.UserHandle): void;
+			/** @deprecated */
+			public setUserRestriction(param0: string, param1: boolean): void;
 			public getUserCreationTime(param0: android.os.UserHandle): number;
 			public isDemoUser(): boolean;
-			public setUserRestrictions(param0: android.os.Bundle): void;
 			public isUserAGoat(): boolean;
 			public getUserCount(): number;
 			public isSystemUser(): boolean;
 			public isUserUnlocked(): boolean;
 			public getUserName(): string;
 			public getUserForSerialNumber(param0: number): android.os.UserHandle;
-			public setRestrictionsChallenge(param0: string): boolean;
 			public getUserRestrictions(): android.os.Bundle;
+			public static createUserCreationIntent(param0: string, param1: string, param2: string, param3: any): android.content.Intent;
 			public getSerialNumberForUser(param0: android.os.UserHandle): number;
-			public setUserRestriction(param0: string, param1: boolean): void;
+			/** @deprecated */
+			public setRestrictionsChallenge(param0: string): boolean;
 			public getUserProfiles(): java.util.List<android.os.UserHandle>;
+			/** @deprecated */
+			public setUserRestrictions(param0: android.os.Bundle): void;
 			public getUserRestrictions(param0: android.os.UserHandle): android.os.Bundle;
 			public isUserUnlocked(param0: android.os.UserHandle): boolean;
 			public hasUserRestriction(param0: string): boolean;
@@ -39609,12 +39536,11 @@ declare module android {
 			public isMultiPane(): boolean;
 			public isValidFragment(param0: string): boolean;
 			public startPreferenceFragment(param0: android.app.Fragment, param1: boolean): void;
-			public onSaveInstanceState(param0: android.os.Bundle, param1: android.os.PersistableBundle): void;
 			public onSearchRequested(): boolean;
-			public onPreferenceTreeClick(param0: android.preference.PreferenceScreen, param1: android.preference.Preference): boolean;
-			public setPreferenceScreen(param0: android.preference.PreferenceScreen): void;
 			public onActivityResult(param0: number, param1: number, param2: android.content.Intent): void;
 			public onKeyDown(param0: number, param1: android.view.KeyEvent): boolean;
+			/** @deprecated */
+			public getPreferenceManager(): android.preference.PreferenceManager;
 			public onCreatePanelView(param0: number): android.view.View;
 			public switchToHeader(param0: android.preference.PreferenceActivity.Header): void;
 			public showBreadCrumbs(param0: string, param1: string): void;
@@ -39623,15 +39549,19 @@ declare module android {
 			public onDetachedFromWindow(): void;
 			public onBuildStartFragmentIntent(param0: string, param1: android.os.Bundle, param2: number, param3: number): android.content.Intent;
 			public onCreateView(param0: android.view.View, param1: string, param2: android.content.Context, param3: android.util.AttributeSet): android.view.View;
+			public onCreate(param0: android.os.Bundle, param1: any): void;
 			public onGetInitialHeader(): android.preference.PreferenceActivity.Header;
+			/** @deprecated */
+			public addPreferencesFromResource(param0: number): void;
+			public onSaveInstanceState(param0: android.os.Bundle, param1: any): void;
 			public constructor();
 			public onRestoreInstanceState(param0: android.os.Bundle): void;
 			public onCreateView(param0: string, param1: android.content.Context, param2: android.util.AttributeSet): android.view.View;
 			public constructor(param0: android.content.Context, param1: number);
-			public onRestoreInstanceState(param0: android.os.Bundle, param1: android.os.PersistableBundle): void;
+			/** @deprecated */
+			public findPreference(param0: string): android.preference.Preference;
 			public onNewIntent(param0: android.content.Intent): void;
 			public onCreateContextMenu(param0: android.view.ContextMenu, param1: android.view.View, param2: android.view.ContextMenu.ContextMenuInfo): void;
-			public onCreate(param0: android.os.Bundle, param1: android.os.PersistableBundle): void;
 			public dispatchTouchEvent(param0: android.view.MotionEvent): boolean;
 			public onPreparePanel(param0: number, param1: android.view.View, param2: android.view.Menu): boolean;
 			public onWindowFocusChanged(param0: boolean): void;
@@ -39639,14 +39569,13 @@ declare module android {
 			public hasHeaders(): boolean;
 			public startWithFragment(param0: string, param1: android.os.Bundle, param2: android.app.Fragment, param3: number): void;
 			public onContentChanged(): void;
-			public findPreference(param0: string): android.preference.Preference;
 			public onWindowStartingActionMode(param0: android.view.ActionMode.Callback): android.view.ActionMode;
 			public onKeyMultiple(param0: number, param1: number, param2: android.view.KeyEvent): boolean;
 			public setParentTitle(param0: string, param1: string, param2: android.view.View.OnClickListener): void;
 			public onWindowStartingActionMode(param0: android.view.ActionMode.Callback, param1: number): android.view.ActionMode;
-			public getPreferenceManager(): android.preference.PreferenceManager;
-			public getPreferenceScreen(): android.preference.PreferenceScreen;
 			public onDestroy(): void;
+			/** @deprecated */
+			public setPreferenceScreen(param0: android.preference.PreferenceScreen): void;
 			public onProvideKeyboardShortcuts(param0: java.util.List<any>, param1: android.view.Menu, param2: number): void;
 			public onPanelClosed(param0: number, param1: android.view.Menu): void;
 			public onIsHidingHeaders(): boolean;
@@ -39654,6 +39583,8 @@ declare module android {
 			public onActionModeFinished(param0: android.view.ActionMode): void;
 			public constructor(param0: android.content.Context, param1: android.content.res.Resources.Theme);
 			public startPreferencePanel(param0: string, param1: android.os.Bundle, param2: number, param3: string, param4: android.app.Fragment, param5: number): void;
+			/** @deprecated */
+			public onPreferenceTreeClick(param0: android.preference.PreferenceScreen, param1: android.preference.Preference): boolean;
 			public onStop(): void;
 			public onActionModeStarted(param0: android.view.ActionMode): void;
 			public startWithFragment(param0: string, param1: android.os.Bundle, param2: android.app.Fragment, param3: number, param4: number, param5: number): void;
@@ -39661,17 +39592,21 @@ declare module android {
 			public onMenuItemSelected(param0: number, param1: android.view.MenuItem): boolean;
 			public onMenuOpened(param0: number, param1: android.view.Menu): boolean;
 			public onListItemClick(param0: android.widget.ListView, param1: android.view.View, param2: number, param3: number): void;
-			public addPreferencesFromIntent(param0: android.content.Intent): void;
 			public onPreferenceStartFragment(param0: android.preference.PreferenceFragment, param1: android.preference.Preference): boolean;
+			/** @deprecated */
+			public getPreferenceScreen(): android.preference.PreferenceScreen;
 			public onSearchRequested(param0: any): boolean;
 			public finishPreferencePanel(param0: android.app.Fragment, param1: number, param2: android.content.Intent): void;
 			public onGetNewHeader(): android.preference.PreferenceActivity.Header;
 			public onKeyUp(param0: number, param1: android.view.KeyEvent): boolean;
+			public onRestoreInstanceState(param0: android.os.Bundle, param1: any): void;
 			public dispatchTrackballEvent(param0: android.view.MotionEvent): boolean;
 			public onIsMultiPane(): boolean;
 			public onHeaderClick(param0: android.preference.PreferenceActivity.Header, param1: number): void;
 			public onSaveInstanceState(param0: android.os.Bundle): void;
 			public switchToHeader(param0: string, param1: android.os.Bundle): void;
+			/** @deprecated */
+			public addPreferencesFromIntent(param0: android.content.Intent): void;
 			public constructor(param0: android.content.Context);
 			public dispatchKeyEvent(param0: android.view.KeyEvent): boolean;
 			public onBuildHeaders(param0: java.util.List<android.preference.PreferenceActivity.Header>): void;
@@ -39680,7 +39615,6 @@ declare module android {
 			public setListFooter(param0: android.view.View): void;
 			public invalidateHeaders(): void;
 			public onWindowAttributesChanged(param0: android.view.WindowManager.LayoutParams): void;
-			public addPreferencesFromResource(param0: number): void;
 		}
 		export module PreferenceActivity {
 			export class Header extends java.lang.Object implements android.os.Parcelable {
@@ -39949,421 +39883,17 @@ declare module android {
 	}
 }
 
-declare module android {
-	export module print {
-		export class PageRange extends java.lang.Object implements android.os.Parcelable {
-			public static class: java.lang.Class<any>;
-			public static ALL_PAGES: any;
-			public static CREATOR: android.os.Parcelable.Creator<any>;
-			public equals(param0: any): boolean;
-			public toString(): string;
-			public describeContents(): number;
-			public writeToParcel(param0: android.os.Parcel, param1: number): void;
-			public getEnd(): number;
-			public constructor(param0: number, param1: number);
-			public getStart(): number;
-			public hashCode(): number;
-		}
-	}
-}
 
-declare module android {
-	export module print {
-		export class PrintAttributes extends java.lang.Object implements android.os.Parcelable {
-			public static class: java.lang.Class<any>;
-			public static COLOR_MODE_COLOR: number;
-			public static COLOR_MODE_MONOCHROME: number;
-			public static CREATOR: android.os.Parcelable.Creator<any>;
-			public static DUPLEX_MODE_LONG_EDGE: number;
-			public static DUPLEX_MODE_NONE: number;
-			public static DUPLEX_MODE_SHORT_EDGE: number;
-			public getMinMargins(): any;
-			public equals(param0: any): boolean;
-			public toString(): string;
-			public getDuplexMode(): number;
-			public getMediaSize(): any;
-			public describeContents(): number;
-			public writeToParcel(param0: android.os.Parcel, param1: number): void;
-			public getResolution(): any;
-			public getColorMode(): number;
-			public hashCode(): number;
-		}
-		export module PrintAttributes {
-			export class Builder extends java.lang.Object {
-				public static class: java.lang.Class<any>;
-				public setColorMode(param0: number): any;
-				public setResolution(param0: any): any;
-				public setMinMargins(param0: any): any;
-				public setDuplexMode(param0: number): any;
-				public setMediaSize(param0: any): any;
-				public constructor();
-				public build(): any;
-			}
-			export class Margins extends java.lang.Object {
-				public static class: java.lang.Class<any>;
-				public static NO_MARGINS: any;
-				public getLeftMils(): number;
-				public getBottomMils(): number;
-				public constructor(param0: number, param1: number, param2: number, param3: number);
-				public hashCode(): number;
-				public getRightMils(): number;
-				public equals(param0: any): boolean;
-				public toString(): string;
-				public getTopMils(): number;
-			}
-			export class MediaSize extends java.lang.Object {
-				public static class: java.lang.Class<any>;
-				public static ISO_A0: any;
-				public static ISO_A1: any;
-				public static ISO_A10: any;
-				public static ISO_A2: any;
-				public static ISO_A3: any;
-				public static ISO_A4: any;
-				public static ISO_A5: any;
-				public static ISO_A6: any;
-				public static ISO_A7: any;
-				public static ISO_A8: any;
-				public static ISO_A9: any;
-				public static ISO_B0: any;
-				public static ISO_B1: any;
-				public static ISO_B10: any;
-				public static ISO_B2: any;
-				public static ISO_B3: any;
-				public static ISO_B4: any;
-				public static ISO_B5: any;
-				public static ISO_B6: any;
-				public static ISO_B7: any;
-				public static ISO_B8: any;
-				public static ISO_B9: any;
-				public static ISO_C0: any;
-				public static ISO_C1: any;
-				public static ISO_C10: any;
-				public static ISO_C2: any;
-				public static ISO_C3: any;
-				public static ISO_C4: any;
-				public static ISO_C5: any;
-				public static ISO_C6: any;
-				public static ISO_C7: any;
-				public static ISO_C8: any;
-				public static ISO_C9: any;
-				public static JIS_B0: any;
-				public static JIS_B1: any;
-				public static JIS_B10: any;
-				public static JIS_B2: any;
-				public static JIS_B3: any;
-				public static JIS_B4: any;
-				public static JIS_B5: any;
-				public static JIS_B6: any;
-				public static JIS_B7: any;
-				public static JIS_B8: any;
-				public static JIS_B9: any;
-				public static JIS_EXEC: any;
-				public static JPN_CHOU2: any;
-				public static JPN_CHOU3: any;
-				public static JPN_CHOU4: any;
-				public static JPN_HAGAKI: any;
-				public static JPN_KAHU: any;
-				public static JPN_KAKU2: any;
-				public static JPN_OUFUKU: any;
-				public static JPN_YOU4: any;
-				public static NA_FOOLSCAP: any;
-				public static NA_GOVT_LETTER: any;
-				public static NA_INDEX_3X5: any;
-				public static NA_INDEX_4X6: any;
-				public static NA_INDEX_5X8: any;
-				public static NA_JUNIOR_LEGAL: any;
-				public static NA_LEDGER: any;
-				public static NA_LEGAL: any;
-				public static NA_LETTER: any;
-				public static NA_MONARCH: any;
-				public static NA_QUARTO: any;
-				public static NA_TABLOID: any;
-				public static OM_DAI_PA_KAI: any;
-				public static OM_JUURO_KU_KAI: any;
-				public static OM_PA_KAI: any;
-				public static PRC_1: any;
-				public static PRC_10: any;
-				public static PRC_16K: any;
-				public static PRC_2: any;
-				public static PRC_3: any;
-				public static PRC_4: any;
-				public static PRC_5: any;
-				public static PRC_6: any;
-				public static PRC_7: any;
-				public static PRC_8: any;
-				public static PRC_9: any;
-				public static ROC_16K: any;
-				public static ROC_8K: any;
-				public static UNKNOWN_LANDSCAPE: any;
-				public static UNKNOWN_PORTRAIT: any;
-				public getWidthMils(): number;
-				public getId(): string;
-				public asLandscape(): any;
-				public hashCode(): number;
-				public isPortrait(): boolean;
-				public getHeightMils(): number;
-				public asPortrait(): any;
-				public equals(param0: any): boolean;
-				public constructor(param0: string, param1: string, param2: number, param3: number);
-				public getLabel(param0: android.content.pm.PackageManager): string;
-				public toString(): string;
-			}
-			export class Resolution extends java.lang.Object {
-				public static class: java.lang.Class<any>;
-				public getHorizontalDpi(): number;
-				public getId(): string;
-				public getVerticalDpi(): number;
-				public getLabel(): string;
-				public hashCode(): number;
-				public equals(param0: any): boolean;
-				public constructor(param0: string, param1: string, param2: number, param3: number);
-				public toString(): string;
-			}
-		}
-	}
-}
 
-declare module android {
-	export module print {
-		export abstract class PrintDocumentAdapter extends java.lang.Object {
-			public static class: java.lang.Class<any>;
-			public static EXTRA_PRINT_PREVIEW: string;
-			public onLayout(param0: any, param1: any, param2: android.os.CancellationSignal, param3: any, param4: android.os.Bundle): void;
-			public onStart(): void;
-			public onWrite(param0: native.Array<any>, param1: android.os.ParcelFileDescriptor, param2: android.os.CancellationSignal, param3: any): void;
-			public onFinish(): void;
-			public constructor();
-		}
-		export module PrintDocumentAdapter {
-			export abstract class LayoutResultCallback extends java.lang.Object {
-				public static class: java.lang.Class<any>;
-				public onLayoutCancelled(): void;
-				public onLayoutFinished(param0: any, param1: boolean): void;
-				public onLayoutFailed(param0: string): void;
-			}
-			export abstract class WriteResultCallback extends java.lang.Object {
-				public static class: java.lang.Class<any>;
-				public onWriteFinished(param0: native.Array<any>): void;
-				public onWriteFailed(param0: string): void;
-				public onWriteCancelled(): void;
-			}
-		}
-	}
-}
 
-declare module android {
-	export module print {
-		export class PrintDocumentInfo extends java.lang.Object implements android.os.Parcelable {
-			public static class: java.lang.Class<any>;
-			public static CONTENT_TYPE_DOCUMENT: number;
-			public static CONTENT_TYPE_PHOTO: number;
-			public static CONTENT_TYPE_UNKNOWN: number;
-			public static CREATOR: android.os.Parcelable.Creator<any>;
-			public static PAGE_COUNT_UNKNOWN: number;
-			public equals(param0: any): boolean;
-			public getPageCount(): number;
-			public toString(): string;
-			public getName(): string;
-			public describeContents(): number;
-			public writeToParcel(param0: android.os.Parcel, param1: number): void;
-			public getDataSize(): number;
-			public getContentType(): number;
-			public hashCode(): number;
-		}
-		export module PrintDocumentInfo {
-			export class Builder extends java.lang.Object {
-				public static class: java.lang.Class<any>;
-				public setContentType(param0: number): any;
-				public setPageCount(param0: number): any;
-				public constructor(param0: string);
-				public build(): any;
-			}
-		}
-	}
-}
 
-declare module android {
-	export module print {
-		export class PrintJob extends java.lang.Object {
-			public static class: java.lang.Class<any>;
-			public getId(): any;
-			public isBlocked(): boolean;
-			public equals(param0: any): boolean;
-			public isQueued(): boolean;
-			public isFailed(): boolean;
-			public isStarted(): boolean;
-			public getInfo(): any;
-			public isCompleted(): boolean;
-			public cancel(): void;
-			public isCancelled(): boolean;
-			public restart(): void;
-			public hashCode(): number;
-		}
-	}
-}
 
-declare module android {
-	export module print {
-		export class PrintJobId extends java.lang.Object implements android.os.Parcelable {
-			public static class: java.lang.Class<any>;
-			public static CREATOR: android.os.Parcelable.Creator<any>;
-			public equals(param0: any): boolean;
-			public describeContents(): number;
-			public writeToParcel(param0: android.os.Parcel, param1: number): void;
-			public hashCode(): number;
-		}
-	}
-}
 
-declare module android {
-	export module print {
-		export class PrintJobInfo extends java.lang.Object implements android.os.Parcelable {
-			public static class: java.lang.Class<any>;
-			public static CREATOR: android.os.Parcelable.Creator<any>;
-			public static STATE_BLOCKED: number;
-			public static STATE_CANCELED: number;
-			public static STATE_COMPLETED: number;
-			public static STATE_CREATED: number;
-			public static STATE_FAILED: number;
-			public static STATE_QUEUED: number;
-			public static STATE_STARTED: number;
-			public getId(): any;
-			public getPrinterId(): any;
-			public getLabel(): string;
-			public toString(): string;
-			public describeContents(): number;
-			public getPages(): native.Array<any>;
-			public writeToParcel(param0: android.os.Parcel, param1: number): void;
-			public getAttributes(): any;
-			public getCopies(): number;
-			public getCreationTime(): number;
-			public getState(): number;
-		}
-		export module PrintJobInfo {
-			export class Builder extends java.lang.Object {
-				public static class: java.lang.Class<any>;
-				public constructor(param0: any);
-				public putAdvancedOption(param0: string, param1: string): void;
-				public setPages(param0: native.Array<any>): void;
-				public setCopies(param0: number): void;
-				public build(): any;
-				public setAttributes(param0: any): void;
-				public putAdvancedOption(param0: string, param1: number): void;
-			}
-		}
-	}
-}
 
-declare module android {
-	export module print {
-		export class PrintManager extends java.lang.Object {
-			public static class: java.lang.Class<any>;
-			public print(param0: string, param1: any, param2: any): any;
-			public getPrintJobs(): java.util.List<any>;
-		}
-	}
-}
 
-declare module android {
-	export module print {
-		export class PrinterCapabilitiesInfo extends java.lang.Object implements android.os.Parcelable {
-			public static class: java.lang.Class<any>;
-			public static CREATOR: android.os.Parcelable.Creator<any>;
-			public getMinMargins(): any;
-			public equals(param0: any): boolean;
-			public toString(): string;
-			public getColorModes(): number;
-			public getDefaults(): any;
-			public describeContents(): number;
-			public writeToParcel(param0: android.os.Parcel, param1: number): void;
-			public getResolutions(): java.util.List<any>;
-			public getMediaSizes(): java.util.List<any>;
-			public getDuplexModes(): number;
-			public hashCode(): number;
-		}
-		export module PrinterCapabilitiesInfo {
-			export class Builder extends java.lang.Object {
-				public static class: java.lang.Class<any>;
-				public addMediaSize(param0: any, param1: boolean): any;
-				public setMinMargins(param0: any): any;
-				public build(): any;
-				public setColorModes(param0: number, param1: number): any;
-				public setDuplexModes(param0: number, param1: number): any;
-				public constructor(param0: any);
-				public addResolution(param0: any, param1: boolean): any;
-			}
-		}
-	}
-}
 
-declare module android {
-	export module print {
-		export class PrinterId extends java.lang.Object implements android.os.Parcelable {
-			public static class: java.lang.Class<any>;
-			public static CREATOR: android.os.Parcelable.Creator<any>;
-			public getLocalId(): string;
-			public equals(param0: any): boolean;
-			public toString(): string;
-			public describeContents(): number;
-			public writeToParcel(param0: android.os.Parcel, param1: number): void;
-			public hashCode(): number;
-		}
-	}
-}
 
-declare module android {
-	export module print {
-		export class PrinterInfo extends java.lang.Object implements android.os.Parcelable {
-			public static class: java.lang.Class<any>;
-			public static CREATOR: android.os.Parcelable.Creator<any>;
-			public static STATUS_BUSY: number;
-			public static STATUS_IDLE: number;
-			public static STATUS_UNAVAILABLE: number;
-			public equals(param0: any): boolean;
-			public toString(): string;
-			public getName(): string;
-			public describeContents(): number;
-			public writeToParcel(param0: android.os.Parcel, param1: number): void;
-			public getCapabilities(): any;
-			public getId(): any;
-			public getDescription(): string;
-			public getStatus(): number;
-			public hashCode(): number;
-		}
-		export module PrinterInfo {
-			export class Builder extends java.lang.Object {
-				public static class: java.lang.Class<any>;
-				public setCapabilities(param0: any): any;
-				public build(): any;
-				public setInfoIntent(param0: android.app.PendingIntent): any;
-				public constructor(param0: any);
-				public setDescription(param0: string): any;
-				public setStatus(param0: number): any;
-				public setHasCustomPrinterIcon(param0: boolean): any;
-				public setIconResourceId(param0: number): any;
-				public setName(param0: string): any;
-				public constructor(param0: any, param1: string, param2: number);
-			}
-		}
-	}
-}
 
-declare module android {
-	export module print {
-		export module pdf {
-			export class PrintedPdfDocument extends android.graphics.pdf.PdfDocument {
-				public static class: java.lang.Class<any>;
-				public getPageWidth(): number;
-				public getPageContentRect(): android.graphics.Rect;
-				public getPageHeight(): number;
-				public constructor(param0: android.content.Context, param1: any);
-				public startPage(param0: number): android.graphics.pdf.PdfDocument.Page;
-				public startPage(param0: android.graphics.pdf.PdfDocument.PageInfo): android.graphics.pdf.PdfDocument.Page;
-				public constructor();
-			}
-		}
-	}
-}
 
 declare module android {
 	export module printservice {
@@ -41019,11 +40549,16 @@ declare module android {
 				public static PROTOCOL_QQ: number;
 				public static PROTOCOL_SKYPE: number;
 				public static PROTOCOL_YAHOO: number;
-				public static decodeImProtocol(param0: string): any;
-				public addPostalLocation(param0: android.content.Context, param1: number, param2: number, param3: number): void;
-				public static encodeCustomImProtocol(param0: string): string;
+				/** @deprecated */
 				public static encodePredefinedImProtocol(param0: number): string;
+				/** @deprecated */
 				public static getDisplayLabel(param0: android.content.Context, param1: number, param2: number, param3: string): string;
+				/** @deprecated */
+				public static decodeImProtocol(param0: string): any;
+				/** @deprecated */
+				public addPostalLocation(param0: android.content.Context, param1: number, param2: number, param3: number): void;
+				/** @deprecated */
+				public static encodeCustomImProtocol(param0: string): string;
 			}
 			export class ContactMethodsColumns extends java.lang.Object {
 				public static class: java.lang.Class<android.provider.Contacts.ContactMethodsColumns>;
@@ -41109,6 +40644,7 @@ declare module android {
 				public static SEARCH_SUGGESTION_CREATE_CONTACT_CLICKED: string;
 				public static SEARCH_SUGGESTION_DIAL_NUMBER_CLICKED: string;
 				public static SHOW_OR_CREATE_CONTACT: string;
+				/** @deprecated */
 				public constructor();
 			}
 			export module Intents {
@@ -41141,6 +40677,7 @@ declare module android {
 					public static TERTIARY_EMAIL_TYPE: string;
 					public static TERTIARY_PHONE: string;
 					public static TERTIARY_PHONE_TYPE: string;
+					/** @deprecated */
 					public constructor();
 				}
 				export class UI extends java.lang.Object {
@@ -41156,6 +40693,7 @@ declare module android {
 					public static LIST_STARRED_ACTION: string;
 					public static LIST_STREQUENT_ACTION: string;
 					public static TITLE_EXTRA_KEY: string;
+					/** @deprecated */
 					public constructor();
 				}
 			}
@@ -41182,6 +40720,7 @@ declare module android {
 				public static CONTENT_DIRECTORY: string;
 				public static CONTENT_URI: android.net.Uri;
 				public static DEFAULT_SORT_ORDER: string;
+				/** @deprecated */
 				public static getDisplayLabel(param0: android.content.Context, param1: number, param2: string): string;
 			}
 			export class People extends java.lang.Object implements android.provider.BaseColumns, android.provider.Contacts.PeopleColumns, android.provider.Contacts.PhonesColumns, android.provider.Contacts.PresenceColumns {
@@ -41195,15 +40734,24 @@ declare module android {
 				public static PRIMARY_EMAIL_ID: string;
 				public static PRIMARY_ORGANIZATION_ID: string;
 				public static PRIMARY_PHONE_ID: string;
-				public static createPersonInMyContactsGroup(param0: android.content.ContentResolver, param1: android.content.ContentValues): android.net.Uri;
-				public static loadContactPhoto(param0: android.content.Context, param1: android.net.Uri, param2: number, param3: android.graphics.BitmapFactory.Options): android.graphics.Bitmap;
-				public static addToGroup(param0: android.content.ContentResolver, param1: number, param2: number): android.net.Uri;
-				public static setPhotoData(param0: android.content.ContentResolver, param1: android.net.Uri, param2: native.Array<number>): void;
-				public static openContactPhotoInputStream(param0: android.content.ContentResolver, param1: android.net.Uri): java.io.InputStream;
-				public static queryGroups(param0: android.content.ContentResolver, param1: number): android.database.Cursor;
-				public static markAsContacted(param0: android.content.ContentResolver, param1: number): void;
+				/** @deprecated */
 				public static addToGroup(param0: android.content.ContentResolver, param1: number, param2: string): android.net.Uri;
+				/** @deprecated */
+				public static markAsContacted(param0: android.content.ContentResolver, param1: number): void;
+				/** @deprecated */
+				public static openContactPhotoInputStream(param0: android.content.ContentResolver, param1: android.net.Uri): java.io.InputStream;
+				/** @deprecated */
 				public static addToMyContactsGroup(param0: android.content.ContentResolver, param1: number): android.net.Uri;
+				/** @deprecated */
+				public static setPhotoData(param0: android.content.ContentResolver, param1: android.net.Uri, param2: native.Array<number>): void;
+				/** @deprecated */
+				public static queryGroups(param0: android.content.ContentResolver, param1: number): android.database.Cursor;
+				/** @deprecated */
+				public static loadContactPhoto(param0: android.content.Context, param1: android.net.Uri, param2: number, param3: android.graphics.BitmapFactory.Options): android.graphics.Bitmap;
+				/** @deprecated */
+				public static addToGroup(param0: android.content.ContentResolver, param1: number, param2: number): android.net.Uri;
+				/** @deprecated */
+				public static createPersonInMyContactsGroup(param0: android.content.ContentResolver, param1: android.content.ContentValues): android.net.Uri;
 			}
 			export module People {
 				export class ContactMethods extends java.lang.Object implements android.provider.BaseColumns, android.provider.Contacts.ContactMethodsColumns, android.provider.Contacts.PeopleColumns {
@@ -41250,7 +40798,9 @@ declare module android {
 				public static CONTENT_URI: android.net.Uri;
 				public static DEFAULT_SORT_ORDER: string;
 				public static PERSON_ID: string;
+				/** @deprecated */
 				public static getDisplayLabel(param0: android.content.Context, param1: number, param2: string, param3: native.Array<string>): string;
+				/** @deprecated */
 				public static getDisplayLabel(param0: android.content.Context, param1: number, param2: string): string;
 			}
 			export class PhonesColumns extends java.lang.Object {
@@ -41323,7 +40873,9 @@ declare module android {
 				public static CONTENT_URI: android.net.Uri;
 				public static DEFAULT_SORT_ORDER: string;
 				public static SYNC_EVERYTHING: string;
+				/** @deprecated */
 				public static setSetting(param0: android.content.ContentResolver, param1: string, param2: string, param3: string): void;
+				/** @deprecated */
 				public static getSetting(param0: android.content.ContentResolver, param1: string, param2: string): string;
 			}
 			export class SettingsColumns extends java.lang.Object {
@@ -41759,11 +41311,12 @@ declare module android {
 				public static EXTRA_ADDRESS_BOOK_INDEX_TITLES: string;
 				public static QUERY_PARAMETER_VCARD_NO_PHOTO: string;
 				public static getLookupUri(param0: android.content.ContentResolver, param1: android.net.Uri): android.net.Uri;
+				/** @deprecated */
+				public static markAsContacted(param0: android.content.ContentResolver, param1: number): void;
 				public static openContactPhotoInputStream(param0: android.content.ContentResolver, param1: android.net.Uri): java.io.InputStream;
 				public static getLookupUri(param0: number, param1: string): android.net.Uri;
 				public static openContactPhotoInputStream(param0: android.content.ContentResolver, param1: android.net.Uri, param2: boolean): java.io.InputStream;
 				public static lookupContact(param0: android.content.ContentResolver, param1: android.net.Uri): android.net.Uri;
-				public static markAsContacted(param0: android.content.ContentResolver, param1: number): void;
 				public static isEnterpriseContactId(param0: number): boolean;
 			}
 			export module Contacts {
@@ -43236,14 +42789,16 @@ declare module android {
 				public static WIFI_WATCHDOG_PING_TIMEOUT_MS: string;
 				public static WIFI_WATCHDOG_WATCH_LIST: string;
 				public static getFloat(param0: android.content.ContentResolver, param1: string): number;
-				public static isLocationProviderEnabled(param0: android.content.ContentResolver, param1: string): boolean;
-				public static getLong(param0: android.content.ContentResolver, param1: string, param2: number): number;
+				/** @deprecated */
 				public static setLocationProviderEnabled(param0: android.content.ContentResolver, param1: string, param2: boolean): void;
+				public static getLong(param0: android.content.ContentResolver, param1: string, param2: number): number;
 				public static putString(param0: android.content.ContentResolver, param1: android.net.Uri, param2: string, param3: string): boolean;
 				public static getUriFor(param0: android.net.Uri, param1: string): android.net.Uri;
 				public static getString(param0: android.content.ContentResolver, param1: string): string;
 				public static getFloat(param0: android.content.ContentResolver, param1: string, param2: number): number;
 				public constructor();
+				/** @deprecated */
+				public static isLocationProviderEnabled(param0: android.content.ContentResolver, param1: string): boolean;
 				public static getUriFor(param0: string): android.net.Uri;
 				public static putInt(param0: android.content.ContentResolver, param1: string, param2: number): boolean;
 				public static getLong(param0: android.content.ContentResolver, param1: string): number;
@@ -43366,17 +42921,19 @@ declare module android {
 				public static WIFI_WATCHDOG_PING_TIMEOUT_MS: string;
 				public static WINDOW_ANIMATION_SCALE: string;
 				public static getFloat(param0: android.content.ContentResolver, param1: string): number;
-				public static setShowGTalkServiceStatus(param0: android.content.ContentResolver, param1: boolean): void;
 				public static canWrite(param0: android.content.Context): boolean;
 				public static getLong(param0: android.content.ContentResolver, param1: string, param2: number): number;
+				/** @deprecated */
+				public static setShowGTalkServiceStatus(param0: android.content.ContentResolver, param1: boolean): void;
 				public static putString(param0: android.content.ContentResolver, param1: android.net.Uri, param2: string, param3: string): boolean;
+				/** @deprecated */
+				public static getShowGTalkServiceStatus(param0: android.content.ContentResolver): boolean;
 				public static getUriFor(param0: android.net.Uri, param1: string): android.net.Uri;
 				public static putConfiguration(param0: android.content.ContentResolver, param1: android.content.res.Configuration): boolean;
 				public static getString(param0: android.content.ContentResolver, param1: string): string;
 				public static getFloat(param0: android.content.ContentResolver, param1: string, param2: number): number;
 				public constructor();
 				public static getConfiguration(param0: android.content.ContentResolver, param1: android.content.res.Configuration): void;
-				public static getShowGTalkServiceStatus(param0: android.content.ContentResolver): boolean;
 				public static getUriFor(param0: string): android.net.Uri;
 				public static putInt(param0: android.content.ContentResolver, param1: string, param2: number): boolean;
 				public static getLong(param0: android.content.ContentResolver, param1: string): number;
@@ -43780,8 +43337,9 @@ declare module android {
 				public static SHORTCUT: string;
 				public static WORD: string;
 				public static _ID: string;
-				public static addWord(param0: android.content.Context, param1: string, param2: number, param3: string, param4: java.util.Locale): void;
+				/** @deprecated */
 				public static addWord(param0: android.content.Context, param1: string, param2: number, param3: number): void;
+				public static addWord(param0: android.content.Context, param1: string, param2: number, param3: string, param4: java.util.Locale): void;
 				public constructor();
 			}
 		}
@@ -43904,6 +43462,8 @@ declare module android {
 			public getElement(): android.renderscript.Element;
 			public copy1DRangeFrom(param0: number, param1: number, param2: any): void;
 			public generateMipmaps(): void;
+			/** @deprecated */
+			public resize(param0: number): void;
 			public copy1DRangeFrom(param0: number, param1: number, param2: native.Array<number>): void;
 			public copy1DRangeFromUnchecked(param0: number, param1: number, param2: native.Array<number>): void;
 			public copy1DRangeTo(param0: number, param1: number, param2: native.Array<number>): void;
@@ -43922,7 +43482,6 @@ declare module android {
 			public destroy(): void;
 			public copyFromUnchecked(param0: any): void;
 			public ioSend(): void;
-			public resize(param0: number): void;
 			public copy1DRangeTo(param0: number, param1: number, param2: any): void;
 			public copy2DRangeFrom(param0: number, param1: number, param2: number, param3: number, param4: android.renderscript.Allocation, param5: number, param6: number): void;
 			public getTimeStamp(): number;
@@ -43967,18 +43526,20 @@ declare module android {
 	export module renderscript {
 		export class AllocationAdapter extends android.renderscript.Allocation {
 			public static class: java.lang.Class<android.renderscript.AllocationAdapter>;
-			public setFace(param0: android.renderscript.Type.CubemapFace): void;
-			public setY(param0: number): void;
-			public setZ(param0: number): void;
+			/** @deprecated */
+			public resize(param0: number): void;
 			public static createTyped(param0: android.renderscript.RenderScript, param1: android.renderscript.Type): android.renderscript.Allocation;
-			public setX(param0: number): void;
-			public static create1D(param0: android.renderscript.RenderScript, param1: android.renderscript.Allocation): android.renderscript.AllocationAdapter;
 			public static createTyped(param0: android.renderscript.RenderScript, param1: android.renderscript.Allocation, param2: android.renderscript.Type): android.renderscript.AllocationAdapter;
 			public setLOD(param0: number): void;
 			public static create2D(param0: android.renderscript.RenderScript, param1: android.renderscript.Allocation): android.renderscript.AllocationAdapter;
-			public static createTyped(param0: android.renderscript.RenderScript, param1: android.renderscript.Type, param2: android.renderscript.Allocation.MipmapControl, param3: number): android.renderscript.Allocation;
 			public resize(param0: number): void;
 			public static createTyped(param0: android.renderscript.RenderScript, param1: android.renderscript.Type, param2: number): android.renderscript.Allocation;
+			public setFace(param0: android.renderscript.Type.CubemapFace): void;
+			public setY(param0: number): void;
+			public setZ(param0: number): void;
+			public setX(param0: number): void;
+			public static create1D(param0: android.renderscript.RenderScript, param1: android.renderscript.Allocation): android.renderscript.AllocationAdapter;
+			public static createTyped(param0: android.renderscript.RenderScript, param1: android.renderscript.Type, param2: android.renderscript.Allocation.MipmapControl, param3: number): android.renderscript.Allocation;
 		}
 	}
 }
@@ -44110,6 +43671,8 @@ declare module android {
 			public getSubElementArraySize(param0: number): number;
 			public static MATRIX_2X2(param0: android.renderscript.RenderScript): android.renderscript.Element;
 			public static U64_3(param0: android.renderscript.RenderScript): android.renderscript.Element;
+			/** @deprecated */
+			public static MATRIX4X4(param0: android.renderscript.RenderScript): android.renderscript.Element;
 			public static F16(param0: android.renderscript.RenderScript): android.renderscript.Element;
 			public static U16_4(param0: android.renderscript.RenderScript): android.renderscript.Element;
 			public static RGB_888(param0: android.renderscript.RenderScript): android.renderscript.Element;
@@ -44151,7 +43714,6 @@ declare module android {
 			public isCompatible(param0: android.renderscript.Element): boolean;
 			public static I8_3(param0: android.renderscript.RenderScript): android.renderscript.Element;
 			public static ELEMENT(param0: android.renderscript.RenderScript): android.renderscript.Element;
-			public static MATRIX4X4(param0: android.renderscript.RenderScript): android.renderscript.Element;
 			public static F16_4(param0: android.renderscript.RenderScript): android.renderscript.Element;
 			public getDataType(): android.renderscript.Element.DataType;
 			public static U8_3(param0: android.renderscript.RenderScript): android.renderscript.Element;
@@ -44755,11 +44317,14 @@ declare module android {
 	export module renderscript {
 		export class ScriptGroup extends android.renderscript.BaseObj {
 			public static class: java.lang.Class<android.renderscript.ScriptGroup>;
-			public execute(): void;
-			public setInput(param0: android.renderscript.Script.KernelID, param1: android.renderscript.Allocation): void;
-			public execute(param0: native.Array<any>): native.Array<any>;
+			/** @deprecated */
 			public setOutput(param0: android.renderscript.Script.KernelID, param1: android.renderscript.Allocation): void;
+			public execute(param0: native.Array<any>): native.Array<any>;
 			public destroy(): void;
+			/** @deprecated */
+			public setInput(param0: android.renderscript.Script.KernelID, param1: android.renderscript.Allocation): void;
+			/** @deprecated */
+			public execute(): void;
 		}
 		export module ScriptGroup {
 			export class Binding extends java.lang.Object {
@@ -45018,7 +44583,6 @@ declare module android {
 			public static class: java.lang.Class<android.renderscript.ScriptIntrinsicColorMatrix>;
 			public forEach(param0: number, param1: native.Array<android.renderscript.Allocation>, param2: android.renderscript.Allocation, param3: android.renderscript.FieldPacker): void;
 			public forEach(param0: android.renderscript.Allocation, param1: android.renderscript.Allocation): void;
-			public static create(param0: android.renderscript.RenderScript, param1: android.renderscript.Element): android.renderscript.ScriptIntrinsicColorMatrix;
 			public forEach(param0: number, param1: android.renderscript.Allocation, param2: android.renderscript.Allocation, param3: android.renderscript.FieldPacker, param4: android.renderscript.Script.LaunchOptions): void;
 			public forEach(param0: number, param1: android.renderscript.Allocation, param2: android.renderscript.Allocation, param3: android.renderscript.FieldPacker): void;
 			public setAdd(param0: number, param1: number, param2: number, param3: number): void;
@@ -45031,6 +44595,8 @@ declare module android {
 			public static create(param0: android.renderscript.RenderScript): android.renderscript.ScriptIntrinsicColorMatrix;
 			public setColorMatrix(param0: android.renderscript.Matrix3f): void;
 			public getKernelID(): android.renderscript.Script.KernelID;
+			/** @deprecated */
+			public static create(param0: android.renderscript.RenderScript, param1: android.renderscript.Element): android.renderscript.ScriptIntrinsicColorMatrix;
 			public setGreyscale(): void;
 		}
 	}
@@ -45357,8 +44923,9 @@ declare module android {
 			public static getPrivateKey(param0: android.content.Context, param1: string): java.security.PrivateKey;
 			public static getCertificateChain(param0: android.content.Context, param1: string): native.Array<java.security.cert.X509Certificate>;
 			public static isKeyAlgorithmSupported(param0: string): boolean;
-			public static choosePrivateKeyAlias(param0: android.app.Activity, param1: android.security.KeyChainAliasCallback, param2: native.Array<string>, param3: native.Array<java.security.Principal>, param4: android.net.Uri, param5: string): void;
+			/** @deprecated */
 			public static isBoundKeyAlgorithm(param0: string): boolean;
+			public static choosePrivateKeyAlias(param0: android.app.Activity, param1: android.security.KeyChainAliasCallback, param2: native.Array<string>, param3: native.Array<java.security.Principal>, param4: android.net.Uri, param5: string): void;
 			public constructor();
 			public static choosePrivateKeyAlias(param0: android.app.Activity, param1: android.security.KeyChainAliasCallback, param2: native.Array<string>, param3: native.Array<java.security.Principal>, param4: string, param5: number, param6: string): void;
 		}
@@ -45725,19 +45292,23 @@ declare module android {
 				public static SEND_STATUS_OK: number;
 				public static SEND_STATUS_RETRY_ON_CARRIER_NETWORK: number;
 				public static SERVICE_INTERFACE: string;
-				public onFilterSms(param0: android.service.carrier.MessagePdu, param1: string, param2: number, param3: number, param4: android.service.carrier.CarrierMessagingService.ResultCallback<java.lang.Boolean>): void;
-				public onSendMultipartTextSms(param0: java.util.List<string>, param1: number, param2: string, param3: android.service.carrier.CarrierMessagingService.ResultCallback<android.service.carrier.CarrierMessagingService.SendMultipartSmsResult>): void;
-				public onSendTextSms(param0: string, param1: number, param2: string, param3: android.service.carrier.CarrierMessagingService.ResultCallback<android.service.carrier.CarrierMessagingService.SendSmsResult>): void;
+				/** @deprecated */
+				public onSendDataSms(param0: native.Array<number>, param1: number, param2: string, param3: number, param4: android.service.carrier.CarrierMessagingService.ResultCallback<android.service.carrier.CarrierMessagingService.SendSmsResult>): void;
 				public onDownloadMms(param0: android.net.Uri, param1: number, param2: android.net.Uri, param3: android.service.carrier.CarrierMessagingService.ResultCallback<java.lang.Integer>): void;
 				public onSendTextSms(param0: string, param1: number, param2: string, param3: number, param4: android.service.carrier.CarrierMessagingService.ResultCallback<android.service.carrier.CarrierMessagingService.SendSmsResult>): void;
+				/** @deprecated */
+				public onSendMultipartTextSms(param0: java.util.List<string>, param1: number, param2: string, param3: android.service.carrier.CarrierMessagingService.ResultCallback<android.service.carrier.CarrierMessagingService.SendMultipartSmsResult>): void;
 				public onSendMms(param0: android.net.Uri, param1: number, param2: android.net.Uri, param3: android.service.carrier.CarrierMessagingService.ResultCallback<android.service.carrier.CarrierMessagingService.SendMmsResult>): void;
 				public constructor();
 				public onReceiveTextSms(param0: android.service.carrier.MessagePdu, param1: string, param2: number, param3: number, param4: android.service.carrier.CarrierMessagingService.ResultCallback<java.lang.Integer>): void;
 				public onBind(param0: android.content.Intent): android.os.IBinder;
+				/** @deprecated */
+				public onFilterSms(param0: android.service.carrier.MessagePdu, param1: string, param2: number, param3: number, param4: android.service.carrier.CarrierMessagingService.ResultCallback<java.lang.Boolean>): void;
 				public constructor(param0: android.content.Context);
-				public onSendDataSms(param0: native.Array<number>, param1: number, param2: string, param3: number, param4: android.service.carrier.CarrierMessagingService.ResultCallback<android.service.carrier.CarrierMessagingService.SendSmsResult>): void;
 				public onSendDataSms(param0: native.Array<number>, param1: number, param2: string, param3: number, param4: number, param5: android.service.carrier.CarrierMessagingService.ResultCallback<android.service.carrier.CarrierMessagingService.SendSmsResult>): void;
 				public onTrimMemory(param0: number): void;
+				/** @deprecated */
+				public onSendTextSms(param0: string, param1: number, param2: string, param3: android.service.carrier.CarrierMessagingService.ResultCallback<android.service.carrier.CarrierMessagingService.SendSmsResult>): void;
 				public onSendMultipartTextSms(param0: java.util.List<string>, param1: number, param2: string, param3: number, param4: android.service.carrier.CarrierMessagingService.ResultCallback<android.service.carrier.CarrierMessagingService.SendMultipartSmsResult>): void;
 			}
 			export module CarrierMessagingService {
@@ -45781,12 +45352,12 @@ declare module android {
 			export abstract class CarrierService extends android.app.Service {
 				public static class: java.lang.Class<android.service.carrier.CarrierService>;
 				public static CARRIER_SERVICE_INTERFACE: string;
+				public onLoadConfig(param0: android.service.carrier.CarrierIdentifier): any;
 				public onBind(param0: android.content.Intent): android.os.IBinder;
 				public constructor(param0: android.content.Context);
 				public notifyCarrierNetworkChange(param0: boolean): void;
 				public onTrimMemory(param0: number): void;
 				public constructor();
-				public onLoadConfig(param0: android.service.carrier.CarrierIdentifier): android.os.PersistableBundle;
 			}
 		}
 	}
@@ -45906,64 +45477,7 @@ declare module android {
 	}
 }
 
-declare module android {
-	export module service {
-		export module media {
-			export abstract class CameraPrewarmService extends android.app.Service {
-				public static class: java.lang.Class<any>;
-				public onBind(param0: android.content.Intent): android.os.IBinder;
-				public onPrewarm(): void;
-				public onUnbind(param0: android.content.Intent): boolean;
-				public constructor(param0: android.content.Context);
-				public onTrimMemory(param0: number): void;
-				public constructor();
-				public onCooldown(param0: boolean): void;
-			}
-		}
-	}
-}
 
-declare module android {
-	export module service {
-		export module media {
-			export abstract class MediaBrowserService extends android.app.Service {
-				public static class: java.lang.Class<any>;
-				public static SERVICE_INTERFACE: string;
-				public onLoadItem(param0: string, param1: any): void;
-				public notifyChildrenChanged(param0: string): void;
-				public onGetRoot(param0: string, param1: number, param2: android.os.Bundle): any;
-				public setSessionToken(param0: any): void;
-				public constructor();
-				public notifyChildrenChanged(param0: string, param1: android.os.Bundle): void;
-				public dump(param0: java.io.FileDescriptor, param1: java.io.PrintWriter, param2: native.Array<string>): void;
-				public onBind(param0: android.content.Intent): android.os.IBinder;
-				public getBrowserRootHints(): android.os.Bundle;
-				public constructor(param0: android.content.Context);
-				public onCreate(): void;
-				public onLoadChildren(param0: string, param1: any, param2: android.os.Bundle): void;
-				public onTrimMemory(param0: number): void;
-				public getSessionToken(): any;
-				public onLoadChildren(param0: string, param1: any): void;
-			}
-			export module MediaBrowserService {
-				export class BrowserRoot extends java.lang.Object {
-					public static class: java.lang.Class<any>;
-					public static EXTRA_OFFLINE: string;
-					public static EXTRA_RECENT: string;
-					public static EXTRA_SUGGESTED: string;
-					public getExtras(): android.os.Bundle;
-					public constructor(param0: string, param1: android.os.Bundle);
-					public getRootId(): string;
-				}
-				export class Result<T>  extends java.lang.Object {
-					public static class: java.lang.Class<any>;
-					public sendResult(param0: T): void;
-					public detach(): void;
-				}
-			}
-		}
-	}
-}
 
 declare module android {
 	export module service {
@@ -46051,11 +45565,12 @@ declare module android {
 				public constructor();
 				public requestUnbind(): void;
 				public onNotificationPosted(param0: android.service.notification.StatusBarNotification, param1: android.service.notification.NotificationListenerService.RankingMap): void;
-				public cancelNotification(param0: string, param1: string, param2: number): void;
 				public cancelNotifications(param0: native.Array<string>): void;
 				public cancelNotification(param0: string): void;
 				public onTrimMemory(param0: number): void;
 				public getActiveNotifications(): native.Array<android.service.notification.StatusBarNotification>;
+				/** @deprecated */
+				public cancelNotification(param0: string, param1: string, param2: number): void;
 				public setNotificationsShown(param0: native.Array<string>): void;
 				public getCurrentInterruptionFilter(): number;
 				public onInterruptionFilterChanged(param0: number): void;
@@ -46108,7 +45623,6 @@ declare module android {
 				public static CREATOR: android.os.Parcelable.Creator<android.service.notification.StatusBarNotification>;
 				public getPostTime(): number;
 				public isOngoing(): boolean;
-				public getUserId(): number;
 				public writeToParcel(param0: android.os.Parcel, param1: number): void;
 				public setOverrideGroupKey(param0: string): void;
 				public constructor(param0: string, param1: string, param2: number, param3: string, param4: number, param5: number, param6: number, param7: android.app.Notification, param8: android.os.UserHandle, param9: number);
@@ -46117,6 +45631,8 @@ declare module android {
 				public getId(): number;
 				public getTag(): string;
 				public isGroup(): boolean;
+				/** @deprecated */
+				public getUserId(): number;
 				public toString(): string;
 				public getKey(): string;
 				public constructor(param0: android.os.Parcel);
@@ -46192,7 +45708,7 @@ declare module android {
 		export module restrictions {
 			export abstract class RestrictionsReceiver extends android.content.BroadcastReceiver {
 				public static class: java.lang.Class<android.service.restrictions.RestrictionsReceiver>;
-				public onRequestPermission(param0: android.content.Context, param1: string, param2: string, param3: string, param4: android.os.PersistableBundle): void;
+				public onRequestPermission(param0: android.content.Context, param1: string, param2: string, param3: string, param4: any): void;
 				public onReceive(param0: android.content.Context, param1: android.content.Intent): void;
 				public constructor();
 			}
@@ -46357,8 +45873,9 @@ declare module android {
 				export class AbortVoiceRequest extends android.service.voice.VoiceInteractionSession.Request {
 					public static class: java.lang.Class<android.service.voice.VoiceInteractionSession.AbortVoiceRequest>;
 					public getVoicePrompt(): android.app.VoiceInteractor.Prompt;
-					public getMessage(): string;
 					public sendAbortResult(param0: android.os.Bundle): void;
+					/** @deprecated */
+					public getMessage(): string;
 				}
 				export class CommandRequest extends android.service.voice.VoiceInteractionSession.Request {
 					public static class: java.lang.Class<android.service.voice.VoiceInteractionSession.CommandRequest>;
@@ -46369,12 +45886,14 @@ declare module android {
 				export class CompleteVoiceRequest extends android.service.voice.VoiceInteractionSession.Request {
 					public static class: java.lang.Class<android.service.voice.VoiceInteractionSession.CompleteVoiceRequest>;
 					public getVoicePrompt(): android.app.VoiceInteractor.Prompt;
-					public getMessage(): string;
 					public sendCompleteResult(param0: android.os.Bundle): void;
+					/** @deprecated */
+					public getMessage(): string;
 				}
 				export class ConfirmationRequest extends android.service.voice.VoiceInteractionSession.Request {
 					public static class: java.lang.Class<android.service.voice.VoiceInteractionSession.ConfirmationRequest>;
 					public getVoicePrompt(): android.app.VoiceInteractor.Prompt;
+					/** @deprecated */
 					public getPrompt(): string;
 					public sendConfirmationResult(param0: boolean, param1: android.os.Bundle): void;
 				}
@@ -46392,6 +45911,7 @@ declare module android {
 					public static class: java.lang.Class<android.service.voice.VoiceInteractionSession.PickOptionRequest>;
 					public sendPickOptionResult(param0: native.Array<android.app.VoiceInteractor.PickOptionRequest.Option>, param1: android.os.Bundle): void;
 					public getVoicePrompt(): android.app.VoiceInteractor.Prompt;
+					/** @deprecated */
 					public getPrompt(): string;
 					public getOptions(): native.Array<android.app.VoiceInteractor.PickOptionRequest.Option>;
 					public sendIntermediatePickOptionResult(param0: native.Array<android.app.VoiceInteractor.PickOptionRequest.Option>, param1: android.os.Bundle): void;
@@ -46682,11 +46202,12 @@ declare module android {
 				public getCallerUid(): number;
 				public getSpeechRate(): number;
 				public getVoiceName(): string;
+				/** @deprecated */
+				public getText(): string;
 				public getCountry(): string;
 				public getLanguage(): string;
 				public getVariant(): string;
 				public getPitch(): number;
-				public getText(): string;
 			}
 		}
 	}
@@ -46715,45 +46236,56 @@ declare module android {
 				public static QUEUE_FLUSH: number;
 				public static STOPPED: number;
 				public static SUCCESS: number;
-				public setEngineByPackageName(param0: string): number;
+				/** @deprecated */
+				public playSilence(param0: number, param1: number, param2: java.util.HashMap<string,string>): number;
 				public setAudioAttributes(param0: any): number;
 				public getVoice(): android.speech.tts.Voice;
 				public addSpeech(param0: string, param1: string, param2: number): number;
-				public addEarcon(param0: string, param1: string): number;
 				public playEarcon(param0: string, param1: number, param2: android.os.Bundle, param3: string): number;
 				public getAvailableLanguages(): java.util.Set<java.util.Locale>;
 				public synthesizeToFile(param0: string, param1: android.os.Bundle, param2: java.io.File, param3: string): number;
+				/** @deprecated */
+				public getLanguage(): java.util.Locale;
 				public getVoices(): java.util.Set<android.speech.tts.Voice>;
-				public speak(param0: string, param1: number, param2: java.util.HashMap<string,string>): number;
+				/** @deprecated */
+				public getFeatures(param0: java.util.Locale): java.util.Set<string>;
 				public shutdown(): void;
 				public isSpeaking(): boolean;
+				/** @deprecated */
+				public playEarcon(param0: string, param1: number, param2: java.util.HashMap<string,string>): number;
 				public getDefaultEngine(): string;
 				public setPitch(param0: number): number;
 				public setOnUtteranceProgressListener(param0: android.speech.tts.UtteranceProgressListener): number;
 				public addEarcon(param0: string, param1: string, param2: number): number;
-				public getFeatures(param0: java.util.Locale): java.util.Set<string>;
+				/** @deprecated */
+				public getDefaultLanguage(): java.util.Locale;
 				public setVoice(param0: android.speech.tts.Voice): number;
-				public areDefaultsEnforced(): boolean;
 				public getDefaultVoice(): android.speech.tts.Voice;
-				public playEarcon(param0: string, param1: number, param2: java.util.HashMap<string,string>): number;
-				public getLanguage(): java.util.Locale;
 				public getEngines(): java.util.List<android.speech.tts.TextToSpeech.EngineInfo>;
-				public synthesizeToFile(param0: string, param1: java.util.HashMap<string,string>, param2: string): number;
+				/** @deprecated */
+				public speak(param0: string, param1: number, param2: java.util.HashMap<string,string>): number;
 				public addSpeech(param0: string, param1: java.io.File): number;
 				public constructor(param0: android.content.Context, param1: android.speech.tts.TextToSpeech.OnInitListener);
 				public setLanguage(param0: java.util.Locale): number;
-				public playSilence(param0: number, param1: number, param2: java.util.HashMap<string,string>): number;
 				public addSpeech(param0: string, param1: string): number;
 				public constructor(param0: android.content.Context, param1: android.speech.tts.TextToSpeech.OnInitListener, param2: string);
 				public isLanguageAvailable(param0: java.util.Locale): number;
+				/** @deprecated */
+				public areDefaultsEnforced(): boolean;
+				/** @deprecated */
+				public addEarcon(param0: string, param1: string): number;
+				/** @deprecated */
+				public setEngineByPackageName(param0: string): number;
 				public setSpeechRate(param0: number): number;
+				/** @deprecated */
+				public synthesizeToFile(param0: string, param1: java.util.HashMap<string,string>, param2: string): number;
 				public addEarcon(param0: string, param1: java.io.File): number;
 				public stop(): number;
-				public setOnUtteranceCompletedListener(param0: android.speech.tts.TextToSpeech.OnUtteranceCompletedListener): number;
 				public playSilentUtterance(param0: number, param1: number, param2: string): number;
+				/** @deprecated */
+				public setOnUtteranceCompletedListener(param0: android.speech.tts.TextToSpeech.OnUtteranceCompletedListener): number;
 				public static getMaxSpeechInputLength(): number;
 				public speak(param0: string, param1: number, param2: android.os.Bundle, param3: string): number;
-				public getDefaultLanguage(): java.util.Locale;
 			}
 			export module TextToSpeech {
 				export class Engine extends java.lang.Object {
@@ -46857,6 +46389,7 @@ declare module android {
 			export abstract class UtteranceProgressListener extends java.lang.Object {
 				public static class: java.lang.Class<android.speech.tts.UtteranceProgressListener>;
 				public onAudioAvailable(param0: string, param1: native.Array<number>): void;
+				/** @deprecated */
 				public onError(param0: string): void;
 				public onDone(param0: string): void;
 				public onStop(param0: string, param1: boolean): void;
@@ -48565,9 +48098,9 @@ declare module android {
 			public static KEY_VVM_PREFETCH_BOOL: string;
 			public static KEY_VVM_TYPE_STRING: string;
 			public static KEY_WORLD_PHONE_BOOL: string;
-			public getConfig(): android.os.PersistableBundle;
+			public getConfig(): any;
 			public notifyConfigChangedForSubId(param0: number): void;
-			public getConfigForSubId(param0: number): android.os.PersistableBundle;
+			public getConfigForSubId(param0: number): any;
 		}
 	}
 }
@@ -48599,12 +48132,13 @@ declare module android {
 			public equals(param0: any): boolean;
 			public getMnc(): number;
 			public toString(): string;
+			/** @deprecated */
+			public getPsc(): number;
 			public getMcc(): number;
 			public getArfcn(): number;
 			public describeContents(): number;
 			public getLac(): number;
 			public getBsic(): number;
-			public getPsc(): number;
 			public writeToParcel(param0: android.os.Parcel, param1: number): void;
 			public getCid(): number;
 			public hashCode(): number;
@@ -48868,14 +48402,18 @@ declare module android {
 			public getNetworkType(): number;
 			public getLac(): number;
 			public getPsc(): number;
-			public constructor();
-			public setCid(param0: number): void;
+			/** @deprecated */
 			public setRssi(param0: number): void;
+			/** @deprecated */
+			public setCid(param0: number): void;
+			/** @deprecated */
+			public constructor();
 			public toString(): string;
 			public constructor(param0: android.os.Parcel);
 			public describeContents(): number;
 			public constructor(param0: number, param1: string, param2: number);
 			public writeToParcel(param0: android.os.Parcel, param1: number): void;
+			/** @deprecated */
 			public constructor(param0: number, param1: number);
 			public getCid(): number;
 		}
@@ -48912,11 +48450,12 @@ declare module android {
 			public static getStrippedReversed(param0: string): string;
 			public static networkPortionToCalledPartyBCD(param0: string): native.Array<number>;
 			public static numberToCalledPartyBCD(param0: string): native.Array<number>;
+			/** @deprecated */
+			public static formatNumber(param0: android.text.Editable, param1: number): void;
 			public static isISODigit(param0: string): boolean;
 			public static isDialable(param0: string): boolean;
 			public static isGlobalPhoneNumber(param0: string): boolean;
 			public static extractPostDialPortion(param0: string): string;
-			public static formatNanpNumber(param0: android.text.Editable): void;
 			public static isNonSeparator(param0: string): boolean;
 			public static normalizeNumber(param0: string): string;
 			public static isEmergencyNumber(param0: string): boolean;
@@ -48924,18 +48463,22 @@ declare module android {
 			public static compare(param0: android.content.Context, param1: string, param2: string): boolean;
 			public static calledPartyBCDFragmentToString(param0: native.Array<number>, param1: number, param2: number): string;
 			public static toaFromString(param0: string): number;
-			public static formatNumber(param0: android.text.Editable, param1: number): void;
 			public static isVoiceMailNumber(param0: string): boolean;
-			public static formatJapaneseNumber(param0: android.text.Editable): void;
 			public static extractNetworkPortion(param0: string): string;
-			public static formatNumber(param0: string): string;
 			public static networkPortionToCalledPartyBCDWithLength(param0: string): native.Array<number>;
+			/** @deprecated */
+			public static formatNumber(param0: string): string;
+			/** @deprecated */
 			public static getFormatTypeForLocale(param0: java.util.Locale): number;
 			public static calledPartyBCDToString(param0: native.Array<number>, param1: number, param2: number): string;
 			public static formatNumber(param0: string, param1: string): string;
 			public static formatNumberToE164(param0: string, param1: string): string;
 			public static formatNumber(param0: string, param1: string, param2: string): string;
 			public static createTtsSpan(param0: string): android.text.style.TtsSpan;
+			/** @deprecated */
+			public static formatJapaneseNumber(param0: android.text.Editable): void;
+			/** @deprecated */
+			public static formatNanpNumber(param0: android.text.Editable): void;
 			public constructor();
 			public static is12Key(param0: string): boolean;
 			public static convertKeypadLettersToDigits(param0: string): string;
@@ -48970,8 +48513,9 @@ declare module android {
 			public static LISTEN_SIGNAL_STRENGTHS: number;
 			public onMessageWaitingIndicatorChanged(param0: boolean): void;
 			public onServiceStateChanged(param0: android.telephony.ServiceState): void;
-			public onSignalStrengthChanged(param0: number): void;
 			public onDataActivity(param0: number): void;
+			/** @deprecated */
+			public onSignalStrengthChanged(param0: number): void;
 			public onDataConnectionStateChanged(param0: number, param1: number): void;
 			public onSignalStrengthsChanged(param0: android.telephony.SignalStrength): void;
 			public onCellInfoChanged(param0: java.util.List<android.telephony.CellInfo>): void;
@@ -49123,14 +48667,19 @@ declare module android {
 			public static MAX_USER_DATA_SEPTETS: number;
 			public static MAX_USER_DATA_SEPTETS_WITH_HEADER: number;
 			public isReplace(): boolean;
-			public getStatusOnSim(): number;
+			/** @deprecated */
+			public getIndexOnSim(): number;
 			public getEmailBody(): string;
 			public getMessageClass(): android.telephony.SmsMessage.MessageClass;
 			public isStatusReportMessage(): boolean;
 			public static getSubmitPdu(param0: string, param1: string, param2: number, param3: native.Array<number>, param4: boolean): android.telephony.SmsMessage.SubmitPdu;
 			public getTimestampMillis(): number;
+			/** @deprecated */
+			public getStatusOnSim(): number;
 			public getPseudoSubject(): string;
 			public getEmailFrom(): string;
+			/** @deprecated */
+			public static createFromPdu(param0: native.Array<number>): android.telephony.SmsMessage;
 			public isCphsMwiMessage(): boolean;
 			public getStatus(): number;
 			public getProtocolIdentifier(): number;
@@ -49142,7 +48691,6 @@ declare module android {
 			public getIndexOnIcc(): number;
 			public static calculateLength(param0: string, param1: boolean): native.Array<number>;
 			public isMwiDontStore(): boolean;
-			public getIndexOnSim(): number;
 			public static getTPLayerLengthForPDU(param0: string): number;
 			public getPdu(): native.Array<number>;
 			public getUserData(): native.Array<number>;
@@ -49151,7 +48699,6 @@ declare module android {
 			public isMWIClearMessage(): boolean;
 			public static getSubmitPdu(param0: string, param1: string, param2: string, param3: boolean): android.telephony.SmsMessage.SubmitPdu;
 			public isEmail(): boolean;
-			public static createFromPdu(param0: native.Array<number>): android.telephony.SmsMessage;
 			public isMWISetMessage(): boolean;
 			public isReplyPathPresent(): boolean;
 		}
@@ -49335,10 +48882,11 @@ declare module android {
 			public iccCloseLogicalChannel(param0: number): boolean;
 			public getAllCellInfo(): java.util.List<android.telephony.CellInfo>;
 			public isVoicemailVibrationEnabled(param0: android.telecom.PhoneAccountHandle): boolean;
+			/** @deprecated */
+			public getNeighboringCellInfo(): java.util.List<android.telephony.NeighboringCellInfo>;
 			public iccTransmitApduLogicalChannel(param0: number, param1: number, param2: number, param3: number, param4: number, param5: number, param6: string): string;
 			public hasIccCard(): boolean;
 			public sendEnvelopeWithStatus(param0: string): string;
-			public getNeighboringCellInfo(): java.util.List<android.telephony.NeighboringCellInfo>;
 			public setLine1NumberForDisplay(param0: string, param1: string): boolean;
 			public getPhoneType(): number;
 			public getSimState(): number;
@@ -49411,11 +48959,16 @@ declare module android {
 				public static STATUS_ON_SIM_SENT: number;
 				public static STATUS_ON_SIM_UNREAD: number;
 				public static STATUS_ON_SIM_UNSENT: number;
-				public sendMultipartTextMessage(param0: string, param1: string, param2: java.util.ArrayList<string>, param3: java.util.ArrayList<android.app.PendingIntent>, param4: java.util.ArrayList<android.app.PendingIntent>): void;
-				public static getDefault(): android.telephony.gsm.SmsManager;
-				public sendDataMessage(param0: string, param1: string, param2: number, param3: native.Array<number>, param4: android.app.PendingIntent, param5: android.app.PendingIntent): void;
+				/** @deprecated */
 				public sendTextMessage(param0: string, param1: string, param2: string, param3: android.app.PendingIntent, param4: android.app.PendingIntent): void;
+				/** @deprecated */
 				public divideMessage(param0: string): java.util.ArrayList<string>;
+				/** @deprecated */
+				public sendDataMessage(param0: string, param1: string, param2: number, param3: native.Array<number>, param4: android.app.PendingIntent, param5: android.app.PendingIntent): void;
+				/** @deprecated */
+				public static getDefault(): android.telephony.gsm.SmsManager;
+				/** @deprecated */
+				public sendMultipartTextMessage(param0: string, param1: string, param2: java.util.ArrayList<string>, param3: java.util.ArrayList<android.app.PendingIntent>, param4: java.util.ArrayList<android.app.PendingIntent>): void;
 			}
 		}
 	}
@@ -49433,36 +48986,66 @@ declare module android {
 				public static MAX_USER_DATA_BYTES: number;
 				public static MAX_USER_DATA_SEPTETS: number;
 				public static MAX_USER_DATA_SEPTETS_WITH_HEADER: number;
-				public isStatusReportMessage(): boolean;
-				public getPseudoSubject(): string;
-				public isMWIClearMessage(): boolean;
-				public getDisplayOriginatingAddress(): string;
-				public isEmail(): boolean;
-				public getMessageClass(): android.telephony.gsm.SmsMessage.MessageClass;
-				public isCphsMwiMessage(): boolean;
-				public getEmailBody(): string;
-				public constructor();
-				public static getSubmitPdu(param0: string, param1: string, param2: number, param3: native.Array<number>, param4: boolean): android.telephony.gsm.SmsMessage.SubmitPdu;
-				public getUserData(): native.Array<number>;
-				public getPdu(): native.Array<number>;
-				public isMwiDontStore(): boolean;
-				public getOriginatingAddress(): string;
-				public static getSubmitPdu(param0: string, param1: string, param2: string, param3: boolean): android.telephony.gsm.SmsMessage.SubmitPdu;
-				public getEmailFrom(): string;
+				/** @deprecated */
 				public getDisplayMessageBody(): string;
-				public getStatusOnSim(): number;
-				public isReplace(): boolean;
-				public isReplyPathPresent(): boolean;
-				public static getTPLayerLengthForPDU(param0: string): number;
-				public getStatus(): number;
-				public getIndexOnSim(): number;
-				public getMessageBody(): string;
+				/** @deprecated */
 				public static createFromPdu(param0: native.Array<number>): android.telephony.gsm.SmsMessage;
+				/** @deprecated */
 				public getServiceCenterAddress(): string;
+				/** @deprecated */
+				public getEmailFrom(): string;
+				/** @deprecated */
+				public getOriginatingAddress(): string;
+				/** @deprecated */
+				public getStatusOnSim(): number;
+				/** @deprecated */
 				public getTimestampMillis(): number;
+				/** @deprecated */
 				public getProtocolIdentifier(): number;
-				public isMWISetMessage(): boolean;
+				/** @deprecated */
 				public static calculateLength(param0: string, param1: boolean): native.Array<number>;
+				/** @deprecated */
+				public getIndexOnSim(): number;
+				/** @deprecated */
+				public getPdu(): native.Array<number>;
+				/** @deprecated */
+				public isReplace(): boolean;
+				/** @deprecated */
+				public static getSubmitPdu(param0: string, param1: string, param2: number, param3: native.Array<number>, param4: boolean): android.telephony.gsm.SmsMessage.SubmitPdu;
+				/** @deprecated */
+				public getStatus(): number;
+				/** @deprecated */
+				public isEmail(): boolean;
+				/** @deprecated */
+				public static getSubmitPdu(param0: string, param1: string, param2: string, param3: boolean): android.telephony.gsm.SmsMessage.SubmitPdu;
+				/** @deprecated */
+				public getMessageClass(): android.telephony.gsm.SmsMessage.MessageClass;
+				/** @deprecated */
+				public isMWISetMessage(): boolean;
+				/** @deprecated */
+				public getEmailBody(): string;
+				/** @deprecated */
+				public getPseudoSubject(): string;
+				/** @deprecated */
+				public isMWIClearMessage(): boolean;
+				/** @deprecated */
+				public isCphsMwiMessage(): boolean;
+				/** @deprecated */
+				public isReplyPathPresent(): boolean;
+				/** @deprecated */
+				public isStatusReportMessage(): boolean;
+				/** @deprecated */
+				public isMwiDontStore(): boolean;
+				/** @deprecated */
+				public getMessageBody(): string;
+				/** @deprecated */
+				public constructor();
+				/** @deprecated */
+				public getDisplayOriginatingAddress(): string;
+				/** @deprecated */
+				public getUserData(): native.Array<number>;
+				/** @deprecated */
+				public static getTPLayerLengthForPDU(param0: string): number;
 			}
 			export module SmsMessage {
 				export class MessageClass {
@@ -49481,7 +49064,10 @@ declare module android {
 					public encodedMessage: native.Array<number>;
 					public encodedScAddress: native.Array<number>;
 					public toString(): string;
+					/** @deprecated */
 					public constructor();
+					/** @deprecated */
+					public toString(): string;
 				}
 			}
 		}
@@ -49513,10 +49099,11 @@ declare module android {
 		export abstract class ActivityInstrumentationTestCase2<T>  extends android.test.ActivityTestCase {
 			public static class: java.lang.Class<android.test.ActivityInstrumentationTestCase2<any>>;
 			public countTestCases(): number;
-			public constructor(param0: string, param1: java.lang.Class<any>);
 			public run(): junit.framework.TestResult;
 			public constructor();
 			public getActivity(): any;
+			/** @deprecated */
+			public constructor(param0: string, param1: java.lang.Class<any>);
 			public setActivityInitialTouchMode(param0: boolean): void;
 			public setActivityIntent(param0: android.content.Intent): void;
 			public setUp(): void;
@@ -49610,9 +49197,10 @@ declare module android {
 			public addFailure(param0: junit.framework.Test, param1: junit.framework.AssertionFailedError): void;
 			public setTestClassName(param0: string, param1: string): void;
 			public constructor();
-			public setInstrumentaiton(param0: android.app.Instrumentation): void;
 			public getTestResult(): junit.framework.TestResult;
 			public setInstrumentation(param0: android.app.Instrumentation): void;
+			/** @deprecated */
+			public setInstrumentaiton(param0: android.app.Instrumentation): void;
 			public addError(param0: junit.framework.Test, param1: java.lang.Throwable): void;
 			public loadSuiteClass(param0: string): java.lang.Class<any>;
 			public addTestListener(param0: junit.framework.TestListener): void;
@@ -49713,6 +49301,7 @@ declare module android {
 			public constructor();
 			public sendRepeatedKeys(param0: native.Array<number>): void;
 			public tearDown(): void;
+			/** @deprecated */
 			public injectInsrumentation(param0: android.app.Instrumentation): void;
 			public launchActivity(param0: string, param1: java.lang.Class<any>, param2: android.os.Bundle): android.app.Activity;
 			public run(param0: junit.framework.TestResult): void;
@@ -50038,36 +49627,51 @@ declare module android {
 		export class TouchUtils extends java.lang.Object {
 			public static class: java.lang.Class<android.test.TouchUtils>;
 			public static dragViewToY(param0: android.test.InstrumentationTestCase, param1: android.view.View, param2: number, param3: number): number;
-			public static dragViewToX(param0: android.test.ActivityInstrumentationTestCase<any>, param1: android.view.View, param2: number, param3: number): number;
-			public static longClickView(param0: android.test.InstrumentationTestCase, param1: android.view.View): void;
-			public static dragViewToTop(param0: android.test.ActivityInstrumentationTestCase<any>, param1: android.view.View): void;
-			public static dragViewToX(param0: android.test.InstrumentationTestCase, param1: android.view.View, param2: number, param3: number): number;
-			public static dragViewToTop(param0: android.test.InstrumentationTestCase, param1: android.view.View, param2: number): void;
-			public static dragViewToTop(param0: android.test.ActivityInstrumentationTestCase<any>, param1: android.view.View, param2: number): void;
-			public static longClickView(param0: android.test.ActivityInstrumentationTestCase<any>, param1: android.view.View): void;
-			public static touchAndCancelView(param0: android.test.InstrumentationTestCase, param1: android.view.View): void;
-			public static dragViewTo(param0: android.test.ActivityInstrumentationTestCase<any>, param1: android.view.View, param2: number, param3: number, param4: number): number;
-			public static dragQuarterScreenDown(param0: android.test.InstrumentationTestCase, param1: android.app.Activity): void;
+			/** @deprecated */
 			public static dragViewToY(param0: android.test.ActivityInstrumentationTestCase<any>, param1: android.view.View, param2: number, param3: number): number;
-			public static scrollToBottom(param0: android.test.ActivityInstrumentationTestCase<any>, param1: android.view.ViewGroup): void;
-			public static dragQuarterScreenUp(param0: android.test.InstrumentationTestCase, param1: android.app.Activity): void;
+			public static longClickView(param0: android.test.InstrumentationTestCase, param1: android.view.View): void;
+			public static dragViewToX(param0: android.test.InstrumentationTestCase, param1: android.view.View, param2: number, param3: number): number;
+			/** @deprecated */
+			public static dragViewToTop(param0: android.test.ActivityInstrumentationTestCase<any>, param1: android.view.View, param2: number): void;
+			public static dragViewToTop(param0: android.test.InstrumentationTestCase, param1: android.view.View, param2: number): void;
+			public static touchAndCancelView(param0: android.test.InstrumentationTestCase, param1: android.view.View): void;
+			/** @deprecated */
+			public static longClickView(param0: android.test.ActivityInstrumentationTestCase<any>, param1: android.view.View): void;
+			/** @deprecated */
 			public static dragQuarterScreenUp(param0: android.test.ActivityInstrumentationTestCase<any>): void;
+			public static dragQuarterScreenDown(param0: android.test.InstrumentationTestCase, param1: android.app.Activity): void;
+			/** @deprecated */
+			public static dragViewToX(param0: android.test.ActivityInstrumentationTestCase<any>, param1: android.view.View, param2: number, param3: number): number;
+			/** @deprecated */
+			public static dragViewBy(param0: android.test.InstrumentationTestCase, param1: android.view.View, param2: number, param3: number, param4: number): number;
+			/** @deprecated */
 			public static scrollToTop(param0: android.test.ActivityInstrumentationTestCase<any>, param1: android.view.ViewGroup): void;
-			public static dragViewToBottom(param0: android.test.InstrumentationTestCase, param1: android.app.Activity, param2: android.view.View): void;
-			public static drag(param0: android.test.ActivityInstrumentationTestCase<any>, param1: number, param2: number, param3: number, param4: number, param5: number): void;
+			public static dragQuarterScreenUp(param0: android.test.InstrumentationTestCase, param1: android.app.Activity): void;
+			/** @deprecated */
+			public static dragQuarterScreenDown(param0: android.test.ActivityInstrumentationTestCase<any>): void;
+			/** @deprecated */
 			public static dragViewToBottom(param0: android.test.ActivityInstrumentationTestCase<any>, param1: android.view.View): void;
+			public static dragViewToBottom(param0: android.test.InstrumentationTestCase, param1: android.app.Activity, param2: android.view.View): void;
+			/** @deprecated */
+			public static dragViewToBottom(param0: android.test.ActivityInstrumentationTestCase<any>, param1: android.view.View, param2: number): void;
 			public static dragViewToTop(param0: android.test.InstrumentationTestCase, param1: android.view.View): void;
 			public static scrollToBottom(param0: android.test.InstrumentationTestCase, param1: android.app.Activity, param2: android.view.ViewGroup): void;
-			public static dragViewBy(param0: android.test.ActivityInstrumentationTestCase<any>, param1: android.view.View, param2: number, param3: number, param4: number): number;
 			public constructor();
 			public static scrollToTop(param0: android.test.InstrumentationTestCase, param1: android.app.Activity, param2: android.view.ViewGroup): void;
 			public static drag(param0: android.test.InstrumentationTestCase, param1: number, param2: number, param3: number, param4: number, param5: number): void;
 			public static dragViewToBottom(param0: android.test.InstrumentationTestCase, param1: android.app.Activity, param2: android.view.View, param3: number): void;
-			public static dragViewToBottom(param0: android.test.ActivityInstrumentationTestCase<any>, param1: android.view.View, param2: number): void;
-			public static dragQuarterScreenDown(param0: android.test.ActivityInstrumentationTestCase<any>): void;
-			public static dragViewBy(param0: android.test.InstrumentationTestCase, param1: android.view.View, param2: number, param3: number, param4: number): number;
+			/** @deprecated */
+			public static scrollToBottom(param0: android.test.ActivityInstrumentationTestCase<any>, param1: android.view.ViewGroup): void;
+			/** @deprecated */
+			public static dragViewToTop(param0: android.test.ActivityInstrumentationTestCase<any>, param1: android.view.View): void;
+			/** @deprecated */
+			public static dragViewTo(param0: android.test.ActivityInstrumentationTestCase<any>, param1: android.view.View, param2: number, param3: number, param4: number): number;
+			/** @deprecated */
+			public static drag(param0: android.test.ActivityInstrumentationTestCase<any>, param1: number, param2: number, param3: number, param4: number, param5: number): void;
 			public static clickView(param0: android.test.InstrumentationTestCase, param1: android.view.View): void;
 			public static dragViewTo(param0: android.test.InstrumentationTestCase, param1: android.view.View, param2: number, param3: number, param4: number): number;
+			/** @deprecated */
+			public static dragViewBy(param0: android.test.ActivityInstrumentationTestCase<any>, param1: android.view.View, param2: number, param3: number, param4: number): number;
 			public static tapView(param0: android.test.InstrumentationTestCase, param1: android.view.View): void;
 		}
 	}
@@ -50188,6 +49792,8 @@ declare module android {
 				public getApplicationContext(): android.content.Context;
 				public enforceCallingOrSelfUriPermission(param0: android.net.Uri, param1: number, param2: string): void;
 				public createDeviceProtectedStorageContext(): android.content.Context;
+				/** @deprecated */
+				public peekWallpaper(): android.graphics.drawable.Drawable;
 				public getCacheDir(): java.io.File;
 				public clearWallpaper(): void;
 				public unregisterReceiver(param0: android.content.BroadcastReceiver): void;
@@ -50199,6 +49805,8 @@ declare module android {
 				public enforceUriPermission(param0: android.net.Uri, param1: number, param2: number, param3: number, param4: string): void;
 				public startActivity(param0: android.content.Intent, param1: android.os.Bundle): void;
 				public sendStickyOrderedBroadcastAsUser(param0: android.content.Intent, param1: android.os.UserHandle, param2: android.content.BroadcastReceiver, param3: android.os.Handler, param4: number, param5: string, param6: android.os.Bundle): void;
+				/** @deprecated */
+				public sendStickyBroadcast(param0: android.content.Intent): void;
 				public getPackageName(): string;
 				public getPackageCodePath(): string;
 				public sendBroadcast(param0: android.content.Intent): void;
@@ -50221,6 +49829,8 @@ declare module android {
 				public getObbDir(): java.io.File;
 				public checkUriPermission(param0: android.net.Uri, param1: number, param2: number, param3: number): number;
 				public unbindService(param0: android.content.ServiceConnection): void;
+				/** @deprecated */
+				public setWallpaper(param0: java.io.InputStream): void;
 				public getExternalCacheDirs(): native.Array<java.io.File>;
 				public getTheme(): android.content.res.Resources.Theme;
 				public getWallpaper(): android.graphics.drawable.Drawable;
@@ -50231,17 +49841,29 @@ declare module android {
 				public enforceCallingOrSelfPermission(param0: string, param1: string): void;
 				public checkPermission(param0: string, param1: number, param2: number): number;
 				public sendBroadcast(param0: android.content.Intent, param1: string): void;
+				/** @deprecated */
+				public sendStickyOrderedBroadcastAsUser(param0: android.content.Intent, param1: android.os.UserHandle, param2: android.content.BroadcastReceiver, param3: android.os.Handler, param4: number, param5: string, param6: android.os.Bundle): void;
 				public createDisplayContext(param0: android.view.Display): android.content.Context;
 				public getSystemService(param0: string): any;
 				public checkUriPermission(param0: android.net.Uri, param1: string, param2: string, param3: number, param4: number, param5: number): number;
 				public startIntentSender(param0: android.content.IntentSender, param1: android.content.Intent, param2: number, param3: number, param4: number, param5: android.os.Bundle): void;
 				public getPackageResourcePath(): string;
 				public startActivities(param0: native.Array<android.content.Intent>): void;
+				/** @deprecated */
+				public sendStickyBroadcastAsUser(param0: android.content.Intent, param1: android.os.UserHandle): void;
 				public constructor();
 				public startIntentSender(param0: android.content.IntentSender, param1: android.content.Intent, param2: number, param3: number, param4: number): void;
 				public getExternalCacheDir(): java.io.File;
+				/** @deprecated */
+				public sendStickyOrderedBroadcast(param0: android.content.Intent, param1: android.content.BroadcastReceiver, param2: android.os.Handler, param3: number, param4: string, param5: android.os.Bundle): void;
 				public getWallpaperDesiredMinimumWidth(): number;
+				/** @deprecated */
+				public clearWallpaper(): void;
 				public enforceCallingUriPermission(param0: android.net.Uri, param1: number, param2: string): void;
+				/** @deprecated */
+				public getWallpaper(): android.graphics.drawable.Drawable;
+				/** @deprecated */
+				public getWallpaperDesiredMinimumWidth(): number;
 				public sendStickyBroadcastAsUser(param0: android.content.Intent, param1: android.os.UserHandle): void;
 				public checkCallingOrSelfPermission(param0: string): number;
 				public createPackageContext(param0: string, param1: number): android.content.Context;
@@ -50255,12 +49877,16 @@ declare module android {
 				public bindService(param0: android.content.Intent, param1: android.content.ServiceConnection, param2: number): boolean;
 				public startActivities(param0: native.Array<android.content.Intent>, param1: android.os.Bundle): void;
 				public getMainLooper(): android.os.Looper;
+				/** @deprecated */
+				public setWallpaper(param0: android.graphics.Bitmap): void;
 				public openOrCreateDatabase(param0: string, param1: number, param2: android.database.sqlite.SQLiteDatabase.CursorFactory, param3: android.database.DatabaseErrorHandler): android.database.sqlite.SQLiteDatabase;
 				public setTheme(param0: number): void;
 				public deleteSharedPreferences(param0: string): boolean;
 				public getFilesDir(): java.io.File;
 				public startService(param0: android.content.Intent): android.content.ComponentName;
 				public createConfigurationContext(param0: android.content.res.Configuration): android.content.Context;
+				/** @deprecated */
+				public getWallpaperDesiredMinimumHeight(): number;
 				public getApplicationInfo(): android.content.pm.ApplicationInfo;
 				public getExternalFilesDir(param0: string): java.io.File;
 				public databaseList(): native.Array<string>;
@@ -50271,12 +49897,16 @@ declare module android {
 				public getDataDir(): java.io.File;
 				public enforceUriPermission(param0: android.net.Uri, param1: string, param2: string, param3: number, param4: number, param5: number, param6: string): void;
 				public getFileStreamPath(param0: string): java.io.File;
+				/** @deprecated */
+				public removeStickyBroadcastAsUser(param0: android.content.Intent, param1: android.os.UserHandle): void;
 				public getDatabasePath(param0: string): java.io.File;
 				public getSystemService(param0: java.lang.Class<any>): any;
 				public revokeUriPermission(param0: android.net.Uri, param1: number): void;
 				public sendBroadcastAsUser(param0: android.content.Intent, param1: android.os.UserHandle): void;
 				public getClassLoader(): java.lang.ClassLoader;
 				public sendBroadcastAsUser(param0: android.content.Intent, param1: android.os.UserHandle, param2: string): void;
+				/** @deprecated */
+				public removeStickyBroadcast(param0: android.content.Intent): void;
 				public getDir(param0: string, param1: number): java.io.File;
 				public deleteDatabase(param0: string): boolean;
 				public checkCallingUriPermission(param0: android.net.Uri, param1: number): number;
@@ -50297,12 +49927,13 @@ declare module android {
 			export class MockCursor extends java.lang.Object implements android.database.Cursor {
 				public static class: java.lang.Class<android.test.mock.MockCursor>;
 				public getColumnCount(): number;
-				public requery(): boolean;
 				public getDouble(param0: number): number;
 				public moveToPrevious(): boolean;
 				public registerContentObserver(param0: android.database.ContentObserver): void;
 				public getString(param0: number): string;
 				public getShort(param0: number): number;
+				/** @deprecated */
+				public deactivate(): void;
 				public setNotificationUri(param0: android.content.ContentResolver, param1: android.net.Uri): void;
 				public move(param0: number): boolean;
 				public getColumnIndex(param0: string): number;
@@ -50312,6 +49943,8 @@ declare module android {
 				public constructor();
 				public isAfterLast(): boolean;
 				public getColumnName(param0: number): string;
+				/** @deprecated */
+				public requery(): boolean;
 				public getLong(param0: number): number;
 				public getInt(param0: number): number;
 				public getExtras(): android.os.Bundle;
@@ -50337,7 +49970,6 @@ declare module android {
 				public moveToFirst(): boolean;
 				public getFloat(param0: number): number;
 				public isBeforeFirst(): boolean;
-				public deactivate(): void;
 			}
 		}
 	}
@@ -50386,6 +50018,8 @@ declare module android {
 				public queryBroadcastReceivers(param0: android.content.Intent, param1: number): java.util.List<android.content.pm.ResolveInfo>;
 				public getText(param0: string, param1: number, param2: android.content.pm.ApplicationInfo): string;
 				public getComponentEnabledSetting(param0: android.content.ComponentName): number;
+				/** @deprecated */
+				public addPreferredActivity(param0: android.content.IntentFilter, param1: number, param2: native.Array<android.content.ComponentName>, param3: android.content.ComponentName): void;
 				public getActivityBanner(param0: android.content.Intent): android.graphics.drawable.Drawable;
 				public getResourcesForActivity(param0: android.content.ComponentName): android.content.res.Resources;
 				public getInstrumentationInfo(param0: android.content.ComponentName, param1: number): android.content.pm.InstrumentationInfo;
@@ -50417,6 +50051,8 @@ declare module android {
 				public getPermissionInfo(param0: string, param1: number): android.content.pm.PermissionInfo;
 				public getLaunchIntentForPackage(param0: string): android.content.Intent;
 				public getResourcesForApplication(param0: android.content.pm.ApplicationInfo): android.content.res.Resources;
+				/** @deprecated */
+				public removePackageFromPreferred(param0: string): void;
 				public getApplicationBanner(param0: android.content.pm.ApplicationInfo): android.graphics.drawable.Drawable;
 				public getLeanbackLaunchIntentForPackage(param0: string): android.content.Intent;
 				public queryPermissionsByGroup(param0: string, param1: number): java.util.List<android.content.pm.PermissionInfo>;
@@ -50446,6 +50082,8 @@ declare module android {
 				public queryContentProviders(param0: string, param1: number, param2: number): java.util.List<android.content.pm.ProviderInfo>;
 				public isSafeMode(): boolean;
 				public currentToCanonicalPackageNames(param0: native.Array<string>): native.Array<string>;
+				/** @deprecated */
+				public addPackageToPreferred(param0: string): void;
 				public getApplicationLogo(param0: android.content.pm.ApplicationInfo): android.graphics.drawable.Drawable;
 			}
 		}
@@ -50458,9 +50096,13 @@ declare module android {
 			export class MockResources extends android.content.res.Resources {
 				public static class: java.lang.Class<android.test.mock.MockResources>;
 				public getDimensionPixelSize(param0: number): number;
+				/** @deprecated */
+				public getDrawable(param0: number): android.graphics.drawable.Drawable;
 				public getXml(param0: number): android.content.res.XmlResourceParser;
 				public getDisplayMetrics(): android.util.DisplayMetrics;
 				public getString(param0: number): string;
+				/** @deprecated */
+				public getColor(param0: number): number;
 				public getColorStateList(param0: number, param1: android.content.res.Resources.Theme): android.content.res.ColorStateList;
 				public getInteger(param0: number): number;
 				public getValue(param0: number, param1: android.util.TypedValue, param2: boolean): void;
@@ -50484,6 +50126,8 @@ declare module android {
 				public getIntArray(param0: number): native.Array<number>;
 				public getAnimation(param0: number): android.content.res.XmlResourceParser;
 				public getColor(param0: number): number;
+				/** @deprecated */
+				public updateConfiguration(param0: android.content.res.Configuration, param1: android.util.DisplayMetrics): void;
 				public getStringArray(param0: number): native.Array<string>;
 				public getQuantityString(param0: number, param1: number, param2: native.Array<any>): string;
 				public getText(param0: number, param1: string): string;
@@ -50493,10 +50137,13 @@ declare module android {
 				public obtainTypedArray(param0: number): android.content.res.TypedArray;
 				public getIdentifier(param0: string, param1: string, param2: string): number;
 				public getResourceName(param0: number): string;
-				public constructor(param0: android.content.res.AssetManager, param1: android.util.DisplayMetrics, param2: android.content.res.Configuration);
 				public getLayout(param0: number): android.content.res.XmlResourceParser;
 				public getQuantityString(param0: number, param1: number): string;
 				public getValue(param0: string, param1: android.util.TypedValue, param2: boolean): void;
+				/** @deprecated */
+				public constructor(param0: android.content.res.AssetManager, param1: android.util.DisplayMetrics, param2: android.content.res.Configuration);
+				/** @deprecated */
+				public getColorStateList(param0: number): android.content.res.ColorStateList;
 				public getColorStateList(param0: number): android.content.res.ColorStateList;
 			}
 		}
@@ -50752,12 +50399,12 @@ declare module android {
 		export class BidiFormatter extends java.lang.Object {
 			public static class: java.lang.Class<android.text.BidiFormatter>;
 			public static getInstance(param0: boolean): android.text.BidiFormatter;
-			public unicodeWrap(param0: string, param1: android.text.TextDirectionHeuristic): string;
+			public unicodeWrap(param0: string, param1: any): string;
 			public unicodeWrap(param0: string): string;
 			public static getInstance(): android.text.BidiFormatter;
 			public isRtlContext(): boolean;
 			public unicodeWrap(param0: string, param1: boolean): string;
-			public unicodeWrap(param0: string, param1: android.text.TextDirectionHeuristic, param2: boolean): string;
+			public unicodeWrap(param0: string, param1: any, param2: boolean): string;
 			public static getInstance(param0: java.util.Locale): android.text.BidiFormatter;
 			public getStereoReset(): boolean;
 			public isRtl(param0: string): boolean;
@@ -50765,10 +50412,10 @@ declare module android {
 		export module BidiFormatter {
 			export class Builder extends java.lang.Object {
 				public static class: java.lang.Class<android.text.BidiFormatter.Builder>;
-				public setTextDirectionHeuristic(param0: android.text.TextDirectionHeuristic): android.text.BidiFormatter.Builder;
 				public stereoReset(param0: boolean): android.text.BidiFormatter.Builder;
 				public constructor(param0: java.util.Locale);
 				public constructor(param0: boolean);
+				public setTextDirectionHeuristic(param0: any): android.text.BidiFormatter.Builder;
 				public build(): android.text.BidiFormatter;
 				public constructor();
 			}
@@ -51007,13 +50654,16 @@ declare module android {
 			public static FROM_HTML_SEPARATOR_LINE_BREAK_PARAGRAPH: number;
 			public static TO_HTML_PARAGRAPH_LINES_CONSECUTIVE: number;
 			public static TO_HTML_PARAGRAPH_LINES_INDIVIDUAL: number;
+			/** @deprecated */
+			public static fromHtml(param0: string, param1: android.text.Html.ImageGetter, param2: android.text.Html.TagHandler): android.text.Spanned;
 			public static fromHtml(param0: string, param1: number): android.text.Spanned;
 			public static toHtml(param0: android.text.Spanned, param1: number): string;
 			public static fromHtml(param0: string, param1: number, param2: android.text.Html.ImageGetter, param3: android.text.Html.TagHandler): android.text.Spanned;
-			public static escapeHtml(param0: string): string;
-			public static fromHtml(param0: string, param1: android.text.Html.ImageGetter, param2: android.text.Html.TagHandler): android.text.Spanned;
-			public static fromHtml(param0: string): android.text.Spanned;
+			/** @deprecated */
 			public static toHtml(param0: android.text.Spanned): string;
+			public static escapeHtml(param0: string): string;
+			/** @deprecated */
+			public static fromHtml(param0: string): android.text.Spanned;
 		}
 		export module Html {
 			export class ImageGetter extends java.lang.Object {
@@ -51432,13 +51082,14 @@ declare module android {
 			public insert(param0: number, param1: string, param2: number, param3: number): android.text.SpannableStringBuilder;
 			public append(param0: string, param1: number, param2: number): android.text.SpannableStringBuilder;
 			public getFilters(): native.Array<android.text.InputFilter>;
+			/** @deprecated */
+			public getTextRunCursor(param0: number, param1: number, param2: number, param3: number, param4: number, param5: android.graphics.Paint): number;
 			public getChars(param0: number, param1: number, param2: native.Array<string>, param3: number): void;
 			public delete(param0: number, param1: number): android.text.SpannableStringBuilder;
 			public subSequence(param0: number, param1: number): string;
 			public replace(param0: number, param1: number, param2: string): android.text.Editable;
 			public constructor(param0: string, param1: number, param2: number);
 			public setSpan(param0: any, param1: number, param2: number, param3: number): void;
-			public getTextRunCursor(param0: number, param1: number, param2: number, param3: number, param4: number, param5: android.graphics.Paint): number;
 			public append(param0: string, param1: number, param2: number): android.text.Editable;
 			public insert(param0: number, param1: string): android.text.SpannableStringBuilder;
 			public getTextWatcherDepth(): number;
@@ -51587,13 +51238,13 @@ declare module android {
 			export class Builder extends java.lang.Object {
 				public static class: java.lang.Class<android.text.StaticLayout.Builder>;
 				public setAlignment(param0: android.text.Layout.Alignment): android.text.StaticLayout.Builder;
+				public setTextDirection(param0: any): android.text.StaticLayout.Builder;
 				public setMaxLines(param0: number): android.text.StaticLayout.Builder;
 				public finalize(): void;
 				public setText(param0: string): android.text.StaticLayout.Builder;
 				public build(): android.text.StaticLayout;
 				public setHyphenationFrequency(param0: number): android.text.StaticLayout.Builder;
 				public static obtain(param0: string, param1: number, param2: number, param3: android.text.TextPaint, param4: number): android.text.StaticLayout.Builder;
-				public setTextDirection(param0: android.text.TextDirectionHeuristic): android.text.StaticLayout.Builder;
 				public setBreakStrategy(param0: number): android.text.StaticLayout.Builder;
 				public setIncludePad(param0: boolean): android.text.StaticLayout.Builder;
 				public setEllipsizedWidth(param0: number): android.text.StaticLayout.Builder;
@@ -51627,12 +51278,12 @@ declare module android {
 	export module text {
 		export class TextDirectionHeuristics extends java.lang.Object {
 			public static class: java.lang.Class<android.text.TextDirectionHeuristics>;
-			public static ANYRTL_LTR: android.text.TextDirectionHeuristic;
-			public static FIRSTSTRONG_LTR: android.text.TextDirectionHeuristic;
-			public static FIRSTSTRONG_RTL: android.text.TextDirectionHeuristic;
-			public static LOCALE: android.text.TextDirectionHeuristic;
-			public static LTR: android.text.TextDirectionHeuristic;
-			public static RTL: android.text.TextDirectionHeuristic;
+			public static ANYRTL_LTR: any;
+			public static FIRSTSTRONG_LTR: any;
+			public static FIRSTSTRONG_RTL: any;
+			public static LOCALE: any;
+			public static LTR: any;
+			public static RTL: any;
 			public constructor();
 		}
 	}
@@ -51670,13 +51321,16 @@ declare module android {
 			public static copySpansFrom(param0: android.text.Spanned, param1: number, param2: number, param3: java.lang.Class<any>, param4: android.text.Spannable, param5: number): void;
 			public static getOffsetBefore(param0: string, param1: number): number;
 			public static getTrimmedLength(param0: string): number;
-			public static getReverse(param0: string, param1: number, param2: number): string;
 			public static htmlEncode(param0: string): string;
 			public static regionMatches(param0: string, param1: number, param2: string, param3: number, param4: number): boolean;
 			public static join(param0: string, param1: native.Array<any>): string;
 			public static indexOf(param0: string, param1: string, param2: number, param3: number): number;
+			/** @deprecated */
+			public static isGraphic(param0: string): boolean;
 			public static dumpSpans(param0: string, param1: android.util.Printer, param2: string): void;
 			public static expandTemplate(param0: string, param1: native.Array<string>): string;
+			/** @deprecated */
+			public static getReverse(param0: string, param1: number, param2: number): string;
 			public static indexOf(param0: string, param1: string, param2: number): number;
 			public static substring(param0: string, param1: number, param2: number): string;
 			public static replace(param0: string, param1: native.Array<string>, param2: native.Array<string>): string;
@@ -51845,6 +51499,8 @@ declare module android {
 				public static YEAR_IN_MILLIS: number;
 				public static sameMonthTable: native.Array<number>;
 				public static sameYearTable: native.Array<number>;
+				/** @deprecated */
+				public static getAMPMString(param0: number): string;
 				public static formatSameDayTime(param0: number, param1: number, param2: number, param3: number): string;
 				public static getRelativeTimeSpanString(param0: number, param1: number, param2: number): string;
 				public static formatDateRange(param0: android.content.Context, param1: java.util.Formatter, param2: number, param3: number, param4: number): java.util.Formatter;
@@ -51857,11 +51513,12 @@ declare module android {
 				public static formatDateTime(param0: android.content.Context, param1: number, param2: number): string;
 				public constructor();
 				public static getRelativeTimeSpanString(param0: android.content.Context, param1: number, param2: boolean): string;
-				public static getMonthString(param0: number, param1: number): string;
 				public static getRelativeDateTimeString(param0: android.content.Context, param1: number, param2: number, param3: number, param4: number): string;
-				public static getAMPMString(param0: number): string;
-				public static getRelativeTimeSpanString(param0: android.content.Context, param1: number): string;
+				/** @deprecated */
 				public static getDayOfWeekString(param0: number, param1: number): string;
+				/** @deprecated */
+				public static getMonthString(param0: number, param1: number): string;
+				public static getRelativeTimeSpanString(param0: android.content.Context, param1: number): string;
 				public static formatDateRange(param0: android.content.Context, param1: java.util.Formatter, param2: number, param3: number, param4: number, param5: string): java.util.Formatter;
 			}
 		}
@@ -51875,6 +51532,7 @@ declare module android {
 				public static class: java.lang.Class<android.text.format.Formatter>;
 				public static formatFileSize(param0: android.content.Context, param1: number): string;
 				public static formatShortFileSize(param0: android.content.Context, param1: number): string;
+				/** @deprecated */
 				public static formatIpAddress(param0: number): string;
 				public constructor();
 			}
@@ -52771,8 +52429,11 @@ declare module android {
 				public constructor(param0: android.graphics.drawable.Drawable, param1: number);
 				public constructor(param0: android.content.Context, param1: number);
 				public getDrawable(): android.graphics.drawable.Drawable;
+				/** @deprecated */
 				public constructor(param0: android.graphics.Bitmap, param1: number);
 				public constructor(param0: android.graphics.drawable.Drawable, param1: string);
+				/** @deprecated */
+				public constructor(param0: android.graphics.Bitmap);
 				public constructor();
 				public constructor(param0: android.graphics.drawable.Drawable);
 				public constructor(param0: android.content.Context, param1: number, param2: number);
@@ -52781,7 +52442,6 @@ declare module android {
 				public constructor(param0: number);
 				public getSource(): string;
 				public constructor(param0: android.content.Context, param1: android.graphics.Bitmap, param2: number);
-				public constructor(param0: android.graphics.Bitmap);
 				public constructor(param0: android.content.Context, param1: android.net.Uri, param2: number);
 				public constructor(param0: android.content.Context, param1: android.net.Uri);
 			}
@@ -52893,16 +52553,16 @@ declare module android {
 		export module style {
 			export class LocaleSpan extends android.text.style.MetricAffectingSpan implements android.text.ParcelableSpan {
 				public static class: java.lang.Class<android.text.style.LocaleSpan>;
-				public getLocales(): android.os.LocaleList;
 				public updateDrawState(param0: android.text.TextPaint): void;
 				public constructor(param0: android.os.Parcel);
 				public writeToParcel(param0: android.os.Parcel, param1: number): void;
+				public getLocales(): any;
 				public constructor(param0: java.util.Locale);
 				public getSpanTypeId(): number;
 				public describeContents(): number;
 				public getLocale(): java.util.Locale;
 				public updateMeasureState(param0: android.text.TextPaint): void;
-				public constructor(param0: android.os.LocaleList);
+				public constructor(param0: any);
 				public constructor();
 			}
 		}
@@ -53108,7 +52768,6 @@ declare module android {
 				public getSuggestions(): native.Array<string>;
 				public writeToParcel(param0: android.os.Parcel, param1: number): void;
 				public getSpanTypeId(): number;
-				public getLocale(): string;
 				public getLocaleObject(): java.util.Locale;
 				public setFlags(param0: number): void;
 				public constructor();
@@ -53118,6 +52777,8 @@ declare module android {
 				public constructor(param0: android.content.Context, param1: native.Array<string>, param2: number);
 				public hashCode(): number;
 				public constructor(param0: android.content.Context, param1: java.util.Locale, param2: native.Array<string>, param3: number, param4: java.lang.Class<any>);
+				/** @deprecated */
+				public getLocale(): string;
 				public describeContents(): number;
 				public equals(param0: any): boolean;
 				public getFlags(): number;
@@ -53279,12 +52940,12 @@ declare module android {
 				public static WEEKDAY_TUESDAY: number;
 				public static WEEKDAY_WEDNESDAY: number;
 				public getType(): string;
+				public getArgs(): any;
 				public constructor(param0: android.os.Parcel);
 				public writeToParcel(param0: android.os.Parcel, param1: number): void;
 				public describeContents(): number;
 				public getSpanTypeId(): number;
-				public getArgs(): android.os.PersistableBundle;
-				public constructor(param0: string, param1: android.os.PersistableBundle);
+				public constructor(param0: string, param1: any);
 			}
 			export module TtsSpan {
 				export class Builder<C>  extends java.lang.Object {
@@ -53657,9 +53318,10 @@ declare module android {
 			public getResizeClip(): boolean;
 			public getTransitionProperties(): native.Array<string>;
 			public captureEndValues(param0: android.transition.TransitionValues): void;
-			public setReparent(param0: boolean): void;
 			public constructor(param0: android.content.Context, param1: android.util.AttributeSet);
 			public constructor();
+			/** @deprecated */
+			public setReparent(param0: boolean): void;
 			public captureStartValues(param0: android.transition.TransitionValues): void;
 		}
 	}
@@ -53799,6 +53461,7 @@ declare module android {
 		export class Scene extends java.lang.Object {
 			public static class: java.lang.Class<android.transition.Scene>;
 			public setExitAction(param0: java.lang.Runnable): void;
+			/** @deprecated */
 			public constructor(param0: android.view.ViewGroup, param1: android.view.ViewGroup);
 			public getSceneRoot(): android.view.ViewGroup;
 			public static getSceneForLayout(param0: android.view.ViewGroup, param1: number, param2: android.content.Context): android.transition.Scene;
@@ -54927,7 +54590,7 @@ declare module android {
 			public toString(): string;
 			public getHeight(): number;
 			public getWidth(): number;
-			public static parseSize(param0: string): android.util.Size;
+			public static parseSize(param0: string): any;
 			public constructor(param0: number, param1: number);
 			public hashCode(): number;
 		}
@@ -54941,8 +54604,8 @@ declare module android {
 			public equals(param0: any): boolean;
 			public toString(): string;
 			public getHeight(): number;
+			public static parseSizeF(param0: string): any;
 			public getWidth(): number;
-			public static parseSizeF(param0: string): android.util.SizeF;
 			public constructor(param0: number, param1: number);
 			public hashCode(): number;
 		}
@@ -55290,6 +54953,7 @@ declare module android {
 		export abstract class ActionProvider extends java.lang.Object {
 			public static class: java.lang.Class<android.view.ActionProvider>;
 			public setVisibilityListener(param0: android.view.ActionProvider.VisibilityListener): void;
+			/** @deprecated */
 			public onCreateActionView(): android.view.View;
 			public onPerformDefaultAction(): boolean;
 			public constructor(param0: android.content.Context);
@@ -55492,27 +55156,32 @@ declare module android {
 			public static STATE_UNKNOWN: number;
 			public getMetrics(param0: android.util.DisplayMetrics): void;
 			public getRectSize(param0: android.graphics.Rect): void;
+			/** @deprecated */
+			public getHeight(): number;
 			public getPresentationDeadlineNanos(): number;
 			public getFlags(): number;
-			public getHeight(): number;
 			public getRefreshRate(): number;
 			public getRotation(): number;
+			/** @deprecated */
+			public getPixelFormat(): number;
 			public getAppVsyncOffsetNanos(): number;
 			public getCurrentSizeRange(param0: android.graphics.Point, param1: android.graphics.Point): void;
-			public getWidth(): number;
+			/** @deprecated */
+			public getOrientation(): number;
 			public getRealSize(param0: android.graphics.Point): void;
+			/** @deprecated */
+			public getSupportedRefreshRates(): native.Array<number>;
+			/** @deprecated */
+			public getWidth(): number;
 			public getHdrCapabilities(): android.view.Display.HdrCapabilities;
 			public getMode(): android.view.Display.Mode;
 			public toString(): string;
 			public getName(): string;
-			public getSupportedRefreshRates(): native.Array<number>;
 			public getRealMetrics(param0: android.util.DisplayMetrics): void;
 			public getSize(param0: android.graphics.Point): void;
 			public isValid(): boolean;
-			public getPixelFormat(): number;
 			public getSupportedModes(): native.Array<android.view.Display.Mode>;
 			public getDisplayId(): number;
-			public getOrientation(): number;
 			public getState(): number;
 		}
 		export module Display {
@@ -55637,9 +55306,11 @@ declare module android {
 	export module view {
 		export class GestureDetector extends java.lang.Object {
 			public static class: java.lang.Class<android.view.GestureDetector>;
+			/** @deprecated */
 			public constructor(param0: android.view.GestureDetector.OnGestureListener);
 			public constructor(param0: android.content.Context, param1: android.view.GestureDetector.OnGestureListener, param2: android.os.Handler, param3: boolean);
 			public isLongpressEnabled(): boolean;
+			/** @deprecated */
 			public constructor(param0: android.view.GestureDetector.OnGestureListener, param1: android.os.Handler);
 			public setIsLongpressEnabled(param0: boolean): void;
 			public constructor(param0: android.content.Context, param1: android.view.GestureDetector.OnGestureListener, param2: android.os.Handler);
@@ -55926,10 +55597,11 @@ declare module android {
 			public static VIRTUAL_KEYBOARD: number;
 			public getDisplayLabel(param0: number): string;
 			public getKeyboardType(): number;
+			/** @deprecated */
+			public getKeyData(param0: number, param1: android.view.KeyCharacterMap.KeyData): boolean;
 			public getModifierBehavior(): number;
 			public static deviceHasKey(param0: number): boolean;
 			public getEvents(param0: native.Array<string>): native.Array<android.view.KeyEvent>;
-			public getKeyData(param0: number, param1: android.view.KeyCharacterMap.KeyData): boolean;
 			public static getDeadChar(param0: number, param1: number): number;
 			public getMatch(param0: number, param1: native.Array<string>): string;
 			public getNumber(param0: number): string;
@@ -56301,7 +55973,6 @@ declare module android {
 			public writeToParcel(param0: android.os.Parcel, param1: number): void;
 			public isCtrlPressed(): boolean;
 			public getEventTime(): number;
-			public getKeyData(param0: android.view.KeyCharacterMap.KeyData): boolean;
 			public getModifiers(): number;
 			public getUnicodeChar(): number;
 			public getFlags(): number;
@@ -56309,7 +55980,6 @@ declare module android {
 			public isPrintingKey(): boolean;
 			public static getModifierMetaStateMask(): number;
 			public constructor(param0: android.view.KeyEvent);
-			public constructor(param0: android.view.KeyEvent, param1: number, param2: number);
 			public constructor(param0: number, param1: number, param2: number, param3: number, param4: number, param5: number, param6: number, param7: number);
 			public isTracking(): boolean;
 			public getAction(): number;
@@ -56325,7 +55995,8 @@ declare module android {
 			public getRepeatCount(): number;
 			public static changeAction(param0: android.view.KeyEvent, param1: number): android.view.KeyEvent;
 			public getMatch(param0: native.Array<string>, param1: number): string;
-			public dispatch(param0: android.view.KeyEvent.Callback): boolean;
+			/** @deprecated */
+			public constructor(param0: android.view.KeyEvent, param1: number, param2: number);
 			public static normalizeMetaState(param0: number): number;
 			public isCapsLockOn(): boolean;
 			public constructor(param0: number, param1: number, param2: number, param3: number, param4: number, param5: number, param6: number, param7: number, param8: number);
@@ -56342,8 +56013,12 @@ declare module android {
 			public getNumber(): string;
 			public setSource(param0: number): void;
 			public getMetaState(): number;
+			/** @deprecated */
+			public dispatch(param0: android.view.KeyEvent.Callback): boolean;
 			public isMetaPressed(): boolean;
 			public isAltPressed(): boolean;
+			/** @deprecated */
+			public getKeyData(param0: android.view.KeyCharacterMap.KeyData): boolean;
 			public constructor(param0: number, param1: number, param2: number, param3: number, param4: number, param5: number);
 			public hasNoModifiers(): boolean;
 			public isLongPress(): boolean;
@@ -56785,6 +56460,8 @@ declare module android {
 			public static TOOL_TYPE_UNKNOWN: number;
 			public getAxisValue(param0: number): number;
 			public getPointerCount(): number;
+			/** @deprecated */
+			public static obtain(param0: number, param1: number, param2: number, param3: number, param4: native.Array<number>, param5: native.Array<android.view.MotionEvent.PointerCoords>, param6: number, param7: number, param8: number, param9: number, param10: number, param11: number, param12: number): android.view.MotionEvent;
 			public getRawX(): number;
 			public getXPrecision(): number;
 			public getDeviceId(): number;
@@ -56793,7 +56470,6 @@ declare module android {
 			public setAction(param0: number): void;
 			public getX(param0: number): number;
 			public getHistoricalSize(param0: number, param1: number): number;
-			public static obtain(param0: number, param1: number, param2: number, param3: number, param4: number, param5: number, param6: number, param7: number, param8: number, param9: number, param10: number, param11: number, param12: number): android.view.MotionEvent;
 			public recycle(): void;
 			public writeToParcel(param0: android.os.Parcel, param1: number): void;
 			public getActionMasked(): number;
@@ -56805,6 +56481,8 @@ declare module android {
 			public addBatch(param0: number, param1: number, param2: number, param3: number, param4: number, param5: number): void;
 			public static obtain(param0: number, param1: number, param2: number, param3: number, param4: native.Array<android.view.MotionEvent.PointerProperties>, param5: native.Array<android.view.MotionEvent.PointerCoords>, param6: number, param7: number, param8: number, param9: number, param10: number, param11: number, param12: number, param13: number): android.view.MotionEvent;
 			public getHistoricalPressure(param0: number): number;
+			/** @deprecated */
+			public static obtain(param0: number, param1: number, param2: number, param3: number, param4: number, param5: number, param6: number, param7: number, param8: number, param9: number, param10: number, param11: number, param12: number): android.view.MotionEvent;
 			public static axisFromString(param0: string): number;
 			public getFlags(): number;
 			public offsetLocation(param0: number, param1: number): void;
@@ -56832,7 +56510,6 @@ declare module android {
 			public getSize(): number;
 			public getToolType(param0: number): number;
 			public getAxisValue(param0: number, param1: number): number;
-			public static obtain(param0: number, param1: number, param2: number, param3: number, param4: native.Array<number>, param5: native.Array<android.view.MotionEvent.PointerCoords>, param6: number, param7: number, param8: number, param9: number, param10: number, param11: number, param12: number): android.view.MotionEvent;
 			public getDownTime(): number;
 			public getHistoricalY(param0: number): number;
 			public getY(param0: number): number;
@@ -56971,7 +56648,7 @@ declare module android {
 	export module view {
 		export class PointerIcon extends java.lang.Object implements android.os.Parcelable {
 			public static class: java.lang.Class<android.view.PointerIcon>;
-			public static CREATOR: android.os.Parcelable.Creator<android.view.PointerIcon>;
+			public static CREATOR: android.os.Parcelable.Creator<any>;
 			public static TYPE_ALIAS: number;
 			public static TYPE_ALL_SCROLL: number;
 			public static TYPE_ARROW: number;
@@ -56996,11 +56673,11 @@ declare module android {
 			public static TYPE_ZOOM_IN: number;
 			public static TYPE_ZOOM_OUT: number;
 			public equals(param0: any): boolean;
-			public static load(param0: android.content.res.Resources, param1: number): android.view.PointerIcon;
-			public static create(param0: android.graphics.Bitmap, param1: number, param2: number): android.view.PointerIcon;
 			public describeContents(): number;
 			public writeToParcel(param0: android.os.Parcel, param1: number): void;
-			public static getSystemIcon(param0: android.content.Context, param1: number): android.view.PointerIcon;
+			public static create(param0: android.graphics.Bitmap, param1: number, param2: number): any;
+			public static getSystemIcon(param0: android.content.Context, param1: number): any;
+			public static load(param0: android.content.res.Resources, param1: number): any;
 		}
 	}
 }
@@ -57182,11 +56859,12 @@ declare module android {
 			public lockHardwareCanvas(): android.graphics.Canvas;
 			public toString(): string;
 			public unlockCanvasAndPost(param0: android.graphics.Canvas): void;
-			public unlockCanvas(param0: android.graphics.Canvas): void;
 			public describeContents(): number;
 			public writeToParcel(param0: android.os.Parcel, param1: number): void;
 			public isValid(): boolean;
 			public lockCanvas(param0: android.graphics.Rect): android.graphics.Canvas;
+			/** @deprecated */
+			public unlockCanvas(param0: android.graphics.Canvas): void;
 			public finalize(): void;
 			public release(): void;
 			public readFromParcel(param0: android.os.Parcel): void;
@@ -57234,6 +56912,7 @@ declare module android {
 			public setFixedSize(param0: number, param1: number): void;
 			public lockCanvas(): android.graphics.Canvas;
 			public unlockCanvasAndPost(param0: android.graphics.Canvas): void;
+			/** @deprecated */
 			public setType(param0: number): void;
 			public setSizeFromLayout(): void;
 			public lockCanvas(param0: android.graphics.Rect): android.graphics.Canvas;
@@ -57332,6 +57011,8 @@ declare module android {
 			public onKeyMultiple(param0: number, param1: number, param2: android.view.KeyEvent): boolean;
 			public onSizeChanged(param0: number, param1: number, param2: number, param3: number): void;
 			public lockCanvas(): android.graphics.Canvas;
+			/** @deprecated */
+			public setBackgroundDrawable(param0: android.graphics.drawable.Drawable): void;
 			public lockCanvas(param0: android.graphics.Rect): android.graphics.Canvas;
 			public sendAccessibilityEventUnchecked(param0: android.view.accessibility.AccessibilityEvent): void;
 			public setOpaque(param0: boolean): void;
@@ -57574,6 +57255,7 @@ declare module android {
 			public getDrawingCacheBackgroundColor(): number;
 			public setNextFocusRightId(param0: number): void;
 			public setSystemUiVisibility(param0: number): void;
+			public getPointerIcon(): any;
 			public setLayoutParams(param0: android.view.ViewGroup.LayoutParams): void;
 			public getX(): number;
 			public onKeyLongPress(param0: number, param1: android.view.KeyEvent): boolean;
@@ -57598,7 +57280,6 @@ declare module android {
 			public getDrawingRect(param0: android.graphics.Rect): void;
 			public getApplicationWindowToken(): android.os.IBinder;
 			public setBackground(param0: android.graphics.drawable.Drawable): void;
-			public getPointerIcon(): android.view.PointerIcon;
 			public setForegroundTintList(param0: android.content.res.ColorStateList): void;
 			public dispatchProvideStructure(param0: any): void;
 			public setOnScrollChangeListener(param0: android.view.View.OnScrollChangeListener): void;
@@ -57625,7 +57306,6 @@ declare module android {
 			public getRevealOnFocusHint(): boolean;
 			public getOutlineProvider(): android.view.ViewOutlineProvider;
 			public setLayoutDirection(param0: number): void;
-			public requestFitSystemWindows(): void;
 			public onOverScrolled(param0: number, param1: number, param2: boolean, param3: boolean): void;
 			public isNestedScrollingEnabled(): boolean;
 			public setFocusable(param0: boolean): void;
@@ -57637,7 +57317,6 @@ declare module android {
 			public dispatchConfigurationChanged(param0: android.content.res.Configuration): void;
 			public isSelected(): boolean;
 			public showContextMenu(param0: number, param1: number): boolean;
-			public onResolvePointerIcon(param0: android.view.MotionEvent, param1: number): android.view.PointerIcon;
 			public getId(): number;
 			public getScrollBarFadeDuration(): number;
 			public setRevealOnFocusHint(param0: boolean): void;
@@ -57671,7 +57350,6 @@ declare module android {
 			public static combineMeasuredStates(param0: number, param1: number): number;
 			public getSystemUiVisibility(): number;
 			public onCheckIsTextEditor(): boolean;
-			public setPointerIcon(param0: android.view.PointerIcon): void;
 			public setClipBounds(param0: android.graphics.Rect): void;
 			public isDrawingCacheEnabled(): boolean;
 			public getPaddingTop(): number;
@@ -57684,7 +57362,6 @@ declare module android {
 			public setTag(param0: any): void;
 			public setOnHoverListener(param0: android.view.View.OnHoverListener): void;
 			public getRotation(): number;
-			public startDrag(param0: android.content.ClipData, param1: android.view.View.DragShadowBuilder, param2: any, param3: number): boolean;
 			public addChildrenForAccessibility(param0: java.util.ArrayList<android.view.View>): void;
 			public setScrollBarFadeDuration(param0: number): void;
 			public getTextDirection(): number;
@@ -57707,6 +57384,8 @@ declare module android {
 			public getTransitionName(): string;
 			public setId(param0: number): void;
 			public dispatchHoverEvent(param0: android.view.MotionEvent): boolean;
+			/** @deprecated */
+			public setBackgroundDrawable(param0: android.graphics.drawable.Drawable): void;
 			public overScrollBy(param0: number, param1: number, param2: number, param3: number, param4: number, param5: number, param6: number, param7: number, param8: boolean): boolean;
 			public onPopulateAccessibilityEvent(param0: android.view.accessibility.AccessibilityEvent): void;
 			public getSuggestedMinimumHeight(): number;
@@ -57715,6 +57394,8 @@ declare module android {
 			public onKeyDown(param0: number, param1: android.view.KeyEvent): boolean;
 			public forceLayout(): void;
 			public setClipToOutline(param0: boolean): void;
+			/** @deprecated */
+			public fitSystemWindows(param0: android.graphics.Rect): boolean;
 			public getContext(): android.content.Context;
 			public setVerticalScrollBarEnabled(param0: boolean): void;
 			public setEnabled(param0: boolean): void;
@@ -57743,7 +57424,6 @@ declare module android {
 			public setLayerPaint(param0: android.graphics.Paint): void;
 			public setVerticalFadingEdgeEnabled(param0: boolean): void;
 			public getTopFadingEdgeStrength(): number;
-			public setBackgroundDrawable(param0: android.graphics.drawable.Drawable): void;
 			public onWindowVisibilityChanged(param0: number): void;
 			public isHorizontalFadingEdgeEnabled(): boolean;
 			public getLayerType(): number;
@@ -57756,13 +57436,15 @@ declare module android {
 			public setLeft(param0: number): void;
 			public setForeground(param0: android.graphics.drawable.Drawable): void;
 			public onDisplayHint(param0: number): void;
+			/** @deprecated */
+			public requestFitSystemWindows(): void;
 			public setTag(param0: number, param1: any): void;
+			public setAccessibilityDelegate(param0: any): void;
 			public onVisibilityChanged(param0: android.view.View, param1: number): void;
 			public setOnSystemUiVisibilityChangeListener(param0: android.view.View.OnSystemUiVisibilityChangeListener): void;
 			public removeOnLayoutChangeListener(param0: android.view.View.OnLayoutChangeListener): void;
 			public constructor(param0: android.content.Context);
 			public findViewWithTag(param0: any): android.view.View;
-			public setAccessibilityDelegate(param0: android.view.View.AccessibilityDelegate): void;
 			public getZ(): number;
 			public setOnFocusChangeListener(param0: android.view.View.OnFocusChangeListener): void;
 			public setContentDescription(param0: string): void;
@@ -57785,6 +57467,7 @@ declare module android {
 			public setDuplicateParentStateEnabled(param0: boolean): void;
 			public setPadding(param0: number, param1: number, param2: number, param3: number): void;
 			public checkInputConnectionProxy(param0: android.view.View): boolean;
+			public setPointerIcon(param0: any): void;
 			public draw(param0: android.graphics.Canvas): void;
 			public onRestoreInstanceState(param0: android.os.Parcelable): void;
 			public dispatchNestedPrePerformAccessibilityAction(param0: number, param1: android.os.Bundle): boolean;
@@ -57853,6 +57536,7 @@ declare module android {
 			public isHapticFeedbackEnabled(): boolean;
 			public getWindowVisibility(): number;
 			public sendAccessibilityEvent(param0: number): void;
+			public onResolvePointerIcon(param0: android.view.MotionEvent, param1: number): any;
 			public getHeight(): number;
 			public dispatchRestoreInstanceState(param0: android.util.SparseArray<android.os.Parcelable>): void;
 			public getMinimumHeight(): number;
@@ -58020,7 +57704,6 @@ declare module android {
 			public findViewsWithText(param0: java.util.ArrayList<android.view.View>, param1: string, param2: number): void;
 			public setOnContextClickListener(param0: android.view.View.OnContextClickListener): void;
 			public setAlpha(param0: number): void;
-			public fitSystemWindows(param0: android.graphics.Rect): boolean;
 			public getClipBounds(): android.graphics.Rect;
 			public dispatchFinishTemporaryDetach(): void;
 			public getOverScrollMode(): number;
@@ -58087,6 +57770,8 @@ declare module android {
 			public dispatchSystemUiVisibilityChanged(param0: number): void;
 			public isTextDirectionResolved(): boolean;
 			public setBackgroundTintList(param0: android.content.res.ColorStateList): void;
+			/** @deprecated */
+			public startDrag(param0: android.content.ClipData, param1: android.view.View.DragShadowBuilder, param2: any, param3: number): boolean;
 			public postInvalidateOnAnimation(): void;
 			public scheduleDrawable(param0: android.graphics.drawable.Drawable, param1: java.lang.Runnable, param2: number): void;
 			public onAttachedToWindow(): void;
@@ -58322,20 +58007,28 @@ declare module android {
 	export module view {
 		export class ViewConfiguration extends java.lang.Object {
 			public static class: java.lang.Class<android.view.ViewConfiguration>;
-			public static getScrollBarSize(): number;
 			public getScaledWindowTouchSlop(): number;
 			public static getScrollDefaultDelay(): number;
-			public static getMaximumDrawingCacheSize(): number;
+			/** @deprecated */
+			public static getMaximumFlingVelocity(): number;
+			/** @deprecated */
+			public static getFadingEdgeLength(): number;
 			public getScaledMinimumFlingVelocity(): number;
 			public getScaledOverflingDistance(): number;
+			/** @deprecated */
+			public static getEdgeSlop(): number;
 			public getScaledPagingTouchSlop(): number;
 			public static getKeyRepeatTimeout(): number;
 			public static getDoubleTapTimeout(): number;
 			public getScaledOverscrollDistance(): number;
-			public static getTouchSlop(): number;
+			/** @deprecated */
+			public static getMaximumDrawingCacheSize(): number;
 			public static getDefaultActionModeHideDuration(): number;
-			public static getMinimumFlingVelocity(): number;
 			public getScaledFadingEdgeLength(): number;
+			/** @deprecated */
+			public static getWindowTouchSlop(): number;
+			/** @deprecated */
+			public constructor();
 			public getScaledTouchSlop(): number;
 			public static getKeyRepeatDelay(): number;
 			public static getJumpTapTimeout(): number;
@@ -58343,20 +58036,22 @@ declare module android {
 			public getScaledMaximumDrawingCacheSize(): number;
 			public hasPermanentMenuKey(): boolean;
 			public static getScrollFriction(): number;
-			public static getGlobalActionKeyTimeout(): number;
 			public getScaledMaximumFlingVelocity(): number;
+			/** @deprecated */
+			public static getScrollBarSize(): number;
 			public getScaledEdgeSlop(): number;
-			public constructor();
+			/** @deprecated */
+			public static getTouchSlop(): number;
 			public getScaledDoubleTapSlop(): number;
 			public static getTapTimeout(): number;
-			public static getWindowTouchSlop(): number;
+			/** @deprecated */
+			public static getGlobalActionKeyTimeout(): number;
 			public static get(param0: android.content.Context): android.view.ViewConfiguration;
 			public getScaledScrollBarSize(): number;
-			public static getFadingEdgeLength(): number;
-			public static getMaximumFlingVelocity(): number;
+			/** @deprecated */
+			public static getMinimumFlingVelocity(): number;
 			public static getScrollBarFadeDuration(): number;
 			public static getZoomControlsTimeout(): number;
-			public static getEdgeSlop(): number;
 			public static getLongPressTimeout(): number;
 		}
 	}
@@ -58368,14 +58063,20 @@ declare module android {
 			public static class: java.lang.Class<android.view.ViewDebug>;
 			public static TRACE_HIERARCHY: boolean;
 			public static TRACE_RECYCLER: boolean;
-			public static stopRecyclerTracing(): void;
-			public static trace(param0: android.view.View, param1: android.view.ViewDebug.RecyclerTraceType, param2: native.Array<number>): void;
-			public static trace(param0: android.view.View, param1: android.view.ViewDebug.HierarchyTraceType): void;
 			public static dumpCapturedView(param0: string, param1: any): void;
-			public static startRecyclerTracing(param0: string, param1: android.view.View): void;
+			/** @deprecated */
 			public static startHierarchyTracing(param0: string, param1: android.view.View): void;
-			public constructor();
+			/** @deprecated */
+			public static trace(param0: android.view.View, param1: android.view.ViewDebug.RecyclerTraceType, param2: native.Array<number>): void;
+			/** @deprecated */
+			public static startRecyclerTracing(param0: string, param1: android.view.View): void;
+			/** @deprecated */
 			public static stopHierarchyTracing(): void;
+			/** @deprecated */
+			public static trace(param0: android.view.View, param1: android.view.ViewDebug.HierarchyTraceType): void;
+			public constructor();
+			/** @deprecated */
+			public static stopRecyclerTracing(): void;
 		}
 		export module ViewDebug {
 			export class CapturedViewProperty extends java.lang.Object implements java.lang.annotation.Annotation {
@@ -58523,6 +58224,8 @@ declare module android {
 			public static PERSISTENT_NO_CACHE: number;
 			public static PERSISTENT_SCROLLING_CACHE: number;
 			public getClipChildren(): boolean;
+			/** @deprecated */
+			public isChildrenDrawnWithCacheEnabled(): boolean;
 			public onStopNestedScroll(param0: android.view.View): void;
 			public requestFocus(): boolean;
 			public constructor(param0: android.content.Context, param1: android.util.AttributeSet, param2: number);
@@ -58535,6 +58238,7 @@ declare module android {
 			public setLayoutMode(param0: number): void;
 			public startViewTransition(param0: android.view.View): void;
 			public sendAccessibilityEvent(param0: number): void;
+			public onResolvePointerIcon(param0: android.view.MotionEvent, param1: number): any;
 			public removeViewsInLayout(param0: number, param1: number): void;
 			public dispatchRestoreInstanceState(param0: android.util.SparseArray<android.os.Parcelable>): void;
 			public onStartNestedScroll(param0: android.view.View, param1: android.view.View, param2: number): boolean;
@@ -58571,11 +58275,12 @@ declare module android {
 			public drawableStateChanged(): void;
 			public dispatchConfigurationChanged(param0: android.content.res.Configuration): void;
 			public focusSearch(param0: android.view.View, param1: number): android.view.View;
-			public onResolvePointerIcon(param0: android.view.MotionEvent, param1: number): android.view.PointerIcon;
 			public setLayoutAnimationListener(param0: android.view.animation.Animation.AnimationListener): void;
 			public canAnimate(): boolean;
 			public setLayoutTransition(param0: android.animation.LayoutTransition): void;
 			public onViewRemoved(param0: android.view.View): void;
+			/** @deprecated */
+			public isAlwaysDrawnWithCacheEnabled(): boolean;
 			public dispatchWindowSystemUiVisiblityChanged(param0: number): void;
 			public unscheduleDrawable(param0: android.graphics.drawable.Drawable): void;
 			public dispatchApplyWindowInsets(param0: android.view.WindowInsets): android.view.WindowInsets;
@@ -58590,12 +58295,16 @@ declare module android {
 			public setTouchscreenBlocksFocus(param0: boolean): void;
 			public onNestedPreFling(param0: android.view.View, param1: number, param2: number): boolean;
 			public dispatchDragEvent(param0: android.view.DragEvent): boolean;
+			/** @deprecated */
+			public setAnimationCacheEnabled(param0: boolean): void;
 			public hasFocusable(): boolean;
 			public getLayoutTransition(): android.animation.LayoutTransition;
 			public removeAllViewsInLayout(): void;
 			public onCreateDrawableState(param0: number): native.Array<number>;
 			public addStatesFromChildren(): boolean;
 			public removeViewAt(param0: number): void;
+			/** @deprecated */
+			public setAlwaysDrawnWithCacheEnabled(param0: boolean): void;
 			public setPersistentDrawingCache(param0: number): void;
 			public getLayoutAnimationListener(): android.view.animation.Animation.AnimationListener;
 			public setOnHierarchyChangeListener(param0: android.view.ViewGroup.OnHierarchyChangeListener): void;
@@ -58624,8 +58333,6 @@ declare module android {
 			public setChildrenDrawingCacheEnabled(param0: boolean): void;
 			public addView(param0: android.view.View, param1: number, param2: number): void;
 			public requestSendAccessibilityEvent(param0: android.view.View, param1: android.view.accessibility.AccessibilityEvent): boolean;
-			public isAlwaysDrawnWithCacheEnabled(): boolean;
-			public setAnimationCacheEnabled(param0: boolean): void;
 			public onKeyDown(param0: number, param1: android.view.KeyEvent): boolean;
 			public getClipToPadding(): boolean;
 			public bringChildToFront(param0: android.view.View): void;
@@ -58664,6 +58371,8 @@ declare module android {
 			public addView(param0: android.view.View): void;
 			public childDrawableStateChanged(param0: android.view.View): void;
 			public isMotionEventSplittingEnabled(): boolean;
+			/** @deprecated */
+			public requestFitSystemWindows(): void;
 			public getChildVisibleRect(param0: android.view.View, param1: android.graphics.Rect, param2: android.graphics.Point): boolean;
 			public constructor(param0: android.content.Context);
 			public addFocusables(param0: java.util.ArrayList<android.view.View>, param1: number, param2: number): void;
@@ -58677,12 +58386,13 @@ declare module android {
 			public createContextMenu(param0: android.view.ContextMenu): void;
 			public shouldDelayChildPressedState(): boolean;
 			public dispatchSetPressed(param0: boolean): void;
-			public isChildrenDrawnWithCacheEnabled(): boolean;
 			public dispatchFreezeSelfOnly(param0: android.util.SparseArray<android.os.Parcelable>): void;
 			public canResolveLayoutDirection(): boolean;
 			public onNestedFling(param0: android.view.View, param1: number, param2: number, param3: boolean): boolean;
 			public detachAllViewsFromParent(): void;
 			public onInterceptHoverEvent(param0: android.view.MotionEvent): boolean;
+			/** @deprecated */
+			public isAnimationCacheEnabled(): boolean;
 			public getParentForAccessibility(): android.view.ViewParent;
 			public onNestedPrePerformAccessibilityAction(param0: android.view.View, param1: number, param2: android.os.Bundle): boolean;
 			public requestFocus(param0: number): boolean;
@@ -58691,14 +58401,12 @@ declare module android {
 			public removeViewInLayout(param0: android.view.View): void;
 			public dispatchTouchEvent(param0: android.view.MotionEvent): boolean;
 			public setChildrenDrawingOrderEnabled(param0: boolean): void;
-			public isAnimationCacheEnabled(): boolean;
 			public generateLayoutParams(param0: android.view.ViewGroup.LayoutParams): android.view.ViewGroup.LayoutParams;
 			public requestChildRectangleOnScreen(param0: android.view.View, param1: android.graphics.Rect, param2: boolean): boolean;
 			public onNestedPreScroll(param0: android.view.View, param1: number, param2: number, param3: native.Array<number>): void;
 			public onKeyMultiple(param0: number, param1: number, param2: android.view.KeyEvent): boolean;
 			public detachViewsFromParent(param0: number, param1: number): void;
 			public setMotionEventSplittingEnabled(param0: boolean): void;
-			public setChildrenDrawnWithCacheEnabled(param0: boolean): void;
 			public getLayoutAnimation(): android.view.animation.LayoutAnimationController;
 			public getChildCount(): number;
 			public invalidateChildInParent(param0: native.Array<number>, param1: android.graphics.Rect): android.view.ViewParent;
@@ -58712,11 +58420,12 @@ declare module android {
 			public checkLayoutParams(param0: android.view.ViewGroup.LayoutParams): boolean;
 			public removeView(param0: android.view.View): void;
 			public clearChildFocus(param0: android.view.View): void;
+			/** @deprecated */
+			public setChildrenDrawnWithCacheEnabled(param0: boolean): void;
 			public indexOfChild(param0: android.view.View): number;
 			public requestDisallowInterceptTouchEvent(param0: boolean): void;
 			public dispatchSystemUiVisibilityChanged(param0: number): void;
 			public isTextDirectionResolved(): boolean;
-			public setAlwaysDrawnWithCacheEnabled(param0: boolean): void;
 			public measureChild(param0: android.view.View, param1: number, param2: number): void;
 			public scheduleDrawable(param0: android.graphics.drawable.Drawable, param1: java.lang.Runnable, param2: number): void;
 			public onAttachedToWindow(): void;
@@ -59078,6 +58787,8 @@ declare module android {
 			public addOnWindowAttachListener(param0: android.view.ViewTreeObserver.OnWindowAttachListener): void;
 			public removeOnWindowAttachListener(param0: android.view.ViewTreeObserver.OnWindowAttachListener): void;
 			public dispatchOnPreDraw(): boolean;
+			/** @deprecated */
+			public removeGlobalOnLayoutListener(param0: android.view.ViewTreeObserver.OnGlobalLayoutListener): void;
 			public removeOnDrawListener(param0: android.view.ViewTreeObserver.OnDrawListener): void;
 			public dispatchOnGlobalLayout(): void;
 			public addOnGlobalFocusChangeListener(param0: android.view.ViewTreeObserver.OnGlobalFocusChangeListener): void;
@@ -59088,7 +58799,6 @@ declare module android {
 			public addOnDrawListener(param0: android.view.ViewTreeObserver.OnDrawListener): void;
 			public removeOnScrollChangedListener(param0: android.view.ViewTreeObserver.OnScrollChangedListener): void;
 			public removeOnTouchModeChangeListener(param0: android.view.ViewTreeObserver.OnTouchModeChangeListener): void;
-			public removeGlobalOnLayoutListener(param0: android.view.ViewTreeObserver.OnGlobalLayoutListener): void;
 			public addOnGlobalLayoutListener(param0: android.view.ViewTreeObserver.OnGlobalLayoutListener): void;
 			public removeOnGlobalLayoutListener(param0: android.view.ViewTreeObserver.OnGlobalLayoutListener): void;
 			public addOnScrollChangedListener(param0: android.view.ViewTreeObserver.OnScrollChangedListener): void;
@@ -59251,6 +58961,8 @@ declare module android {
 			public getCallback(): android.view.Window.Callback;
 			public setAllowReturnTransitionOverlap(param0: boolean): void;
 			public getContainer(): android.view.Window;
+			/** @deprecated */
+			public setTitleColor(param0: number): void;
 			public setFlags(param0: number, param1: number): void;
 			public setAllowEnterTransitionOverlap(param0: boolean): void;
 			public setSustainedPerformanceMode(param0: boolean): void;
@@ -59323,7 +59035,6 @@ declare module android {
 			public setSharedElementExitTransition(param0: android.transition.Transition): void;
 			public setSharedElementReenterTransition(param0: android.transition.Transition): void;
 			public setVolumeControlStream(param0: number): void;
-			public setTitleColor(param0: number): void;
 			public setStatusBarColor(param0: number): void;
 			public isFloating(): boolean;
 			public setEnterTransition(param0: android.transition.Transition): void;
@@ -59792,6 +59503,7 @@ declare module android {
 				public static class: java.lang.Class<android.view.accessibility.AccessibilityManager>;
 				public getInstalledAccessibilityServiceList(): java.util.List<android.accessibilityservice.AccessibilityServiceInfo>;
 				public removeAccessibilityStateChangeListener(param0: android.view.accessibility.AccessibilityManager.AccessibilityStateChangeListener): boolean;
+				/** @deprecated */
 				public getAccessibilityServiceList(): java.util.List<android.content.pm.ServiceInfo>;
 				public addAccessibilityStateChangeListener(param0: android.view.accessibility.AccessibilityManager.AccessibilityStateChangeListener): boolean;
 				public interrupt(): void;
@@ -59880,6 +59592,8 @@ declare module android {
 				public getDrawingOrder(): number;
 				public setRangeInfo(param0: android.view.accessibility.AccessibilityNodeInfo.RangeInfo): void;
 				public setContextClickable(param0: boolean): void;
+				/** @deprecated */
+				public addAction(param0: number): void;
 				public setEnabled(param0: boolean): void;
 				public getTextSelectionStart(): number;
 				public getWindow(): android.view.accessibility.AccessibilityWindowInfo;
@@ -59888,7 +59602,6 @@ declare module android {
 				public setAccessibilityFocused(param0: boolean): void;
 				public getBoundsInParent(param0: android.graphics.Rect): void;
 				public setSelected(param0: boolean): void;
-				public getActions(): number;
 				public setVisibleToUser(param0: boolean): void;
 				public isContentInvalid(): boolean;
 				public setTraversalBefore(param0: android.view.View): void;
@@ -59904,7 +59617,6 @@ declare module android {
 				public setContentDescription(param0: string): void;
 				public setLabelFor(param0: android.view.View, param1: number): void;
 				public removeChild(param0: android.view.View, param1: number): boolean;
-				public removeAction(param0: number): void;
 				public removeChild(param0: android.view.View): boolean;
 				public getLabeledBy(): android.view.accessibility.AccessibilityNodeInfo;
 				public setBoundsInScreen(param0: android.graphics.Rect): void;
@@ -59927,6 +59639,8 @@ declare module android {
 				public isSelected(): boolean;
 				public getLabelFor(): android.view.accessibility.AccessibilityNodeInfo;
 				public addAction(param0: android.view.accessibility.AccessibilityNodeInfo.AccessibilityAction): void;
+				/** @deprecated */
+				public getActions(): number;
 				public isEditable(): boolean;
 				public setCheckable(param0: boolean): void;
 				public getText(): string;
@@ -59993,8 +59707,9 @@ declare module android {
 				public isVisibleToUser(): boolean;
 				public canOpenPopup(): boolean;
 				public setTraversalBefore(param0: android.view.View, param1: number): void;
+				/** @deprecated */
+				public removeAction(param0: number): void;
 				public isEnabled(): boolean;
-				public addAction(param0: number): void;
 				public refresh(): boolean;
 			}
 			export module AccessibilityNodeInfo {
@@ -60882,7 +60597,7 @@ declare module android {
 				public extras: android.os.Bundle;
 				public fieldId: number;
 				public fieldName: string;
-				public hintLocales: android.os.LocaleList;
+				public hintLocales: any;
 				public hintText: string;
 				public imeOptions: number;
 				public initialCapsMode: number;
@@ -61194,12 +60909,10 @@ declare module android {
 				public static SHOW_IMPLICIT: number;
 				public showSoftInput(param0: android.view.View, param1: number): boolean;
 				public isFullscreenMode(): boolean;
-				public isWatchingCursor(param0: android.view.View): boolean;
 				public getCurrentInputMethodSubtype(): android.view.inputmethod.InputMethodSubtype;
 				public getInputMethodList(): java.util.List<android.view.inputmethod.InputMethodInfo>;
 				public isAcceptingText(): boolean;
 				public viewClicked(param0: android.view.View): void;
-				public updateCursor(param0: android.view.View, param1: number, param2: number, param3: number, param4: number): void;
 				public setAdditionalInputMethodSubtypes(param0: string, param1: native.Array<android.view.inputmethod.InputMethodSubtype>): void;
 				public toggleSoftInputFromWindow(param0: android.os.IBinder, param1: number, param2: number): void;
 				public sendAppPrivateCommand(param0: android.view.View, param1: string, param2: android.os.Bundle): void;
@@ -61212,6 +60925,8 @@ declare module android {
 				public getShortcutInputMethodsAndSubtypes(): java.util.Map<android.view.inputmethod.InputMethodInfo,java.util.List<android.view.inputmethod.InputMethodSubtype>>;
 				public hideStatusIcon(param0: android.os.IBinder): void;
 				public updateCursorAnchorInfo(param0: android.view.View, param1: android.view.inputmethod.CursorAnchorInfo): void;
+				/** @deprecated */
+				public isWatchingCursor(param0: android.view.View): boolean;
 				public getEnabledInputMethodList(): java.util.List<android.view.inputmethod.InputMethodInfo>;
 				public showSoftInputFromInputMethod(param0: android.os.IBinder, param1: number): void;
 				public showInputMethodAndSubtypeEnabler(param0: string): void;
@@ -61223,6 +60938,8 @@ declare module android {
 				public shouldOfferSwitchingToNextInputMethod(param0: android.os.IBinder): boolean;
 				public hideSoftInputFromWindow(param0: android.os.IBinder, param1: number): boolean;
 				public switchToNextInputMethod(param0: android.os.IBinder, param1: boolean): boolean;
+				/** @deprecated */
+				public updateCursor(param0: android.view.View, param1: number, param2: number, param3: number, param4: number): void;
 				public showStatusIcon(param0: android.os.IBinder, param1: string, param2: number): void;
 				public isActive(): boolean;
 				public hideSoftInputFromInputMethod(param0: android.os.IBinder, param1: number): void;
@@ -61296,21 +61013,24 @@ declare module android {
 				public static class: java.lang.Class<android.view.inputmethod.InputMethodSubtype>;
 				public static CREATOR: android.os.Parcelable.Creator<android.view.inputmethod.InputMethodSubtype>;
 				public getNameResId(): number;
-				public constructor(param0: number, param1: number, param2: string, param3: string, param4: string, param5: boolean, param6: boolean, param7: number);
 				public isAsciiCapable(): boolean;
 				public writeToParcel(param0: android.os.Parcel, param1: number): void;
+				/** @deprecated */
+				public constructor(param0: number, param1: number, param2: string, param3: string, param4: string, param5: boolean, param6: boolean, param7: number);
 				public getDisplayName(param0: android.content.Context, param1: string, param2: android.content.pm.ApplicationInfo): string;
 				public containsExtraValueKey(param0: string): boolean;
 				public getIconResId(): number;
 				public getLanguageTag(): string;
-				public getLocale(): string;
 				public getExtraValue(): string;
 				public overridesImplicitlyEnabledSubtype(): boolean;
 				public getExtraValueOf(param0: string): string;
 				public hashCode(): number;
-				public constructor(param0: number, param1: number, param2: string, param3: string, param4: string, param5: boolean, param6: boolean);
+				/** @deprecated */
+				public getLocale(): string;
 				public equals(param0: any): boolean;
 				public describeContents(): number;
+				/** @deprecated */
+				public constructor(param0: number, param1: number, param2: string, param3: string, param4: string, param5: boolean, param6: boolean);
 				public getMode(): string;
 				public isAuxiliary(): boolean;
 			}
@@ -61383,13 +61103,15 @@ declare module android {
 				public static class: java.lang.Class<android.view.textservice.SpellCheckerSession>;
 				public static SERVICE_META_DATA: string;
 				public close(): void;
+				/** @deprecated */
+				public getSuggestions(param0: native.Array<android.view.textservice.TextInfo>, param1: number, param2: boolean): void;
+				/** @deprecated */
 				public getSuggestions(param0: android.view.textservice.TextInfo, param1: number): void;
 				public finalize(): void;
 				public cancel(): void;
 				public getSentenceSuggestions(param0: native.Array<android.view.textservice.TextInfo>, param1: number): void;
 				public isSessionDisconnected(): boolean;
 				public getSpellChecker(): android.view.textservice.SpellCheckerInfo;
-				public getSuggestions(param0: native.Array<android.view.textservice.TextInfo>, param1: number, param2: boolean): void;
 			}
 			export module SpellCheckerSession {
 				export class SpellCheckerSessionListener extends java.lang.Object {
@@ -61421,12 +61143,14 @@ declare module android {
 				public getExtraValueOf(param0: string): string;
 				public hashCode(): number;
 				public writeToParcel(param0: android.os.Parcel, param1: number): void;
+				/** @deprecated */
+				public getLocale(): string;
 				public containsExtraValueKey(param0: string): boolean;
 				public equals(param0: any): boolean;
 				public getDisplayName(param0: android.content.Context, param1: string, param2: android.content.pm.ApplicationInfo): string;
 				public describeContents(): number;
 				public getLanguageTag(): string;
-				public getLocale(): string;
+				/** @deprecated */
 				public constructor(param0: number, param1: string, param2: string);
 			}
 		}
@@ -61540,19 +61264,22 @@ declare module android {
 			public acceptThirdPartyCookies(param0: android.webkit.WebView): boolean;
 			public flush(): void;
 			public setCookie(param0: string, param1: string, param2: android.webkit.ValueCallback<java.lang.Boolean>): void;
+			/** @deprecated */
+			public removeAllCookie(): void;
 			public removeAllCookies(param0: android.webkit.ValueCallback<java.lang.Boolean>): void;
 			public hasCookies(): boolean;
 			public acceptCookie(): boolean;
+			/** @deprecated */
 			public removeExpiredCookie(): void;
 			public static setAcceptFileSchemeCookies(param0: boolean): void;
 			public constructor();
 			public setAcceptCookie(param0: boolean): void;
-			public removeAllCookie(): void;
+			/** @deprecated */
+			public removeSessionCookie(): void;
 			public clone(): any;
 			public setAcceptThirdPartyCookies(param0: android.webkit.WebView, param1: boolean): void;
 			public removeSessionCookies(param0: android.webkit.ValueCallback<java.lang.Boolean>): void;
 			public setCookie(param0: string, param1: string): void;
-			public removeSessionCookie(): void;
 			public getCookie(param0: string): string;
 			public static allowFileSchemeCookies(): boolean;
 		}
@@ -61566,14 +61293,23 @@ declare module android {
 			public static LOGTAG: string;
 			public mDataBase: android.webkit.WebViewDatabase;
 			public mHandler: android.os.Handler;
+			/** @deprecated */
+			public resetSync(): void;
+			/** @deprecated */
+			public stopSync(): void;
+			/** @deprecated */
+			public startSync(): void;
 			public sync(): void;
 			public startSync(): void;
 			public stopSync(): void;
 			public static createInstance(param0: android.content.Context): android.webkit.CookieSyncManager;
 			public resetSync(): void;
-			public syncFromRamToFlash(): void;
+			/** @deprecated */
+			public sync(): void;
 			public run(): void;
 			public static getInstance(): android.webkit.CookieSyncManager;
+			/** @deprecated */
+			public syncFromRamToFlash(): void;
 		}
 	}
 }
@@ -61791,6 +61527,8 @@ declare module android {
 			public static class: java.lang.Class<android.webkit.URLUtil>;
 			public static decode(param0: native.Array<number>): native.Array<number>;
 			public static guessFileName(param0: string, param1: string, param2: string): string;
+			/** @deprecated */
+			public static isCookielessProxyUrl(param0: string): boolean;
 			public static isNetworkUrl(param0: string): boolean;
 			public static isValidUrl(param0: string): boolean;
 			public static guessUrl(param0: string): string;
@@ -61799,7 +61537,6 @@ declare module android {
 			public static stripAnchor(param0: string): string;
 			public static isJavaScriptUrl(param0: string): boolean;
 			public static isContentUrl(param0: string): boolean;
-			public static isCookielessProxyUrl(param0: string): boolean;
 			public static isHttpUrl(param0: string): boolean;
 			public static composeSearchUrl(param0: string, param1: string, param2: string): string;
 			public static isAboutUrl(param0: string): boolean;
@@ -61845,10 +61582,11 @@ declare module android {
 	export module webkit {
 		export class WebChromeClient extends java.lang.Object {
 			public static class: java.lang.Class<android.webkit.WebChromeClient>;
+			/** @deprecated */
+			public onConsoleMessage(param0: string, param1: number, param2: string): void;
 			public onGeolocationPermissionsHidePrompt(): void;
 			public onConsoleMessage(param0: android.webkit.ConsoleMessage): boolean;
 			public onShowCustomView(param0: android.view.View, param1: android.webkit.WebChromeClient.CustomViewCallback): void;
-			public onConsoleMessage(param0: string, param1: number, param2: string): void;
 			public onGeolocationPermissionsShowPrompt(param0: string, param1: android.webkit.GeolocationPermissions.Callback): void;
 			public onHideCustomView(): void;
 			public onJsPrompt(param0: android.webkit.WebView, param1: string, param2: string, param3: string, param4: android.webkit.JsPromptResult): boolean;
@@ -61859,20 +61597,24 @@ declare module android {
 			public onReceivedIcon(param0: android.webkit.WebView, param1: android.graphics.Bitmap): void;
 			public onRequestFocus(param0: android.webkit.WebView): void;
 			public getVisitedHistory(param0: android.webkit.ValueCallback<native.Array<string>>): void;
-			public onJsTimeout(): boolean;
+			/** @deprecated */
+			public onExceededDatabaseQuota(param0: string, param1: string, param2: number, param3: number, param4: number, param5: android.webkit.WebStorage.QuotaUpdater): void;
 			public onCreateWindow(param0: android.webkit.WebView, param1: boolean, param2: boolean, param3: android.os.Message): boolean;
 			public onCloseWindow(param0: android.webkit.WebView): void;
 			public onJsAlert(param0: android.webkit.WebView, param1: string, param2: string, param3: android.webkit.JsResult): boolean;
 			public onJsConfirm(param0: android.webkit.WebView, param1: string, param2: string, param3: android.webkit.JsResult): boolean;
+			/** @deprecated */
 			public onReachedMaxAppCacheSize(param0: number, param1: number, param2: android.webkit.WebStorage.QuotaUpdater): void;
-			public onShowCustomView(param0: android.view.View, param1: number, param2: android.webkit.WebChromeClient.CustomViewCallback): void;
 			public onPermissionRequestCanceled(param0: android.webkit.PermissionRequest): void;
 			public onReceivedTouchIconUrl(param0: android.webkit.WebView, param1: string, param2: boolean): void;
 			public onJsBeforeUnload(param0: android.webkit.WebView, param1: string, param2: string, param3: android.webkit.JsResult): boolean;
 			public constructor();
+			/** @deprecated */
+			public onJsTimeout(): boolean;
 			public getDefaultVideoPoster(): android.graphics.Bitmap;
 			public onReceivedTitle(param0: android.webkit.WebView, param1: string): void;
-			public onExceededDatabaseQuota(param0: string, param1: string, param2: number, param3: number, param4: number, param5: android.webkit.WebStorage.QuotaUpdater): void;
+			/** @deprecated */
+			public onShowCustomView(param0: android.view.View, param1: number, param2: android.webkit.WebChromeClient.CustomViewCallback): void;
 		}
 		export module WebChromeClient {
 			export class CustomViewCallback extends java.lang.Object {
@@ -62057,78 +61799,93 @@ declare module android {
 			public setSansSerifFontFamily(param0: string): void;
 			public setJavaScriptEnabled(param0: boolean): void;
 			public getJavaScriptCanOpenWindowsAutomatically(): boolean;
-			public getTextSize(): android.webkit.WebSettings.TextSize;
 			public setSupportZoom(param0: boolean): void;
 			public getAllowFileAccessFromFileURLs(): boolean;
 			public setAppCacheEnabled(param0: boolean): void;
 			public getSansSerifFontFamily(): string;
 			public setSupportMultipleWindows(param0: boolean): void;
-			public getDatabasePath(): string;
-			public constructor();
+			/** @deprecated */
+			public setAppCacheMaxSize(param0: number): void;
+			/** @deprecated */
 			public getDefaultZoom(): android.webkit.WebSettings.ZoomDensity;
+			public constructor();
 			public setFixedFontFamily(param0: string): void;
-			public getLightTouchEnabled(): boolean;
 			public getDatabaseEnabled(): boolean;
-			public setTextSize(param0: android.webkit.WebSettings.TextSize): void;
+			/** @deprecated */
+			public setRenderPriority(param0: android.webkit.WebSettings.RenderPriority): void;
 			public setAllowContentAccess(param0: boolean): void;
-			public setPluginState(param0: android.webkit.WebSettings.PluginState): void;
 			public setAppCachePath(param0: string): void;
 			public getMinimumLogicalFontSize(): number;
 			public getDisplayZoomControls(): boolean;
 			public setAllowFileAccess(param0: boolean): void;
-			public setLightTouchEnabled(param0: boolean): void;
 			public setBlockNetworkLoads(param0: boolean): void;
 			public setCursiveFontFamily(param0: string): void;
+			/** @deprecated */
+			public setLightTouchEnabled(param0: boolean): void;
 			public static getDefaultUserAgent(param0: android.content.Context): string;
 			public getStandardFontFamily(): string;
-			public getPluginState(): android.webkit.WebSettings.PluginState;
 			public getLoadWithOverviewMode(): boolean;
-			public setGeolocationDatabasePath(param0: string): void;
-			public setDatabasePath(param0: string): void;
 			public setMinimumLogicalFontSize(param0: number): void;
 			public getDefaultTextEncodingName(): string;
-			public getSavePassword(): boolean;
 			public setDisplayZoomControls(param0: boolean): void;
 			public getAllowContentAccess(): boolean;
-			public setDefaultZoom(param0: android.webkit.WebSettings.ZoomDensity): void;
 			public getDefaultFontSize(): number;
 			public setMinimumFontSize(param0: number): void;
+			/** @deprecated */
+			public enableSmoothTransition(): boolean;
 			public setUseWideViewPort(param0: boolean): void;
 			public getDisabledActionModeMenuItems(): number;
 			public setDisabledActionModeMenuItems(param0: number): void;
+			/** @deprecated */
+			public getDatabasePath(): string;
 			public getSaveFormData(): boolean;
 			public getLoadsImagesAutomatically(): boolean;
 			public getAllowUniversalAccessFromFileURLs(): boolean;
+			/** @deprecated */
+			public setPluginState(param0: android.webkit.WebSettings.PluginState): void;
 			public getUseWideViewPort(): boolean;
+			/** @deprecated */
+			public setGeolocationDatabasePath(param0: string): void;
 			public getDomStorageEnabled(): boolean;
 			public setDefaultTextEncodingName(param0: string): void;
 			public setBlockNetworkImage(param0: boolean): void;
 			public getSerifFontFamily(): string;
-			public setRenderPriority(param0: android.webkit.WebSettings.RenderPriority): void;
-			public setAppCacheMaxSize(param0: number): void;
+			/** @deprecated */
+			public setDatabasePath(param0: string): void;
+			/** @deprecated */
+			public setSavePassword(param0: boolean): void;
 			public supportZoom(): boolean;
 			public getAllowFileAccess(): boolean;
+			/** @deprecated */
+			public getPluginState(): android.webkit.WebSettings.PluginState;
 			public getJavaScriptEnabled(): boolean;
 			public getDefaultFixedFontSize(): number;
 			public getBlockNetworkLoads(): boolean;
 			public getOffscreenPreRaster(): boolean;
+			/** @deprecated */
+			public setDefaultZoom(param0: android.webkit.WebSettings.ZoomDensity): void;
 			public getBlockNetworkImage(): boolean;
 			public setSaveFormData(param0: boolean): void;
 			public setDefaultFontSize(param0: number): void;
 			public getUserAgentString(): string;
 			public setAllowFileAccessFromFileURLs(param0: boolean): void;
-			public setEnableSmoothTransition(param0: boolean): void;
+			/** @deprecated */
+			public setTextSize(param0: android.webkit.WebSettings.TextSize): void;
+			/** @deprecated */
+			public getTextSize(): android.webkit.WebSettings.TextSize;
 			public supportMultipleWindows(): boolean;
 			public getMinimumFontSize(): number;
 			public setFantasyFontFamily(param0: string): void;
+			/** @deprecated */
+			public getLightTouchEnabled(): boolean;
 			public getBuiltInZoomControls(): boolean;
 			public setGeolocationEnabled(param0: boolean): void;
-			public enableSmoothTransition(): boolean;
 			public getCacheMode(): number;
+			/** @deprecated */
+			public setEnableSmoothTransition(param0: boolean): void;
 			public setDomStorageEnabled(param0: boolean): void;
 			public getMediaPlaybackRequiresUserGesture(): boolean;
 			public setCacheMode(param0: number): void;
-			public setSavePassword(param0: boolean): void;
 			public setLoadsImagesAutomatically(param0: boolean): void;
 			public setTextZoom(param0: number): void;
 			public getMixedContentMode(): number;
@@ -62145,6 +61902,8 @@ declare module android {
 			public setBuiltInZoomControls(param0: boolean): void;
 			public setLoadWithOverviewMode(param0: boolean): void;
 			public setOffscreenPreRaster(param0: boolean): void;
+			/** @deprecated */
+			public getSavePassword(): boolean;
 			public getFantasyFontFamily(): string;
 			public setDefaultFixedFontSize(param0: number): void;
 			public setSerifFontFamily(param0: string): void;
@@ -62209,10 +61968,11 @@ declare module android {
 			public static class: java.lang.Class<android.webkit.WebStorage>;
 			public deleteAllData(): void;
 			public getOrigins(param0: android.webkit.ValueCallback<java.util.Map<any,any>>): void;
-			public setQuotaForOrigin(param0: string, param1: number): void;
 			public deleteOrigin(param0: string): void;
 			public getUsageForOrigin(param0: string, param1: android.webkit.ValueCallback<java.lang.Long>): void;
 			public getQuotaForOrigin(param0: string, param1: android.webkit.ValueCallback<java.lang.Long>): void;
+			/** @deprecated */
+			public setQuotaForOrigin(param0: string, param1: number): void;
 			public static getInstance(): android.webkit.WebStorage;
 		}
 		export module WebStorage {
@@ -62263,28 +62023,27 @@ declare module android {
 			public static SCHEME_GEO: string;
 			public static SCHEME_MAILTO: string;
 			public static SCHEME_TEL: string;
-			public setHorizontalScrollbarOverlay(param0: boolean): void;
 			public setLayerType(param0: number, param1: android.graphics.Paint): void;
 			public onStopNestedScroll(param0: android.view.View): void;
 			public saveWebArchive(param0: string): void;
-			public createPrintDocumentAdapter(): any;
 			public resumeTimers(): void;
 			public onMeasure(param0: number, param1: number): void;
 			public requestFocus(): boolean;
 			public constructor(param0: android.content.Context, param1: android.util.AttributeSet, param2: number);
 			public childHasTransientStateChanged(param0: android.view.View, param1: boolean): void;
 			public setLayoutParams(param0: android.view.ViewGroup.LayoutParams): void;
-			public constructor(param0: android.content.Context, param1: android.util.AttributeSet, param2: number, param3: boolean);
 			public getHttpAuthUsernamePassword(param0: string, param1: string): native.Array<string>;
 			public onNestedScrollAccepted(param0: android.view.View, param1: android.view.View, param2: number): void;
 			public saveState(param0: android.os.Bundle): android.webkit.WebBackForwardList;
 			public showContextMenuForChild(param0: android.view.View): boolean;
+			/** @deprecated */
+			public constructor(param0: android.content.Context, param1: android.util.AttributeSet, param2: number, param3: boolean);
 			public onKeyLongPress(param0: number, param1: android.view.KeyEvent): boolean;
 			public findAllAsync(param0: string): void;
+			/** @deprecated */
 			public setMapTrackballToArrowKeys(param0: boolean): void;
 			public sendAccessibilityEvent(param0: number): void;
 			public loadDataWithBaseURL(param0: string, param1: string, param2: string, param3: string, param4: string): void;
-			public clearView(): void;
 			public clearMatches(): void;
 			public restoreState(param0: android.os.Bundle): android.webkit.WebBackForwardList;
 			public onStartNestedScroll(param0: android.view.View, param1: android.view.View, param2: number): boolean;
@@ -62299,20 +62058,27 @@ declare module android {
 			public setOverScrollMode(param0: number): void;
 			public static enableSlowWholeDocumentDraw(): void;
 			public getAccessibilityClassName(): string;
-			public freeMemory(): void;
+			/** @deprecated */
+			public onGlobalFocusChanged(param0: android.view.View, param1: android.view.View): void;
 			public clearFormData(): void;
 			public invalidateChild(param0: android.view.View, param1: android.graphics.Rect): void;
 			public findNext(param0: boolean): void;
-			public findAll(param0: string): number;
+			/** @deprecated */
+			public setHorizontalScrollbarOverlay(param0: boolean): void;
+			/** @deprecated */
+			public getScale(): number;
 			public static clearClientCertPreferences(param0: java.lang.Runnable): void;
 			public setScrollBarStyle(param0: number): void;
 			public onConfigurationChanged(param0: android.content.res.Configuration): void;
 			public requestLayout(): void;
 			public getUrl(): string;
-			public setVerticalScrollbarOverlay(param0: boolean): void;
 			public clearCache(param0: boolean): void;
 			public canResolveTextDirection(): boolean;
 			public onKeyUp(param0: number, param1: android.view.KeyEvent): boolean;
+			/** @deprecated */
+			public overlayVerticalScrollbar(): boolean;
+			/** @deprecated */
+			public overlayHorizontalScrollbar(): boolean;
 			public addView(param0: android.view.View, param1: android.view.ViewGroup.LayoutParams): void;
 			public addView(param0: android.view.View, param1: number, param2: android.view.ViewGroup.LayoutParams): void;
 			public setBackgroundColor(param0: number): void;
@@ -62323,12 +62089,10 @@ declare module android {
 			public setWebViewClient(param0: android.webkit.WebViewClient): void;
 			public getOriginalUrl(): string;
 			public performLongClick(param0: number, param1: number): boolean;
-			public showFindDialog(param0: string, param1: boolean): boolean;
 			public performLongClick(): boolean;
 			public focusSearch(param0: android.view.View, param1: number): android.view.View;
 			public static findAddress(param0: string): string;
 			public onFocusChanged(param0: boolean, param1: number, param2: android.graphics.Rect): void;
-			public canZoomIn(): boolean;
 			public computeHorizontalScrollRange(): number;
 			public zoomIn(): boolean;
 			public getHitTestResult(): android.webkit.WebView.HitTestResult;
@@ -62342,25 +62106,29 @@ declare module android {
 			public getTextAlignment(): number;
 			public onWindowFocusChanged(param0: boolean): void;
 			public onNestedScroll(param0: android.view.View, param1: number, param2: number, param3: number, param4: number): void;
-			public capturePicture(): android.graphics.Picture;
 			public onNestedPreFling(param0: android.view.View, param1: number, param2: number): boolean;
 			public getAccessibilityNodeProvider(): android.view.accessibility.AccessibilityNodeProvider;
-			public setPictureListener(param0: android.webkit.WebView.PictureListener): void;
+			/** @deprecated */
+			public freeMemory(): void;
 			public createPrintDocumentAdapter(param0: string): any;
+			/** @deprecated */
+			public canZoomIn(): boolean;
 			public onChildViewRemoved(param0: android.view.View, param1: android.view.View): void;
 			public requestImageRef(param0: android.os.Message): void;
-			public getScale(): number;
 			public saveWebArchive(param0: string, param1: boolean, param2: android.webkit.ValueCallback<string>): void;
 			public onPause(): void;
 			public onProvideVirtualStructure(param0: any): void;
+			/** @deprecated */
+			public clearView(): void;
 			public isTextAlignmentResolved(): boolean;
 			public removeJavascriptInterface(param0: string): void;
 			public setHttpAuthUsernamePassword(param0: string, param1: string, param2: string, param3: string): void;
 			public getTextDirection(): number;
 			public updateViewLayout(param0: android.view.View, param1: android.view.ViewGroup.LayoutParams): void;
 			public onTouchEvent(param0: android.view.MotionEvent): boolean;
+			/** @deprecated */
+			public setPictureListener(param0: android.webkit.WebView.PictureListener): void;
 			public dispatchKeyEvent(param0: android.view.KeyEvent): boolean;
-			public setCertificate(param0: android.net.http.SslCertificate): void;
 			public postWebMessage(param0: android.webkit.WebMessage, param1: android.net.Uri): void;
 			public showContextMenuForChild(param0: android.view.View, param1: number, param2: number): boolean;
 			public constructor(param0: android.content.Context, param1: android.util.AttributeSet);
@@ -62369,10 +62137,11 @@ declare module android {
 			public notifySubtreeAccessibilityStateChanged(param0: android.view.View, param1: android.view.View, param2: number): void;
 			public static setWebContentsDebuggingEnabled(param0: boolean): void;
 			public addView(param0: android.view.View, param1: number): void;
-			public savePassword(param0: string, param1: string, param2: string): void;
 			public goForward(): void;
 			public onCreateInputConnection(param0: android.view.inputmethod.EditorInfo): android.view.inputmethod.InputConnection;
 			public loadData(param0: string, param1: string, param2: string): void;
+			/** @deprecated */
+			public onChildViewAdded(param0: android.view.View, param1: android.view.View): void;
 			public sendAccessibilityEventUnchecked(param0: android.view.accessibility.AccessibilityEvent): void;
 			public reload(): void;
 			public addView(param0: android.view.View, param1: number, param2: number): void;
@@ -62380,39 +62149,51 @@ declare module android {
 			public requestFocusNodeHref(param0: android.os.Message): void;
 			public onKeyDown(param0: number, param1: android.view.KeyEvent): boolean;
 			public bringChildToFront(param0: android.view.View): void;
+			/** @deprecated */
+			public savePassword(param0: string, param1: string, param2: string): void;
 			public copyBackForwardList(): android.webkit.WebBackForwardList;
 			public requestTransparentRegion(param0: android.view.View): void;
 			public canResolveTextAlignment(): boolean;
 			public getParent(): android.view.ViewParent;
-			public canZoomOut(): boolean;
+			/** @deprecated */
+			public capturePicture(): android.graphics.Picture;
 			public dispatchDraw(param0: android.graphics.Canvas): void;
 			public getFavicon(): android.graphics.Bitmap;
 			public setDownloadListener(param0: android.webkit.DownloadListener): void;
+			/** @deprecated */
+			public canZoomOut(): boolean;
 			public focusSearch(param0: number): android.view.View;
 			public recomputeViewAttributes(param0: android.view.View): void;
 			public isLayoutRequested(): boolean;
 			public computeVerticalScrollExtent(): number;
 			public onDragEvent(param0: android.view.DragEvent): boolean;
 			public requestFocus(param0: number, param1: android.graphics.Rect): boolean;
+			/** @deprecated */
+			public setCertificate(param0: android.net.http.SslCertificate): void;
 			public getHandler(): android.os.Handler;
 			public pageUp(param0: boolean): boolean;
 			public onChildViewAdded(param0: android.view.View, param1: android.view.View): void;
 			public invokeZoomPicker(): void;
 			public onWindowVisibilityChanged(param0: number): void;
 			public constructor(param0: android.content.Context, param1: android.util.AttributeSet, param2: number, param3: number);
-			public overlayVerticalScrollbar(): boolean;
 			public findFocus(): android.view.View;
 			public childDrawableStateChanged(param0: android.view.View): void;
 			public addView(param0: android.view.View): void;
 			public goBack(): void;
 			public createWebMessageChannel(): native.Array<android.webkit.WebMessagePort>;
+			/** @deprecated */
+			public requestFitSystemWindows(): void;
 			public documentHasImages(param0: android.os.Message): void;
 			public getChildVisibleRect(param0: android.view.View, param1: android.graphics.Rect, param2: android.graphics.Point): boolean;
 			public clearSslPreferences(): void;
 			public onVisibilityChanged(param0: android.view.View, param1: number): void;
+			/** @deprecated */
+			public onChildViewRemoved(param0: android.view.View, param1: android.view.View): void;
 			public loadUrl(param0: string): void;
 			public constructor(param0: android.content.Context);
 			public pageDown(param0: boolean): boolean;
+			/** @deprecated */
+			public shouldDelayChildPressedState(): boolean;
 			public postUrl(param0: string, param1: native.Array<number>): void;
 			public flingScroll(param0: number, param1: number): void;
 			public isLayoutDirectionResolved(): boolean;
@@ -62421,8 +62202,8 @@ declare module android {
 			public shouldDelayChildPressedState(): boolean;
 			public onStartTemporaryDetach(): void;
 			public canResolveLayoutDirection(): boolean;
-			public onGlobalFocusChanged(param0: android.view.View, param1: android.view.View): void;
 			public onFinishTemporaryDetach(): void;
+			public onGlobalFocusChanged(param0: android.view.View, param1: android.view.View): void;
 			public onNestedFling(param0: android.view.View, param1: number, param2: number, param3: boolean): boolean;
 			public getCertificate(): android.net.http.SslCertificate;
 			public getSettings(): android.webkit.WebSettings;
@@ -62432,6 +62213,8 @@ declare module android {
 			public onNestedPrePerformAccessibilityAction(param0: android.view.View, param1: number, param2: android.os.Bundle): boolean;
 			public pauseTimers(): void;
 			public requestFocus(param0: number): boolean;
+			/** @deprecated */
+			public findAll(param0: string): number;
 			public zoomBy(param0: number): void;
 			public canGoBackOrForward(param0: number): boolean;
 			public computeVerticalScrollOffset(): number;
@@ -62439,17 +62222,22 @@ declare module android {
 			public setWebChromeClient(param0: android.webkit.WebChromeClient): void;
 			public requestChildRectangleOnScreen(param0: android.view.View, param1: android.graphics.Rect, param2: boolean): boolean;
 			public onNestedPreScroll(param0: android.view.View, param1: number, param2: number, param3: native.Array<number>): void;
+			/** @deprecated */
+			public createPrintDocumentAdapter(): any;
 			public onScrollChanged(param0: number, param1: number, param2: number, param3: number): void;
 			public onKeyMultiple(param0: number, param1: number, param2: android.view.KeyEvent): boolean;
 			public onSizeChanged(param0: number, param1: number, param2: number, param3: number): void;
 			public goBackOrForward(param0: number): void;
-			public overlayHorizontalScrollbar(): boolean;
 			public onGenericMotionEvent(param0: android.view.MotionEvent): boolean;
+			/** @deprecated */
+			public setVerticalScrollbarOverlay(param0: boolean): void;
 			public addJavascriptInterface(param0: any, param1: string): void;
 			public invalidateChildInParent(param0: native.Array<number>, param1: android.graphics.Rect): android.view.ViewParent;
 			public isPrivateBrowsingEnabled(): boolean;
 			public computeHorizontalScrollOffset(): number;
 			public startActionModeForChild(param0: android.view.View, param1: android.view.ActionMode.Callback, param2: number): android.view.ActionMode;
+			/** @deprecated */
+			public showFindDialog(param0: string, param1: boolean): boolean;
 			public zoomOut(): boolean;
 			public computeScroll(): void;
 			public removeView(param0: android.view.View): void;
@@ -62498,6 +62286,7 @@ declare module android {
 					onNewPicture(param0: android.webkit.WebView, param1: android.graphics.Picture): void;
 				});
 				public constructor();
+				/** @deprecated */
 				public onNewPicture(param0: android.webkit.WebView, param1: android.graphics.Picture): void;
 			}
 			export abstract class VisualStateCallback extends java.lang.Object {
@@ -62534,7 +62323,8 @@ declare module android {
 			public static ERROR_UNKNOWN: number;
 			public static ERROR_UNSUPPORTED_AUTH_SCHEME: number;
 			public static ERROR_UNSUPPORTED_SCHEME: number;
-			public shouldOverrideUrlLoading(param0: android.webkit.WebView, param1: string): boolean;
+			/** @deprecated */
+			public onTooManyRedirects(param0: android.webkit.WebView, param1: android.os.Message, param2: android.os.Message): void;
 			public onScaleChanged(param0: android.webkit.WebView, param1: number, param2: number): void;
 			public shouldInterceptRequest(param0: android.webkit.WebView, param1: android.webkit.WebResourceRequest): android.webkit.WebResourceResponse;
 			public onReceivedHttpError(param0: android.webkit.WebView, param1: android.webkit.WebResourceRequest, param2: android.webkit.WebResourceResponse): void;
@@ -62545,16 +62335,19 @@ declare module android {
 			public onUnhandledKeyEvent(param0: android.webkit.WebView, param1: android.view.KeyEvent): void;
 			public constructor();
 			public onPageCommitVisible(param0: android.webkit.WebView, param1: string): void;
-			public shouldInterceptRequest(param0: android.webkit.WebView, param1: string): android.webkit.WebResourceResponse;
 			public onPageFinished(param0: android.webkit.WebView, param1: string): void;
 			public onPageStarted(param0: android.webkit.WebView, param1: string, param2: android.graphics.Bitmap): void;
 			public onLoadResource(param0: android.webkit.WebView, param1: string): void;
-			public onTooManyRedirects(param0: android.webkit.WebView, param1: android.os.Message, param2: android.os.Message): void;
 			public doUpdateVisitedHistory(param0: android.webkit.WebView, param1: string, param2: boolean): void;
+			/** @deprecated */
+			public onReceivedError(param0: android.webkit.WebView, param1: number, param2: string, param3: string): void;
 			public onReceivedError(param0: android.webkit.WebView, param1: android.webkit.WebResourceRequest, param2: android.webkit.WebResourceError): void;
+			/** @deprecated */
+			public shouldOverrideUrlLoading(param0: android.webkit.WebView, param1: string): boolean;
+			/** @deprecated */
+			public shouldInterceptRequest(param0: android.webkit.WebView, param1: string): android.webkit.WebResourceResponse;
 			public shouldOverrideKeyEvent(param0: android.webkit.WebView, param1: android.view.KeyEvent): boolean;
 			public onReceivedLoginRequest(param0: android.webkit.WebView, param1: string, param2: string, param3: string): void;
-			public onReceivedError(param0: android.webkit.WebView, param1: number, param2: string, param3: string): void;
 			public onReceivedHttpAuthRequest(param0: android.webkit.WebView, param1: android.webkit.HttpAuthHandler, param2: string, param3: string): void;
 		}
 	}
@@ -62567,10 +62360,12 @@ declare module android {
 			public clearFormData(): void;
 			public static getInstance(param0: android.content.Context): android.webkit.WebViewDatabase;
 			public hasFormData(): boolean;
-			public constructor();
+			/** @deprecated */
 			public clearUsernamePassword(): void;
+			public constructor();
 			public hasHttpAuthUsernamePassword(): boolean;
 			public clearHttpAuthUsernamePassword(): void;
+			/** @deprecated */
 			public hasUsernamePassword(): boolean;
 		}
 	}
@@ -62741,6 +62536,8 @@ declare module android {
 			public childDrawableStateChanged(param0: android.view.View): void;
 			public addView(param0: android.view.View): void;
 			public onDisplayHint(param0: number): void;
+			/** @deprecated */
+			public requestFitSystemWindows(): void;
 			public getChildVisibleRect(param0: android.view.View, param1: android.graphics.Rect, param2: android.graphics.Point): boolean;
 			public canScrollList(param0: number): boolean;
 			public constructor(param0: android.content.Context);
@@ -62990,6 +62787,8 @@ declare module android {
 			public canResolveTextDirection(): boolean;
 			public getTextDirection(): number;
 			public updateViewLayout(param0: android.view.View, param1: android.view.ViewGroup.LayoutParams): void;
+			/** @deprecated */
+			public requestFitSystemWindows(): void;
 			public requestDisallowInterceptTouchEvent(param0: boolean): void;
 			public getChildVisibleRect(param0: android.view.View, param1: android.graphics.Rect, param2: android.graphics.Point): boolean;
 			public isTextDirectionResolved(): boolean;
@@ -63070,6 +62869,8 @@ declare module android {
 			public canResolveTextDirection(): boolean;
 			public getTextDirection(): number;
 			public updateViewLayout(param0: android.view.View, param1: android.view.ViewGroup.LayoutParams): void;
+			/** @deprecated */
+			public requestFitSystemWindows(): void;
 			public requestDisallowInterceptTouchEvent(param0: boolean): void;
 			public getChildVisibleRect(param0: android.view.View, param1: android.graphics.Rect, param2: android.graphics.Point): boolean;
 			public isTextDirectionResolved(): boolean;
@@ -63178,6 +62979,8 @@ declare module android {
 			public canResolveTextDirection(): boolean;
 			public getTextDirection(): number;
 			public updateViewLayout(param0: android.view.View, param1: android.view.ViewGroup.LayoutParams): void;
+			/** @deprecated */
+			public requestFitSystemWindows(): void;
 			public requestDisallowInterceptTouchEvent(param0: boolean): void;
 			public getChildVisibleRect(param0: android.view.View, param1: android.graphics.Rect, param2: android.graphics.Point): boolean;
 			public isTextDirectionResolved(): boolean;
@@ -63306,6 +63109,8 @@ declare module android {
 			public childDrawableStateChanged(param0: android.view.View): void;
 			public canResolveTextDirection(): boolean;
 			public getOnItemSelectedListener(): android.widget.AdapterView.OnItemSelectedListener;
+			/** @deprecated */
+			public requestFitSystemWindows(): void;
 			public getChildVisibleRect(param0: android.view.View, param1: android.graphics.Rect, param2: android.graphics.Point): boolean;
 			public onKeyUp(param0: number, param1: android.view.KeyEvent): boolean;
 			public getItemAtPosition(param0: number): any;
@@ -63415,99 +63220,101 @@ declare module android {
 			public static class: java.lang.Class<android.widget.AdapterViewAnimator>;
 			public setInAnimation(param0: android.content.Context, param1: number): void;
 			public deferNotifyDataSetChanged(): void;
-			public onLayout(param0: boolean, param1: number, param2: number, param3: number, param4: number): void;
 			public setSelection(param0: number): void;
-			public isLayoutDirectionResolved(): boolean;
 			public onStopNestedScroll(param0: android.view.View): void;
-			public focusableViewAvailable(param0: android.view.View): void;
-			public createContextMenu(param0: android.view.ContextMenu): void;
 			public sendAccessibilityEventUnchecked(param0: android.view.accessibility.AccessibilityEvent): void;
 			public onMeasure(param0: number, param1: number): void;
 			public constructor(param0: android.content.Context, param1: android.util.AttributeSet, param2: number);
-			public setOutAnimation(param0: android.content.Context, param1: number): void;
 			public addView(param0: android.view.View, param1: number, param2: number): void;
-			public focusSearch(param0: android.view.View, param1: number): android.view.View;
 			public requestSendAccessibilityEvent(param0: android.view.View, param1: android.view.accessibility.AccessibilityEvent): boolean;
 			public getInAnimation(): android.animation.ObjectAnimator;
 			public childHasTransientStateChanged(param0: android.view.View, param1: boolean): void;
-			public canResolveLayoutDirection(): boolean;
 			public onKeyDown(param0: number, param1: android.view.KeyEvent): boolean;
 			public onNestedScrollAccepted(param0: android.view.View, param1: android.view.View, param2: number): void;
 			public showContextMenuForChild(param0: android.view.View): boolean;
-			public onNestedFling(param0: android.view.View, param1: number, param2: number, param3: boolean): boolean;
 			public fyiWillBeAdvancedByHostKThx(): void;
-			public setRemoteViewsAdapter(param0: android.content.Intent): void;
 			public bringChildToFront(param0: android.view.View): void;
 			public onKeyLongPress(param0: number, param1: android.view.KeyEvent): boolean;
 			public setAdapter(param0: android.widget.Adapter): void;
 			public setDisplayedChild(param0: number): void;
 			public sendAccessibilityEvent(param0: number): void;
-			public onRestoreInstanceState(param0: android.os.Parcelable): void;
 			public requestTransparentRegion(param0: android.view.View): void;
-			public unscheduleDrawable(param0: android.graphics.drawable.Drawable): void;
-			public getParentForAccessibility(): android.view.ViewParent;
 			public canResolveTextAlignment(): boolean;
-			public onNestedPrePerformAccessibilityAction(param0: android.view.View, param1: number, param2: android.os.Bundle): boolean;
 			public getParent(): android.view.ViewParent;
 			public onStartNestedScroll(param0: android.view.View, param1: android.view.View, param2: number): boolean;
-			public startActionModeForChild(param0: android.view.View, param1: android.view.ActionMode.Callback): android.view.ActionMode;
 			public unscheduleDrawable(param0: android.graphics.drawable.Drawable, param1: java.lang.Runnable): void;
 			public getLayoutDirection(): number;
 			public setInAnimation(param0: android.animation.ObjectAnimator): void;
-			public getTextAlignment(): number;
 			public requestChildFocus(param0: android.view.View, param1: android.view.View): void;
 			public invalidateDrawable(param0: android.graphics.drawable.Drawable): void;
+			public getAccessibilityClassName(): string;
+			public focusSearch(param0: number): android.view.View;
+			public recomputeViewAttributes(param0: android.view.View): void;
+			public showNext(): void;
+			public isLayoutRequested(): boolean;
+			public advance(): void;
+			public getDisplayedChild(): number;
+			public invalidateChild(param0: android.view.View, param1: android.graphics.Rect): void;
+			public constructor(param0: android.content.Context, param1: android.util.AttributeSet, param2: number, param3: number);
+			public requestLayout(): void;
+			public childDrawableStateChanged(param0: android.view.View): void;
+			public addView(param0: android.view.View): void;
+			public canResolveTextDirection(): boolean;
+			/** @deprecated */
+			public requestFitSystemWindows(): void;
+			public getAdapter(): android.widget.Adapter;
+			public getChildVisibleRect(param0: android.view.View, param1: android.graphics.Rect, param2: android.graphics.Point): boolean;
+			public onKeyUp(param0: number, param1: android.view.KeyEvent): boolean;
+			public constructor(param0: android.content.Context);
+			public addView(param0: android.view.View, param1: android.view.ViewGroup.LayoutParams): void;
+			public addView(param0: android.view.View, param1: number, param2: android.view.ViewGroup.LayoutParams): void;
+			public requestFitSystemWindows(): void;
+			public onLayout(param0: boolean, param1: number, param2: number, param3: number, param4: number): void;
+			public isLayoutDirectionResolved(): boolean;
+			public focusableViewAvailable(param0: android.view.View): void;
+			public createContextMenu(param0: android.view.ContextMenu): void;
+			public setOutAnimation(param0: android.content.Context, param1: number): void;
+			public focusSearch(param0: android.view.View, param1: number): android.view.View;
+			public canResolveLayoutDirection(): boolean;
+			public onNestedFling(param0: android.view.View, param1: number, param2: number, param3: boolean): boolean;
+			public setRemoteViewsAdapter(param0: android.content.Intent): void;
+			public onRestoreInstanceState(param0: android.os.Parcelable): void;
+			public unscheduleDrawable(param0: android.graphics.drawable.Drawable): void;
+			public getParentForAccessibility(): android.view.ViewParent;
+			public onNestedPrePerformAccessibilityAction(param0: android.view.View, param1: number, param2: android.os.Bundle): boolean;
+			public startActionModeForChild(param0: android.view.View, param1: android.view.ActionMode.Callback): android.view.ActionMode;
+			public getTextAlignment(): number;
 			public requestChildRectangleOnScreen(param0: android.view.View, param1: android.graphics.Rect, param2: boolean): boolean;
 			public onNestedScroll(param0: android.view.View, param1: number, param2: number, param3: number, param4: number): void;
 			public onNestedPreScroll(param0: android.view.View, param1: number, param2: number, param3: native.Array<number>): void;
 			public onSaveInstanceState(): android.os.Parcelable;
 			public onNestedPreFling(param0: android.view.View, param1: number, param2: number): boolean;
-			public getAccessibilityClassName(): string;
-			public focusSearch(param0: number): android.view.View;
 			public onKeyMultiple(param0: number, param1: number, param2: android.view.KeyEvent): boolean;
-			public recomputeViewAttributes(param0: android.view.View): void;
-			public showNext(): void;
 			public setAdapter(param0: any): void;
 			public setAnimateFirstView(param0: boolean): void;
-			public isLayoutRequested(): boolean;
 			public getSelectedView(): android.view.View;
-			public advance(): void;
-			public getDisplayedChild(): number;
-			public invalidateChild(param0: android.view.View, param1: android.graphics.Rect): void;
 			public onRemoteAdapterConnected(): boolean;
 			public invalidateChildInParent(param0: native.Array<number>, param1: android.graphics.Rect): android.view.ViewParent;
 			public getOutAnimation(): android.animation.ObjectAnimator;
 			public showPrevious(): void;
 			public getCurrentView(): android.view.View;
-			public constructor(param0: android.content.Context, param1: android.util.AttributeSet, param2: number, param3: number);
 			public startActionModeForChild(param0: android.view.View, param1: android.view.ActionMode.Callback, param2: number): android.view.ActionMode;
 			public setOutAnimation(param0: android.animation.ObjectAnimator): void;
 			public getAdapter(): any;
 			public getBaseline(): number;
-			public requestLayout(): void;
-			public childDrawableStateChanged(param0: android.view.View): void;
 			public isTextAlignmentResolved(): boolean;
-			public addView(param0: android.view.View): void;
 			public removeView(param0: android.view.View): void;
 			public clearChildFocus(param0: android.view.View): void;
 			public onRemoteAdapterDisconnected(): void;
-			public canResolveTextDirection(): boolean;
 			public getTextDirection(): number;
 			public updateViewLayout(param0: android.view.View, param1: android.view.ViewGroup.LayoutParams): void;
 			public onTouchEvent(param0: android.view.MotionEvent): boolean;
 			public requestDisallowInterceptTouchEvent(param0: boolean): void;
-			public getAdapter(): android.widget.Adapter;
-			public getChildVisibleRect(param0: android.view.View, param1: android.graphics.Rect, param2: android.graphics.Point): boolean;
 			public isTextDirectionResolved(): boolean;
-			public onKeyUp(param0: number, param1: android.view.KeyEvent): boolean;
-			public constructor(param0: android.content.Context);
 			public showContextMenuForChild(param0: android.view.View, param1: number, param2: number): boolean;
 			public constructor(param0: android.content.Context, param1: android.util.AttributeSet);
 			public scheduleDrawable(param0: android.graphics.drawable.Drawable, param1: java.lang.Runnable, param2: number): void;
-			public addView(param0: android.view.View, param1: android.view.ViewGroup.LayoutParams): void;
-			public addView(param0: android.view.View, param1: number, param2: android.view.ViewGroup.LayoutParams): void;
 			public notifySubtreeAccessibilityStateChanged(param0: android.view.View, param1: android.view.View, param2: number): void;
-			public requestFitSystemWindows(): void;
 			public addView(param0: android.view.View, param1: number): void;
 		}
 	}
@@ -63583,6 +63390,8 @@ declare module android {
 			public canResolveTextDirection(): boolean;
 			public getTextDirection(): number;
 			public updateViewLayout(param0: android.view.View, param1: android.view.ViewGroup.LayoutParams): void;
+			/** @deprecated */
+			public requestFitSystemWindows(): void;
 			public requestDisallowInterceptTouchEvent(param0: boolean): void;
 			public getChildVisibleRect(param0: android.view.View, param1: android.graphics.Rect, param2: android.graphics.Point): boolean;
 			public isTextDirectionResolved(): boolean;
@@ -63721,7 +63530,6 @@ declare module android {
 			public setThreshold(param0: number): void;
 			public performFiltering(param0: string, param1: number): void;
 			public sendAccessibilityEventUnchecked(param0: android.view.accessibility.AccessibilityEvent): void;
-			public getItemClickListener(): android.widget.AdapterView.OnItemClickListener;
 			public constructor(param0: android.content.Context, param1: android.util.AttributeSet, param2: number);
 			public setOnItemClickListener(param0: android.widget.AdapterView.OnItemClickListener): void;
 			public setFrame(param0: number, param1: number, param2: number, param3: number): boolean;
@@ -63743,6 +63551,8 @@ declare module android {
 			public sendAccessibilityEvent(param0: number): void;
 			public setDropDownBackgroundResource(param0: number): void;
 			public unscheduleDrawable(param0: android.graphics.drawable.Drawable): void;
+			/** @deprecated */
+			public getItemSelectedListener(): android.widget.AdapterView.OnItemSelectedListener;
 			public replaceText(param0: string): void;
 			public setText(param0: string, param1: android.widget.TextView.BufferType): void;
 			public setDropDownVerticalOffset(param0: number): void;
@@ -63759,7 +63569,6 @@ declare module android {
 			public getFilter(): android.widget.Filter;
 			public onKeyMultiple(param0: number, param1: number, param2: android.view.KeyEvent): boolean;
 			public getDropDownWidth(): number;
-			public getItemSelectedListener(): android.widget.AdapterView.OnItemSelectedListener;
 			public isPopupShowing(): boolean;
 			public clearListSelection(): void;
 			public setDropDownHorizontalOffset(param0: number): void;
@@ -63767,6 +63576,8 @@ declare module android {
 			public setOnDismissListener(param0: android.widget.AutoCompleteTextView.OnDismissListener): void;
 			public setCompletionHint(param0: string): void;
 			public setValidator(param0: android.widget.AutoCompleteTextView.Validator): void;
+			/** @deprecated */
+			public getItemClickListener(): android.widget.AdapterView.OnItemClickListener;
 			public constructor(param0: android.content.Context, param1: android.util.AttributeSet, param2: number, param3: number);
 			public onPreDraw(): boolean;
 			public onFilterComplete(param0: number): void;
@@ -63905,35 +63716,36 @@ declare module android {
 		export class CalendarView extends android.widget.FrameLayout {
 			public static class: java.lang.Class<android.widget.CalendarView>;
 			public getWeekDayTextAppearance(): number;
-			public getWeekNumberColor(): number;
 			public onStopNestedScroll(param0: android.view.View): void;
 			public sendAccessibilityEventUnchecked(param0: android.view.accessibility.AccessibilityEvent): void;
 			public constructor(param0: android.content.Context, param1: android.util.AttributeSet, param2: number);
 			public setOnDateChangeListener(param0: android.widget.CalendarView.OnDateChangeListener): void;
 			public addView(param0: android.view.View, param1: number, param2: number): void;
-			public getWeekSeparatorLineColor(): number;
 			public requestSendAccessibilityEvent(param0: android.view.View, param1: android.view.accessibility.AccessibilityEvent): boolean;
 			public childHasTransientStateChanged(param0: android.view.View, param1: boolean): void;
 			public onKeyDown(param0: number, param1: android.view.KeyEvent): boolean;
 			public setDateTextAppearance(param0: number): void;
 			public onNestedScrollAccepted(param0: android.view.View, param1: android.view.View, param2: number): void;
 			public showContextMenuForChild(param0: android.view.View): boolean;
+			/** @deprecated */
+			public setShowWeekNumber(param0: boolean): void;
 			public bringChildToFront(param0: android.view.View): void;
 			public onKeyLongPress(param0: number, param1: android.view.KeyEvent): boolean;
 			public getDateTextAppearance(): number;
 			public sendAccessibilityEvent(param0: number): void;
 			public setWeekDayTextAppearance(param0: number): void;
-			public setWeekNumberColor(param0: number): void;
 			public requestTransparentRegion(param0: android.view.View): void;
 			public canResolveTextAlignment(): boolean;
 			public getParent(): android.view.ViewParent;
+			/** @deprecated */
+			public setSelectedDateVerticalBar(param0: number): void;
 			public onStartNestedScroll(param0: android.view.View, param1: android.view.View, param2: number): boolean;
 			public unscheduleDrawable(param0: android.graphics.drawable.Drawable, param1: java.lang.Runnable): void;
 			public getLayoutDirection(): number;
+			/** @deprecated */
+			public getFocusedMonthDateColor(): number;
 			public requestChildFocus(param0: android.view.View, param1: android.view.View): void;
 			public invalidateDrawable(param0: android.graphics.drawable.Drawable): void;
-			public getFocusedMonthDateColor(): number;
-			public setSelectedDateVerticalBar(param0: android.graphics.drawable.Drawable): void;
 			public setFirstDayOfWeek(param0: number): void;
 			public getMinDate(): number;
 			public setDate(param0: number, param1: boolean, param2: boolean): void;
@@ -63941,58 +63753,74 @@ declare module android {
 			public focusSearch(param0: number): android.view.View;
 			public recomputeViewAttributes(param0: android.view.View): void;
 			public isLayoutRequested(): boolean;
-			public getShowWeekNumber(): boolean;
 			public setDate(param0: number): void;
-			public getShownWeekCount(): number;
 			public getMaxDate(): number;
 			public invalidateChild(param0: android.view.View, param1: android.graphics.Rect): void;
 			public constructor(param0: android.content.Context, param1: android.util.AttributeSet, param2: number, param3: number);
+			/** @deprecated */
+			public setFocusedMonthDateColor(param0: number): void;
 			public onConfigurationChanged(param0: android.content.res.Configuration): void;
 			public requestLayout(): void;
 			public childDrawableStateChanged(param0: android.view.View): void;
 			public addView(param0: android.view.View): void;
-			public setSelectedDateVerticalBar(param0: number): void;
 			public canResolveTextDirection(): boolean;
+			/** @deprecated */
+			public requestFitSystemWindows(): void;
 			public getChildVisibleRect(param0: android.view.View, param1: android.graphics.Rect, param2: android.graphics.Point): boolean;
 			public onKeyUp(param0: number, param1: android.view.KeyEvent): boolean;
 			public constructor(param0: android.content.Context);
 			public addView(param0: android.view.View, param1: android.view.ViewGroup.LayoutParams): void;
 			public addView(param0: android.view.View, param1: number, param2: android.view.ViewGroup.LayoutParams): void;
+			/** @deprecated */
+			public getSelectedDateVerticalBar(): android.graphics.drawable.Drawable;
+			/** @deprecated */
+			public setWeekSeparatorLineColor(param0: number): void;
 			public requestFitSystemWindows(): void;
+			/** @deprecated */
+			public getShownWeekCount(): number;
 			public setMinDate(param0: number): void;
 			public isLayoutDirectionResolved(): boolean;
 			public focusableViewAvailable(param0: android.view.View): void;
 			public createContextMenu(param0: android.view.ContextMenu): void;
-			public getSelectedDateVerticalBar(): android.graphics.drawable.Drawable;
 			public focusSearch(param0: android.view.View, param1: number): android.view.View;
 			public canResolveLayoutDirection(): boolean;
 			public onNestedFling(param0: android.view.View, param1: number, param2: number, param3: boolean): boolean;
 			public setMaxDate(param0: number): void;
-			public setFocusedMonthDateColor(param0: number): void;
 			public unscheduleDrawable(param0: android.graphics.drawable.Drawable): void;
 			public getParentForAccessibility(): android.view.ViewParent;
 			public onNestedPrePerformAccessibilityAction(param0: android.view.View, param1: number, param2: android.os.Bundle): boolean;
-			public setShownWeekCount(param0: number): void;
+			/** @deprecated */
+			public setWeekNumberColor(param0: number): void;
+			/** @deprecated */
+			public getWeekNumberColor(): number;
 			public startActionModeForChild(param0: android.view.View, param1: android.view.ActionMode.Callback): android.view.ActionMode;
-			public setWeekSeparatorLineColor(param0: number): void;
-			public setUnfocusedMonthDateColor(param0: number): void;
 			public getTextAlignment(): number;
-			public getSelectedWeekBackgroundColor(): number;
+			/** @deprecated */
+			public getShowWeekNumber(): boolean;
+			/** @deprecated */
+			public getWeekSeparatorLineColor(): number;
 			public requestChildRectangleOnScreen(param0: android.view.View, param1: android.graphics.Rect, param2: boolean): boolean;
 			public onNestedScroll(param0: android.view.View, param1: number, param2: number, param3: number, param4: number): void;
 			public onNestedPreScroll(param0: android.view.View, param1: number, param2: number, param3: native.Array<number>): void;
+			/** @deprecated */
+			public setShownWeekCount(param0: number): void;
 			public onNestedPreFling(param0: android.view.View, param1: number, param2: number): boolean;
 			public onKeyMultiple(param0: number, param1: number, param2: android.view.KeyEvent): boolean;
 			public getDate(): number;
-			public getUnfocusedMonthDateColor(): number;
+			/** @deprecated */
+			public getSelectedWeekBackgroundColor(): number;
 			public getFirstDayOfWeek(): number;
-			public invalidateChildInParent(param0: native.Array<number>, param1: android.graphics.Rect): android.view.ViewParent;
-			public startActionModeForChild(param0: android.view.View, param1: android.view.ActionMode.Callback, param2: number): android.view.ActionMode;
+			/** @deprecated */
 			public setSelectedWeekBackgroundColor(param0: number): void;
+			public invalidateChildInParent(param0: native.Array<number>, param1: android.graphics.Rect): android.view.ViewParent;
+			/** @deprecated */
+			public setSelectedDateVerticalBar(param0: android.graphics.drawable.Drawable): void;
+			public startActionModeForChild(param0: android.view.View, param1: android.view.ActionMode.Callback, param2: number): android.view.ActionMode;
 			public isTextAlignmentResolved(): boolean;
 			public removeView(param0: android.view.View): void;
 			public clearChildFocus(param0: android.view.View): void;
-			public setShowWeekNumber(param0: boolean): void;
+			/** @deprecated */
+			public setUnfocusedMonthDateColor(param0: number): void;
 			public getTextDirection(): number;
 			public updateViewLayout(param0: android.view.View, param1: android.view.ViewGroup.LayoutParams): void;
 			public requestDisallowInterceptTouchEvent(param0: boolean): void;
@@ -64001,6 +63829,8 @@ declare module android {
 			public constructor(param0: android.content.Context, param1: android.util.AttributeSet);
 			public scheduleDrawable(param0: android.graphics.drawable.Drawable, param1: java.lang.Runnable, param2: number): void;
 			public notifySubtreeAccessibilityStateChanged(param0: android.view.View, param1: android.view.View, param2: number): void;
+			/** @deprecated */
+			public getUnfocusedMonthDateColor(): number;
 			public addView(param0: android.view.View, param1: number): void;
 		}
 		export module CalendarView {
@@ -64226,6 +64056,8 @@ declare module android {
 			public static FLAG_AUTO_REQUERY: number;
 			public static FLAG_REGISTER_CONTENT_OBSERVER: number;
 			public getItem(param0: number): any;
+			/** @deprecated */
+			public constructor(param0: android.content.Context, param1: android.database.Cursor);
 			public getFilter(): android.widget.Filter;
 			public registerDataSetObserver(param0: android.database.DataSetObserver): void;
 			public getItemId(param0: number): number;
@@ -64233,12 +64065,10 @@ declare module android {
 			public hasStableIds(): boolean;
 			public newView(param0: android.content.Context, param1: android.database.Cursor, param2: android.view.ViewGroup): android.view.View;
 			public getDropDownViewTheme(): android.content.res.Resources.Theme;
-			public init(param0: android.content.Context, param1: android.database.Cursor, param2: boolean): void;
 			public unregisterDataSetObserver(param0: android.database.DataSetObserver): void;
 			public setDropDownViewTheme(param0: android.content.res.Resources.Theme): void;
 			public isEnabled(param0: number): boolean;
 			public getCount(): number;
-			public constructor(param0: android.content.Context, param1: android.database.Cursor);
 			public getDropDownView(param0: number, param1: android.view.View, param2: android.view.ViewGroup): android.view.View;
 			public isEmpty(): boolean;
 			public constructor(param0: android.content.Context, param1: android.database.Cursor, param2: number);
@@ -64246,6 +64076,8 @@ declare module android {
 			public bindView(param0: android.view.View, param1: android.content.Context, param2: android.database.Cursor): void;
 			public swapCursor(param0: android.database.Cursor): android.database.Cursor;
 			public getView(param0: number, param1: android.view.View, param2: android.view.ViewGroup): android.view.View;
+			/** @deprecated */
+			public init(param0: android.content.Context, param1: android.database.Cursor, param2: boolean): void;
 			public getItemViewType(param0: number): number;
 			public getViewTypeCount(): number;
 			public getCursor(): android.database.Cursor;
@@ -64317,21 +64149,24 @@ declare module android {
 	export module widget {
 		export class DatePicker extends android.widget.FrameLayout {
 			public static class: java.lang.Class<android.widget.DatePicker>;
-			public setSpinnersShown(param0: boolean): void;
-			public setCalendarViewShown(param0: boolean): void;
 			public setMinDate(param0: number): void;
-			public getSpinnersShown(): boolean;
 			public isLayoutDirectionResolved(): boolean;
 			public onStopNestedScroll(param0: android.view.View): void;
 			public focusableViewAvailable(param0: android.view.View): void;
 			public createContextMenu(param0: android.view.ContextMenu): void;
 			public sendAccessibilityEventUnchecked(param0: android.view.accessibility.AccessibilityEvent): void;
+			/** @deprecated */
+			public setCalendarViewShown(param0: boolean): void;
 			public constructor(param0: android.content.Context, param1: android.util.AttributeSet, param2: number);
 			public addView(param0: android.view.View, param1: number, param2: number): void;
 			public focusSearch(param0: android.view.View, param1: number): android.view.View;
 			public requestSendAccessibilityEvent(param0: android.view.View, param1: android.view.accessibility.AccessibilityEvent): boolean;
+			/** @deprecated */
+			public setSpinnersShown(param0: boolean): void;
 			public childHasTransientStateChanged(param0: android.view.View, param1: boolean): void;
 			public canResolveLayoutDirection(): boolean;
+			/** @deprecated */
+			public getCalendarView(): android.widget.CalendarView;
 			public onKeyDown(param0: number, param1: android.view.KeyEvent): boolean;
 			public onNestedScrollAccepted(param0: android.view.View, param1: android.view.View, param2: number): void;
 			public showContextMenuForChild(param0: android.view.View): boolean;
@@ -64346,7 +64181,6 @@ declare module android {
 			public requestTransparentRegion(param0: android.view.View): void;
 			public unscheduleDrawable(param0: android.graphics.drawable.Drawable): void;
 			public getParentForAccessibility(): android.view.ViewParent;
-			public getCalendarView(): android.widget.CalendarView;
 			public canResolveTextAlignment(): boolean;
 			public onNestedPrePerformAccessibilityAction(param0: android.view.View, param1: number, param2: android.os.Bundle): boolean;
 			public getParent(): android.view.ViewParent;
@@ -64370,6 +64204,8 @@ declare module android {
 			public onKeyMultiple(param0: number, param1: number, param2: android.view.KeyEvent): boolean;
 			public recomputeViewAttributes(param0: android.view.View): void;
 			public updateDate(param0: number, param1: number, param2: number): void;
+			/** @deprecated */
+			public getSpinnersShown(): boolean;
 			public isLayoutRequested(): boolean;
 			public getFirstDayOfWeek(): number;
 			public getMaxDate(): number;
@@ -64388,8 +64224,9 @@ declare module android {
 			public getTextDirection(): number;
 			public updateViewLayout(param0: android.view.View, param1: android.view.ViewGroup.LayoutParams): void;
 			public getDayOfMonth(): number;
+			/** @deprecated */
+			public requestFitSystemWindows(): void;
 			public requestDisallowInterceptTouchEvent(param0: boolean): void;
-			public getCalendarViewShown(): boolean;
 			public getChildVisibleRect(param0: android.view.View, param1: android.graphics.Rect, param2: android.graphics.Point): boolean;
 			public isTextDirectionResolved(): boolean;
 			public getYear(): number;
@@ -64403,6 +64240,8 @@ declare module android {
 			public addView(param0: android.view.View, param1: android.view.ViewGroup.LayoutParams): void;
 			public addView(param0: android.view.View, param1: number, param2: android.view.ViewGroup.LayoutParams): void;
 			public notifySubtreeAccessibilityStateChanged(param0: android.view.View, param1: android.view.View, param2: number): void;
+			/** @deprecated */
+			public getCalendarViewShown(): boolean;
 			public requestFitSystemWindows(): void;
 			public addView(param0: android.view.View, param1: number): void;
 		}
@@ -64498,6 +64337,8 @@ declare module android {
 			public canResolveTextDirection(): boolean;
 			public getTextDirection(): number;
 			public updateViewLayout(param0: android.view.View, param1: android.view.ViewGroup.LayoutParams): void;
+			/** @deprecated */
+			public requestFitSystemWindows(): void;
 			public requestDisallowInterceptTouchEvent(param0: boolean): void;
 			public getChildVisibleRect(param0: android.view.View, param1: android.graphics.Rect, param2: android.graphics.Point): boolean;
 			public isTextDirectionResolved(): boolean;
@@ -64712,6 +64553,8 @@ declare module android {
 			public setOnChildClickListener(param0: android.widget.ExpandableListView.OnChildClickListener): void;
 			public canResolveTextDirection(): boolean;
 			public static getPackedPositionForChild(param0: number, param1: number): number;
+			/** @deprecated */
+			public requestFitSystemWindows(): void;
 			public getChildVisibleRect(param0: android.view.View, param1: android.graphics.Rect, param2: android.graphics.Point): boolean;
 			public onKeyUp(param0: number, param1: android.view.KeyEvent): boolean;
 			public getExpandableListAdapter(): android.widget.ExpandableListAdapter;
@@ -64906,7 +64749,6 @@ declare module android {
 			public shouldDelayChildPressedState(): boolean;
 			public constructor(param0: android.content.Context, param1: android.util.AttributeSet, param2: number);
 			public addView(param0: android.view.View, param1: number, param2: number): void;
-			public getConsiderGoneChildrenWhenMeasuring(): boolean;
 			public focusSearch(param0: android.view.View, param1: number): android.view.View;
 			public requestSendAccessibilityEvent(param0: android.view.View, param1: android.view.accessibility.AccessibilityEvent): boolean;
 			public childHasTransientStateChanged(param0: android.view.View, param1: boolean): void;
@@ -64945,6 +64787,8 @@ declare module android {
 			public focusSearch(param0: number): android.view.View;
 			public onKeyMultiple(param0: number, param1: number, param2: android.view.KeyEvent): boolean;
 			public recomputeViewAttributes(param0: android.view.View): void;
+			/** @deprecated */
+			public getConsiderGoneChildrenWhenMeasuring(): boolean;
 			public isLayoutRequested(): boolean;
 			public invalidateChild(param0: android.view.View, param1: android.graphics.Rect): void;
 			public invalidateChildInParent(param0: native.Array<number>, param1: android.graphics.Rect): android.view.ViewParent;
@@ -64960,6 +64804,8 @@ declare module android {
 			public canResolveTextDirection(): boolean;
 			public getTextDirection(): number;
 			public updateViewLayout(param0: android.view.View, param1: android.view.ViewGroup.LayoutParams): void;
+			/** @deprecated */
+			public requestFitSystemWindows(): void;
 			public requestDisallowInterceptTouchEvent(param0: boolean): void;
 			public getChildVisibleRect(param0: android.view.View, param1: android.graphics.Rect, param2: android.graphics.Point): boolean;
 			public isTextDirectionResolved(): boolean;
@@ -64995,29 +64841,16 @@ declare module android {
 	export module widget {
 		export class Gallery extends android.widget.AbsSpinner implements android.view.GestureDetector.OnGestureListener {
 			public static class: java.lang.Class<android.widget.Gallery>;
-			public onLayout(param0: boolean, param1: number, param2: number, param3: number, param4: number): void;
-			public onScroll(param0: android.view.MotionEvent, param1: android.view.MotionEvent, param2: number, param3: number): boolean;
-			public isLayoutDirectionResolved(): boolean;
 			public generateLayoutParams(param0: android.util.AttributeSet): android.view.ViewGroup.LayoutParams;
 			public onStopNestedScroll(param0: android.view.View): void;
-			public focusableViewAvailable(param0: android.view.View): void;
-			public createContextMenu(param0: android.view.ContextMenu): void;
 			public sendAccessibilityEventUnchecked(param0: android.view.accessibility.AccessibilityEvent): void;
 			public constructor(param0: android.content.Context, param1: android.util.AttributeSet, param2: number);
 			public addView(param0: android.view.View, param1: number, param2: number): void;
-			public dispatchSetPressed(param0: boolean): void;
-			public focusSearch(param0: android.view.View, param1: number): android.view.View;
 			public requestSendAccessibilityEvent(param0: android.view.View, param1: android.view.accessibility.AccessibilityEvent): boolean;
-			public showContextMenu(param0: number, param1: number): boolean;
 			public childHasTransientStateChanged(param0: android.view.View, param1: boolean): void;
-			public canResolveLayoutDirection(): boolean;
 			public onKeyDown(param0: number, param1: android.view.KeyEvent): boolean;
 			public onNestedScrollAccepted(param0: android.view.View, param1: android.view.View, param2: number): void;
-			public getContextMenuInfo(): android.view.ContextMenu.ContextMenuInfo;
 			public showContextMenuForChild(param0: android.view.View): boolean;
-			public onNestedFling(param0: android.view.View, param1: number, param2: number, param3: boolean): boolean;
-			public onFocusChanged(param0: boolean, param1: number, param2: android.graphics.Rect): void;
-			public computeHorizontalScrollRange(): number;
 			public onSingleTapUp(param0: android.view.MotionEvent): boolean;
 			public bringChildToFront(param0: android.view.View): void;
 			public onKeyLongPress(param0: number, param1: android.view.KeyEvent): boolean;
@@ -65026,18 +64859,58 @@ declare module android {
 			public setCallbackDuringFling(param0: boolean): void;
 			public showContextMenu(): boolean;
 			public requestTransparentRegion(param0: android.view.View): void;
-			public unscheduleDrawable(param0: android.graphics.drawable.Drawable): void;
-			public getParentForAccessibility(): android.view.ViewParent;
 			public canResolveTextAlignment(): boolean;
-			public onNestedPrePerformAccessibilityAction(param0: android.view.View, param1: number, param2: android.os.Bundle): boolean;
 			public getParent(): android.view.ViewParent;
 			public onStartNestedScroll(param0: android.view.View, param1: android.view.View, param2: number): boolean;
-			public startActionModeForChild(param0: android.view.View, param1: android.view.ActionMode.Callback): android.view.ActionMode;
 			public unscheduleDrawable(param0: android.graphics.drawable.Drawable, param1: java.lang.Runnable): void;
 			public getLayoutDirection(): number;
-			public getTextAlignment(): number;
 			public requestChildFocus(param0: android.view.View, param1: android.view.View): void;
 			public invalidateDrawable(param0: android.graphics.drawable.Drawable): void;
+			public getAccessibilityClassName(): string;
+			public focusSearch(param0: number): android.view.View;
+			public recomputeViewAttributes(param0: android.view.View): void;
+			public isLayoutRequested(): boolean;
+			public getChildStaticTransformation(param0: android.view.View, param1: android.view.animation.Transformation): boolean;
+			public invalidateChild(param0: android.view.View, param1: android.graphics.Rect): void;
+			public dispatchSetSelected(param0: boolean): void;
+			public onDown(param0: android.view.MotionEvent): boolean;
+			public getChildDrawingOrder(param0: number, param1: number): number;
+			public constructor(param0: android.content.Context, param1: android.util.AttributeSet, param2: number, param3: number);
+			public onFling(param0: android.view.MotionEvent, param1: android.view.MotionEvent, param2: number, param3: number): boolean;
+			public onLongPress(param0: android.view.MotionEvent): void;
+			public requestLayout(): void;
+			public childDrawableStateChanged(param0: android.view.View): void;
+			public addView(param0: android.view.View): void;
+			public canResolveTextDirection(): boolean;
+			public setAnimationDuration(param0: number): void;
+			/** @deprecated */
+			public requestFitSystemWindows(): void;
+			public getChildVisibleRect(param0: android.view.View, param1: android.graphics.Rect, param2: android.graphics.Point): boolean;
+			public onKeyUp(param0: number, param1: android.view.KeyEvent): boolean;
+			public constructor(param0: android.content.Context);
+			public addView(param0: android.view.View, param1: android.view.ViewGroup.LayoutParams): void;
+			public addView(param0: android.view.View, param1: number, param2: android.view.ViewGroup.LayoutParams): void;
+			public onShowPress(param0: android.view.MotionEvent): void;
+			public setUnselectedAlpha(param0: number): void;
+			public requestFitSystemWindows(): void;
+			public onLayout(param0: boolean, param1: number, param2: number, param3: number, param4: number): void;
+			public onScroll(param0: android.view.MotionEvent, param1: android.view.MotionEvent, param2: number, param3: number): boolean;
+			public isLayoutDirectionResolved(): boolean;
+			public focusableViewAvailable(param0: android.view.View): void;
+			public createContextMenu(param0: android.view.ContextMenu): void;
+			public dispatchSetPressed(param0: boolean): void;
+			public focusSearch(param0: android.view.View, param1: number): android.view.View;
+			public showContextMenu(param0: number, param1: number): boolean;
+			public canResolveLayoutDirection(): boolean;
+			public getContextMenuInfo(): android.view.ContextMenu.ContextMenuInfo;
+			public onNestedFling(param0: android.view.View, param1: number, param2: number, param3: boolean): boolean;
+			public onFocusChanged(param0: boolean, param1: number, param2: android.graphics.Rect): void;
+			public computeHorizontalScrollRange(): number;
+			public unscheduleDrawable(param0: android.graphics.drawable.Drawable): void;
+			public getParentForAccessibility(): android.view.ViewParent;
+			public onNestedPrePerformAccessibilityAction(param0: android.view.View, param1: number, param2: android.os.Bundle): boolean;
+			public startActionModeForChild(param0: android.view.View, param1: android.view.ActionMode.Callback): android.view.ActionMode;
+			public getTextAlignment(): number;
 			public generateLayoutParams(param0: android.view.ViewGroup.LayoutParams): android.view.ViewGroup.LayoutParams;
 			public generateDefaultLayoutParams(): android.view.ViewGroup.LayoutParams;
 			public requestChildRectangleOnScreen(param0: android.view.View, param1: android.graphics.Rect, param2: boolean): boolean;
@@ -65045,51 +64918,26 @@ declare module android {
 			public onNestedPreScroll(param0: android.view.View, param1: number, param2: number, param3: native.Array<number>): void;
 			public setGravity(param0: number): void;
 			public onNestedPreFling(param0: android.view.View, param1: number, param2: number): boolean;
-			public getAccessibilityClassName(): string;
-			public focusSearch(param0: number): android.view.View;
 			public onKeyMultiple(param0: number, param1: number, param2: android.view.KeyEvent): boolean;
-			public recomputeViewAttributes(param0: android.view.View): void;
-			public isLayoutRequested(): boolean;
-			public getChildStaticTransformation(param0: android.view.View, param1: android.view.animation.Transformation): boolean;
-			public invalidateChild(param0: android.view.View, param1: android.graphics.Rect): void;
 			public invalidateChildInParent(param0: native.Array<number>, param1: android.graphics.Rect): android.view.ViewParent;
-			public dispatchSetSelected(param0: boolean): void;
-			public onDown(param0: android.view.MotionEvent): boolean;
-			public getChildDrawingOrder(param0: number, param1: number): number;
-			public constructor(param0: android.content.Context, param1: android.util.AttributeSet, param2: number, param3: number);
 			public computeHorizontalScrollOffset(): number;
 			public startActionModeForChild(param0: android.view.View, param1: android.view.ActionMode.Callback, param2: number): android.view.ActionMode;
-			public onFling(param0: android.view.MotionEvent, param1: android.view.MotionEvent, param2: number, param3: number): boolean;
-			public onLongPress(param0: android.view.MotionEvent): void;
-			public requestLayout(): void;
 			public checkLayoutParams(param0: android.view.ViewGroup.LayoutParams): boolean;
-			public childDrawableStateChanged(param0: android.view.View): void;
 			public isTextAlignmentResolved(): boolean;
-			public addView(param0: android.view.View): void;
 			public removeView(param0: android.view.View): void;
 			public clearChildFocus(param0: android.view.View): void;
-			public canResolveTextDirection(): boolean;
-			public setAnimationDuration(param0: number): void;
 			public getTextDirection(): number;
 			public updateViewLayout(param0: android.view.View, param1: android.view.ViewGroup.LayoutParams): void;
 			public onTouchEvent(param0: android.view.MotionEvent): boolean;
 			public requestDisallowInterceptTouchEvent(param0: boolean): void;
-			public getChildVisibleRect(param0: android.view.View, param1: android.graphics.Rect, param2: android.graphics.Point): boolean;
 			public isTextDirectionResolved(): boolean;
-			public onKeyUp(param0: number, param1: android.view.KeyEvent): boolean;
-			public constructor(param0: android.content.Context);
 			public dispatchKeyEvent(param0: android.view.KeyEvent): boolean;
 			public showContextMenuForChild(param0: android.view.View, param1: number, param2: number): boolean;
 			public constructor(param0: android.content.Context, param1: android.util.AttributeSet);
 			public computeHorizontalScrollExtent(): number;
 			public scheduleDrawable(param0: android.graphics.drawable.Drawable, param1: java.lang.Runnable, param2: number): void;
-			public addView(param0: android.view.View, param1: android.view.ViewGroup.LayoutParams): void;
-			public addView(param0: android.view.View, param1: number, param2: android.view.ViewGroup.LayoutParams): void;
 			public onAttachedToWindow(): void;
 			public notifySubtreeAccessibilityStateChanged(param0: android.view.View, param1: android.view.View, param2: number): void;
-			public onShowPress(param0: android.view.MotionEvent): void;
-			public setUnselectedAlpha(param0: number): void;
-			public requestFitSystemWindows(): void;
 			public addView(param0: android.view.View, param1: number): void;
 		}
 		export module Gallery {
@@ -65162,6 +65010,8 @@ declare module android {
 			public isColumnOrderPreserved(): boolean;
 			public setColumnOrderPreserved(param0: boolean): void;
 			public canResolveTextDirection(): boolean;
+			/** @deprecated */
+			public requestFitSystemWindows(): void;
 			public getChildVisibleRect(param0: android.view.View, param1: android.graphics.Rect, param2: android.graphics.Point): boolean;
 			public onKeyUp(param0: number, param1: android.view.KeyEvent): boolean;
 			public constructor(param0: android.content.Context);
@@ -65307,6 +65157,8 @@ declare module android {
 			public addView(param0: android.view.View): void;
 			public smoothScrollToPosition(param0: number): void;
 			public canResolveTextDirection(): boolean;
+			/** @deprecated */
+			public requestFitSystemWindows(): void;
 			public getVerticalSpacing(): number;
 			public getChildVisibleRect(param0: android.view.View, param1: android.graphics.Rect, param2: android.graphics.Point): boolean;
 			public onKeyUp(param0: number, param1: android.view.KeyEvent): boolean;
@@ -65460,6 +65312,8 @@ declare module android {
 			public addView(param0: android.view.View): void;
 			public childDrawableStateChanged(param0: android.view.View): void;
 			public canResolveTextDirection(): boolean;
+			/** @deprecated */
+			public requestFitSystemWindows(): void;
 			public getChildVisibleRect(param0: android.view.View, param1: android.graphics.Rect, param2: android.graphics.Point): boolean;
 			public onKeyUp(param0: number, param1: android.view.KeyEvent): boolean;
 			public constructor(param0: android.content.Context);
@@ -65606,6 +65460,8 @@ declare module android {
 			public canResolveTextDirection(): boolean;
 			public getTextDirection(): number;
 			public updateViewLayout(param0: android.view.View, param1: android.view.ViewGroup.LayoutParams): void;
+			/** @deprecated */
+			public requestFitSystemWindows(): void;
 			public requestDisallowInterceptTouchEvent(param0: boolean): void;
 			public getChildVisibleRect(param0: android.view.View, param1: android.graphics.Rect, param2: android.graphics.Point): boolean;
 			public isTextDirectionResolved(): boolean;
@@ -65684,6 +65540,8 @@ declare module android {
 			public isOpaque(): boolean;
 			public setAlpha(param0: number): void;
 			public getDrawable(): android.graphics.drawable.Drawable;
+			/** @deprecated */
+			public setAlpha(param0: number): void;
 			public getMaxWidth(): number;
 			public onKeyUp(param0: number, param1: android.view.KeyEvent): boolean;
 			public drawableHotspotChanged(param0: number, param1: number): void;
@@ -65763,6 +65621,8 @@ declare module android {
 			public childDrawableStateChanged(param0: android.view.View): void;
 			public addView(param0: android.view.View): void;
 			public canResolveTextDirection(): boolean;
+			/** @deprecated */
+			public requestFitSystemWindows(): void;
 			public getChildVisibleRect(param0: android.view.View, param1: android.graphics.Rect, param2: android.graphics.Point): boolean;
 			public onKeyUp(param0: number, param1: android.view.KeyEvent): boolean;
 			public constructor(param0: android.content.Context);
@@ -66014,6 +65874,8 @@ declare module android {
 			public addView(param0: android.view.View): void;
 			public smoothScrollToPosition(param0: number): void;
 			public canResolveTextDirection(): boolean;
+			/** @deprecated */
+			public requestFitSystemWindows(): void;
 			public addFooterView(param0: android.view.View): void;
 			public getChildVisibleRect(param0: android.view.View, param1: android.graphics.Rect, param2: android.graphics.Point): boolean;
 			public onKeyUp(param0: number, param1: android.view.KeyEvent): boolean;
@@ -66023,7 +65885,6 @@ declare module android {
 			public addView(param0: android.view.View, param1: android.view.ViewGroup.LayoutParams): void;
 			public addView(param0: android.view.View, param1: number, param2: android.view.ViewGroup.LayoutParams): void;
 			public requestFitSystemWindows(): void;
-			public getCheckItemIds(): native.Array<number>;
 			public getAdapter(): android.widget.ListAdapter;
 			public isLayoutDirectionResolved(): boolean;
 			public focusableViewAvailable(param0: android.view.View): void;
@@ -66035,6 +65896,8 @@ declare module android {
 			public canAnimate(): boolean;
 			public onNestedFling(param0: android.view.View, param1: number, param2: number, param3: boolean): boolean;
 			public onFocusChanged(param0: boolean, param1: number, param2: android.graphics.Rect): void;
+			/** @deprecated */
+			public getCheckItemIds(): native.Array<number>;
 			public setRemoteViewsAdapter(param0: android.content.Intent): void;
 			public areFooterDividersEnabled(): boolean;
 			public unscheduleDrawable(param0: android.graphics.drawable.Drawable): void;
@@ -66154,6 +66017,8 @@ declare module android {
 			public getTextDirection(): number;
 			public updateViewLayout(param0: android.view.View, param1: android.view.ViewGroup.LayoutParams): void;
 			public onTouchEvent(param0: android.view.MotionEvent): boolean;
+			/** @deprecated */
+			public requestFitSystemWindows(): void;
 			public requestDisallowInterceptTouchEvent(param0: boolean): void;
 			public setAnchorView(param0: android.view.View): void;
 			public getChildVisibleRect(param0: android.view.View, param1: android.graphics.Rect, param2: android.graphics.Point): boolean;
@@ -66314,6 +66179,8 @@ declare module android {
 			public addView(param0: android.view.View): void;
 			public getWrapSelectorWheel(): boolean;
 			public canResolveTextDirection(): boolean;
+			/** @deprecated */
+			public requestFitSystemWindows(): void;
 			public getChildVisibleRect(param0: android.view.View, param1: android.graphics.Rect, param2: android.graphics.Point): boolean;
 			public onKeyUp(param0: number, param1: android.view.KeyEvent): boolean;
 			public constructor(param0: android.content.Context);
@@ -66539,13 +66406,14 @@ declare module android {
 			public showAsDropDown(param0: android.view.View, param1: number, param2: number, param3: number): void;
 			public update(): void;
 			public setEnterTransition(param0: android.transition.Transition): void;
+			/** @deprecated */
+			public setWindowLayoutMode(param0: number, param1: number): void;
 			public setBackgroundDrawable(param0: android.graphics.drawable.Drawable): void;
 			public setTouchable(param0: boolean): void;
 			public constructor(param0: android.view.View);
 			public constructor(param0: android.content.Context, param1: android.util.AttributeSet, param2: number, param3: number);
 			public constructor(param0: number, param1: number);
 			public getElevation(): number;
-			public setWindowLayoutMode(param0: number, param1: number): void;
 			public dismiss(): void;
 			public setOutsideTouchable(param0: boolean): void;
 			public update(param0: android.view.View, param1: number, param2: number): void;
@@ -66789,6 +66657,8 @@ declare module android {
 			public canResolveTextDirection(): boolean;
 			public getTextDirection(): number;
 			public updateViewLayout(param0: android.view.View, param1: android.view.ViewGroup.LayoutParams): void;
+			/** @deprecated */
+			public requestFitSystemWindows(): void;
 			public requestDisallowInterceptTouchEvent(param0: boolean): void;
 			public getChildVisibleRect(param0: android.view.View, param1: android.graphics.Rect, param2: android.graphics.Point): boolean;
 			public isTextDirectionResolved(): boolean;
@@ -66971,6 +66841,8 @@ declare module android {
 			public canResolveTextDirection(): boolean;
 			public getTextDirection(): number;
 			public updateViewLayout(param0: android.view.View, param1: android.view.ViewGroup.LayoutParams): void;
+			/** @deprecated */
+			public requestFitSystemWindows(): void;
 			public requestDisallowInterceptTouchEvent(param0: boolean): void;
 			public getChildVisibleRect(param0: android.view.View, param1: android.graphics.Rect, param2: android.graphics.Point): boolean;
 			public isTextDirectionResolved(): boolean;
@@ -67028,7 +66900,6 @@ declare module android {
 			public setPendingIntentTemplate(param0: number, param1: android.app.PendingIntent): void;
 			public setEmptyView(param0: number, param1: number): void;
 			public setImageViewUri(param0: number, param1: android.net.Uri): void;
-			public setRemoteAdapter(param0: number, param1: number, param2: android.content.Intent): void;
 			public clone(): android.widget.RemoteViews;
 			public setImageViewResource(param0: number, param1: number): void;
 			public setLong(param0: number, param1: string, param2: number): void;
@@ -67064,6 +66935,8 @@ declare module android {
 			public setFloat(param0: number, param1: string, param2: number): void;
 			public apply(param0: android.content.Context, param1: android.view.ViewGroup): android.view.View;
 			public setProgressBar(param0: number, param1: number, param2: number, param3: boolean): void;
+			/** @deprecated */
+			public setRemoteAdapter(param0: number, param1: number, param2: android.content.Intent): void;
 			public setDouble(param0: number, param1: string, param2: number): void;
 			public setShort(param0: number, param1: string, param2: number): void;
 			public setBoolean(param0: number, param1: string, param2: boolean): void;
@@ -67147,9 +67020,9 @@ declare module android {
 	export module widget {
 		export abstract class ResourceCursorAdapter extends android.widget.CursorAdapter {
 			public static class: java.lang.Class<android.widget.ResourceCursorAdapter>;
-			public constructor(param0: android.content.Context, param1: number, param2: android.database.Cursor);
-			public getFilter(): android.widget.Filter;
+			/** @deprecated */
 			public constructor(param0: android.content.Context, param1: android.database.Cursor);
+			public getFilter(): android.widget.Filter;
 			public getDropDownView(param0: number, param1: android.view.View, param2: android.view.ViewGroup): android.view.View;
 			public constructor(param0: android.content.Context, param1: android.database.Cursor, param2: number);
 			public constructor(param0: android.content.Context, param1: android.database.Cursor, param2: boolean);
@@ -67163,6 +67036,8 @@ declare module android {
 			public setDropDownViewTheme(param0: android.content.res.Resources.Theme): void;
 			public isEnabled(param0: number): boolean;
 			public setDropDownViewResource(param0: number): void;
+			/** @deprecated */
+			public constructor(param0: android.content.Context, param1: number, param2: android.database.Cursor);
 			public setViewResource(param0: number): void;
 		}
 	}
@@ -67257,6 +67132,8 @@ declare module android {
 			public addView(param0: android.view.View): void;
 			public childDrawableStateChanged(param0: android.view.View): void;
 			public canResolveTextDirection(): boolean;
+			/** @deprecated */
+			public requestFitSystemWindows(): void;
 			public getChildVisibleRect(param0: android.view.View, param1: android.graphics.Rect, param2: android.graphics.Point): boolean;
 			public onKeyUp(param0: number, param1: android.view.KeyEvent): boolean;
 			public constructor(param0: android.content.Context);
@@ -67394,6 +67271,8 @@ declare module android {
 			public childDrawableStateChanged(param0: android.view.View): void;
 			public addView(param0: android.view.View): void;
 			public canResolveTextDirection(): boolean;
+			/** @deprecated */
+			public requestFitSystemWindows(): void;
 			public getMaxWidth(): number;
 			public setQueryHint(param0: string): void;
 			public getChildVisibleRect(param0: android.view.View, param1: android.graphics.Rect, param2: android.graphics.Point): boolean;
@@ -67564,6 +67443,8 @@ declare module android {
 			public static class: java.lang.Class<android.widget.ShareActionProvider>;
 			public static DEFAULT_SHARE_HISTORY_FILE_NAME: string;
 			public setShareHistoryFileName(param0: string): void;
+			/** @deprecated */
+			public onCreateActionView(): android.view.View;
 			public onCreateActionView(): android.view.View;
 			public constructor(param0: android.content.Context);
 			public setOnShareTargetSelectedListener(param0: android.widget.ShareActionProvider.OnShareTargetSelectedListener): void;
@@ -67637,10 +67518,14 @@ declare module android {
 	export module widget {
 		export class SimpleCursorAdapter extends android.widget.ResourceCursorAdapter {
 			public static class: java.lang.Class<android.widget.SimpleCursorAdapter>;
+			/** @deprecated */
+			public constructor(param0: android.content.Context, param1: android.database.Cursor);
 			public getCursorToStringConverter(): android.widget.SimpleCursorAdapter.CursorToStringConverter;
 			public getFilter(): android.widget.Filter;
 			public setStringConversionColumn(param0: number): void;
 			public changeCursorAndColumns(param0: android.database.Cursor, param1: native.Array<string>, param2: native.Array<number>): void;
+			/** @deprecated */
+			public constructor(param0: android.content.Context, param1: number, param2: android.database.Cursor, param3: native.Array<string>, param4: native.Array<number>);
 			public constructor(param0: android.content.Context, param1: android.database.Cursor, param2: boolean);
 			public setViewText(param0: android.widget.TextView, param1: string): void;
 			public constructor(param0: android.content.Context, param1: number, param2: android.database.Cursor, param3: boolean);
@@ -67650,18 +67535,17 @@ declare module android {
 			public isEnabled(param0: number): boolean;
 			public setDropDownViewTheme(param0: android.content.res.Resources.Theme): void;
 			public constructor(param0: android.content.Context, param1: number, param2: android.database.Cursor, param3: native.Array<string>, param4: native.Array<number>, param5: number);
-			public constructor(param0: android.content.Context, param1: number, param2: android.database.Cursor);
-			public constructor(param0: android.content.Context, param1: android.database.Cursor);
 			public getDropDownView(param0: number, param1: android.view.View, param2: android.view.ViewGroup): android.view.View;
 			public setViewBinder(param0: android.widget.SimpleCursorAdapter.ViewBinder): void;
 			public constructor(param0: android.content.Context, param1: android.database.Cursor, param2: number);
 			public constructor();
 			public bindView(param0: android.view.View, param1: android.content.Context, param2: android.database.Cursor): void;
 			public swapCursor(param0: android.database.Cursor): android.database.Cursor;
-			public constructor(param0: android.content.Context, param1: number, param2: android.database.Cursor, param3: native.Array<string>, param4: native.Array<number>);
 			public setViewImage(param0: android.widget.ImageView, param1: string): void;
 			public areAllItemsEnabled(): boolean;
 			public convertToString(param0: android.database.Cursor): string;
+			/** @deprecated */
+			public constructor(param0: android.content.Context, param1: number, param2: android.database.Cursor);
 			public getStringConversionColumn(): number;
 			public getViewBinder(): android.widget.SimpleCursorAdapter.ViewBinder;
 		}
@@ -67865,6 +67749,8 @@ declare module android {
 			public getTextDirection(): number;
 			public updateViewLayout(param0: android.view.View, param1: android.view.ViewGroup.LayoutParams): void;
 			public onTouchEvent(param0: android.view.MotionEvent): boolean;
+			/** @deprecated */
+			public requestFitSystemWindows(): void;
 			public requestDisallowInterceptTouchEvent(param0: boolean): void;
 			public getChildVisibleRect(param0: android.view.View, param1: android.graphics.Rect, param2: android.graphics.Point): boolean;
 			public isTextDirectionResolved(): boolean;
@@ -67995,6 +67881,8 @@ declare module android {
 			public childDrawableStateChanged(param0: android.view.View): void;
 			public addView(param0: android.view.View): void;
 			public canResolveTextDirection(): boolean;
+			/** @deprecated */
+			public requestFitSystemWindows(): void;
 			public getChildVisibleRect(param0: android.view.View, param1: android.graphics.Rect, param2: android.graphics.Point): boolean;
 			public onKeyUp(param0: number, param1: android.view.KeyEvent): boolean;
 			public constructor(param0: android.content.Context);
@@ -68159,6 +68047,8 @@ declare module android {
 			public getTextDirection(): number;
 			public updateViewLayout(param0: android.view.View, param1: android.view.ViewGroup.LayoutParams): void;
 			public onTouchEvent(param0: android.view.MotionEvent): boolean;
+			/** @deprecated */
+			public requestFitSystemWindows(): void;
 			public requestDisallowInterceptTouchEvent(param0: boolean): void;
 			public getChildVisibleRect(param0: android.view.View, param1: android.graphics.Rect, param2: android.graphics.Point): boolean;
 			public isTextDirectionResolved(): boolean;
@@ -68319,6 +68209,8 @@ declare module android {
 			public getTextDirection(): number;
 			public updateViewLayout(param0: android.view.View, param1: android.view.ViewGroup.LayoutParams): void;
 			public getTabContentView(): android.widget.FrameLayout;
+			/** @deprecated */
+			public requestFitSystemWindows(): void;
 			public requestDisallowInterceptTouchEvent(param0: boolean): void;
 			public getChildVisibleRect(param0: android.view.View, param1: android.graphics.Rect, param2: android.graphics.Point): boolean;
 			public isTextDirectionResolved(): boolean;
@@ -68445,6 +68337,8 @@ declare module android {
 			public getTextDirection(): number;
 			public updateViewLayout(param0: android.view.View, param1: android.view.ViewGroup.LayoutParams): void;
 			public getRightStripDrawable(): android.graphics.drawable.Drawable;
+			/** @deprecated */
+			public requestFitSystemWindows(): void;
 			public getLeftStripDrawable(): android.graphics.drawable.Drawable;
 			public requestDisallowInterceptTouchEvent(param0: boolean): void;
 			public getChildVisibleRect(param0: android.view.View, param1: android.graphics.Rect, param2: android.graphics.Point): boolean;
@@ -68542,6 +68436,8 @@ declare module android {
 			public canResolveTextDirection(): boolean;
 			public getTextDirection(): number;
 			public updateViewLayout(param0: android.view.View, param1: android.view.ViewGroup.LayoutParams): void;
+			/** @deprecated */
+			public requestFitSystemWindows(): void;
 			public requestDisallowInterceptTouchEvent(param0: boolean): void;
 			public getChildVisibleRect(param0: android.view.View, param1: android.graphics.Rect, param2: android.graphics.Point): boolean;
 			public isTextDirectionResolved(): boolean;
@@ -68643,6 +68539,8 @@ declare module android {
 			public canResolveTextDirection(): boolean;
 			public getTextDirection(): number;
 			public updateViewLayout(param0: android.view.View, param1: android.view.ViewGroup.LayoutParams): void;
+			/** @deprecated */
+			public requestFitSystemWindows(): void;
 			public requestDisallowInterceptTouchEvent(param0: boolean): void;
 			public getChildVisibleRect(param0: android.view.View, param1: android.graphics.Rect, param2: android.graphics.Point): boolean;
 			public isTextDirectionResolved(): boolean;
@@ -68770,6 +68668,8 @@ declare module android {
 			public canResolveTextDirection(): boolean;
 			public getTextDirection(): number;
 			public updateViewLayout(param0: android.view.View, param1: android.view.ViewGroup.LayoutParams): void;
+			/** @deprecated */
+			public requestFitSystemWindows(): void;
 			public requestDisallowInterceptTouchEvent(param0: boolean): void;
 			public getChildVisibleRect(param0: android.view.View, param1: android.graphics.Rect, param2: android.graphics.Point): boolean;
 			public isTextDirectionResolved(): boolean;
@@ -68798,21 +68698,23 @@ declare module android {
 			public setHighlightColor(param0: number): void;
 			public getFreezesText(): boolean;
 			public getCustomSelectionActionModeCallback(): android.view.ActionMode.Callback;
-			public getTextLocales(): android.os.LocaleList;
 			public setTextScaleX(param0: number): void;
 			public setTextAppearance(param0: number): void;
 			public onMeasure(param0: number, param1: number): void;
-			public getImeHintLocales(): android.os.LocaleList;
 			public constructor(param0: android.content.Context, param1: android.util.AttributeSet, param2: number);
 			public setMinWidth(param0: number): void;
 			public setImeActionLabel(param0: string, param1: number): void;
 			public setInputType(param0: number): void;
 			public onKeyLongPress(param0: number, param1: android.view.KeyEvent): boolean;
+			/** @deprecated */
+			public setTextAppearance(param0: android.content.Context, param1: number): void;
 			public sendAccessibilityEvent(param0: number): void;
+			public onResolvePointerIcon(param0: android.view.MotionEvent, param1: number): any;
 			public getMinLines(): number;
 			public getLinkTextColors(): android.content.res.ColorStateList;
 			public setScroller(param0: android.widget.Scroller): void;
 			public onTextChanged(param0: string, param1: number, param2: number, param3: number): void;
+			public setImeHintLocales(param0: any): void;
 			public onTextContextMenuItem(param0: number): boolean;
 			public unscheduleDrawable(param0: android.graphics.drawable.Drawable, param1: java.lang.Runnable): void;
 			public getTextLocale(): java.util.Locale;
@@ -68823,7 +68725,6 @@ declare module android {
 			public setMinHeight(param0: number): void;
 			public onKeyPreIme(param0: number, param1: android.view.KeyEvent): boolean;
 			public invalidateDrawable(param0: android.graphics.drawable.Drawable): void;
-			public setImeHintLocales(param0: android.os.LocaleList): void;
 			public getTextScaleX(): number;
 			public getAccessibilityClassName(): string;
 			public getSelectionEnd(): number;
@@ -68872,7 +68773,6 @@ declare module android {
 			public getMarqueeRepeatLimit(): number;
 			public setHorizontallyScrolling(param0: boolean): void;
 			public showContextMenu(param0: number, param1: number): boolean;
-			public onResolvePointerIcon(param0: android.view.MotionEvent, param1: number): android.view.PointerIcon;
 			public onFocusChanged(param0: boolean, param1: number, param2: android.graphics.Rect): void;
 			public setBreakStrategy(param0: number): void;
 			public getTextColors(): android.content.res.ColorStateList;
@@ -68882,6 +68782,7 @@ declare module android {
 			public onKeyShortcut(param0: number, param1: android.view.KeyEvent): boolean;
 			public getCompoundPaddingTop(): number;
 			public setCompoundDrawablePadding(param0: number): void;
+			public getImeHintLocales(): any;
 			public unscheduleDrawable(param0: android.graphics.drawable.Drawable): void;
 			public setTypeface(param0: android.graphics.Typeface): void;
 			public getText(): string;
@@ -68961,7 +68862,6 @@ declare module android {
 			public getInputExtras(param0: boolean): android.os.Bundle;
 			public onProvideStructure(param0: any): void;
 			public getEllipsize(): android.text.TextUtils.TruncateAt;
-			public setTextAppearance(param0: android.content.Context, param1: number): void;
 			public getMovementMethod(): android.text.method.MovementMethod;
 			public getLeftFadingEdgeStrength(): number;
 			public setShowSoftInputOnFocus(param0: boolean): void;
@@ -68986,7 +68886,7 @@ declare module android {
 			public getLineSpacingExtra(): number;
 			public getIncludeFontPadding(): boolean;
 			public constructor(param0: android.content.Context, param1: android.util.AttributeSet, param2: number, param3: number);
-			public setTextLocales(param0: android.os.LocaleList): void;
+			public getTextLocales(): any;
 			public getCustomInsertionActionModeCallback(): android.view.ActionMode.Callback;
 			public setCompoundDrawablesRelative(param0: android.graphics.drawable.Drawable, param1: android.graphics.drawable.Drawable, param2: android.graphics.drawable.Drawable, param3: android.graphics.drawable.Drawable): void;
 			public setCursorVisible(param0: boolean): void;
@@ -69005,6 +68905,7 @@ declare module android {
 			public onRtlPropertiesChanged(param0: number): void;
 			public getLineHeight(): number;
 			public getShadowColor(): number;
+			public setTextLocales(param0: any): void;
 			public getTopPaddingOffset(): number;
 			public setHeight(param0: number): void;
 			public setText(param0: native.Array<string>, param1: number, param2: number): void;
@@ -69142,7 +69043,6 @@ declare module android {
 		export class TimePicker extends android.widget.FrameLayout {
 			public static class: java.lang.Class<android.widget.TimePicker>;
 			public setMinute(param0: number): void;
-			public getCurrentHour(): java.lang.Integer;
 			public isLayoutDirectionResolved(): boolean;
 			public onStopNestedScroll(param0: android.view.View): void;
 			public focusableViewAvailable(param0: android.view.View): void;
@@ -69158,9 +69058,10 @@ declare module android {
 			public onNestedScrollAccepted(param0: android.view.View, param1: android.view.View, param2: number): void;
 			public showContextMenuForChild(param0: android.view.View): boolean;
 			public onNestedFling(param0: android.view.View, param1: number, param2: number, param3: boolean): boolean;
-			public setCurrentMinute(param0: java.lang.Integer): void;
 			public bringChildToFront(param0: android.view.View): void;
 			public onKeyLongPress(param0: number, param1: android.view.KeyEvent): boolean;
+			/** @deprecated */
+			public setCurrentMinute(param0: java.lang.Integer): void;
 			public setEnabled(param0: boolean): void;
 			public sendAccessibilityEvent(param0: number): void;
 			public onRestoreInstanceState(param0: android.os.Parcelable): void;
@@ -69170,6 +69071,8 @@ declare module android {
 			public canResolveTextAlignment(): boolean;
 			public onNestedPrePerformAccessibilityAction(param0: android.view.View, param1: number, param2: android.os.Bundle): boolean;
 			public getParent(): android.view.ViewParent;
+			/** @deprecated */
+			public getCurrentMinute(): java.lang.Integer;
 			public setIs24HourView(param0: java.lang.Boolean): void;
 			public onStartNestedScroll(param0: android.view.View, param1: android.view.View, param2: number): boolean;
 			public startActionModeForChild(param0: android.view.View, param1: android.view.ActionMode.Callback): android.view.ActionMode;
@@ -69189,7 +69092,6 @@ declare module android {
 			public onKeyMultiple(param0: number, param1: number, param2: android.view.KeyEvent): boolean;
 			public recomputeViewAttributes(param0: android.view.View): void;
 			public isLayoutRequested(): boolean;
-			public setCurrentHour(param0: java.lang.Integer): void;
 			public invalidateChild(param0: android.view.View, param1: android.graphics.Rect): void;
 			public invalidateChildInParent(param0: native.Array<number>, param1: android.graphics.Rect): android.view.ViewParent;
 			public constructor(param0: android.content.Context, param1: android.util.AttributeSet, param2: number, param3: number);
@@ -69204,9 +69106,13 @@ declare module android {
 			public addView(param0: android.view.View): void;
 			public removeView(param0: android.view.View): void;
 			public clearChildFocus(param0: android.view.View): void;
+			/** @deprecated */
+			public getCurrentHour(): java.lang.Integer;
 			public canResolveTextDirection(): boolean;
 			public getTextDirection(): number;
 			public updateViewLayout(param0: android.view.View, param1: android.view.ViewGroup.LayoutParams): void;
+			/** @deprecated */
+			public requestFitSystemWindows(): void;
 			public requestDisallowInterceptTouchEvent(param0: boolean): void;
 			public getChildVisibleRect(param0: android.view.View, param1: android.graphics.Rect, param2: android.graphics.Point): boolean;
 			public isTextDirectionResolved(): boolean;
@@ -69220,7 +69126,8 @@ declare module android {
 			public addView(param0: android.view.View, param1: android.view.ViewGroup.LayoutParams): void;
 			public addView(param0: android.view.View, param1: number, param2: android.view.ViewGroup.LayoutParams): void;
 			public notifySubtreeAccessibilityStateChanged(param0: android.view.View, param1: android.view.View, param2: number): void;
-			public getCurrentMinute(): java.lang.Integer;
+			/** @deprecated */
+			public setCurrentHour(param0: java.lang.Integer): void;
 			public requestFitSystemWindows(): void;
 			public addView(param0: android.view.View, param1: number): void;
 		}
@@ -69276,6 +69183,8 @@ declare module android {
 			public onKeyMultiple(param0: number, param1: number, param2: android.view.KeyEvent): boolean;
 			public getTextOn(): string;
 			public toggle(): void;
+			/** @deprecated */
+			public setBackgroundDrawable(param0: android.graphics.drawable.Drawable): void;
 			public drawableStateChanged(): void;
 			public sendAccessibilityEventUnchecked(param0: android.view.accessibility.AccessibilityEvent): void;
 			public constructor(param0: android.content.Context, param1: android.util.AttributeSet, param2: number);
@@ -69359,6 +69268,8 @@ declare module android {
 			public childDrawableStateChanged(param0: android.view.View): void;
 			public addView(param0: android.view.View): void;
 			public canResolveTextDirection(): boolean;
+			/** @deprecated */
+			public requestFitSystemWindows(): void;
 			public getChildVisibleRect(param0: android.view.View, param1: android.graphics.Rect, param2: android.graphics.Point): boolean;
 			public onKeyUp(param0: number, param1: android.view.KeyEvent): boolean;
 			public constructor(param0: android.content.Context);
@@ -69532,6 +69443,8 @@ declare module android {
 			public canResolveTextDirection(): boolean;
 			public getTextDirection(): number;
 			public updateViewLayout(param0: android.view.View, param1: android.view.ViewGroup.LayoutParams): void;
+			/** @deprecated */
+			public requestFitSystemWindows(): void;
 			public requestDisallowInterceptTouchEvent(param0: boolean): void;
 			public getChildVisibleRect(param0: android.view.View, param1: android.graphics.Rect, param2: android.graphics.Point): boolean;
 			public isTextDirectionResolved(): boolean;
@@ -69678,6 +69591,8 @@ declare module android {
 			public canResolveTextDirection(): boolean;
 			public getTextDirection(): number;
 			public updateViewLayout(param0: android.view.View, param1: android.view.ViewGroup.LayoutParams): void;
+			/** @deprecated */
+			public requestFitSystemWindows(): void;
 			public requestDisallowInterceptTouchEvent(param0: boolean): void;
 			public getChildVisibleRect(param0: android.view.View, param1: android.graphics.Rect, param2: android.graphics.Point): boolean;
 			public isTextDirectionResolved(): boolean;
@@ -69760,6 +69675,8 @@ declare module android {
 			public canResolveTextDirection(): boolean;
 			public getTextDirection(): number;
 			public updateViewLayout(param0: android.view.View, param1: android.view.ViewGroup.LayoutParams): void;
+			/** @deprecated */
+			public requestFitSystemWindows(): void;
 			public requestDisallowInterceptTouchEvent(param0: boolean): void;
 			public getChildVisibleRect(param0: android.view.View, param1: android.graphics.Rect, param2: android.graphics.Point): boolean;
 			public isTextDirectionResolved(): boolean;
@@ -69839,6 +69756,8 @@ declare module android {
 			public canResolveTextDirection(): boolean;
 			public getTextDirection(): number;
 			public updateViewLayout(param0: android.view.View, param1: android.view.ViewGroup.LayoutParams): void;
+			/** @deprecated */
+			public requestFitSystemWindows(): void;
 			public requestDisallowInterceptTouchEvent(param0: boolean): void;
 			public getChildVisibleRect(param0: android.view.View, param1: android.graphics.Rect, param2: android.graphics.Point): boolean;
 			public isTextDirectionResolved(): boolean;
@@ -70040,6 +69959,8 @@ declare module android {
 			public getTextDirection(): number;
 			public updateViewLayout(param0: android.view.View, param1: android.view.ViewGroup.LayoutParams): void;
 			public onTouchEvent(param0: android.view.MotionEvent): boolean;
+			/** @deprecated */
+			public requestFitSystemWindows(): void;
 			public requestDisallowInterceptTouchEvent(param0: boolean): void;
 			public getChildVisibleRect(param0: android.view.View, param1: android.graphics.Rect, param2: android.graphics.Point): boolean;
 			public isTextDirectionResolved(): boolean;
@@ -70851,12 +70772,13 @@ declare module java {
 			public flush(): void;
 			public toByteArray(): native.Array<number>;
 			public size(): number;
+			/** @deprecated */
+			public toString(param0: number): string;
 			public constructor(param0: number);
 			public constructor();
 			public writeTo(param0: java.io.OutputStream): void;
 			public toString(): string;
 			public write(param0: number): void;
-			public toString(param0: number): string;
 			public reset(): void;
 			public write(param0: native.Array<number>, param1: number, param2: number): void;
 			public write(param0: native.Array<number>): void;
@@ -71018,6 +70940,8 @@ declare module java {
 	export module io {
 		export class DataInputStream extends java.io.FilterInputStream implements java.io.DataInput {
 			public static class: java.lang.Class<java.io.DataInputStream>;
+			public readLine(): string;
+			/** @deprecated */
 			public readLine(): string;
 			public readUnsignedShort(): number;
 			public readLong(): number;
@@ -71192,7 +71116,6 @@ declare module java {
 			public setReadable(param0: boolean, param1: boolean): boolean;
 			public length(): number;
 			public setReadOnly(): boolean;
-			public toURL(): java.net.URL;
 			public exists(): boolean;
 			public getPath(): string;
 			public toString(): string;
@@ -71205,6 +71128,8 @@ declare module java {
 			public mkdirs(): boolean;
 			public setWritable(param0: boolean): boolean;
 			public setExecutable(param0: boolean): boolean;
+			/** @deprecated */
+			public toURL(): java.net.URL;
 			public hashCode(): number;
 		}
 	}
@@ -71734,6 +71659,8 @@ declare module java {
 			public resolveProxyClass(param0: native.Array<string>): java.lang.Class<any>;
 			public resolveClass(param0: java.io.ObjectStreamClass): java.lang.Class<any>;
 			public readLine(): string;
+			/** @deprecated */
+			public readLine(): string;
 			public readUnsignedShort(): number;
 			public readLong(): number;
 			public read(param0: native.Array<number>, param1: number, param2: number): number;
@@ -71870,10 +71797,11 @@ declare module java {
 			export abstract class PutField extends java.lang.Object {
 				public static class: java.lang.Class<java.io.ObjectOutputStream.PutField>;
 				public put(param0: string, param1: number): void;
+				/** @deprecated */
+				public write(param0: java.io.ObjectOutput): void;
 				public put(param0: string, param1: any): void;
 				public put(param0: string, param1: boolean): void;
 				public put(param0: string, param1: string): void;
-				public write(param0: java.io.ObjectOutput): void;
 				public constructor();
 			}
 		}
@@ -72398,9 +72326,10 @@ declare module java {
 			public parseNumbers(): void;
 			public toString(): string;
 			public whitespaceChars(param0: number, param1: number): void;
+			/** @deprecated */
+			public constructor(param0: java.io.InputStream);
 			public slashSlashComments(param0: boolean): void;
 			public quoteChar(param0: number): void;
-			public constructor(param0: java.io.InputStream);
 			public lowerCaseMode(param0: boolean): void;
 			public ordinaryChar(param0: number): void;
 		}
@@ -72889,13 +72818,13 @@ declare module java {
 			public static isUpperCase(param0: string): boolean;
 			public static isJavaIdentifierStart(param0: number): boolean;
 			public static toCodePoint(param0: string, param1: string): number;
+			/** @deprecated */
 			public static isSpace(param0: string): boolean;
 			public static isIdeographic(param0: number): boolean;
 			public static codePointCount(param0: string, param1: number, param2: number): number;
 			public static isLetterOrDigit(param0: number): boolean;
 			public static getType(param0: number): number;
 			public static getNumericValue(param0: number): number;
-			public static isJavaLetterOrDigit(param0: string): boolean;
 			public static isLetter(param0: number): boolean;
 			public static getNumericValue(param0: string): number;
 			public static getDirectionality(param0: number): number;
@@ -72918,6 +72847,10 @@ declare module java {
 			public static isAlphabetic(param0: number): boolean;
 			public static isIdentifierIgnorable(param0: string): boolean;
 			public static toUpperCase(param0: number): number;
+			/** @deprecated */
+			public static isJavaLetterOrDigit(param0: string): boolean;
+			/** @deprecated */
+			public static isJavaLetter(param0: string): boolean;
 			public static isLowerCase(param0: number): boolean;
 			public static valueOf(param0: string): java.lang.Character;
 			public static codePointAt(param0: string, param1: number): number;
@@ -72930,7 +72863,6 @@ declare module java {
 			public static codePointAt(param0: native.Array<string>, param1: number, param2: number): number;
 			public static toChars(param0: number, param1: native.Array<string>, param2: number): number;
 			public static isUnicodeIdentifierStart(param0: string): boolean;
-			public static isJavaLetter(param0: string): boolean;
 			public static isLowerCase(param0: string): boolean;
 			public static isLetter(param0: string): boolean;
 			public static isUnicodeIdentifierPart(param0: string): boolean;
@@ -73401,6 +73333,8 @@ declare module java {
 			public getParent(): java.lang.ClassLoader;
 			public getPackage(param0: string): java.lang.Package;
 			public loadClass(param0: string, param1: boolean): java.lang.Class<any>;
+			/** @deprecated */
+			public defineClass(param0: native.Array<number>, param1: number, param2: number): java.lang.Class<any>;
 			public setPackageAssertionStatus(param0: string, param1: boolean): void;
 			public getPackages(): native.Array<java.lang.Package>;
 			public findLoadedClass(param0: string): java.lang.Class<any>;
@@ -73425,7 +73359,6 @@ declare module java {
 			public setDefaultAssertionStatus(param0: boolean): void;
 			public clearAssertionStatus(): void;
 			public findResources(param0: string): java.util.Enumeration<java.net.URL>;
-			public defineClass(param0: native.Array<number>, param1: number, param2: number): java.lang.Class<any>;
 		}
 	}
 }
@@ -74373,8 +74306,9 @@ declare module java {
 	export module lang {
 		export class Runtime extends java.lang.Object {
 			public static class: java.lang.Class<java.lang.Runtime>;
-			public static runFinalizersOnExit(param0: boolean): void;
 			public exit(param0: number): void;
+			/** @deprecated */
+			public static runFinalizersOnExit(param0: boolean): void;
 			public totalMemory(): number;
 			public addShutdownHook(param0: java.lang.Thread): void;
 			public exec(param0: native.Array<string>): java.lang.Process;
@@ -74388,6 +74322,8 @@ declare module java {
 			public gc(): void;
 			public exec(param0: native.Array<string>, param1: native.Array<string>, param2: java.io.File): java.lang.Process;
 			public removeShutdownHook(param0: java.lang.Thread): boolean;
+			/** @deprecated */
+			public getLocalizedInputStream(param0: java.io.InputStream): java.io.InputStream;
 			public exec(param0: string): java.lang.Process;
 			public freeMemory(): number;
 			public static getRuntime(): java.lang.Runtime;
@@ -74395,7 +74331,7 @@ declare module java {
 			public traceInstructions(param0: boolean): void;
 			public halt(param0: number): void;
 			public runFinalization(): void;
-			public getLocalizedInputStream(param0: java.io.InputStream): java.io.InputStream;
+			/** @deprecated */
 			public getLocalizedOutputStream(param0: java.io.OutputStream): java.io.OutputStream;
 		}
 	}
@@ -74470,10 +74406,19 @@ declare module java {
 			public checkPropertyAccess(param0: string): void;
 			public checkConnect(param0: string, param1: number, param2: any): void;
 			public checkExec(param0: string): void;
-			public getInCheck(): boolean;
-			public checkWrite(param0: java.io.FileDescriptor): void;
+			/** @deprecated */
 			public inClassLoader(): boolean;
-			public classLoaderDepth(): number;
+			public checkWrite(param0: java.io.FileDescriptor): void;
+			/** @deprecated */
+			public checkMulticast(param0: java.net.InetAddress, param1: number): void;
+			/** @deprecated */
+			public currentLoadedClass(): java.lang.Class<any>;
+			/** @deprecated */
+			public inClass(param0: string): boolean;
+			/** @deprecated */
+			public classDepth(param0: string): number;
+			/** @deprecated */
+			public getInCheck(): boolean;
 			public checkMemberAccess(param0: java.lang.Class<any>, param1: number): void;
 			public checkPermission(param0: java.security.Permission, param1: any): void;
 			public checkPackageDefinition(param0: string): void;
@@ -74481,22 +74426,22 @@ declare module java {
 			public checkMulticast(param0: java.net.InetAddress): void;
 			public checkExit(param0: number): void;
 			public checkRead(param0: string): void;
+			/** @deprecated */
+			public currentClassLoader(): java.lang.ClassLoader;
 			public checkPropertiesAccess(): void;
 			public checkSystemClipboardAccess(): void;
 			public checkCreateClassLoader(): void;
 			public checkAccess(param0: java.lang.ThreadGroup): void;
-			public currentClassLoader(): java.lang.ClassLoader;
 			public checkAwtEventQueueAccess(): void;
+			/** @deprecated */
+			public classLoaderDepth(): number;
 			public checkPermission(param0: java.security.Permission): void;
 			public checkDelete(param0: string): void;
 			public constructor();
 			public checkConnect(param0: string, param1: number): void;
 			public getClassContext(): native.Array<java.lang.Class<any>>;
-			public classDepth(param0: string): number;
 			public checkListen(param0: number): void;
 			public checkAccept(param0: string, param1: number): void;
-			public checkMulticast(param0: java.net.InetAddress, param1: number): void;
-			public currentLoadedClass(): java.lang.Class<any>;
 			public checkSetFactory(): void;
 			public getThreadGroup(): java.lang.ThreadGroup;
 			public checkRead(param0: string, param1: any): void;
@@ -74504,7 +74449,6 @@ declare module java {
 			public checkWrite(param0: string): void;
 			public getSecurityContext(): any;
 			public checkTopLevelWindow(param0: any): boolean;
-			public inClass(param0: string): boolean;
 			public checkSecurityAccess(param0: string): void;
 			public checkPackageAccess(param0: string): void;
 		}
@@ -74638,7 +74582,6 @@ declare module java {
 			public static CASE_INSENSITIVE_ORDER: java.util.Comparator<string>;
 			public getBytes(param0: java.nio.charset.Charset): native.Array<number>;
 			public getBytes(): native.Array<number>;
-			public getBytes(param0: number, param1: number, param2: native.Array<number>, param3: number): void;
 			public compareToIgnoreCase(param0: string): number;
 			public indexOf(param0: string, param1: number): number;
 			public equalsIgnoreCase(param0: string): boolean;
@@ -74651,8 +74594,11 @@ declare module java {
 			public codePointCount(param0: number, param1: number): number;
 			public replaceAll(param0: string, param1: string): string;
 			public subSequence(param0: number, param1: number): string;
+			/** @deprecated */
+			public getBytes(param0: number, param1: number, param2: native.Array<number>, param3: number): void;
 			public lastIndexOf(param0: number): number;
-			public constructor(param0: native.Array<number>, param1: number, param2: number, param3: number);
+			/** @deprecated */
+			public constructor(param0: native.Array<number>, param1: number);
 			public contains(param0: string): boolean;
 			public intern(): string;
 			public toUpperCase(): string;
@@ -74678,7 +74624,6 @@ declare module java {
 			public regionMatches(param0: boolean, param1: number, param2: string, param3: number, param4: number): boolean;
 			public replace(param0: string, param1: string): string;
 			public toCharArray(): native.Array<string>;
-			public constructor(param0: native.Array<number>, param1: number);
 			public substring(param0: number, param1: number): string;
 			public codePointAt(param0: number): number;
 			public getChars(param0: number, param1: number, param2: native.Array<string>, param3: number): void;
@@ -74698,6 +74643,8 @@ declare module java {
 			public static copyValueOf(param0: native.Array<string>): string;
 			public length(): number;
 			public startsWith(param0: string, param1: number): boolean;
+			/** @deprecated */
+			public constructor(param0: native.Array<number>, param1: number, param2: number, param3: number);
 			public constructor(param0: native.Array<number>, param1: number, param2: number, param3: java.nio.charset.Charset);
 			public regionMatches(param0: number, param1: string, param2: number, param3: number): boolean;
 			public static valueOf(param0: any): string;
@@ -74861,8 +74808,9 @@ declare module java {
 			public static in: java.io.InputStream;
 			public static out: java.io.PrintStream;
 			public static getenv(param0: string): string;
-			public static runFinalizersOnExit(param0: boolean): void;
 			public static gc(): void;
+			/** @deprecated */
+			public static runFinalizersOnExit(param0: boolean): void;
 			public static getProperty(param0: string, param1: string): string;
 			public static getProperties(): java.util.Properties;
 			public static setOut(param0: java.io.PrintStream): void;
@@ -74900,16 +74848,18 @@ declare module java {
 			public static NORM_PRIORITY: number;
 			public getState(): java.lang.Thread.State;
 			public static setDefaultUncaughtExceptionHandler(param0: java.lang.Thread.UncaughtExceptionHandler): void;
+			/** @deprecated */
+			public destroy(): void;
 			public static enumerate(param0: native.Array<java.lang.Thread>): number;
 			public isInterrupted(): boolean;
 			public getId(): number;
-			public stop(): void;
 			public setUncaughtExceptionHandler(param0: java.lang.Thread.UncaughtExceptionHandler): void;
 			public start(): void;
 			public constructor(param0: string);
 			public setContextClassLoader(param0: java.lang.ClassLoader): void;
+			/** @deprecated */
+			public resume(): void;
 			public constructor();
-			public suspend(): void;
 			public clone(): any;
 			public getUncaughtExceptionHandler(): java.lang.Thread.UncaughtExceptionHandler;
 			public getStackTrace(): native.Array<java.lang.StackTraceElement>;
@@ -74919,19 +74869,22 @@ declare module java {
 			public constructor(param0: java.lang.Runnable);
 			public static currentThread(): java.lang.Thread;
 			public static holdsLock(param0: any): boolean;
+			/** @deprecated */
+			public countStackFrames(): number;
 			public static sleep(param0: number, param1: number): void;
-			public resume(): void;
 			public static activeCount(): number;
 			public getContextClassLoader(): java.lang.ClassLoader;
-			public countStackFrames(): number;
+			/** @deprecated */
+			public suspend(): void;
 			public run(): void;
 			public constructor(param0: java.lang.ThreadGroup, param1: java.lang.Runnable);
 			public isDaemon(): boolean;
 			public static sleep(param0: number): void;
 			public static dumpStack(): void;
 			public interrupt(): void;
-			public destroy(): void;
 			public join(): void;
+			/** @deprecated */
+			public stop(param0: java.lang.Throwable): void;
 			public setDaemon(param0: boolean): void;
 			public checkAccess(): void;
 			public static getDefaultUncaughtExceptionHandler(): java.lang.Thread.UncaughtExceptionHandler;
@@ -74946,7 +74899,8 @@ declare module java {
 			public getThreadGroup(): java.lang.ThreadGroup;
 			public setPriority(param0: number): void;
 			public static yield(): void;
-			public stop(param0: java.lang.Throwable): void;
+			/** @deprecated */
+			public stop(): void;
 			public static interrupted(): boolean;
 			public setName(param0: string): void;
 		}
@@ -74999,18 +74953,20 @@ declare module java {
 			public uncaughtException(param0: java.lang.Thread, param1: java.lang.Throwable): void;
 			public enumerate(param0: native.Array<java.lang.Thread>): number;
 			public enumerate(param0: native.Array<java.lang.Thread>, param1: boolean): number;
+			/** @deprecated */
 			public allowThreadSuspension(param0: boolean): boolean;
-			public resume(): void;
 			public getParent(): java.lang.ThreadGroup;
-			public stop(): void;
+			/** @deprecated */
+			public suspend(): void;
 			public setMaxPriority(param0: number): void;
 			public constructor(param0: string);
 			public isDaemon(): boolean;
 			public activeGroupCount(): number;
 			public activeCount(): number;
 			public interrupt(): void;
+			/** @deprecated */
+			public resume(): void;
 			public destroy(): void;
-			public suspend(): void;
 			public enumerate(param0: native.Array<java.lang.ThreadGroup>): number;
 			public setDaemon(param0: boolean): void;
 			public parentOf(param0: java.lang.ThreadGroup): boolean;
@@ -75018,6 +74974,8 @@ declare module java {
 			public toString(): string;
 			public getName(): string;
 			public getMaxPriority(): number;
+			/** @deprecated */
+			public stop(): void;
 			public enumerate(param0: native.Array<java.lang.ThreadGroup>, param1: boolean): number;
 			public list(): void;
 			public constructor(param0: java.lang.ThreadGroup, param1: string);
@@ -76421,17 +76379,19 @@ declare module java {
 			public joinGroup(param0: java.net.SocketAddress, param1: java.net.NetworkInterface): void;
 			public constructor();
 			public peekData(param0: java.net.DatagramPacket): number;
+			/** @deprecated */
 			public setTTL(param0: number): void;
 			public send(param0: java.net.DatagramPacket): void;
 			public receive(param0: java.net.DatagramPacket): void;
 			public setTimeToLive(param0: number): void;
 			public getLocalPort(): number;
-			public getTTL(): number;
 			public leave(param0: java.net.InetAddress): void;
 			public leaveGroup(param0: java.net.SocketAddress, param1: java.net.NetworkInterface): void;
 			public getFileDescriptor(): java.io.FileDescriptor;
 			public getOption(param0: number): any;
 			public bind(param0: number, param1: java.net.InetAddress): void;
+			/** @deprecated */
+			public getTTL(): number;
 			public close(): void;
 			public getTimeToLive(): number;
 			public disconnect(): void;
@@ -76775,17 +76735,20 @@ declare module java {
 			public joinGroup(param0: java.net.SocketAddress, param1: java.net.NetworkInterface): void;
 			public constructor(param0: java.net.SocketAddress);
 			public constructor();
+			/** @deprecated */
 			public setTTL(param0: number): void;
 			public send(param0: java.net.DatagramPacket): void;
 			public setNetworkInterface(param0: java.net.NetworkInterface): void;
-			public send(param0: java.net.DatagramPacket, param1: number): void;
 			public setTimeToLive(param0: number): void;
 			public getInterface(): java.net.InetAddress;
 			public constructor(param0: java.net.DatagramSocketImpl);
-			public getTTL(): number;
 			public leaveGroup(param0: java.net.SocketAddress, param1: java.net.NetworkInterface): void;
 			public getLoopbackMode(): boolean;
+			/** @deprecated */
+			public getTTL(): number;
 			public joinGroup(param0: java.net.InetAddress): void;
+			/** @deprecated */
+			public send(param0: java.net.DatagramPacket, param1: number): void;
 			public close(): void;
 			public getTimeToLive(): number;
 			public setInterface(param0: java.net.InetAddress): void;
@@ -77001,7 +76964,6 @@ declare module java {
 	export module net {
 		export class Socket extends java.lang.Object implements java.io.Closeable {
 			public static class: java.lang.Class<java.net.Socket>;
-			public constructor(param0: java.net.InetAddress, param1: number, param2: boolean);
 			public constructor(param0: java.net.Proxy);
 			public isInputShutdown(): boolean;
 			public getInetAddress(): java.net.InetAddress;
@@ -77020,7 +76982,6 @@ declare module java {
 			public constructor(param0: java.net.InetAddress, param1: number, param2: java.net.InetAddress, param3: number);
 			public getLocalSocketAddress(): java.net.SocketAddress;
 			public getRemoteSocketAddress(): java.net.SocketAddress;
-			public constructor(param0: string, param1: number, param2: boolean);
 			public getPort(): number;
 			public shutdownOutput(): void;
 			public getReuseAddress(): boolean;
@@ -77034,6 +76995,8 @@ declare module java {
 			public connect(param0: java.net.SocketAddress, param1: number): void;
 			public getChannel(): java.nio.channels.SocketChannel;
 			public setReceiveBufferSize(param0: number): void;
+			/** @deprecated */
+			public constructor(param0: string, param1: number, param2: boolean);
 			public setSoTimeout(param0: number): void;
 			public getLocalPort(): number;
 			public getTrafficClass(): number;
@@ -77043,6 +77006,8 @@ declare module java {
 			public setReuseAddress(param0: boolean): void;
 			public getSoTimeout(): number;
 			public getSendBufferSize(): number;
+			/** @deprecated */
+			public constructor(param0: java.net.InetAddress, param1: number, param2: boolean);
 			public getReceiveBufferSize(): number;
 			public setOOBInline(param0: boolean): void;
 			public static setSocketImplFactory(param0: java.net.SocketImplFactory): void;
@@ -77377,6 +77342,8 @@ declare module java {
 			public static guessContentTypeFromStream(param0: java.io.InputStream): string;
 			public getExpiration(): number;
 			public getHeaderFieldDate(param0: string, param1: number): number;
+			/** @deprecated */
+			public static setDefaultRequestProperty(param0: string, param1: string): void;
 			public getHeaderFieldKey(param0: number): string;
 			public getPermission(): java.security.Permission;
 			public getDoOutput(): boolean;
@@ -77385,6 +77352,8 @@ declare module java {
 			public static guessContentTypeFromName(param0: string): string;
 			public getOutputStream(): java.io.OutputStream;
 			public setReadTimeout(param0: number): void;
+			/** @deprecated */
+			public static getDefaultRequestProperty(param0: string): string;
 			public setDefaultUseCaches(param0: boolean): void;
 			public static getFileNameMap(): java.net.FileNameMap;
 			public getAllowUserInteraction(): boolean;
@@ -77393,9 +77362,7 @@ declare module java {
 			public getRequestProperty(param0: string): string;
 			public getContentEncoding(): string;
 			public getDate(): number;
-			public static getDefaultRequestProperty(param0: string): string;
 			public getLastModified(): number;
-			public static setDefaultRequestProperty(param0: string, param1: string): void;
 			public getHeaderFields(): java.util.Map<string,java.util.List<string>>;
 			public getHeaderField(param0: number): string;
 			public getContentLengthLong(): number;
@@ -77434,6 +77401,7 @@ declare module java {
 	export module net {
 		export class URLDecoder extends java.lang.Object {
 			public static class: java.lang.Class<java.net.URLDecoder>;
+			/** @deprecated */
 			public static decode(param0: string): string;
 			public constructor();
 			public static decode(param0: string, param1: string): string;
@@ -77446,6 +77414,7 @@ declare module java {
 		export class URLEncoder extends java.lang.Object {
 			public static class: java.lang.Class<java.net.URLEncoder>;
 			public static encode(param0: string, param1: string): string;
+			/** @deprecated */
 			public static encode(param0: string): string;
 		}
 	}
@@ -77463,8 +77432,9 @@ declare module java {
 			public constructor();
 			public getHostAddress(param0: java.net.URL): java.net.InetAddress;
 			public parseURL(param0: java.net.URL, param1: string, param2: number, param3: number): void;
-			public setURL(param0: java.net.URL, param1: string, param2: string, param3: number, param4: string, param5: string): void;
 			public sameFile(param0: java.net.URL, param1: java.net.URL): boolean;
+			/** @deprecated */
+			public setURL(param0: java.net.URL, param1: string, param2: string, param3: number, param4: string, param5: string): void;
 			public openConnection(param0: java.net.URL, param1: java.net.Proxy): java.net.URLConnection;
 			public equals(param0: java.net.URL, param1: java.net.URL): boolean;
 			public hashCode(param0: java.net.URL): number;
@@ -80241,6 +80211,7 @@ declare module java {
 			public defineClass(param0: string, param1: java.nio.ByteBuffer, param2: java.security.CodeSource): java.lang.Class<any>;
 			public constructor();
 			public defineClass(param0: string, param1: native.Array<number>, param2: number, param3: number, param4: java.security.ProtectionDomain): java.lang.Class<any>;
+			/** @deprecated */
 			public defineClass(param0: native.Array<number>, param1: number, param2: number): java.lang.Class<any>;
 			public defineClass(param0: string, param1: native.Array<number>, param2: number, param3: number): java.lang.Class<any>;
 		}
@@ -80286,11 +80257,12 @@ declare module java {
 	export module security {
 		export class Security extends java.lang.Object {
 			public static class: java.lang.Class<java.security.Security>;
+			/** @deprecated */
+			public static getAlgorithmProperty(param0: string, param1: string): string;
 			public static insertProviderAt(param0: java.security.Provider, param1: number): number;
 			public static setProperty(param0: string, param1: string): void;
 			public static getProviders(param0: java.util.Map<string,string>): native.Array<java.security.Provider>;
 			public static getProvider(param0: string): java.security.Provider;
-			public static getAlgorithmProperty(param0: string, param1: string): string;
 			public static getProperty(param0: string): string;
 			public static getProviders(param0: string): native.Array<java.security.Provider>;
 			public static getAlgorithms(param0: string): java.util.Set<string>;
@@ -80325,20 +80297,22 @@ declare module java {
 			public update(param0: java.nio.ByteBuffer): void;
 			public sign(param0: native.Array<number>, param1: number, param2: number): number;
 			public verify(param0: native.Array<number>): boolean;
+			/** @deprecated */
+			public getParameter(param0: string): any;
 			public initSign(param0: java.security.PrivateKey, param1: java.security.SecureRandom): void;
 			public static getInstance(param0: string, param1: string): java.security.Signature;
 			public update(param0: native.Array<number>, param1: number, param2: number): void;
 			public verify(param0: native.Array<number>, param1: number, param2: number): boolean;
 			public constructor(param0: string);
 			public update(param0: number): void;
-			public getParameter(param0: string): any;
 			public constructor();
 			public getProvider(): java.security.Provider;
+			/** @deprecated */
+			public setParameter(param0: string, param1: any): void;
 			public setParameter(param0: java.security.spec.AlgorithmParameterSpec): void;
 			public update(param0: native.Array<number>): void;
 			public initVerify(param0: java.security.cert.Certificate): void;
 			public toString(): string;
-			public setParameter(param0: string, param1: any): void;
 			public clone(): any;
 			public static getInstance(param0: string, param1: java.security.Provider): java.security.Signature;
 			public sign(): native.Array<number>;
@@ -80369,7 +80343,6 @@ declare module java {
 			public appRandom: java.security.SecureRandom;
 			public engineSign(): native.Array<number>;
 			public engineUpdate(param0: native.Array<number>, param1: number, param2: number): void;
-			public engineGetParameter(param0: string): any;
 			public engineUpdate(param0: number): void;
 			public constructor();
 			public engineVerify(param0: native.Array<number>): boolean;
@@ -80378,10 +80351,13 @@ declare module java {
 			public engineUpdate(param0: java.nio.ByteBuffer): void;
 			public engineSetParameter(param0: java.security.spec.AlgorithmParameterSpec): void;
 			public clone(): any;
+			/** @deprecated */
+			public engineSetParameter(param0: string, param1: any): void;
+			/** @deprecated */
+			public engineGetParameter(param0: string): any;
 			public engineInitVerify(param0: java.security.PublicKey): void;
 			public engineInitSign(param0: java.security.PrivateKey): void;
 			public engineSign(param0: native.Array<number>, param1: number, param2: number): number;
-			public engineSetParameter(param0: string, param1: any): void;
 			public engineGetParameters(): java.security.AlgorithmParameters;
 		}
 	}
@@ -82818,6 +82794,8 @@ declare module java {
 			public getDouble(param0: string): number;
 			public setBlob(param0: string, param1: java.io.InputStream): void;
 			public getMoreResults(param0: number): boolean;
+			/** @deprecated */
+			public getBigDecimal(param0: number, param1: number): java.math.BigDecimal;
 			public setLong(param0: string, param1: number): void;
 			public getRef(param0: number): java.sql.Ref;
 			public isClosed(): boolean;
@@ -82833,7 +82811,6 @@ declare module java {
 			public registerOutParameter(param0: string, param1: number): void;
 			public getObject(param0: string, param1: java.util.Map<string,java.lang.Class<any>>): any;
 			public setClob(param0: number, param1: java.io.Reader, param2: number): void;
-			public setUnicodeStream(param0: number, param1: java.io.InputStream, param2: number): void;
 			public setBytes(param0: number, param1: native.Array<number>): void;
 			public getString(param0: string): string;
 			public setString(param0: string, param1: string): void;
@@ -82879,6 +82856,8 @@ declare module java {
 			public getGeneratedKeys(): java.sql.ResultSet;
 			public setBigDecimal(param0: number, param1: java.math.BigDecimal): void;
 			public setTime(param0: number, param1: java.sql.Time): void;
+			/** @deprecated */
+			public setUnicodeStream(param0: number, param1: java.io.InputStream, param2: number): void;
 			public getNString(param0: number): string;
 			public clearBatch(): void;
 			public setRowId(param0: string, param1: java.sql.RowId): void;
@@ -82934,7 +82913,6 @@ declare module java {
 			public setDate(param0: number, param1: java.sql.Date, param2: java.util.Calendar): void;
 			public setObject(param0: string, param1: any, param2: number): void;
 			public getDate(param0: string): java.sql.Date;
-			public getBigDecimal(param0: number, param1: number): java.math.BigDecimal;
 			public getResultSetConcurrency(): number;
 			public getObject(param0: number): any;
 			public getURL(param0: number): java.net.URL;
@@ -83630,20 +83608,30 @@ declare module java {
 	export module sql {
 		export class Date extends java.util.Date {
 			public static class: java.lang.Class<java.sql.Date>;
-			public constructor(param0: number, param1: number, param2: number);
 			public static valueOf(param0: string): java.sql.Date;
-			public getSeconds(): number;
-			public setHours(param0: number): void;
+			/** @deprecated */
+			public constructor(param0: number, param1: number, param2: number, param3: number, param4: number, param5: number);
 			public constructor(param0: number);
 			public constructor();
-			public setSeconds(param0: number): void;
-			public constructor(param0: number, param1: number, param2: number, param3: number, param4: number, param5: number);
-			public setMinutes(param0: number): void;
+			/** @deprecated */
+			public constructor(param0: number, param1: number, param2: number);
+			/** @deprecated */
+			public getMinutes(): number;
 			public toString(): string;
 			public setTime(param0: number): void;
-			public constructor(param0: number, param1: number, param2: number, param3: number, param4: number);
+			/** @deprecated */
 			public getHours(): number;
-			public getMinutes(): number;
+			/** @deprecated */
+			public setHours(param0: number): void;
+			/** @deprecated */
+			public getSeconds(): number;
+			/** @deprecated */
+			public setMinutes(param0: number): void;
+			/** @deprecated */
+			public setSeconds(param0: number): void;
+			/** @deprecated */
+			public constructor(param0: number, param1: number, param2: number, param3: number, param4: number);
+			/** @deprecated */
 			public constructor(param0: string);
 		}
 	}
@@ -83682,16 +83670,18 @@ declare module java {
 			public static deregisterDriver(param0: java.sql.Driver): void;
 			public static getConnection(param0: string, param1: string, param2: string): java.sql.Connection;
 			public static getDrivers(): java.util.Enumeration<java.sql.Driver>;
-			public static getLogStream(): java.io.PrintStream;
+			/** @deprecated */
+			public static setLogStream(param0: java.io.PrintStream): void;
 			public static getDriver(param0: string): java.sql.Driver;
 			public static setLogWriter(param0: java.io.PrintWriter): void;
 			public static getConnection(param0: string, param1: java.util.Properties): java.sql.Connection;
-			public static setLogStream(param0: java.io.PrintStream): void;
 			public static getLogWriter(): java.io.PrintWriter;
 			public static getConnection(param0: string): java.sql.Connection;
 			public static getLoginTimeout(): number;
 			public static println(param0: string): void;
 			public static registerDriver(param0: java.sql.Driver): void;
+			/** @deprecated */
+			public static getLogStream(): java.io.PrintStream;
 			public static setLoginTimeout(param0: number): void;
 		}
 	}
@@ -83983,11 +83973,12 @@ declare module java {
 			public setClob(param0: number, param1: java.io.Reader, param2: number): void;
 			public getGeneratedKeys(): java.sql.ResultSet;
 			public setBigDecimal(param0: number, param1: java.math.BigDecimal): void;
-			public setUnicodeStream(param0: number, param1: java.io.InputStream, param2: number): void;
 			public setBytes(param0: number, param1: native.Array<number>): void;
 			public getResultSetConcurrency(): number;
 			public setCharacterStream(param0: number, param1: java.io.Reader): void;
 			public setTime(param0: number, param1: java.sql.Time): void;
+			/** @deprecated */
+			public setUnicodeStream(param0: number, param1: java.io.InputStream, param2: number): void;
 			public setTimestamp(param0: number, param1: java.sql.Timestamp): void;
 			public setArray(param0: number, param1: java.sql.Array): void;
 			public clearBatch(): void;
@@ -84246,7 +84237,6 @@ declare module java {
 			public updateDouble(param0: number, param1: number): void;
 			public previous(): boolean;
 			public updateBinaryStream(param0: string, param1: java.io.InputStream, param2: number): void;
-			public getUnicodeStream(param0: number): java.io.InputStream;
 			public cancelRowUpdates(): void;
 			public getConcurrency(): number;
 			public wasNull(): boolean;
@@ -84273,6 +84263,8 @@ declare module java {
 			public absolute(param0: number): boolean;
 			public last(): boolean;
 			public relative(param0: number): boolean;
+			/** @deprecated */
+			public getBigDecimal(param0: number, param1: number): java.math.BigDecimal;
 			public updateNString(param0: string, param1: string): void;
 			public getInt(param0: number): number;
 			public getType(): number;
@@ -84282,6 +84274,8 @@ declare module java {
 			public updateBlob(param0: number, param1: java.sql.Blob): void;
 			public updateAsciiStream(param0: number, param1: java.io.InputStream, param2: number): void;
 			public updateBytes(param0: string, param1: native.Array<number>): void;
+			/** @deprecated */
+			public getBigDecimal(param0: string, param1: number): java.math.BigDecimal;
 			public updateNClob(param0: string, param1: java.io.Reader, param2: number): void;
 			public getMetaData(): java.sql.ResultSetMetaData;
 			public updateNull(param0: number): void;
@@ -84291,6 +84285,8 @@ declare module java {
 			public updateAsciiStream(param0: number, param1: java.io.InputStream): void;
 			public updateAsciiStream(param0: string, param1: java.io.InputStream, param2: number): void;
 			public updateString(param0: number, param1: string): void;
+			/** @deprecated */
+			public getUnicodeStream(param0: string): java.io.InputStream;
 			public isLast(): boolean;
 			public getTimestamp(param0: number, param1: java.util.Calendar): java.sql.Timestamp;
 			public updateString(param0: string, param1: string): void;
@@ -84301,12 +84297,10 @@ declare module java {
 			public updateBigDecimal(param0: string, param1: java.math.BigDecimal): void;
 			public updateClob(param0: number, param1: java.sql.Clob): void;
 			public getObject(param0: string, param1: java.util.Map<string,java.lang.Class<any>>): any;
-			public getUnicodeStream(param0: string): java.io.InputStream;
 			public getDate(param0: string): java.sql.Date;
 			public isFirst(): boolean;
 			public updateObject(param0: number, param1: any, param2: number): void;
 			public updateNClob(param0: number, param1: java.sql.NClob): void;
-			public getBigDecimal(param0: number, param1: number): java.math.BigDecimal;
 			public findColumn(param0: string): number;
 			public getString(param0: string): string;
 			public updateDate(param0: string, param1: java.sql.Date): void;
@@ -84319,6 +84313,8 @@ declare module java {
 			public updateSQLXML(param0: number, param1: java.sql.SQLXML): void;
 			public rowInserted(): boolean;
 			public next(): boolean;
+			/** @deprecated */
+			public getUnicodeStream(param0: number): java.io.InputStream;
 			public getShort(param0: string): number;
 			public getRowId(param0: string): java.sql.RowId;
 			public updateInt(param0: string, param1: number): void;
@@ -84410,7 +84406,6 @@ declare module java {
 			public updateNClob(param0: number, param1: java.io.Reader): void;
 			public getRef(param0: string): java.sql.Ref;
 			public moveToCurrentRow(): void;
-			public getBigDecimal(param0: string, param1: number): java.math.BigDecimal;
 			public getNString(param0: number): string;
 			public deleteRow(): void;
 			public getNCharacterStream(param0: number): java.io.Reader;
@@ -85204,21 +85199,32 @@ declare module java {
 	export module sql {
 		export class Time extends java.util.Date {
 			public static class: java.lang.Class<java.sql.Time>;
-			public constructor(param0: number, param1: number, param2: number);
-			public setMonth(param0: number): void;
-			public static valueOf(param0: string): java.sql.Time;
-			public getDate(): number;
-			public setYear(param0: number): void;
-			public constructor(param0: number);
-			public constructor();
-			public setDate(param0: number): void;
+			/** @deprecated */
 			public constructor(param0: number, param1: number, param2: number, param3: number, param4: number, param5: number);
-			public getYear(): number;
-			public toString(): string;
-			public getMonth(): number;
-			public setTime(param0: number): void;
+			/** @deprecated */
 			public getDay(): number;
+			/** @deprecated */
+			public getDate(): number;
+			public static valueOf(param0: string): java.sql.Time;
+			public constructor(param0: number);
+			/** @deprecated */
+			public setMonth(param0: number): void;
+			/** @deprecated */
+			public getMonth(): number;
+			public constructor();
+			/** @deprecated */
+			public constructor(param0: number, param1: number, param2: number);
+			public toString(): string;
+			public setTime(param0: number): void;
+			/** @deprecated */
+			public setDate(param0: number): void;
+			/** @deprecated */
+			public setYear(param0: number): void;
+			/** @deprecated */
+			public getYear(): number;
+			/** @deprecated */
 			public constructor(param0: number, param1: number, param2: number, param3: number, param4: number);
+			/** @deprecated */
 			public constructor(param0: string);
 		}
 	}
@@ -85228,27 +85234,32 @@ declare module java {
 	export module sql {
 		export class Timestamp extends java.util.Date {
 			public static class: java.lang.Class<java.sql.Timestamp>;
-			public constructor(param0: number, param1: number, param2: number);
 			public static valueOf(param0: string): java.sql.Timestamp;
 			public equals(param0: any): boolean;
 			public setNanos(param0: number): void;
 			public after(param0: java.sql.Timestamp): boolean;
+			/** @deprecated */
+			public constructor(param0: number, param1: number, param2: number, param3: number, param4: number, param5: number);
 			public before(param0: java.util.Date): boolean;
 			public constructor(param0: number);
 			public after(param0: java.util.Date): boolean;
 			public constructor();
-			public constructor(param0: number, param1: number, param2: number, param3: number, param4: number, param5: number);
+			/** @deprecated */
+			public constructor(param0: number, param1: number, param2: number);
 			public compareTo(param0: java.util.Date): number;
 			public getNanos(): number;
-			public constructor(param0: number, param1: number, param2: number, param3: number, param4: number, param5: number, param6: number);
 			public toString(): string;
 			public setTime(param0: number): void;
 			public getTime(): number;
-			public constructor(param0: number, param1: number, param2: number, param3: number, param4: number);
 			public before(param0: java.sql.Timestamp): boolean;
 			public compareTo(param0: java.sql.Timestamp): number;
 			public equals(param0: java.sql.Timestamp): boolean;
+			/** @deprecated */
+			public constructor(param0: number, param1: number, param2: number, param3: number, param4: number);
+			/** @deprecated */
 			public constructor(param0: string);
+			/** @deprecated */
+			public constructor(param0: number, param1: number, param2: number, param3: number, param4: number, param5: number, param6: number);
 			public hashCode(): number;
 		}
 	}
@@ -86945,38 +86956,60 @@ declare module java {
 	export module util {
 		export class Date extends java.lang.Object {
 			public static class: java.lang.Class<java.util.Date>;
-			public constructor(param0: number, param1: number, param2: number);
 			public equals(param0: any): boolean;
-			public getSeconds(): number;
-			public before(param0: java.util.Date): boolean;
-			public getDate(): number;
-			public setYear(param0: number): void;
-			public toGMTString(): string;
-			public setDate(param0: number): void;
-			public setSeconds(param0: number): void;
-			public compareTo(param0: java.util.Date): number;
-			public setMinutes(param0: number): void;
-			public static parse(param0: string): number;
+			/** @deprecated */
+			public constructor(param0: number, param1: number, param2: number, param3: number, param4: number, param5: number);
+			/** @deprecated */
 			public getDay(): number;
-			public constructor(param0: number, param1: number, param2: number, param3: number, param4: number);
-			public getHours(): number;
+			/** @deprecated */
+			public getDate(): number;
+			public before(param0: java.util.Date): boolean;
+			/** @deprecated */
+			public getMonth(): number;
+			/** @deprecated */
+			public constructor(param0: number, param1: number, param2: number);
+			public compareTo(param0: java.util.Date): number;
+			/** @deprecated */
 			public getMinutes(): number;
+			/** @deprecated */
+			public getHours(): number;
+			/** @deprecated */
+			public setYear(param0: number): void;
+			/** @deprecated */
+			public getSeconds(): number;
+			/** @deprecated */
+			public setMinutes(param0: number): void;
+			/** @deprecated */
+			public setSeconds(param0: number): void;
+			/** @deprecated */
+			public constructor(param0: number, param1: number, param2: number, param3: number, param4: number);
+			/** @deprecated */
 			public constructor(param0: string);
-			public setMonth(param0: number): void;
-			public setHours(param0: number): void;
-			public toLocaleString(): string;
+			/** @deprecated */
+			public static parse(param0: string): number;
 			public constructor(param0: number);
+			/** @deprecated */
+			public toLocaleString(): string;
+			/** @deprecated */
+			public setMonth(param0: number): void;
 			public after(param0: java.util.Date): boolean;
 			public constructor();
-			public constructor(param0: number, param1: number, param2: number, param3: number, param4: number, param5: number);
-			public getYear(): number;
-			public static UTC(param0: number, param1: number, param2: number, param3: number, param4: number, param5: number): number;
 			public clone(): any;
-			public getMonth(): number;
 			public toString(): string;
+			/** @deprecated */
+			public toGMTString(): string;
 			public setTime(param0: number): void;
+			/** @deprecated */
+			public setDate(param0: number): void;
 			public getTime(): number;
+			/** @deprecated */
 			public getTimezoneOffset(): number;
+			/** @deprecated */
+			public setHours(param0: number): void;
+			/** @deprecated */
+			public static UTC(param0: number, param1: number, param2: number, param3: number, param4: number, param5: number): number;
+			/** @deprecated */
+			public getYear(): number;
 			public hashCode(): number;
 		}
 	}
@@ -88782,6 +88815,8 @@ declare module java {
 			public propertyNames(): java.util.Enumeration<any>;
 			public stringPropertyNames(): java.util.Set<string>;
 			public equals(param0: any): boolean;
+			/** @deprecated */
+			public save(param0: java.io.OutputStream, param1: string): void;
 			public constructor(param0: java.util.Properties);
 			public replace(param0: any, param1: any): any;
 			public compute(param0: any, param1: any /* any<any,any,any>*/): any;
@@ -88789,7 +88824,6 @@ declare module java {
 			public replace(param0: any, param1: any, param2: any): boolean;
 			public get(param0: any): any;
 			public forEach(param0: any /* any<any,any>*/): void;
-			public save(param0: java.io.OutputStream, param1: string): void;
 			public getOrDefault(param0: any, param1: any): any;
 			public putIfAbsent(param0: any, param1: any): any;
 			public remove(param0: any): any;
@@ -99458,7 +99492,6 @@ declare module javax {
 				public setEnabledCipherSuites(param0: native.Array<string>): void;
 				public constructor();
 				public getEnableSessionCreation(): boolean;
-				public constructor(param0: java.net.InetAddress, param1: number, param2: boolean);
 				public getEnabledProtocols(): native.Array<string>;
 				public setWantClientAuth(param0: boolean): void;
 				public setEnableSessionCreation(param0: boolean): void;
@@ -99473,9 +99506,12 @@ declare module javax {
 				public setSSLParameters(param0: javax.net.ssl.SSLParameters): void;
 				public constructor(param0: java.net.SocketImpl);
 				public getUseClientMode(): boolean;
+				/** @deprecated */
+				public constructor(param0: java.net.InetAddress, param1: number, param2: boolean);
 				public getWantClientAuth(): boolean;
 				public constructor(param0: java.net.InetAddress, param1: number, param2: java.net.InetAddress, param3: number);
 				public constructor(param0: java.net.InetAddress, param1: number);
+				/** @deprecated */
 				public constructor(param0: string, param1: number, param2: boolean);
 				public getSupportedProtocols(): native.Array<string>;
 				public getSupportedCipherSuites(): native.Array<string>;
@@ -100489,6 +100525,8 @@ declare module javax {
 			public getDouble(param0: string): number;
 			public last(): boolean;
 			public relative(param0: number): boolean;
+			/** @deprecated */
+			public getBigDecimal(param0: number, param1: number): java.math.BigDecimal;
 			public setLong(param0: string, param1: number): void;
 			public getType(): number;
 			public getRef(param0: number): java.sql.Ref;
@@ -100510,7 +100548,6 @@ declare module javax {
 			public updateClob(param0: number, param1: java.sql.Clob): void;
 			public getObject(param0: string, param1: java.util.Map<string,java.lang.Class<any>>): any;
 			public getUrl(): string;
-			public getUnicodeStream(param0: string): java.io.InputStream;
 			public setUrl(param0: string): void;
 			public isFirst(): boolean;
 			public updateObject(param0: number, param1: any, param2: number): void;
@@ -100590,7 +100627,6 @@ declare module javax {
 			public getRef(param0: string): java.sql.Ref;
 			public moveToCurrentRow(): void;
 			public setBigDecimal(param0: number, param1: java.math.BigDecimal): void;
-			public getBigDecimal(param0: string, param1: number): java.math.BigDecimal;
 			public setTime(param0: number, param1: java.sql.Time): void;
 			public getNString(param0: number): string;
 			public setRowId(param0: string, param1: java.sql.RowId): void;
@@ -100612,7 +100648,6 @@ declare module javax {
 			public setBinaryStream(param0: string, param1: java.io.InputStream): void;
 			public setCharacterStream(param0: string, param1: java.io.Reader): void;
 			public removeRowSetListener(param0: javax.sql.RowSetListener): void;
-			public getUnicodeStream(param0: number): java.io.InputStream;
 			public getConcurrency(): number;
 			public afterLast(): void;
 			public getCommand(): string;
@@ -100645,6 +100680,8 @@ declare module javax {
 			public updateBytes(param0: string, param1: native.Array<number>): void;
 			public setNClob(param0: string, param1: java.sql.NClob): void;
 			public getDataSourceName(): string;
+			/** @deprecated */
+			public getBigDecimal(param0: string, param1: number): java.math.BigDecimal;
 			public updateNClob(param0: string, param1: java.io.Reader, param2: number): void;
 			public setReadOnly(param0: boolean): void;
 			public getMetaData(): java.sql.ResultSetMetaData;
@@ -100654,6 +100691,8 @@ declare module javax {
 			public getTypeMap(): java.util.Map<string,java.lang.Class<any>>;
 			public updateAsciiStream(param0: number, param1: java.io.InputStream): void;
 			public updateString(param0: number, param1: string): void;
+			/** @deprecated */
+			public getUnicodeStream(param0: string): java.io.InputStream;
 			public getTimestamp(param0: number, param1: java.util.Calendar): java.sql.Timestamp;
 			public setNClob(param0: number, param1: java.io.Reader, param2: number): void;
 			public close(): void;
@@ -100662,7 +100701,6 @@ declare module javax {
 			public setObject(param0: string, param1: any, param2: number): void;
 			public getDate(param0: string): java.sql.Date;
 			public updateNClob(param0: number, param1: java.sql.NClob): void;
-			public getBigDecimal(param0: number, param1: number): java.math.BigDecimal;
 			public updateDate(param0: string, param1: java.sql.Date): void;
 			public addRowSetListener(param0: javax.sql.RowSetListener): void;
 			public getAsciiStream(param0: string): java.io.InputStream;
@@ -100675,6 +100713,8 @@ declare module javax {
 			public setBigDecimal(param0: string, param1: java.math.BigDecimal): void;
 			public setDataSourceName(param0: string): void;
 			public next(): boolean;
+			/** @deprecated */
+			public getUnicodeStream(param0: number): java.io.InputStream;
 			public getShort(param0: string): number;
 			public setBlob(param0: number, param1: java.sql.Blob): void;
 			public updateInt(param0: string, param1: number): void;
@@ -102512,16 +102552,18 @@ declare module junit {
 			public static SUITE_METHODNAME: string;
 			public testFailed(param0: number, param1: junit.framework.Test, param2: java.lang.Throwable): void;
 			public startTest(param0: junit.framework.Test): void;
+			/** @deprecated */
+			public getLoader(): junit.runner.TestSuiteLoader;
 			public static getFilteredTrace(param0: string): string;
 			public runFailed(param0: string): void;
 			public static getPreference(param0: string): string;
 			public static showStackRaw(): boolean;
 			public getTest(param0: string): junit.framework.Test;
 			public processArguments(param0: native.Array<string>): string;
+			/** @deprecated */
+			public static inVAJava(): boolean;
 			public useReloadingTestSuiteLoader(): boolean;
 			public static getPreference(param0: string, param1: number): number;
-			public getLoader(): junit.runner.TestSuiteLoader;
-			public static inVAJava(): boolean;
 			public static savePreferences(): void;
 			public testStarted(param0: string): void;
 			public clearStatus(): void;
@@ -106736,7 +106778,6 @@ declare module org {
 //android.os.Parcelable.Creator:1
 //android.os.RemoteCallbackList:1
 //android.service.carrier.CarrierMessagingService.ResultCallback:1
-//android.service.media.MediaBrowserService.Result:1
 //android.test.ActivityInstrumentationTestCase:1
 //android.test.ActivityInstrumentationTestCase2:1
 //android.test.ActivityUnitTestCase:1
